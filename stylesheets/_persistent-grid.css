@@ -1,0 +1,71 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 6, ../sass/persistent-grid.scss */
+.col {
+  width: 33.333333%;
+  display: inline-block;
+  margin-right: -0.2em !important;
+  vertical-align: top;
+}
+
+/* line 7, ../sass/persistent-grid.scss */
+.col.twelfth {
+  width: 8.333333%;
+}
+
+/* line 8, ../sass/persistent-grid.scss */
+.col.sixth {
+  width: 16.666667%;
+}
+
+/* line 9, ../sass/persistent-grid.scss */
+.col.fourth {
+  width: 25%;
+}
+
+/* line 10, ../sass/persistent-grid.scss */
+.col.third {
+  width: 33.333333%;
+}
+
+/* line 11, ../sass/persistent-grid.scss */
+.col.half {
+  width: 50%;
+}
+
+/* line 12, ../sass/persistent-grid.scss */
+.col.twothird {
+  width: 66.666667%;
+}
+
+/* line 13, ../sass/persistent-grid.scss */
+.col.full {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 16, ../sass/persistent-grid.scss */
+  .col:not(.persistent) {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 19, ../sass/persistent-grid.scss */
+  .col {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1679px) {
+  /* line 22, ../sass/persistent-grid.scss */
+  .col {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1680px) {
+  /* line 25, ../sass/persistent-grid.scss */
+  .col {
+    width: 16.666667%;
+  }
+}
