@@ -2,20 +2,14 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<title>
-			The Persistent Grid
-		</title>
+		<title>The Persistent Grid</title>
 		<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,700,900' rel='stylesheet' type='text/css'> <link href="./stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css">
 	</head>
 	<body class="root">
 		<header role="header">
 			<div class="full col">
-				<h1>
-					The Persistent Grid
-				</h1>
-				<p>
-					A responsive and (very) lightweight grid <small>still in alpha version</small>.
-				</p>
+				<h1>The Persistent Grid</h1>
+				<p>A responsive and (very) lightweight grid <small>still in alpha version</small>.</p>
 			</div>
 		</header>
 		<ul role="navigation" class="full col collections">
@@ -27,57 +21,30 @@
 		</ul>
 		<article>
 			<div id="captive" class="full parent col">
-
 				<section class="half parent demo col">
-					<h1>
-						Features:
-					</h1>
+					<h1>Features:</h1>
 					<ul class="full col collection-of-fulls">
-						<li>
-							Responsive
-						</li>
-						<li>
-							Fluid
-						</li>
-						<li>
-							Nestable
-						</li>
-						<li>
-							Fixed gutter widths
-						</li>
-						<li>
-							Fixable root
-						</li>
-						<li class="full demo col">
-							Built with SASS - although really, the code is so simple that that's not a nescessity
-						</li>
+						<li>Responsive</li>
+						<li>Fluid</li>
+						<li>Nestable</li>
+						<li>Fixed gutter widths</li>
+						<li>Fixable root</li>
+						<li class="full demo col">Built with SASS - although really, the code is so simple that that's not a nescessity</li>
 					</ul>
 				</section>
 				<section class="half parent demo col">
-					<h1>
-						Browser Compatibility
-					</h1>
+					<h1>Browser Compatibility</h1>
 					<p>The grid was tested in these browsers:</p>
 					<ul class="full col collection-of-fulls">
-						<li>
-							Internet Explorer 8
-						</li>
-						<li>
-							Chrome 22.0.1229.94
-						</li>
-						<li>
-							Firefox 15.0.1
-						</li>
-						<li>
-							Safari 5.1.7
-						</li>
+						<li>Internet Explorer 8</li>
+						<li>Chrome 22.0.1229.94</li>
+						<li>Firefox 15.0.1</li>
+						<li>Safari 5.1.7</li>
 					</ul>
 				</section>
 			</div>
 			<section id="elaborate" class="full parent col">
-				<h1 class="full col">
-					About The Persistent Grid
-				</h1>
+				<h1 class="full col">About The Persistent Grid</h1>
 				<p class="half demo col">
 					The Persistent Grid started out as a little experiment on how to evenly distribute containers across devices when it evolved into a very lightweight and simple, responsive grid. The idea was to have containers side-by-side with a width and number depending on the viewport size. Like most other responsive grids the columns will resize relative to their viewport. The difference is that the number of columns per row will also vary per viewport. This page uses some common breakpoints (see table) that are configurable in the SASS files.
 				</p>
@@ -85,364 +52,155 @@
 					By default, all columns will have a preset width that depends on the viewport. Adding classes like twelfth and third will make a column keep its (relative) size across all viewports except the smallest (mobile) views. Adding a class of persistent wil force that relative size on mobile as well - hence the grid's name. This table shows how the columns will behave. For this example, I used twelve columns because it can conveniently be divided by two, three, four and six. Mix and match to achieve pretty much any grid (see below).
 				</p>
 				<figure class="full demo col">
-					<figcaption>
-						Column widths (relative to parent container width)
-					</figcaption>
+					<figcaption>Column widths (relative to parent container width)</figcaption>
 					<table>
 						<thead>
 							<tr>
-								<th>
-									Below: classes Right: viewport
-								</th>
-								<th>
-									&lt;768px
-								</th>
-								<th>
-									768px- 1024px
-								</th>
-								<th>
-									1024px-1280px
-								</th>
-								<th>
-									1280px-1680px
-								</th>
-								<th>
-									&gt;1680px
-								</th>
+								<th>Below: classes Right: viewport</th>
+								<th>&lt;768px</th>
+								<th>768px- 1024px</th>
+								<th>1024px-1280px</th>
+								<th>1280px-1680px</th>
+								<th>&gt;1680px</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th>
-									col
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									33,33%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									16,67%
-								</td>
+								<th>col</th>
+								<td>100.00%</td>
+								<td>50.00%</td>
+								<td>33,33%</td>
+								<td>25.00%</td>
+								<td>16,67%</td>
 							</tr>
 							<tr>
-								<th>
-									twelfth
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
+								<th>twelfth</th>
+								<td>100.00%</td>
+								<td>8.33%</td>
+								<td>8.33%</td>
+								<td>8.33%</td>
+								<td>8.33%</td>
 							</tr>
 							<tr>
-								<th>
-									sixth
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
+								<th>sixth</th>
+								<td>100.00%</td>
+								<td>16.67%</td>
+								<td>16.67%</td>
+								<td>16.67%</td>
+								<td>16.67%</td>
 							</tr>
 							<tr>
-								<th>
-									fourth
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
+								<th>fourth</th>
+								<td>100.00%</td>
+								<td>25.00%</td>
+								<td>25.00%</td>
+								<td>25.00%</td>
+								<td>25.00%</td>
 							</tr>
 							<tr>
-								<th>
-									third
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									33.33%
-								</td>
-								<td>
-									33.33%
-								</td>
-								<td>
-									33.33%
-								</td>
-								<td>
-									33.33%
-								</td>
+								<th>third</th>
+								<td>100.00%</td>
+								<td>33.33%</td>
+								<td>33.33%</td>
+								<td>33.33%</td>
+								<td>33.33%</td>
 							</tr>
 							<tr>
-								<th>
-									half
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
+								<th>half</th>
+								<td>100.00%</td>
+								<td>50.00%</td>
+								<td>50.00%</td>
+								<td>50.00%</td>
+								<td>50.00%</td>
 							</tr>
 							<tr>
-								<th>
-									twothird
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
+								<th>twothird</th>
+								<td>100.00%</td>
+								<td>66.67%</td>
+								<td>66.67%</td>
+								<td>66.67%</td>
+								<td>66.67%</td>
 							</tr>
 							<tr>
-								<th>
-									full
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
+								<th>full</th>
+								<td>100.00%</td>
+								<td>100.00%</td>
+								<td>100.00%</td>
+								<td>100.00%</td>
+								<td>100.00%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent col
-								</th>
-								<td>
-									33,33%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									33,33%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									16,67%
-								</td>
+								<th>persistent col</th>
+								<td>33,33%</td>
+								<td>50.00%</td>
+								<td>33,33%</td>
+								<td>25.00%</td>
+								<td>16,67%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent twelfth
-								</th>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
-								<td>
-									8.33%
-								</td>
+								<th>persistent twelfth</th>
+								<td>8.33%</td>
+								<td>8.33%</td>
+								<td>8.33%</td>
+								<td>8.33%</td>
+								<td>8.33%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent sixth
-								</th>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
-								<td>
-									16.67%
-								</td>
+								<th>persistent sixth</th>
+								<td>16.67%</td>
+								<td>16.67%</td>
+								<td>16.67%</td>
+								<td>16.67%</td>
+								<td>16.67%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent fourth
-								</th>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
-								<td>
-									25.00%
-								</td>
+								<th>persistent fourth</th>
+								<td>25.00%</td>
+								<td>25.00%</td>
+								<td>25.00%</td>
+								<td>25.00%</td>
+								<td>25.00%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent third
-								</th>
-								<td>
-									33,33%
-								</td>
-								<td>
-									33,33%
-								</td>
-								<td>
-									33,33%
-								</td>
-								<td>
-									33,33%
-								</td>
-								<td>
-									33,33%
-								</td>
+								<th>persistent third</th>
+								<td>33,33%</td>
+								<td>33,33%</td>
+								<td>33,33%</td>
+								<td>33,33%</td>
+								<td>33,33%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent half
-								</th>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
-								<td>
-									50.00%
-								</td>
+								<th>persistent half</th>
+								<td>50.00%</td>
+								<td>50.00%</td>
+								<td>50.00%</td>
+								<td>50.00%</td>
+								<td>50.00%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent twothird
-								</th>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
-								<td>
-									66.67%
-								</td>
+								<th>persistent twothird</th>
+								<td>66.67%</td>
+								<td>66.67%</td>
+								<td>66.67%</td>
+								<td>66.67%</td>
+								<td>66.67%</td>
 							</tr>
 							<tr>
-								<th>
-									persistent full
-								</th>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
-								<td>
-									100.00%
-								</td>
+								<th>persistent full</th>
+								<td>100.00%</td>
+								<td>100.00%</td>
+								<td>100.00%</td>
+								<td>100.00%</td>
+								<td>100.00%</td>
 							</tr>
 						</tbody>
 					</table>
 				</figure>
-				<h2>
-					About The Persistent Grid
-				</h2>
+				<h2>About The Persistent Grid</h2>
 				<p class="third demo col">
 					The columns have box-sizing: border-box; applied to them. That way, adding consistent gutter width is a piece of cake. To avoid double gutters, apply a class of 'parent' to the containing column. Adding support for older browsers wouldn't be that difficult. By removing the padding and wrapping the column's content inside a div with padding you can also provide a decent experience for those users. The maximum width of the content is set by the root element. This can be any element by applying a class of 'root'.
 				</p>
-				<p class="third demo
-col">
+				<p class="third demo col">
 					None of the columns are floated. They are inline-blocks with a negative right margin to fix the space between elements because they would otherwise not fit their parent container. It's a clean hack (if such a thing exists) as the negative margin is subtracted from the block's width without affecting the width of the parent container. The columns can simply be stacked. If you want to group them you can, just create multiple collections holding columns in any variety.
 				</p>
 				<p class="third demo col">
@@ -451,178 +209,81 @@ col">
 			</section>
 			<section id="examples" class="full parent demo col">
 				<h1>Examples</h1>
-
-				<p>By applying the col without any of the available width classes you can evenly distribute elements as specified by the grid's breakpoints.
+				<p>
+					By applying the col without any of the available width classes you can evenly distribute elements as specified by the grid's breakpoints.
 				</p>
 				<div class="half parent col">
-					<h2>
-						Unordered list example
-					</h2>
+					<h2>Unordered list example</h2>
 					<ul class="full parent demo col">
-						<li class="demo col">
-							.col
-						</li>
-						<li class="demo
-col">
-							.col
-						</li>
-						<li class="demo col">
-							.col
-						</li>
-						<li class="demo col">
-							.col
-						</li>
-						<li class="demo col">
-							.col
-						</li>
-						<li class="demo col">
-							.col
-						</li>
-						<li class="demo
-col">
-							.col
-						</li>
+						<li class="demo col">&nbsp;</li>
+						<li class="demo col">&nbsp;</li>
+						<li class="demo col">&nbsp;</li>
+						<li class="demo col">&nbsp;</li>
+						<li class="demo col">&nbsp;</li>
+						<li class="demo col">&nbsp;</li>
+						<li class="demo col">&nbsp;</li>
 					</ul>
 				</div>
 				<div class="half parent col">
-					<h2>
-						Random collection of paragraphs
-					</h2>
+					<h2>Random collection of paragraphs</h2>
 					<div class="full parent demo col">
-						<p class="demo col">
-							.col
-						</p>
-						<p class="demo
-col">
-							.col
-						</p>
-						<p class="demo col">
-							.col
-						</p>
-						<p class="demo col">
-							.col
-						</p>
-						<p class="demo col">
-							.col
-						</p>
-						<p class="demo col">
-							.col
-						</p>
-						<p class="demo
-col">
-							.col
-						</p>
+						<p class="demo col">&nbsp;</p>
+						<p class="demo col">&nbsp;</p>
+						<p class="demo col">&nbsp;</p>
+						<p class="demo col">&nbsp;</p>
+						<p class="demo col">&nbsp;</p>
+						<p class="demo col">&nbsp;</p>
+						<p class="demo col">&nbsp;</p>
 					</div>
 				</div>
 			</section>
 			<section id="mixmatch" class="full parent demo col">
-				<h1>
-					Layouts
-				</h1>
-				<p>
-					By mixing and matching nesting columns you can create an infinite number of grids.
-				</p>
-				<h2>
-					Three-column layout
-				</h2>
+				<h1>Layouts</h1>
+				<p>By mixing and matching nesting columns you can create an infinite number of grids.</p>
+				<h2>Three-column layout</h2>
 				<div class="full parent demo col">
-					<div class="demo
-third col">
-						&nbsp;
-					</div>
-					<div class="demo third col">
-						&nbsp;
-					</div>
-					<div class="demo third
-col">
-						&nbsp;
-					</div>
+					<div class="demo third col">&nbsp;</div>
+					<div class="demo third col">&nbsp;</div>
+					<div class="demo third col">&nbsp;</div>
 				</div>
-				<p>
-					The markup:
-				</p>
-<script src="https://gist.github.com/3918489.js"> </script>
-				<h2>
-					Nine-column layout
-				</h2>
+				<p>The markup:</p>
+				<script src="https://gist.github.com/3918489.js"> </script>
+				<h2>Nine-column layout</h2>
 				<div class="full parent demo col">
-					<div class="demo
-third parent col">
-						<div class="demo third col">
-							&nbsp;
-						</div>
-						<div class="demo
-third col">
-							&nbsp;
-						</div>
-						<div class="demo third col">
-							&nbsp;
-						</div>
+					<div class="demo third parent col">
+						<div class="demo third col">&nbsp;</div>
+						<div class="demo third col">&nbsp;</div>
+						<div class="demo third col">&nbsp;</div>
 					</div>
 					<div class="demo third parent col">
-						<div class="demo third col">
-							&nbsp;
-						</div>
-						<div class="demo third col">
-							&nbsp;
-						</div>
-						<div class="demo third col">
-							&nbsp;
-						</div>
+						<div class="demo third col">&nbsp;</div>
+						<div class="demo third col">&nbsp;</div>
+						<div class="demo third col">&nbsp;</div>
 					</div>
 					<div class="demo third parent col">
-						<div class="demo third col">
-							&nbsp;
-						</div>
-						<div class="demo third col">
-							&nbsp;
-						</div>
-						<div class="demo third col">
-							&nbsp;
-						</div>
+						<div class="demo third col">&nbsp;</div>
+						<div class="demo third col">&nbsp;</div>
+						<div class="demo third col">&nbsp;</div>
 					</div>
 				</div>
-				<p>
-					The markup:
-				</p>
-<script src="https://gist.github.com/3918497.js">
-</script>
-				<h2>
-					Two-column layout with a persistent three column right column. Right.
-				</h2>
-				<div class="full
-parent demo col">
-					<div class="demo half col">
-						&nbsp;
-					</div>
-					<div class="demo half parent
-col">
-						<div class="demo persistent third col">
-							&nbsp;
-						</div>
-						<div class="demo
-persistent third col">
-							&nbsp;
-						</div>
-						<div class="demo persistent third col">
-							&nbsp;
-						</div>
+				<p>The markup:</p>
+				<script src="https://gist.github.com/3918497.js"></script>
+				<h2>Two-column layout with a persistent three column right column. Right.</h2>
+				<div class="full parent demo col">
+					<div class="demo half col">&nbsp;</div>
+					<div class="demo half parent col">
+						<div class="demo persistent third col">&nbsp;</div>
+						<div class="demo persistent third col">&nbsp;</div>
+						<div class="demo persistent third col">&nbsp;</div>
 					</div>
 				</div>
-				<p>
-					The markup:
-				</p>
-<script src="https://gist.github.com/3918503.js">
-</script>
+				<p>The markup:</p>
+				<script src="https://gist.github.com/3918503.js"></script>
 			</section>
 			<section id="code" class="full parent demo col">
-				<h2>
-					The code
-				</h2>
-				<p>
-					The code is almost rediculously small, at this moment only about 33 lines, unminified CSS.
-				</p>
-<script src="https://gist.github.com/3913866.js"> </script>
+				<h2>The code</h2>
+				<p>The base code is almost rediculously small, at this moment it's about 29 lines of unminified CSS with a couple of extra rules to make life easier (and code cleaner).</p>
+				<script src="https://gist.github.com/3913866.js"> </script>
 			</section>
 		</article>
 	</body>
