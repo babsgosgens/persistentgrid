@@ -1,0 +1,23 @@
+$containerMaxWidth: 1280px;
+$containerPosition: center !default; // center | left
+$negativeRightMargin: -0.5em;
+$columnPadding: 40px;
+
+$breakpointS:  "(max-width: 767px)";
+$breakpointM:  "(min-width: 768px) and (max-width: 1023px)"; // breakpoint(767px,1023px); //
+$breakpointL:  "(min-width: 1280px) and (max-width: 1679px)"; // breakpoint(1280px,1679px); //
+$breakpointXL: "(min-width: 1680px)"; // breakpoint(1680px,false); //
+
+@function breakpoint($min,$max) {
+  $mediaQuery: "";
+  @if ($min and $max) {
+    $mediaQuery: "(min-width: #{$min}) and (max-width: #{$max})";
+  }
+  @else if $min {
+    $mediaQuery: "(min-width: #{$min})";
+  }
+  @else if $max {
+    $mediaQuery: "(max-width: #{$max})";
+  }
+  @return $mediaQuery;
+}

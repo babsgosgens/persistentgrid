@@ -1,0 +1,124 @@
+@import 'persistent-grid-settings';
+@import 'compass/css3/box-sizing';
+
+.root {
+	display: block;
+	margin: 0 ($columnPadding/2);
+}
+
+.col          { width: 33.333333%; display: inline-block; margin-right: $negativeRightMargin !important; vertical-align: top; }
+.col.twelfth  { width: 8.333333%; }
+.col.sixth    { width: 16.666667%; }
+.col.fourth   { width: 25%; }
+.col.third    { width: 33.333333%; }
+.col.half     { width: 50%; }
+.col.twothird { width: 66.666667%; }
+.col.full     { width: 100%; }
+
+@if $breakpointS {
+	@media screen and #{$breakpointS} {
+		.col:not(.persistent) { width: 100%; }
+		.root { margin-left: 0 ; margin-right: 0;}
+	}	
+}
+@if $breakpointM {
+	@media screen and #{$breakpointM} {
+		.col { width: 50%; }
+	}
+}
+@if $breakpointL {
+	@media screen and #{$breakpointL} {
+		.col { width: 25%; }
+	}
+}
+@if $breakpointXL {
+	@media screen and #{$breakpointXL} {
+		.col { width: 16.666667%; }
+	}
+}
+
+@media screen and (min-width: $containerMaxWidth + 2*$columnPadding) {
+	.root {
+		max-width: $containerMaxWidth;
+		margin: 0 auto;
+	}
+}
+
+.col {
+	@include box-sizing('border-box');
+	padding-left: $columnPadding / 2;
+	padding-right: $columnPadding / 2;
+	&[class*="collection"],
+	&.parent {
+		padding-left: 0;
+		padding-right: 0;
+		/* Experimental */
+		>*:not(.col) {
+			padding-left: $columnPadding / 2;
+			padding-right: $columnPadding / 2;
+		}
+	}
+}
+
+// Shortcuts
+[class*="collection"] > * {
+	@extend .col;
+}
+.collection-of-twelfths > * {
+	@extend .col.twelfth;
+}
+.collection-of-sixths > * {
+	@extend .col.sixth;
+}
+.collection-of-fourths > * {
+	@extend .col.fourth;
+}
+.collection-of-thirds > * {
+	@extend .col.third;
+}
+.collection-of-halfs > * {
+	@extend .col.half;
+}
+.collection-of-twothirds > * {
+	@extend .col.twothird;
+}
+.collection-of-fulls > * {
+	@extend .col.full;
+}
+
+
+// Source Ordering
+.jump { margin-left: 33.333333%; }
+
+@if $breakpointS {
+	@media screen and #{$breakpointS} {
+		.jump { margin-left: 0; }
+	}	
+}
+@if $breakpointM {
+	@media screen and #{$breakpointM} {
+		.jump { margin-left: 50%; }
+	}
+}
+@if $breakpointL {
+	@media screen and #{$breakpointL} {
+		.jump { margin-left: 25; }
+	}
+}
+@if $breakpointXL {
+	@media screen and #{$breakpointXL} {
+		.jump { margin-left: 16.666667%; }
+	}
+}
+
+.push {
+	position: relative;
+	left: 33.333333%;
+	float: left;
+}
+
+.pull {
+	position: relative;
+	left: -33.333333%;
+	float: left;
+}
