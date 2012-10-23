@@ -1,8 +1,0 @@
-@mixin col($width: 33.333333%, $persistent: false) {
-	@if $persistent {
-		width: $width !important;	
-	}
-	@else {
-		width: $width;
-	}
-}

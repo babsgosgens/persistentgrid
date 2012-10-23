@@ -1,0 +1,13 @@
+@function breakpoint($min,$max) {
+  $mediaQuery: "";
+  @if ($min and $max) {
+    $mediaQuery: "(min-width: #{$min}) and (max-width: #{$max})";
+  }
+  @else if $min {
+    $mediaQuery: "(min-width: #{$min})";
+  }
+  @else if $max {
+    $mediaQuery: "(max-width: #{$max})";
+  }
+  @return $mediaQuery;
+}
