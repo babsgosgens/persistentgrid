@@ -13,52 +13,10 @@
 .collection-of-twelfths>*,  .col.twelfth  { width: 1/12*100%; }
 .collection-of-sixths>*,    .col.sixth    { width: 1/6*100%; }
 .collection-of-fourths>*,   .col.fourth   { width: 1/4*100%; }
-.collection-of-thirds>*,    .col.third    { width: 1/3*100%; }
+// .collection-of-thirds>*,    .col.third    { width: 1/3*100%; }
 .collection-of-halfs>*,     .col.half     { width: 1/2*100%; }
 .collection-of-twothirds>*, .col.twothird { width: 2/3*100%; }
 .col.full     							  { width: 1/1*100%; }
-
-@if $breakpointS {
-	@media screen and #{$breakpointS} {
-		[class*="collection"]>*:not(.persistent),
-		.col:not(.persistent) { width: 100%; }
-		.persistent {
-			&.collection-of-twelfths > * {
-				width: 1/12*100%;
-			}
-			&.collection-of-sixths > * {
-				width: 1/6*100%;
-			}
-			&.collection-of-fourths > * {
-				width: 1/4*100%;
-			}
-			&.collection-of-thirds > * {
-				width: 1/3*100%;
-			}
-			&.collection-of-halfs > * {
-				width: 1/2*100%;
-			}
-			&.collection-of-twothirds > * {
-				width: 2/3*100%;
-			}
-		}
-	}	
-}
-@if $breakpointM {
-	@media screen and #{$breakpointM} {
-		.col { width: 1/2*100%; }
-	}
-}
-@if $breakpointL {
-	@media screen and #{$breakpointL} {
-		.col { width: 1/4*100%; }
-	}
-}
-@if $breakpointXL {
-	@media screen and #{$breakpointXL} {
-		.col { width: 1/6*100%; }
-	}
-}
 
 [class*="collection"]>*,
 .col {
@@ -83,54 +41,54 @@
 
 // Source Ordering
 .jump {
-	margin-left: 33.333333%;
-	&.half { margin-left: 50%; }
-	&.third { margin-left: 33.333333%; }
-	&.fourth { margin-left: 25%; }
-	@if $breakpointS {
-		@media screen and #{$breakpointS} {
-			margin-left: 0;
-			&.half, &.third, &.fourth { margin-left: 0; }
-		}	
-	}
-	@if $breakpointM {
-		@media screen and #{$breakpointM} { margin-left: 50%; }
-	}
-	@if $breakpointL {
-		@media screen and #{$breakpointL} { margin-left: 25; }
-	}
-	@if $breakpointXL {
-		@media screen and #{$breakpointXL} { margin-left: 16.666667%; }
-	}
+	margin-left: 1/3*100%;
+	&.half { margin-left: 1/2*100%; }
+	&.fourth { margin-left: 1/4*100%; }
 }
 .col.push, .col.pull { position: relative; }
-.col.push {
-	left: 1/3*100%;
-	@if $breakpointS {
-		@media screen and #{$breakpointS} { left: 0; } // Undo source ordering
+.col.push { left: 1/3*100%; }
+.col.pull { left: -1/3*100%; }
+
+@if $breakpointS {
+	@media screen and #{$breakpointS} {
+		[class*="collection"]>*:not(.persistent),
+		.col:not(.persistent) { width: 100%; }
+		.persistent {
+			&.collection-of-twelfths > *  { width: 1/12*100%; }
+			&.collection-of-sixths > *    { width: 1/6*100%; }
+			&.collection-of-fourths > *   { width: 1/4*100%; }
+			&.collection-of-thirds > *    { width: 1/3*100%; }
+			&.collection-of-halfs > *     { width: 1/2*100%; }
+			&.collection-of-twothirds > * { width: 2/3*100%; }
+		}
 	}
-	@if $breakpointM {
-		@media screen and #{$breakpointM} { left: 1/2*100%; }
+	.jump {
+		margin-left: 0;
+		&.half, &.third, &.fourth { margin-left: 0; }
 	}
-	@if $breakpointL {
-		@media screen and #{$breakpointL} { left: 1/4*100%; }
-	}
-	@if $breakpointXL {
-		@media screen and #{$breakpointXL} { left: 1/6*100%; }
+	.col.push, .col.pull { left: 0; }
+}
+@if $breakpointM {
+	@media screen and #{$breakpointM} {
+		.col { width: 1/2*100%; }
+		.col.push { left: 1/2*100%; }
+		.col.pull { left: -1/2*100%; }
+		.jump { margin-left: 1/2*100%; }
 	}
 }
-.col.pull {
-	left: -1/3*100%;
-	@if $breakpointS {
-		@media screen and #{$breakpointS} { left: 0; } // Undo source ordering
+@if $breakpointL {
+	@media screen and #{$breakpointL} {
+		.col { width: 1/4*100%; }
+		.col.push { left: 1/4*100%; }
+		.col.pull { left: -1/4*100%; }
+		.jump { margin-left: 1/4*100%; }
 	}
-	@if $breakpointM {
-		@media screen and #{$breakpointM} { left: -1/2*100%; }
-	}
-	@if $breakpointL {
-		@media screen and #{$breakpointL} { left: -1/4*100%; }
-	}
-	@if $breakpointXL {
-		@media screen and #{$breakpointXL} { left: -1/6*100%; }
+}
+@if $breakpointXL {
+	@media screen and #{$breakpointXL} {
+		.col { width: 1/6*100%; }
+		.col.push { left: 1/6*100%; }
+		.col.pull { left: -1/6*100%; }
+		.jump { margin-left: 1/6*100%; }
 	}
 }
