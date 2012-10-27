@@ -1,0 +1,57 @@
+/* MS */
+
+$base-size 	: 16px;
+
+$ratio 		: major-seventh() minor-seventh();
+// golden()
+// double-octave()
+// major-twelfth()
+// major-eleventh()
+// major-tenth()
+// octave()
+// major-seventh()
+// minor-seventh()
+// major-sixth()
+// minor-sixth()
+// fifth()
+// augfourth()
+// fourth()
+// major-third()
+// minor-third()
+// major-second()
+// minor-second()
+
+$px-normal	: $base-size;
+$px-xxs		: ms(-3);
+$px-xs		: ms(-2);
+$px-s		: ms(-1);
+$px-m		: ms(1);
+$px-l		: ms(2);
+$px-xl		: ms(3);
+$px-xxl		: ms(5);
+$px-xxxl	: ms(8);
+
+
+/* VR */
+
+$base-font-size: $px-normal;
+//The base font size.
+
+$base-line-height: $px-m;
+//The base line height determines the basic unit of vertical rhythm.
+
+$default-rhythm-border-style: solid;
+//Set the default border style for rhythm borders.
+
+$relative-font-sizing: true;
+//Set to false if you want to use absolute pixels in sizing your typography.
+
+$round-to-nearest-half-line: false;
+//Allows the adjust-font-size-to mixin and the lines-for-font-size function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines.
+
+$min-line-padding: 2px;
+//Ensure there is at least this many pixels of vertical padding above and below the text.
+
+$font-unit:	if($relative-font-sizing, 1em, $base-font-size);
+//$base-font-size but in your output unit of choice. Defaults to 1em when $relative-font-sizing is true.
+

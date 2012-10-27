@@ -1,0 +1,8 @@
+img {
+	min-width: 100%;
+	width: auto;
+	max-width: 100%;
+	vertical-align: -.5*$base-line-height;
+	height: 7*$base-line-height;
+	@include leader();
+}

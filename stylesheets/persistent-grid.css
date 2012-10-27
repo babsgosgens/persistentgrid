@@ -1,233 +1,148 @@
-/* line 1, ../sass/persistent-grid/_behaviour.scss */
 .root {
   display: block;
-  margin: 0 20px;
-}
-@media screen and (max-width: 1024px) {
-  /* line 1, ../sass/persistent-grid/_behaviour.scss */
-  .root {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 1360px) {
-  /* line 1, ../sass/persistent-grid/_behaviour.scss */
-  .root {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-}
+  margin: 0 24px; }
+  @media screen and (max-width: 1024px) {
+    .root {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media screen and (min-width: 1376px) {
+    .root {
+      max-width: 1280px;
+      margin: 0 auto; } }
 
-/* line 12, ../sass/persistent-grid/_behaviour.scss */
 [class*="collection"] > *, .col {
   width: 33.33333%;
   display: inline-block;
   margin-right: -0.25em !important;
-  vertical-align: top;
-}
+  vertical-align: top; }
 
-/* line 13, ../sass/persistent-grid/_behaviour.scss */
 .collection-of-twelfths > *, .col.twelfth {
-  width: 8.33333%;
-}
+  width: 8.33333%; }
 
-/* line 14, ../sass/persistent-grid/_behaviour.scss */
 .collection-of-sixths > *, .col.sixth {
-  width: 16.66667%;
-}
+  width: 16.66667%; }
 
-/* line 15, ../sass/persistent-grid/_behaviour.scss */
 .collection-of-fourths > *, .col.fourth {
-  width: 25%;
-}
+  width: 25%; }
 
-/* line 16, ../sass/persistent-grid/_behaviour.scss */
+.collection-of-thirds > *, .col.third {
+  width: 33.33333%; }
+
 .collection-of-halfs > *, .col.half {
-  width: 50%;
-}
+  width: 50%; }
 
-/* line 17, ../sass/persistent-grid/_behaviour.scss */
 .collection-of-twothirds > *, .col.twothird {
-  width: 66.66667%;
-}
+  width: 66.66667%; }
 
-/* line 18, ../sass/persistent-grid/_behaviour.scss */
 .col.full {
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 21, ../sass/persistent-grid/_behaviour.scss */
+.col.eleven.twelfth {
+  width: 91.66667%; }
+
+.col.five.sixth {
+  width: 83.33333%; }
+
 [class*="collection"] > *,
 .col {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-/* line 25, ../sass/persistent-grid/_behaviour.scss */
-[class*="collection"] > *.parent,
-.col.parent {
-  padding-left: 0;
-  padding-right: 0;
-  /* Experimental */
-}
-/* line 29, ../sass/persistent-grid/_behaviour.scss */
-[class*="collection"] > *.parent > *:not(.col),
-.col.parent > *:not(.col) {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  padding-left: 24px;
+  padding-right: 24px; }
+  [class*="collection"] > *.parent,
+  .col.parent {
+    padding-left: 0;
+    padding-right: 0;
+    /* Experimental */ }
+    [class*="collection"] > *.parent > *:not(.col),
+    .col.parent > *:not(.col) {
+      padding-left: 24px;
+      padding-right: 24px; }
 
-/* line 36, ../sass/persistent-grid/_behaviour.scss */
 [class*="collection"] {
   padding-left: 0;
-  padding-right: 0;
-}
+  padding-right: 0; }
 
-/* line 42, ../sass/persistent-grid/_behaviour.scss */
 .col.push, .col.pull {
-  position: relative;
-}
+  position: relative; }
 
-/* line 43, ../sass/persistent-grid/_behaviour.scss */
 .col.push {
-  left: 33.33333%;
-}
+  left: 33.33333%; }
 
-/* line 44, ../sass/persistent-grid/_behaviour.scss */
 .col.pull {
-  left: -33.33333%;
-}
+  left: -33.33333%; }
 
-/* line 45, ../sass/persistent-grid/_behaviour.scss */
 .jump {
-  margin-left: 33.33333%;
-}
-/* line 47, ../sass/persistent-grid/_behaviour.scss */
-.jump.half {
-  margin-left: 50%;
-}
-/* line 48, ../sass/persistent-grid/_behaviour.scss */
-.jump.fourth {
-  margin-left: 25%;
-}
-/* line 49, ../sass/persistent-grid/_behaviour.scss */
-.jump.sixth {
-  margin-left: 16.66667%;
-}
+  margin-left: 33.33333%; }
+  .jump.half {
+    margin-left: 50%; }
+  .jump.fourth {
+    margin-left: 25%; }
+  .jump.sixth {
+    margin-left: 16.66667%; }
 
 @media screen and (max-width: 767px) {
-  /* line 55, ../sass/persistent-grid/_behaviour.scss */
   [class*="collection"] > *:not(.persistent),
   .col:not(.persistent) {
-    width: 100%;
-  }
+    width: 100%; }
 
-  /* line 57, ../sass/persistent-grid/_behaviour.scss */
   .persistent.collection-of-twelfths > * {
-    width: 8.33333%;
-  }
-  /* line 58, ../sass/persistent-grid/_behaviour.scss */
+    width: 8.33333%; }
   .persistent.collection-of-sixths > * {
-    width: 16.66667%;
-  }
-  /* line 59, ../sass/persistent-grid/_behaviour.scss */
+    width: 16.66667%; }
   .persistent.collection-of-fourths > * {
-    width: 25%;
-  }
-  /* line 60, ../sass/persistent-grid/_behaviour.scss */
+    width: 25%; }
   .persistent.collection-of-thirds > * {
-    width: 33.33333%;
-  }
-  /* line 61, ../sass/persistent-grid/_behaviour.scss */
+    width: 33.33333%; }
   .persistent.collection-of-halfs > * {
-    width: 50%;
-  }
-  /* line 62, ../sass/persistent-grid/_behaviour.scss */
+    width: 50%; }
   .persistent.collection-of-twothirds > * {
-    width: 66.66667%;
-  }
+    width: 66.66667%; }
 
-  /* line 64, ../sass/persistent-grid/_behaviour.scss */
   .jump {
-    margin-left: 0;
-  }
-  /* line 66, ../sass/persistent-grid/_behaviour.scss */
-  .jump.half, .jump.third, .jump.fourth {
-    margin-left: 0;
-  }
+    margin-left: 0; }
+    .jump.half, .jump.third, .jump.fourth {
+      margin-left: 0; }
 
-  /* line 68, ../sass/persistent-grid/_behaviour.scss */
   .col.push, .col.pull {
-    left: 0;
-  }
-}
+    left: 0; } }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 73, ../sass/persistent-grid/_behaviour.scss */
   .col {
-    width: 50%;
-  }
+    width: 50%; }
 
-  /* line 74, ../sass/persistent-grid/_behaviour.scss */
   .col.push {
-    left: 50%;
-  }
+    left: 50%; }
 
-  /* line 75, ../sass/persistent-grid/_behaviour.scss */
   .col.pull {
-    left: -50%;
-  }
+    left: -50%; }
 
-  /* line 76, ../sass/persistent-grid/_behaviour.scss */
   .jump {
-    margin-left: 50%;
-  }
+    margin-left: 50%; }
 
-  /* line 77, ../sass/persistent-grid/_behaviour.scss */
   .col + .jump {
-    margin-left: 0;
-  }
-}
+    margin-left: 0; } }
 @media screen and (min-width: 1280px) and (max-width: 1679px) {
-  /* line 82, ../sass/persistent-grid/_behaviour.scss */
   .col {
-    width: 25%;
-  }
+    width: 25%; }
 
-  /* line 83, ../sass/persistent-grid/_behaviour.scss */
   .col.push {
-    left: 25%;
-  }
+    left: 25%; }
 
-  /* line 84, ../sass/persistent-grid/_behaviour.scss */
   .col.pull {
-    left: -25%;
-  }
+    left: -25%; }
 
-  /* line 85, ../sass/persistent-grid/_behaviour.scss */
   .jump {
-    margin-left: 25%;
-  }
-}
+    margin-left: 25%; } }
 @media screen and (min-width: 1680px) {
-  /* line 90, ../sass/persistent-grid/_behaviour.scss */
   .col {
-    width: 16.66667%;
-  }
+    width: 16.66667%; }
 
-  /* line 91, ../sass/persistent-grid/_behaviour.scss */
   .col.push {
-    left: 16.66667%;
-  }
+    left: 16.66667%; }
 
-  /* line 92, ../sass/persistent-grid/_behaviour.scss */
   .col.pull {
-    left: -16.66667%;
-  }
+    left: -16.66667%; }
 
-  /* line 93, ../sass/persistent-grid/_behaviour.scss */
   .jump {
-    margin-left: 16.66667%;
-  }
-}
+    margin-left: 16.66667%; } }
