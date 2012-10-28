@@ -20,6 +20,7 @@
 
 					  .col.eleven.twelfth { width: 11/12*100%; }
 					  .col.five.sixth     { width: 5/6*100%; }
+					  .col.three.fourth   { width: 3/4*100%; }
 
 [class*="collection"]>*,
 .col {
@@ -34,6 +35,9 @@
 			padding-left: $columnPadding / 2;
 			padding-right: $columnPadding / 2;
 		}
+	}
+	[class*="collection"] {
+		margin-left: $columnPadding / -2;
 	}
 }
 
