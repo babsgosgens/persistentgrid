@@ -1,8 +1,34 @@
-img {
-	min-width: 100%;
-	width: auto;
+$base-line-offset: .15*$base-line-height;
+
+/* This is a wrapper to force embedden images to align to baseline (bottom) and x-height (top) */
+.image {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	height: (19*$base-line-height) + $base-line-offset;
+	overflow: hidden;
+	background: rgba(0,0,0,.1) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkYGDwAeItQMzACCJgAjAOWAAAMCECUKrvDZcAAAAASUVORK5CYII=);
+	position: relative;
+	bottom: 2*$base-line-offset;
+	img {
+		height: inherit;
+		width: auto;
+	}
+	/* If the wrapper is contained in a figure tag and contains a trailing caption, correct the base line offset accordingly. */
+	+ figcaption, .caption {
+		margin-top: -1*$base-line-offset;
+	}
+}
+
+figcaption, .caption {
+	line-height: $base-line-height;
+	font-weight: 300;
+}
+
+
+p > img {
+	margin-right: $base-line-height;
+	float: left;
+	position: relative;
+	top: $base-line-offset;
 	max-width: 100%;
-	vertical-align: -.5*$base-line-height;
-	height: 7*$base-line-height;
-	@include leader();
 }

@@ -2,6 +2,6 @@
 @import 'settings';
 @import 'behaviour';
 
-body {
+body.debug {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAHCAYAAADJTCeUAAAAEklEQVQIW2NkYGCQZAQSDDgJAAO2ACEMrO2rAAAAAElFTkSuQmCC);
 }

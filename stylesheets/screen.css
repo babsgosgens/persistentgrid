@@ -46,14 +46,26 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+/* MS */
+/* VR */
+* html {
+  font-size: 93.75%; }
+
+html {
+  font-size: 15px;
+  line-height: 1.53333em; }
+
+body.debug {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAHCAYAAADJTCeUAAAAEklEQVQIW2NkYGCQZAQSDDgJAAO2ACEMrO2rAAAAAElFTkSuQmCC); }
+
 .root {
   display: block;
-  margin: 0 24px; }
+  margin: 0 23px; }
   @media screen and (max-width: 1024px) {
     .root {
       margin-left: 0;
       margin-right: 0; } }
-  @media screen and (min-width: 1376px) {
+  @media screen and (min-width: 1372px) {
     .root {
       max-width: 1280px;
       margin: 0 auto; } }
@@ -96,8 +108,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 24px;
-  padding-right: 24px; }
+  padding-left: 23px;
+  padding-right: 23px; }
   [class*="collection"] > *.parent,
   .col.parent {
     padding-left: 0;
@@ -105,8 +117,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     /* Experimental */ }
     [class*="collection"] > *.parent > *:not(.col),
     .col.parent > *:not(.col) {
-      padding-left: 24px;
-      padding-right: 24px; }
+      padding-left: 23px;
+      padding-right: 23px; }
 
 [class*="collection"] {
   padding-left: 0;
@@ -196,38 +208,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     margin-left: 16.66667%; } }
 /* MS */
 /* VR */
-* html {
-  font-size: 100%; }
-
-html {
-  font-size: 16px;
-  line-height: 1.75em; }
-
-body {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAHCAYAAADJTCeUAAAAEklEQVQIW2NkYGCQZAQSDDgJAAO2ACEMrO2rAAAAAElFTkSuQmCC); }
-
 * {
   font-synthesis: none;
   font-variant-ligatures: common-ligatures;
-  font-variant-numeric: oldstyle-nums diagonal-fractions; }
+  font-variant-numeric: oldstyle-nums diagonal-fractions;
+  text-rendering: optimizeLegibility; }
 
 html {
   font-family: 'Raleway', sans-serif; }
 
 h1 {
   font-size: 51px;
-  line-height: 56px;
-  margin: 56px 0 28px;
+  line-height: 46px;
+  margin: 46px 0 23px;
   font-weight: 900; }
 
 h2, h3 {
-  font-size: 30px;
-  line-height: 56px;
-  margin: 21px 0 7px;
+  font-size: 34px;
+  line-height: 23px;
+  margin: 17.25px 0 5.75px;
   font-weight: 700; }
 
 h3 {
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 400; }
 
 h4 {
@@ -243,7 +246,9 @@ h4 + p, h5 + p, h6 + p {
   margin-top: 0; }
 
 p {
-  margin: 28px 0; }
+  margin: 23px 0; }
+  p + p {
+    margin-top: 0; }
 
 p.intro {
   font-weight: 600; }
@@ -257,10 +262,29 @@ ul {
 ol {
   list-style-type: decimal; }
 
-img {
-  min-width: 100%;
-  width: auto;
-  max-width: 100%;
-  vertical-align: -14px;
-  height: 196px;
-  margin-top: 1.75em; }
+/* This is a wrapper to force embedden images to align to baseline (bottom) and x-height (top) */
+.image {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  height: 440.45px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkYGDwAeItQMzACCJgAjAOWAAAMCECUKrvDZcAAAAASUVORK5CYII=);
+  position: relative;
+  bottom: 6.9px;
+  /* If the wrapper is contained in a figure tag and contains a trailing caption, correct the base line offset accordingly. */ }
+  .image img {
+    height: inherit;
+    width: auto; }
+  .image + figcaption, .image .caption {
+    margin-top: -3.45px; }
+
+figcaption, .caption {
+  line-height: 23px;
+  font-weight: 300; }
+
+p > img {
+  margin-right: 23px;
+  float: left;
+  position: relative;
+  top: 3.45px;
+  max-width: 100%; }

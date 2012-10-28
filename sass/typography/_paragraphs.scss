@@ -1,10 +1,13 @@
 h4, h5, h6 {
-	+p {
+	+ p {
 		margin-top: 0;
 	}
 }
 p {
-	margin: $base-line-height 0;	
+	margin: $base-line-height 0;
+	+ p {
+		margin-top: 0;
+	}
 }
 p.intro {
 	font-weight: 600;
