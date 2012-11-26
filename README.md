@@ -13,12 +13,15 @@ Include mixins for easy 'mixing' of column behavior. Example use:
 .myclass {
 	@include column(1/2);
 	@include parentBehavior();
+	@media screen and (max-width: 1024px) {
+		@mixin columnWidth(1/1);
+	}
 }
 
-For more info on the included mixins, view: [http://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss](http://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss)
+For more info on the included mixins, view: [https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss](https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss)
 
 ## Additional style rules
-The framework branch [http://github.com/babsgosgens/persistent-grid/tree/framework](http://github.com/babsgosgens/persistent-grid/tree/framework) contains additional styles for common markup, among which:
+The framework branch [https://github.com/babsgosgens/persistent-grid/tree/framework](https://github.com/babsgosgens/persistent-grid/tree/framework) contains additional styles for common markup, among which:
 * forms,
 * tables,
 * buttons,
