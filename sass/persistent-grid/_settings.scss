@@ -1,9 +1,13 @@
-$containerMaxWidth: 	1280px;
-$containerPosition:		center !default; // center | left
-$negativeRightMargin:	 -0.25em;
-$columnPadding:			2*$base-line-height;
+$containerMaxWidth					: 1280px;
+$containerPosition					: center !default; // center | left
+$negativeRightMargin				: -0.17em;
+$columnPadding						: 2*$base-line-height;
+$pad-children						: true;
+$use-box-sizing						: true;
 
-$breakpointS:  "(max-width: 767px)";
-$breakpointM:  "(min-width: 768px) and (max-width: 1023px)"; // breakpoint(767px,1023px); //
-$breakpointL:  "(min-width: 1280px) and (max-width: 1679px)"; // breakpoint(1280px,1679px); //
-$breakpointXL: "(min-width: 1680px)"; // breakpoint(1680px,false); //
+$breakpointS						: "(max-width: 767px)";
+$breakpointM						: "(min-width: 768px) and (max-width: 1023px)"; // breakpoint(767px,1023px); //
+$breakpointL 						: "(min-width: 1280px) and (max-width: 1679px)"; // breakpoint(1280px,1679px); //
+$breakpointXL 						: "(min-width: 1680px)"; // breakpoint(1680px,false); //
+
+$corner-radius						: 3px;

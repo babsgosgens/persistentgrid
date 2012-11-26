@@ -1,0 +1,3 @@
+@function fractionPercentage($fraction: 1/3) {
+	@return $fraction*100%;
+}
