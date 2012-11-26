@@ -11,11 +11,17 @@ Feel free to use it. I would appreciate any feedback you may have.
 Include mixins for easy 'mixing' of column behavior. Example use:
 
 .myclass {
+
 	@include column(1/2);
+
 	@include parentBehavior();
+
 	@media screen and (max-width: 1024px) {
+
 		@mixin columnWidth(1/1);
+
 	}
+
 }
 
 For more info on the included mixins, view: [https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss](https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss)
