@@ -15,10 +15,10 @@ Include mixins for easy 'mixing' of column behavior. Example use:
 	@include parentBehavior();
 }
 
-For more info on the included mixins, view: [http://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss]http://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss
+For more info on the included mixins, view: [http://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss](http://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss)
 
 ## Additional style rules
-The framework branch [http://github.com/babsgosgens/persistent-grid/tree/framework]http://github.com/babsgosgens/persistent-grid/tree/framework contains additional styles for common markup, among which:
+The framework branch [http://github.com/babsgosgens/persistent-grid/tree/framework](http://github.com/babsgosgens/persistent-grid/tree/framework) contains additional styles for common markup, among which:
 * forms,
 * tables,
 * buttons,
