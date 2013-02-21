@@ -38,9 +38,7 @@ There's also a possibility to specify descending elements as columns, for exampl
 
 ```
 <ul class="collection-of-thirds">
-	<li>This will divide</li>
-	<li>these bullets</li>
-	<li>over 3 columns</li>
+	<li>This will divide</li><li>these bullets</li><li>over 3 columns</li>
 </ul>
 ```
 
@@ -48,9 +46,7 @@ And, to make this persistent on all devices:
 
 ```
 <ul class="persistent collection-of-thirds">
-	<li>This will divide</li>
-	<li>these bullets</li>
-	<li>over 3 columns</li>
+	<li>This will divide</li><li>these bullets</li><li>over 3 columns</li>
 </ul>
 ```
 
