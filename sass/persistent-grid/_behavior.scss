@@ -1,0 +1,63 @@
+.root {
+	@include root();
+}
+
+.column {
+	@include column-behavior;
+	@include column-padding();
+	@include column-width(1/1);
+}
+
+.parent {
+	@include parent-behavior(); 
+}
+
+// Roll out the required columns
+@each $fraction in $column-widths {
+	$name: fractionToText($fraction);
+	@if $name {
+		.#{$name}#{$column-base-class},
+		.collection-of-#{$name}s>* {
+			@extend .column;
+			@include column-width($fraction);
+		}
+		.#{$name}#{$column-base-class}.persistent,
+		.collection-of-#{$name}s.persistent>* {
+			@include column-width($fraction, true);
+		}
+		.collection-of-#{$name}s {
+			@extend .parent;
+		}
+		// Source Ordering
+		.push-#{$name} {
+			@include move($fraction);
+		}
+		// Source Ordering
+		.pull-#{$name} {
+			@include move(-1*$fraction);
+		}
+	}
+}
+
+// Reset for mobile-first
+// Resetting the earlier rules is, frankly, less code
+// As an added benefit, <MSIE9 won't need addition rules
+@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
+	.root {
+		min-width: auto;
+	}
+	@each $fraction in $column-widths {
+		$name: fractionToText($fraction);
+		@if $name {
+			.#{$name}#{$column-base-class},
+			.collection-of-#{$name}s>* {
+				width: 100%;
+			}
+			// Source Ordering
+			.push-#{$name},
+			.pull-#{$name} {
+				left: 0;
+			}
+		}
+	}
+}

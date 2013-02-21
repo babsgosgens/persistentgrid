@@ -1,0 +1,29 @@
+// Images inside an image container are set to vertical grid
+.image-container {
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	@include border-radius($corner-radius);
+	img {
+		@include border-radius($corner-radius);
+		height: 100%;
+		width: auto;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+.image-container.thumbnail { @include vertical-rhythm(4,height); }
+.image-container.small { @include vertical-rhythm(9,height); }
+.image-container.medium { @include vertical-rhythm(18,height); }
+.image-container.large { @include vertical-rhythm(30,height); }
+
+// .image-container.thumbnail img { @include vertical-rhythm(4,height); }
+// .image-container.small img { @include vertical-rhythm(8,line-height); }
+// .image-container.medium img { @include vertical-rhythm(18,line-height); }
+// .image-container.large img { @include vertical-rhythm(30,line-height); }
+
+figure {
+	@extend .image-container;
+	@extend .image-container.medium;
+}

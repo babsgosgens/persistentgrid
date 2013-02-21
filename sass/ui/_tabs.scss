@@ -1,0 +1,67 @@
+.js .accordion {
+	.tab {
+		@include vertical-rhythm(1.5, line-height);
+		a {
+			display: block;
+			@include vertical-rhythm(0.25, margin-top);
+			@include vertical-rhythm(0.25, margin-bottom);
+			@include unit(padding-left, 0.25*$column-padding);
+			@include font-size($base-font-size);
+			background-color: $color-theme;
+			color: $color-body;
+			text-decoration: none;
+			position: relative;
+			@include triangle($base-font-size, left, $black);
+			&:after {
+				@include vertical-rhythm(0.5, top);
+				@include unit(right, 1*$base-font-size);
+			}
+		}
+	}
+	.pane {
+		.tab-content {
+			>*:last-child {
+				margin-bottom: 0;
+			}
+			@include vertical-rhythm(1, padding-top);
+			@include vertical-rhythm(1, padding-bottom);
+			@include unit(padding-left, 0.25*$column-padding);
+			@include unit(padding-right, 0.25*$column-padding);
+		}
+		.tab:hover a {
+			background-color: $color-theme;
+		}
+		&.active {
+			background-color: darken($white, 5);
+			.tab a {
+				background-color: $color-theme;
+			}
+		}
+		&.active .tab a:after,
+		.tab:hover a:after {
+			border-right-color: transparent;
+			border-top-color: $black;
+			@include unit(right, 0.5*$base-font-size);
+		}
+	}
+}
+.js .tabs {
+	height: auto;
+	position: relative;
+}
+.js .pane {
+	.tab {
+		position: absolute;
+	}
+	.tab-content {
+		position: absolute;
+		left: -9999px;
+	}
+	&.active {
+		height: auto;
+		.tab-content {
+			position: static;
+			left: 0;
+		}
+	}
+}

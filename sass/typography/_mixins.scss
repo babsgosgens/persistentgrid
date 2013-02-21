@@ -1,0 +1,44 @@
+// $font-family must be an array consisting of: style, variant, weight, font-family; 
+@mixin font( $font-family, $font-size:$base-font-size, $line-height:$base-line-height)
+{
+	$font-style:   nth($font-family,1);
+	$font-variant: nth($font-family,2);
+	$font-weight:  nth($font-family,3);
+	$font-family:  nth($font-family,4);
+
+	font: #{$font-style} #{$font-variant} #{$font-weight} #{$font-size}/#{$line-height} #{$font-family};
+}
+
+@mixin font-family-style($font-family)
+{
+	font-style: font-style( nth($font-family,1) );
+}
+@mixin font-family-variant($font-family)
+{
+	font-variant: font-variant( nth($font-family,2) );
+}
+@mixin font-family-weight($font-family)
+{
+	font-weight: font-weight( nth($font-family,3) );
+}
+@mixin font-family-family($font-family)
+{
+	font-family: font-family( nth($font-family,4) );
+}
+
+@mixin font-style($font-style)
+{
+	font-style: $font-style;
+}
+@mixin font-variant($font-variant)
+{
+	font-variant: $font-variant;
+}
+@mixin font-weight($font-weight)
+{
+	font-weight: $font-weight;
+}
+@mixin font-family($font-family)
+{
+	font-family: $font-family;
+}
