@@ -1,64 +1,78 @@
-@mixin columnBehavior($use-box-sizing: true)
+@mixin column($fraction: 1/3, $persistent: false) {
+	html {
+		font-size: 0;
+	}
+	@include column-behavior();
+	@include column-width($fraction, $persistent);
+	@include column-padding();
+}
+
+@mixin column-behavior($use-box-sizing: $use-box-sizing, $column-style: $column-style)
 {
-	display: inline-block;
-	margin-right: $negativeRightMargin !important;
+	@if $column-style == 'inline' {
+		display: inline-block;
+		margin-right: $negative-right-margin !important;
+	}
+	@if $column-style == 'float' {
+		float: left;
+		display: block;
+	}
+	@if $column-style == 'table' {
+		float: left;
+		display: table;
+	}
 	vertical-align: top;
-	@if $use-box-sizing {
-		@include box-sizing('border-box');
-		padding-left: $columnPadding / 2;
-		padding-right: $columnPadding / 2;
-	}
+	height: auto;
 }
 
-@mixin marginsForColumns()
-{
-	padding-left: 0;
-	padding-right: 0;
-	margin-left: $columnPadding / 2;
-	margin-right: $columnPadding / 2;
-}
-@mixin parentBehavior($pad-children: false)
-{
-	padding-left: 0;
-	padding-right: 0;
-	/* Experimental */
-	@if $pad-children {
-		>*:not(.col) {
-			padding-left: $columnPadding / 2;
-			padding-right: $columnPadding / 2;
-		}
-	}
-}
-
-@mixin columnWidth($fraction: 1/3, $persistent: false) {
+@mixin column-width($fraction: $base-column-width, $persistent: false) {
 	@if $persistent {
 		width: fractionPercentage($fraction) !important;
 	}
 	@else {
 		width: fractionPercentage($fraction);
-		@if $breakpointS {
-			@media screen and #{$breakpointS} {
-				width: 100%;
-			}
+	}
+	@if $column-style == 'inline' {
+		@if $fraction == 1/1 {
+			margin-right: 0;
 		}
 	}
 }
 
-@mixin column($fraction: 1/3, $persistent: false) {
-	@include columnBehavior();
-	@include columnWidth($fraction, $persistent);
+@mixin parent-behavior()
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@mixin move($fraction) {
+	position: relative;
+	left: fractionPercentage($fraction);
 }
 
 @mixin root() {
-	display: block;
-	margin-left: ($columnPadding/2);
-	margin-right: ($columnPadding/2);
-	@media screen and (max-width: 1024px) {
-		margin-left: 0; margin-right: 0;
+	@if $column-style == 'float' {
+		@include clearfix();
 	}
-	@media screen and (min-width: $containerMaxWidth + 2*$columnPadding) {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: $containerMaxWidth;
+	display: block;
+	margin: 0 auto;
+	max-width: $container-max-width;
+	@if $container-min-width {
+		min-width: $container-min-width;
+	}
+}
+
+@mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
+{
+	@if $use-box-sizing {
+		@include box-sizing('border-box');
+	}
+	@if ($use-margin) {
+		margin-left: $column-padding / 2;
+		margin-right: $column-padding / 2;
+	}
+	@else {
+		padding-left: $column-padding / 2;
+		padding-right: $column-padding / 2;
 	}
 }
