@@ -32,6 +32,8 @@ Or, to be more generic as well as flexible:
 }
 ```
 
+Adding the optional parameter true will make the columnwidth persistent on all screen sizes. By omitting it, the column will span the full width of the screen below the first breakpoint.
+
 There's also a possibility to specify descending elements as columns, for example:
 
 ```
@@ -55,13 +57,10 @@ And, to make this persistent on all devices:
 If you want to apply this in the CSS only - and keep your markup free from presentational code - there's multiple ways you can do that. Here's one example:
 
 ```
-ul li {
-	@extend .collection-of-thirds.persistent > *
+.ul {
+	@extend .persistent.collection-of-thirds;
 }
 ```
-
-Adding the optional parameter true will make the columnwidth persistent on all screen sizes. By omitting it, the column will span the full width of the screen below the first breakpoint.
-
 
 In the latest version, breakpoints and default column widths are configurable, although the grid only employs the first breakpoint. It's up to you to decide if and which breakpoints you want to implement as it is also up to you to decide which column widths you want to add rules for.
 
