@@ -57,7 +57,7 @@ And, to make this persistent on all devices:
 If you want to apply this in the CSS only - and keep your markup free from presentational code - there's multiple ways you can do that. Here's one example:
 
 ```
-.ul {
+ul {
 	@extend .persistent.collection-of-thirds;
 }
 ```
