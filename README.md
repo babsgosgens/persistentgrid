@@ -66,6 +66,8 @@ In the latest version, breakpoints and default column widths are configurable, a
 
 For more info on the included mixins, view: [https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss](https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss)
 
+And this gives you an idea of what settings can be applied: [https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_settings.scss](https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_settings.scss)
+
 ## Additional style rules
 The framework branch [https://github.com/babsgosgens/persistent-grid/tree/framework](https://github.com/babsgosgens/persistent-grid/tree/framework) contains additional styles for common markup, among which:
 * forms,
