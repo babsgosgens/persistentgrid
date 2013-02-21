@@ -1,315 +1,271 @@
-/* line 17, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 15, ../sass/_reset.scss */
-html, body, figure {
+html {
+  /* Settings: $debug-rhythm=true; */
+  background: url(../sass/_baselines/24px.png) repeat center top; }
+  html * {
+    /* Settings: $debug-rhythm=true; */
+    background-color: transparent !important;
+    background-image: none !important;
+    outline: #ff01ff dotted 1px;
+    outline: rgba(255, 0, 255, 0.1) dotted 1px; }
+
+html {
+  font: normal normal 300 100%/1.5em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+  border: 0; }
 
-/* line 22, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 25, ../sass/_reset.scss */
-html {
-  line-height: 1.4;
-}
-
-/* line 24, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 30, ../sass/_reset.scss */
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 26, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 35, ../sass/_reset.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* line 28, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 41, ../sass/_reset.scss */
 caption, th, td {
   text-align: left;
-  vertical-align: middle;
-}
+  font-weight: normal;
+  vertical-align: middle; }
 
-/* line 30, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 47, ../sass/_reset.scss */
 q, blockquote {
-  quotes: none;
-}
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
 
-/* line 103, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 51, ../sass/_reset.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 57, ../sass/_reset.scss */
 a img {
-  border: none;
-}
+  border: none; }
 
-/* line 116, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-/* line 62, ../sass/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
+  display: block; }
 
-/* line 4, ../sass/_persistent-grid.scss */
 .root {
   display: block;
-  margin: 0 20px;
-}
+  margin: 0 auto;
+  max-width: 70em;
+  min-width: 40em; }
 
-/* line 9, ../sass/_persistent-grid.scss */
-.col, [class*="collection"] > * {
-  width: 33.333333%;
+.column, .full,
+.collection-of-fulls > *, .half,
+.collection-of-halfs > *, .fourth,
+.collection-of-fourths > *, .third,
+.collection-of-thirds > *, .two-third,
+.collection-of-two-thirds > * {
   display: inline-block;
-  margin-right: -0.5em !important;
   vertical-align: top;
-}
-
-/* line 10, ../sass/_persistent-grid.scss */
-.col.twelfth, [class*="collection"] > .twelfth, .collection-of-twelfths > * {
-  width: 8.333333%;
-}
-
-/* line 11, ../sass/_persistent-grid.scss */
-.col.sixth, [class*="collection"] > .sixth, .collection-of-sixths > * {
-  width: 16.666667%;
-}
-
-/* line 12, ../sass/_persistent-grid.scss */
-.col.fourth, [class*="collection"] > .fourth, .collection-of-fourths > * {
-  width: 25%;
-}
-
-/* line 13, ../sass/_persistent-grid.scss */
-.col.third, [class*="collection"] > .third, .collection-of-thirds > * {
-  width: 33.333333%;
-}
-
-/* line 14, ../sass/_persistent-grid.scss */
-.col.half, [class*="collection"] > .half, .collection-of-halfs > * {
-  width: 50%;
-}
-
-/* line 15, ../sass/_persistent-grid.scss */
-.col.twothird, [class*="collection"] > .twothird, .collection-of-twothirds > * {
-  width: 66.666667%;
-}
-
-/* line 16, ../sass/_persistent-grid.scss */
-.col.full, [class*="collection"] > .full, .collection-of-fulls > * {
-  width: 100%;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 20, ../sass/_persistent-grid.scss */
-  .col:not(.persistent), [class*="collection"] > :not(.persistent) {
-    width: 100%;
-  }
-
-  /* line 21, ../sass/_persistent-grid.scss */
-  .root {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 26, ../sass/_persistent-grid.scss */
-  .col, [class*="collection"] > * {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1280px) and (max-width: 1679px) {
-  /* line 31, ../sass/_persistent-grid.scss */
-  .col, [class*="collection"] > * {
-    width: 25%;
-  }
-}
-@media screen and (min-width: 1680px) {
-  /* line 36, ../sass/_persistent-grid.scss */
-  .col, [class*="collection"] > * {
-    width: 16.666667%;
-  }
-}
-@media screen and (min-width: 1360px) {
-  /* line 41, ../sass/_persistent-grid.scss */
-  .root {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-}
-/* line 47, ../sass/_persistent-grid.scss */
-.col, [class*="collection"] > * {
+  height: auto;
+  padding-left: 24px;
+  padding-right: 24px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-/* line 52, ../sass/_persistent-grid.scss */
-.col[class*="collection"], [class*="collection"] > [class*="collection"], .col.parent, [class*="collection"] > .parent {
+  width: 100%; }
+
+.parent, .collection-of-fulls, .collection-of-halfs, .collection-of-fourths, .collection-of-thirds, .collection-of-two-thirds {
   padding-left: 0;
-  padding-right: 0;
-  /* Experimental */
-}
-/* line 56, ../sass/_persistent-grid.scss */
-.col[class*="collection"] > *:not(.col), [class*="collection"] > [class*="collection"] > *:not(.col), .col.parent > *:not(.col), [class*="collection"] > .parent > *:not(.col) {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  padding-right: 0; }
 
-/* line 91, ../sass/_persistent-grid.scss */
-.jump {
-  margin-left: 33.333333%;
-}
+.full,
+.collection-of-fulls > * {
+  width: 100%; }
 
-@media screen and (max-width: 767px) {
-  /* line 95, ../sass/_persistent-grid.scss */
-  .jump {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 100, ../sass/_persistent-grid.scss */
-  .jump {
-    margin-left: 50%;
-  }
-}
-@media screen and (min-width: 1280px) and (max-width: 1679px) {
-  /* line 105, ../sass/_persistent-grid.scss */
-  .jump {
-    margin-left: 25;
-  }
-}
-@media screen and (min-width: 1680px) {
-  /* line 110, ../sass/_persistent-grid.scss */
-  .jump {
-    margin-left: 16.666667%;
-  }
-}
-/* line 114, ../sass/_persistent-grid.scss */
-.push {
+.full.persistent,
+.collection-of-fulls.persistent > * {
+  width: 100% !important; }
+
+.push-full {
   position: relative;
-  left: 33.333333%;
-  float: left;
-}
+  left: 100%; }
 
-/* line 120, ../sass/_persistent-grid.scss */
-.pull {
+.pull-full {
   position: relative;
-  left: -33.33333%;
-  float: left;
-}
+  left: -100%; }
 
-/* Demo */
-/* line 2, ../sass/_styles.scss */
-.col.demo, [class*="collection"] > .demo {
-  padding-left: 0;
-  padding-right: 0;
-  border: 20px solid whitesmoke;
-  border-width: 0 20px;
-}
-/* line 7, ../sass/_styles.scss */
-.col.demo.parent, [class*="collection"] > .demo.parent {
-  border: 0;
-}
-/* line 9, ../sass/_styles.scss */
-.col.demo.parent .col, [class*="collection"] > .demo.parent .col, .col.demo.parent [class*="collection"] > *, [class*="collection"] > .demo.parent [class*="collection"] > * {
-  background-color: GhostWhite;
-}
-/* line 11, ../sass/_styles.scss */
-.col.demo.parent .col .col, [class*="collection"] > .demo.parent .col .col, .col.demo.parent [class*="collection"] > * .col, [class*="collection"] > .demo.parent [class*="collection"] > * .col, .col.demo.parent .col [class*="collection"] > *, [class*="collection"] > .demo.parent .col [class*="collection"] > *, .col.demo.parent [class*="collection"] > * [class*="collection"] > *, [class*="collection"] > .demo.parent [class*="collection"] > * [class*="collection"] > * {
-  background-color: Ivory;
-}
-/* line 13, ../sass/_styles.scss */
-.col.demo.parent .col .col .col, [class*="collection"] > .demo.parent .col .col .col, .col.demo.parent [class*="collection"] > * .col .col, [class*="collection"] > .demo.parent [class*="collection"] > * .col .col, .col.demo.parent .col [class*="collection"] > * .col, [class*="collection"] > .demo.parent .col [class*="collection"] > * .col, .col.demo.parent [class*="collection"] > * [class*="collection"] > * .col, [class*="collection"] > .demo.parent [class*="collection"] > * [class*="collection"] > * .col, .col.demo.parent .col .col [class*="collection"] > *, [class*="collection"] > .demo.parent .col .col [class*="collection"] > *, .col.demo.parent [class*="collection"] > * .col [class*="collection"] > *, [class*="collection"] > .demo.parent [class*="collection"] > * .col [class*="collection"] > *, .col.demo.parent .col [class*="collection"] > * [class*="collection"] > *, [class*="collection"] > .demo.parent .col [class*="collection"] > * [class*="collection"] > *, .col.demo.parent [class*="collection"] > * [class*="collection"] > * [class*="collection"] > *, [class*="collection"] > .demo.parent [class*="collection"] > * [class*="collection"] > * [class*="collection"] > * {
-  background-color: HoneyDew;
-}
+.half,
+.collection-of-halfs > * {
+  width: 50%; }
 
-/* line 21, ../sass/_styles.scss */
-body {
-  font-family: 'Source Code Pro', sans-serif;
-}
+.half.persistent,
+.collection-of-halfs.persistent > * {
+  width: 50% !important; }
 
-/* Cosmetic styles */
-/* line 30, ../sass/_styles.scss */
-header {
-  background-color: #fff;
-}
-/* line 32, ../sass/_styles.scss */
-header .container {
-  background: transparent url(../images/persistent-grid.png) no-repeat 0 bottom;
-  padding: 20px 0;
-}
-/* line 36, ../sass/_styles.scss */
-header h1 {
-  color: #fcb913;
-  font-size: 3em;
-  font-size: 3rem;
-  margin-bottom: 0;
-}
-/* line 42, ../sass/_styles.scss */
-header p {
-  font-size: 1.2em;
-  font-size: 1.2rem;
-}
+.push-half {
+  position: relative;
+  left: 50%; }
 
-/* line 48, ../sass/_styles.scss */
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  background-color: #fff;
-}
+.pull-half {
+  position: relative;
+  left: -50%; }
 
-/* line 55, ../sass/_styles.scss */
-th,
-thead td {
-  background-color: #fcb913;
-}
+.fourth,
+.collection-of-fourths > * {
+  width: 25%; }
 
-/* line 58, ../sass/_styles.scss */
-thead th {
-  text-align: right;
-}
+.fourth.persistent,
+.collection-of-fourths.persistent > * {
+  width: 25% !important; }
 
-/* line 61, ../sass/_styles.scss */
-tbody th {
-  text-align: left;
-}
+.push-fourth {
+  position: relative;
+  left: 25%; }
 
-/* line 64, ../sass/_styles.scss */
-th {
-  font-size: 90%;
-}
+.pull-fourth {
+  position: relative;
+  left: -25%; }
 
-/* line 67, ../sass/_styles.scss */
-th, td {
-  padding: 5px;
-  border-bottom: 1px solid LightGrey;
-}
+.third,
+.collection-of-thirds > * {
+  width: 33.33333%; }
 
-/* line 72, ../sass/_styles.scss */
-thead th:nth-of-type(even),
-td:nth-of-type(odd) {
-  background-color: #fdc845;
-}
+.third.persistent,
+.collection-of-thirds.persistent > * {
+  width: 33.33333% !important; }
 
-/* line 75, ../sass/_styles.scss */
-tbody td {
-  text-align: right;
-  padding: 0 1%;
-}
+.push-third {
+  position: relative;
+  left: 33.33333%; }
 
-/* line 79, ../sass/_styles.scss */
+.pull-third {
+  position: relative;
+  left: -33.33333%; }
+
+.two-third,
+.collection-of-two-thirds > * {
+  width: 66.66667%; }
+
+.two-third.persistent,
+.collection-of-two-thirds.persistent > * {
+  width: 66.66667% !important; }
+
+.push-two-third {
+  position: relative;
+  left: 66.66667%; }
+
+.pull-two-third {
+  position: relative;
+  left: -66.66667%; }
+
+@media only screen and (max-width: 40em) {
+  .root {
+    min-width: auto; }
+
+  .full,
+  .collection-of-fulls > * {
+    width: 100%; }
+
+  .push-full,
+  .pull-full {
+    left: 0; }
+
+  .half,
+  .collection-of-halfs > * {
+    width: 100%; }
+
+  .push-half,
+  .pull-half {
+    left: 0; }
+
+  .fourth,
+  .collection-of-fourths > * {
+    width: 100%; }
+
+  .push-fourth,
+  .pull-fourth {
+    left: 0; }
+
+  .third,
+  .collection-of-thirds > * {
+    width: 100%; }
+
+  .push-third,
+  .pull-third {
+    left: 0; }
+
+  .two-third,
+  .collection-of-two-thirds > * {
+    width: 100%; }
+
+  .push-two-third,
+  .pull-two-third {
+    left: 0; } }
+a {
+  color: cyan;
+  text-decoration: none; }
+  a:hover {
+    color: #9fcc3a; }
+  a:active {
+    color: #9fcc3a; }
+  a:visited {
+    color: #04a4a5; }
+    a:visited:hover {
+      color: #9fcc3a; }
+
+.heading-1, header h1 {
+  font: normal normal 400 2.25em/1.33333em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0.66667em 0em 0.66667em 0em;
+  color: #9fcc3a; }
+
+.heading-2, h1 {
+  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 1.5em 0em 0.5em 0em;
+  color: inherit; }
+
+.heading-3, h2 {
+  font: normal normal 400 1em/1.5em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 3em 0em 1.5em 0em;
+  color: #9fcc3a; }
+
+.heading-4 {
+  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 1em 0em;
+  color: inherit; }
+
+.heading-5 {
+  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 1em 0em;
+  color: inherit; }
+
+.heading-6 {
+  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 1em 0em;
+  color: inherit; }
+
+ul, ol {
+  list-style-position: outside; }
+
 ul {
-  padding: 0;
-}
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+
+.column, .full,
+.collection-of-fulls > *, .half,
+.collection-of-halfs > *, .fourth,
+.collection-of-fourths > *, .third,
+.collection-of-thirds > *, .two-third,
+.collection-of-two-thirds > * {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
+
+footer {
+  margin-top: 3em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }

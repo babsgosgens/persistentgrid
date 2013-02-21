@@ -1,0 +1,53 @@
+@function establish-size($to-size,$from-size:$base-font-size) {
+	@if not $relative-font-sizing and $from-size != $base-font-size {
+    @warn "$relative-font-sizing is false but a relative font size was passed to adjust-font-size-to"; }
+  	$font-size: $font-unit * $to-size / $from-size;
+
+  	@return $font-size;
+}
+
+//* Calculate the optimal line-height */
+@function leading-in-px($font-size, $balance-over: false) {
+
+	$dividend: $font-size / $base-line-height;
+	$leading: $base-line-height;
+
+	// For smaller font-sizes, for instance balance a font-size of 8px over two baselines of 24px in three (balance) lines resulting in 48/3=16px;
+	@if $balance-over {
+		$leading: 2 * $base-line-height / $balance-over;		
+		@return $leading;
+	}
+	@if $dividend<0.5 {
+		$leading: 0.5 * $base-line-height;
+		@return $leading;
+	}
+	@if $dividend>1 {
+		$leading: ceil($dividend) * $base-line-height;
+		@if ($leading - $font-size) < (2 * $min-line-padding) {
+			$leading: $leading + $base-line-height;
+		}
+		@return $leading;
+	}
+	@else {
+		@return $leading;		
+	}
+}
+
+@function px-to-rhythm($value) {
+	@return $value/$base-line-height;
+}
+
+@function base-line-rhythm($base-lines: 1) {
+	// @debug $base-lines;
+	// @debug $base-line-height;
+	@return ($base-lines * $base-line-height);
+}
+
+@function px-to-em($target,$context)
+{
+	@return $target/$context*1em;
+}
+@function px-to-rem($pixels)
+{
+	@return $pixels/1px*0.1rem;
+}

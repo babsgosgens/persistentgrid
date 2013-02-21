@@ -1,0 +1,138 @@
+table {
+	width: 100%;
+	// tr {
+	// 	border-bottom: 3px solid #fff;
+	// 	margin-bottom: -3px;
+	// }
+	td,
+	th {
+		>span:first-child {
+			display: block;
+			@include unit(padding,$column-padding/2);
+			@include vertical-rhythm(0.5, padding-top);
+			@include unit(padding-bottom,0.5*($base-line-height - 1px));
+			border-top: 1px solid transparent;
+		}
+		&.num {
+			text-align: right;
+			width: 2.5em;
+			color: lighten($color-body,40);
+		}
+	}
+	.empty {
+		background-color: $white;
+		a {
+			background-color: $white;
+			color: lighten($color-body,50);
+			text-align: left;
+			&.active,
+			&:hover {
+				background-color: $white;
+				color: inherit;
+			}
+		}
+	}
+}
+colgroup {
+	border-right: 3px solid $white;
+	col {
+		border-left: 3px solid $white;
+		background-color: rgba(0,0,0,.05);
+		&.num {
+			background-color: lighten($button-background-color,50);
+		}
+		&.active {
+			background-color: lighten($tables-active-column-background-color,40);
+		}
+	}
+}
+
+thead {
+	.th {
+		>span {
+			@include border-top-radius($corner-radius);
+			background-color: darken($white, 04);
+			color: lighten($color-body,50);	
+		}
+	}
+	th {
+		font-weight: $normal;
+		a {
+			display: block;
+			@include border-top-radius($corner-radius);
+			background-color: $button-background-color;
+			color: $white;
+			@include unit(padding,$column-padding/2);
+			@include vertical-rhythm(0.5, padding-top);
+			@include unit(padding-bottom,0.5*($base-line-height - 1px));
+			text-decoration: none;
+			border-bottom: 1px solid $white;
+			&:hover {
+				color: $white;
+				background-color: darken($button-background-color,10);
+			}
+			&:before {
+				font-family: FontAwesome;
+				font-weight: normal;
+				font-style: normal;
+				display: inline-block;
+				text-decoration: inherit;
+				content: "\f0dc";
+				padding: 0 2px;
+			}
+			&.active {
+				background-color: $tables-active-column-background-color;
+				&.up {
+					&:before {
+						content: "\f0de";
+					}
+				}
+				&.down {
+					&:before {
+						content: "\f0dd";
+					}
+				}
+			}
+			img[src*="asc"],
+			img[src*="desc"] {
+				display: none;
+			}
+		}
+	}
+}
+tbody {
+	td {
+		&.empty {
+			background-color: $white;
+		}
+	}
+}
+tfoot {
+
+}
+table.zebra {
+	tbody {
+		tr {
+			&.odd,
+			&:nth-of-type(odd) {
+				background-color: darken($white,10);
+				background-color: rgba(0,0,0,.05);
+			}
+		}
+	}
+}
+table.outlined {
+	tbody {
+		tr {
+			border-top: 1px solid $white;
+			td {
+				@include unit(padding-top, $base-line-height/2 - 1px); // Maintain vertical rhytm
+				@include unit(padding-bottom, $base-line-height/2);
+			}
+			border-bottom: 1px solid $white;
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+//	################################################################################################################################  //
+//	Links				  																											  //
+//	################################################################################################################################  //
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		color: $link-color-hover;
+	}
+	&:active {
+		color: $link-color-active;
+	}
+	&:visited {
+		color: $link-color-visited;
+		&:hover {
+			color: $link-color-hover;
+		}
+	}
+}
+
+
+//	################################################################################################################################  //
+//	Paragraphs				  																										  //
+//	################################################################################################################################  //
+
+	p {
+		// Inherits from body
+	}
+
+
+//	################################################################################################################################  //
+//	Headings				  																										  //
+//	################################################################################################################################  //
+
+@for $i from 1 through 6 {
+
+	$properties: '';
+
+	@if $i == 1 { $properties: $h1-size $h1-leading $h1-font-family $h1-margin $h1-color; }
+	@if $i == 2 { $properties: $h2-size $h2-leading $h2-font-family $h2-margin $h2-color; }
+	@if $i == 3 { $properties: $h3-size $h3-leading $h3-font-family $h3-margin $h3-color; }
+	@if $i == 4 { $properties: $h4-size $h4-leading $h4-font-family $h4-margin $h4-color; }
+	@if $i == 5 { $properties: $h5-size $h5-leading $h5-font-family $h5-margin $h5-color; }
+	@if $i == 6 { $properties: $h6-size $h6-leading $h6-font-family $h6-margin $h6-color; }
+
+	.heading-#{$i} {
+
+		$font-size:   establish-size( nth($properties,1) );
+		$line-height: rhythm(nth($properties,2), nth($properties,1));
+
+		@include font( nth($properties,3), $font-size, $line-height );
+
+		$margins: nth($properties,4);
+
+		$top:    rhythm(nth($margins,1),nth($properties,1));
+		$right:  rhythm(nth($margins,2),nth($properties,1));
+		$bottom: rhythm(nth($margins,3),nth($properties,1));
+		$left:   rhythm(nth($margins,4),nth($properties,1));
+
+		margin: $top $right $bottom $left;
+
+		color: nth($properties,5);
+	}
+}

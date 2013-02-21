@@ -3,8 +3,105 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>The Persistent Grid</title>
-		<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,700,900' rel='stylesheet' type='text/css'> <link href="./stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="./stylesheets/persistent-grid.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="./stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="./js/modernizr.2.6.2.js"></script>
+	</head>
+	<body class="root">
+		<a href="https://github.com/babsgosgens/persistent-grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+		<header role="header">
+			<div class="full">
+				<h1>The Persistent Grid</h1>
+				<p>A responsive and (very) lightweight grid <small>still in alpha version</small>.</p>
+			</div>
+		</header>
+		<article>
+			<div id="captive" class="persistent collection-of-halfs">
+				<section>
+					<h1>Features:</h1>
+					<ul>
+						<li>Responsive</li>
+						<li>Fluid</li>
+						<li>Nestable</li>
+						<li>Fixed gutter widths</li>
+						<li>Fixable root</li>
+						<li>SASS</li>
+					</ul>
+				</section
+				><section>
+					<h1>Browser Compatibility</h1>
+					<ul>
+						<li>Internet Explorer 8</li>
+						<li>Chrome 22.0.1229.94</li>
+						<li>Firefox 15.0.1</li>
+						<li>Safari 5.1.7</li>
+					</ul>
+				</section>
+			</div>
+			<section id="elaborate">
+				<h1 class="full">About The Persistent Grid</h1>
+				<h2 class="full">How it started</h2>
+				<div class="half">
+				<p>
+					The Persistent Grid started out as a little experiment on how to evenly distribute containers across devices when it evolved into a very lightweight and simple, responsive grid. The idea was to have containers side-by-side with a width and number depending on the viewport size. Like most other responsive grids the columns will resize relative to their viewport. The difference is that the number of columns per row would also vary per viewport. The first version used some common breakpoints that were configurable in the SASS files.
+				</p>
+				</div
+				><div class="half">
+				<p>
+					By default, all columns would have a preset width that depended on the viewport. For example - a column would be full width on mobile screens, half width on tablets, and third or smaller on desktop and larger screens. Adding classes that linked to rules specifying a width would make a column keep its (relative) size across all viewports except the smallest (mobile) views. Adding a class of persistent would force that relative size on mobile as well - hence the grid's name.
+				</p>
+				</div>
+				<h2 class="full">Where we are now</h2>
+				<div class="half">
+				<p>
+					The current version still implements the persistent class, but the fixed distribution of columns has been taken out. Instead, a number of SASS mixins give you the possibility of configuring your grid in any way that you need. What's interesting, it that you can achieve complex layouts by nesting and combining different column widths.
+				</p>
+				</div
+				><div class="half">
+				<p>
+					For example, consider a 12-column layout, pretty common around the web these days. Say you want to push your content one column in - resulting in an 11-column wide content area.
+
+					If you nou want to split that area into two 5 and 6-column fields, you would assign a width of 5/11 and 6/11 to these tags by instructing the grid to create these column classes of 'five-eleventh' and 'six-eleventh'. You can also use the SASS mixin '@include column-width(5/11);' and '@include column-width(6/11);' on any class or tag in your markup.
+
+					That way, you keep your markup clean.
+				</p>
+				</div>
+					
+
+				<h2 class="full">About The Persistent Grid</h2>
+				<p class="third">
+					The columns have box-sizing: border-box; applied to them. That way, adding consistent gutter width is a piece of cake. To avoid double gutters in nested columns, apply a class of 'parent' to the containing column. Adding support for older browsers wouldn't be that difficult. By removing the padding and wrapping the column's content inside a div with padding you can also provide a decent experience for those users. The maximum width of the content is set by the root element. This can be any element by applying a class of 'root'.
+				</p
+				><p class="third">
+					None of the columns are floated, so bye-bye clearfix. Instead, they are inline-blocks. There is a catch though: browsers will add a gap between elements the size of a space. This will cause the layout to break as the columns will not fit the parent container. However, this is easily solved by removing any whitespace between adjacent columns or by minifying your html. You can checkout the source of this page to get an idea. 
+				</p
+				><p class="third">
+					If you don't have full control over your markup, a negative right margin will fix the gap between elements. It's a clean hack (if such a thing exists) as the negative margin is subtracted from the block's width without affecting the width of the parent container. Known issue: you must adapt the value of the negative margin as it depends on your font and type size as well as on your configured padding. Also, this may cause small alignment issues in some designs. However, in most use cases the negative margin performs fine.
+				</p>
+			</section>
+			<section>
+				<h1 class="full">The Extended Grid</h1>
+				<div class="half">
+					The Pesistent Grid is being used on various projects which need more then just page layout. I have decided to add my commonly used typography and UI elements to an extended version of The Persistent Grid. It completes the grid with numerous helpers, form styling, buttons, and vertical grid. I will also add JS to this library to aid progressive enhancement. I will provide more detailed information about The Extended Grid soon.
+				</div>
+			</section>
+		</article>
+		<footer class="full">
+			<p><small>&copy;Copyright 2012-2013 <a href="http://crossinghippos.nl">Babs G&ouml;sgens - Crossing Hippos</a></small></p>
+		</footer>
 		<script type="text/javascript">
+		  WebFontConfig = {
+    		google: { families: [ 'Open+Sans:300,400,700:latin' ] }
+		  };
+		  (function() {
+		    var wf = document.createElement('script');
+		    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		    wf.type = 'text/javascript';
+		    wf.async = 'true';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(wf, s);
+		  })();
 
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-35733640-1']);
@@ -17,288 +114,5 @@
 		  })();
 
 		</script>
-	</head>
-	<body class="root">
-		<a href="https://github.com/babsgosgens/persistent-grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-		<header role="header">
-			<div class="full col">
-				<h1>The Persistent Grid</h1>
-				<p>A responsive and (very) lightweight grid <small>still in alpha version</small>.</p>
-			</div>
-		</header>
-		<ul role="navigation" class="full col collections">
-			<li><a href="#captive">Features &amp; Compatibility</a></li>
-			<li><a href="#elaborate">The Persistent Grid</a></li>
-			<li><a href="#examples">Examples</a></li>
-			<li><a href="#mixmatch">Layouts</a></li>
-			<li><a href="#code">Download</a></li>
-		</ul>
-		<article>
-			<div id="captive" class="full parent col">
-				<section class="half parent demo col">
-					<h1>Features:</h1>
-					<ul class="full col collection-of-fulls">
-						<li>Responsive</li>
-						<li>Fluid</li>
-						<li>Nestable</li>
-						<li>Fixed gutter widths</li>
-						<li>Fixable root</li>
-						<li class="full demo col">Built with SASS - although really, the code is so simple that that's not a nescessity</li>
-					</ul>
-				</section>
-				<section class="half parent demo col">
-					<h1>Browser Compatibility</h1>
-					<p>The grid was tested in these browsers:</p>
-					<ul class="full col collection-of-fulls">
-						<li>Internet Explorer 8</li>
-						<li>Chrome 22.0.1229.94</li>
-						<li>Firefox 15.0.1</li>
-						<li>Safari 5.1.7</li>
-					</ul>
-				</section>
-			</div>
-			<section id="elaborate" class="full parent col">
-				<h1 class="full col">About The Persistent Grid</h1>
-				<p class="half demo col">
-					The Persistent Grid started out as a little experiment on how to evenly distribute containers across devices when it evolved into a very lightweight and simple, responsive grid. The idea was to have containers side-by-side with a width and number depending on the viewport size. Like most other responsive grids the columns will resize relative to their viewport. The difference is that the number of columns per row will also vary per viewport. This page uses some common breakpoints (see table) that are configurable in the SASS files.
-				</p>
-				<p class="half demo col">
-					By default, all columns will have a preset width that depends on the viewport. Adding classes like twelfth and third will make a column keep its (relative) size across all viewports except the smallest (mobile) views. Adding a class of persistent wil force that relative size on mobile as well - hence the grid's name. This table shows how the columns will behave. For this example, I used twelve columns because it can conveniently be divided by two, three, four and six. Mix and match to achieve pretty much any grid (see below).
-				</p>
-				<figure class="full demo col">
-					<figcaption>Column widths (relative to parent container width)</figcaption>
-					<table>
-						<thead>
-							<tr>
-								<th>Below: classes Right: viewport</th>
-								<th>&lt;768px</th>
-								<th>768px- 1024px</th>
-								<th>1024px-1280px</th>
-								<th>1280px-1680px</th>
-								<th>&gt;1680px</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>col</th>
-								<td>100.00%</td>
-								<td>50.00%</td>
-								<td>33,33%</td>
-								<td>25.00%</td>
-								<td>16,67%</td>
-							</tr>
-							<tr>
-								<th>twelfth</th>
-								<td>100.00%</td>
-								<td>8.33%</td>
-								<td>8.33%</td>
-								<td>8.33%</td>
-								<td>8.33%</td>
-							</tr>
-							<tr>
-								<th>sixth</th>
-								<td>100.00%</td>
-								<td>16.67%</td>
-								<td>16.67%</td>
-								<td>16.67%</td>
-								<td>16.67%</td>
-							</tr>
-							<tr>
-								<th>fourth</th>
-								<td>100.00%</td>
-								<td>25.00%</td>
-								<td>25.00%</td>
-								<td>25.00%</td>
-								<td>25.00%</td>
-							</tr>
-							<tr>
-								<th>third</th>
-								<td>100.00%</td>
-								<td>33.33%</td>
-								<td>33.33%</td>
-								<td>33.33%</td>
-								<td>33.33%</td>
-							</tr>
-							<tr>
-								<th>half</th>
-								<td>100.00%</td>
-								<td>50.00%</td>
-								<td>50.00%</td>
-								<td>50.00%</td>
-								<td>50.00%</td>
-							</tr>
-							<tr>
-								<th>twothird</th>
-								<td>100.00%</td>
-								<td>66.67%</td>
-								<td>66.67%</td>
-								<td>66.67%</td>
-								<td>66.67%</td>
-							</tr>
-							<tr>
-								<th>full</th>
-								<td>100.00%</td>
-								<td>100.00%</td>
-								<td>100.00%</td>
-								<td>100.00%</td>
-								<td>100.00%</td>
-							</tr>
-							<tr>
-								<th>persistent col</th>
-								<td>33,33%</td>
-								<td>50.00%</td>
-								<td>33,33%</td>
-								<td>25.00%</td>
-								<td>16,67%</td>
-							</tr>
-							<tr>
-								<th>persistent twelfth</th>
-								<td>8.33%</td>
-								<td>8.33%</td>
-								<td>8.33%</td>
-								<td>8.33%</td>
-								<td>8.33%</td>
-							</tr>
-							<tr>
-								<th>persistent sixth</th>
-								<td>16.67%</td>
-								<td>16.67%</td>
-								<td>16.67%</td>
-								<td>16.67%</td>
-								<td>16.67%</td>
-							</tr>
-							<tr>
-								<th>persistent fourth</th>
-								<td>25.00%</td>
-								<td>25.00%</td>
-								<td>25.00%</td>
-								<td>25.00%</td>
-								<td>25.00%</td>
-							</tr>
-							<tr>
-								<th>persistent third</th>
-								<td>33,33%</td>
-								<td>33,33%</td>
-								<td>33,33%</td>
-								<td>33,33%</td>
-								<td>33,33%</td>
-							</tr>
-							<tr>
-								<th>persistent half</th>
-								<td>50.00%</td>
-								<td>50.00%</td>
-								<td>50.00%</td>
-								<td>50.00%</td>
-								<td>50.00%</td>
-							</tr>
-							<tr>
-								<th>persistent twothird</th>
-								<td>66.67%</td>
-								<td>66.67%</td>
-								<td>66.67%</td>
-								<td>66.67%</td>
-								<td>66.67%</td>
-							</tr>
-							<tr>
-								<th>persistent full</th>
-								<td>100.00%</td>
-								<td>100.00%</td>
-								<td>100.00%</td>
-								<td>100.00%</td>
-								<td>100.00%</td>
-							</tr>
-						</tbody>
-					</table>
-				</figure>
-				<h2>About The Persistent Grid</h2>
-				<p class="third demo col">
-					The columns have box-sizing: border-box; applied to them. That way, adding consistent gutter width is a piece of cake. To avoid double gutters, apply a class of 'parent' to the containing column. Adding support for older browsers wouldn't be that difficult. By removing the padding and wrapping the column's content inside a div with padding you can also provide a decent experience for those users. The maximum width of the content is set by the root element. This can be any element by applying a class of 'root'.
-				</p>
-				<p class="third demo col">
-					None of the columns are floated, so bye bye clearfix. They are inline-blocks with a negative right margin to fix the space between elements because they would otherwise not fit their parent container. It's a clean hack (if such a thing exists) as the negative margin is subtracted from the block's width without affecting the width of the parent container. The columns can simply be stacked. If you want to group them you can, just create multiple collections holding columns in any variety.
-				</p>
-				<p class="third demo col">
-					Known issue: you must adapt the value of the negative margin as it depends on your font and type size as well as on your configured padding. The grid is easily applied to anything, from regular tags such as divs and articles to lists and even tables, although the table behavior is not consistent across browsers. That is to say, it behaves differently in MSIE8. Go figure. At present, it hasn't been tested in MSIE9 or higher.
-				</p>
-			</section>
-			<section id="examples" class="full parent demo col">
-				<h1>Examples</h1>
-				<p>
-					By applying the col without any of the available width classes you can evenly distribute elements as specified by the grid's breakpoints.
-				</p>
-				<div class="half parent col">
-					<h2>Unordered list example</h2>
-					<ul class="full parent demo col">
-						<li class="demo col">&nbsp;</li>
-						<li class="demo col">&nbsp;</li>
-						<li class="demo col">&nbsp;</li>
-						<li class="demo col">&nbsp;</li>
-						<li class="demo col">&nbsp;</li>
-						<li class="demo col">&nbsp;</li>
-						<li class="demo col">&nbsp;</li>
-					</ul>
-				</div>
-				<div class="half parent col">
-					<h2>Random collection of paragraphs</h2>
-					<div class="full parent demo col">
-						<p class="demo col">&nbsp;</p>
-						<p class="demo col">&nbsp;</p>
-						<p class="demo col">&nbsp;</p>
-						<p class="demo col">&nbsp;</p>
-						<p class="demo col">&nbsp;</p>
-						<p class="demo col">&nbsp;</p>
-						<p class="demo col">&nbsp;</p>
-					</div>
-				</div>
-			</section>
-			<section id="mixmatch" class="full parent demo col">
-				<h1>Layouts</h1>
-				<p>By mixing and matching nesting columns you can create an infinite number of grids.</p>
-				<h2>Three-column layout</h2>
-				<div class="full parent demo col">
-					<div class="demo third col">&nbsp;</div>
-					<div class="demo third col">&nbsp;</div>
-					<div class="demo third col">&nbsp;</div>
-				</div>
-				<p>The markup:</p>
-				<script src="https://gist.github.com/3918489.js"> </script>
-				<h2>Nine-column layout</h2>
-				<div class="full parent demo col">
-					<div class="demo third parent col">
-						<div class="demo third col">&nbsp;</div>
-						<div class="demo third col">&nbsp;</div>
-						<div class="demo third col">&nbsp;</div>
-					</div>
-					<div class="demo third parent col">
-						<div class="demo third col">&nbsp;</div>
-						<div class="demo third col">&nbsp;</div>
-						<div class="demo third col">&nbsp;</div>
-					</div>
-					<div class="demo third parent col">
-						<div class="demo third col">&nbsp;</div>
-						<div class="demo third col">&nbsp;</div>
-						<div class="demo third col">&nbsp;</div>
-					</div>
-				</div>
-				<p>The markup:</p>
-				<script src="https://gist.github.com/3918497.js"></script>
-				<h2>Two-column layout with a persistent three column right column. Right.</h2>
-				<div class="full parent demo col">
-					<div class="demo half col">&nbsp;</div>
-					<div class="demo half parent col">
-						<div class="demo persistent third col">&nbsp;</div>
-						<div class="demo persistent third col">&nbsp;</div>
-						<div class="demo persistent third col">&nbsp;</div>
-					</div>
-				</div>
-				<p>The markup:</p>
-				<script src="https://gist.github.com/3918503.js"></script>
-			</section>
-			<section id="code" class="full parent demo col">
-				<h2>The code</h2>
-				<p>The base code is almost rediculously small, at this moment it's about 29 lines of unminified CSS with a couple of extra rules to make life easier (and code cleaner).</p>
-				<script src="https://gist.github.com/3913866.js"> </script>
-			</section>
-		</article>
 	</body>
 <html>

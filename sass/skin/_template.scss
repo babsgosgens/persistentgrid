@@ -1,0 +1,7 @@
+.column {
+	@include rhythm(0,0,0,1);
+}
+footer {
+	@include rhythm(2,0,0,1);
+	// rhythm($leader, $padding-leader, $padding-trailer, $trailer, $font-size)
+}

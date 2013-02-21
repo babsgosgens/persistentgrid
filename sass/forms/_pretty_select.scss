@@ -1,0 +1,87 @@
+.position {
+	@extend input;
+	position: relative;
+	&:after {
+		content: '\00a0';
+	}
+	&:before {
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		display: inline-block;
+		text-decoration: inherit;
+		content: "\f0dc";
+		position: absolute;
+		right: 0;
+		@include column-padding();
+	}
+}
+
+.input {
+	position: relative;
+	@include vertical-rhythm(2, min-height);
+}
+ul.select {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	@extend input;
+	padding: 0 !important;
+	z-index: 1;
+	&:before {
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		display: inline-block;
+		text-decoration: inherit;
+		content: "\f0dc";
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include vertical-rhythm($form-vertical-spacing, padding-top);
+		@include vertical-rhythm($form-vertical-spacing, padding-bottom);
+		@include column-padding();
+		z-index: -1;
+		cursor: pointer;
+	}
+	li {
+		display: none;
+		@include vertical-rhythm($form-vertical-spacing, padding-top);
+		@include vertical-rhythm($form-vertical-spacing, padding-bottom);
+		@include column-padding();
+		cursor: pointer;
+		// padding-bottom: 0;
+		color: $color-body;
+		&.selected {
+			display: block;
+		}
+		&:hover {
+			color: $color-cta-secondary;	
+		}
+		&.first {
+			color: $color-body;
+		}
+	}
+	&.open {
+		background-color: lighten($color-cta-secondary, 50);
+		.selected {
+			&:after {
+				font-family: CustomIconSet;
+				font-weight: normal;
+				font-style: normal;
+				display: inline-block;
+				text-decoration: inherit;
+				content: "\72";
+				position: absolute;
+				left: -20px;
+				@include column-padding();
+			}
+			&.first {
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+form {
+	ol {
+		list-style-type: none;
+		li {
+			padding: .5*$base-line-height 0;
+		}
+		&[class*="collection"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+fieldset {
+	fieldset {
+		legend {
+			@extend label;
+		}
+	}
+}
+label,
+input,
+select,
+textarea {
+	@include box-sizing('border-box');
+	display: inline-block;
+	vertical-align: top;
+	// @include vertical-rhythm(1,line-height);
+	border: 0;
+	margin: 0;
+	width: 100%;
+	@include font-size($base-font-size);
+}
+input,
+select,
+textarea {
+}
+textarea {
+	height: $heightTextarea;
+}
+.inline {
+	label {
+		width: $inlineLabelWidth;
+		margin-right: $negative-right-margin;
+	}
+	input,
+	select,
+	textarea {
+		width: 100% - $inlineLabelWidth;
+		margin-right: $negative-right-margin;
+	}
+}
+input[type="radio"],
+input[type="checkbox"] {
+	width: auto;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	// @include vertical-rhythm(1, line-height);
+	+ label {
+		width: auto;
+	}
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	@extend .button;
+	width: auto;
+}

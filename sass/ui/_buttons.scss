@@ -1,0 +1,76 @@
+.button {
+  background-color: $button-background-color;
+  @include background-image($button-background-gradient);
+  @include border-radius($button-radius);
+  @include box-shadow($button-shadow);
+  @include embossLightTextOnDarkBackground($button-background-color);
+  display: inline-block;
+  cursor: $button-cursor;
+  color: $button-text-color;
+  border: $button-border-width $button-border-style darken($button-background-color,2);
+  line-height: $base-line-height - 2*$button-border-width;
+  @include column-padding();
+  @include vertical-rhythm(0.5, padding-top);
+  @include vertical-rhythm(0.5, padding-bottom);
+  font-size: $px-s;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($button-background-color, 10);
+    color: $button-hover-text-color;
+  	@include embossLightTextOnDarkBackground($button-hover-background-color);
+    @if $button-hover-background-color != $button-background-color {
+    	@include background-image($button-hover-background-gradient);
+    	border-color: darken($button-hover-background-color,2);
+    }
+    @if $button-hover-text-color != $button-text-color {
+    	color: $button-hover-text-color;
+    }
+  }
+}
+
+.button.theme {
+  background-color: $button-theme-background-color;
+  @include background-image($button-theme-background-gradient);
+  @include embossLightTextOnDarkBackground($button-theme-background-color);
+  border: $button-border-width $button-border-style darken($color-theme,2);
+  &:hover {
+    background-color: darken($button-theme-background-color, 10);
+    @include embossLightTextOnDarkBackground($button-theme-hover-background-color);
+    @if $button-theme-hover-background-color != $button-theme-background-color {
+      @include background-image($button-theme-hover-background-gradient);
+      border-color: darken($button-theme-hover-background-color,2);
+    }
+  }
+}
+
+.button.small {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.button.stretch {
+  width: 100%;
+}
+
+.big.button {
+  @extend .button.stretch;
+  @include font-size($px-l);
+  @include vertical-rhythm(1.5, line-height);
+}
+
+.flat {
+  display: block;
+  color: $black;
+  padding: 0 0.5*$column-padding;
+  @include unit(padding-bottom, 0.25*$base-line-height);
+  @include unit(padding-top, 0.25*$base-line-height);
+  @include unit(margin-bottom, 0.25*$base-line-height);
+  @include unit(margin-top, 0.25*$base-line-height);
+  @include line-height($base-line-height);
+  border: 0;
+  @include border-radius(0);
+}
+
+.actions .button {
+  @extend .button.stretch;
+}
