@@ -52,14 +52,14 @@
 }
 
 @mixin root() {
-	@if $column-style == 'float' {
-		@include clearfix();
-	}
 	display: block;
 	margin: 0 auto;
 	max-width: $container-max-width;
 	@if $container-min-width {
 		min-width: $container-min-width;
+	}
+	@if $column-style == 'float' {
+		@include clearfix();
 	}
 }
 

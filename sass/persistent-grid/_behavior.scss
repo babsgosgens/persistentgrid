@@ -1,4 +1,4 @@
-.root {
+.container {
 	@include root();
 }
 
@@ -41,6 +41,7 @@
 
 // Reset for mobile-first
 // Resetting the earlier rules is, frankly, less code
+// As an added benefit, <MSIE9 won't need addition rules
 @media only screen and (max-width: #{nth($column-breakpoints,1)}) {
 	.root {
 		min-width: auto;
