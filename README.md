@@ -10,17 +10,20 @@ Feel free to use it. I would appreciate any feedback you may have.
 ## Recent changes
 Include mixins for easy 'mixing' of column behavior. Example use:
 
+```
 .myclass {
 	@include column(1/2);
 }
+```
 
 Or, better yet:
 
+```
 .myclass {
 	@extend .column;
 	@include column-width(1/2);
 }
-
+```
 Adding the optional parameter true will make the columnwidth persistent on all screen sizes. By omitting it, the column will span the full width of the screen below the first breakpoint.
 
 
