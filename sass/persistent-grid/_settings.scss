@@ -8,7 +8,7 @@
 	$container-min-width				: 40em; 				// Min width for the root element
 	$container-position					: 'center' !default; 	// Values: center | left
 	$base-column-width					: 1/1;
-	$negative-right-margin				: 0em !default; 		// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
+	$negative-right-margin				: 0 !default; 		// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
 	$column-padding						: 2*$base-line-height;
 	$column-style 						: 'inline' !default;		// Values: inline | float | table (experimental)
 	$use-box-sizing						: true;

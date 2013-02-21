@@ -10,21 +10,21 @@ Feel free to use it. I would appreciate any feedback you may have.
 ## Recent changes
 Include mixins for easy 'mixing' of column behavior. Example use:
 
-
 .myclass {
-
 	@include column(1/2);
-
-	@include parentBehavior();
-
-	@media screen and (max-width: 1024px) {
-
-		@mixin columnWidth(1/1);
-
-	}
-
 }
 
+Or, better yet:
+
+.myclass {
+	@extend .column;
+	@include column-width(1/2);
+}
+
+Adding the optional parameter true will make the columnwidth persistent on all screen sizes. By omitting it, the column will span the full width of the screen below the first breakpoint.
+
+
+In the latest version, breakpoints and default column widths are configurable, although the grid only employs the first breakpoint. It'sup to you to decide if and which breakpoints you want to implement as it is also up to you to decide which column-widths you want to add rules for.
 
 For more info on the included mixins, view: [https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss](https://github.com/babsgosgens/persistent-grid/blob/master/sass/persistent-grid/_mixins.scss)
 
@@ -34,7 +34,7 @@ The framework branch [https://github.com/babsgosgens/persistent-grid/tree/framew
 * tables,
 * buttons,
 
-as well as a number of helper functions and mixins, among which helpers for an adapted version of vertical rhythm that I find more true to the nature of a conventional grid.
+as well as a number of helper functions and mixins.
 
 All elements are setup to include a vertical rhythm and I am also doctoring a way to impose the vertical rhythm on images. Work in progress.
 
