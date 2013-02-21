@@ -6,7 +6,7 @@ The Persistent Grid is a very lightweight and simple, responsive grid. It is sti
 
 Feel free to use it. I would appreciate any feedback you may have.
 
-
-Persistent-Grid---Extended
+## Persistent-Grid - Extended
 
 Additional typographic and UI elements on top of Persistent Grid
+
