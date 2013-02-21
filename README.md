@@ -1,5 +1,4 @@
 # The Persistent Grid
-===================
 
 More info can be found here: [http://babsgosgens.github.com/persistent-grid](http://babsgosgens.github.com/persistent-grid/)
 
