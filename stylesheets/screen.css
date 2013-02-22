@@ -57,9 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   margin: 0 auto;
   max-width: 70em;
-  min-width: 40em;
-  overflow: hidden;
-  *zoom: 1; }
+  min-width: 40em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,

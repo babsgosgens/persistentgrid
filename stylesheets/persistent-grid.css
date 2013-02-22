@@ -1,114 +1,160 @@
-/*
-Syntax error: Undefined variable: "$container-max-width".
-        on line 57 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_mixins.scss, in `root'
-        from line 2 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_behavior.scss
-        from line 4 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_all.scss
-        from line 1 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid.scss
+html {
+  /* Settings: $debug-rhythm=true; */
+  background: url(../sass/_baselines/24px.png) repeat center top; }
+  html * {
+    /* Settings: $debug-rhythm=true; */
+    background-color: transparent !important;
+    background-image: none !important;
+    outline: rgba(255, 0, 255, 0.1) dotted 1px;
+    outline: #ff01ff dotted 1px \9; }
 
-Backtrace:
-/Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_mixins.scss:57:in `root'
-/Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_behavior.scss:2
-/Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_all.scss:4
-/Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid.scss:1
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/variable.rb:49:in `_perform'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/node.rb:40:in `perform'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:294:in `visit_prop'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:68:in `perform_arguments'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:259:in `visit_mixin'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `to_proc'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:30:in `temporary_multipath_handler'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:27:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:17:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:16:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:16:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/rb-fsevent-0.9.2/lib/rb-fsevent/fsevent.rb:43:in `call'
-/opt/local/lib/ruby/gems/1.8/gems/rb-fsevent-0.9.2/lib/rb-fsevent/fsevent.rb:43:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/rbfsevent.rb:20:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:30
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44
-/opt/local/bin/compass:19:in `load'
-/opt/local/bin/compass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$container-max-width\".\A         on line 57 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_mixins.scss, in `root'\A         from line 2 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_behavior.scss\A         from line 4 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid/_all.scss\A         from line 1 of /Users/babsgosgens/Sites/persistent-grid/github/sass/persistent-grid.scss"; }
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: 70em;
+  min-width: 40em; }
+
+.column, .full,
+.collection-of-fulls > *, .half,
+.collection-of-halfs > *, .fourth,
+.collection-of-fourths > *, .third,
+.collection-of-thirds > *, .two-third,
+.collection-of-two-thirds > * {
+  float: left;
+  display: block;
+  vertical-align: top;
+  height: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%; }
+
+.parent, .collection-of-fulls, .collection-of-halfs, .collection-of-fourths, .collection-of-thirds, .collection-of-two-thirds {
+  padding-left: 0;
+  padding-right: 0; }
+
+.full,
+.collection-of-fulls > * {
+  width: 100%; }
+
+.full.persistent,
+.collection-of-fulls.persistent > * {
+  width: 100% !important; }
+
+.push-full {
+  position: relative;
+  left: 100%; }
+
+.pull-full {
+  position: relative;
+  left: -100%; }
+
+.half,
+.collection-of-halfs > * {
+  width: 50%; }
+
+.half.persistent,
+.collection-of-halfs.persistent > * {
+  width: 50% !important; }
+
+.push-half {
+  position: relative;
+  left: 50%; }
+
+.pull-half {
+  position: relative;
+  left: -50%; }
+
+.fourth,
+.collection-of-fourths > * {
+  width: 25%; }
+
+.fourth.persistent,
+.collection-of-fourths.persistent > * {
+  width: 25% !important; }
+
+.push-fourth {
+  position: relative;
+  left: 25%; }
+
+.pull-fourth {
+  position: relative;
+  left: -25%; }
+
+.third,
+.collection-of-thirds > * {
+  width: 33.33333%; }
+
+.third.persistent,
+.collection-of-thirds.persistent > * {
+  width: 33.33333% !important; }
+
+.push-third {
+  position: relative;
+  left: 33.33333%; }
+
+.pull-third {
+  position: relative;
+  left: -33.33333%; }
+
+.two-third,
+.collection-of-two-thirds > * {
+  width: 66.66667%; }
+
+.two-third.persistent,
+.collection-of-two-thirds.persistent > * {
+  width: 66.66667% !important; }
+
+.push-two-third {
+  position: relative;
+  left: 66.66667%; }
+
+.pull-two-third {
+  position: relative;
+  left: -66.66667%; }
+
+@media only screen and (max-width: 40em) {
+  .root {
+    min-width: auto; }
+
+  .full,
+  .collection-of-fulls > * {
+    width: 100%; }
+
+  .push-full,
+  .pull-full {
+    left: 0; }
+
+  .half,
+  .collection-of-halfs > * {
+    width: 100%; }
+
+  .push-half,
+  .pull-half {
+    left: 0; }
+
+  .fourth,
+  .collection-of-fourths > * {
+    width: 100%; }
+
+  .push-fourth,
+  .pull-fourth {
+    left: 0; }
+
+  .third,
+  .collection-of-thirds > * {
+    width: 100%; }
+
+  .push-third,
+  .pull-third {
+    left: 0; }
+
+  .two-third,
+  .collection-of-two-thirds > * {
+    width: 100%; }
+
+  .push-two-third,
+  .pull-two-third {
+    left: 0; } }
