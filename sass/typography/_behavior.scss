@@ -25,7 +25,7 @@ a {
 //	################################################################################################################################  //
 
 	p {
-		@include rhythm(.5,0,0,.5);
+		@include rhythm(0,0,0,1);
 	}
 
 
@@ -46,7 +46,7 @@ a {
 
 	.heading-#{$i} {
 
-		$font-size:   establish-font-size(nth($properties,1));
+		$font-size:   establish-size(nth($properties,1));
 		$line-height: rhythm(nth($properties,2),nth($properties,1));
 
 		@include font( nth($properties,3), $font-size, $line-height );

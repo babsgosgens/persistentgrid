@@ -62,7 +62,7 @@
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
 
 	// Debugging
-	$debug-rhythm						: false;
+	$debug-rhythm						: true;
 
 	@if $debug-rhythm {
 		html {
@@ -85,7 +85,7 @@
 	$base-column-width					: 1/1;
 	$negative-right-margin				: 0em !default; 		// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
 	$column-padding						: 2*$base-line-height;
-	$column-style 						: 'inline' !default;		// Values: inline | float | table (experimental)
+	$column-style 						: 'float' !default;		// Values: inline | float | table (experimental)
 	$use-box-sizing						: true;
 
 	$column-widths 						: 1/1, 1/2, 1/4, 1/3, 2/3;
@@ -151,12 +151,6 @@
 	$font-family-bold 					: $style, $variant, $weight, ('Colaborate-Bold',    #{$font-family-fallback});
 	$font-family-extra-bold 			: $style, $variant, $weight, ('Colaborate-Bold',    #{$font-family-fallback});
 	$font-family-extra-heavy 			: $style, $variant, $weight, ('Colaborate-Bold',    #{$font-family-fallback});
-
-	$body-font-family 					: bold;
-	$body-size 							: $base-font-size;
-	$body-leading						: leading($body-size);
-	$body-margin-top					: 1 * $base-line-height;
-	$body-margin-bottom					: 0;
 
 	$h1-size 							: $px-xxxl;
 	$h1-leading							: lines-for-font-size($h1-size); 	// Auto calculated from font size, expressed in number of base lines
