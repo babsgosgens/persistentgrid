@@ -58,9 +58,6 @@
 	@if $container-min-width {
 		min-width: $container-min-width;
 	}
-	@if $column-style == 'float' {
-		@include clearfix();
-	}
 }
 
 @mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
