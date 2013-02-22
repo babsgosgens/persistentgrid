@@ -24,7 +24,8 @@
 						<li>Nestable</li>
 						<li>Fixed gutter widths</li>
 						<li>Fixable root</li>
-						<li>SASS</li>
+						<li>Configurable</li>
+						<li>Uses SASS &amp; Compass</li>
 					</ul>
 				</section
 				><section>
@@ -55,6 +56,9 @@
 				<p>
 					The current version still implements the persistent class, but the fixed distribution of columns has been taken out. Instead, a number of SASS mixins give you the possibility of configuring your grid in any way that you need. What's interesting, it that you can achieve complex layouts by nesting and combining different column widths.
 				</p>
+				<p>
+					The grid can accomodate anything from 1 column to 36 column layouts - and any combination thereof.
+				</p>
 				</div
 				><div class="half">
 				<p>
@@ -77,6 +81,12 @@
 				><p class="third">
 					If you don't have full control over your markup, a negative right margin will fix the gap between elements. It's a clean hack (if such a thing exists) as the negative margin is subtracted from the block's width without affecting the width of the parent container. Known issue: you must adapt the value of the negative margin as it depends on your font and type size as well as on your configured padding. Also, this may cause small alignment issues in some designs. However, in most use cases the negative margin performs fine.
 				</p>
+				<div class="float-info full">
+				<h4>Float</h4>
+				<p>
+					If it floats your boat, changing the setting called '$column-style' from its default value of 'inline' to float will render the grid with floated columns. This can be useful if, for example, your CMS will not allow you to alter the markup and you need more accurate lineup of columns.
+				</p>
+				</div>
 			</section>
 			<section>
 				<h1 class="full">The Extended Grid</h1>
