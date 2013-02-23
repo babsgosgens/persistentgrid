@@ -11,7 +11,7 @@ html {
 .root {
   display: block;
   margin: 0 auto;
-  max-width: 70em; }
+  max-width: 90em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,
@@ -113,7 +113,7 @@ html {
   position: relative;
   left: -66.66667%; }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 30em) {
   .root {
     min-width: auto; }
 

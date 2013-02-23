@@ -5,19 +5,11 @@ html {
     /* Settings: $debug-rhythm=true; */
     background-color: transparent !important;
     background-image: none !important;
-<<<<<<< HEAD
-    outline: #ff01ff dotted 1px;
-    outline: rgba(255, 0, 255, 0.1) dotted 1px; }
-
-html {
-  font: normal normal 300 100%/1.5em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-=======
     outline: rgba(255, 0, 255, 0.1) dotted 1px;
     outline: #ff01ff dotted 1px \9; }
 
 html {
   font: normal normal 400 100%/1.5em "Colaborate-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
->>>>>>> extended
   vertical-align: baseline; }
 
 html, body, div, span, applet, object, iframe,
@@ -27,11 +19,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-<<<<<<< HEAD
-fieldset, form, label, legend,
-=======
 fieldset, form, label, fieldset fieldset legend, legend,
->>>>>>> extended
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -68,12 +56,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .root {
   display: block;
   margin: 0 auto;
-<<<<<<< HEAD
-  max-width: 70em;
-  min-width: 40em; }
-=======
-  max-width: 70em; }
->>>>>>> extended
+  max-width: 90em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,
@@ -175,7 +158,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   position: relative;
   left: -66.66667%; }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 30em) {
   .root {
     min-width: auto; }
 
@@ -230,64 +213,23 @@ a {
     a:visited:hover {
       color: #9fcc3a; }
 
-<<<<<<< HEAD
-.heading-1, header h1 {
-  font: normal normal 400 2.25em/1.33333em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0.66667em 0em 0.66667em 0em;
-  color: #9fcc3a; }
-
-.heading-2, h1 {
-  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 1.5em 0em 0.5em 0em;
-  color: inherit; }
-
-.heading-3, h2 {
-  font: normal normal 400 1em/1.5em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 3em 0em 1.5em 0em;
-  color: #9fcc3a; }
-
-.heading-4 {
-  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0em 0em 1em 0em;
-  color: inherit; }
-
-.heading-5 {
-  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0em 0em 1em 0em;
-  color: inherit; }
-
-.heading-6 {
-  font: normal normal 400 1.5em/2em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0em 0em 1em 0em;
-  color: inherit; }
-
-ul, ol {
-  list-style-position: outside; }
-
-ul {
-  list-style-type: disc; }
-
-ol {
-  list-style-type: decimal; }
-=======
 p {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.5em; }
 
-.heading-1, .site-header h1 {
+.heading-1, header h1, .site-header h1 {
   font: normal normal 400 2.875em/1.56522em "Colaborate-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0.52174em 0em 0.52174em 0em;
   color: #9fcc3a; }
 
-.heading-2, article h1 {
+.heading-2, h1, article h1 {
   font: normal normal 400 2.375em/1.26316em "Colaborate-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0.31579em 0em 0.31579em 0em;
   color: #04a4a5; }
 
-.heading-3, article section h1,
-h2 {
+.heading-3, h2, article section h1 {
   font: normal normal 400 1.5em/2em "Colaborate-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0.5em 0em 0.5em 0em;
   color: #04a4a5; }
@@ -306,6 +248,15 @@ h2 {
   font: normal normal 400 1.5em/2em "Colaborate-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0em 0em 1em 0em;
   color: #04a4a5; }
+
+ul, ol {
+  list-style-position: outside; }
+
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
 
 .button, input[type="button"], .form input[type="number"] + label[type="button"], .form fieldset fieldset input[type="number"] + legend[type="button"], fieldset fieldset .form input[type="number"] + legend[type="button"], [type="button"].position, ul[type="button"].select,
 input[type="submit"],
@@ -607,8 +558,7 @@ this element is the one that *you* will style the most.
 .root {
   display: block;
   margin: 0 auto;
-  max-width: 70em; }
->>>>>>> extended
+  max-width: 90em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,
@@ -616,18 +566,6 @@ this element is the one that *you* will style the most.
 .collection-of-fourths > *, .third,
 .collection-of-thirds > *, .two-third,
 .collection-of-two-thirds > * {
-<<<<<<< HEAD
-  margin-top: 0em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 1.5em; }
-
-footer {
-  margin-top: 3em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 1.5em; }
-=======
   display: inline-block;
   vertical-align: top;
   height: auto;
@@ -722,7 +660,7 @@ footer {
   position: relative;
   left: -66.66667%; }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 30em) {
   .root {
     min-width: auto; }
 
@@ -797,12 +735,12 @@ textarea {
 
 .inline label, .inline fieldset fieldset legend, fieldset fieldset .inline legend {
   width: 35%;
-  margin-right: 0em; }
+  margin-right: 0; }
 .inline input, .inline .form input[type="number"] + label, .form .inline input[type="number"] + label, .inline .form fieldset fieldset input[type="number"] + legend, .form fieldset fieldset .inline input[type="number"] + legend, .inline fieldset fieldset .form input[type="number"] + legend, fieldset fieldset .form .inline input[type="number"] + legend, .inline .position, .inline ul.select,
 .inline select,
 .inline textarea {
   width: 65%;
-  margin-right: 0em; }
+  margin-right: 0; }
 
 input[type="radio"], .form input[type="number"] + label[type="radio"], .form fieldset fieldset input[type="number"] + legend[type="radio"], fieldset fieldset .form input[type="number"] + legend[type="radio"], [type="radio"].position, ul[type="radio"].select,
 input[type="checkbox"],
@@ -1210,4 +1148,3 @@ ul.select {
       box-sizing: border-box; }
     ul.select.open .selected.first:after {
       content: ''; }
->>>>>>> extended
