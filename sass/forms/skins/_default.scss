@@ -14,12 +14,13 @@ $form-text-color: $color-body;
 
 $form-triangle-size: $base-font-size;
 
+
 .form-default {
 	.span {
 		width: 100%;
 	}
 	li {
-		@include padding-trailer;
+		@include trailer;
 	}
 
 	input,
@@ -71,7 +72,7 @@ $form-triangle-size: $base-font-size;
 			}
 		}
 		li {
-			padding-bottom: 0;
+			margin-bottom: 0; // Override trailer
 			position: relative;
 			label {
 				background-color: transparent;

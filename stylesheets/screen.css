@@ -294,6 +294,224 @@ p {
   margin: 0em 0em 1em 0em;
   color: #04a4a5; }
 
+/* font-face */
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/general_foundicons.eot");
+  src: url("../fonts/general_foundicons.eot?#iefix") format("embedded-opentype"), url("../fonts/general_foundicons.woff") format("woff"), url("../fonts/general_foundicons.ttf") format("truetype"), url("../fonts/general_foundicons.svg#Icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* global foundicon styles */
+/* line 6, ../sass/foundicons/_general_foundicons.scss */
+.icon,
+[class*="icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat; }
+
+/* line 17, ../sass/foundicons/_general_foundicons.scss */
+.icon:before, ul.select:before, ul.select.open .selected:after,
+[class*="icon-"]:before {
+  font-family: "Icons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit; }
+
+/* icons */
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-settings:before {
+  content: "\f000"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-heart:before {
+  content: "\f001"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-star:before {
+  content: "\f002"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-plus:before {
+  content: "\f003"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-minus:before {
+  content: "\f004"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-checkmark:before, ul.select.open .selected:after {
+  content: "\f005"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-remove:before {
+  content: "\f006"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-mail:before {
+  content: "\f007"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-calendar:before {
+  content: "\f008"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-page:before {
+  content: "\f009"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-tools:before {
+  content: "\f00a"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-globe:before {
+  content: "\f00b"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-home:before {
+  content: "\f00c"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-quote:before {
+  content: "\f00d"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-people:before {
+  content: "\f00e"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-monitor:before {
+  content: "\f00f"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-laptop:before {
+  content: "\f010"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-phone:before {
+  content: "\f011"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-cloud:before {
+  content: "\f012"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-error:before {
+  content: "\f013"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-right-arrow:before {
+  content: "\f014"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-left-arrow:before {
+  content: "\f015"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-up-arrow:before {
+  content: "\f016"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-down-arrow:before, ul.select:before {
+  content: "\f017"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-trash:before {
+  content: "\f018"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-add-doc:before {
+  content: "\f019"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-edit:before {
+  content: "\f01a"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-lock:before {
+  content: "\f01b"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-unlock:before {
+  content: "\f01c"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-refresh:before {
+  content: "\f01d"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-paper-clip:before {
+  content: "\f01e"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-video:before {
+  content: "\f01f"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-photo:before {
+  content: "\f020"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-graph:before {
+  content: "\f021"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-idea:before {
+  content: "\f022"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-mic:before {
+  content: "\f023"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-cart:before {
+  content: "\f024"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-address-book:before {
+  content: "\f025"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-compass:before {
+  content: "\f026"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-flag:before {
+  content: "\f027"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-location:before {
+  content: "\f028"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-clock:before {
+  content: "\f029"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-folder:before {
+  content: "\f02a"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-inbox:before {
+  content: "\f02b"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-website:before {
+  content: "\f02c"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-smiley:before {
+  content: "\f02d"; }
+
+/* line 2, ../sass/foundicons/_mixins.scss */
+.icon-search:before {
+  content: "\f02e"; }
+
 /* line 1, ../sass/ui/_buttons.scss */
 .button, input[type="button"], .form-default .choices > legend + ul[type="button"], .form-default input[type="number"] + label[type="button"], .form-default fieldset fieldset input[type="number"] + legend[type="button"], fieldset fieldset .form-default input[type="number"] + legend[type="button"], .form-default .choices > input[type="number"] + legend[type="button"], [type="button"].position, ul[type="button"].select,
 input[type="submit"],
@@ -937,13 +1155,13 @@ fieldset fieldset .form-default input[type="number"] + legend[type="reset"],
 ul[type="reset"].select {
   width: auto; }
 
-/* line 18, ../sass/forms/skins/_default.scss */
+/* line 19, ../sass/forms/skins/_default.scss */
 .form-default .span {
   width: 100%; }
-/* line 21, ../sass/forms/skins/_default.scss */
+/* line 22, ../sass/forms/skins/_default.scss */
 .form-default li {
-  padding-bottom: 1.5em; }
-/* line 27, ../sass/forms/skins/_default.scss */
+  margin-bottom: 1.5em; }
+/* line 28, ../sass/forms/skins/_default.scss */
 .form-default input, .form-default .choices > legend + ul, .form-default input[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default .choices > input[type="number"] + legend, .form-default .position, .form-default ul.select,
 .form-default select,
 .form-default textarea {
@@ -954,14 +1172,14 @@ ul[type="reset"].select {
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border: 1px solid #e6e6e6; }
-  /* line 33, ../sass/forms/skins/_default.scss */
+  /* line 34, ../sass/forms/skins/_default.scss */
   .form-default input:hover, .form-default .choices > legend + ul:hover, .form-default input[type="number"] + label:hover, .form-default fieldset fieldset input[type="number"] + legend:hover, fieldset fieldset .form-default input[type="number"] + legend:hover, .form-default .choices > input[type="number"] + legend:hover, .form-default .position:hover, .form-default ul.select:hover, .form-default input:focus, .form-default .choices > legend + ul:focus, .form-default input[type="number"] + label:focus, .form-default fieldset fieldset input[type="number"] + legend:focus, fieldset fieldset .form-default input[type="number"] + legend:focus, .form-default .choices > input[type="number"] + legend:focus, .form-default .position:focus, .form-default ul.select:focus,
   .form-default select:hover,
   .form-default select:focus,
   .form-default textarea:hover,
   .form-default textarea:focus {
     outline: none; }
-/* line 40, ../sass/forms/skins/_default.scss */
+/* line 41, ../sass/forms/skins/_default.scss */
 .form-default label, .form-default fieldset fieldset legend, fieldset fieldset .form-default legend, .form-default .choices > legend,
 .form-default input,
 .form-default .choices > legend + ul,
@@ -986,7 +1204,7 @@ fieldset fieldset .form-default input[type="number"] + legend,
   -moz-transition: color;
   -o-transition: color;
   transition: color; }
-/* line 48, ../sass/forms/skins/_default.scss */
+/* line 49, ../sass/forms/skins/_default.scss */
 .form-default li:hover .choices legend,
 .form-default li:hover > label:first-child,
 .form-default fieldset fieldset li:hover > legend:first-child,
@@ -1010,19 +1228,19 @@ fieldset fieldset .form-default li:hover > legend:first-child,
     position: absolute;
     top: 100%;
     border-top-color: #04a4a5; }
-  /* line 53, ../sass/forms/skins/_default.scss */
+  /* line 54, ../sass/forms/skins/_default.scss */
   .form-default li:hover .choices legend:after,
   .form-default li:hover > label:first-child:after,
   .form-default fieldset fieldset li:hover > legend:first-child:after,
   fieldset fieldset .form-default li:hover > legend:first-child:after,
   .form-default li.choices:hover > legend:first-child:after {
     left: 20px; }
-/* line 59, ../sass/forms/skins/_default.scss */
+/* line 60, ../sass/forms/skins/_default.scss */
 .form-default li:hover input, .form-default li:hover .choices > legend + ul, .form-default li:hover input[type="number"] + label, .form-default li:hover fieldset fieldset input[type="number"] + legend, .form-default fieldset fieldset li:hover input[type="number"] + legend, fieldset fieldset .form-default li:hover input[type="number"] + legend, .form-default li:hover .choices > input[type="number"] + legend, .form-default li:hover .position, .form-default li:hover ul.select,
 .form-default li:hover select,
 .form-default li:hover textarea {
   border-color: #04a4a5; }
-/* line 67, ../sass/forms/skins/_default.scss */
+/* line 68, ../sass/forms/skins/_default.scss */
 .form-default .choices > legend + ul {
   margin-top: 0em;
   padding-top: 0.75em;
@@ -1033,21 +1251,21 @@ fieldset fieldset .form-default li:hover > legend:first-child,
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-/* line 73, ../sass/forms/skins/_default.scss */
+/* line 74, ../sass/forms/skins/_default.scss */
 .form-default .choices li {
-  padding-bottom: 0;
+  margin-bottom: 0;
   position: relative; }
-  /* line 76, ../sass/forms/skins/_default.scss */
+  /* line 77, ../sass/forms/skins/_default.scss */
   .form-default .choices li label, .form-default .choices li fieldset fieldset legend, fieldset fieldset .form-default .choices li legend, .form-default .choices li .choices > legend {
     background-color: transparent; }
-  /* line 79, ../sass/forms/skins/_default.scss */
+  /* line 80, ../sass/forms/skins/_default.scss */
   .form-default .choices li input, .form-default .choices li .choices > legend + ul, .form-default .choices li input[type="number"] + label, .form-default .choices li fieldset fieldset input[type="number"] + legend, .form-default fieldset fieldset .choices li input[type="number"] + legend, fieldset fieldset .form-default .choices li input[type="number"] + legend, .form-default .choices li .choices > input[type="number"] + legend, .form-default .choices li .position, .form-default .choices li ul.select {
     position: absolute; }
-    /* line 81, ../sass/forms/skins/_default.scss */
+    /* line 82, ../sass/forms/skins/_default.scss */
     .form-default .choices li input + label, .form-default .choices li .choices > legend + ul + label, .form-default .choices li input[type="number"] + label + label, .form-default .choices li fieldset fieldset input[type="number"] + legend + label, .form-default fieldset fieldset .choices li input[type="number"] + legend + label, fieldset fieldset .form-default .choices li input[type="number"] + legend + label, .form-default .choices li .choices > input[type="number"] + legend + label, .form-default .choices li .position + label, .form-default .choices li ul.select + label, .form-default .choices li fieldset fieldset input + legend, fieldset fieldset .form-default .choices li input + legend, .form-default .choices li fieldset fieldset .choices > legend + ul + legend, fieldset fieldset .form-default .choices li .choices > legend + ul + legend, .form-default .choices li fieldset fieldset input[type="number"] + label + legend, fieldset fieldset .form-default .choices li input[type="number"] + label + legend, .form-default .choices li fieldset fieldset input[type="number"] + legend + legend, .form-default fieldset fieldset .choices li input[type="number"] + legend + legend, fieldset fieldset .form-default .choices li input[type="number"] + legend + legend, .form-default .choices li fieldset fieldset .choices > input[type="number"] + legend + legend, fieldset fieldset .form-default .choices li .choices > input[type="number"] + legend + legend, .form-default .choices li fieldset fieldset .position + legend, fieldset fieldset .form-default .choices li .position + legend, .form-default .choices li fieldset fieldset ul.select + legend, fieldset fieldset .form-default .choices li ul.select + legend, .form-default .choices li .choices > input + legend, .form-default .choices li .choices > legend + ul + legend, .form-default .choices li .choices > input[type="number"] + label + legend, .form-default .choices li fieldset fieldset .choices > input[type="number"] + legend + legend, .form-default fieldset fieldset .choices li .choices > input[type="number"] + legend + legend, fieldset fieldset .form-default .choices li .choices > input[type="number"] + legend + legend, .form-default .choices li .choices > input[type="number"] + legend + legend, .form-default .choices li .choices > .position + legend, .form-default .choices li .choices > ul.select + legend {
       padding-left: 1.3em;
       padding-right: 0; }
-  /* line 87, ../sass/forms/skins/_default.scss */
+  /* line 88, ../sass/forms/skins/_default.scss */
   .form-default .choices li label, .form-default .choices li fieldset fieldset legend, fieldset fieldset .form-default .choices li legend, .form-default .choices li .choices > legend,
   .form-default .choices li input,
   .form-default .choices li .choices > legend + ul,
@@ -1061,13 +1279,13 @@ fieldset fieldset .form-default li:hover > legend:first-child,
     height: 1.5em;
     padding-top: 0;
     padding-bottom: 0; }
-/* line 94, ../sass/forms/skins/_default.scss */
+/* line 95, ../sass/forms/skins/_default.scss */
 .form-default .choices.boolean legend + ul {
   margin-top: 0; }
-/* line 97, ../sass/forms/skins/_default.scss */
+/* line 98, ../sass/forms/skins/_default.scss */
 .form-default .choices.boolean li {
   display: inline-block; }
-/* line 103, ../sass/forms/skins/_default.scss */
+/* line 104, ../sass/forms/skins/_default.scss */
 .form-default label, .form-default fieldset fieldset legend, fieldset fieldset .form-default legend, .form-default .choices > legend {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -1076,7 +1294,7 @@ fieldset fieldset .form-default li:hover > legend:first-child,
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
   background-color: #e6e6e6; }
-  /* line 110, ../sass/forms/skins/_default.scss */
+  /* line 111, ../sass/forms/skins/_default.scss */
   .form-default label + textarea, .form-default fieldset fieldset legend + textarea, fieldset fieldset .form-default legend + textarea, .form-default .choices > legend + textarea, .form-default label + input, .form-default fieldset fieldset legend + input, fieldset fieldset .form-default legend + input, .form-default .choices > legend + input, .form-default fieldset fieldset .choices > legend + ul, fieldset fieldset .form-default .choices > legend + ul, .form-default .choices > legend + ul, .form-default label + .position, .form-default fieldset fieldset legend + .position, fieldset fieldset .form-default legend + .position, .form-default .choices > legend + .position, .form-default label + ul.select, .form-default fieldset fieldset legend + ul.select, fieldset fieldset .form-default legend + ul.select, .form-default .choices > legend + ul.select, .form-default label + select + input, .form-default fieldset fieldset legend + select + input, fieldset fieldset .form-default legend + select + input, .form-default .choices > legend + select + input, .form-default label + select + .position, .form-default fieldset fieldset legend + select + .position, fieldset fieldset .form-default legend + select + .position, .form-default .choices > legend + select + .position, .form-default label + select + ul.select, .form-default fieldset fieldset legend + select + ul.select, fieldset fieldset .form-default legend + select + ul.select, .form-default .choices > legend + select + ul.select, .form-default label + select + .select, .form-default fieldset fieldset legend + select + .select, fieldset fieldset .form-default legend + select + .select, .form-default .choices > legend + select + .select, .form-default label + select + .input > .select, .form-default fieldset fieldset legend + select + .input > .select, fieldset fieldset .form-default legend + select + .input > .select, .form-default .choices > legend + select + .input > .select {
     -moz-border-radius-topleft: 0;
     -webkit-border-top-left-radius: 0;
@@ -1084,10 +1302,10 @@ fieldset fieldset .form-default li:hover > legend:first-child,
     -moz-border-radius-topright: 0;
     -webkit-border-top-right-radius: 0;
     border-top-right-radius: 0; }
-/* line 115, ../sass/forms/skins/_default.scss */
+/* line 116, ../sass/forms/skins/_default.scss */
 .form-default label + select, .form-default fieldset fieldset legend + select, fieldset fieldset .form-default legend + select, .form-default .choices > legend + select {
   margin-top: 0.75em; }
-/* line 120, ../sass/forms/skins/_default.scss */
+/* line 121, ../sass/forms/skins/_default.scss */
 .form-default label.invalid, .form-default fieldset fieldset legend.invalid, fieldset fieldset .form-default legend.invalid, .form-default .choices > legend.invalid,
 .form-default label.invalid:hover,
 .form-default fieldset fieldset legend.invalid:hover,
@@ -1095,14 +1313,14 @@ fieldset fieldset .form-default legend.invalid:hover,
 .form-default .choices > legend.invalid:hover {
   background-color: #f15d5e !important;
   color: white !important; }
-/* line 125, ../sass/forms/skins/_default.scss */
+/* line 126, ../sass/forms/skins/_default.scss */
 .form-default .invalid,
 .form-default .invalid:hover {
   border-color: #f15d5e !important; }
-/* line 128, ../sass/forms/skins/_default.scss */
+/* line 129, ../sass/forms/skins/_default.scss */
 .form-default .invalid:after {
   border-top-color: #f15d5e !important; }
-/* line 133, ../sass/forms/skins/_default.scss */
+/* line 134, ../sass/forms/skins/_default.scss */
 .form-default input[type="number"], .form-default .choices > legend + ul[type="number"], .form-default input[type="number"] + label[type="number"], .form-default fieldset fieldset input[type="number"] + legend[type="number"], fieldset fieldset .form-default input[type="number"] + legend[type="number"], .form-default .choices > input[type="number"] + legend[type="number"], .form-default [type="number"].position, .form-default ul[type="number"].select {
   display: inline-block;
   vertical-align: top;
@@ -1120,7 +1338,7 @@ fieldset fieldset .form-default legend.invalid:hover,
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right-width: 0; }
-  /* line 137, ../sass/forms/skins/_default.scss */
+  /* line 138, ../sass/forms/skins/_default.scss */
   .form-default input[type="number"] + label, .form-default .choices > legend + ul[type="number"] + label, .form-default input[type="number"] + label[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend[type="number"] + label, fieldset fieldset .form-default input[type="number"] + legend[type="number"] + label, .form-default .choices > input[type="number"] + legend[type="number"] + label, .form-default [type="number"].position + label, .form-default ul[type="number"].select + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default fieldset fieldset .choices > legend + ul[type="number"] + legend, fieldset fieldset .form-default .choices > legend + ul[type="number"] + legend, .form-default fieldset fieldset input[type="number"] + label[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + label[type="number"] + legend, .form-default fieldset fieldset input[type="number"] + legend[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend[type="number"] + legend, .form-default fieldset fieldset .choices > input[type="number"] + legend[type="number"] + legend, fieldset fieldset .form-default .choices > input[type="number"] + legend[type="number"] + legend, .form-default fieldset fieldset [type="number"].position + legend, fieldset fieldset .form-default [type="number"].position + legend, .form-default fieldset fieldset ul[type="number"].select + legend, fieldset fieldset .form-default ul[type="number"].select + legend, .form-default .choices > input[type="number"] + legend, .form-default .choices > legend + ul[type="number"] + legend, .form-default .choices > input[type="number"] + label[type="number"] + legend, .form-default fieldset fieldset .choices > input[type="number"] + legend[type="number"] + legend, fieldset fieldset .form-default .choices > input[type="number"] + legend[type="number"] + legend, .form-default .choices > input[type="number"] + legend[type="number"] + legend, .form-default .choices > [type="number"].position + legend, .form-default .choices > ul[type="number"].select + legend {
     background-color: transparent !important;
     display: inline-block;
@@ -1153,15 +1371,15 @@ fieldset fieldset .form-default legend.invalid:hover,
     color: #1a1716 !important;
     border-left-width: 0;
     white-space: nowrap; }
-    /* line 147, ../sass/forms/skins/_default.scss */
+    /* line 148, ../sass/forms/skins/_default.scss */
     .form-default input[type="number"] + label.invalid:hover, .form-default .choices > legend + ul[type="number"] + label.invalid:hover, .form-default input[type="number"] + label[type="number"] + label.invalid:hover, .form-default fieldset fieldset input[type="number"] + legend[type="number"] + label.invalid:hover, fieldset fieldset .form-default input[type="number"] + legend[type="number"] + label.invalid:hover, .form-default .choices > input[type="number"] + legend[type="number"] + label.invalid:hover, .form-default [type="number"].position + label.invalid:hover, .form-default ul[type="number"].select + label.invalid:hover, .form-default fieldset fieldset input[type="number"] + legend.invalid:hover, fieldset fieldset .form-default input[type="number"] + legend.invalid:hover, .form-default fieldset fieldset .choices > legend + ul[type="number"] + legend.invalid:hover, fieldset fieldset .form-default .choices > legend + ul[type="number"] + legend.invalid:hover, .form-default fieldset fieldset input[type="number"] + label[type="number"] + legend.invalid:hover, fieldset fieldset .form-default input[type="number"] + label[type="number"] + legend.invalid:hover, .form-default fieldset fieldset input[type="number"] + legend[type="number"] + legend.invalid:hover, fieldset fieldset .form-default input[type="number"] + legend[type="number"] + legend.invalid:hover, .form-default fieldset fieldset .choices > input[type="number"] + legend[type="number"] + legend.invalid:hover, fieldset fieldset .form-default .choices > input[type="number"] + legend[type="number"] + legend.invalid:hover, .form-default fieldset fieldset [type="number"].position + legend.invalid:hover, fieldset fieldset .form-default [type="number"].position + legend.invalid:hover, .form-default fieldset fieldset ul[type="number"].select + legend.invalid:hover, fieldset fieldset .form-default ul[type="number"].select + legend.invalid:hover, .form-default .choices > input[type="number"] + legend.invalid:hover, .form-default .choices > legend + ul[type="number"] + legend.invalid:hover, .form-default .choices > input[type="number"] + label[type="number"] + legend.invalid:hover, .form-default fieldset fieldset .choices > input[type="number"] + legend[type="number"] + legend.invalid:hover, fieldset fieldset .form-default .choices > input[type="number"] + legend[type="number"] + legend.invalid:hover, .form-default .choices > input[type="number"] + legend[type="number"] + legend.invalid:hover, .form-default .choices > [type="number"].position + legend.invalid:hover, .form-default .choices > ul[type="number"].select + legend.invalid:hover {
       background-color: transparent !important;
       color: #1a1716 !important; }
 
-/* line 159, ../sass/forms/skins/_default.scss */
+/* line 160, ../sass/forms/skins/_default.scss */
 input[type="search"], .form-default .choices > legend + ul[type="search"], .form-default input[type="number"] + label[type="search"], .form-default fieldset fieldset input[type="number"] + legend[type="search"], fieldset fieldset .form-default input[type="number"] + legend[type="search"], .form-default .choices > input[type="number"] + legend[type="search"], [type="search"].position, ul[type="search"].select {
   font-size: 1em; }
-  /* line 164, ../sass/forms/skins/_default.scss */
+  /* line 165, ../sass/forms/skins/_default.scss */
   input[type="search"] ::-webkit-input-placeholder, .form-default .choices > legend + ul[type="search"] ::-webkit-input-placeholder, .form-default input[type="number"] + label[type="search"] ::-webkit-input-placeholder, .form-default fieldset fieldset input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, fieldset fieldset .form-default input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, .form-default .choices > input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, [type="search"].position ::-webkit-input-placeholder, ul[type="search"].select ::-webkit-input-placeholder,
   input[type="search"] :-moz-placeholder,
   .form-default .choices > legend + ul[type="search"] :-moz-placeholder,
@@ -1194,34 +1412,19 @@ input[type="search"], .form-default .choices > legend + ul[type="search"], .form
     text-shadow: 0 0 2px black;
     word-spacing: 20px; }
 
-/* line 1, ../sass/forms/_pretty_select.scss */
+/* line 5, ../sass/forms/_pretty_select.scss */
 .position {
   position: relative; }
-  /* line 4, ../sass/forms/_pretty_select.scss */
+  /* line 8, ../sass/forms/_pretty_select.scss */
   .position:after {
     content: '\00a0'; }
-  /* line 7, ../sass/forms/_pretty_select.scss */
-  .position:before {
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    content: "\f0dc";
-    position: absolute;
-    right: 0;
-    padding-left: 24px;
-    padding-right: 24px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
 
-/* line 20, ../sass/forms/_pretty_select.scss */
+/* line 13, ../sass/forms/_pretty_select.scss */
 .input {
   position: relative;
   min-height: 3em; }
 
-/* line 24, ../sass/forms/_pretty_select.scss */
+/* line 17, ../sass/forms/_pretty_select.scss */
 ul.select {
   position: absolute;
   width: 100%;
@@ -1229,68 +1432,60 @@ ul.select {
   top: 0;
   padding: 0 !important;
   z-index: 1; }
-  /* line 32, ../sass/forms/_pretty_select.scss */
+  /* line 25, ../sass/forms/_pretty_select.scss */
   ul.select:before {
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    content: "\f0dc";
-    position: absolute;
     top: 0;
     right: 0;
+    z-index: -1; }
+  /* line 32, ../sass/forms/_pretty_select.scss */
+  ul.select:before,
+  ul.select li {
+    margin-top: 0em;
     padding-top: 0.75em;
     padding-bottom: 0.75em;
+    margin-bottom: 0em;
     padding-left: 24px;
     padding-right: 24px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    z-index: -1;
     cursor: pointer; }
-  /* line 48, ../sass/forms/_pretty_select.scss */
+  /* line 37, ../sass/forms/_pretty_select.scss */
   ul.select li {
     display: none;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    padding-left: 24px;
-    padding-right: 24px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    cursor: pointer;
     color: #1a1716; }
-    /* line 56, ../sass/forms/_pretty_select.scss */
+    /* line 40, ../sass/forms/_pretty_select.scss */
     ul.select li.selected {
       display: block; }
-    /* line 59, ../sass/forms/_pretty_select.scss */
+    /* line 43, ../sass/forms/_pretty_select.scss */
     ul.select li:hover {
       color: #04a4a5; }
-    /* line 62, ../sass/forms/_pretty_select.scss */
+    /* line 46, ../sass/forms/_pretty_select.scss */
     ul.select li.first {
       color: #1a1716; }
-  /* line 66, ../sass/forms/_pretty_select.scss */
+  /* line 51, ../sass/forms/_pretty_select.scss */
+  ul.select:before, ul.select.open .selected:after {
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute; }
+  /* line 57, ../sass/forms/_pretty_select.scss */
   ul.select.open {
-    background-color: #abfcfd; }
-    /* line 69, ../sass/forms/_pretty_select.scss */
+    z-index: 2;
+    background-color: white; }
+    /* line 61, ../sass/forms/_pretty_select.scss */
     ul.select.open .selected:after {
-      font-family: CustomIconSet;
-      font-weight: normal;
-      font-style: normal;
-      display: inline-block;
-      text-decoration: inherit;
-      content: "\72";
-      position: absolute;
       left: -20px;
       padding-left: 24px;
       padding-right: 24px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-    /* line 81, ../sass/forms/_pretty_select.scss */
+    /* line 67, ../sass/forms/_pretty_select.scss */
     ul.select.open .selected.first:after {
       content: ''; }
+    /* line 72, ../sass/forms/_pretty_select.scss */
+    ul.select.open li:hover:not(.selected) {
+      background-color: #e6e6e6; }
 
 @media only screen and (max-width: 50em) {
   /* line 3, ../sass/skin/_persistent-grid.scss */

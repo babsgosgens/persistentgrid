@@ -1,19 +1,12 @@
+$form-prettyselect-dropdown-background: $white;
+$form-prettyselect-dropdown-hover: $form-color-default;
+$form-pretty-select-icon-selector: down-arrow;
+$form-pretty-select-icon-selected: checkmark;
 .position {
 	@extend input;
 	position: relative;
 	&:after {
 		content: '\00a0';
-	}
-	&:before {
-		font-family: FontAwesome;
-		font-weight: normal;
-		font-style: normal;
-		display: inline-block;
-		text-decoration: inherit;
-		content: "\f0dc";
-		position: absolute;
-		right: 0;
-		@include column-padding();
 	}
 }
 
@@ -30,50 +23,43 @@ ul.select {
 	padding: 0 !important;
 	z-index: 1;
 	&:before {
-		font-family: FontAwesome;
-		font-weight: normal;
-		font-style: normal;
-		display: inline-block;
-		text-decoration: inherit;
-		content: "\f0dc";
-		position: absolute;
+		@extend .icon-#{$form-pretty-select-icon-selector}:before;
 		top: 0;
 		right: 0;
-		@include vertical-rhythm($form-vertical-spacing, padding-top);
-		@include vertical-rhythm($form-vertical-spacing, padding-bottom);
-		@include column-padding();
 		z-index: -1;
+	}
+	&:before,
+	li {
+		@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
+		@include column-padding();
 		cursor: pointer;
 	}
 	li {
 		display: none;
-		@include vertical-rhythm($form-vertical-spacing, padding-top);
-		@include vertical-rhythm($form-vertical-spacing, padding-bottom);
-		@include column-padding();
-		cursor: pointer;
-		// padding-bottom: 0;
 		color: $color-body;
 		&.selected {
 			display: block;
 		}
 		&:hover {
-			color: $color-cta-secondary;	
+			color: $color-cta-secondary;
 		}
 		&.first {
 			color: $color-body;
 		}
 	}
+	&:before,
+	&.open .selected:after {
+		@extend .icon:before;
+		display: inline-block;
+		text-decoration: inherit;
+		position: absolute;
+	}
 	&.open {
-		background-color: lighten($color-cta-secondary, 50);
+		z-index: 2;
+		background-color: $form-prettyselect-dropdown-background;
 		.selected {
 			&:after {
-				font-family: CustomIconSet;
-				font-weight: normal;
-				font-style: normal;
-				display: inline-block;
-				text-decoration: inherit;
-				content: "\72";
-				position: absolute;
+				@extend .icon-#{$form-pretty-select-icon-selected}:before;
 				left: -20px;
 				@include column-padding();
 			}
@@ -82,6 +68,9 @@ ul.select {
 					content: '';
 				}
 			}
+		}
+		li:hover:not(.selected) {
+			background-color: $form-prettyselect-dropdown-hover;
 		}
 	}
 }
