@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>The Persistent Grid</title>
-		<link href="./stylesheets/persistent-grid.css" media="screen" rel="stylesheet" type="text/css">
 		<link href="./stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="./js/modernizr.2.6.2.js"></script>
 	</head>
 	<body class="root">
 		<a href="https://github.com/babsgosgens/persistent-grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-		<header role="header">
+		<header role="header" class="site-header">
 			<div class="full">
 				<h1>The Persistent Grid</h1>
 				<p>A responsive and (very) lightweight grid <small>still in alpha version</small>.</p>
@@ -25,16 +24,19 @@
 						<li>Nestable</li>
 						<li>Fixed gutter widths</li>
 						<li>Fixable root</li>
-						<li>SASS</li>
+						<li>Configurable</li>
+						<li>Uses SASS &amp; Compass</li>
 					</ul>
 				</section
 				><section>
-					<h1>Browser Compatibility</h1>
+					<h1>Compatibility</h1>
+					<p>Tested in:</p>
 					<ul>
 						<li>Internet Explorer 8</li>
 						<li>Chrome 22.0.1229.94</li>
 						<li>Firefox 15.0.1</li>
 						<li>Safari 5.1.7</li>
+						<li>Opera 10.10</li>
 					</ul>
 				</section>
 			</div>
@@ -56,12 +58,15 @@
 				<p>
 					The current version still implements the persistent class, but the fixed distribution of columns has been taken out. Instead, a number of SASS mixins give you the possibility of configuring your grid in any way that you need. What's interesting, it that you can achieve complex layouts by nesting and combining different column widths.
 				</p>
+				<p>
+					The grid can accomodate anything from 1 column to 36 column layouts - and any combination thereof.
+				</p>
 				</div
 				><div class="half">
 				<p>
 					For example, consider a 12-column layout, pretty common around the web these days. Say you want to push your content one column in - resulting in an 11-column wide content area.
 
-					If you nou want to split that area into two 5 and 6-column fields, you would assign a width of 5/11 and 6/11 to these tags by instructing the grid to create these column classes of 'five-eleventh' and 'six-eleventh'. You can also use the SASS mixin '@include column-width(5/11);' and '@include column-width(6/11);' on any class or tag in your markup.
+					If you now want to split that area into two 5 and 6-column fields, you would assign a width of 5/11 and 6/11 to these tags by instructing the grid to create these column classes of 'five-eleventh' and 'six-eleventh'. You can also use the SASS mixin '@include column-width(5/11);' and '@include column-width(6/11);' on any class or tag in your markup.
 
 					That way, you keep your markup clean.
 				</p>
@@ -78,6 +83,12 @@
 				><p class="third">
 					If you don't have full control over your markup, a negative right margin will fix the gap between elements. It's a clean hack (if such a thing exists) as the negative margin is subtracted from the block's width without affecting the width of the parent container. Known issue: you must adapt the value of the negative margin as it depends on your font and type size as well as on your configured padding. Also, this may cause small alignment issues in some designs. However, in most use cases the negative margin performs fine.
 				</p>
+				<div class="float-info full">
+				<h4>Float</h4>
+				<p>
+					If it floats your boat, changing the setting called '$column-style' from its default value of 'inline' to float will render the grid with floated columns. This can be useful if, for example, your CMS will not allow you to alter the markup and you need more accurate lineup of columns.
+				</p>
+				</div>
 			</section>
 			<section>
 				<h1 class="full">The Extended Grid</h1>
@@ -86,6 +97,15 @@
 				</div>
 			</section>
 		</article>
+		<section>
+			<h1>Examples</h1>
+			<h2>Forms</h2>
+			<form>
+				<fieldset>
+					<legend>Fieldset Legend</legend>
+				</fieldset>
+			</form>
+		</section>
 		<footer class="full">
 			<p><small>&copy;Copyright 2012-2013 <a href="http://crossinghippos.nl">Babs G&ouml;sgens - Crossing Hippos</a></small></p>
 		</footer>

@@ -1,9 +1,3 @@
-@mixin column($fraction: 1/3, $persistent: false) {
-	@include column-behavior();
-	@include column-width($fraction, $persistent);
-	@include column-padding();
-}
-
 @mixin column-behavior($use-box-sizing: $use-box-sizing, $column-style: $column-style)
 {
 	@if $column-style == 'inline' {
@@ -55,12 +49,6 @@
 	display: block;
 	margin: 0 auto;
 	max-width: $container-max-width;
-	@if $container-min-width {
-		min-width: $container-min-width;
-	}
-	@if $column-style == 'float' {
-		@include clearfix();
-	}
 }
 
 @mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
@@ -76,4 +64,10 @@
 	@if $use-box-sizing {
 		@include box-sizing('border-box');
 	}
+}
+
+@mixin column($fraction: 1/3, $persistent: false) {
+	@include column-behavior();
+	@include column-width($fraction, $persistent);
+	@include column-padding();
 }

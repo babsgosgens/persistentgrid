@@ -5,11 +5,19 @@ html {
     /* Settings: $debug-rhythm=true; */
     background-color: transparent !important;
     background-image: none !important;
+<<<<<<< HEAD
     outline: #ff01ff dotted 1px;
     outline: rgba(255, 0, 255, 0.1) dotted 1px; }
 
 html {
   font: normal normal 300 100%/1.5em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+=======
+    outline: rgba(255, 0, 255, 0.1) dotted 1px;
+    outline: #ff01ff dotted 1px \9; }
+
+html {
+  font: normal normal 400 100%/1.5em "Colaborate-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+>>>>>>> extended
   vertical-align: baseline; }
 
 html, body, div, span, applet, object, iframe,
@@ -19,7 +27,11 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
+<<<<<<< HEAD
 fieldset, form, label, legend,
+=======
+fieldset, form, label, fieldset fieldset legend, legend,
+>>>>>>> extended
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -56,8 +68,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .root {
   display: block;
   margin: 0 auto;
+<<<<<<< HEAD
   max-width: 70em;
   min-width: 40em; }
+=======
+  max-width: 70em; }
+>>>>>>> extended
 
 .column, .full,
 .collection-of-fulls > *, .half,
@@ -214,6 +230,7 @@ a {
     a:visited:hover {
       color: #9fcc3a; }
 
+<<<<<<< HEAD
 .heading-1, header h1 {
   font: normal normal 400 2.25em/1.33333em "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0.66667em 0em 0.66667em 0em;
@@ -252,6 +269,346 @@ ul {
 
 ol {
   list-style-type: decimal; }
+=======
+p {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
+
+.heading-1, .site-header h1 {
+  font: normal normal 400 2.875em/1.56522em "Colaborate-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0.52174em 0em 0.52174em 0em;
+  color: #9fcc3a; }
+
+.heading-2, article h1 {
+  font: normal normal 400 2.375em/1.26316em "Colaborate-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0.31579em 0em 0.31579em 0em;
+  color: #04a4a5; }
+
+.heading-3, article section h1,
+h2 {
+  font: normal normal 400 1.5em/2em "Colaborate-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0.5em 0em 0.5em 0em;
+  color: #04a4a5; }
+
+.heading-4 {
+  font: normal normal 400 1.5em/2em "Colaborate-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 1em 0em;
+  color: #04a4a5; }
+
+.heading-5 {
+  font: normal normal 400 1.5em/2em "Colaborate-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 1em 0em;
+  color: #04a4a5; }
+
+.heading-6 {
+  font: normal normal 400 1.5em/2em "Colaborate-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 1em 0em;
+  color: #04a4a5; }
+
+.button, input[type="button"], .form input[type="number"] + label[type="button"], .form fieldset fieldset input[type="number"] + legend[type="button"], fieldset fieldset .form input[type="number"] + legend[type="button"], [type="button"].position, ul[type="button"].select,
+input[type="submit"],
+.form input[type="number"] + label[type="submit"],
+.form fieldset fieldset input[type="number"] + legend[type="submit"],
+fieldset fieldset .form input[type="number"] + legend[type="submit"],
+[type="submit"].position,
+ul[type="submit"].select,
+input[type="reset"],
+.form input[type="number"] + label[type="reset"],
+.form fieldset fieldset input[type="number"] + legend[type="reset"],
+fieldset fieldset .form input[type="number"] + legend[type="reset"],
+[type="reset"].position,
+ul[type="reset"].select, button {
+  background-color: #f15d5e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f37475), color-stop(100%, #ef4647));
+  background-image: -webkit-linear-gradient(#f37475, #ef4647);
+  background-image: -moz-linear-gradient(#f37475, #ef4647);
+  background-image: -o-linear-gradient(#f37475, #ef4647);
+  background-image: linear-gradient(#f37475, #ef4647);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-shadow: 0 -1px 1px #d61214, 0 -1px 2px white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  border: 1px solid #f05455;
+  line-height: 22px;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: px-to-em(base-line-rhythm(0.5), 16px);
+  padding-bottom: px-to-em(base-line-rhythm(0.5), 16px);
+  font-size: 14px;
+  text-decoration: none; }
+  .button:hover, input[type="button"]:hover, .form input[type="number"] + label[type="button"]:hover, .form fieldset fieldset input[type="number"] + legend[type="button"]:hover, fieldset fieldset .form input[type="number"] + legend[type="button"]:hover, [type="button"].position:hover, ul[type="button"].select:hover,
+  input[type="submit"]:hover,
+  .form input[type="number"] + label[type="submit"]:hover,
+  .form fieldset fieldset input[type="number"] + legend[type="submit"]:hover,
+  fieldset fieldset .form input[type="number"] + legend[type="submit"]:hover,
+  [type="submit"].position:hover,
+  ul[type="submit"].select:hover,
+  input[type="reset"]:hover,
+  .form input[type="number"] + label[type="reset"]:hover,
+  .form fieldset fieldset input[type="number"] + legend[type="reset"]:hover,
+  fieldset fieldset .form input[type="number"] + legend[type="reset"]:hover,
+  [type="reset"].position:hover,
+  ul[type="reset"].select:hover, button:hover {
+    background-color: #ed2e2f;
+    color: white;
+    text-shadow: 0 -1px 1px #a70e0f, 0 -1px 2px white;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ef4647), color-stop(100%, #eb1718));
+    background-image: -webkit-linear-gradient(#ef4647, #eb1718);
+    background-image: -moz-linear-gradient(#ef4647, #eb1718);
+    background-image: -o-linear-gradient(#ef4647, #eb1718);
+    background-image: linear-gradient(#ef4647, #eb1718);
+    border-color: #ec2526; }
+
+.button.theme, input.theme[type="button"], .form input[type="number"] + label.theme[type="button"], .form fieldset fieldset input[type="number"] + legend.theme[type="button"], fieldset fieldset .form input[type="number"] + legend.theme[type="button"], .theme[type="button"].position, ul.theme[type="button"].select,
+input.theme[type="submit"],
+.form input[type="number"] + label.theme[type="submit"],
+.form fieldset fieldset input[type="number"] + legend.theme[type="submit"],
+fieldset fieldset .form input[type="number"] + legend.theme[type="submit"],
+.theme[type="submit"].position,
+ul.theme[type="submit"].select,
+input.theme[type="reset"],
+.form input[type="number"] + label.theme[type="reset"],
+.form fieldset fieldset input[type="number"] + legend.theme[type="reset"],
+fieldset fieldset .form input[type="number"] + legend.theme[type="reset"],
+.theme[type="reset"].position,
+ul.theme[type="reset"].select, button.theme {
+  background-color: #9fcc3a;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a9d14e), color-stop(100%, #97c433));
+  background-image: -webkit-linear-gradient(#a9d14e, #97c433);
+  background-image: -moz-linear-gradient(#a9d14e, #97c433);
+  background-image: -o-linear-gradient(#a9d14e, #97c433);
+  background-image: linear-gradient(#a9d14e, #97c433);
+  text-shadow: 0 -1px 1px #627f21, 0 -1px 2px white;
+  border: 1px solid #9ac834; }
+  .button.theme:hover, input.theme[type="button"]:hover, .form input[type="number"] + label.theme[type="button"]:hover, .form fieldset fieldset input[type="number"] + legend.theme[type="button"]:hover, fieldset fieldset .form input[type="number"] + legend.theme[type="button"]:hover, .theme[type="button"].position:hover, ul.theme[type="button"].select:hover,
+  input.theme[type="submit"]:hover,
+  .form input[type="number"] + label.theme[type="submit"]:hover,
+  .form fieldset fieldset input[type="number"] + legend.theme[type="submit"]:hover,
+  fieldset fieldset .form input[type="number"] + legend.theme[type="submit"]:hover,
+  .theme[type="submit"].position:hover,
+  ul.theme[type="submit"].select:hover,
+  input.theme[type="reset"]:hover,
+  .form input[type="number"] + label.theme[type="reset"]:hover,
+  .form fieldset fieldset input[type="number"] + legend.theme[type="reset"]:hover,
+  fieldset fieldset .form input[type="number"] + legend.theme[type="reset"]:hover,
+  .theme[type="reset"].position:hover,
+  ul.theme[type="reset"].select:hover, button.theme:hover {
+    background-color: #81a82b;
+    text-shadow: 0 -1px 1px #526b1c, 0 -1px 2px #f8fbf0;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9fcc3a), color-stop(100%, #88b02d));
+    background-image: -webkit-linear-gradient(#9fcc3a, #88b02d);
+    background-image: -moz-linear-gradient(#9fcc3a, #88b02d);
+    background-image: -o-linear-gradient(#9fcc3a, #88b02d);
+    background-image: linear-gradient(#9fcc3a, #88b02d);
+    border-color: #8bb42f; }
+
+.button.small, input.small[type="button"], .form input[type="number"] + label.small[type="button"], .form fieldset fieldset input[type="number"] + legend.small[type="button"], fieldset fieldset .form input[type="number"] + legend.small[type="button"], .small[type="button"].position, ul.small[type="button"].select,
+input.small[type="submit"],
+.form input[type="number"] + label.small[type="submit"],
+.form fieldset fieldset input[type="number"] + legend.small[type="submit"],
+fieldset fieldset .form input[type="number"] + legend.small[type="submit"],
+.small[type="submit"].position,
+ul.small[type="submit"].select,
+input.small[type="reset"],
+.form input[type="number"] + label.small[type="reset"],
+.form fieldset fieldset input[type="number"] + legend.small[type="reset"],
+fieldset fieldset .form input[type="number"] + legend.small[type="reset"],
+.small[type="reset"].position,
+ul.small[type="reset"].select, button.small {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.button.stretch, .big.button, input.big[type="button"], .form input[type="number"] + label.big[type="button"], .form fieldset fieldset input[type="number"] + legend.big[type="button"], fieldset fieldset .form input[type="number"] + legend.big[type="button"], .big[type="button"].position, ul.big[type="button"].select,
+input.big[type="submit"],
+.form input[type="number"] + label.big[type="submit"],
+.form fieldset fieldset input[type="number"] + legend.big[type="submit"],
+fieldset fieldset .form input[type="number"] + legend.big[type="submit"],
+.big[type="submit"].position,
+ul.big[type="submit"].select,
+input.big[type="reset"],
+.form input[type="number"] + label.big[type="reset"],
+.form fieldset fieldset input[type="number"] + legend.big[type="reset"],
+fieldset fieldset .form input[type="number"] + legend.big[type="reset"],
+.big[type="reset"].position,
+ul.big[type="reset"].select, button.big, .actions .button, .actions input[type="button"], .actions .form input[type="number"] + label[type="button"], .form .actions input[type="number"] + label[type="button"], .actions .form fieldset fieldset input[type="number"] + legend[type="button"], .form fieldset fieldset .actions input[type="number"] + legend[type="button"], .actions fieldset fieldset .form input[type="number"] + legend[type="button"], fieldset fieldset .form .actions input[type="number"] + legend[type="button"], .actions [type="button"].position, .actions ul[type="button"].select,
+.actions input[type="submit"],
+.actions .form input[type="number"] + label[type="submit"],
+.form .actions input[type="number"] + label[type="submit"],
+.actions .form fieldset fieldset input[type="number"] + legend[type="submit"],
+.form fieldset fieldset .actions input[type="number"] + legend[type="submit"],
+.actions fieldset fieldset .form input[type="number"] + legend[type="submit"],
+fieldset fieldset .form .actions input[type="number"] + legend[type="submit"],
+.actions [type="submit"].position,
+.actions ul[type="submit"].select,
+.actions input[type="reset"],
+.actions .form input[type="number"] + label[type="reset"],
+.form .actions input[type="number"] + label[type="reset"],
+.actions .form fieldset fieldset input[type="number"] + legend[type="reset"],
+.form fieldset fieldset .actions input[type="number"] + legend[type="reset"],
+.actions fieldset fieldset .form input[type="number"] + legend[type="reset"],
+fieldset fieldset .form .actions input[type="number"] + legend[type="reset"],
+.actions [type="reset"].position,
+.actions ul[type="reset"].select, .actions button, input.stretch[type="button"], .form input[type="number"] + label.stretch[type="button"], .form fieldset fieldset input[type="number"] + legend.stretch[type="button"], fieldset fieldset .form input[type="number"] + legend.stretch[type="button"], .stretch[type="button"].position, ul.stretch[type="button"].select,
+input.stretch[type="submit"],
+.form input[type="number"] + label.stretch[type="submit"],
+.form fieldset fieldset input[type="number"] + legend.stretch[type="submit"],
+fieldset fieldset .form input[type="number"] + legend.stretch[type="submit"],
+.stretch[type="submit"].position,
+ul.stretch[type="submit"].select,
+input.stretch[type="reset"],
+.form input[type="number"] + label.stretch[type="reset"],
+.form fieldset fieldset input[type="number"] + legend.stretch[type="reset"],
+fieldset fieldset .form input[type="number"] + legend.stretch[type="reset"],
+.stretch[type="reset"].position,
+ul.stretch[type="reset"].select, button.stretch {
+  width: 100%; }
+
+.big.button, input.big[type="button"], .form input[type="number"] + label.big[type="button"], .form fieldset fieldset input[type="number"] + legend.big[type="button"], fieldset fieldset .form input[type="number"] + legend.big[type="button"], .big[type="button"].position, ul.big[type="button"].select,
+input.big[type="submit"],
+.form input[type="number"] + label.big[type="submit"],
+.form fieldset fieldset input[type="number"] + legend.big[type="submit"],
+fieldset fieldset .form input[type="number"] + legend.big[type="submit"],
+.big[type="submit"].position,
+ul.big[type="submit"].select,
+input.big[type="reset"],
+.form input[type="number"] + label.big[type="reset"],
+.form fieldset fieldset input[type="number"] + legend.big[type="reset"],
+fieldset fieldset .form input[type="number"] + legend.big[type="reset"],
+.big[type="reset"].position,
+ul.big[type="reset"].select, button.big {
+  font-size: px-to-em(20px, 16px);
+  line-height: px-to-em(base-line-rhythm(1.5), 16px); }
+
+.flat {
+  display: block;
+  color: black;
+  padding: 0 24px;
+  padding-bottom: px-to-em(6px, 6px);
+  padding-top: px-to-em(6px, 6px);
+  margin-bottom: px-to-em(6px, 6px);
+  margin-top: px-to-em(6px, 6px);
+  line-height: px-to-em(24px, 24px);
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
+
+/*
+root element for the scrollable.  when scrolling occurs this
+element stays still.
+*/
+.scrollable {
+  /* required settings */
+  position: relative;
+  overflow: hidden;
+  height: px-to-em(base-line-rhythm(14), 16px); }
+
+/*
+root element for scrollable items. Must be absolutely positioned
+and it should have a extremely large width to accommodate scrollable
+items.  it's enough that you set width and height for the root element
+and not for this element.
+*/
+.scrollable .items {
+  /* this cannot be too large */
+  width: 20000em;
+  position: absolute; }
+
+/*
+a single item. must be floated in horizontal scrolling.  typically,
+this element is the one that *you* will style the most.
+*/
+.item {
+  float: left;
+  width: 100%; }
+
+.js .accordion .tab {
+  line-height: px-to-em(base-line-rhythm(1.5), 16px); }
+  .js .accordion .tab a {
+    display: block;
+    margin-top: px-to-em(base-line-rhythm(0.25), 16px);
+    margin-bottom: px-to-em(base-line-rhythm(0.25), 16px);
+    padding-left: px-to-em(12px, 12px);
+    font-size: px-to-em(16px, 16px);
+    background-color: #9fcc3a;
+    color: #1a1716;
+    text-decoration: none;
+    position: relative;
+    position: relative; }
+    .js .accordion .tab a:after {
+      border: 8px solid transparent;
+      border-width: px-to-em(8px, 8px);
+      display: inline-block;
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 100%;
+      border-right-color: black; }
+    .js .accordion .tab a:after {
+      top: px-to-em(base-line-rhythm(0.5), 16px);
+      right: px-to-em(16px, 16px); }
+.js .accordion .pane .tab-content {
+  padding-top: px-to-em(base-line-rhythm(1), 16px);
+  padding-bottom: px-to-em(base-line-rhythm(1), 16px);
+  padding-left: px-to-em(12px, 12px);
+  padding-right: px-to-em(12px, 12px); }
+  .js .accordion .pane .tab-content > *:last-child {
+    margin-bottom: 0; }
+.js .accordion .pane .tab:hover a {
+  background-color: #9fcc3a; }
+.js .accordion .pane.active {
+  background-color: #f2f2f2; }
+  .js .accordion .pane.active .tab a {
+    background-color: #9fcc3a; }
+.js .accordion .pane.active .tab a:after,
+.js .accordion .pane .tab:hover a:after {
+  border-right-color: transparent;
+  border-top-color: black;
+  right: px-to-em(8px, 8px); }
+
+.js .tabs {
+  height: auto;
+  position: relative; }
+
+.js .pane .tab {
+  position: absolute; }
+.js .pane .tab-content {
+  position: absolute;
+  left: -9999px; }
+.js .pane.active {
+  height: auto; }
+  .js .pane.active .tab-content {
+    position: static;
+    left: 0; }
+
+.tooltip span {
+  position: absolute;
+  left: -9999em;
+  z-index: 100; }
+.tooltip:hover span {
+  left: 0; }
+
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: 70em; }
+>>>>>>> extended
 
 .column, .full,
 .collection-of-fulls > *, .half,
@@ -259,6 +616,7 @@ ol {
 .collection-of-fourths > *, .third,
 .collection-of-thirds > *, .two-third,
 .collection-of-two-thirds > * {
+<<<<<<< HEAD
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
@@ -269,3 +627,587 @@ footer {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.5em; }
+=======
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%; }
+
+.parent, .collection-of-fulls, .collection-of-halfs, .collection-of-fourths, .collection-of-thirds, .collection-of-two-thirds {
+  padding-left: 0;
+  padding-right: 0; }
+
+.full,
+.collection-of-fulls > * {
+  width: 100%; }
+
+.full.persistent,
+.collection-of-fulls.persistent > * {
+  width: 100% !important; }
+
+.push-full {
+  position: relative;
+  left: 100%; }
+
+.pull-full {
+  position: relative;
+  left: -100%; }
+
+.half,
+.collection-of-halfs > * {
+  width: 50%; }
+
+.half.persistent,
+.collection-of-halfs.persistent > * {
+  width: 50% !important; }
+
+.push-half {
+  position: relative;
+  left: 50%; }
+
+.pull-half {
+  position: relative;
+  left: -50%; }
+
+.fourth,
+.collection-of-fourths > * {
+  width: 25%; }
+
+.fourth.persistent,
+.collection-of-fourths.persistent > * {
+  width: 25% !important; }
+
+.push-fourth {
+  position: relative;
+  left: 25%; }
+
+.pull-fourth {
+  position: relative;
+  left: -25%; }
+
+.third,
+.collection-of-thirds > * {
+  width: 33.33333%; }
+
+.third.persistent,
+.collection-of-thirds.persistent > * {
+  width: 33.33333% !important; }
+
+.push-third {
+  position: relative;
+  left: 33.33333%; }
+
+.pull-third {
+  position: relative;
+  left: -33.33333%; }
+
+.two-third,
+.collection-of-two-thirds > * {
+  width: 66.66667%; }
+
+.two-third.persistent,
+.collection-of-two-thirds.persistent > * {
+  width: 66.66667% !important; }
+
+.push-two-third {
+  position: relative;
+  left: 66.66667%; }
+
+.pull-two-third {
+  position: relative;
+  left: -66.66667%; }
+
+@media only screen and (max-width: 40em) {
+  .root {
+    min-width: auto; }
+
+  .full,
+  .collection-of-fulls > * {
+    width: 100%; }
+
+  .push-full,
+  .pull-full {
+    left: 0; }
+
+  .half,
+  .collection-of-halfs > * {
+    width: 100%; }
+
+  .push-half,
+  .pull-half {
+    left: 0; }
+
+  .fourth,
+  .collection-of-fourths > * {
+    width: 100%; }
+
+  .push-fourth,
+  .pull-fourth {
+    left: 0; }
+
+  .third,
+  .collection-of-thirds > * {
+    width: 100%; }
+
+  .push-third,
+  .pull-third {
+    left: 0; }
+
+  .two-third,
+  .collection-of-two-thirds > * {
+    width: 100%; }
+
+  .push-two-third,
+  .pull-two-third {
+    left: 0; } }
+form ol {
+  list-style-type: none; }
+  form ol li {
+    padding: 12px 0; }
+  form ol[class*="collection"] {
+    padding-left: 0;
+    padding-right: 0; }
+
+label, fieldset fieldset legend,
+input,
+.form input[type="number"] + label,
+.form fieldset fieldset input[type="number"] + legend,
+fieldset fieldset .form input[type="number"] + legend,
+.position,
+ul.select,
+select,
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  font-size: px-to-em(16px, 16px); }
+
+textarea {
+  height: 96px; }
+
+.inline label, .inline fieldset fieldset legend, fieldset fieldset .inline legend {
+  width: 35%;
+  margin-right: 0em; }
+.inline input, .inline .form input[type="number"] + label, .form .inline input[type="number"] + label, .inline .form fieldset fieldset input[type="number"] + legend, .form fieldset fieldset .inline input[type="number"] + legend, .inline fieldset fieldset .form input[type="number"] + legend, fieldset fieldset .form .inline input[type="number"] + legend, .inline .position, .inline ul.select,
+.inline select,
+.inline textarea {
+  width: 65%;
+  margin-right: 0em; }
+
+input[type="radio"], .form input[type="number"] + label[type="radio"], .form fieldset fieldset input[type="number"] + legend[type="radio"], fieldset fieldset .form input[type="number"] + legend[type="radio"], [type="radio"].position, ul[type="radio"].select,
+input[type="checkbox"],
+.form input[type="number"] + label[type="checkbox"],
+.form fieldset fieldset input[type="number"] + legend[type="checkbox"],
+fieldset fieldset .form input[type="number"] + legend[type="checkbox"],
+[type="checkbox"].position,
+ul[type="checkbox"].select {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0; }
+  input[type="radio"] + label, .form input[type="number"] + label[type="radio"] + label, .form fieldset fieldset input[type="number"] + legend[type="radio"] + label, fieldset fieldset .form input[type="number"] + legend[type="radio"] + label, [type="radio"].position + label, ul[type="radio"].select + label, fieldset fieldset input[type="radio"] + legend, .form fieldset fieldset input[type="number"] + label[type="radio"] + legend, fieldset fieldset .form input[type="number"] + label[type="radio"] + legend, .form fieldset fieldset input[type="number"] + legend[type="radio"] + legend, fieldset fieldset .form input[type="number"] + legend[type="radio"] + legend, fieldset fieldset [type="radio"].position + legend, fieldset fieldset ul[type="radio"].select + legend,
+  input[type="checkbox"] + label,
+  .form input[type="number"] + label[type="checkbox"] + label,
+  .form fieldset fieldset input[type="number"] + legend[type="checkbox"] + label,
+  fieldset fieldset .form input[type="number"] + legend[type="checkbox"] + label,
+  [type="checkbox"].position + label,
+  ul[type="checkbox"].select + label,
+  fieldset fieldset input[type="checkbox"] + legend,
+  .form fieldset fieldset input[type="number"] + label[type="checkbox"] + legend,
+  fieldset fieldset .form input[type="number"] + label[type="checkbox"] + legend,
+  .form fieldset fieldset input[type="number"] + legend[type="checkbox"] + legend,
+  fieldset fieldset .form input[type="number"] + legend[type="checkbox"] + legend,
+  fieldset fieldset [type="checkbox"].position + legend,
+  fieldset fieldset ul[type="checkbox"].select + legend {
+    width: auto; }
+
+input[type="button"], .form input[type="number"] + label[type="button"], .form fieldset fieldset input[type="number"] + legend[type="button"], fieldset fieldset .form input[type="number"] + legend[type="button"], [type="button"].position, ul[type="button"].select,
+input[type="submit"],
+.form input[type="number"] + label[type="submit"],
+.form fieldset fieldset input[type="number"] + legend[type="submit"],
+fieldset fieldset .form input[type="number"] + legend[type="submit"],
+[type="submit"].position,
+ul[type="submit"].select,
+input[type="reset"],
+.form input[type="number"] + label[type="reset"],
+.form fieldset fieldset input[type="number"] + legend[type="reset"],
+fieldset fieldset .form input[type="number"] + legend[type="reset"],
+[type="reset"].position,
+ul[type="reset"].select {
+  width: auto; }
+
+input, .form input[type="number"] + label, .form fieldset fieldset input[type="number"] + legend, fieldset fieldset .form input[type="number"] + legend, .position, ul.select,
+select,
+textarea {
+  font-family: "Colaborate-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6; }
+  input:hover, .form input[type="number"] + label:hover, .form fieldset fieldset input[type="number"] + legend:hover, fieldset fieldset .form input[type="number"] + legend:hover, .position:hover, ul.select:hover, input:focus, .form input[type="number"] + label:focus, .form fieldset fieldset input[type="number"] + legend:focus, fieldset fieldset .form input[type="number"] + legend:focus, .position:focus, ul.select:focus,
+  select:hover,
+  select:focus,
+  textarea:hover,
+  textarea:focus {
+    outline: none;
+    color: #f15d5e; }
+
+li:hover .choices legend,
+li:hover > label:first-child,
+fieldset fieldset li:hover > legend:first-child {
+  position: relative;
+  background-color: #f15d5e;
+  color: white;
+  position: relative; }
+  li:hover .choices legend:after,
+  li:hover > label:first-child:after,
+  fieldset fieldset li:hover > legend:first-child:after {
+    border: 8px solid transparent;
+    border-width: px-to-em(8px, 8px);
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    border-top-color: #f15d5e; }
+  li:hover .choices legend:after,
+  li:hover > label:first-child:after,
+  fieldset fieldset li:hover > legend:first-child:after {
+    left: 20px; }
+li:hover input, li:hover .form input[type="number"] + label, .form li:hover input[type="number"] + label, li:hover .form fieldset fieldset input[type="number"] + legend, .form fieldset fieldset li:hover input[type="number"] + legend, li:hover fieldset fieldset .form input[type="number"] + legend, fieldset fieldset .form li:hover input[type="number"] + legend, li:hover .position, li:hover ul.select,
+li:hover select,
+li:hover textarea {
+  border-color: #f15d5e; }
+
+input[type="search"], .form input[type="number"] + label[type="search"], .form fieldset fieldset input[type="number"] + legend[type="search"], fieldset fieldset .form input[type="number"] + legend[type="search"], [type="search"].position, ul[type="search"].select {
+  font-size: px-to-em(16px, 16px); }
+  input[type="search"] ::-webkit-input-placeholder, .form input[type="number"] + label[type="search"] ::-webkit-input-placeholder, .form fieldset fieldset input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, fieldset fieldset .form input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, [type="search"].position ::-webkit-input-placeholder, ul[type="search"].select ::-webkit-input-placeholder,
+  input[type="search"] :-moz-placeholder,
+  .form input[type="number"] + label[type="search"] :-moz-placeholder,
+  .form fieldset fieldset input[type="number"] + legend[type="search"] :-moz-placeholder,
+  fieldset fieldset .form input[type="number"] + legend[type="search"] :-moz-placeholder,
+  [type="search"].position :-moz-placeholder,
+  ul[type="search"].select :-moz-placeholder,
+  input[type="search"] ::-moz-placeholder,
+  .form input[type="number"] + label[type="search"] ::-moz-placeholder,
+  .form fieldset fieldset input[type="number"] + legend[type="search"] ::-moz-placeholder,
+  fieldset fieldset .form input[type="number"] + legend[type="search"] ::-moz-placeholder,
+  [type="search"].position ::-moz-placeholder,
+  ul[type="search"].select ::-moz-placeholder,
+  input[type="search"] :-ms-placeholder,
+  .form input[type="number"] + label[type="search"] :-ms-placeholder,
+  .form fieldset fieldset input[type="number"] + legend[type="search"] :-ms-placeholder,
+  fieldset fieldset .form input[type="number"] + legend[type="search"] :-ms-placeholder,
+  [type="search"].position :-ms-placeholder,
+  ul[type="search"].select :-ms-placeholder {
+    color: #9fcc3a;
+    color: #1a1716;
+    text-align: left;
+    cursor: pointer;
+    text-shadow: 0 0 2px black;
+    word-spacing: 20px; }
+
+input[type="radio"], .form input[type="number"] + label[type="radio"], .form fieldset fieldset input[type="number"] + legend[type="radio"], fieldset fieldset .form input[type="number"] + legend[type="radio"], [type="radio"].position, ul[type="radio"].select,
+input[type="checkbox"],
+.form input[type="number"] + label[type="checkbox"],
+.form fieldset fieldset input[type="number"] + legend[type="checkbox"],
+fieldset fieldset .form input[type="number"] + legend[type="checkbox"],
+[type="checkbox"].position,
+ul[type="checkbox"].select {
+  padding: 0;
+  vertical-align: baseline; }
+
+.form label, .form fieldset fieldset legend, fieldset fieldset .form legend,
+.form input,
+.form input[type="number"] + label,
+.form fieldset fieldset input[type="number"] + legend,
+fieldset fieldset .form input[type="number"] + legend,
+.form .position,
+.form ul.select,
+.form select,
+.form textarea {
+  padding-top: px-to-em(base-line-rhythm(0.5), 16px);
+  padding-bottom: px-to-em(base-line-rhythm(0.5), 16px);
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: color;
+  -moz-transition: color;
+  -o-transition: color;
+  transition: color; }
+.form fieldset .span {
+  width: 100%; }
+.form fieldset.choices > legend + ul {
+  padding-top: px-to-em(base-line-rhythm(0.5), 16px);
+  padding-bottom: px-to-em(base-line-rhythm(0.5), 16px);
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid #e6e6e6; }
+.form fieldset.choices li {
+  padding-bottom: 0;
+  position: relative; }
+  .form fieldset.choices li label, .form fieldset.choices li fieldset legend, .form fieldset.choices fieldset li legend {
+    background-color: transparent; }
+  .form fieldset.choices li input, .form fieldset.choices li input[type="number"] + label, .form fieldset.choices li fieldset input[type="number"] + legend, .form fieldset.choices fieldset li input[type="number"] + legend, .form fieldset.choices li fieldset .form input[type="number"] + legend, .form fieldset.choices fieldset .form li input[type="number"] + legend, .form fieldset.choices li .position, .form fieldset.choices li ul.select {
+    position: absolute; }
+    .form fieldset.choices li input + label, .form fieldset.choices li input[type="number"] + label + label, .form fieldset.choices li fieldset input[type="number"] + legend + label, .form fieldset.choices fieldset li input[type="number"] + legend + label, .form fieldset.choices li fieldset .form input[type="number"] + legend + label, .form fieldset.choices fieldset .form li input[type="number"] + legend + label, .form fieldset.choices li .position + label, .form fieldset.choices li ul.select + label, .form fieldset.choices li fieldset input + legend, .form fieldset.choices fieldset li input + legend, .form fieldset.choices li fieldset input[type="number"] + label + legend, .form fieldset.choices fieldset li input[type="number"] + label + legend, .form fieldset.choices li fieldset input[type="number"] + legend + legend, .form fieldset.choices fieldset li input[type="number"] + legend + legend, .form fieldset.choices li fieldset .form input[type="number"] + legend + legend, .form fieldset.choices fieldset .form li input[type="number"] + legend + legend, .form fieldset.choices li fieldset .position + legend, .form fieldset.choices fieldset li .position + legend, .form fieldset.choices li fieldset ul.select + legend, .form fieldset.choices fieldset li ul.select + legend {
+      padding-left: 1.3em;
+      padding-right: 0; }
+  .form fieldset.choices li label, .form fieldset.choices li fieldset legend, .form fieldset.choices fieldset li legend,
+  .form fieldset.choices li input,
+  .form fieldset.choices li input[type="number"] + label,
+  .form fieldset.choices li fieldset input[type="number"] + legend,
+  .form fieldset.choices fieldset li input[type="number"] + legend,
+  .form fieldset.choices li fieldset .form input[type="number"] + legend,
+  .form fieldset.choices fieldset .form li input[type="number"] + legend,
+  .form fieldset.choices li .position,
+  .form fieldset.choices li ul.select {
+    height: px-to-em(base-line-rhythm(1), 16px);
+    padding-top: 0;
+    padding-bottom: 0; }
+.form fieldset.choices.boolean ul {
+  margin-top: px-to-em(base-line-rhythm(2.5), 16px); }
+.form fieldset.choices.boolean legend + ul {
+  margin-top: 0; }
+.form fieldset.choices.boolean li {
+  display: inline-block;
+  margin-right: 0.3em; }
+.form input[type="number"], .form input[type="number"] + label[type="number"], .form fieldset fieldset input[type="number"] + legend[type="number"], fieldset fieldset .form input[type="number"] + legend[type="number"], .form [type="number"].position, .form ul[type="number"].select {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 50%;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-color: white !important; }
+  .form input[type="number"] + label, .form input[type="number"] + label[type="number"] + label, .form fieldset fieldset input[type="number"] + legend[type="number"] + label, fieldset fieldset .form input[type="number"] + legend[type="number"] + label, .form [type="number"].position + label, .form ul[type="number"].select + label, .form fieldset fieldset input[type="number"] + legend, fieldset fieldset .form input[type="number"] + legend, .form fieldset fieldset input[type="number"] + label[type="number"] + legend, fieldset fieldset .form input[type="number"] + label[type="number"] + legend, .form fieldset fieldset input[type="number"] + legend[type="number"] + legend, fieldset fieldset .form input[type="number"] + legend[type="number"] + legend, .form fieldset fieldset [type="number"].position + legend, fieldset fieldset .form [type="number"].position + legend, .form fieldset fieldset ul[type="number"].select + legend, fieldset fieldset .form ul[type="number"].select + legend {
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width: 50%;
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    margin-left: 3px;
+    color: #1a1716;
+    border-left-color: white !important;
+    white-space: nowrap; }
+.form label, .form fieldset fieldset legend, fieldset fieldset .form legend {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #e6e6e6; }
+  .form label + textarea, .form fieldset fieldset legend + textarea, fieldset fieldset .form legend + textarea, .form label + input, .form fieldset fieldset legend + input, fieldset fieldset .form legend + input, .form label + .position, .form fieldset fieldset legend + .position, fieldset fieldset .form legend + .position, .form label + ul.select, .form fieldset fieldset legend + ul.select, fieldset fieldset .form legend + ul.select, .form label + select + input, .form fieldset fieldset legend + select + input, fieldset fieldset .form legend + select + input, .form label + select + .position, .form fieldset fieldset legend + select + .position, fieldset fieldset .form legend + select + .position, .form label + select + ul.select, .form fieldset fieldset legend + select + ul.select, fieldset fieldset .form legend + select + ul.select, .form label + select + .select, .form fieldset fieldset legend + select + .select, fieldset fieldset .form legend + select + .select, .form label + select + .input > .select, .form fieldset fieldset legend + select + .input > .select, fieldset fieldset .form legend + select + .input > .select {
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0; }
+.form fieldset li {
+  padding-bottom: px-to-em(base-line-rhythm(1), 16px); }
+.form label + select, .form fieldset fieldset legend + select, fieldset fieldset .form legend + select {
+  margin-top: px-to-em(base-line-rhythm(0.5), 16px); }
+
+label.invalid, fieldset fieldset legend.invalid,
+label.invalid:hover,
+fieldset fieldset legend.invalid:hover {
+  background-color: #dd0033 !important;
+  color: white !important; }
+
+.invalid,
+.invalid:hover {
+  border-color: #dd0033 !important; }
+
+.invalid:after {
+  border-top-color: #dd0033 !important; }
+
+.errors {
+  margin-top: px-to-em(base-line-rhythm(1), 16px);
+  padding-top: px-to-em(base-line-rhythm(1), 16px);
+  padding-bottom: px-to-em(base-line-rhythm(1), 16px);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #e6e6e6; }
+  .errors .error-title {
+    font-size: px-to-em(20px, 16px);
+    font-weight: 600; }
+  .errors p {
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .errors a {
+    color: #dd0033; }
+  .errors dt {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width: 25%;
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .errors dd {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width: 75%;
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.position {
+  position: relative; }
+  .position:after {
+    content: '\00a0'; }
+  .position:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    content: "\f0dc";
+    position: absolute;
+    right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.input {
+  position: relative;
+  min-height: px-to-em(base-line-rhythm(2), 16px); }
+
+ul.select {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 !important;
+  z-index: 1; }
+  ul.select:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    content: "\f0dc";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: px-to-em(base-line-rhythm(0.5), 16px);
+    padding-bottom: px-to-em(base-line-rhythm(0.5), 16px);
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: -1;
+    cursor: pointer; }
+  ul.select li {
+    display: none;
+    padding-top: px-to-em(base-line-rhythm(0.5), 16px);
+    padding-bottom: px-to-em(base-line-rhythm(0.5), 16px);
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #1a1716; }
+    ul.select li.selected {
+      display: block; }
+    ul.select li:hover {
+      color: #f15d5e; }
+    ul.select li.first {
+      color: #1a1716; }
+  ul.select.open {
+    background-color: white; }
+    ul.select.open .selected:after {
+      font-family: CustomIconSet;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      text-decoration: inherit;
+      content: "\72";
+      position: absolute;
+      left: -20px;
+      padding-left: 24px;
+      padding-right: 24px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    ul.select.open .selected.first:after {
+      content: ''; }
+>>>>>>> extended

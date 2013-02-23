@@ -1,8 +1,17 @@
+html {
+  /* Settings: $debug-rhythm=true; */
+  background: url(../sass/_baselines/24px.png) repeat center top; }
+  html * {
+    /* Settings: $debug-rhythm=true; */
+    background-color: transparent !important;
+    background-image: none !important;
+    outline: rgba(255, 0, 255, 0.1) dotted 1px;
+    outline: #ff01ff dotted 1px \9; }
+
 .root {
   display: block;
   margin: 0 auto;
-  max-width: 70em;
-  min-width: 40em; }
+  max-width: 70em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,

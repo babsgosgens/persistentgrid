@@ -1,4 +1,5 @@
 @import 'compass';
+<<<<<<< HEAD
 
 @import './helpers/all';
 
@@ -12,5 +13,16 @@
 // @import 'media/images';
 // @import 'ui/all';
 // @import 'forms/all';
+=======
+@import './helpers/all';
+@import './settings';
+@import './reset';
+@import './persistent-grid/all';
+@import './typography/all';
+
+// @import 'media/images';
+@import 'ui/all';
+@import 'forms/all';
+>>>>>>> extended
 // @import 'tables/all';
 @import 'skin/all';

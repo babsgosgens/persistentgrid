@@ -25,7 +25,11 @@ a {
 //	################################################################################################################################  //
 
 	p {
+<<<<<<< HEAD
 		// Inherits from body
+=======
+		@include rhythm(0,0,0,1);
+>>>>>>> extended
 	}
 
 
@@ -46,8 +50,13 @@ a {
 
 	.heading-#{$i} {
 
+<<<<<<< HEAD
 		$font-size:   establish-size( nth($properties,1) );
 		$line-height: rhythm(nth($properties,2), nth($properties,1));
+=======
+		$font-size:   establish-size(nth($properties,1));
+		$line-height: rhythm(nth($properties,2),nth($properties,1));
+>>>>>>> extended
 
 		@include font( nth($properties,3), $font-size, $line-height );
 
@@ -62,4 +71,8 @@ a {
 
 		color: nth($properties,5);
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> extended

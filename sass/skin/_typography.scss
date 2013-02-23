@@ -1,0 +1,10 @@
+.site-header h1 {
+	@extend .heading-1;
+}
+article h1 {
+	@extend .heading-2;
+}
+article section h1,
+h2 {
+	@extend .heading-3;
+}
