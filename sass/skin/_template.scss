@@ -1,7 +1,7 @@
 @if $debug-rhythm {
 	html {
 		/* Settings: $debug-rhythm=true; */
-		background: url(../#{$base-line-height}.png) repeat center top;
+		background: url(../images/#{$base-line-height}.png) repeat center top;
 		* { /* Settings: $debug-rhythm=true; */ background-color: transparent !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
 	}
 }
