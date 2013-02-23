@@ -64,7 +64,7 @@
 
 		list.mouseleave(function(){
 			if(list.hasClass('open')) {
-				list.toggleClass('open close').children().not('.selected').toggle();
+				list.removeClass('open').addClass('close').children().not('.selected').toggle();
 			}
 		});
 

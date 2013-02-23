@@ -41,7 +41,6 @@ $form-triangle-size: $base-font-size;
 	textarea {
 		@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
 		@include column-padding();
-		@include transition(color);
 	}
 
 	li:hover {
@@ -87,8 +86,8 @@ $form-triangle-size: $base-font-size;
 			label,
 			input {
 				@include vertical-rhythm(1,height);
-				padding-top: 0;
-				padding-bottom: 0;
+				padding: 0;
+				border: 0;
 			}
 		}
 		&.boolean {
@@ -151,6 +150,10 @@ $form-triangle-size: $base-font-size;
 			}
 		}
 	}
+	input[type="number"],
+	input[type="number"]+label {
+		height: rhythm(2) !important;
+	}
 }
 
 //*
@@ -172,3 +175,9 @@ input[type="search"] {
 		word-spacing: 20px;               
 	}
 }
+
+
+// noindex:-o-prefocus, input[type="number"] {
+//   padding-top: (14/16)*1em;
+//   padding-bottom: (14/16)*1em;
+// }
