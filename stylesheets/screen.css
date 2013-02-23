@@ -56,8 +56,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .root {
   display: block;
   margin: 0 auto;
-  max-width: 70em;
-  min-width: 40em; }
+  max-width: 70em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,
@@ -551,8 +550,7 @@ this element is the one that *you* will style the most.
 .root {
   display: block;
   margin: 0 auto;
-  max-width: 70em;
-  min-width: 40em; }
+  max-width: 70em; }
 
 .column, .full,
 .collection-of-fulls > *, .half,
