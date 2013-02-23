@@ -1,15 +1,14 @@
-form {
-	ol {
+// $form-horizontal-padding: rhythm(.5);
+$form-vertical-padding: rhythm(.5);
+$form-height-textarea: rhythm(5);
+
+fieldset {
+	&>ul,
+	&>ol {
 		list-style-type: none;
-		li {
-			padding: .5*$base-line-height 0;
-		}
-		&[class*="collection"] {
-			padding-left: 0;
-			padding-right: 0;
-		}
 	}
 }
+
 fieldset {
 	fieldset {
 		legend {
@@ -21,33 +20,15 @@ label,
 input,
 select,
 textarea {
-	@include box-sizing('border-box');
 	display: inline-block;
-	vertical-align: top;
-	// @include vertical-rhythm(1,line-height);
+	@include adjust-font-size-to($base-font-size);
+	@include box-sizing('border-box');
 	border: 0;
 	margin: 0;
 	width: 100%;
-	@include font-size($base-font-size);
-}
-input,
-select,
-textarea {
 }
 textarea {
-	height: $heightTextarea;
-}
-.inline {
-	label {
-		width: $inlineLabelWidth;
-		margin-right: $negative-right-margin;
-	}
-	input,
-	select,
-	textarea {
-		width: 100% - $inlineLabelWidth;
-		margin-right: $negative-right-margin;
-	}
+	height: $form-height-textarea;
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -55,7 +36,7 @@ input[type="checkbox"] {
 	padding: 0;
 	margin: 0;
 	border: 0;
-	// @include vertical-rhythm(1, line-height);
+	vertical-align: baseline;
 	+ label {
 		width: auto;
 	}
@@ -67,3 +48,18 @@ input[type="reset"] {
 	@extend .button;
 	width: auto;
 }
+
+
+
+// .inline {
+// 	label {
+// 		width: $inlineLabelWidth;
+// 		margin-right: $negative-right-margin;
+// 	}
+// 	input,
+// 	select,
+// 	textarea {
+// 		width: 100% - $inlineLabelWidth;
+// 		margin-right: $negative-right-margin;
+// 	}
+// }

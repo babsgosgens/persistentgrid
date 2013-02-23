@@ -19,7 +19,7 @@
 	$color-body							: darken($brown,10);
 	$color-theme						: $green;
 	$color-cta-main						: $blue;
-	$color-cta-secondary				: $red;
+	$color-cta-secondary				: $blue;
 	$color-button						: $color-cta-secondary;
 
 	$link-color							: Cyan;
@@ -62,7 +62,7 @@
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
 
 	// Debugging
-	$debug-rhythm						: true;
+	$debug-rhythm						: false;
 
 	@if $debug-rhythm {
 		html {
@@ -229,7 +229,7 @@
 	$inputShadowOutset					: 0 0 10px 0 rgba(255,255,255,1);
 	$heightTextarea						: 4*$base-line-height !default;
 	$form-vertical-spacing				: 0.5;
-	$color-invalid						: #d03;
+	$form-color-invalid						: #d03;
 
 // 	################################################################################################################################  //
 // 	Tables							  																								  //
