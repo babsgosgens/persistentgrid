@@ -4,8 +4,7 @@
 
 	$column-base-class 					: '';
 
-	$container-max-width				: 70em; 				// Max width for the root element - the content will not stretch beyond this width
-	$container-min-width				: 40em; 				// Min width for the root element
+	$container-max-width				: 90em; 				// Max width for the root element - the content will not stretch beyond this width
 	$container-position					: 'center' !default; 	// Values: center | left
 	$base-column-width					: 1/1;
 	$negative-right-margin				: 0 !default; 		// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
@@ -14,4 +13,4 @@
 	$use-box-sizing						: true;
 
 	$column-widths 						: 1/1, 1/2, 1/4, 1/3, 2/3;
-	$column-breakpoints 				: 40em, 70em, 90em;
+	$column-breakpoints 				: 30em, 60em, 90em;
