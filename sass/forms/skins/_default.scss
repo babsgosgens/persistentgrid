@@ -1,0 +1,174 @@
+$form-color-default: darken($white,10);
+$form-color-hover: $color-cta-secondary;
+$form-color-focus: $form-color-hover;
+$form-color-invalid: $red;
+$form-color-inactive: lighten($red,60);
+
+$form-corner-radius: $corner-radius;
+
+$form-border-width: 1px;
+$form-border-color: $form-color-default;
+$form-border-style: solid;
+
+$form-text-color: $color-body;
+
+$form-triangle-size: $base-font-size;
+
+
+.form-default {
+	.span {
+		width: 100%;
+	}
+	li {
+		@include trailer;
+	}
+
+	input,
+	select,
+	textarea {
+		@if $roundedCorners {
+			@include border-bottom-radius($form-corner-radius);
+		}
+		border: #{$form-border-width} #{$form-border-style} #{$form-border-color};
+		&:hover,
+		&:focus {
+			outline: none;
+		}
+	}
+	label,
+	input,
+	select,
+	textarea {
+		@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
+		@include column-padding();
+		@include transition(color);
+	}
+
+	li:hover {
+		.choices legend,
+		>label:first-child {
+			position: relative;
+			background-color: $color-cta-secondary;
+			color: $white;
+			@include triangle($form-triangle-size, down, $form-color-hover, after );
+			&:after {
+				left: (0.5*$column-padding) - (0.25*$form-triangle-size);
+			}
+		}
+		input,
+		select,
+		textarea {
+			border-color: $form-color-focus;
+		}
+	}
+	
+	.choices {
+		>legend {
+			@extend label;
+			&+ul {
+				@extend input;
+				@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
+				@include column-padding();
+			}
+		}
+		li {
+			margin-bottom: 0; // Override trailer
+			position: relative;
+			label {
+				background-color: transparent;
+			}
+			input {
+				position: absolute;
+				&+label {
+					padding-left: 1.3em;
+					padding-right: 0;
+				}
+			}
+			label,
+			input {
+				@include vertical-rhythm(1,height);
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+		&.boolean {
+			legend+ul {
+				margin-top: 0;
+			}
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+	label {
+		@include border-top-radius($corner-radius);
+		background-color: $form-color-default;
+		&+textarea,
+		&+input,
+		&+select+input,
+		&+select+.select,
+		&+select+.input>.select {
+			@include border-top-radius(0);
+		}
+	}
+	
+	label+select {
+		@include vertical-rhythm(0.5, margin-top);
+	}	
+
+	label.invalid,
+	label.invalid:hover {
+		background-color: $form-color-invalid !important;
+		color: $white !important;
+	}
+	.invalid,
+	.invalid:hover {
+		border-color: $form-color-invalid !important;
+	}
+	.invalid:after {
+		border-top-color: $form-color-invalid !important;
+	}
+
+	// Items with a sublabel
+	input[type="number"] {
+		@include column(1/2);
+		@include border-right-radius(0);
+		border-right-width: 0;
+		+label {
+			@extend input;
+			background-color: transparent !important;
+			@include column(1/2);
+			@include border-bottom-radius($corner-radius);
+			@include border-left-radius(0);
+			@include border-top-radius(0);
+			color: $color-body !important;
+			border-left-width: 0;
+			white-space: nowrap;
+			&.invalid:hover {
+				background-color: transparent !important;
+				color: $color-body !important;
+			}
+		}
+	}
+}
+
+//*
+//* Searchbox styling
+//* http://css-tricks.com/webkit-html5-search-inputs/
+//*
+input[type="search"] {
+	@include font-size(16px);
+	::-webkit-input-placeholder,
+	:-moz-placeholder,
+	::-moz-placeholder,
+	:-ms-placeholder {
+	    color: $color-theme;
+		color: $color-body;  
+		text-align: left;
+		cursor: pointer;
+		// letter-spacing: 4px;        
+		text-shadow: 0 0 2px black;       
+		word-spacing: 20px;               
+	}
+}

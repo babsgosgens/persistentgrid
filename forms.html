@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>The Persistent Grid</title>
+		<link href="./stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="./js/modernizr.2.6.2.js"></script>
+	</head>
+	<body class="root">
+		<a href="https://github.com/babsgosgens/persistent-grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+		<nav role="navigation">
+			<ul>
+				<li><a href="./">Index</a></li>
+				<li><a href="forms.html">Forms</a></li>
+				<li><a href="tables.html">Tables</a></li>
+			</ul>
+		</nav>
+		<header role="header" class="site-header">
+			<div class="full">
+				<h1>The Persistent Grid</h1>
+				<p>A responsive and (very) lightweight grid <small>still in alpha version</small>.</p>
+			</div>
+		</header>
+		<section>
+			<h1 class="full">Examples</h1>
+			<h2 class="full">Forms</h2>
+			<div class="half">
+			<p>Sesame snaps chocolate bar tart cotton candy ice cream tootsie roll cheesecake pastry jelly beans. Tootsie roll oat cake ice cream marshmallow muffin chocolate cake pie liquorice marshmallow. Pie bear claw tootsie roll pudding tiramisu toffee pudding biscuit sweet roll. Candy drag&eacute;e jelly beans tart powder. Faworki lemon drops biscuit. Faworki jelly-o topping topping topping jelly-o. Tootsie roll lemon drops tart souffl&eacute; cotton candy pastry chocolate bar. Cotton candy tootsie roll sugar plum fruitcake. Jelly beans applicake wafer chocolate bar caramels bonbon topping jelly beans sweet roll. Dessert pie wafer sesame snaps lollipop macaroon tart pastry. Lemon drops ice cream applicake muffin chocolate bar cotton candy wypas lemon drops. Oat cake tootsie roll dessert chupa chups gingerbread souffl&eacute;. Marzipan chocolate chocolate cheesecake muffin cotton candy sugar plum powder.</p>
+			</div
+			><form class="half">
+				<fieldset class="form-default">
+					<legend>Fieldset Legend</legend>
+					<ol>
+						<li>
+							<label for="field-number">Group Size</label>
+							<input type="number" name="field-number" id="field-number" min="1" max="100" value=""><label for="field-number">Persons</label> 
+						</li>
+						<li>
+							<label for="field-text">Name</label>
+							<input name="field-text" id="field-text" required="required" type="text" size="30" maxlength="100" value="" placeholder="Your full, real name">
+						</li>
+						<li>
+							<label for="textarea">Label</label>
+							<textarea name="textarea" id="textarea"></textarea>
+						</li>
+						<li>
+							<fieldset class="choices">
+								<legend>Hotel</legend>
+								<ul>
+									<li><input name="hotel" id="allin" type="radio" class="radio" value="All Inclusive" checked="checked"><label for="allin">All Inclusive</label></li>
+									<li><input name="hotel" id="fullboard" type="radio" class="radio" value="Full Board"><label for="fullboard">Full Board</label></li>
+									<li><input name="hotel" id="halfboard" type="radio" class="radio" value="Half Board"><label for="halfboard">Half Board</label></li>
+									<li><input name="hotel" id="bandb" type="radio" class="radio" value="Bed and Breakfast"><label for="bandb">Bed and Breakfast</label></li>
+									<li><input name="hotel" id="bed" type="radio" class="radio" value="Bed Only"><label for="bed">Bed only</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset class="boolean choices">
+								<legend>You have a choice</legend>
+								<ul>
+									<li><input name="field-boolean" id="field-boolean-yes" type="radio" class="radio" value="per day" checked="checked"><label for="field-boolean-yes">Yes</label></li>
+									<li><input name="field-boolean" id="field-boolean-no" type="radio" class="radio" value="in total"><label for="field-boolean-no">No</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+							<label for="select-dropdown">Search Engines</label>
+							<select id="select-dropdown" name="select-dropdown" class="pretty">
+								<option value="" selected="selected">- Please select -</option>
+								<option value="Google">Google</option>
+								<option value="Yahoo">Yahoo</option>
+							</select>
+						</li>
+						<li>
+							<label for="select-combo">Combo Box</label>
+							<select id="select-combo" name="select-combo" class="pretty combo">
+								<option value="" selected="selected">- Please select -</option>
+								<option value="Google">Google</option>
+								<option value="Yahoo">Yahoo</option>
+								<option value="Other">Other:</option>
+							</select>
+							<input class="input-text" type="text" data-rel="other" size="30" maxlength="100" value="" placeholder="Search Engine">
+						</li>
+						<li>
+							<fieldset class="boolean choices">
+								<legend>Newsletter</legend>
+								<ul>
+									<li>
+										<input type="checkbox" class="checkbox" name="newsletter" id="newsletter">
+										<label for="newsletter">
+										Yes, I would like to receive your newsletter
+										</label>
+									</li>
+								</ul>
+							</fieldset>
+						</li>
+					</ol>
+					<ol>
+						<li>
+							Invalid: 
+							<label class="invalid" for="field-number">Group Size</label>
+							<input class="invalid" type="number" name="field-number" id="field-number" min="1" max="100" value=""><label class="invalid" for="field-number">Persons</label> 
+						</li>
+						<li>
+							Searchbox:
+							<input type="search">
+						</li>
+					</ol>
+				</fieldset>
+			</form>
+		</section>
+		<footer class="full">
+			<p><small>&copy;Copyright 2012-2013 <a href="http://crossinghippos.nl">Babs G&ouml;sgens - Crossing Hippos</a></small></p>
+		</footer>
+		<script type="text/javascript">
+		  WebFontConfig = {
+    		google: { families: [ 'Open+Sans:300,400,700:latin' ] }
+		  };
+		  (function() {
+		    var wf = document.createElement('script');
+		    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		    wf.type = 'text/javascript';
+		    wf.async = 'true';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(wf, s);
+		  })();
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-35733640-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.pg.forms.1.0.js"></script>
+
+	</body>
+<html>

@@ -1,18 +1,16 @@
 .button {
+  display: inline-block;
   background-color: $button-background-color;
   @include background-image($button-background-gradient);
   @include border-radius($button-radius);
   @include box-shadow($button-shadow);
   @include embossLightTextOnDarkBackground($button-background-color);
-  display: inline-block;
   cursor: $button-cursor;
   color: $button-text-color;
   border: $button-border-width $button-border-style darken($button-background-color,2);
   line-height: $base-line-height - 2*$button-border-width;
   @include column-padding();
-  @include vertical-rhythm(0.5, padding-top);
-  @include vertical-rhythm(0.5, padding-bottom);
-  font-size: $px-s;
+  @include rhythm(0, .5, .5, 0);
   text-decoration: none;
   &:hover {
     background-color: darken($button-background-color, 10);
@@ -54,18 +52,14 @@
 
 .big.button {
   @extend .button.stretch;
-  @include font-size($px-l);
-  @include vertical-rhythm(1.5, line-height);
+  @include adjust-font-size-to($px-l, 1.5);
 }
 
 .flat {
   display: block;
   color: $black;
   padding: 0 0.5*$column-padding;
-  @include unit(padding-bottom, 0.25*$base-line-height);
-  @include unit(padding-top, 0.25*$base-line-height);
-  @include unit(margin-bottom, 0.25*$base-line-height);
-  @include unit(margin-top, 0.25*$base-line-height);
+  @include rhythm(.25,.25,.25,.25);
   @include line-height($base-line-height);
   border: 0;
   @include border-radius(0);

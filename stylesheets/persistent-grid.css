@@ -1,18 +1,10 @@
-html {
-  /* Settings: $debug-rhythm=true; */
-  background: url(../sass/_baselines/24px.png) repeat center top; }
-  html * {
-    /* Settings: $debug-rhythm=true; */
-    background-color: transparent !important;
-    background-image: none !important;
-    outline: rgba(255, 0, 255, 0.1) dotted 1px;
-    outline: #ff01ff dotted 1px \9; }
-
+/* line 1, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .root {
   display: block;
   margin: 0 auto;
   max-width: 90em; }
 
+/* line 5, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .column, .full,
 .collection-of-fulls > *, .half,
 .collection-of-halfs > *, .fourth,
@@ -29,130 +21,162 @@ html {
   box-sizing: border-box;
   width: 100%; }
 
+/* line 11, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .parent, .collection-of-fulls, .collection-of-halfs, .collection-of-fourths, .collection-of-thirds, .collection-of-two-thirds {
   padding-left: 0;
   padding-right: 0; }
 
+/* line 20, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .full,
 .collection-of-fulls > * {
   width: 100%; }
 
+/* line 25, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .full.persistent,
 .collection-of-fulls.persistent > * {
   width: 100% !important; }
 
+/* line 32, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .push-full {
   position: relative;
   left: 100%; }
 
+/* line 36, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .pull-full {
   position: relative;
   left: -100%; }
 
+/* line 20, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .half,
 .collection-of-halfs > * {
   width: 50%; }
 
+/* line 25, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .half.persistent,
 .collection-of-halfs.persistent > * {
   width: 50% !important; }
 
+/* line 32, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .push-half {
   position: relative;
   left: 50%; }
 
+/* line 36, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .pull-half {
   position: relative;
   left: -50%; }
 
+/* line 20, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .fourth,
 .collection-of-fourths > * {
   width: 25%; }
 
+/* line 25, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .fourth.persistent,
 .collection-of-fourths.persistent > * {
   width: 25% !important; }
 
+/* line 32, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .push-fourth {
   position: relative;
   left: 25%; }
 
+/* line 36, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .pull-fourth {
   position: relative;
   left: -25%; }
 
+/* line 20, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .third,
 .collection-of-thirds > * {
   width: 33.33333%; }
 
+/* line 25, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .third.persistent,
 .collection-of-thirds.persistent > * {
   width: 33.33333% !important; }
 
+/* line 32, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .push-third {
   position: relative;
   left: 33.33333%; }
 
+/* line 36, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .pull-third {
   position: relative;
   left: -33.33333%; }
 
+/* line 20, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .two-third,
 .collection-of-two-thirds > * {
   width: 66.66667%; }
 
+/* line 25, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .two-third.persistent,
 .collection-of-two-thirds.persistent > * {
   width: 66.66667% !important; }
 
+/* line 32, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .push-two-third {
   position: relative;
   left: 66.66667%; }
 
+/* line 36, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
 .pull-two-third {
   position: relative;
   left: -66.66667%; }
 
 @media only screen and (max-width: 30em) {
+  /* line 46, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .root {
     min-width: auto; }
 
+  /* line 53, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .full,
   .collection-of-fulls > * {
     width: 100%; }
 
+  /* line 58, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .push-full,
   .pull-full {
     left: 0; }
 
+  /* line 53, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .half,
   .collection-of-halfs > * {
     width: 100%; }
 
+  /* line 58, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .push-half,
   .pull-half {
     left: 0; }
 
+  /* line 53, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .fourth,
   .collection-of-fourths > * {
     width: 100%; }
 
+  /* line 58, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .push-fourth,
   .pull-fourth {
     left: 0; }
 
+  /* line 53, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .third,
   .collection-of-thirds > * {
     width: 100%; }
 
+  /* line 58, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .push-third,
   .pull-third {
     left: 0; }
 
+  /* line 53, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .two-third,
   .collection-of-two-thirds > * {
     width: 100%; }
 
+  /* line 58, /Users/babsgosgens/Sites/persistent-grid/sass/persistent-grid/_behavior.scss */
   .push-two-third,
   .pull-two-third {
     left: 0; } }

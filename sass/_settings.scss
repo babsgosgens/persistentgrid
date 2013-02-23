@@ -19,7 +19,7 @@
 	$color-body							: darken($brown,10);
 	$color-theme						: $green;
 	$color-cta-main						: $blue;
-	$color-cta-secondary				: $red;
+	$color-cta-secondary				: $blue;
 	$color-button						: $color-cta-secondary;
 
 	$link-color							: Cyan;
@@ -62,7 +62,7 @@
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
 
 	// Debugging
-	$debug-rhythm						: true;
+	$debug-rhythm						: false;
 
 	@if $debug-rhythm {
 		html {
@@ -223,13 +223,13 @@
 // 	Forms							  																								  //
 // 	################################################################################################################################  //
 
-	$inlineLabelWidth					: 35% !default;
-	$roundedCorners						: true;
-	$inputShadowInset					: 0 0 0 1px rgba(0,0,0,.2) inset; //h-shadow v-shadow blur spread color inset;
-	$inputShadowOutset					: 0 0 10px 0 rgba(255,255,255,1);
-	$heightTextarea						: 4*$base-line-height !default;
-	$form-vertical-spacing				: 0.5;
-	$color-invalid						: #d03;
+	$inlineLabelWidth						: 35% !default;
+	$roundedCorners							: true;
+	$inputShadowInset						: 0 0 0 1px rgba(0,0,0,.2) inset; //h-shadow v-shadow blur spread color inset;
+	$inputShadowOutset						: 0 0 10px 0 rgba(255,255,255,1);
+	$heightTextarea							: 4*$base-line-height !default;
+	$form-vertical-spacing					: 0.5;
+	$form-color-invalid						: #d03;
 
 // 	################################################################################################################################  //
 // 	Tables							  																								  //
@@ -238,3 +238,10 @@
 	$tables-active-column-background-color	: $color-theme;
 
 
+// 	################################################################################################################################  //
+// 	Foundation Icons							  																					  //
+// 	################################################################################################################################  //
+
+	$fontFileName 							: "../fonts/general_foundicons";
+	$fontName 								: "Icons";
+	$classPrefix 							: "icon-";
