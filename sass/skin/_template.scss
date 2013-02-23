@@ -1,3 +1,11 @@
+@if $debug-rhythm {
+	html {
+		/* Settings: $debug-rhythm=true; */
+		background: url(../images/#{$base-line-height}.png) repeat center top;
+		* { /* Settings: $debug-rhythm=true; */ background-color: transparent !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
+	}
+}
+
 .column {
 	@include rhythm(0,0,0,1);
 }

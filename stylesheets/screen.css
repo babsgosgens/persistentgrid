@@ -1148,3 +1148,34 @@ ul.select {
       box-sizing: border-box; }
     ul.select.open .selected.first:after {
       content: ''; }
+
+@media only screen and (max-width: 50em) {
+  .collection-of-thirds > *,
+  .third {
+    width: 100%; } }
+html {
+  /* Settings: $debug-rhythm=true; */
+  background: url(../images/24px.png) repeat center top; }
+  html * {
+    /* Settings: $debug-rhythm=true; */
+    background-color: transparent !important;
+    background-image: none !important;
+    outline: rgba(255, 0, 255, 0.1) dotted 1px;
+    outline: #ff01ff dotted 1px \9; }
+
+.column, .full,
+.collection-of-fulls > *, .half,
+.collection-of-halfs > *, .fourth,
+.collection-of-fourths > *, .third,
+.collection-of-thirds > *, .two-third,
+.collection-of-two-thirds > * {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
+
+footer {
+  margin-top: 3em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
