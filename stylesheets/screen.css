@@ -1155,7 +1155,7 @@ ul.select {
     width: 100%; } }
 html {
   /* Settings: $debug-rhythm=true; */
-  background: url(../24px.png) repeat center top; }
+  background: url(../images/24px.png) repeat center top; }
   html * {
     /* Settings: $debug-rhythm=true; */
     background-color: transparent !important;
