@@ -49,9 +49,9 @@
 	display: block;
 	margin: 0 auto;
 	max-width: $container-max-width;
-	@if $container-min-width {
-		min-width: $container-min-width;
-	}
+	// @if $container-min-width {
+	// 	min-width: $container-min-width;
+	// }
 }
 
 @mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
