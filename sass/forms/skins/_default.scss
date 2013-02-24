@@ -1,3 +1,5 @@
+$form-reset-elements: true; // Implement behavior
+
 $form-color-default: darken($white,10);
 $form-color-hover: $color-cta-secondary;
 $form-color-focus: $form-color-hover;
@@ -14,15 +16,14 @@ $form-text-color: $color-body;
 
 $form-triangle-size: $base-font-size;
 
-
 .form-default {
+	@include webkit-remove-shadow-on-input-elements();
 	.span {
 		width: 100%;
 	}
 	li {
 		@include trailer;
 	}
-
 	input,
 	select,
 	textarea {
@@ -30,6 +31,7 @@ $form-triangle-size: $base-font-size;
 			@include border-bottom-radius($form-corner-radius);
 		}
 		border: #{$form-border-width} #{$form-border-style} #{$form-border-color};
+		@include box-shadow(0);
 		&:hover,
 		&:focus {
 			outline: none;
