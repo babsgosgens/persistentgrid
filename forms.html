@@ -33,7 +33,7 @@
 					<ol>
 						<li>
 							<label for="field-number">Group Size</label>
-							<input type="number" name="field-number" id="field-number" min="1" max="100" value=""><label for="field-number">Persons</label> 
+							<input type="number" name="field-number" id="field-number" min="1" max="100" value="1"><label for="field-number">Persons</label> 
 						</li>
 						<li>
 							<label for="field-text">Name</label>
@@ -99,14 +99,18 @@
 					<ol>
 						<li>
 							Invalid: 
-							<label class="invalid" for="field-number">Group Size</label>
-							<input class="invalid" type="number" name="field-number" id="field-number" min="1" max="100" value=""><label class="invalid" for="field-number">Persons</label> 
+							<label class="invalid" for="field-number">Text</label>
+							<input class="invalid" name="field-text" id="field-text" required="required" type="text" size="30" maxlength="100" value="" placeholder="Your full, real name"> 
 						</li>
+					</ol>
+				</fieldset>
+				<fieldset>
+					<ul>
 						<li>
 							Searchbox:
 							<input type="search">
 						</li>
-					</ol>
+					</ul>
 				</fieldset>
 			</form>
 		</section>
