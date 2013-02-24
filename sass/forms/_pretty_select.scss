@@ -30,6 +30,7 @@ ul.select {
 	}
 	&:before,
 	li {
+		position: relative;
 		@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
 		@include column-padding();
 		cursor: pointer;
@@ -63,6 +64,7 @@ ul.select {
 				@extend .icon-#{$form-pretty-select-icon-selected}:before;
 				left: -20px;
 				@include column-padding();
+				top: .5em;
 			}
 			&.first {
 				&:after {
