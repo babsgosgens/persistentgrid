@@ -65,11 +65,7 @@
 	$debug-rhythm						: false;
 
 	@if $debug-rhythm {
-		html {
-			/* Settings: $debug-rhythm=true; */
-			background: url(../sass/_baselines/#{$base-line-height}.png) repeat center top;
-			* { /* Settings: $debug-rhythm=true; */ background-color: transparent !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
-		}
+		@include debugBaseLine(html);
 	}
 
 	
