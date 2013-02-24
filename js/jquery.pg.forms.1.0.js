@@ -96,7 +96,7 @@
 					o.attr('required', 'required');
 				}
 
-				o.attr('name', s.attr('name') ).show();
+				o.attr('name', s.attr('name') ).show().focus();
 
 				s.hide().next().hide();
 			}
