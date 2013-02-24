@@ -809,7 +809,7 @@ this element is the one that *you* will style the most.
     text-decoration: none;
     position: relative;
     position: relative; }
-    /* line 106, ../sass/helpers/_mixins.scss */
+    /* line 119, /Users/babsgosgens/Sites/persistent-grid/sass/helpers/_mixins.scss */
     .js .accordion .tab a:after {
       border: 8px solid transparent;
       display: inline-block;
@@ -1333,7 +1333,7 @@ fieldset fieldset .form-default li:hover > legend:first-child,
   background-color: #04a4a5;
   color: white;
   position: relative; }
-  /* line 106, ../sass/helpers/_mixins.scss */
+  /* line 119, /Users/babsgosgens/Sites/persistent-grid/sass/helpers/_mixins.scss */
   .form-default li:hover .choices legend:after,
   .form-default li:hover > label:first-child:after,
   .form-default fieldset fieldset li:hover > legend:first-child:after,
@@ -1647,11 +1647,13 @@ ul.select {
   .collection-of-thirds > *,
   .third {
     width: 100%; } }
-/* line 1, ../sass/skin/_template.scss */
+/* line 3, /Users/babsgosgens/Sites/persistent-grid/sass/helpers/_mixins.scss */
 .debug {
   /* Settings: $debug-rhythm=true; */
-  background: url(../images/24px.png) repeat center top; }
-  /* line 4, ../sass/skin/_template.scss */
+  background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
+  background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
+  background-size: 3em 3em; }
+  /* line 10, /Users/babsgosgens/Sites/persistent-grid/sass/helpers/_mixins.scss */
   .debug * {
     /* Settings: $debug-rhythm=true; */
     background-color: transparent !important;
@@ -1659,7 +1661,7 @@ ul.select {
     outline: rgba(255, 0, 255, 0.1) dotted 1px;
     outline: #ff01ff dotted 1px \9; }
 
-/* line 7, ../sass/skin/_template.scss */
+/* line 3, ../sass/skin/_template.scss */
 .column, .full,
 .collection-of-fulls > *, .half,
 .collection-of-halfs > *, .fourth,
@@ -1671,7 +1673,7 @@ ul.select {
   padding-bottom: 0em;
   margin-bottom: 1.5em; }
 
-/* line 10, ../sass/skin/_template.scss */
+/* line 6, ../sass/skin/_template.scss */
 footer {
   margin-top: 3em;
   padding-top: 0em;
