@@ -1155,7 +1155,7 @@ fieldset fieldset .form-default input[type="number"] + legend[type="reset"],
 ul[type="reset"].select {
   width: auto; }
 
-/* line 31, ../sass/forms/_mixins.scss */
+/* line 32, ../sass/forms/_mixins.scss */
 .form-default input[type="color"], .form-default .choices > legend + ul[type="color"], .form-default input[type="number"] + label[type="color"], .form-default fieldset fieldset input[type="number"] + legend[type="color"], fieldset fieldset .form-default input[type="number"] + legend[type="color"], .form-default .choices > input[type="number"] + legend[type="color"], .form-default [type="color"].position, .form-default ul[type="color"].select,
 .form-default input[type="date"],
 .form-default .choices > legend + ul[type="date"],
@@ -1269,6 +1269,7 @@ fieldset fieldset .form-default input[type="number"] + legend[type="week"],
 .form-default .choices > input[type="number"] + legend[type="week"],
 .form-default [type="week"].position,
 .form-default ul[type="week"].select,
+.form-default select,
 .form-default textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1591,6 +1592,7 @@ ul.select {
   /* line 32, ../sass/forms/_pretty_select.scss */
   ul.select:before,
   ul.select li {
+    position: relative;
     margin-top: 0em;
     padding-top: 0.75em;
     padding-bottom: 0.75em;
@@ -1601,41 +1603,42 @@ ul.select {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer; }
-  /* line 37, ../sass/forms/_pretty_select.scss */
+  /* line 38, ../sass/forms/_pretty_select.scss */
   ul.select li {
     display: none;
     color: #1a1716; }
-    /* line 40, ../sass/forms/_pretty_select.scss */
+    /* line 41, ../sass/forms/_pretty_select.scss */
     ul.select li.selected {
       display: block; }
-    /* line 43, ../sass/forms/_pretty_select.scss */
+    /* line 44, ../sass/forms/_pretty_select.scss */
     ul.select li:hover {
       color: #04a4a5; }
-    /* line 46, ../sass/forms/_pretty_select.scss */
+    /* line 47, ../sass/forms/_pretty_select.scss */
     ul.select li.first {
       color: #1a1716; }
-  /* line 51, ../sass/forms/_pretty_select.scss */
+  /* line 52, ../sass/forms/_pretty_select.scss */
   ul.select:before, ul.select.open .selected:after {
     display: inline-block;
     text-decoration: inherit;
     position: absolute;
     top: 0; }
-  /* line 58, ../sass/forms/_pretty_select.scss */
+  /* line 59, ../sass/forms/_pretty_select.scss */
   ul.select.open {
     z-index: 2;
     background-color: white; }
-    /* line 62, ../sass/forms/_pretty_select.scss */
+    /* line 63, ../sass/forms/_pretty_select.scss */
     ul.select.open .selected:after {
       left: -20px;
       padding-left: 24px;
       padding-right: 24px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-    /* line 68, ../sass/forms/_pretty_select.scss */
+      box-sizing: border-box;
+      top: .5em; }
+    /* line 70, ../sass/forms/_pretty_select.scss */
     ul.select.open .selected.first:after {
       content: ''; }
-    /* line 73, ../sass/forms/_pretty_select.scss */
+    /* line 75, ../sass/forms/_pretty_select.scss */
     ul.select.open li:hover:not(.selected) {
       background-color: #e6e6e6; }
 
