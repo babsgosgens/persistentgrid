@@ -18,7 +18,7 @@
 	@if $name {
 		.#{$name}#{$column-base-class},
 		.collection-of-#{$name}s>* {
-			@extend .column;
+			// @extend .column;
 			@include column-width($fraction);
 		}
 		.#{$name}#{$column-base-class}.persistent,
