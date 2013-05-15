@@ -1,10 +1,17 @@
+/**
+ * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 // 	################################################################################################################################  //
 // 	Persistent Grid					  																								  //
 // 	################################################################################################################################  //
 
 	$column-base-class 					: '';
+	$column-class 						: 'column';
+	$root-class 						: 'root';
 
-	$container-max-width				: 90em; 				// Max width for the root element - the content will not stretch beyond this width
+	$container-max-width				: 980px; 				// Max width for the root element - the content will not stretch beyond this width
 	$container-position					: 'center' !default; 	// Values: center | left
 	$base-column-width					: 1/1;
 	$negative-right-margin				: 0 !default; 		// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
