@@ -55,6 +55,11 @@
 	margin: 0 auto;
 	max-width: $container-max-width;
 }
+@mixin bleed()
+{
+	margin-left: $column-padding / -2;
+	margin-right: $column-padding / -2;
+}
 
 @mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
 {

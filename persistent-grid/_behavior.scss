@@ -17,6 +17,10 @@
 	@include parent-behavior(); 
 }
 
+.bleed {
+	@include bleed(); 
+}
+
 // Roll out the required columns
 @each $fraction in $column-widths {
 	$name: fractionToText($fraction);
