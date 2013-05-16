@@ -59,6 +59,10 @@
 {
 	margin-left: $column-padding / -2;
 	margin-right: $column-padding / -2;
+	@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
+		margin-left: $column-padding / -4;
+		margin-right: $column-padding / -4;
+	}
 }
 
 @mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
@@ -66,10 +70,18 @@
 	@if ($use-margin) {
 		margin-left: $column-padding / 2;
 		margin-right: $column-padding / 2;
+		@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
+			margin-left: $column-padding / 4;
+			margin-right: $column-padding / 4;
+		}
 	}
 	@else {
 		padding-left: $column-padding / 2;
 		padding-right: $column-padding / 2;
+		@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
+			padding-left: $column-padding / 4;
+			padding-right: $column-padding / 4;
+		}
 	}
 	@if $use-box-sizing {
 		@include box-sizing('border-box');
