@@ -29,6 +29,9 @@
 	}
 	@else {
 		width: fractionPercentage($fraction);
+		@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
+			width: 100%;
+		}
 	}
 	@if $column-style == 'inline' {
 		@if $negative-right-margin != 0 {
