@@ -46,6 +46,10 @@
 {
 	padding-left: 0;
 	padding-right: 0;
+	@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 @mixin move($fraction) {
