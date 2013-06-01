@@ -16,7 +16,7 @@
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
 
 	// Debugging
-	$debug-rhythm						: true;
+	$debug-rhythm						: false;
 
 	// If true, the baseline will be established before declaring the project's default typeface from within the Typography module.
 	$establish-baseline 				: true;

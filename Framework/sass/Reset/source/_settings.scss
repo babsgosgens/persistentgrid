@@ -11,7 +11,7 @@
 	$reset-font  						: true;
 	$reset-focus  						: false;
 	$reset-body 						: false;
-	$reset-list-style 					: false;
+	$reset-list-style 					: true;
 	$reset-table 						: true;
 	$reset-table-cell 					: true;
 	$reset-quotation 					: true;
@@ -19,3 +19,4 @@
 	$reset-html5 						: true;
 
 	$reset-text-rendering 				: false;
+	$reset-input 						: true;

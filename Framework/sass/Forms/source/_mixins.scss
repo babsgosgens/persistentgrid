@@ -1,0 +1,26 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+
+	@mixin input-border {
+		@if $input-border {
+			border: $input-border;
+		}
+		@if $input-border-radius {
+			@include border-radius($input-border-radius);
+		}
+	}
+
+	@mixin input-background {
+		@if $input-background-image {
+			@include background-image( linear-gradient(white, #aaaaaa) );
+		}
+	}
+
+	@mixin input-shadow {
+		@if $input-shadow {
+			@include box-shadow($input-shadow);
+		}
+	}

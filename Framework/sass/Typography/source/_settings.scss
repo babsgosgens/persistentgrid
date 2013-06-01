@@ -16,7 +16,7 @@
 
 	$style 								: normal;					
 	$variant 							: normal;
-	$weight								: $regular ;
+	$weight								: $light;
 
 	$font-family-default				: 'Open Sans';
 	$font-family-fallback 				: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -29,4 +29,4 @@
 	$type 								: $type-style, $type-variant, $type-weight, $type-family;
 
 	$font-size							: 14px;
-	$line-height 						: 21px;
+	$line-height 						: 24px;

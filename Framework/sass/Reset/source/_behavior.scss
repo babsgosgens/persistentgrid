@@ -34,6 +34,9 @@
 			@if $reset-font {
 				@include reset-font;
 			}
+			@if $reset-text-rendering {
+				@include reset-text-rendering;
+			}
 
 		}		
 	}
@@ -49,7 +52,8 @@
 	}
 
 	@if $reset-list-style {
-		ol, ul {
+		ol,
+		ul {
 		    @include reset-list-style;
 		}
 	}
@@ -72,21 +76,10 @@
     	}
 	}
 
-	// // Reset all elements within some selector scope. To reset the selector itself, mixin the appropriate reset mixin for that element type as well. This could be useful if you want to style a part of your page in a dramatically different way.
-	// // @if $nested-reset {
-	// // 	@include nested-reset;
-	// // }
-
-	// html {
-
-
-	// 	// Reset a body element.
-	// 	@if $reset-body {
-	// 		@include reset-body;
-	// 	}
-		
-	// 	@if $reset-text-rendering {
-	// 		@include reset-text-rendering;
-	// 	}
-
+	@if $reset-input {
+		input,
+		label {
+    		@include reset-input;
+		}
+	}
 }

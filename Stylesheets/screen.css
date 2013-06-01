@@ -36,7 +36,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 58, ../Framework/sass/Reset/source/_behavior.scss */
+/* line 56, ../Framework/sass/Reset/source/_behavior.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 62, ../Framework/sass/Reset/source/_behavior.scss */
 blockquote, q {
   quotes: none;
 }
@@ -46,17 +52,30 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-/* line 64, ../Framework/sass/Reset/source/_behavior.scss */
+/* line 68, ../Framework/sass/Reset/source/_behavior.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 70, ../Framework/sass/Reset/source/_behavior.scss */
+/* line 74, ../Framework/sass/Reset/source/_behavior.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
+}
+
+/* line 81, ../Framework/sass/Reset/source/_behavior.scss */
+input,
+label {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
 }
 
 /* line 2, ../Framework/sass/Typography/source/_behavior.scss */
@@ -64,7 +83,7 @@ html {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-variant: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* line 61, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
@@ -75,23 +94,7 @@ html {
 /* line 64, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 14px;
-  line-height: 1.5em;
-}
-
-/* line 11, ../Framework/sass/VerticalRhythm/source/_behavior.scss */
-html {
-  /* Settings: $debug-rhythm=true; */
-  background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
-  background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
-  background-size: 3em 3em;
-}
-/* line 9, ../Framework/sass/VerticalRhythm/source/_mixins.scss */
-html * {
-  /* Settings: $debug-rhythm=true; */
-  background-color: transparent !important;
-  background-image: none !important;
-  outline: rgba(255, 0, 255, 0.1) dotted 1px;
-  outline: #ff01ff dotted 1px \9;
+  line-height: 1.71429em;
 }
 
 /* line 6, ../Framework/sass/PersistentGrid/source/_behavior.scss */
@@ -106,8 +109,8 @@ html * {
   display: inline-block;
   vertical-align: top;
   height: auto;
-  padding-left: 21px;
-  padding-right: 21px;
+  padding-left: 24px;
+  padding-right: 24px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -116,8 +119,8 @@ html * {
 @media only screen and (max-width: 30em) {
   /* line 10, ../Framework/sass/PersistentGrid/source/_behavior.scss */
   .column {
-    padding-left: 10.5px;
-    padding-right: 10.5px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -142,14 +145,14 @@ html * {
 
 /* line 20, ../Framework/sass/PersistentGrid/source/_behavior.scss */
 .bleed {
-  margin-left: -21px;
-  margin-right: -21px;
+  margin-left: -24px;
+  margin-right: -24px;
 }
 @media only screen and (max-width: 30em) {
   /* line 20, ../Framework/sass/PersistentGrid/source/_behavior.scss */
   .bleed {
-    margin-left: -10.5px;
-    margin-right: -10.5px;
+    margin-left: -12px;
+    margin-right: -12px;
   }
 }
 
@@ -373,4 +376,31 @@ html * {
   .pull-two-third {
     left: 0;
   }
+}
+/* line 24, ../Framework/sass/Forms/source/default/_behavior.scss */
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: #efefef 1px 1px 2px 0, #efefef 1px 1px 0 0 inset;
+  -moz-box-shadow: #efefef 1px 1px 2px 0, #efefef 1px 1px 0 0 inset;
+  box-shadow: #efefef 1px 1px 2px 0, #efefef 1px 1px 0 0 inset;
 }

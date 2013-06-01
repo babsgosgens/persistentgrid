@@ -9,13 +9,8 @@ Next, we declare the project's default typeface and style. We also set the proje
 3) Vertical Grid
 Based on Compass Vertical Rhythm. The base-line-height and base-font-size are inherited from the Typography-module. These values are then inherited to the typography settings. If teh baseline was not yet set in the typography module - which is the default setting - you set the baseline here.
 
-
-What is the vertical grid? This is the easiest to start with as it will be the base for typographic resets. Set a baseline and use it to set a typographic base.
-To set a base, I like to introduce the full font tag at the HTML level. I also like to declare a debug class that will display the documents vertical grid by rendering horizontal lines spaced by the settings's base-line-height.
-
-2) Next, I like to reset margins and padding all block-level elements. I also prefer to use border-box on all elements so that - if inline elements are set to behave like (inline-)block elements - they are easier to manipulate within the container's available space.
-
-3) My next step would probably be to set the settings for the various headings. HTML is a highly hierarchical product, so inevitably you will need headings of various sizes to indicate the dependancies between content. However, instead of defining the headings as a base reset (at h# level), but rather identify the various levels of headings needed accross modules (main content, side bars, headers and footers and so on).
+4) Base Styles
+My next step would probably be to set the settings for the various headings. HTML is a highly hierarchical product, so inevitably you will need headings of various sizes to indicate the dependancies between content. However, instead of defining the headings as a base reset (at h# level), but rather identify the various levels of headings needed accross modules (main content, side bars, headers and footers and so on).
 
 Not all headers may use the same style or fontface. This is why I like to define the different - what I have called - font-groups. I already have established one font-group, which is the project's base typography. A font-groups is simply a group of font-settings that make up the font short-declaration. By defining font-groups you leverage the use of proper weight and style tpefaces by declaring the actual bold or italic styles of your typeface, as opposed to usimg the faux versions that are rendered by the browser.
 

@@ -1,18 +1,17 @@
-// //http://compass-style.org/reference/compass/reset/
-// //http://compass-style.org/reference/compass/reset/utilities/
-
-// // Override some Compass utilities mixins
-// @mixin reset-font
-// {
-// 	@include font($typeface, px-to-percentage($base-font-size, $browser-default-font-size), px-to-percentage($base-line-height, $base-font-size));
-// }
-// @mixin reset-text-rendering
-// {
-// 	font-synthesis: none;
-// 	font-variant-ligatures: common-ligatures;
-// 	font-variant-numeric: oldstyle-nums diagonal-fractions;
-// 	text-rendering: optimizeLegibility;
-// }
+@mixin reset-text-rendering
+{
+	font-synthesis: none;
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums diagonal-fractions;
+	text-rendering: optimizeLegibility;
+}
 @mixin reset-box-sizing {
 	@include box-sizing(border-box);
+}
+@mixin reset-input
+{
+	display: inline-block;
+	@include reset-box-model;
+	@include box-sizing(border-box);
+	font: inherit;
 }

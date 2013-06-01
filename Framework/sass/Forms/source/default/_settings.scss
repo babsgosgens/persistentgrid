@@ -13,4 +13,8 @@
 	$input-border-radius						: $corner-radius; 					// Defaults to 3px
 	$input-border 								: $input-border-size $input-border-style $input-border-color;
 
-	$input-background-image 					: linear-gradient($white, #aaaaaa);
+	$input-background-image 					: false;
+
+	$input-shadow-box 							: #efefef 1px 1px 2px 0;
+	$input-shadow-inner 						: #efefef 1px 1px 0 0 inset;
+	$input-shadow 								: $input-shadow-box, $input-shadow-inner;

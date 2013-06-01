@@ -16,7 +16,18 @@
 		><div class="column third">Center</div
 			><div class="column third">Right</div>
 	<div>
-		<div>Nested content</div>
+		<div class="column">Nested content</div>
 	</div>
+	<form>
+		<fieldset>
+			<legend></legend>
+			<ul>
+				<li>
+					<label>Label</label>
+					<input type="text" value="Label">
+				</li>
+			</ul>
+		</fieldset>
+	</form>
 </body>
 </html>
