@@ -3,11 +3,11 @@
 1) Reset
 Based on Compass Reset - which is in turn based on Eric Meyer's reset - I have assembled a custom reset that is a little more configurable and specifically adapted for Persistent Grid.
 
-2) Vertical Grid
-Based on Compass Vertical Rhythm. This is where the project's default font size and line height are set. These values are then inherited to the typography settings. Depending on your preference, you set the baseline here. By default, the baseline is set through the Typography module.
+2) Typography
+Next, we declare the project's default typeface and style. We also set the project's default font size and leading.
 
-3) Typography
-Next, we declare the project's default typeface and style. If the baseline was not set in the Vertical Grid module, we set it here. Else, we only declare the font-family and styles.
+3) Vertical Grid
+Based on Compass Vertical Rhythm. The base-line-height and base-font-size are inherited from the Typography-module. These values are then inherited to the typography settings. If teh baseline was not yet set in the typography module - which is the default setting - you set the baseline here.
 
 
 What is the vertical grid? This is the easiest to start with as it will be the base for typographic resets. Set a baseline and use it to set a typographic base.

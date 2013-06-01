@@ -35,8 +35,8 @@
 
 	// First, import all individual settings. The order in which they are imported matters, because there are dependencies.
 	@import "Reset/source/settings";
-	@import "VerticalRhythm/source/settings";
 	@import "Typography/source/settings";
+	@import "VerticalRhythm/source/settings";
 	@import "PersistentGrid/source/settings";
 	@import "UI/Buttons/source/settings";
 	@import "UI/Accordion/source/settings";

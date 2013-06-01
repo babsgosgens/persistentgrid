@@ -3,8 +3,8 @@
 //  For more information, see: http://compass-style.org/reference/compass/typography/vertical_rhythm/								  //
 // 	################################################################################################################################  //
 
-	$base-font-size						: 14px; 										    // The base font size.
-	$base-line-height					: 21px; 											// The base line height determines the basic unit of vertical rhythm.
+	$base-font-size						: $font-size; 										    // The base font size.
+	$base-line-height					: $line-height; 											// The base line height determines the basic unit of vertical rhythm.
 	$default-rhythm-border-style		: solid; 											// Set the default border style for rhythm borders.
 	$relative-font-sizing				: true; 											// Set to false if you want to use absolute pixels in sizing your typography.
 	$round-to-nearest-half-line			: false; 											// Allows the adjust-font-size-to mixin and the lines-for-font-size function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines.
@@ -19,7 +19,7 @@
 	$debug-rhythm						: true;
 
 	// If true, the baseline will be established before declaring the project's default typeface from within the Typography module.
-	$establish-baseline 				: false;
+	$establish-baseline 				: true;
 
 //	################################################################################################################################  //
 //	Compass Modular Scale					  																						  //

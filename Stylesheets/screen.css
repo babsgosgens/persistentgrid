@@ -59,6 +59,25 @@ caption, th, td {
   vertical-align: middle;
 }
 
+/* line 2, ../Framework/sass/Typography/source/_behavior.scss */
+html {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+}
+
+/* line 61, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 87.5%;
+}
+
+/* line 64, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
 /* line 11, ../Framework/sass/VerticalRhythm/source/_behavior.scss */
 html {
   /* Settings: $debug-rhythm=true; */
@@ -73,14 +92,4 @@ html * {
   background-image: none !important;
   outline: rgba(255, 0, 255, 0.1) dotted 1px;
   outline: #ff01ff dotted 1px \9;
-}
-
-/* line 4, ../Framework/sass/Typography/source/_mixins.scss */
-* html {
-  font-size: 87.5%;
-}
-
-/* line 7, ../Framework/sass/Typography/source/_mixins.scss */
-html {
-  font: normal normal 400 87.5%/1.5em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
