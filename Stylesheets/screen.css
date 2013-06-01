@@ -1,0 +1,86 @@
+/* http://persistent-grid.com
+   v1.0 | 20130701
+   License: none (public domain)
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 27, ../Framework/sass/Reset/source/_behavior.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 116, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 58, ../Framework/sass/Reset/source/_behavior.scss */
+blockquote, q {
+  quotes: none;
+}
+/* line 103, ../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 64, ../Framework/sass/Reset/source/_behavior.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 70, ../Framework/sass/Reset/source/_behavior.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 11, ../Framework/sass/VerticalRhythm/source/_behavior.scss */
+html {
+  /* Settings: $debug-rhythm=true; */
+  background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
+  background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
+  background-size: 3em 3em;
+}
+/* line 9, ../Framework/sass/VerticalRhythm/source/_mixins.scss */
+html * {
+  /* Settings: $debug-rhythm=true; */
+  background-color: transparent !important;
+  background-image: none !important;
+  outline: rgba(255, 0, 255, 0.1) dotted 1px;
+  outline: #ff01ff dotted 1px \9;
+}
+
+/* line 4, ../Framework/sass/Typography/source/_mixins.scss */
+* html {
+  font-size: 87.5%;
+}
+
+/* line 7, ../Framework/sass/Typography/source/_mixins.scss */
+html {
+  font: normal normal 400 87.5%/1.5em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

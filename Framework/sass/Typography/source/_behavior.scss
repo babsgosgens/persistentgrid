@@ -1,0 +1,11 @@
+@if $establish-baseline {
+	html {
+		@include type-family($type);
+		@include type-style($type);
+		@include type-variant($type);
+		@include type-weight($type);
+	}
+}
+@else {
+	@include pg-establish-baseline;
+}

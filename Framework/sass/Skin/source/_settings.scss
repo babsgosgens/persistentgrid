@@ -1,0 +1,46 @@
+	
+//	################################################################################################################################  //
+//	Shared Variables				  																								  //
+//	################################################################################################################################  //
+
+	// Miscellaneous							  																							  	  //
+
+	$corner-radius						: 3px;
+
+
+	// Colors							  																							  	  //
+
+	$white								: #fff;
+	$black								: #000;
+	$red								: #f15d5e;
+	$blue								: #04a4a5;
+	$green								: #9fcc3a;
+	$brown								: #362f2d;
+
+	$color-body							: darken($brown,10);
+	$color-theme						: $green;
+	$color-cta-main						: $blue;
+	$color-cta-secondary				: $blue;
+	$color-button						: $color-cta-secondary;
+
+	$link-color							: Cyan;
+	$link-color-hover					: $green;
+	$link-color-active					: $green;
+	$link-color-visited					: $blue;
+
+
+//	################################################################################################################################  //
+//	Import presets				  																								  //
+//	################################################################################################################################  //
+
+	// First, import all individual settings. The order in which they are imported matters, because there are dependencies.
+	@import "Reset/source/settings";
+	@import "VerticalRhythm/source/settings";
+	@import "Typography/source/settings";
+	@import "PersistentGrid/source/settings";
+	@import "UI/Buttons/source/settings";
+	@import "UI/Accordion/source/settings";
+	@import "UI/Tabs/source/settings";
+	@import "Forms/source/settings";
+	@import "Tables/source/settings";
+

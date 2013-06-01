@@ -1,0 +1,32 @@
+	@import "functions";
+	@import "mixins";
+
+
+// 	################################################################################################################################  //
+// 	Typography							  																							  //
+// 	################################################################################################################################  //
+
+	$thin 								: 200;
+	$light 								: 300;
+	$regular 							: 400;
+	$medium 							: 500;
+	$bold 								: 600;
+	$extra-bold 						: 700;
+	$heavy 								: 900;
+
+	$style 								: normal;					
+	$variant 							: normal;
+	$weight								: $regular ;
+
+	$font-family-default				: 'Open Sans';
+	$font-family-fallback 				: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	$type-style 						: $style;
+	$type-variant						: $variant;
+	$type-weight						: $weight;
+	$type-family 						: #{$font-family-default, $font-family-fallback};
+
+	$type 								: $type-style, $type-variant, $type-weight, $type-family;
+
+	$font-size							: $base-font-size;
+	$line-height 						: $base-line-height;

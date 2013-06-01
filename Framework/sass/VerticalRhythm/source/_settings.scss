@@ -1,0 +1,39 @@
+// 	################################################################################################################################  //
+// 	Compass Vertical Rhythm	
+//  For more information, see: http://compass-style.org/reference/compass/typography/vertical_rhythm/								  //
+// 	################################################################################################################################  //
+
+	$base-font-size						: 14px; 										    // The base font size.
+	$base-line-height					: 21px; 											// The base line height determines the basic unit of vertical rhythm.
+	$default-rhythm-border-style		: solid; 											// Set the default border style for rhythm borders.
+	$relative-font-sizing				: true; 											// Set to false if you want to use absolute pixels in sizing your typography.
+	$round-to-nearest-half-line			: false; 											// Allows the adjust-font-size-to mixin and the lines-for-font-size function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines.
+	$min-line-padding					: 2px; 												// Ensure there is at least this many pixels of vertical padding above and below the text.
+	$font-unit							: if($relative-font-sizing, 1em, $base-font-size); 	// $base-font-size but in your output unit of choice. Defaults to 1em when $relative-font-sizing is true.
+
+	// Experimental, the rem unit is not widely supported yet
+	$use-rem-for-sizing 				: false;
+	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
+
+	// Debugging
+	$debug-rhythm						: true;
+
+	// If true, the baseline will be established before declaring the project's default typeface from within the Typography module.
+	$establish-baseline 				: false;
+
+//	################################################################################################################################  //
+//	Compass Modular Scale					  																						  //
+//	################################################################################################################################  //
+
+	$base-size 							: $base-font-size;
+
+	// Not using MS, set font-sizes by hand instead.
+	$px-normal							: $base-size;
+	$px-xxs								: 10px;
+	$px-xs								: 12px;
+	$px-s								: 14px;
+	$px-m								: $px-normal;
+	$px-l								: 20px;
+	$px-xl								: 24px;
+	$px-xxl								: 38px;
+	$px-xxxl							: 46px;
