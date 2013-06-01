@@ -14,7 +14,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label, fieldset fieldset legend, .form-default .choices > legend, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -66,8 +66,10 @@ caption, th, td {
 }
 
 /* line 81, ../Framework/sass/Reset/source/_behavior.scss */
-input,
-label {
+input, .form-default .choices > legend + ul, .form-default input[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default .choices > input[type="number"] + legend,
+label,
+fieldset fieldset legend,
+.form-default .choices > legend {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -377,30 +379,509 @@ html {
     left: 0;
   }
 }
-/* line 24, ../Framework/sass/Forms/source/default/_behavior.scss */
+/* line 14, ../Framework/sass/Forms/source/pg/_behavior.scss */
+fieldset > ul, fieldset > ol {
+  list-style-type: none;
+}
+
+/* line 29, ../Framework/sass/Forms/source/pg/_behavior.scss */
+label, fieldset fieldset legend, .form-default .choices > legend,
+input,
+.form-default .choices > legend + ul,
+.form-default input[type="number"] + label,
+.form-default fieldset fieldset input[type="number"] + legend,
+fieldset fieldset .form-default input[type="number"] + legend,
+.form-default .choices > input[type="number"] + legend,
 select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-  border: 1px solid #dddddd;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: #efefef 1px 1px 2px 0, #efefef 1px 1px 0 0 inset;
-  -moz-box-shadow: #efefef 1px 1px 2px 0, #efefef 1px 1px 0 0 inset;
-  box-shadow: #efefef 1px 1px 2px 0, #efefef 1px 1px 0 0 inset;
+textarea {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.71429em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 37, ../Framework/sass/Forms/source/pg/_behavior.scss */
+textarea {
+  height: 8.57143em;
+}
+
+/* line 41, ../Framework/sass/Forms/source/pg/_behavior.scss */
+input[type="radio"], .form-default .choices > legend + ul[type="radio"], .form-default input[type="number"] + label[type="radio"], .form-default fieldset fieldset input[type="number"] + legend[type="radio"], fieldset fieldset .form-default input[type="number"] + legend[type="radio"], .form-default .choices > input[type="number"] + legend[type="radio"],
+input[type="checkbox"],
+.form-default .choices > legend + ul[type="checkbox"],
+.form-default input[type="number"] + label[type="checkbox"],
+.form-default fieldset fieldset input[type="number"] + legend[type="checkbox"],
+fieldset fieldset .form-default input[type="number"] + legend[type="checkbox"],
+.form-default .choices > input[type="number"] + legend[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* line 47, ../Framework/sass/Forms/source/pg/_behavior.scss */
+input[type="radio"] + label, .form-default .choices > legend + ul[type="radio"] + label, .form-default input[type="number"] + label[type="radio"] + label, .form-default fieldset fieldset input[type="number"] + legend[type="radio"] + label, fieldset fieldset .form-default input[type="number"] + legend[type="radio"] + label, .form-default .choices > input[type="number"] + legend[type="radio"] + label, fieldset fieldset input[type="radio"] + legend, .form-default fieldset fieldset input[type="number"] + label[type="radio"] + legend, fieldset fieldset .form-default input[type="number"] + label[type="radio"] + legend, .form-default fieldset fieldset input[type="number"] + legend[type="radio"] + legend, fieldset fieldset .form-default input[type="number"] + legend[type="radio"] + legend, .form-default .choices > input[type="radio"] + legend, .form-default .choices > legend + ul[type="radio"] + legend, .form-default .choices > input[type="number"] + label[type="radio"] + legend, .form-default .choices > input[type="number"] + legend[type="radio"] + legend,
+input[type="checkbox"] + label,
+.form-default .choices > legend + ul[type="checkbox"] + label,
+.form-default input[type="number"] + label[type="checkbox"] + label,
+.form-default fieldset fieldset input[type="number"] + legend[type="checkbox"] + label,
+fieldset fieldset .form-default input[type="number"] + legend[type="checkbox"] + label,
+.form-default .choices > input[type="number"] + legend[type="checkbox"] + label,
+fieldset fieldset input[type="checkbox"] + legend,
+.form-default fieldset fieldset input[type="number"] + label[type="checkbox"] + legend,
+fieldset fieldset .form-default input[type="number"] + label[type="checkbox"] + legend,
+.form-default fieldset fieldset input[type="number"] + legend[type="checkbox"] + legend,
+fieldset fieldset .form-default input[type="number"] + legend[type="checkbox"] + legend,
+.form-default .choices > input[type="checkbox"] + legend,
+.form-default .choices > legend + ul[type="checkbox"] + legend,
+.form-default .choices > input[type="number"] + label[type="checkbox"] + legend,
+.form-default .choices > input[type="number"] + legend[type="checkbox"] + legend {
+  width: auto;
+}
+
+/* line 54, ../Framework/sass/Forms/source/pg/_behavior.scss */
+input[type="button"], .form-default .choices > legend + ul[type="button"], .form-default input[type="number"] + label[type="button"], .form-default fieldset fieldset input[type="number"] + legend[type="button"], fieldset fieldset .form-default input[type="number"] + legend[type="button"], .form-default .choices > input[type="number"] + legend[type="button"],
+input[type="submit"],
+.form-default .choices > legend + ul[type="submit"],
+.form-default input[type="number"] + label[type="submit"],
+.form-default fieldset fieldset input[type="number"] + legend[type="submit"],
+fieldset fieldset .form-default input[type="number"] + legend[type="submit"],
+.form-default .choices > input[type="number"] + legend[type="submit"],
+input[type="reset"],
+.form-default .choices > legend + ul[type="reset"],
+.form-default input[type="number"] + label[type="reset"],
+.form-default fieldset fieldset input[type="number"] + legend[type="reset"],
+fieldset fieldset .form-default input[type="number"] + legend[type="reset"],
+.form-default .choices > input[type="number"] + legend[type="reset"] {
+  width: auto;
+}
+
+/* line 59, ../Framework/sass/Forms/source/_mixins.scss */
+.form-default input[type="color"], .form-default .choices > legend + ul[type="color"], .form-default input[type="number"] + label[type="color"], .form-default fieldset fieldset input[type="number"] + legend[type="color"], fieldset fieldset .form-default input[type="number"] + legend[type="color"], .form-default .choices > input[type="number"] + legend[type="color"],
+.form-default input[type="date"],
+.form-default .choices > legend + ul[type="date"],
+.form-default input[type="number"] + label[type="date"],
+.form-default fieldset fieldset input[type="number"] + legend[type="date"],
+fieldset fieldset .form-default input[type="number"] + legend[type="date"],
+.form-default .choices > input[type="number"] + legend[type="date"],
+.form-default input[type="datetime"],
+.form-default .choices > legend + ul[type="datetime"],
+.form-default input[type="number"] + label[type="datetime"],
+.form-default fieldset fieldset input[type="number"] + legend[type="datetime"],
+fieldset fieldset .form-default input[type="number"] + legend[type="datetime"],
+.form-default .choices > input[type="number"] + legend[type="datetime"],
+.form-default input[type="datetime-local"],
+.form-default .choices > legend + ul[type="datetime-local"],
+.form-default input[type="number"] + label[type="datetime-local"],
+.form-default fieldset fieldset input[type="number"] + legend[type="datetime-local"],
+fieldset fieldset .form-default input[type="number"] + legend[type="datetime-local"],
+.form-default .choices > input[type="number"] + legend[type="datetime-local"],
+.form-default input[type="email"],
+.form-default .choices > legend + ul[type="email"],
+.form-default input[type="number"] + label[type="email"],
+.form-default fieldset fieldset input[type="number"] + legend[type="email"],
+fieldset fieldset .form-default input[type="number"] + legend[type="email"],
+.form-default .choices > input[type="number"] + legend[type="email"],
+.form-default input[type="month"],
+.form-default .choices > legend + ul[type="month"],
+.form-default input[type="number"] + label[type="month"],
+.form-default fieldset fieldset input[type="number"] + legend[type="month"],
+fieldset fieldset .form-default input[type="number"] + legend[type="month"],
+.form-default .choices > input[type="number"] + legend[type="month"],
+.form-default input[type="number"],
+.form-default .choices > legend + ul[type="number"],
+.form-default input[type="number"] + label[type="number"],
+.form-default fieldset fieldset input[type="number"] + legend[type="number"],
+fieldset fieldset .form-default input[type="number"] + legend[type="number"],
+.form-default .choices > input[type="number"] + legend[type="number"],
+.form-default input[type="password"],
+.form-default .choices > legend + ul[type="password"],
+.form-default input[type="number"] + label[type="password"],
+.form-default fieldset fieldset input[type="number"] + legend[type="password"],
+fieldset fieldset .form-default input[type="number"] + legend[type="password"],
+.form-default .choices > input[type="number"] + legend[type="password"],
+.form-default input[type="range"],
+.form-default .choices > legend + ul[type="range"],
+.form-default input[type="number"] + label[type="range"],
+.form-default fieldset fieldset input[type="number"] + legend[type="range"],
+fieldset fieldset .form-default input[type="number"] + legend[type="range"],
+.form-default .choices > input[type="number"] + legend[type="range"],
+.form-default input[type="search"],
+.form-default .choices > legend + ul[type="search"],
+.form-default input[type="number"] + label[type="search"],
+.form-default fieldset fieldset input[type="number"] + legend[type="search"],
+fieldset fieldset .form-default input[type="number"] + legend[type="search"],
+.form-default .choices > input[type="number"] + legend[type="search"],
+.form-default input[type="tel"],
+.form-default .choices > legend + ul[type="tel"],
+.form-default input[type="number"] + label[type="tel"],
+.form-default fieldset fieldset input[type="number"] + legend[type="tel"],
+fieldset fieldset .form-default input[type="number"] + legend[type="tel"],
+.form-default .choices > input[type="number"] + legend[type="tel"],
+.form-default input[type="text"],
+.form-default .choices > legend + ul[type="text"],
+.form-default input[type="number"] + label[type="text"],
+.form-default fieldset fieldset input[type="number"] + legend[type="text"],
+fieldset fieldset .form-default input[type="number"] + legend[type="text"],
+.form-default .choices > input[type="number"] + legend[type="text"],
+.form-default input[type="time"],
+.form-default .choices > legend + ul[type="time"],
+.form-default input[type="number"] + label[type="time"],
+.form-default fieldset fieldset input[type="number"] + legend[type="time"],
+fieldset fieldset .form-default input[type="number"] + legend[type="time"],
+.form-default .choices > input[type="number"] + legend[type="time"],
+.form-default input[type="url"],
+.form-default .choices > legend + ul[type="url"],
+.form-default input[type="number"] + label[type="url"],
+.form-default fieldset fieldset input[type="number"] + legend[type="url"],
+fieldset fieldset .form-default input[type="number"] + legend[type="url"],
+.form-default .choices > input[type="number"] + legend[type="url"],
+.form-default input[type="week"],
+.form-default .choices > legend + ul[type="week"],
+.form-default input[type="number"] + label[type="week"],
+.form-default fieldset fieldset input[type="number"] + legend[type="week"],
+fieldset fieldset .form-default input[type="number"] + legend[type="week"],
+.form-default .choices > input[type="number"] + legend[type="week"],
+.form-default select,
+.form-default textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* mobile firefox too! */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* line 96, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .span {
+  width: 100%;
+}
+/* line 99, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default li {
+  margin-bottom: 1.71429em;
+}
+/* line 104, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default input, .form-default .choices > legend + ul, .form-default input[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default .choices > input[type="number"] + legend,
+.form-default select,
+.form-default textarea {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid #e6e6e6;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+}
+/* line 111, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default input:hover, .form-default .choices > legend + ul:hover, .form-default input[type="number"] + label:hover, .form-default fieldset fieldset input[type="number"] + legend:hover, fieldset fieldset .form-default input[type="number"] + legend:hover, .form-default .choices > input[type="number"] + legend:hover, .form-default input:focus, .form-default .choices > legend + ul:focus, .form-default input[type="number"] + label:focus, .form-default fieldset fieldset input[type="number"] + legend:focus, fieldset fieldset .form-default input[type="number"] + legend:focus, .form-default .choices > input[type="number"] + legend:focus,
+.form-default select:hover,
+.form-default select:focus,
+.form-default textarea:hover,
+.form-default textarea:focus {
+  outline: none;
+}
+/* line 118, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default label, .form-default fieldset fieldset legend, fieldset fieldset .form-default legend, .form-default .choices > legend,
+.form-default input,
+.form-default .choices > legend + ul,
+.form-default input[type="number"] + label,
+.form-default fieldset fieldset input[type="number"] + legend,
+fieldset fieldset .form-default input[type="number"] + legend,
+.form-default .choices > input[type="number"] + legend,
+.form-default select,
+.form-default textarea {
+  margin-top: 0em;
+  padding-top: 0.85714em;
+  padding-bottom: 0.85714em;
+  margin-bottom: 0em;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 30em) {
+  /* line 118, ../Framework/sass/Forms/source/pg/_behavior.scss */
+  .form-default label, .form-default fieldset fieldset legend, fieldset fieldset .form-default legend, .form-default .choices > legend,
+  .form-default input,
+  .form-default .choices > legend + ul,
+  .form-default input[type="number"] + label,
+  .form-default fieldset fieldset input[type="number"] + legend,
+  fieldset fieldset .form-default input[type="number"] + legend,
+  .form-default .choices > input[type="number"] + legend,
+  .form-default select,
+  .form-default textarea {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 125, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default li:hover .choices legend,
+.form-default li:hover > label:first-child,
+.form-default fieldset fieldset li:hover > legend:first-child,
+fieldset fieldset .form-default li:hover > legend:first-child,
+.form-default li.choices:hover > legend:first-child {
+  position: relative;
+  background-color: #04a4a5;
+  color: white;
+  position: relative;
+}
+/* line 119, ../Framework/sass/Helpers/_mixins.scss */
+.form-default li:hover .choices legend:after,
+.form-default li:hover > label:first-child:after,
+.form-default fieldset fieldset li:hover > legend:first-child:after,
+fieldset fieldset .form-default li:hover > legend:first-child:after,
+.form-default li.choices:hover > legend:first-child:after {
+  border: 7px solid transparent;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  border-top-color: #04a4a5;
+}
+/* line 130, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default li:hover .choices legend:after,
+.form-default li:hover > label:first-child:after,
+.form-default fieldset fieldset li:hover > legend:first-child:after,
+fieldset fieldset .form-default li:hover > legend:first-child:after,
+.form-default li.choices:hover > legend:first-child:after {
+  left: 20.5px;
+}
+/* line 136, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default li:hover input, .form-default li:hover .choices > legend + ul, .form-default li:hover input[type="number"] + label, .form-default li:hover fieldset fieldset input[type="number"] + legend, .form-default fieldset fieldset li:hover input[type="number"] + legend, fieldset fieldset .form-default li:hover input[type="number"] + legend, .form-default li:hover .choices > input[type="number"] + legend,
+.form-default li:hover select,
+.form-default li:hover textarea {
+  border-color: #04a4a5;
+}
+/* line 144, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices > legend + ul {
+  margin-top: 0em;
+  padding-top: 0.85714em;
+  padding-bottom: 0.85714em;
+  margin-bottom: 0em;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 30em) {
+  /* line 144, ../Framework/sass/Forms/source/pg/_behavior.scss */
+  .form-default .choices > legend + ul {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 150, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices li {
+  margin-bottom: 0;
+  position: relative;
+}
+/* line 153, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices li label, .form-default .choices li fieldset fieldset legend, fieldset fieldset .form-default .choices li legend, .form-default .choices li .choices > legend {
+  background-color: transparent;
+}
+/* line 156, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices li input, .form-default .choices li .choices > legend + ul, .form-default .choices li input[type="number"] + label, .form-default .choices li fieldset fieldset input[type="number"] + legend, .form-default fieldset fieldset .choices li input[type="number"] + legend, fieldset fieldset .form-default .choices li input[type="number"] + legend, .form-default .choices li .choices > input[type="number"] + legend {
+  position: absolute;
+}
+/* line 158, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices li input + label, .form-default .choices li .choices > legend + ul + label, .form-default .choices li fieldset fieldset input + legend, fieldset fieldset .form-default .choices li input + legend, .form-default fieldset fieldset .choices li input[type="number"] + legend + legend, .form-default .choices li .choices > input + legend, .form-default .choices li .choices > legend + ul + legend {
+  padding-left: 1.3em;
+  padding-right: 0;
+}
+/* line 164, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices li label, .form-default .choices li fieldset fieldset legend, fieldset fieldset .form-default .choices li legend, .form-default .choices li .choices > legend,
+.form-default .choices li input,
+.form-default .choices li .choices > legend + ul,
+.form-default .choices li input[type="number"] + label,
+.form-default .choices li fieldset fieldset input[type="number"] + legend,
+.form-default fieldset fieldset .choices li input[type="number"] + legend,
+fieldset fieldset .form-default .choices li input[type="number"] + legend,
+.form-default .choices li .choices > input[type="number"] + legend {
+  height: 1.71429em;
+  padding: 0;
+  border: 0;
+}
+/* line 171, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices.boolean legend + ul {
+  margin-top: 0;
+}
+/* line 174, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .choices.boolean li {
+  display: inline-block;
+}
+/* line 180, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default label, .form-default fieldset fieldset legend, fieldset fieldset .form-default legend, .form-default .choices > legend {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #e6e6e6;
+}
+/* line 187, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default label + textarea, .form-default fieldset fieldset legend + textarea, fieldset fieldset .form-default legend + textarea, .form-default .choices > legend + textarea, .form-default label + input, .form-default fieldset fieldset legend + input, fieldset fieldset .form-default legend + input, .form-default .choices > legend + input, .form-default .choices > legend + ul, .form-default label + select + input, .form-default fieldset fieldset legend + select + input, fieldset fieldset .form-default legend + select + input, .form-default .choices > legend + select + input, .form-default label + select + .select, .form-default fieldset fieldset legend + select + .select, fieldset fieldset .form-default legend + select + .select, .form-default .choices > legend + select + .select, .form-default label + select + .input > .select, .form-default fieldset fieldset legend + select + .input > .select, fieldset fieldset .form-default legend + select + .input > .select, .form-default .choices > legend + select + .input > .select {
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+/* line 192, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default label + select, .form-default fieldset fieldset legend + select, fieldset fieldset .form-default legend + select, .form-default .choices > legend + select {
+  margin-top: 0.85714em;
+}
+/* line 197, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default label.invalid, .form-default fieldset fieldset legend.invalid, fieldset fieldset .form-default legend.invalid, .form-default .choices > legend.invalid,
+.form-default label.invalid:hover,
+.form-default fieldset fieldset legend.invalid:hover,
+fieldset fieldset .form-default legend.invalid:hover,
+.form-default .choices > legend.invalid:hover {
+  background-color: #f15d5e !important;
+  color: white !important;
+}
+/* line 202, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .invalid,
+.form-default .invalid:hover {
+  border-color: #f15d5e !important;
+}
+/* line 205, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default .invalid:after {
+  border-top-color: #f15d5e !important;
+}
+/* line 210, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default input[type="number"], .form-default .choices > legend + ul[type="number"], .form-default input[type="number"] + label[type="number"], .form-default fieldset fieldset input[type="number"] + legend[type="number"], fieldset fieldset .form-default input[type="number"] + legend[type="number"], .form-default .choices > input[type="number"] + legend[type="number"] {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 50%;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+}
+@media only screen and (max-width: 30em) {
+  /* line 210, ../Framework/sass/Forms/source/pg/_behavior.scss */
+  .form-default input[type="number"], .form-default .choices > legend + ul[type="number"], .form-default input[type="number"] + label[type="number"], .form-default fieldset fieldset input[type="number"] + legend[type="number"], fieldset fieldset .form-default input[type="number"] + legend[type="number"], .form-default .choices > input[type="number"] + legend[type="number"] {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  /* line 210, ../Framework/sass/Forms/source/pg/_behavior.scss */
+  .form-default input[type="number"], .form-default .choices > legend + ul[type="number"], .form-default input[type="number"] + label[type="number"], .form-default fieldset fieldset input[type="number"] + legend[type="number"], fieldset fieldset .form-default input[type="number"] + legend[type="number"], .form-default .choices > input[type="number"] + legend[type="number"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 214, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default input[type="number"] + label, .form-default .choices > legend + ul[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default .choices > input[type="number"] + legend, .form-default .choices > legend + ul[type="number"] + legend {
+  background-color: transparent !important;
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 50%;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  color: #1a1716 !important;
+  border-left-width: 0;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 30em) {
+  /* line 214, ../Framework/sass/Forms/source/pg/_behavior.scss */
+  .form-default input[type="number"] + label, .form-default .choices > legend + ul[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default .choices > input[type="number"] + legend, .form-default .choices > legend + ul[type="number"] + legend {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  /* line 214, ../Framework/sass/Forms/source/pg/_behavior.scss */
+  .form-default input[type="number"] + label, .form-default .choices > legend + ul[type="number"] + label, .form-default fieldset fieldset input[type="number"] + legend, fieldset fieldset .form-default input[type="number"] + legend, .form-default .choices > input[type="number"] + legend, .form-default .choices > legend + ul[type="number"] + legend {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 224, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default input[type="number"] + label.invalid:hover, .form-default .choices > legend + ul[type="number"] + label.invalid:hover, .form-default fieldset fieldset input[type="number"] + legend.invalid:hover, fieldset fieldset .form-default input[type="number"] + legend.invalid:hover, .form-default .choices > input[type="number"] + legend.invalid:hover, .form-default .choices > legend + ul[type="number"] + legend.invalid:hover {
+  background-color: transparent !important;
+  color: #1a1716 !important;
+}
+/* line 231, ../Framework/sass/Forms/source/pg/_behavior.scss */
+.form-default input[type="number"], .form-default .choices > legend + ul[type="number"], .form-default input[type="number"] + label[type="number"], .form-default fieldset fieldset input[type="number"] + legend[type="number"], fieldset fieldset .form-default input[type="number"] + legend[type="number"], .form-default .choices > input[type="number"] + legend[type="number"],
+.form-default input[type="number"] + label,
+.form-default .choices > legend + ul[type="number"] + label,
+.form-default fieldset fieldset input[type="number"] + legend,
+fieldset fieldset .form-default input[type="number"] + legend,
+.form-default .choices > input[type="number"] + legend,
+.form-default .choices > legend + ul[type="number"] + legend {
+  height: 3.42857em !important;
+}
+
+/* line 240, ../Framework/sass/Forms/source/pg/_behavior.scss */
+input[type="search"], .form-default .choices > legend + ul[type="search"], .form-default input[type="number"] + label[type="search"], .form-default fieldset fieldset input[type="number"] + legend[type="search"], fieldset fieldset .form-default input[type="number"] + legend[type="search"], .form-default .choices > input[type="number"] + legend[type="search"] {
+  font-size: 1.14286em;
+}
+/* line 245, ../Framework/sass/Forms/source/pg/_behavior.scss */
+input[type="search"] ::-webkit-input-placeholder, .form-default .choices > legend + ul[type="search"] ::-webkit-input-placeholder, .form-default input[type="number"] + label[type="search"] ::-webkit-input-placeholder, .form-default fieldset fieldset input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, fieldset fieldset .form-default input[type="number"] + legend[type="search"] ::-webkit-input-placeholder, .form-default .choices > input[type="number"] + legend[type="search"] ::-webkit-input-placeholder,
+input[type="search"] :-moz-placeholder,
+.form-default .choices > legend + ul[type="search"] :-moz-placeholder,
+.form-default input[type="number"] + label[type="search"] :-moz-placeholder,
+.form-default fieldset fieldset input[type="number"] + legend[type="search"] :-moz-placeholder,
+fieldset fieldset .form-default input[type="number"] + legend[type="search"] :-moz-placeholder,
+.form-default .choices > input[type="number"] + legend[type="search"] :-moz-placeholder,
+input[type="search"] ::-moz-placeholder,
+.form-default .choices > legend + ul[type="search"] ::-moz-placeholder,
+.form-default input[type="number"] + label[type="search"] ::-moz-placeholder,
+.form-default fieldset fieldset input[type="number"] + legend[type="search"] ::-moz-placeholder,
+fieldset fieldset .form-default input[type="number"] + legend[type="search"] ::-moz-placeholder,
+.form-default .choices > input[type="number"] + legend[type="search"] ::-moz-placeholder,
+input[type="search"] :-ms-placeholder,
+.form-default .choices > legend + ul[type="search"] :-ms-placeholder,
+.form-default input[type="number"] + label[type="search"] :-ms-placeholder,
+.form-default fieldset fieldset input[type="number"] + legend[type="search"] :-ms-placeholder,
+fieldset fieldset .form-default input[type="number"] + legend[type="search"] :-ms-placeholder,
+.form-default .choices > input[type="number"] + legend[type="search"] :-ms-placeholder {
+  color: #9fcc3a;
+  color: #1a1716;
+  text-align: left;
+  cursor: pointer;
+  text-shadow: 0 0 2px black;
+  word-spacing: 20px;
 }

@@ -3,10 +3,6 @@
 //  * @license		GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-// 	################################################################################################################################  //
-// 	Forms							  																								  //
-// 	################################################################################################################################  //
-
 	$input-border-size 							: 1px;
 	$input-border-style 						: solid;
 	$input-border-color 						: #ddd;
@@ -15,6 +11,6 @@
 
 	$input-background-image 					: false;
 
-	$input-shadow-box 							: #efefef 1px 1px 2px 0;
+	$input-shadow-box 							: #eee 1px 1px 2px 0;
 	$input-shadow-inner 						: #efefef 1px 1px 0 0 inset;
-	$input-shadow 								: $input-shadow-box, $input-shadow-inner;
+	$input-shadow 								: $input-shadow-inner;
