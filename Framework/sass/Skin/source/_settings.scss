@@ -3,30 +3,40 @@
 //	Shared Variables				  																								  //
 //	################################################################################################################################  //
 
-	// Miscellaneous							  																							  	  //
+	// Corner radius is inherited by:
+	// * Buttons
+	// * Forms							  																							  	  //
 
 	$corner-radius						: 3px;
 
 
-	// Colors							  																							  	  //
+	// Colors need to be specified before importing the module settings that are inheriting them.					  																							  	  //
 
 	$white								: #fff;
 	$black								: #000;
-	$red								: #f15d5e;
-	$blue								: #04a4a5;
-	$green								: #9fcc3a;
-	$brown								: #362f2d;
+	$grey 								: #666;
+	$red 								: Red;
+	$orange 							: Orange;
+	$yellow 							: Yellow;
+	$green 								: Green;
+	$blue 								: Blue;
+	$purple 							: Purple;
+	$violet 							: Violet;
 
-	$color-body							: darken($brown,10);
-	$color-theme						: $green;
-	$color-cta-main						: $blue;
-	$color-cta-secondary				: $blue;
-	$color-button						: $color-cta-secondary;
+	$color-background					: $white;
+	$color-body							: lighten($black,40);
+	$color-theme						: $grey;
+	$color-primary						: $violet;
+	$color-secondary					: $orange;
+	$color-success 						: $green;
+	$color-info 						: $yellow;
+	$color-warning						: $orange;
+	$color-error						: $red;
 
-	$link-color							: Cyan;
-	$link-color-hover					: $green;
-	$link-color-active					: $green;
-	$link-color-visited					: $blue;
+	$link-color							: $color-primary;
+	$link-color-hover					: $color-theme;
+	$link-color-active					: $color-secondary;
+	$link-color-visited					: $color-theme;
 
 
 //	################################################################################################################################  //

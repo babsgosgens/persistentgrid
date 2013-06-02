@@ -1,0 +1,104 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+	@mixin button-padding {
+		// Mixin the grid'd colunn padding if its used, $column-base-class is the first setting of PG
+		@if $column-base-class {
+			@include column-padding;
+		}
+		@else {
+			padding: $button-padding;
+		}
+	}
+
+	@mixin button-border($button-border: $button-border) {
+
+		$button-border-width: nth($button-border,1);
+		$button-border-style: nth($button-border,2);
+		$button-border-color: nth($button-border,3);
+		$button-border-radius: nth($button-border,4);
+
+		@if $button-border-width {
+			border: $button-border-width $button-border-style $button-border-color;
+			// Retain verticl grid
+			margin-top: -1*$button-border-width;
+			margin-bottom: -1*$button-border-width;
+		}
+		@if $button-border-radius {
+			@include border-radius($button-border-radius);
+		}
+	}
+
+	@mixin button-background($button-background: $button-background) {
+
+		$button-background-color: nth($button-background,1);
+		$button-background-image: nth($button-background,2);
+
+		@if $button-background-color {
+			background: $button-background-color;
+		}
+		@if $button-background-image {
+			@include background-image( $button-background-image );
+		}
+	}
+
+	@mixin button-shadow($button-shadow: $button-shadow) {
+		@if $button-shadow {
+			@include box-shadow($button-shadow);
+		}
+	}
+
+	@mixin button-text($button-text: $button-text) {
+
+		$button-text-color: nth($button-text,1);
+		$button-text-shadow: nth($button-text,2);
+		$button-text-align: nth($button-text,3);
+
+		@if $button-text-color {
+			color: $button-text-color;
+			&:visited {
+				color: $button-text-color;
+			}
+		}
+		@if $button-text-shadow {
+			@include text-shadow($button-text-shadow);
+		}
+		@if $button-text-align {
+			text-align: $button-text-align;
+		}
+	}
+
+	@mixin button($text, $border, $background, $shadow) {
+
+		@if $text != $button-text {
+			@include button-text($text);
+		}
+
+		$border-width 	: nth($border,1);
+		$border-style 	: nth($border,2);
+		$border-color 	: nth($border,3);
+		$border-radius 	: nth($border,4);
+
+		@if $border-width != $button-border-width {
+			border-width: $border-width;
+		}
+		@if $border-style != $button-border-style {
+			border-style: $border-style;
+		}
+		@if $border-color != $button-border-color {
+			border-color: $border-color;
+		}
+		@if $border-radius != $button-border-radius {
+			@include button-border(#{false,false,false,$border-radius});
+		}
+
+		@if $background != $button-background {
+			@include button-background($background);
+		}    
+		
+		@if $shadow != $button-shadow {
+			@include button-shadow($shadow);
+		}
+	}

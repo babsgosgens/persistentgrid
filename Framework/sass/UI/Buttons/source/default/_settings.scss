@@ -1,0 +1,34 @@
+///**
+// * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+// * @license		GNU General Public License version 2 or later; see LICENSE.txt
+// */
+
+
+	$button-text-color 						: $white;
+
+	$button-background-color 				: $color-theme;
+	$button-background-image				: linear-gradient(lighten($button-background-color,5), darken($button-background-color,5));
+	$button-background 						: $button-background-color, $button-background-image;
+
+	$button-border-width						: 1px;
+	$button-border-style					: solid;
+	$button-border-color					: $button-background-color;
+	$button-border-radius					: $corner-radius;
+	$button-border 							: $button-border-width $button-border-style $button-border-color;
+
+	$button-shadow-box 						: 0 1px 2px rgba(0, 0, 0, 0.05);
+	$button-shadow-inner 					: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	$button-shadow 							: $input-shadow-inner, $input-shadow-inner;
+	
+	$button-cursor							: pointer;
+	$button-padding							: $column-padding / 2;
+
+	// Hover styles
+	$button-hover-background-color 			: darken($color-button, 10%);
+	$button-hover-text-color 				: $button-text-color;
+	$button-hover-background-gradient		: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5));
+
+	$button-theme-background-color 			: $color-theme;
+	$button-theme-background-gradient		: linear-gradient(lighten($button-theme-background-color,5), darken($button-theme-background-color,3));;
+	$button-theme-hover-background-color 	: darken($button-theme-background-color, 5%);
+	$button-theme-hover-background-gradient	: linear-gradient(lighten($button-theme-hover-background-color,5),darken($button-theme-hover-background-color,3));

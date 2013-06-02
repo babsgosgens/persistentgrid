@@ -1,0 +1,68 @@
+///**
+// * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+// * @license		GNU General Public License version 2 or later; see LICENSE.txt
+// */
+
+.btn {
+  display: inline-block;
+  background-color: $button-background-color;
+  @include background-image($button-background-gradient);
+  @include border-radius($button-radius);
+  @include box-shadow($button-shadow);
+  @include embossLightTextOnDarkBackground($button-background-color);
+  cursor: $button-cursor;
+  color: $button-text-color;
+  border: $button-border-width $button-border-style darken($button-background-color,2);
+  line-height: $base-line-height - 2*$button-border-width;
+  @include column-padding();
+  @include rhythm(0, .5, .5, 0);
+  text-decoration: none;
+  &:visited {
+    color: $button-text-color;
+  }
+  &:hover {
+    
+  }
+}
+
+.btn.theme {
+  background-color: $button-theme-background-color;
+  @include background-image($button-theme-background-gradient);
+  @include embossLightTextOnDarkBackground($button-theme-background-color);
+  border: $button-border-width $button-border-style darken($color-theme,2);
+  &:hover {
+    background-color: darken($button-theme-background-color, 10);
+    @include embossLightTextOnDarkBackground($button-theme-hover-background-color);
+    @if $button-theme-hover-background-color != $button-theme-background-color {
+      @include background-image($button-theme-hover-background-gradient);
+      border-color: darken($button-theme-hover-background-color,2);
+    }
+  }
+}
+
+.btn.small {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.btn-stretch {
+  width: 100%;
+}
+
+.big.btn {
+  @extend .btn.stretch;
+  @include adjust-font-size-to($px-l, 1.5);
+}
+
+.is-btn-hover {
+  background-color: darken($button-background-color, 10);
+  color: $button-hover-text-color;
+  @include embossLightTextOnDarkBackground($button-hover-background-color);
+  @if $button-hover-background-color != $button-background-color {
+    @include background-image($button-hover-background-gradient);
+    border-color: darken($button-hover-background-color,2);
+  }
+  @if $button-hover-text-color != $button-text-color {
+    color: $button-hover-text-color;
+  }
+}

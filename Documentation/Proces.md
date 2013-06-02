@@ -10,6 +10,8 @@ Next, we declare the project's default typeface and style. We also set the proje
 Based on Compass Vertical Rhythm. The base-line-height and base-font-size are inherited from the Typography-module. These values are then inherited to the typography settings. If teh baseline was not yet set in the typography module - which is the default setting - you set the baseline here.
 
 4) Base Styles
+Next up are the base styles. This includes settings for the various colours that will be used throughout the project. These colours will be inherited by the submodules - unless otherwise set.
+
 My next step would probably be to set the settings for the various headings. HTML is a highly hierarchical product, so inevitably you will need headings of various sizes to indicate the dependancies between content. However, instead of defining the headings as a base reset (at h# level), but rather identify the various levels of headings needed accross modules (main content, side bars, headers and footers and so on).
 
 Not all headers may use the same style or fontface. This is why I like to define the different - what I have called - font-groups. I already have established one font-group, which is the project's base typography. A font-groups is simply a group of font-settings that make up the font short-declaration. By defining font-groups you leverage the use of proper weight and style tpefaces by declaring the actual bold or italic styles of your typeface, as opposed to usimg the faux versions that are rendered by the browser.

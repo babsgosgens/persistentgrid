@@ -3,11 +3,11 @@
 //  * @license		GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-	$input-border-size 							: 1px;
+	$input-border-width 							: 1px;
 	$input-border-style 						: solid;
 	$input-border-color 						: #cec;
 	$input-border-radius						: $corner-radius; 					// Defaults to 3px
-	$input-border 								: $input-border-size $input-border-style $input-border-color;
+	$input-border 								: $input-border-width $input-border-style $input-border-color;
 
 	$input-background-image 					: false;
 
