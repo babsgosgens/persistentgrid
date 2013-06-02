@@ -552,29 +552,22 @@ input[type="color"] {
 .is-btn-hover, .btn:hover {
   border-color: purple;
   background: purple;
-  background-image: hover- -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #737373), color-stop(100%, #595959));
-  background-image: hover- -webkit-linear-gradient(#737373, #595959);
-  background-image: hover- -moz-linear-gradient(#737373, #595959);
-  background-image: hover- -o-linear-gradient(#737373, #595959);
-  background-image: hover- linear-gradient(#737373, #595959);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9a0099), color-stop(100%, #670066));
+  background-image: -webkit-linear-gradient(#9a0099, #670066);
+  background-image: -moz-linear-gradient(#9a0099, #670066);
+  background-image: -o-linear-gradient(#9a0099, #670066);
+  background-image: linear-gradient(#9a0099, #670066);
 }
 
 /* line 51, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
 .is-btn-active, .btn:active {
-  color: white;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  text-align: center;
-  border-color: green;
-  background: green;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #009a00), color-stop(100%, #006700));
-  background-image: -webkit-linear-gradient(#009a00, #006700);
-  background-image: -moz-linear-gradient(#009a00, #006700);
-  background-image: -o-linear-gradient(#009a00, #006700);
-  background-image: linear-gradient(#009a00, #006700);
-}
-/* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
-.is-btn-active:visited, .btn:visited:active {
-  color: white;
+  border-color: #404040;
+  background: #404040;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
+  background-image: -webkit-linear-gradient(#4d4d4d, #333333);
+  background-image: -moz-linear-gradient(#4d4d4d, #333333);
+  background-image: -o-linear-gradient(#4d4d4d, #333333);
+  background-image: linear-gradient(#4d4d4d, #333333);
 }
 
 /* line 55, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */

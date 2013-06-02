@@ -35,8 +35,8 @@
 		$button-hover-text 						: $button-hover-text-color, $button-hover-text-shadow, $button-hover-text-align;
 
 		$button-hover-background-color 			: $purple;
-		$button-hover-background-image			: linear-gradient(lighten($button-hover-background-color,20),darken($button-hover-background-color,20));
-		$button-hover-background 				: $button-hover-background-color, hover-$button-background-image;
+		$button-hover-background-image			: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5));
+		$button-hover-background 				: $button-hover-background-color, $button-hover-background-image;
 
 		$button-hover-border-width				: $button-border-width; 			// inherit
 		$button-hover-border-style				: $button-border-style; 			// inherit
@@ -56,7 +56,7 @@
 
 		$button-active-background-color 		: darken($button-background-color, 15);
 		$button-active-background-image			: linear-gradient(lighten($button-active-background-color,5),darken($button-active-background-color,5));
-		$button-active-background 				: $button-active-background-color, hover-$button-background-image;
+		$button-active-background 				: $button-active-background-color, $button-active-background-image;
 
 		$button-active-border-width				: $button-border-width; 			// inherit
 		$button-active-border-style				: $button-border-style; 			// inherit
