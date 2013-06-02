@@ -72,8 +72,21 @@
 
 	@mixin button($text, $border, $background, $shadow) {
 
-		@if $text != $button-text {
-			@include button-text($text);
+		$text-color 	: nth($text,1);
+		$text-shadow 	: nth($text,2);
+		$text-align 	: nth($text,3);
+
+		@if $text-color != $button-text-color {
+			$color: $text-color, false, false;
+			@include button-text($color);
+		}
+		@if $text-shadow != $button-text-shadow {
+			$shadow: false, $text-shadow, false;
+			@include button-text($shadow);
+		}
+		@if $text-align != $button-text-align {
+			$align: false, false, $text-align;
+			@include button-text($align);
 		}
 
 		$border-width 	: nth($border,1);
@@ -97,7 +110,7 @@
 		@if $background != $button-background {
 			@include button-background($background);
 		}    
-		
+
 		@if $shadow != $button-shadow {
 			@include button-shadow($shadow);
 		}

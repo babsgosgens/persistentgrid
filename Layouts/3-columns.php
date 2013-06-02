@@ -19,10 +19,18 @@
 	<div>
 		<div class="column">Nested content</div>
 	</div>
-	<section>
+	<section class="column">
+		<h1>Base Styles</h1>
+		<h2>Links</h2>
+		<a href="##">Link</a>
+		<a href="##" class="is-a-hover">Link, hover state</a>
+		<a href="##" class="is-a-active">Link, active state</a>
+		<a href="#" class="is-a-visited">Link, visited state</a>
+	</section>
+	<section class="column">
 	<?php include('./Templates/UI/Buttons/buttons.php'); ?>
 	</section>
-	<form>
+	<form class="column">
 		<fieldset>
 			<legend></legend>
 			<ul>

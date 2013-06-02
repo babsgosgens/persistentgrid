@@ -34,9 +34,9 @@
 	$color-error						: $red;
 
 	$link-color							: $color-primary;
-	$link-color-hover					: $color-theme;
-	$link-color-active					: $color-secondary;
-	$link-color-visited					: $color-theme;
+	$link-color-hover					: $purple;
+	$link-color-active					: darken($grey, 15);
+	$link-color-visited					: lighten($link-color, 15);
 
 
 //	################################################################################################################################  //
@@ -47,6 +47,7 @@
 	@import "Reset/source/settings";
 	@import "Typography/source/settings";
 	@import "VerticalRhythm/source/settings";
+	@import "Base/source/settings";
 	@import "PersistentGrid/source/settings";
 	@import "UI/Buttons/source/settings";
 	@import "UI/Accordion/source/settings";

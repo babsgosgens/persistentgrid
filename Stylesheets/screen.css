@@ -97,6 +97,31 @@ html {
   line-height: 1.71429em;
 }
 
+/* line 1, ../Framework/sass/Base/source/_behavior.scss */
+a {
+  color: violet;
+}
+
+/* line 14, ../Framework/sass/Base/source/_behavior.scss */
+.is-a-hover, a:hover {
+  color: purple;
+}
+
+/* line 17, ../Framework/sass/Base/source/_behavior.scss */
+.is-a-active, a:active {
+  color: #404040;
+}
+
+/* line 20, ../Framework/sass/Base/source/_behavior.scss */
+.is-a-visited, a:visited {
+  color: #f7c5f7;
+}
+
+/* line 24, ../Framework/sass/Base/source/_behavior.scss */
+p {
+  margin: 0.85714em 0;
+}
+
 /* line 6, ../Framework/sass/PersistentGrid/source/_behavior.scss */
 .root {
   display: block;
@@ -460,7 +485,6 @@ input[type="color"] {
 
 /* line 31, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
 .btn-secondary {
-  color: white;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   text-align: center;
   border-color: orange;
@@ -470,10 +494,9 @@ input[type="color"] {
   background-image: -moz-linear-gradient(#ffae1a, #e69500);
   background-image: -o-linear-gradient(#ffae1a, #e69500);
   background-image: linear-gradient(#ffae1a, #e69500);
-}
-/* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
-.btn-secondary:visited {
-  color: white;
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
 /* line 34, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
@@ -488,6 +511,9 @@ input[type="color"] {
   background-image: -moz-linear-gradient(#ffff1a, #e5e600);
   background-image: -o-linear-gradient(#ffff1a, #e5e600);
   background-image: linear-gradient(#ffff1a, #e5e600);
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 /* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
 .btn-info:visited {
@@ -506,6 +532,9 @@ input[type="color"] {
   background-image: -moz-linear-gradient(#ffae1a, #e69500);
   background-image: -o-linear-gradient(#ffae1a, #e69500);
   background-image: linear-gradient(#ffae1a, #e69500);
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 /* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
 .btn-warning:visited {
@@ -524,6 +553,9 @@ input[type="color"] {
   background-image: -moz-linear-gradient(#ff1a1a, #e60000);
   background-image: -o-linear-gradient(#ff1a1a, #e60000);
   background-image: linear-gradient(#ff1a1a, #e60000);
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 /* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
 .btn-error:visited {
@@ -542,6 +574,9 @@ input[type="color"] {
   background-image: -moz-linear-gradient(#009a00, #006700);
   background-image: -o-linear-gradient(#009a00, #006700);
   background-image: linear-gradient(#009a00, #006700);
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 /* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
 .btn-success:visited {
@@ -550,6 +585,9 @@ input[type="color"] {
 
 /* line 48, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
 .is-btn-hover, .btn:hover {
+  color: white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
   border-color: purple;
   background: purple;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9a0099), color-stop(100%, #670066));
@@ -557,17 +595,35 @@ input[type="color"] {
   background-image: -moz-linear-gradient(#9a0099, #670066);
   background-image: -o-linear-gradient(#9a0099, #670066);
   background-image: linear-gradient(#9a0099, #670066);
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.5), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.5), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.5), false;
+}
+/* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
+.is-btn-hover:visited, .btn:visited:hover {
+  color: white;
 }
 
 /* line 51, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
 .is-btn-active, .btn:active {
+  color: white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-style: inset;
   border-color: #404040;
   background: #404040;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
-  background-image: -webkit-linear-gradient(#4d4d4d, #333333);
-  background-image: -moz-linear-gradient(#4d4d4d, #333333);
-  background-image: -o-linear-gradient(#4d4d4d, #333333);
-  background-image: linear-gradient(#4d4d4d, #333333);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #4d4d4d));
+  background-image: -webkit-linear-gradient(#333333, #4d4d4d);
+  background-image: -moz-linear-gradient(#333333, #4d4d4d);
+  background-image: -o-linear-gradient(#333333, #4d4d4d);
+  background-image: linear-gradient(#333333, #4d4d4d);
+  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.5), false;
+  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.5), false;
+  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.5), false;
+}
+/* line 61, ../Framework/sass/UI/Buttons/source/_mixins.scss */
+.is-btn-active:visited, .btn:visited:active {
+  color: white;
 }
 
 /* line 55, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
