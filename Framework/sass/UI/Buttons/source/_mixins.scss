@@ -14,106 +14,135 @@
 		}
 	}
 
-	@mixin button-border($border: $button-border) {
+	@mixin button-border($b_border: $button-border) {
 
-		$border-width: nth($border,1);
-		$border-style: nth($border,2);
-		$border-color: nth($border,3);
-		$border-radius: nth($border,4);
+		$b_border-width: nth($b_border,1);
+		$b_border-style: nth($b_border,2);
+		$b_border-color: nth($b_border,3);
+		$b_border-radius: nth($b_border,4);
 
-		@if $border-width {
-			border: $border-width $border-style $border-color;
+		@if $b_border-width {
+			border: $b_border-width $b_border-style $b_border-color;
 			// Retain verticl grid
-			margin-top: -1*$border-width;
-			margin-bottom: -1*$border-width;
+			margin-top: -1*$b_border-width;
+			margin-bottom: -1*$b_border-width;
 		}
-		@if $border-radius {
-			@include border-radius($border-radius);
-		}
-	}
-
-	@mixin button-background($background: $button-background) {
-
-		$background-color: nth($background,1);
-		$background-image: nth($background,2);
-
-		@if $background-color {
-			background: $background-color;
-		}
-		@if $background-image {
-			@include background-image( $background-image );
+		@if $b_border-radius {
+			@include border-radius($b_border-radius);
 		}
 	}
 
-	@mixin button-shadow($shadow: $button-shadow) {
-		@if $shadow {
-			@include box-shadow($shadow);
+	@mixin button-background($b_background: $button-background) {
+
+		$b_background-color: nth($b_background,1);
+		$b_background-image: nth($b_background,2);
+
+		@if $b_background-color {
+			background: $b_background-color;
+		}
+		@if $b_background-image {
+			@include background-image( $b_background-image );
 		}
 	}
 
-	@mixin button-text($text: $button-text) {
+	@mixin button-shadow($b_shadow: $button-shadow) {
+		@if $b_shadow {
+			@include box-shadow($b_shadow);
+		}
+	}
 
-		$text-color: nth($text,1);
-		$text-shadow: nth($text,2);
-		$text-align: nth($text,3);
+	@mixin button-text($b_text: $button-text) {
 
-		@if $text-color {
-			color: $text-color;
+		$b_text-color: nth($b_text,1);
+		$b_text-shadow: nth($b_text,2);
+		$b_text-align: nth($b_text,3);
+
+		@if $b_text-color {
+			color: $b_text-color;
 			&:visited {
-				color: $text-color;
+				color: $b_text-color;
 			}
 		}
-		@if $text-shadow {
-			@include text-shadow($text-shadow);
+		@if $b_text-shadow {
+			@include text-shadow($b_text-shadow);
 		}
-		@if $text-align {
-			text-align: $text-align;
+		@if $b_text-align {
+			text-align: $b_text-align;
 		}
 	}
 
-	@mixin button($text, $border, $background, $shadow) {
+	@mixin button-type($b_type) {
 
-		$text-color 	: nth($text,1);
-		$text-shadow 	: nth($text,2);
-		$text-align 	: nth($text,3);
+		$b_type-style: nth($b_type,1);
+		$b_type-variant: nth($b_type,2);
+		$b_type-weight: nth($b_type,3);
+		$b_type-family: nth($b_type,4);
+		$b_type-size: nth($b_type,5);
+		$b_type-leading: nth($b_type,6);
+
+		@if $b_type-style != $type-style {
+			@include font-style($b_type-style);
+		}
+		@if $b_type-variant != $type-variant {
+			@include font-variant($b_type-variant);
+		}
+		@if $b_type-weight != $type-weight {
+			@include font-weight($b_type-weight);
+		}
+		@if $b_type-family != $type-family {
+			@include font-family($b_type-family);
+		}
+		@if $b_type-size != $font-size {
+			@include adjust-font-size-to($b_type-size);
+		}
+		@if $b_type-leading != $line-height {
+			@include adjust-leading-to($b_type-leading, $b_type-size);
+		}
+	}
+
+	@mixin button($b_text, $b_border, $b_background, $b_shadow) {
+
+		$b_text-color 	: nth($b_text,1);
+		$b_text-shadow 	: nth($b_text,2);
+		$b_text-align 	: nth($b_text,3);
 
 
-		@if $text-color != $button-text-color {
-			$color: $text-color, false, false;
-			@include button-text($color);
+		@if $b_text-color != $button-text-color {
+			$b_color: $text-color, false, false;
+			@include button-text($b_color);
 		}
-		@if $text-shadow != $button-text-shadow {
-			$shadow: false, $text-shadow, false;
-			@include button-text($shadow);
+		@if $b_text-shadow != $button-text-shadow {
+			$b_shadow: false, $b_text-shadow, false;
+			@include button-text($b_shadow);
 		}
-		@if $text-align != $button-text-align {
-			$align: false, false, $text-align;
-			@include button-text($align);
-		}
-
-		$border-width 	: nth($border,1);
-		$border-style 	: nth($border,2);
-		$border-color 	: nth($border,3);
-		$border-radius 	: nth($border,4);
-
-		@if $border-width != $button-border-width {
-			border-width: $border-width;
-		}
-		@if $border-style != $button-border-style {
-			border-style: $border-style;
-		}
-		@if $border-color != $button-border-color {
-			border-color: $border-color;
-		}
-		@if $border-radius != $button-border-radius {
-			@include button-border(#{false,false,false,$border-radius});
+		@if $b_text-align != $button-text-align {
+			$b_align: false, false, $text-align;
+			@include button-text($b_align);
 		}
 
-		@if $background != $button-background {
-			@include button-background($background);
+		$b_border-width 	: nth($b_border,1);
+		$b_border-style 	: nth($b_border,2);
+		$b_border-color 	: nth($b_border,3);
+		$b_border-radius 	: nth($b_border,4);
+
+		@if $b_border-width != $button-border-width {
+			border-width: $b_border-width;
+		}
+		@if $b_border-style != $button-border-style {
+			border-style: $b_border-style;
+		}
+		@if $b_border-color != $button-border-color {
+			border-color: $b_border-color;
+		}
+		@if $b_border-radius != $button-border-radius {
+			@include button-border(#{false,false,false,$b_border-radius});
+		}
+
+		@if $b_background != $button-background {
+			@include button-background($b_background);
 		}    
 
-		@if $shadow != $button-shadow {
-			@include button-shadow($shadow);
+		@if $b_shadow != $button-shadow {
+			@include button-shadow($b_shadow);
 		}
 	}

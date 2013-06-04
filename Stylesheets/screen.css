@@ -430,7 +430,7 @@ input[type="color"] {
   box-shadow: #efefef 1px 1px 0 0 inset;
 }
 
-/* line 8, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 6, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn {
   display: inline-block;
   padding-left: 24px;
@@ -461,7 +461,7 @@ input[type="color"] {
   text-decoration: none;
 }
 @media only screen and (max-width: 30em) {
-  /* line 8, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+  /* line 6, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
   .btn {
     padding-left: 12px;
     padding-right: 12px;
@@ -472,7 +472,7 @@ input[type="color"] {
   color: white;
 }
 
-/* line 28, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 24, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-primary {
   border-color: violet;
   background: violet;
@@ -483,7 +483,7 @@ input[type="color"] {
   background-image: linear-gradient(#f198f1, #eb6ceb);
 }
 
-/* line 31, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 27, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-secondary {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: orange;
@@ -498,7 +498,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 34, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 30, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-info {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: yellow;
@@ -513,7 +513,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 37, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 33, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-warning {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: orange;
@@ -528,7 +528,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 40, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 36, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-error {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: red;
@@ -543,7 +543,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 43, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 39, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-success {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: green;
@@ -558,7 +558,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 48, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 44, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .is-btn-hover, .btn:hover {
   border-color: purple;
   background: purple;
@@ -572,7 +572,7 @@ input[type="color"] {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 51, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 47, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .is-btn-active, .btn:active {
   border-style: inset;
   border-color: #404040;
@@ -584,19 +584,19 @@ input[type="color"] {
   background-image: linear-gradient(#333333, #4d4d4d);
 }
 
-/* line 55, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 51, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-small {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 59, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 55, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-big {
   font-size: 1.42857em;
   line-height: 1.8em;
 }
 
-/* line 62, ../Framework/sass/UI/Buttons/source/pg/_behavior.scss */
+/* line 58, ../Framework/sass/UI/Buttons/source/default/_behavior.scss */
 .btn-stretch {
   width: 100%;
 }

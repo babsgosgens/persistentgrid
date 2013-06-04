@@ -1,0 +1,28 @@
+a {
+	color: $link-color;
+	&:hover {
+		@extend .is-a-hover;
+	}
+	&:active {
+		@extend .is-a-active;
+	}
+	&:visited {
+		@extend .is-a-visited;
+	}
+}
+
+.is-a-hover {
+	color: $link-color-hover;
+}
+.is-a-active {
+	color: $link-color-active;
+}
+.is-a-visited {
+	color: $link-color-visited;
+}
+
+p {
+	margin: rhythm(.5) 0;
+}
+
+@debug $link-color;

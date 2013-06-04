@@ -6,9 +6,16 @@
 
 	$button-cursor							: pointer;
 	$button-padding							: $column-padding / 2;
-	$button-type 							: $type; 							// inherit
 
 	// Default button style
+	$button-type-style 						: $type-style;
+	$button-type-variant					: $type-variant;
+	$button-type-weight						: $type-weight;
+	$button-type-family 					: #{$font-family-default, $font-family-fallback};
+	$button-type-size 						: $font-size;
+	$button-type-leading 					: $line-height;
+	$button-type 							: $button-type-style, $button-type-variant, $button-type-weight, $button-type-family, $button-type-size, $button-type-leading;
+
 	$button-text-color 						: $white;
 	$button-text-shadow 					: -1px -1px 0 rgba(0,0,0,.5);
 	$button-text-align 						: center;

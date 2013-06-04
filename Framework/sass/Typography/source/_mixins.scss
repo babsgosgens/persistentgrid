@@ -12,12 +12,14 @@
 // $typeface must be an array consisting of: style, variant, weight, font-family; 
 @mixin font( $type, $font-size:$base-font-size, $line-height:$base-line-height)
 {
-	$font-style 	:   nth($type,1);
-	$font-variant 	:	nth($type,2);
-	$font-weight 	:	nth($type,3);
-	$font-family 	:	nth($type,4);
+	@if $type {
+		$font-style 	:   nth($type,1);
+		$font-variant 	:	nth($type,2);
+		$font-weight 	:	nth($type,3);
+		$font-family 	:	nth($type,4);
 
-	font: #{$font-style} #{$font-variant} #{$font-weight} #{$font-size}/#{$line-height} #{$font-family};
+		font: #{$font-style} #{$font-variant} #{$font-weight} #{$font-size}/#{$line-height} #{$font-family};
+	}
 }
 
 @mixin type-style($type)
