@@ -3,6 +3,7 @@
 //  * @license		GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
+// TODO: button-text gets executed while it shouldnt in the alternate styles - that's 7*3 lines that shouldnt be there.
 	@mixin button-padding {
 		// Mixin the grid'd colunn padding if its used, $column-base-class is the first setting of PG
 		@if $column-base-class {
@@ -13,60 +14,60 @@
 		}
 	}
 
-	@mixin button-border($button-border: $button-border) {
+	@mixin button-border($border: $button-border) {
 
-		$button-border-width: nth($button-border,1);
-		$button-border-style: nth($button-border,2);
-		$button-border-color: nth($button-border,3);
-		$button-border-radius: nth($button-border,4);
+		$border-width: nth($border,1);
+		$border-style: nth($border,2);
+		$border-color: nth($border,3);
+		$border-radius: nth($border,4);
 
-		@if $button-border-width {
-			border: $button-border-width $button-border-style $button-border-color;
+		@if $border-width {
+			border: $border-width $border-style $border-color;
 			// Retain verticl grid
-			margin-top: -1*$button-border-width;
-			margin-bottom: -1*$button-border-width;
+			margin-top: -1*$border-width;
+			margin-bottom: -1*$border-width;
 		}
-		@if $button-border-radius {
-			@include border-radius($button-border-radius);
-		}
-	}
-
-	@mixin button-background($button-background: $button-background) {
-
-		$button-background-color: nth($button-background,1);
-		$button-background-image: nth($button-background,2);
-
-		@if $button-background-color {
-			background: $button-background-color;
-		}
-		@if $button-background-image {
-			@include background-image( $button-background-image );
+		@if $border-radius {
+			@include border-radius($border-radius);
 		}
 	}
 
-	@mixin button-shadow($button-shadow: $button-shadow) {
-		@if $button-shadow {
-			@include box-shadow($button-shadow);
+	@mixin button-background($background: $button-background) {
+
+		$background-color: nth($background,1);
+		$background-image: nth($background,2);
+
+		@if $background-color {
+			background: $background-color;
+		}
+		@if $background-image {
+			@include background-image( $background-image );
 		}
 	}
 
-	@mixin button-text($button-text: $button-text) {
+	@mixin button-shadow($shadow: $button-shadow) {
+		@if $shadow {
+			@include box-shadow($shadow);
+		}
+	}
 
-		$button-text-color: nth($button-text,1);
-		$button-text-shadow: nth($button-text,2);
-		$button-text-align: nth($button-text,3);
+	@mixin button-text($text: $button-text) {
 
-		@if $button-text-color {
-			color: $button-text-color;
+		$text-color: nth($text,1);
+		$text-shadow: nth($text,2);
+		$text-align: nth($text,3);
+
+		@if $text-color {
+			color: $text-color;
 			&:visited {
-				color: $button-text-color;
+				color: $text-color;
 			}
 		}
-		@if $button-text-shadow {
-			@include text-shadow($button-text-shadow);
+		@if $text-shadow {
+			@include text-shadow($text-shadow);
 		}
-		@if $button-text-align {
-			text-align: $button-text-align;
+		@if $text-align {
+			text-align: $text-align;
 		}
 	}
 
@@ -75,6 +76,7 @@
 		$text-color 	: nth($text,1);
 		$text-shadow 	: nth($text,2);
 		$text-align 	: nth($text,3);
+
 
 		@if $text-color != $button-text-color {
 			$color: $text-color, false, false;
