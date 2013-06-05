@@ -24,18 +24,41 @@ What does the horizontal grid look like? What column widths will be introduced?
 
 
 # Directory structure
+The directory structure is designed such, that it will allow for easy implementation of new modules and styles. On a lower level, it is also possible to extend existing styles. This can come in handy if - for example - you want to use the existing buttons, but only add more rounded corners. An example setup of this can be found in the UI/Buttons module.
 
-Framework
-/sass
-	/Framework
-		/Base
-		 Base reset, for more info see: http://smacss.com/book/type-base
-		/Forms
-		/Helpers
-		/Lists
-		/PersistentGrid
-		/Tables
-		/Typography
-		/UI
-		/VerticalRhythm
-/config.rb
+The basic structure for any module is such:
+
+/Modulename
+	/base
+		/_behavior.scss
+		/_dependencies.scss
+		/_functions.scss
+		/_mixins.scss
+		/_settings.scss
+	/skins
+		/skinone
+			/_settings.scss
+		/skintwo
+			/_settings.scss
+	_all.scss
+	_modulename.scss
+
+The module root contains two base files, only ever one of which you will call via the @import directive. See the section 'Configuring PG Framework' for more information.
+
+A module may also be part of a group, for instance 'Buttons' is a module that sist within the 'UI' group:
+
+/Group
+	/ModuleOne
+		/base
+		/skins
+		_all.scss
+		_moduleone.scss
+	/ModuleTwo
+		/base
+		/skins
+		_all.scss
+		_moduletwo.scss
+
+# Configuring PG Framework
+
+As all the modules contain their individual settings files, and some of them inherit settings from other modules (for example, the Vertical Rhythm module inherits its base-font-size and base-line-height from the Typography module), it is important to load all settings in the correct order. Also - and this very importany - all settings must be loaded before any behavior is rendered. This is especially important when extending existing behavior.
