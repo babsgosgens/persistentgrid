@@ -3,6 +3,5 @@
 //  * @license		GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-@import "source/dependencies.scss";
-@import "source/mixins.scss";
-@import "source/default/behavior.scss";
+@import "base/mixins";
+@import "base/behavior";

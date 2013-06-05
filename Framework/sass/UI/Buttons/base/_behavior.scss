@@ -1,9 +1,7 @@
 ///**
-// * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
-// * @license		GNU General Public License version 2 or later; see LICENSE.txt
+// * @copyright Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+// * @license   GNU General Public License version 2 or later; see LICENSE.txt
 // */
-
-@import "settings";
 
 .btn {
   display: inline-block;
@@ -12,19 +10,17 @@
   @include button-background;
   @include button-shadow;
   @include button-text;
+  @include button-type($button-type);
   text-decoration: none;
-  @if $button-type != $type {
-    @include type($type);
-  }
   &:hover {
-    @extend .is-btn-hover;
+    @extend .is-btn-hover !optional;
   }
   &:active {
-    @extend .is-btn-active;
+    @extend .is-btn-active !optional;
   }
 }
 
-// Alternate styles
+// //Alternate styles
 .btn-primary {
   @include button($button-primary-text, $button-primary-border, $button-primary-background, $button-primary-shadow);
 }
@@ -46,6 +42,7 @@
 
 // Button states
 .is-btn-hover {
+  @debug $button-hover-border;
   @include button($button-hover-text, $button-hover-border, $button-hover-background, $button-hover-shadow);
 }
 .is-btn-active {
@@ -53,8 +50,8 @@
 }
 
 .btn-small {
-	padding-top: 0;
-	padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .btn-big {
   @include adjust-font-size-to($px-l, 1.5);

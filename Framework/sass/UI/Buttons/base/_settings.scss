@@ -35,45 +35,45 @@
 	$button-shadow-inner 					: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	$button-shadow 							: $button-shadow-box, $button-shadow-inner;
 
-		// Hover button style
-		$button-hover-text-color 				: $button-text-color; 				// inherit
-		$button-hover-text-shadow 				: $button-text-shadow; 				// inherit
-		$button-hover-text-align 				: $button-text-align; 				// inherit
-		$button-hover-text 						: $button-hover-text-color, $button-hover-text-shadow, $button-hover-text-align;
+	// Hover state button style
+	$button-hover-text-color 				: $button-text-color; 				// inherit
+	$button-hover-text-shadow 				: $button-text-shadow; 				// inherit
+	$button-hover-text-align 				: $button-text-align; 				// inherit
+	$button-hover-text 						: $button-hover-text-color, $button-hover-text-shadow, $button-hover-text-align;
 
-		$button-hover-background-color 			: $purple;
-		$button-hover-background-image			: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5));
-		$button-hover-background 				: $button-hover-background-color, $button-hover-background-image;
+	$button-hover-background-color 			: $purple;
+	$button-hover-background-image			: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5));
+	$button-hover-background 				: $button-hover-background-color, $button-hover-background-image;
 
-		$button-hover-border-width				: $button-border-width; 			// inherit
-		$button-hover-border-style				: $button-border-style; 			// inherit
-		$button-hover-border-color				: $button-hover-background-color;
-		$button-hover-border-radius				: $button-border-radius; 			// inherit
-		$button-hover-border 					: $button-hover-border-width, $button-hover-border-style, $button-hover-border-color, $button-hover-border-radius;
+	$button-hover-border-width				: $button-border-width; 			// inherit
+	$button-hover-border-style				: $button-border-style; 			// inherit
+	$button-hover-border-color				: $button-hover-background-color;
+	$button-hover-border-radius				: $button-border-radius; 			// inherit
+	$button-hover-border 					: $button-hover-border-width, $button-hover-border-style, $button-hover-border-color, $button-hover-border-radius;
 
-		$button-hover-shadow-box 				: $button-shadow-box;				// inherit
-		$button-hover-shadow-inner 				: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
-		$button-hover-shadow 					: $button-hover-shadow-box, $button-hover-shadow-inner;
+	$button-hover-shadow-box 				: $button-shadow-box;				// inherit
+	$button-hover-shadow-inner 				: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+	$button-hover-shadow 					: $button-hover-shadow-box, $button-hover-shadow-inner;
 
-		// Active button style
-		$button-active-text-color 				: $button-text-color; 				// inherit
-		$button-active-text-shadow 				: $button-text-shadow; 				// inherit
-		$button-active-text-align 				: $button-text-align; 				// inherit
-		$button-active-text 					: $button-active-text-color, $button-active-text-shadow, $button-active-text-align;
+	// Active state button style
+	$button-active-text-color 				: $button-text-color; 				// inherit
+	$button-active-text-shadow 				: $button-text-shadow; 				// inherit
+	$button-active-text-align 				: $button-text-align; 				// inherit
+	$button-active-text 					: $button-active-text-color, $button-active-text-shadow, $button-active-text-align;
 
-		$button-active-background-color 		: darken($button-background-color, 15);
-		$button-active-background-image			: linear-gradient(darken($button-active-background-color,5),lighten($button-active-background-color,5));
-		$button-active-background 				: $button-active-background-color, $button-active-background-image;
+	$button-active-background-color 		: darken($button-background-color, 15);
+	$button-active-background-image			: linear-gradient(darken($button-active-background-color,5),lighten($button-active-background-color,5));
+	$button-active-background 				: $button-active-background-color, $button-active-background-image;
 
-		$button-active-border-width				: $button-border-width; 			// inherit
-		$button-active-border-style				: inset; 			// inherit
-		$button-active-border-color				: $button-active-background-color;
-		$button-active-border-radius			: $button-border-radius; 			// inherit
-		$button-active-border 					: $button-active-border-width, $button-active-border-style, $button-active-border-color, $button-active-border-radius;
+	$button-active-border-width				: $button-border-width; 			// inherit
+	$button-active-border-style				: inset; 			// inherit
+	$button-active-border-color				: $button-active-background-color;
+	$button-active-border-radius			: $button-border-radius; 			// inherit
+	$button-active-border 					: $button-active-border-width, $button-active-border-style, $button-active-border-color, $button-active-border-radius;
 
-		$button-active-shadow-box 				: $button-shadow-box;				// inherit
-		$button-active-shadow-inner 			: $button-shadow-inner;				// inherit
-		$button-active-shadow 					: $button-active-shadow-box, $button-active-shadow-inner;
+	$button-active-shadow-box 				: $button-shadow-box;				// inherit
+	$button-active-shadow-inner 			: $button-shadow-inner;				// inherit
+	$button-active-shadow 					: $button-active-shadow-box, $button-active-shadow-inner;
 
 	// Primary button style
 	$button-primary-text-color 				: $button-text-color; 				// inherit

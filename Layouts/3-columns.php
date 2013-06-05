@@ -20,12 +20,7 @@
 		<div class="column">Nested content</div>
 	</div>
 	<section class="column">
-		<h1>Base Styles</h1>
-		<h2>Links</h2>
-		<a href="#doesntexist">Link</a>
-		<a href="#doesntexist" class="is-a-hover">Link, hover state</a>
-		<a href="#doesntexist" class="is-a-active">Link, active state</a>
-		<a href="#" class="is-a-visited">Link, visited state</a>
+		<?php include('./Templates/base.php'); ?>
 	</section>
 	<section class="column">
 	<?php include('./Templates/UI/Buttons/buttons.php'); ?>

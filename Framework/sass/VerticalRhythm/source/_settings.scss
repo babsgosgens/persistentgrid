@@ -20,20 +20,3 @@
 
 	// If true, the baseline will be established before declaring the project's default typeface from within the Typography module.
 	$establish-baseline 				: true;
-
-//	################################################################################################################################  //
-//	Compass Modular Scale					  																						  //
-//	################################################################################################################################  //
-
-	$base-size 							: $base-font-size;
-
-	// Not using MS, set font-sizes by hand instead.
-	$px-normal							: $base-size;
-	$px-xxs								: 10px;
-	$px-xs								: 12px;
-	$px-s								: 14px;
-	$px-m								: $px-normal;
-	$px-l								: 20px;
-	$px-xl								: 24px;
-	$px-xxl								: 38px;
-	$px-xxxl							: 46px;

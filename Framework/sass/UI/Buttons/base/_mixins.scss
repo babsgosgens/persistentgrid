@@ -131,11 +131,15 @@
 		@if $b_border-style != $button-border-style {
 			border-style: $b_border-style;
 		}
+		@debug $b_border;
+		@debug $b_border-color;
+		@debug $button-border-color;
 		@if $b_border-color != $button-border-color {
 			border-color: $b_border-color;
 		}
 		@if $b_border-radius != $button-border-radius {
-			@include button-border(#{false,false,false,$b_border-radius});
+			$_border: false,false,false,$b_border-radius;
+			@include button-border($b_border);
 		}
 
 		@if $b_background != $button-background {

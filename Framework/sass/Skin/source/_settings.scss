@@ -40,6 +40,24 @@
 
 
 //	################################################################################################################################  //
+//	Compass Modular Scale					  																						  //
+//	################################################################################################################################  //
+
+	$base-size 							: $base-font-size;
+
+	// Not using MS, set font-sizes by hand instead.
+	$px-normal							: $base-size;
+	$px-xxs								: 10px;
+	$px-xs								: 12px;
+	$px-s								: 14px;
+	$px-m								: $px-normal;
+	$px-l								: 20px;
+	$px-xl								: 24px;
+	$px-xxl								: 38px;
+	$px-xxxl							: 46px;
+
+
+//	################################################################################################################################  //
 //	Import presets				  																								  //
 //	################################################################################################################################  //
 
@@ -49,7 +67,7 @@
 	@import "VerticalRhythm/source/settings";
 	@import "Base/source/settings";
 	@import "PersistentGrid/source/settings";
-	@import "UI/Buttons/source/settings";
+	@import "UI/Buttons/base/settings";
 	@import "UI/Accordion/source/settings";
 	@import "UI/Tabs/source/settings";
 	@import "Forms/source/settings";

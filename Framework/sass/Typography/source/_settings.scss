@@ -3,8 +3,11 @@
 
 
 // 	################################################################################################################################  //
-// 	Typography							  																							  //
+// 	Base Typography							  																							  //
 // 	################################################################################################################################  //
+
+	$font-size							: 14px;
+	$line-height 						: 24px;
 
 	$thin 								: 200;
 	$light 								: 300;
@@ -28,5 +31,27 @@
 
 	$type 								: $type-style, $type-variant, $type-weight, $type-family;
 
-	$font-size							: 14px;
-	$line-height 						: 24px;
+
+	$type-thin-weight					: $thin;
+	$type-thin 							: $type-style, $type-variant, $type-thin-weight, $type-family;
+
+	$type-light-weight					: $light;
+	$type-light 						: $type-style, $type-variant, $type-thin-weight, $type-family;
+
+	$type-medium-weight					: $medium;
+	$type-medium 						: $type-style, $type-variant, $type-medium-weight, $type-family;
+
+	$type-bold-weight					: $bold;
+	$type-bold 							: $type-style, $type-variant, $type-bold-weight, $type-family;
+
+	$type-extra-bold-weight				: $extra-bold;
+	$type-extra-bold 					: $type-style, $type-variant, $type-extra-bold-weight, $type-family;
+
+	$type-heavy-weight					: $heavy;
+	$type-heavy 						: $type-style, $type-variant, $type-heavy-weight, $type-family;
+
+// 	################################################################################################################################  //
+// 	Headings							  																							  //
+// 	################################################################################################################################  //
+
+
