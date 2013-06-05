@@ -525,7 +525,7 @@ input[type="color"] {
   color: white;
 }
 
-/* line 24, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 25, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .btn-primary {
   border-color: violet;
   background: violet;
@@ -536,7 +536,7 @@ input[type="color"] {
   background-image: linear-gradient(#f198f1, #eb6ceb);
 }
 
-/* line 27, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 30, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .btn-secondary {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: orange;
@@ -551,52 +551,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 30, ../Framework/sass/UI/Buttons/base/_behavior.scss */
-.btn-info {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  border-color: yellow;
-  background: yellow;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffff1a), color-stop(100%, #e5e600));
-  background-image: -webkit-linear-gradient(#ffff1a, #e5e600);
-  background-image: -moz-linear-gradient(#ffff1a, #e5e600);
-  background-image: -o-linear-gradient(#ffff1a, #e5e600);
-  background-image: linear-gradient(#ffff1a, #e5e600);
-  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-}
-
-/* line 33, ../Framework/sass/UI/Buttons/base/_behavior.scss */
-.btn-warning {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  border-color: orange;
-  background: orange;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffae1a), color-stop(100%, #e69500));
-  background-image: -webkit-linear-gradient(#ffae1a, #e69500);
-  background-image: -moz-linear-gradient(#ffae1a, #e69500);
-  background-image: -o-linear-gradient(#ffae1a, #e69500);
-  background-image: linear-gradient(#ffae1a, #e69500);
-  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-}
-
-/* line 36, ../Framework/sass/UI/Buttons/base/_behavior.scss */
-.btn-error {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  border-color: red;
-  background: red;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff1a1a), color-stop(100%, #e60000));
-  background-image: -webkit-linear-gradient(#ff1a1a, #e60000);
-  background-image: -moz-linear-gradient(#ff1a1a, #e60000);
-  background-image: -o-linear-gradient(#ff1a1a, #e60000);
-  background-image: linear-gradient(#ff1a1a, #e60000);
-  -webkit-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-  -moz-box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-  box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
-}
-
-/* line 39, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 50, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .btn-success {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   border-color: green;
@@ -611,7 +566,7 @@ input[type="color"] {
   box-shadow: false, -1px -1px 0 rgba(0, 0, 0, 0.3), false;
 }
 
-/* line 44, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 56, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .is-btn-hover, .btn:hover {
   border-color: purple;
   background: purple;
@@ -625,7 +580,7 @@ input[type="color"] {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 48, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 60, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .is-btn-active, .btn:active {
   border-style: inset;
   border-color: #404040;
@@ -637,19 +592,19 @@ input[type="color"] {
   background-image: linear-gradient(#333333, #4d4d4d);
 }
 
-/* line 52, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 64, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .btn-small {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 56, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 68, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .btn-big {
   font-size: 1.42857em;
   line-height: 1.8em;
 }
 
-/* line 59, ../Framework/sass/UI/Buttons/base/_behavior.scss */
+/* line 71, ../Framework/sass/UI/Buttons/base/_behavior.scss */
 .btn-stretch {
   width: 100%;
 }

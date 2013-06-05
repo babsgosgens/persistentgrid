@@ -21,23 +21,35 @@
 }
 
 // //Alternate styles
-.btn-primary {
-  @include button($button-primary-text, $button-primary-border, $button-primary-background, $button-primary-shadow);
+@if $button-primary {
+  .btn-primary {
+    @include button($button-primary-text, $button-primary-border, $button-primary-background, $button-primary-shadow);
+  }
 }
-.btn-secondary {
-  @include button($button-secondary-text, $button-secondary-border, $button-secondary-background, $button-secondary-shadow);
+@if $button-secondary {
+  .btn-secondary {
+    @include button($button-secondary-text, $button-secondary-border, $button-secondary-background, $button-secondary-shadow);
+  }
 }
-.btn-info {
-  @include button($button-info-text, $button-info-border, $button-info-background, $button-info-shadow);
+@if $button-info {
+  .btn-info {
+    @include button($button-info-text, $button-info-border, $button-info-background, $button-info-shadow);
+  }
 }
-.btn-warning {
-  @include button($button-warning-text, $button-warning-border, $button-warning-background, $button-warning-shadow);
+@if $button-warning {
+  .btn-warning {
+    @include button($button-warning-text, $button-warning-border, $button-warning-background, $button-warning-shadow);
+  }
 }
-.btn-error {
-  @include button($button-error-text, $button-error-border, $button-error-background, $button-error-shadow);
+@if $button-error {
+  .btn-error {
+    @include button($button-error-text, $button-error-border, $button-error-background, $button-error-shadow);
+  }
 }
-.btn-success {
-  @include button($button-success-text, $button-success-border, $button-success-background, $button-success-shadow);
+@if $button-success {
+  .btn-success {
+    @include button($button-success-text, $button-success-border, $button-success-background, $button-success-shadow);
+  }
 }
 
 // Button states

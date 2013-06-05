@@ -76,6 +76,8 @@
 	$button-active-shadow 					: $button-active-shadow-box, $button-active-shadow-inner;
 
 	// Primary button style
+	$button-primary 						: true;
+
 	$button-primary-text-color 				: $button-text-color; 				// inherit
 	$button-primary-text-shadow 			: $button-text-shadow; 				// inherit
 	$button-primary-text-align 				: $button-text-align; 				// inherit
@@ -96,6 +98,8 @@
 	$button-primary-shadow 					: $button-primary-shadow-box, $button-primary-shadow-inner;
 
 	// Secondary button style
+	$button-secondary 						: true;
+
 	$button-secondary-text-color 			: $button-text-color; 				// inherit
 	$button-secondary-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
 	$button-secondary-text-align 			: $button-text-align; 				// inherit
@@ -116,6 +120,8 @@
 	$button-secondary-shadow 				: $button-secondary-shadow-box, $button-secondary-shadow-inner;
 
 	// Info button style
+	$button-info 							: false;
+
 	$button-info-text-color 				: $button-text-color; 				// inherit
 	$button-info-text-shadow 				: -1px -1px 0 rgba(0,0,0,.3);
 	$button-info-text-align 				: $button-text-align; 				// inherit
@@ -136,6 +142,8 @@
 	$button-info-shadow 					: $button-info-shadow-box, $button-info-shadow-inner;
 
 	// Warning button style
+	$button-warning 						: false;
+
 	$button-warning-text-color 				: $button-text-color; 				// inherit
 	$button-warning-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
 	$button-warning-text-align 				: $button-text-align; 				// inherit
@@ -156,6 +164,8 @@
 	$button-warning-shadow 					: $button-warning-shadow-box, $button-warning-shadow-inner;
 
 	// Error button style
+	$button-error 							: false;
+
 	$button-error-text-color 				: $button-text-color; 				// inherit
 	$button-error-text-shadow 				: -1px -1px 0 rgba(0,0,0,.3);
 	$button-error-text-align 				: $button-text-align; 				// inherit
@@ -176,6 +186,8 @@
 	$button-error-shadow 					: $button-error-shadow-box, $button-error-shadow-inner;
 
 	// Success button style
+	$button-success 						: true;
+
 	$button-success-text-color 				: $button-text-color; 				// inherit
 	$button-success-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
 	$button-success-text-align 				: $button-text-align; 				// inherit
