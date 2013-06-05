@@ -54,7 +54,6 @@
 
 // Button states
 .is-btn-hover {
-  @debug $button-hover-border;
   @include button($button-hover-text, $button-hover-border, $button-hover-background, $button-hover-shadow);
 }
 .is-btn-active {

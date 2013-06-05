@@ -62,14 +62,14 @@
 //	################################################################################################################################  //
 
 	// First, import all individual settings. The order in which they are imported matters, because there are dependencies.
-	@import "Reset/source/settings";
-	@import "Typography/source/settings";
-	@import "VerticalRhythm/source/settings";
-	@import "Base/source/settings";
-	@import "PersistentGrid/source/settings";
+	@import "Reset/base/settings";
+	@import "Typography/base/settings";
+	@import "VerticalRhythm/base/settings";
+	@import "Base/base/settings";
+	@import "PersistentGrid/base/settings";
 	@import "UI/Buttons/base/settings";
-	@import "UI/Accordion/source/settings";
-	@import "UI/Tabs/source/settings";
-	@import "Forms/source/settings";
-	@import "Tables/source/settings";
+	@import "UI/Accordion/base/settings";
+	@import "UI/Tabs/base/settings";
+	@import "Forms/base/settings";
+	@import "Tables/base/settings";
 

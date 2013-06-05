@@ -131,9 +131,7 @@
 		@if $b_border-style != $button-border-style {
 			border-style: $b_border-style;
 		}
-		@debug $b_border;
-		@debug $b_border-color;
-		@debug $button-border-color;
+
 		@if $b_border-color != $button-border-color {
 			border-color: $b_border-color;
 		}
