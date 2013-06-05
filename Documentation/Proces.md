@@ -21,3 +21,21 @@ Not all headers may use the same style or fontface. This is why I like to define
 Obviously you will also need some type of navigation styling, but I consider that as a chapter of its own.
 
 What does the horizontal grid look like? What column widths will be introduced?
+
+
+# Directory structure
+
+Framework
+/sass
+	/Framework
+		/Base
+		 Base reset, for more info see: http://smacss.com/book/type-base
+		/Forms
+		/Helpers
+		/Lists
+		/PersistentGrid
+		/Tables
+		/Typography
+		/UI
+		/VerticalRhythm
+/config.rb

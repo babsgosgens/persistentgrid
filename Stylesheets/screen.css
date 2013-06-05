@@ -98,26 +98,31 @@ html {
 }
 
 /* line 1, ../Framework/sass/Base/base/_behavior.scss */
+html {
+  background-color: white;
+}
+
+/* line 4, ../Framework/sass/Base/base/_behavior.scss */
 a {
   color: violet;
 }
 
-/* line 14, ../Framework/sass/Base/base/_behavior.scss */
+/* line 17, ../Framework/sass/Base/base/_behavior.scss */
 .is-a-hover, a:hover {
   color: purple;
 }
 
-/* line 17, ../Framework/sass/Base/base/_behavior.scss */
+/* line 20, ../Framework/sass/Base/base/_behavior.scss */
 .is-a-active, a:active {
   color: #404040;
 }
 
-/* line 20, ../Framework/sass/Base/base/_behavior.scss */
+/* line 23, ../Framework/sass/Base/base/_behavior.scss */
 .is-a-visited, a:visited {
   color: #f7c5f7;
 }
 
-/* line 24, ../Framework/sass/Base/base/_behavior.scss */
+/* line 27, ../Framework/sass/Base/base/_behavior.scss */
 h1 {
   margin: 2.57143em 0 0.85714em;
   font-weight: 200;
@@ -125,7 +130,7 @@ h1 {
   line-height: 1.26316em;
 }
 
-/* line 29, ../Framework/sass/Base/base/_behavior.scss */
+/* line 32, ../Framework/sass/Base/base/_behavior.scss */
 h2 {
   margin: 0.85714em 0 0.42857em;
   font-weight: 500;
@@ -134,7 +139,7 @@ h2 {
   color: #666666;
 }
 
-/* line 35, ../Framework/sass/Base/base/_behavior.scss */
+/* line 38, ../Framework/sass/Base/base/_behavior.scss */
 h3 {
   margin: 1.71429em 0 0;
   font-weight: 500;
@@ -143,20 +148,20 @@ h3 {
   color: violet;
 }
 
-/* line 41, ../Framework/sass/Base/base/_behavior.scss */
+/* line 44, ../Framework/sass/Base/base/_behavior.scss */
 h4 {
   margin: 0.85714em 0 0;
   font-size: 1.42857em;
   line-height: 1.2em;
 }
 
-/* line 45, ../Framework/sass/Base/base/_behavior.scss */
+/* line 48, ../Framework/sass/Base/base/_behavior.scss */
 h5 {
   margin: 0.85714em 0 0;
   font-weight: 500;
 }
 
-/* line 49, ../Framework/sass/Base/base/_behavior.scss */
+/* line 52, ../Framework/sass/Base/base/_behavior.scss */
 h6 {
   margin: 0.42857em 0 0;
   font-weight: 600;
@@ -164,13 +169,13 @@ h6 {
   line-height: 2em;
 }
 
-/* line 56, ../Framework/sass/Base/base/_behavior.scss */
+/* line 59, ../Framework/sass/Base/base/_behavior.scss */
 h5 + p,
 h6 + p {
   margin-top: 0;
 }
 
-/* line 61, ../Framework/sass/Base/base/_behavior.scss */
+/* line 64, ../Framework/sass/Base/base/_behavior.scss */
 p {
   margin: 0.85714em 0;
 }
