@@ -1,0 +1,3 @@
+[submodule "scss/PersistentGrid"]
+	path = scss/PersistentGrid
+	url = https://github.com/babsgosgens/persistent-grid.git
