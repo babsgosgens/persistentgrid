@@ -1,0 +1,41 @@
+/* http://persistent-grid.com
+   v1.0 | 20130701
+   License: none (public domain)
+*/
+
+@import "compass";
+
+// Import Skin first, this is where any default settings can be changed before any style rules are rendered.
+@import "Skin/base";
+@import "Helpers/base";
+
+@import "Reset/base";
+@import "Typography/base";
+@import "VerticalRhythm/base";
+@import "Base/base";
+@import "PersistentGrid/base";
+@import "Forms/base";
+@import "UI/Buttons/base";
+@import "Lists/Lists/base";
+
+// These style apply only to the documentation
+.tags {
+	@include leading-border(1px, 0);
+	dt,
+	dd {
+		@include column;
+		@include padding-leader(.25);
+		@include trailing-border(1px, .25);
+	}
+	dt {
+		@include column-width(1/4);
+	}
+	dd {
+		@include column-width(3/4);
+	}
+}
+.tags-tag {
+	@include nested-reset;
+	color: $grey;
+	font-style: italic;
+}

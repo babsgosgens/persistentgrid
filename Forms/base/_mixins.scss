@@ -1,0 +1,74 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+
+	@mixin input-border {
+		@if $input-border {
+			border: $input-border;
+		}
+		@if $input-border-radius {
+			@include border-radius($input-border-radius);
+		}
+	}
+
+	@mixin input-background {
+		@if $input-background-image {
+			@include background-image( linear-gradient(white, #aaaaaa) );
+		}
+	}
+
+	@mixin input-shadow {
+		@if $input-shadow {
+			@include box-shadow($input-shadow);
+		}
+	}
+
+	@mixin webkit-remove-shadow-on-input-elements() {
+		//* http://davidwalsh.name/input-shadows-ipad *//
+		// color
+		// date
+		// datetime
+		// datetime-local
+		// email
+		// month
+		// number
+		// range
+		// search
+		// tel
+		// time
+		// url
+		// week
+		input[type="color"],
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="password"],
+		input[type="range"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"],
+		select,
+		textarea {
+		  -webkit-appearance: none;
+		  -moz-appearance: none; /* mobile firefox too! */
+		  -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+	}
+
+	@mixin webkit-remove-padding-spin-button {
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		}
+		input::-webkit-outer-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+	}
