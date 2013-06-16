@@ -2,6 +2,9 @@
 //* @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
 //* @license	License: none (public domain)
 //**
+@function column-padding($fraction: 1/2) {
+	@return $fraction * $column-padding;
+}
 
 @function fractionPercentage($fraction: 1/3) {
 	@return $fraction*100%;
