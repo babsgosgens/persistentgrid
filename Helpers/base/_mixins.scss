@@ -142,3 +142,11 @@
 		}
 	}
 }
+
+@mixin is-hidden {
+	position: absolute;
+	left: -9999em;
+}
+@mixin is-invisible {
+	display: none;
+}

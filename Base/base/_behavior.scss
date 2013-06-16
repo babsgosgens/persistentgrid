@@ -64,3 +64,20 @@ h6 {
 p {
 	margin: rhythm(.5) 0;
 }
+
+
+//* States *//
+
+@each $width in $column-breakpoints {
+	.is-hidden-#{$width} {
+		@media only screen and (min-width: $width) {
+			@include is-hidden;
+		}
+	}
+}
+.is-hidden {
+	@include is-hidden;
+}
+.is-invisible {
+	@include is-invisible;
+}
