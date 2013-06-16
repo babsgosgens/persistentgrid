@@ -1,0 +1,46 @@
+//**
+//* @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+//* @license	License: none (public domain)
+//**
+
+.#{$linkbar-base-class} {
+	@if($linkbar-background) {
+		background: $linkbar-background;
+	}
+}
+
+.#{$linkbar-base-class}-item,
+.#{$linkbar-base-class}-item-link {
+	display: inline-block;
+}
+
+.#{$linkbar-base-class}-item {
+	@if($linkbar-item-background) {
+		background: $linkbar-item-background;
+	}
+}
+
+.#{$linkbar-base-class}-item-link {
+	text-decoration: none;
+	@if($linkbar-item-link-padding) {
+		padding: $linkbar-item-link-padding;
+	}
+	@if($linkbar-item-link-background) {
+		background: $linkbar-item-link-background;
+	}
+	@if($linkbar-item-link-color) {
+		color: $linkbar-item-link-color;
+	}
+	&:hover {
+		@extend .is-#{$linkbar-base-class}-item-link-hover;
+	}
+}
+
+.is-#{$linkbar-base-class}-item-link-hover {
+	@if($linkbar-item-link-hover-background) {
+		background: $linkbar-item-link-hover-background;
+	}
+	@if($linkbar-item-link-hover-color) {
+		color: $linkbar-item-link-hover-color;
+	}
+}
