@@ -43,7 +43,10 @@
 }
 
 .#{$linkbar-base-class}-trigger {
-	@extend .is-hidden-#{nth($column-breakpoints,1)};
+	@extend .is-visible-#{nth($column-breakpoints,1)};
+	&+.#{$linkbar-base-class} {
+		@inline-block
+	}
 }
 
 @media only screen and (min-width: #{nth($column-breakpoints,1)}) {

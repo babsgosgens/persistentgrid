@@ -69,15 +69,40 @@ p {
 //* States *//
 
 @each $width in $column-breakpoints {
-	.is-hidden-#{$width} {
+	.is-visible-#{$width} {
+		@include is-not-visible;
+		@media only screen and (max-width: $width) {
+			@include is-visible;
+		}
+	}
+	.is-not-visible-#{$width} {
+		@include is-visible;
 		@media only screen and (min-width: $width) {
+			@include is-not-visible;
+		}
+	}
+	.is-hidden-#{$width} {
+		@include is-not-hidden;
+		@media only screen and (max-width: $width) {
 			@include is-hidden;
+		}
+	}
+	.is-not-hidden-#{$width} {
+		@include is-hidden;
+		@media only screen and (min-width: $width) {
+			@include is-not-hidden;
 		}
 	}
 }
 .is-hidden {
 	@include is-hidden;
 }
-.is-invisible {
-	@include is-invisible;
+.is-not-hidden {
+	@include is-not-hidden;
+}
+.is-visible {
+	@include is-visible;
+}
+.is-not-visible {
+	@include is-not-visible;
 }

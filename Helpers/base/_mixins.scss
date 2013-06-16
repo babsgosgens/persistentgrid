@@ -147,6 +147,12 @@
 	position: absolute;
 	left: -9999em;
 }
-@mixin is-invisible {
+@mixin is-not-hidden {
+	position: static;
+}
+@mixin is-visible {
+	display: block;
+}
+@mixin is-not-visible {
 	display: none;
 }
