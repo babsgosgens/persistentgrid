@@ -45,7 +45,12 @@
 .#{$linkbar-base-class}-trigger {
 	@extend .is-visible-#{nth($column-breakpoints,1)};
 	&+.#{$linkbar-base-class} {
-		@inline-block
+		@include is-hidden;
+	}
+	&:target {
+		&+.#{$linkbar-base-class} {
+			@include is-hidden;
+		}
 	}
 }
 

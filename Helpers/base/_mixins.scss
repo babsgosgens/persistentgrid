@@ -150,8 +150,8 @@
 @mixin is-not-hidden {
 	position: static;
 }
-@mixin is-visible {
-	display: block;
+@mixin is-visible($display: block) {
+	display: $display;
 }
 @mixin is-not-visible {
 	display: none;
