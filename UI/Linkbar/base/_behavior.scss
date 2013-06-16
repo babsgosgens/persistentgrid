@@ -5,6 +5,10 @@
 
 @import "../../../Base/base";
 
+##{$linkbar-base-class} {
+	@include column-padding;
+}
+
 .#{$linkbar-base-class}-item,
 .#{$linkbar-base-class}-item-link {
 	display: block;
@@ -44,17 +48,24 @@
 
 .#{$linkbar-base-class}-trigger {
 	@extend .is-visible-#{nth($column-breakpoints,1)};
+	display: inline-block;
 	&+.#{$linkbar-base-class} {
 		@include is-hidden;
 	}
-	&:target {
-		&+.#{$linkbar-base-class} {
-			@include is-hidden;
-		}
+}
+
+##{$linkbar-base-class}:target {
+	.#{$linkbar-base-class} {
+		@include is-not-hidden();
 	}
 }
 
 @media only screen and (min-width: #{nth($column-breakpoints,1)}) {
+	.#{$linkbar-base-class}-trigger {
+		&+.#{$linkbar-base-class} {
+			@include is-not-hidden;
+		}
+	}
 	.#{$linkbar-base-class}-item,
 	.#{$linkbar-base-class}-item-link {
 		display: inline-block;
