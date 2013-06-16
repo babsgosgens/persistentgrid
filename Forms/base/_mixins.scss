@@ -25,6 +25,12 @@
 		}
 	}
 
+	@mixin input-padding {
+		@if $input-padding {
+			padding: $input-padding;
+		}
+	}
+
 	@mixin webkit-remove-shadow-on-input-elements() {
 		//* http://davidwalsh.name/input-shadows-ipad *//
 		// color

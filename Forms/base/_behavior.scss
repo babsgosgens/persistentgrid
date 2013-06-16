@@ -21,7 +21,30 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
+	@extend .input;
+}
+
+.input {
+	@include input-padding;
 	@include input-border;
 	@include input-background;
 	@include input-shadow;
+	@include font($type);
+	height: $base-line-height;
+	line-height: $base-line-height;
+}
+
+// Stacked is default behavior
+.label,
+.input {
+	@include column-width(1/1);
+}
+
+.inline {
+	.label {
+		@include column-width(1/4);
+	}
+	.input {
+		@include column-width(3/4);
+	}
 }
