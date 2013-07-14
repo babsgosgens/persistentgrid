@@ -35,10 +35,10 @@
 	$button-shadow-inner 					: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	$button-shadow 							: $button-shadow-box, $button-shadow-inner;
 
-	$button-padding-top 					: false;
-	$button-padding-right 					: horizontal-rhythm(.5);
-	$button-padding-bottom 					: false;
-	$button-padding-left 					: rhythm(1/2);
+	$button-padding-top 					: 0;
+	$button-padding-right 					: column-padding(1/2);
+	$button-padding-bottom 					: 0;
+	$button-padding-left 					: column-padding(1/2);
 	$button-padding							: $button-padding-top, $button-padding-right, $button-padding-bottom, $button-padding-left;
 
 	// Hover state button style

@@ -10,6 +10,7 @@
 	// Value may also be false
 	@mixin module-padding($button-padding) {
 
+		// Extract the individual variables from the list
 		$top:    nth($button-padding, 1);
 		$right:  nth($button-padding, 2);
 		$bottom: nth($button-padding, 3);
@@ -20,17 +21,21 @@
 		@debug $bottom;
 		@debug $left;
 
+		// Determine if we have all the values for shorthand notation
 		$shorthand: true;
-		$shorthand: if( ($top==false), false, true);
-		$shorthand: if( ($right==false), false, true);
-		$shorthand: if( ($bottom==false), false, true);
-		$shorthand: if( ($left==false), false, true);
+		@if $top==false    { $shorthand: false; }
+		@if $right==false  { $shorthand: false; }
+		@if $bottom==false { $shorthand: false; }
+		@if $left==false   { $shorthand: false; }
 
 		@if $shorthand {
 			padding: $top $right $bottom $left;
 		}
 		@else {
-
+			@if $top { padding-top: $top; }
+			@if $right { padding-right: $right; }
+			@if $bottom { padding-bottom: $bottom; }
+			@if $left { padding-left: $left; }
 		}
 	}
 
@@ -47,9 +52,9 @@
 
 		// Determine if we have all the values for shorthand notation
 		$shorthand: true;
-		$shorthand: if( ($border-width==false), false, true);
-		$shorthand: if( ($border-style==false), false, true);
-		$shorthand: if( ($border-color==false), false, true);
+		@if $border-width==false { $shorthand: false; }
+		@if $border-style==false { $shorthand: false; }
+		@if $border-color==false { $shorthand: false; }
 
 		@if $shorthand {
 			border: $border-width $border-style $border-color;

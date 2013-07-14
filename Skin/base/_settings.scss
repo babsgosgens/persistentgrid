@@ -67,6 +67,8 @@
 //	################################################################################################################################  //
 
 	// First, import all individual settings. The order in which they are imported matters, because there are dependencies.
+	@import "PersistentGrid/base/functions";
+
 	@import "Reset/base/settings";
 	@import "Typography/base/settings";
 	@import "VerticalRhythm/base/settings";
