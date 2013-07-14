@@ -1,22 +1,31 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
 // 	################################################################################################################################  //
 // 	Compass Vertical Rhythm	
 //  For more information, see: http://compass-style.org/reference/compass/typography/vertical_rhythm/								  //
 // 	################################################################################################################################  //
 
-	$base-font-size						: $font-size; 										    // The base font size.
-	$base-line-height					: $line-height; 											// The base line height determines the basic unit of vertical rhythm.
+	$browser-default-font-size 			: $browser-default-font-size; 						// Default = 16px
+
+	$base-font-size						: $font-size; 
+	$base-line-height					: $line-height; 									// The base line height determines the basic unit of vertical rhythm.
 	$default-rhythm-border-style		: solid; 											// Set the default border style for rhythm borders.
 	$relative-font-sizing				: true; 											// Set to false if you want to use absolute pixels in sizing your typography.
 	$round-to-nearest-half-line			: false; 											// Allows the adjust-font-size-to mixin and the lines-for-font-size function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines.
 	$min-line-padding					: 2px; 												// Ensure there is at least this many pixels of vertical padding above and below the text.
-	$font-unit							: if($relative-font-sizing, 1em, $base-font-size); 	// $base-font-size but in your output unit of choice. Defaults to 1em when $relative-font-sizing is true.
+	$font-unit							: 1em; 												// $base-font-size but in your output unit of choice. Defaults to 1em when $relative-font-sizing is true.
+	$leading-unit						: 1em; 												// $base-line-height but in your output unit of choice. Defaults to 1em when $relative-font-sizing is true.
 
-	// Experimental, the rem unit is not widely supported yet
+	// Rem is xperimental and not yet implemented
 	$use-rem-for-sizing 				: false;
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
+	$leading-unit 						: if($use-rem-for-sizing, 1rem, $leading-unit);
 
 	// Debugging
 	$debug-rhythm						: false;
 
-	// If true, the baseline will be established before declaring the project's default typeface from within the Typography module.
-	$establish-baseline 				: true;
+	// If false, the baseline will be established from within the Typography module.
+	$establish-baseline 				: false !default;

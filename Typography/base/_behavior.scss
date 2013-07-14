@@ -1,4 +1,12 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+
 @if $establish-baseline {
+	// The project's font size and line will be set from within the Vertical-Rhythm module.
+	// Just set the remaining font values
 	html {
 		@include type-family($type);
 		@include type-style($type);
@@ -7,5 +15,6 @@
 	}
 }
 @else {
+	// Set the project's font size and line height and all other default font settings from within the (this) Typography module.
 	@include pg-establish-baseline;
 }

@@ -1,3 +1,8 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
 	@import "functions";
 	@import "mixins";
 
@@ -49,9 +54,3 @@
 
 	$type-heavy-weight					: $heavy;
 	$type-heavy 						: $type-style, $type-variant, $type-heavy-weight, $type-family;
-
-// 	################################################################################################################################  //
-// 	Headings							  																							  //
-// 	################################################################################################################################  //
-
-

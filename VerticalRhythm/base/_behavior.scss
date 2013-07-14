@@ -1,14 +1,17 @@
-@import 
-	"mixins",
-	"settings"
-;
-
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
 @if $establish-baseline {
 	@include establish-baseline;
 }
 
 @if $debug-rhythm {
 	html {
-		@include debug-rhythm;			
+		@extend .debug;			
 	}
+}
+
+.debug {
+	@include debug-rhythm;
 }

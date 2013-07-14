@@ -1,10 +1,13 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
 @mixin debug-rhythm
 {
-	/* Settings: $debug-rhythm=true; */
 	$to: transparent;
 	$from: rgba(226, 255, 255, .5);
 	background-image: -webkit-linear-gradient($from 50%, $to 50%);
 	background-image: linear-gradient($from 50%, $to 50%);
 	background-size: rhythm(2) rhythm(2);
-	* { /* Settings: $debug-rhythm=true; */ background-color: transparent !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
+	* { background-color: transparent !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
 }

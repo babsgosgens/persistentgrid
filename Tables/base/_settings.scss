@@ -1,5 +1,81 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
 // 	################################################################################################################################  //
 // 	Tables							  																								  //
 // 	################################################################################################################################  //
 
 	$tables-active-column-background-color	: $color-theme;
+
+
+	$table-base-class 						: ".table";
+
+	// table
+	$table-width 							: 100%;
+
+	$table-border-width 					: 1px;
+	$table-border-style 					: solid;
+	$table-border-color 					: $color-theme;
+	$table-border-radius 					: $corner-radius;
+	$table-border 							: false; //$table-border-width $table-border-style $table-border-color; // Set to false if you don't want any border to render
+
+	$table-type-style 						: $type-style;
+	$table-type-variant						: $type-variant;
+	$table-type-weight						: $type-weight;
+	$table-type-family 						: $type-family;
+	$table-type-size 						: $font-size;
+	$table-type-leading 					: $line-height;
+	$table-type 							: $table-type-style, $table-type-variant, $table-type-weight, $table-type-family, $table-type-size, $table-type-leading;
+
+	//table-caption
+	$table-caption-type-style 				: $type-style;
+	$table-caption-type-variant				: $type-variant;
+	$table-caption-type-weight				: $type-weight;
+	$table-caption-type-family 				: $type-family;
+	$table-caption-type-size 				: $font-size;
+	$table-caption-type-leading 			: $line-height;
+	$table-caption-type 					: $table-caption-type-style, $table-caption-type-variant, $table-caption-type-weight, $table-caption-type-family, $table-caption-type-size, $table-caption-type-leading;
+
+	$table-caption-alignment 				: left;
+
+	// $table-colgroup
+	$table-colgroup-border					: 1px solid $white;
+	$table-colgroup-background				: rgba(0,0,0,.2);
+
+	// $table-col
+	$table-col-border					: 1px solid $white;
+	$table-col-background				: rgba(0,0,0,.2);
+
+	// $table-head
+
+	// $table-body
+
+	// $table-footer
+
+	// $table-row
+	$table-row-odd-background 				: darken($white, 10);
+	$table-row-even-background 				: false;
+
+	$table-row-state-hover-background 		: lighten($color-primary, 20);
+
+	// $table-cell	
+	$table-cell-padding-top 				: rhythm(.25);
+	$table-cell-padding-right 				: column-padding(.25);
+	$table-cell-padding-bottom 				: rhythm(.25);
+	$table-cell-padding-left 				: column-padding(.25);
+	$table-cell-padding 					: $table-cell-padding-top $table-cell-padding-right  $table-cell-padding-bottom $table-cell-padding-left; // Set to false for no padding
+
+	// $table-th
+
+	$table-th-type-style 						: $table-type-style;
+	$table-th-type-variant						: $table-type-variant;
+	$table-th-type-weight						: $heavy;
+	$table-th-type-family 						: $table-type-family;
+	$table-th-type 								: $table-th-type-style, $table-th-type-variant, $table-th-type-weight, $table-th-type-family;
+
+	$table-th-type-size 						: px-to-relative-size(14px);
+	$table-th-type-leading 						: px-to-relative-size(10px);
+
+	// $table-td

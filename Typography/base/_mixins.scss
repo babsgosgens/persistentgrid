@@ -1,16 +1,22 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
 // $typeface must be an array consisting of: style, variant, weight, font-family; 
 @mixin pg-establish-baseline
 {
-	* html {
-		font-size: 100% * $font-size / $browser-default-font-size;
-	}
 	html {
-		@include font($type, px-to-percentage($font-size, $browser-default-font-size), px-to-em($line-height));
+		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
+		$lh: px-to-relative-line-height($line-height, $font-size);
+
+		@include font($type, $fs, $lh);
 	}
 }
 
 // $typeface must be an array consisting of: style, variant, weight, font-family; 
-@mixin font( $type, $font-size:$base-font-size, $line-height:$base-line-height)
+// $font-sizes must be in final unit
+@mixin font($type, $font-size:$base-font-size, $line-height:$base-line-height)
 {
 	@if $type {
 		$font-style 	:   nth($type,1);
@@ -22,6 +28,7 @@
 	}
 }
 
+// These mixins take a single value from the type array and invoke the appropriate font mixin
 @mixin type-style($type)
 {
 	@include font-style( nth($type,1) );
@@ -55,3 +62,12 @@
 {
 	font-family: $font-family;
 }
+@mixin font-size($target,$context:$base-font-size)
+{
+	font-size: px-to-relative-font-size($target, $context);
+}
+@mixin line-height($target,$context:$base-line-height)
+{
+	line-height: px-to-relative-line-height($target, $context);
+}
+
