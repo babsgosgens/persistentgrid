@@ -1,7 +1,7 @@
-//**
-//* @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
-//* @license	License: none (public domain)
-//**
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
 
 .#{$root-class} {
 	@include root();
@@ -23,7 +23,7 @@
 
 // Roll out the required columns
 @each $fraction in $column-widths {
-	$name: fractionToText($fraction);
+	$name: fraction-to-text($fraction);
 	@if $name {
 		.#{$name}#{$column-base-class},
 		.collection-of-#{$name}s>* {
@@ -56,7 +56,7 @@
 		min-width: auto;
 	}
 	@each $fraction in $column-widths {
-		$name: fractionToText($fraction);
+		$name: fraction-to-text($fraction);
 		@if $name {
 			.#{$name}#{$column-base-class},
 			.collection-of-#{$name}s>* {

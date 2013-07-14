@@ -1,7 +1,7 @@
-//**
-//* @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
-//* @license	License: none (public domain)
-//**
+// /**
+//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
 
 @mixin column-behavior($use-box-sizing: $use-box-sizing, $column-style: $column-style)
 {
@@ -15,20 +15,16 @@
 		float: left;
 		display: block;
 	}
-	@if $column-style == 'table' {
-		float: left;
-		display: table;
-	}
 	vertical-align: top;
 	height: auto;
 }
 
 @mixin column-width($fraction: $base-column-width, $persistent: false) {
 	@if $persistent {
-		width: fractionPercentage($fraction) !important;
+		width: fraction-to-percentage($fraction) !important;
 	}
 	@else {
-		width: fractionPercentage($fraction);
+		width: fraction-to-percentage($fraction);
 	}
 	@if $column-style == 'inline' {
 		@if $negative-right-margin != 0 {
@@ -51,7 +47,7 @@
 
 @mixin move($fraction) {
 	position: relative;
-	left: fractionPercentage($fraction);
+	left: fraction-to-percentage($fraction);
 }
 
 @mixin root() {
