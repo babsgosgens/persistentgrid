@@ -18,11 +18,11 @@
 // // Modules
 // @import "Tables/base";
 // @import "Forms/base";
-// @import "UI/Buttons/base";
+@import "UI/Buttons/base";
 // @import "UI/Linkbar/base";
 // @import "Lists/Lists/base";
 
-// // These style apply only to the documentation
+// These style apply only to the documentation
 // .tags {
 // 	@include leading-border(1px, 0);
 // 	dt,

@@ -3,4 +3,6 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-@import "mixins/all";
+@import "../../../PersistentGrid/base/functions";
+
+@debug column-padding(1);

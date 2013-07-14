@@ -1,12 +1,11 @@
 // /**
-//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
-//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
 	// Button base class
 	$button-base-class 						: "btn";
 	$button-cursor							: pointer;
-	$button-padding							: $column-padding / 2;
 
 	// Default button style
 	$button-type-style 						: $type-style;
@@ -15,7 +14,7 @@
 	$button-type-family 					: $type-family;
 	$button-type-size 						: $font-size;
 	$button-type-leading 					: $line-height;
-	$button-type 							: $button-type-style, $button-type-variant, $button-type-weight, $button-type-family, $button-type-size, $button-type-leading;
+	$button-type 							: ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading;
 
 	$button-text-color 						: $white;
 	$button-text-shadow 					: -1px -1px 0 rgba(0,0,0,.5);
@@ -30,11 +29,17 @@
 	$button-border-style					: outset;
 	$button-border-color					: $button-background-color;
 	$button-border-radius					: $corner-radius;
-	$button-border 							: $button-border-width, $button-border-style, $button-border-color, $button-border-radius;
+	$button-border 							: ($button-border-width, $button-border-style, $button-border-color), $button-border-radius;
 
 	$button-shadow-box 						: 0 1px 2px rgba(0, 0, 0, 0.05);
 	$button-shadow-inner 					: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	$button-shadow 							: $button-shadow-box, $button-shadow-inner;
+
+	$button-padding-top 					: false;
+	$button-padding-right 					: horizontal-rhythm(.5);
+	$button-padding-bottom 					: false;
+	$button-padding-left 					: rhythm(1/2);
+	$button-padding							: $button-padding-top, $button-padding-right, $button-padding-bottom, $button-padding-left;
 
 	// Hover state button style
 	$button-hover-text-color 				: $button-text-color; 				// inherit

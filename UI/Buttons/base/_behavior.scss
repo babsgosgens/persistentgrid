@@ -5,8 +5,8 @@
 
 .#{$button-base-class} {
   display: inline-block;
-  @include button-padding;
-  @include button-border;
+  @include module-padding($button-padding);
+  @include module-border($button-border);
   @include button-background;
   @include button-shadow;
   @include button-text;
@@ -20,7 +20,7 @@
   }
 }
 
-// //Alternate styles
+//Alternate styles
 @if $button-primary {
   .#{$button-base-class}-primary {
     @include button($button-primary-text, $button-primary-border, $button-primary-background, $button-primary-shadow);
@@ -70,4 +70,3 @@
 .#{$button-base-class}-stretch {
   width: 100%;
 }
-

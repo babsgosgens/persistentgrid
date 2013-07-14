@@ -1,34 +1,81 @@
 // /**
-//  * @copyright	Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
-//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
 // TODO: button-text gets executed while it shouldnt in the alternate styles - that's 7*3 lines that shouldnt be there.
-	@mixin button-padding {
-		// Mixin the grid'd colunn padding if its used, $column-base-class is the first setting of PG
-		@if $column-base-class {
-			@include column-padding;
+
+
+	// Expects an array of four values
+	// Value may also be false
+	@mixin module-padding($button-padding) {
+
+		$top:    nth($button-padding, 1);
+		$right:  nth($button-padding, 2);
+		$bottom: nth($button-padding, 3);
+		$left:   nth($button-padding, 4);
+
+		@debug $top;
+		@debug $right;
+		@debug $bottom;
+		@debug $left;
+
+		$shorthand: true;
+		$shorthand: if( ($top==false), false, true);
+		$shorthand: if( ($right==false), false, true);
+		$shorthand: if( ($bottom==false), false, true);
+		$shorthand: if( ($left==false), false, true);
+
+		@if $shorthand {
+			padding: $top $right $bottom $left;
 		}
 		@else {
-			padding: $button-padding;
+
 		}
 	}
 
-	@mixin button-border($b_border: $button-border) {
+	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
+	@mixin module-border($border) {
 
-		$b_border-width: nth($b_border,1);
-		$b_border-style: nth($b_border,2);
-		$b_border-color: nth($b_border,3);
-		$b_border-radius: nth($b_border,4);
+		// Extract the individual variables from the list
+		$border-radius: nth($border,2);
+		$border: nth($border,1);
 
-		@if $b_border-width {
-			border: $b_border-width $b_border-style $b_border-color;
-			// Retain verticl grid
-			margin-top: -1*$b_border-width;
-			margin-bottom: -1*$b_border-width;
+		$border-width: nth($border,1);
+		$border-style: nth($border,2);
+		$border-color: nth($border,3);
+
+		// Determine if we have all the values for shorthand notation
+		$shorthand: true;
+		$shorthand: if( ($border-width==false), false, true);
+		$shorthand: if( ($border-style==false), false, true);
+		$shorthand: if( ($border-color==false), false, true);
+
+		@if $shorthand {
+			border: $border-width $border-style $border-color;
+			// Retain vertical grid
+			margin-top: -1*$border-width;
+			margin-bottom: -1*$border-width;
+
 		}
-		@if $b_border-radius {
-			@include border-radius($b_border-radius);
+		@else {
+			@if $border-width {
+				border-width: $border-width;
+				// Retain vertical grid
+				margin-top: -1*$border-width;
+				margin-bottom: -1*$border-width;
+			}
+			@if $border-style {
+				border-style: $border-style;
+			}
+			@if $border-color {
+				border-color: $border-color;
+			}
+		}
+		
+		// Render the rounded corners
+		@if $border-radius {
+			@include border-radius($border-radius);
 		}
 	}
 
@@ -73,12 +120,15 @@
 
 	@mixin button-type($b_type) {
 
+		$b_type-size: nth($b_type,2);
+		$b_type-leading: nth($b_type,3);
+
+		$b_type: nth($b_type,1);
+
 		$b_type-style: nth($b_type,1);
 		$b_type-variant: nth($b_type,2);
 		$b_type-weight: nth($b_type,3);
 		$b_type-family: nth($b_type,4);
-		$b_type-size: nth($b_type,5);
-		$b_type-leading: nth($b_type,6);
 
 		@if $b_type-style != $type-style {
 			@include font-style($b_type-style);
@@ -137,7 +187,11 @@
 		}
 		@if $b_border-radius != $button-border-radius {
 			$_border: false,false,false,$b_border-radius;
-			@include button-border($b_border);
+			// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@include module-border($b_border);
 		}
 
 		@if $b_background != $button-background {
