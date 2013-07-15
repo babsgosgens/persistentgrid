@@ -55,7 +55,7 @@
 	$button-hover-border-style				: $button-border-style; 			// inherit
 	$button-hover-border-color				: $button-hover-background-color;
 	$button-hover-border-radius				: $button-border-radius; 			// inherit
-	$button-hover-border 					: $button-hover-border-width, $button-hover-border-style, $button-hover-border-color, $button-hover-border-radius;
+	$button-hover-border 					: ($button-hover-border-width, $button-hover-border-style, $button-hover-border-color), $button-hover-border-radius;
 
 	$button-hover-shadow-box 				: $button-shadow-box;				// inherit
 	$button-hover-shadow-inner 				: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
@@ -75,7 +75,7 @@
 	$button-active-border-style				: inset; 			// inherit
 	$button-active-border-color				: $button-active-background-color;
 	$button-active-border-radius			: $button-border-radius; 			// inherit
-	$button-active-border 					: $button-active-border-width, $button-active-border-style, $button-active-border-color, $button-active-border-radius;
+	$button-active-border 					: ($button-active-border-width, $button-active-border-style, $button-active-border-color), $button-active-border-radius;
 
 	$button-active-shadow-box 				: $button-shadow-box;				// inherit
 	$button-active-shadow-inner 			: $button-shadow-inner;				// inherit
@@ -97,7 +97,7 @@
 	$button-primary-border-style			: $button-border-style; 			// inherit
 	$button-primary-border-color			: $button-primary-background-color;
 	$button-primary-border-radius			: $button-border-radius; 			// inherit
-	$button-primary-border 					: $button-primary-border-width, $button-primary-border-style, $button-primary-border-color, $button-primary-border-radius;
+	$button-primary-border 					: ($button-primary-border-width, $button-primary-border-style, $button-primary-border-color), $button-primary-border-radius;
 
 	$button-primary-shadow-box 				: $button-shadow-box;				// inherit
 	$button-primary-shadow-inner 			: $button-shadow-inner;				// inherit
@@ -119,14 +119,14 @@
 	$button-secondary-border-style			: $button-border-style; 			// inherit
 	$button-secondary-border-color			: $button-secondary-background-color;
 	$button-secondary-border-radius			: $button-border-radius; 			// inherit
-	$button-secondary-border 				: $button-secondary-border-width, $button-secondary-border-style, $button-secondary-border-color, $button-secondary-border-radius;
+	$button-secondary-border 				: ($button-secondary-border-width, $button-secondary-border-style, $button-secondary-border-color), $button-secondary-border-radius;
 
 	$button-secondary-shadow-box 			: $button-shadow-box;				// inherit
 	$button-secondary-shadow-inner 			: $button-shadow-inner;				// inherit
 	$button-secondary-shadow 				: $button-secondary-shadow-box, $button-secondary-shadow-inner;
 
 	// Info button style
-	$button-info 							: false;
+	$button-info 							: true;
 
 	$button-info-text-color 				: $button-text-color; 				// inherit
 	$button-info-text-shadow 				: -1px -1px 0 rgba(0,0,0,.3);
@@ -141,14 +141,14 @@
 	$button-info-border-style				: $button-border-style; 			// inherit
 	$button-info-border-color				: $button-info-background-color;
 	$button-info-border-radius				: $button-border-radius; 			// inherit
-	$button-info-border 					: $button-info-border-width, $button-info-border-style, $button-info-border-color, $button-info-border-radius;
+	$button-info-border 					: ($button-info-border-width, $button-info-border-style, $button-info-border-color), $button-info-border-radius;
 
 	$button-info-shadow-box 				: $button-shadow-box;				// inherit
 	$button-info-shadow-inner 				: $button-shadow-inner;				// inherit
 	$button-info-shadow 					: $button-info-shadow-box, $button-info-shadow-inner;
 
 	// Warning button style
-	$button-warning 						: false;
+	$button-warning 						: true;
 
 	$button-warning-text-color 				: $button-text-color; 				// inherit
 	$button-warning-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
@@ -163,14 +163,14 @@
 	$button-warning-border-style			: $button-border-style; 			// inherit
 	$button-warning-border-color			: $button-warning-background-color;
 	$button-warning-border-radius			: $button-border-radius; 			// inherit
-	$button-warning-border 					: $button-warning-border-width, $button-warning-border-style, $button-warning-border-color, $button-warning-border-radius;
+	$button-warning-border 					: ($button-warning-border-width, $button-warning-border-style, $button-warning-border-color), $button-warning-border-radius;
 
 	$button-warning-shadow-box 				: $button-shadow-box;				// inherit
 	$button-warning-shadow-inner 			: $button-shadow-inner;				// inherit
 	$button-warning-shadow 					: $button-warning-shadow-box, $button-warning-shadow-inner;
 
 	// Error button style
-	$button-error 							: false;
+	$button-error 							: true;
 
 	$button-error-text-color 				: $button-text-color; 				// inherit
 	$button-error-text-shadow 				: -1px -1px 0 rgba(0,0,0,.3);
@@ -185,7 +185,7 @@
 	$button-error-border-style				: $button-border-style; 			// inherit
 	$button-error-border-color				: $button-error-background-color;
 	$button-error-border-radius				: $button-border-radius; 			// inherit
-	$button-error-border 					: $button-error-border-width, $button-error-border-style, $button-error-border-color, $button-error-border-radius;
+	$button-error-border 					: ($button-error-border-width, $button-error-border-style, $button-error-border-color), $button-error-border-radius;
 
 	$button-error-shadow-box 				: $button-shadow-box;				// inherit
 	$button-error-shadow-inner 				: $button-shadow-inner;				// inherit
@@ -207,7 +207,7 @@
 	$button-success-border-style			: $button-border-style; 			// inherit
 	$button-success-border-color			: $button-success-background-color;
 	$button-success-border-radius			: $button-border-radius; 			// inherit
-	$button-success-border 					: $button-success-border-width, $button-success-border-style, $button-success-border-color, $button-success-border-radius;
+	$button-success-border 					:( $button-success-border-width, $button-success-border-style, $button-success-border-color), $button-success-border-radius;
 
 	$button-success-shadow-box 				: $button-shadow-box;				// inherit
 	$button-success-shadow-inner 			: $button-shadow-inner;				// inherit

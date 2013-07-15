@@ -5,12 +5,12 @@
 
 .#{$button-base-class} {
   display: inline-block;
-  @include module-padding($button-padding);
-  @include module-border($button-border);
+  @include button-padding;
+  @include button-border;
   @include button-background;
   @include button-shadow;
-  @include button-text;
-  @include button-type($button-type);
+  @include button-text;;
+  @include button-type;
   text-decoration: none;
   &:hover {
     @extend .is-#{$button-base-class}-hover !optional;

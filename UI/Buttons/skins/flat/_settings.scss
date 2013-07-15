@@ -8,7 +8,7 @@
 // Default button style
 $button-type-weight						: $regular;
 $button-type-size 						: 16px;
-$button-type 							: $button-type-style, $button-type-variant, $button-type-weight, $button-type-family, $button-type-size, $button-type-leading;
+$button-type 							: ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading;
 
 $button-text-shadow 					: false;
 $button-text 							: $button-text-color, $button-text-shadow, $button-text-align;
@@ -17,7 +17,7 @@ $button-background-image				: false;
 $button-background 						: $button-background-color, $button-background-image;
 
 $button-border-style					: solid;
-$button-border 							: $button-border-width, $button-border-style, $button-border-color, $button-border-radius;
+$button-border 							: ($button-border-width, $button-border-style, $button-border-color), $button-border-radius;
 
 $button-shadow-box 						: false;
 $button-shadow-inner 					: false;
@@ -28,7 +28,7 @@ $button-hover-background-image			: false;
 $button-hover-background 				: $button-hover-background-color, $button-hover-background-image;
 
 $button-hover-border-style				: solid;
-$button-hover-border 					: $button-hover-border-width, $button-hover-border-style, $button-hover-border-color, $button-hover-border-radius;
+$button-hover-border 					: ($button-hover-border-width, $button-hover-border-style, $button-hover-border-color), $button-hover-border-radius;
 
 $button-hover-shadow-box 				: false;
 $button-hover-shadow-inner 				: false;
@@ -39,7 +39,7 @@ $button-active-background-image			: false;
 $button-active-background 				: $button-active-background-color, $button-active-background-image;
 
 $button-active-border-style				: solid;
-$button-active-border 					: $button-active-border-width, $button-active-border-style, $button-active-border-color, $button-active-border-radius;
+$button-active-border 					: ($button-active-border-width, $button-active-border-style, $button-active-border-color), $button-active-border-radius;
 
 $button-active-shadow-box 				: false;
 $button-active-shadow-inner 			: false;
@@ -53,7 +53,7 @@ $button-primary-background-image		: false;
 $button-primary-background 				: $button-primary-background-color, $button-primary-background-image;
 
 $button-primary-border-style			: $button-border-style;
-$button-primary-border 					: $button-primary-border-width, $button-primary-border-style, $button-primary-border-color, $button-primary-border-radius;
+$button-primary-border 					: ($button-primary-border-width, $button-primary-border-style, $button-primary-border-color), $button-primary-border-radius;
 
 $button-primary-shadow-box 				: false;
 $button-primary-shadow-inner 			: false;
@@ -67,7 +67,7 @@ $button-secondary-background-image		: false;
 $button-secondary-background 			: $button-secondary-background-color, $button-secondary-background-image;
 
 $button-secondary-border-style			: $button-border-style;
-$button-secondary-border 				: $button-secondary-border-width, $button-secondary-border-style, $button-secondary-border-color, $button-secondary-border-radius;
+$button-secondary-border 				: ($button-secondary-border-width, $button-secondary-border-style, $button-secondary-border-color), $button-secondary-border-radius;
 
 $button-secondary-shadow-box 			: false;
 $button-secondary-shadow-inner 			: false;
@@ -82,7 +82,7 @@ $button-info-background-image			: false;
 $button-info-background 				: $button-info-background-color, $button-info-background-image;
 
 $button-info-border-style				: $button-border-style;
-$button-info-border 					: $button-info-border-width, $button-info-border-style, $button-info-border-color, $button-info-border-radius;
+$button-info-border 					: ($button-info-border-width, $button-info-border-style, $button-info-border-color), $button-info-border-radius;
 
 $button-info-shadow-box 				: false;
 $button-info-shadow-inner 				: false;
@@ -96,7 +96,7 @@ $button-warning-background-image		: false;
 $button-warning-background 				: $button-warning-background-color, $button-warning-background-image;
 
 $button-warning-border-style			: $button-border-style;
-$button-warning-border 					: $button-warning-border-width, $button-warning-border-style, $button-warning-border-color, $button-warning-border-radius;
+$button-warning-border 					: ($button-warning-border-width, $button-warning-border-style, $button-warning-border-color), $button-warning-border-radius;
 
 $button-warning-shadow-box 				: false;
 $button-warning-shadow-inner 			: false;
@@ -110,7 +110,7 @@ $button-error-background-image			: false;
 $button-error-background 				: $button-error-background-color, $button-error-background-image;
 
 $button-error-border-style				: $button-border-style;
-$button-error-border 					: $button-error-border-width, $button-error-border-style, $button-error-border-color, $button-error-border-radius;
+$button-error-border 					: ($button-error-border-width, $button-error-border-style, $button-error-border-color), $button-error-border-radius;
 
 $button-error-shadow-box 				: false;
 $button-error-shadow-inner 				: false;
@@ -125,7 +125,7 @@ $button-success-background-image		: false;
 $button-success-background 				: $button-success-background-color, $button-success-background-image;
 
 $button-success-border-style			: $button-border-style;
-$button-success-border 					: $button-success-border-width, $button-success-border-style, $button-success-border-color, $button-success-border-radius;
+$button-success-border 					: ($button-success-border-width, $button-success-border-style, $button-success-border-color), $button-success-border-radius;
 
 $button-success-shadow-box 				: false;
 $button-success-shadow-inner 			: $button-shadow-inner;
