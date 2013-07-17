@@ -42,6 +42,8 @@
 
 		// Buttons are often anchor links, visited links also need to be set;
 		@if $text-color {
+			&:hover,
+			&:active,
 			&:visited {
 				color: $text-color;
 			}
