@@ -24,10 +24,12 @@
 		$background-color: nth($background,1);
 		$background-image: nth($background,2);
 
-		background: 
-			if($background-color,$background-color, null) 
-			if($background-image,$background-image, null)
-		;
+		@if $background-color {
+			background-color: $background-color;
+		}
+		@if $background-image {
+			background-image: $background-image;
+		}
 	}
 
 	// Placeholder mixin
@@ -143,14 +145,32 @@
 		$background-color: nth($background,1);
 		$background-image: nth($background,2);
 
-		@if $background-color == $button-background-color {
+		// @debug $background-image==$button-background-image;
+
+		$shorthand: true;
+		@if $background-color==$button-background-color {
 			$background-color: false;
+			$shorthand: false;
 		}
-		@if $background-image == $button-background-image {
+		@if $background-image==$button-background-image {
 			$background-image: false;
+			$shorthand: false;
 		}
-		@include button-background(($background-color, $background-image));
-		    
+
+		@if $shorthand {
+			@debug "Using shorthand";
+			@include button-background(($background-color, $background-image));
+		}
+		@else {
+			@if $background-color {
+				@debug "Just printing color";
+				background-color: $background-color;			
+			}
+			@if $background-image {
+				@debug "Just printing image";
+				background-image: $background-image;			
+			}
+		}
 
 		// Compare shadow values
 		@if $shadow != $button-shadow {
