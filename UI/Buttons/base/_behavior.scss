@@ -5,7 +5,7 @@
 
 .#{$button-base-class} {
   display: inline-block;
-  height: $base-line-height;
+  min-height: px-to-em($base-line-height);
   @include button-padding;
   @include button-border;
   @include button-background;

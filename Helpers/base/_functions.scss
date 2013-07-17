@@ -8,6 +8,24 @@
 	@return rhythm($lines);
 }
 
+// Consider this:
+// $border-width: false;
+// if($border-width, 2*$border-width, $border-width);
+// the second expression will break the script because SASS is executing it regardless of whether the condition is true or false
+// By wrapping it in the multiply function, this issue gets bypassed:
+// if($border-width, multiply(2,$border-width), $border-width);
+@function multiply($factor, $subject) {
+	@if $subject==0 {
+		@return 0;
+	}
+	@if $subject==false {
+		@return 0;
+	}
+	@if number($subject) {
+		@return $factor*$subject;
+	}
+}
+
 // @function establish-size($to-size,$from-size:$base-font-size) {
 // 	@if not $relative-font-sizing and $from-size != $base-font-size {
 //     @warn "$relative-font-sizing is false but a relative font size was passed to adjust-font-size-to"; }

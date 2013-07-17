@@ -32,9 +32,37 @@
 		}
 	}
 
+	// Expects an array of four values
+	// Use false if a value should not be rendered (0 is a valid value)
+	@mixin module-margin($margin) {
+
+		// Extract the individual variables from the list
+		$top:    nth($margin, 1);
+		$right:  nth($margin, 2);
+		$bottom: nth($margin, 3);
+		$left:   nth($margin, 4);
+
+		// Determine if we have all the values for shorthand notation
+		$shorthand: true;
+		@if $top==false    { $shorthand: false; }
+		@if $right==false  { $shorthand: false; }
+		@if $bottom==false { $shorthand: false; }
+		@if $left==false   { $shorthand: false; }
+
+		@if $shorthand {
+			margin: $top $right $bottom $left;
+		}
+		@else {
+			@if $top    { margin-top: $top; }
+			@if $right  { margin-right: $right; }
+			@if $bottom { margin-bottom: $bottom; }
+			@if $left   { margin-left: $left; }
+		}
+	}
+
 	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
 	// Use false if a value should not be rendered (0 is a valid value)
-	@mixin module-border($border) {
+	@mixin module-border($border, $border-collapse: true) {
 
 		// Extract the individual variables from the list
 		$border-radius: nth($border,2);
@@ -52,16 +80,10 @@
 
 		@if $shorthand {
 			border: $border-width $border-style $border-color;
-			// Retain vertical grid
-			margin-top: -1*$border-width;
-			margin-bottom: -1*$border-width;
 		}
 		@else {
 			@if $border-width {
 				border-width: $border-width;
-				// Retain vertical grid
-				margin-top: -1*$border-width;
-				margin-bottom: -1*$border-width;
 			}
 			@if $border-style {
 				border-style: $border-style;
@@ -99,5 +121,42 @@
 		}
 		@if $text-align {
 			text-align: $text-align;
+		}
+	}
+
+
+	// Expects a nested list in the format ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading
+	// The mixin will check if values are different from the base class and if so add them
+	// Equal values will be ignored to keep CSS as small as possible
+	@mixin module-type($type) {
+
+		$type-size: nth($type,2);
+		$type-leading: nth($type,3);
+
+		$type: nth($type,1);
+
+		$type-style:   nth($type,1);
+		$type-variant: nth($type,2);
+		$type-weight:  nth($type,3);
+		$type-family:  nth($type,4);
+
+		@if $type-style != $type-style {
+			@include font-style($type-style);
+		}
+		@if $type-variant != $type-variant {
+			@include font-variant($type-variant);
+		}
+		@if $type-weight != $type-weight {
+			@include font-weight($type-weight);
+		}
+		@if $type-family != $type-family {
+			@include font-family($type-family);
+		}
+		@if $type-size != $font-size {
+			@include adjust-font-size-to($type-size);
+		}
+		@if $type-leading != $line-height {
+			@debug $type-leading;
+			@include adjust-leading-to($type-leading/$base-line-height, $type-size);
 		}
 	}

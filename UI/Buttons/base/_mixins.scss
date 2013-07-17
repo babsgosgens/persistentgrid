@@ -61,35 +61,7 @@
 	// The mixin will check if values are different from the base class and if so add them
 	// Equal values will be ignored to keep CSS as small as possible
 	@mixin button-type($type: $button-type) {
-
-		$type-size: nth($type,2);
-		$type-leading: nth($type,3);
-
-		$type: nth($type,1);
-
-		$type-style:   nth($type,1);
-		$type-variant: nth($type,2);
-		$type-weight:  nth($type,3);
-		$type-family:  nth($type,4);
-
-		@if $type-style != $type-style {
-			@include font-style($type-style);
-		}
-		@if $type-variant != $type-variant {
-			@include font-variant($type-variant);
-		}
-		@if $type-weight != $type-weight {
-			@include font-weight($type-weight);
-		}
-		@if $type-family != $type-family {
-			@include font-family($type-family);
-		}
-		@if $type-size != $font-size {
-			@include adjust-font-size-to($type-size);
-		}
-		@if $type-leading != $line-height {
-			@include adjust-leading-to($type-leading, $type-size);
-		}
+		@include module-type($type)
 	}
 
 	// Expects a nested array
@@ -160,16 +132,13 @@
 		}
 
 		@if $shorthand {
-			@debug "Using shorthand";
 			@include button-background(($background-color, $background-image));
 		}
 		@else {
 			@if $background-color {
-				@debug "Just printing color";
 				background-color: $background-color;			
 			}
 			@if $background-image {
-				@debug "Just printing image";
 				background-image: $background-image;			
 			}
 		}
