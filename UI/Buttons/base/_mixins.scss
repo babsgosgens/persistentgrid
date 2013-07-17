@@ -28,7 +28,7 @@
 			background-color: $background-color;
 		}
 		@if $background-image {
-			background-image: $background-image;
+			@include background-image($background-image);
 		}
 	}
 
@@ -149,12 +149,12 @@
 
 		$shorthand: true;
 		@if $background-color==$button-background-color {
-			$background-color: false;
-			$shorthand: false;
+			// $background-color: false;
+			// $shorthand: false;
 		}
 		@if $background-image==$button-background-image {
-			$background-image: false;
-			$shorthand: false;
+			// $background-image: false;
+			// $shorthand: false;
 		}
 
 		@if $shorthand {

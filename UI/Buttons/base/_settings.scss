@@ -22,7 +22,7 @@
 	$button-text 							: $button-text-color, $button-text-shadow, $button-text-align;
 
 	$button-background-color 				: $color-theme;
-	$button-background-image				: #{linear-gradient(lighten($button-background-color,5), darken($button-background-color,5))};
+	$button-background-image				: linear-gradient(lighten($button-background-color,5), darken($button-background-color,5));
 	$button-background 						: $button-background-color, $button-background-image;
 
 	$button-border-width					: 1px;
