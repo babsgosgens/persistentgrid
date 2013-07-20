@@ -33,9 +33,9 @@
 	$input-margin-left 						: 0;
 	$input-margin							: $input-margin-top, $input-margin-right, $input-margin-bottom, $input-margin-left;
 
-	$input-padding-top 						: 0;
+	$input-padding-top 						: rhythm(.25);
 	$input-padding-right 					: .5em;
-	$input-padding-bottom 					: 0;
+	$input-padding-bottom 					: rhythm(.25);
 	$input-padding-left 					: .5em;
 	$input-padding							: $input-padding-top, $input-padding-right, $input-padding-bottom, $input-padding-left;
 
@@ -79,9 +79,9 @@
 	$label-margin							: $label-margin-top, $label-margin-right, $label-margin-bottom, $label-margin-left;
 
 	$label-padding-top 						: 0;
-	$label-padding-right 					: .5em;
+	$label-padding-right 					: $input-padding-right + px-to-em($input-border-width);
 	$label-padding-bottom 					: 0;
-	$label-padding-left 					: .5em;
+	$label-padding-left 					: $input-padding-left + px-to-em($input-border-width);
 	$label-padding							: $label-padding-top, $label-padding-right, $label-padding-bottom, $label-padding-left;
 
 	$label-border-width 					: false;

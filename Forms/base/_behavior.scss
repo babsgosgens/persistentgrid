@@ -22,6 +22,23 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
 	@extend .input;
+	@include input-shadow;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
 }
 
 .input {
@@ -33,9 +50,11 @@ input[type="color"] {
 	@include form-padding;
 	@include form-border;
 	@include form-background;
-	@include input-shadow;
 	@include form-type;
-	// @include form-text;
+	@include form-text;
+	&:focus {
+		@extend .is-focussed;
+	}
 }
 .label {
 	display: $label-display;
@@ -55,9 +74,16 @@ input[type="color"] {
 select,
 optgroup,
 option {
-	font: inherit !important;
+	font: inherit;
 }
 
+
+.is-focussed {
+	outline-color: lighten($color-body, 40);
+	outline-offset: -2px;
+	outline-style: solid;
+	outline-width: 1px;
+}
 // Stacked is default behavior
 // .label,
 // .input {
@@ -65,11 +91,11 @@ option {
 // 	vertical-align: bottom;
 // }
 
-// .inline {
-// 	.label {
-// 		@include column-width(1/4);
-// 	}
-// 	.input {
-// 		@include column-width(3/4);
-// 	}
-// }
+.inline {
+	.label {
+		@include column-width(1/4);
+	}
+	.input {
+		@include column-width(3/4);
+	}
+}

@@ -20,11 +20,12 @@
 @import "PersistentGrid/base";
 
 // // Modules
-// @import "Tables/base";
+@import "Tables/base";
 @import "Forms/base";
 @import "UI/Buttons/base";
-// @import "UI/Linkbar/base";
-// @import "Lists/Lists/base";
+@import "UI/Linkbar/base";
+@import "Lists/Lists/base";
+@import "UI/Tabs/base";
 
 // // These style apply only to the documentation
 // .tags {

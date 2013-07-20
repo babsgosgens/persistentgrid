@@ -156,7 +156,6 @@
 			@include adjust-font-size-to($type-size);
 		}
 		@if $type-leading != $line-height {
-			@debug $type-leading;
 			@include adjust-leading-to($type-leading/$base-line-height, $type-size);
 		}
 	}
