@@ -135,22 +135,22 @@
 
 		$type: nth($type,1);
 
-		$type-style:   nth($type,1);
-		$type-variant: nth($type,2);
-		$type-weight:  nth($type,3);
-		$type-family:  nth($type,4);
+		$type-default-style:   nth($type,1);
+		$type-default-variant: nth($type,2);
+		$type-default-weight:  nth($type,3);
+		$type-default-family:  nth($type,4);
 
-		@if $type-style != $type-style {
-			@include font-style($type-style);
+		@if $type-default-style != $type-default-style {
+			@include font-style($type-default-style);
 		}
-		@if $type-variant != $type-variant {
-			@include font-variant($type-variant);
+		@if $type-default-variant != $type-default-variant {
+			@include font-variant($type-default-variant);
 		}
-		@if $type-weight != $type-weight {
-			@include font-weight($type-weight);
+		@if $type-default-weight != $type-default-weight {
+			@include font-weight($type-default-weight);
 		}
-		@if $type-family != $type-family {
-			@include font-family($type-family);
+		@if $type-default-family != $type-default-family {
+			@include font-family($type-default-family);
 		}
 		@if $type-size != $font-size {
 			@include adjust-font-size-to($type-size);

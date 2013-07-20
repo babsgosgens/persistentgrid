@@ -21,19 +21,19 @@
 	$table-border-radius 					: $corner-radius;
 	$table-border 							: false; //$table-border-width $table-border-style $table-border-color; // Set to false if you don't want any border to render
 
-	$table-type-style 						: $type-style;
-	$table-type-variant						: $type-variant;
-	$table-type-weight						: $type-weight;
-	$table-type-family 						: $type-family;
+	$table-type-style 						: extract-type-style($type-default);
+	$table-type-variant						: extract-type-variant($type-default);
+	$table-type-weight						: extract-type-weight($type-default);
+	$table-type-family 						: extract-type-family($type-default);
 	$table-type-size 						: $font-size;
 	$table-type-leading 					: $line-height;
 	$table-type 							: $table-type-style, $table-type-variant, $table-type-weight, $table-type-family, $table-type-size, $table-type-leading;
 
 	//table-caption
-	$table-caption-type-style 				: $type-style;
-	$table-caption-type-variant				: $type-variant;
-	$table-caption-type-weight				: $type-weight;
-	$table-caption-type-family 				: $type-family;
+	$table-caption-type-style 				: extract-type-style($type-default);
+	$table-caption-type-variant				: extract-type-variant($type-default);
+	$table-caption-type-weight				: extract-type-weight($type-default);
+	$table-caption-type-family 				: extract-type-family($type-default);
 	$table-caption-type-size 				: $font-size;
 	$table-caption-type-leading 			: $line-height;
 	$table-caption-type 					: $table-caption-type-style, $table-caption-type-variant, $table-caption-type-weight, $table-caption-type-family, $table-caption-type-size, $table-caption-type-leading;

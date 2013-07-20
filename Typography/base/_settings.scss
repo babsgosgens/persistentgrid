@@ -6,7 +6,6 @@
 	@import "functions";
 	@import "mixins";
 
-
 // 	################################################################################################################################  //
 // 	Base Typography							  																							  //
 // 	################################################################################################################################  //
@@ -14,43 +13,28 @@
 	$font-size							: 14px;
 	$line-height 						: 24px;
 
-	$thin 								: 200;
-	$light 								: 300;
-	$regular 							: 400;
-	$medium 							: 500;
-	$bold 								: 600;
-	$extra-bold 						: 700;
-	$heavy 								: 900;
+	// If your font set does not have some of these, you need to substitute the values
+	$ultra-light 						: 100; // 100
+	$light 								: 200; // w00
+	$book 								: 300; // 300
+	$regular 							: 400; // 400
+	$medium 							: 500; // 500
+	$semi-bold 							: 600; // 600
+	$bold 								: 700; // 700
+	$extra-bold 						: 800; // 800
+	$heavy 								: 900; // 900
 
-	$style 								: normal;					
-	$variant 							: normal;
-	$weight								: $light;
+	// Placeholder for regular and ultra-bold, Google uses it
+	$normal 							: $regular;
+	$ultra-bold 						: $heavy;
 
-	$font-family-default				: 'Open Sans';
-	$font-family-fallback 				: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	$default-style 						: normal;					
+	$default-variant 					: normal;
+	$default-weight						: $book;
 
-	$type-style 						: $style;
-	$type-variant						: $variant;
-	$type-weight						: $weight;
-	$type-family 						: #{$font-family-default, $font-family-fallback};
+	$font-family-fallback 				: sans-serif;
 
-	$type 								: $type-style, $type-variant, $type-weight, $type-family;
+	@import "fonts";
 
-
-	$type-thin-weight					: $thin;
-	$type-thin 							: $type-style, $type-variant, $type-thin-weight, $type-family;
-
-	$type-light-weight					: $light;
-	$type-light 						: $type-style, $type-variant, $type-thin-weight, $type-family;
-
-	$type-medium-weight					: $medium;
-	$type-medium 						: $type-style, $type-variant, $type-medium-weight, $type-family;
-
-	$type-bold-weight					: $bold;
-	$type-bold 							: $type-style, $type-variant, $type-bold-weight, $type-family;
-
-	$type-extra-bold-weight				: $extra-bold;
-	$type-extra-bold 					: $type-style, $type-variant, $type-extra-bold-weight, $type-family;
-
-	$type-heavy-weight					: $heavy;
-	$type-heavy 						: $type-style, $type-variant, $type-heavy-weight, $type-family;
+	$type-default 						: $lato;
+	$type-heading 						: $bree-serif;

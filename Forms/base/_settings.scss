@@ -53,10 +53,10 @@
 	$input-shadow-inner 					: #efefef 1px 1px 0 0 inset;
 	$input-shadow 							: false; //($input-shadow-box, $input-shadow-inner);
 
-	$input-type-style 						: $type-style;
-	$input-type-variant						: $type-variant;
-	$input-type-weight						: $type-weight;
-	$input-type-family 						: $type-family;
+	$input-type-style 						: extract-type-style($type-default);
+	$input-type-variant						: extract-type-variant($type-default);
+	$input-type-weight						: extract-type-weight($type-default);
+	$input-type-family 						: extract-type-family($type-default);
 	$input-type-size 						: $font-size;
 	$input-type-leading 					: if(boolean($input-border-width), ($line-height - multiply(2,$input-border-width)), $line-height);
 	$input-type 							: ($input-type-style, $input-type-variant, $input-type-weight, $input-type-family), $input-type-size, $input-type-leading;
@@ -98,10 +98,10 @@
 	$label-shadow-inner 					: #efefef 1px 1px 0 0 inset;
 	$label-shadow 							: false; //($label-shadow-box, $label-shadow-inner);
 
-	$label-type-style 						: $type-style;
-	$label-type-variant						: $type-variant;
-	$label-type-weight						: $type-weight;
-	$label-type-family 						: $type-family;
+	$label-type-style 						: extract-type-style($type-default);
+	$label-type-variant						: extract-type-variant($type-default);
+	$label-type-weight						: extract-type-weight($type-default);
+	$label-type-family 						: extract-type-family($type-default);
 	$label-type-size 						: $font-size;
 
 	$label-type-leading 					: if(boolean($label-border-width), ($line-height - multiply(2,$label-border-width)), $line-height);

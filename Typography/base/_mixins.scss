@@ -10,7 +10,7 @@
 		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
 		$lh: px-to-relative-line-height($line-height, $font-size);
 
-		@include font($type, $fs, $lh);
+		@include font($type-default, $fs, $lh);
 	}
 }
 

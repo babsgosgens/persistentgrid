@@ -77,6 +77,30 @@
 	}
 }
 
+// Extract the style variable from a type array
+// Eexpects an array: $style, $variant, $weight, $family;
+@function extract-type-style($type) {
+	@return nth($type, 1);
+}
+
+// Extract the variant variable from a type array
+// Eexpects an array: $style, $variant, $weight, $family;
+@function extract-type-variant($type) {
+	@return nth($type, 2);
+}
+
+// Extract the weight variable from a type array
+// Eexpects an array: $style, $variant, $weight, $family;
+@function extract-type-weight($type) {
+	@return nth($type, 3);
+}
+
+// Extract the family variable from a type array
+// Eexpects an array: $style, $variant, $weight, $family;
+@function extract-type-family($type) {
+	@return nth($type, 4);
+}
+
 // @function px-to-rhythm($value) {
 // 	@return $value/$base-line-height;
 // }

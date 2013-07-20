@@ -28,35 +28,13 @@ a {
 	color: $link-color-visited;
 }
 
-h1 {
-	margin: rhythm(1.5) 0 rhythm(.5);
-	@include type-weight($type-light);
-	@include adjust-font-size-to($px-xxl);
+.heading {
+	@include type-family($type-heading);
+	@include type-weight($type-heading);	
 }
-h2 {
-	margin: rhythm(.5) 0 rhythm(.25);
-	@include type-weight($type-medium);
-	@include adjust-font-size-to($px-xl);
-	color: $color-theme;
-}
-h3 {
-	margin: rhythm(1) 0 0;
-	@include type-weight($type-medium);
-	@include adjust-font-size-to($px-l);
-	color: $color-primary;
-}
-h4 {
-	margin: rhythm(.5) 0 0;
-	@include adjust-font-size-to($px-l);
-}
-h5 {
-	margin: rhythm(.5) 0 0;
-	@include type-weight($type-medium);
-}
-h6 {
-	margin: rhythm(.25) 0 0;
-	@include type-weight($type-bold);
-	@include adjust-font-size-to($px-xs);
+
+h1, h2, h3, h4 {
+	@extend .heading;
 }
 h5,
 h6 {
