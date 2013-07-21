@@ -9,8 +9,11 @@
 
 .#{$column-class} {
 	@include column-behavior;
-	@include column-padding();
 	@include column-width(1/1);
+}
+
+.#{$column-class}-padding {
+	@include column-padding();
 }
 
 .parent {
