@@ -28,13 +28,10 @@
 	$normal 							: $regular;
 	$ultra-bold 						: $heavy;
 
-	$default-style 						: normal;					
-	$default-variant 					: normal;
-	$default-weight						: $book;
-
 	$font-family-fallback 				: sans-serif;
 
-	@import "fonts";
+	@import "../fonts/lato";
+	@import "../fonts/bree-serif";
 
 	$type-default 						: $lato;
 	$type-heading 						: $bree-serif;
