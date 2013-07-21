@@ -17,21 +17,23 @@
 
 
 	// Lato
-	// (100, normal), (300, normal), (400, normal), (700, normal), (900, normal)
-	$lato-style 						: normal;
-	$lato-variant						: normal;
-	$lato-family						: #{'Lato', $font-family-fallback};
+    // Available styles on Google Fonts: 100,300,400,700,900,100italic,300italic,400italic,700italic,900italic
 
-	// Lato, available weights on Google
-	$lato-ultra-light 					: $lato-style, $lato-variant, 100, $lato-family;
-	$lato-light 						: $lato-style, $lato-variant, 200, $lato-family;
-	$lato-book 							: $lato-style, $lato-variant, 300, $lato-family;
-	$lato-regular 						: $lato-style, $lato-variant, 400, $lato-family;
-	$lato-medium 						: $lato-style, $lato-variant, 500, $lato-family;
-	$lato-semi-bold						: $lato-style, $lato-variant, 600, $lato-family;
-	$lato-bold 							: $lato-style, $lato-variant, 700, $lato-family;
-	$lato-extra-bold 					: $lato-style, $lato-variant, 800, $lato-family;
-	$lato-heavy 						: $lato-style, $lato-variant, 900, $lato-family;
+	$lato-fontface 						: 'Lato';
+	$lato-fallback						: 'sans-serif';
+	$lato-family						: ($lato-fontface, $lato-fallback);
+
+	// style, variant, weight, family
+	$lato-ultra-light 					: normal, normal, 100, $lato-family;
+	$lato-book 							: normal, normal, 300, $lato-family;
+	$lato-regular 						: normal, normal, 400, $lato-family;
+	$lato-bold 							: normal, normal, 700, $lato-family;
+	$lato-heavy 						: normal, normal, 900, $lato-family;
+	$lato-ultra-light-italic			: italic, normal, 100, $lato-family;
+	$lato-book-italic					: italic, normal, 300, $lato-family;
+	$lato-regular-italic				: italic, normal, 400, $lato-family;
+	$lato-bold-italic					: italic, normal, 700, $lato-family;
+	$lato-heavy-italic					: italic, normal, 900, $lato-family;
 
 	// Placeholder for compatibility with older versions of PGF
 	$lato 								: $lato-book;

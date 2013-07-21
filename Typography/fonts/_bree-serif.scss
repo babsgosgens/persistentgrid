@@ -17,14 +17,13 @@
 
 
 	// Bree Serif
-	// (400, normal)
-	$bree-serif-style 					: normal;
-	$bree-serif-variant					: normal;
-	$bree-serif-family					: #{'Bree Serif', $font-family-fallback};
+    // Available styles on Google Fonts: 400
+	$bree-serif-fontface 				: 'Bree Serif';
+	$bree-serif-fallback				: 'serif';
+	$bree-serif-family					: ($bree-serif-fontface, $bree-serif-fallback);
 
-	// Bree Serif, available weights
-	// Only define what's included via webfont
-	$bree-serif-regular 				: $bree-serif-style, $bree-serif-variant, 400, $bree-serif-family;
+	// style, variant, weight, family
+	$bree-serif-regular 				: normal, normal, 400, $bree-serif-family;
 
 	// Placeholder for compatibility with older versions of PGF
 	$bree-serif 						: $bree-serif-regular;
