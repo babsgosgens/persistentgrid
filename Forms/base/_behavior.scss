@@ -64,7 +64,7 @@ input[type="color"] {
 	@include form-margin($label-margin);
 	@include form-padding($label-padding);
 	@include form-border($label-border);
-	@include form-background($label-background);
+	// @include form-background($label-background);
 	@include form-shadow($label-shadow);
 	@include form-type($label-type);
 	@include form-text($label-text);
