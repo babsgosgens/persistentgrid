@@ -3,7 +3,7 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-@mixin column-behavior($use-box-sizing: $use-box-sizing, $column-style: $column-style)
+@mixin column-behavior($reset-box-model: $reset-box-model, $column-style: $column-style)
 {
 	@if $column-style == 'inline' {
 		display: inline-block;
@@ -11,6 +11,11 @@
 			margin-right: $negative-right-margin !important;
 		}
 	}
+
+	@if $reset-box-model==true {
+		@include box-sizing('border-box');
+	}
+
 	@if $column-style == 'float' {
 		float: left;
 		display: block;
@@ -65,7 +70,7 @@
 	}
 }
 
-@mixin column-padding($use-box-sizing: $use-box-sizing, $use-margin: false)
+@mixin column-padding($reset-box-model: $reset-box-model, $use-margin: false)
 {
 	@if ($use-margin) {
 		margin-left: column-padding(1/2);
@@ -83,13 +88,17 @@
 			padding-right: column-padding(1/4);
 		}
 	}
-	@if $use-box-sizing {
-		@include box-sizing('border-box');
-	}
 }
 
-@mixin column($fraction: 1/3, $persistent: false) {
+@mixin column($fraction: 1/1, $persistent: false, $column-padding: $column-padding/2, $column-margin: 0) {
 	@include column-behavior();
 	@include column-width($fraction, $persistent);
-	@include column-padding();
+
+	@if $column-padding!=0 {
+		@include column-padding();			
+	}
+
+	@if $column-margin!=0 {
+		@include column-padding();			
+	}
 }
