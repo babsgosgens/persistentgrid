@@ -48,23 +48,33 @@
 	padding-right: 0;
 }
 
+// Helper mixin for positioning
+// Expects a fraction as unit
 @mixin move($fraction) {
 	position: relative;
 	left: fraction-to-percentage($fraction);
 }
 
-@mixin root() {
+// Fixes content width and centers in viewport.
+// @todo: make configurable so content can be rendered flush left or right
+@mixin root($container-max-width: $container-max-width) {
 	display: block;
 	margin: 0 auto;
 	max-width: $container-max-width;
 }
+
+// Mixin to reverse padding on a container
+// Is sometimes helpful for nested columns
+// Avoid using this if at all possible, can cause some erratic behavior
 @mixin bleed()
 {
 	margin-left: $column-padding / -2;
 	margin-right: $column-padding / -2;
 }
 
-@mixin column-padding($reset-box-model: $reset-box-model, $use-margin: false)
+// Mixin column margins
+// Uses padding by default, can be overridden to use margins instead - helpful when assigning backgrounds
+@mixin column-padding($column-padding: $column-padding, $reset-box-model: $reset-box-model, $use-margin: false)
 {
 	@if ($use-margin) {
 		margin-left: column-padding(1/2);
@@ -76,15 +86,18 @@
 	}
 }
 
-@mixin column($fraction: 1/1, $persistent: false, $column-padding: $column-padding/2, $column-margin: 0) {
+// Mixin a column
+// Combines above functions
+// Behavior can be overridden by (temporarily re-assigning values)
+@mixin column($fraction: 1/1, $persistent: false, $column-padding: $column-padding, $column-margin: 0) {
 	@include column-behavior();
 	@include column-width($fraction, $persistent);
 
 	@if $column-padding!=0 {
-		@include column-padding();			
+		@include column-padding($column-padding);			
 	}
 
 	@if $column-margin!=0 {
-		@include column-padding();			
+		@include column-padding($column-margin);			
 	}
 }
