@@ -7,6 +7,7 @@
 // Expects a fraction
 @function horizontal-rhythm($fraction: 1/2) {
 	@return $fraction * $column-spacing;
+	@debug $column-spacing;
 }
 
 // Convert a fraction to a percentage
