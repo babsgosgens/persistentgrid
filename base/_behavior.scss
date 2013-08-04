@@ -8,18 +8,18 @@
 }
 
 #{$column-selector} {
-	@include column(1/1);
+	@include column-behavior();
 }
 
 #{$column-selector}-padding {
 	@include column-spacing();
 }
 
-#{$column-selector}-parent {
+.parent {
 	@include parent-behavior(); 
 }
 
-#{$column-selector}-bleed {
+.bleed {
 	@include bleed(); 
 }
 

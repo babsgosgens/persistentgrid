@@ -74,7 +74,7 @@
 
 // Mixin column margins
 // Uses padding by default, can be overridden to use margins instead - helpful when assigning backgrounds
-@mixin column-spacing($column-spacing: $column-spacing, $fraction: 1/2, $reset-box-model: $reset-box-model, $use-margin: false)
+@mixin column-spacing($fraction: 1/2, $use-margin: false)
 {
 	@if ($use-margin) {
 		margin-left: horizontal-rhythm($fraction);
@@ -86,21 +86,16 @@
 	}
 }
 
-// Mixin a column
+// Shorthand mixin for column
 // Combines above functions
 // Behavior can be overridden by (temporarily re-assigning values)
-@mixin column($fraction: 1/1, $persistent: false, $column-padding: $column-spacing, $column-margin: 0)
+@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: 0)
 {
-	@debug $fraction;
-	@debug $persistent;
-	@debug $column-padding;
-	@debug $column-margin;
-
 	@include column-behavior();
 	@include column-width($fraction, $persistent);
 
 	@if $column-padding {
-		@include column-spacing($column-spacing);			
+		@include column-spacing($column-padding);			
 	}
 
 	@if $column-padding {

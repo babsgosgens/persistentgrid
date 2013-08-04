@@ -7,19 +7,24 @@
 // 	Persistent Grid					  																								  //
 // 	################################################################################################################################  //
 
+	// In case Vertical Rhythm module is not used
+	$base-line-height					: 30px !default;
+
+	// In case Reset module is not used
+	$reset-box-model					: true !default; 			// Set in case this module is used outside PG Framework
+
 	$column-base-class 					: "";
 	$column-selector 					: ".column";
 	$root-selector 						: ".root";
 
 	$container-max-width				: 980px; 					// Max width for the root element - the content will not stretch beyond this width
-	$container-position					: center !default; 		// Values: center | left
-	$base-column-width					: 1/1;
-	$negative-right-margin				: 0 !default; 				// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
-	$column-spacing						: $base-line-height;
-	$column-float 						: false !default;		// If true, column will be floated. Else column will be inline-block.
-	$reset-box-model					: true !default;
+	$container-position					: center; 					// Values: center | left
+	$column-spacing						: 2*$base-line-height;
+	$column-spacing-unit 				: 1px;
 
-	$column-widths 						: 1/1, 1/2, 1/4, 1/3, 2/3;
+	// Floated columns
+	$column-float 						: false;					// If true, column will be floated. Else column will be inline-block.
+	$negative-right-margin				: false; 					// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
+
+	$column-widths 						: 1/1, 1/2, 1/4, 1/3, 2/3, 3/4;
 	$column-breakpoints 				: 30em, 60em, 90em;
-
-	@debug $reset-box-model;

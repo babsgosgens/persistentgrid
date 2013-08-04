@@ -5,9 +5,49 @@
 
 // Calculates a value based on the $column-spacing
 // Expects a fraction
-@function horizontal-rhythm($fraction: 1/2) {
-	@return $fraction * $column-spacing;
-	@debug $column-spacing;
+@function horizontal-rhythm($fraction: 1/2)
+{
+	$value: return-unitless( $fraction * $column-spacing );
+
+	@if $column-spacing-unit == 1rem {
+		@return $value/10*1rem;
+	}
+	@if $column-spacing-unit == 1em {
+		@return $value/$base-font-size*1em;
+	}
+	@if $column-spacing-unit == 1px {
+		@return $value*1px;
+	}
+	@if $column-spacing-unit == 1% {
+		@return $value/$base-font-size*1em;
+	}
+
+}
+
+// Accepts a value and returns it without a value
+@function return-unitless($value)
+{
+	@if unitless($value) {
+		@return $value;
+	}
+
+	$unit: unit($value);
+
+	@if $unit=="px" {
+		@return $value / 1px;
+	}
+	@if $unit=="rem" {
+		@return $value / 1rem;
+	}
+	@if $unit=="em" {
+		@return $value / 1em;
+	}
+	@if $unit=="%" {
+		@return $value / 1%;
+	}
+	@if $unit=="pt" {
+		@return $value / 1pt;
+	}
 }
 
 // Convert a fraction to a percentage
