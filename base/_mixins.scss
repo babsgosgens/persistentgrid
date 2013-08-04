@@ -68,36 +68,37 @@
 // Avoid using this if at all possible, can cause some erratic behavior
 @mixin bleed()
 {
-	margin-left: $column-padding / -2;
-	margin-right: $column-padding / -2;
+	margin-left: $column-spacing / -2;
+	margin-right: $column-spacing / -2;
 }
 
 // Mixin column margins
 // Uses padding by default, can be overridden to use margins instead - helpful when assigning backgrounds
-@mixin column-padding($column-padding: $column-padding, $reset-box-model: $reset-box-model, $use-margin: false)
+@mixin column-spacing($fraction: 1/2, $reset-box-model: $reset-box-model, $use-margin: false)
 {
 	@if ($use-margin) {
-		margin-left: column-padding(1/2);
-		margin-right: column-padding(1/2);
+		margin-left: column-padding($fraction);
+		margin-right: column-padding($fraction);
 	}
 	@else {
-		padding-left: column-padding(1/2);
-		padding-right: column-padding(1/2);
+		padding-left: column-padding($fraction);
+		padding-right: column-padding($fraction);
 	}
 }
 
 // Mixin a column
 // Combines above functions
 // Behavior can be overridden by (temporarily re-assigning values)
-@mixin column($fraction: 1/1, $persistent: false, $column-padding: $column-padding, $column-margin: 0) {
+@mixin column($fraction: 1/1, $persistent: false, $column-padding: $column-padding, $column-margin: 0)
+{
 	@include column-behavior();
 	@include column-width($fraction, $persistent);
 
-	@if $column-padding!=0 {
-		@include column-padding($column-padding);			
+	@if $column-padding {
+		@include column-spacing($column-spacing);			
 	}
 
-	@if $column-margin!=0 {
-		@include column-padding($column-margin);			
+	@if $column-padding {
+		@include column-spacing($column-margin);			
 	}
 }

@@ -3,9 +3,9 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-// Calculates a value based on the $column-padding
+// Calculates a value based on the $column-spacing
 @function column-padding($fraction: 1/2) {
-	@return $fraction * $column-padding;
+	@return $fraction * $column-spacing;
 }
 
 // Convert a fraction to a percentage
