@@ -5,7 +5,7 @@
 
 
 @if $establish-baseline {
-	// The project's font size and line will be set from within the Vertical-Rhythm module.
+	// The project"s font size and line will be set from within the Vertical-Rhythm module.
 	// Just set the remaining font values
 	html {
 		@include type-family($paragraph-default);
@@ -15,7 +15,7 @@
 	}
 }
 @else {
-	// Set the project's font size and line height and all other default font settings from within the (this) Typography module.
+	// Set the project"s font size and line height and all other default font settings from within the (this) Typography module.
 	@include pg-establish-baseline;
 }
 

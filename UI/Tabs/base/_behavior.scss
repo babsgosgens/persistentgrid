@@ -56,14 +56,14 @@
 // .tab-tab {
 // 	padding-right: 10px;
 // 	display: block;
-// 	@include column-padding;
+// 	@include column-spacing;
 // 	padding-left: 0 !important;
 // 	span {
 // 		display: block;
 // 		border: 1px solid $color-theme;
 // 		border-width: 1px 1px 0;
 // 		@include border-top-radius($corner-radius);
-// 		@include column-padding;
+// 		@include column-spacing;
 // 		background: $color-theme;
 // 	}
 	

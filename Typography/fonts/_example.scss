@@ -21,8 +21,8 @@
 
 	// Example
     // Available styles on Google Fonts: 100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic
-	$example-fontface 						: 'Example';
-	$example-fallback						: 'sans-serif';
+	$example-fontface 						: "Example";
+	$example-fallback						: "sans-serif";
 	$example-family							: ($example-fontface, $example-fallback);
 
 	// style, variant, weight, family

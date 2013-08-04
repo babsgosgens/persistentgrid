@@ -6,7 +6,7 @@
 @import "../../../Base/base";
 
 ##{$linkbar-base-class} {
-	@include column-padding;
+	@include column-spacing;
 }
 
 .#{$linkbar-base-class}-item,
@@ -25,7 +25,7 @@
 	@if($linkbar-item-link-padding) {
 		padding: $linkbar-item-link-padding;
 	}
-	@include column-padding; // Override default padding because smalles views have built-in smaller column spadding
+	@include column-spacing; // Override default padding because smalles views have built-in smaller column spadding
 	@if($linkbar-item-link-background) {
 		background: $linkbar-item-link-background;
 	}

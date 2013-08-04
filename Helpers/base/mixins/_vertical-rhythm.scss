@@ -14,10 +14,10 @@
 
 // Use for left and right margins and paddings
 // Declare like: @include horizontal-rhythm(1, padding-left);
-// Uses the project's $column-padding variable as declared in the Persistent-Grid module settings
+// Uses the project's $column-spacing variable as declared in the Persistent-Grid module settings
 @mixin horizontal-rhythm($fraction, $property) 
 {	
-	#{$property}: column-padding($fraction);
+	#{$property}: horizontal-rhythm($fraction);
 }
 
 // Mixin all four values at once

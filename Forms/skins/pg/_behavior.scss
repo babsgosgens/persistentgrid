@@ -118,7 +118,7 @@ $form-triangle-size: $base-font-size;
 	select,
 	textarea {
 		@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
-		@include column-padding();
+		@include column-spacing();
 	}
 
 	li:hover {
@@ -129,7 +129,7 @@ $form-triangle-size: $base-font-size;
 			color: $white;
 			@include triangle($form-triangle-size, down, $form-color-hover, after );
 			&:after {
-				left: (0.5*$column-padding) - (0.25*$form-triangle-size);
+				left: (0.5*$column-spacing) - (0.25*$form-triangle-size);
 			}
 		}
 		input,
@@ -145,7 +145,7 @@ $form-triangle-size: $base-font-size;
 			&+ul {
 				@extend input;
 				@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
-				@include column-padding();
+				@include column-spacing();
 			}
 		}
 		li {
