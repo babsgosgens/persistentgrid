@@ -12,11 +12,13 @@
 @import "Helpers/base"; // Import helpers.
 @import "Skin/base"; // Import Skin first, this is where any default settings can be changed before any style rules are rendered.
 
-// Base modules
+// Framework modules
 @import "Reset/base";
 @import "Typography/base";
 @import "VerticalRhythm/base";
 @import "Base/base";
+
+// Grid modules
 @import "PersistentGrid/base";
 
 // // Modules

@@ -10,30 +10,13 @@
 // 	Base Typography							  																							  //
 // 	################################################################################################################################  //
 
-	$font-size							: 14px;
+	// These setings are picked up by the Vertical-Rhythm
+	// Consider merging VR int the typography module
+	$font-size							: 15px;
 	$line-height 						: 24px;
 
-	// If your font set does not have some of these, you need to substitute the values
-	$ultra-light 						: 100; // 100
-	$light 								: 200; // w00
-	$book 								: 300; // 300
-	$regular 							: 400; // 400
-	$medium 							: 500; // 500
-	$semi-bold 							: 600; // 600
-	$bold 								: 700; // 700
-	$extra-bold 						: 800; // 800
-	$heavy 								: 900; // 900
-
-	// Placeholder for regular and ultra-bold, Google uses it
-	$normal 							: $regular;
-	$ultra-bold 						: $heavy;
-
-	$font-family-fallback 				: sans-serif;
-
 	@import "../fonts/lato";
-	@import "../fonts/bree-serif";
-	// @import "../fonts/fontawesome";
 	@import "../fonts/foundation-accessability";
 
-	$type-default 						: $lato-book;
-	$type-heading 						: $bree-serif-regular;
+	$type-default 						: $lato-regular;
+	$type-heading 						: $lato-book;
