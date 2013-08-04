@@ -8,8 +8,8 @@
 // 	################################################################################################################################  //
 
 	$column-base-class 					: "";
-	$column-class 						: column;
-	$root-class 						: root;
+	$column-selector 					: ".column";
+	$root-selector 						: ".root";
 
 	$container-max-width				: 980px; 					// Max width for the root element - the content will not stretch beyond this width
 	$container-position					: center !default; 		// Values: center | left

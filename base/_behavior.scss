@@ -3,16 +3,16 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-.#{$root-class} {
+#{$root-selector} {
 	@include root();
 }
 
-.#{$column-class} {
+#{$column-selector} {
 	@include column-behavior;
 	@include column-width(1/1);
 }
 
-.#{$column-class}-padding {
+#{$column-selector}-padding {
 	@include column-padding();
 }
 
@@ -30,7 +30,7 @@
 	@if $name {
 		.#{$name}#{$column-base-class},
 		.collection-of-#{$name}s>* {
-			// @extend #{$column-class};
+			// @extend #{$column-selector};
 			@include column-width($fraction);
 		}
 		.#{$name}#{$column-base-class}.persistent,
