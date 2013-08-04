@@ -77,12 +77,12 @@
 @mixin column-spacing($fraction: 1/2, $reset-box-model: $reset-box-model, $use-margin: false)
 {
 	@if ($use-margin) {
-		margin-left: column-padding($fraction);
-		margin-right: column-padding($fraction);
+		margin-left: horizontal-rhythm($fraction);
+		margin-right: horizontal-rhythm($fraction);
 	}
 	@else {
-		padding-left: column-padding($fraction);
-		padding-right: column-padding($fraction);
+		padding-left: horizontal-rhythm($fraction);
+		padding-right: horizontal-rhythm($fraction);
 	}
 }
 

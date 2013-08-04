@@ -4,17 +4,20 @@
 //  */
 
 // Calculates a value based on the $column-spacing
-@function column-padding($fraction: 1/2) {
+// Expects a fraction
+@function horizontal-rhythm($fraction: 1/2) {
 	@return $fraction * $column-spacing;
 }
 
 // Convert a fraction to a percentage
+// Expects a fraction
 @function fraction-to-percentage($fraction: 1/3) {
 	@return $fraction*100%;
 }
 
 // Convert a fraction to a word
 // Use to build style rules based on column widths
+// Expects a fraction
 @function fraction-to-text($fraction) {
 	@if $fraction ==  1/1  { @return full; }
 	@if $fraction ==  1/2  { @return half; }
