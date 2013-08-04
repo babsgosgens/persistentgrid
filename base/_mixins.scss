@@ -3,23 +3,23 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-@mixin column-behavior($reset-box-model: $reset-box-model, $column-style: $column-style)
+@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)
 {
-	@if $column-style == 'inline' {
-		display: inline-block;
+	@if $column-float {
+		display: block;
+		float: left;
 		@if $negative-right-margin != 0 {
 			margin-right: $negative-right-margin !important;
 		}
+	}
+	@else {
+		display: inline-block;
 	}
 
 	@if $reset-box-model==true {
 		@include box-sizing('border-box');
 	}
 
-	@if $column-style == 'float' {
-		float: left;
-		display: block;
-	}
 	vertical-align: top;
 	height: auto;
 }
@@ -31,7 +31,9 @@
 	@else {
 		width: fraction-to-percentage($fraction);
 	}
-	@if $column-style == 'inline' {
+
+	// Remove negative margin on elements that span full width of their container
+	@if $column-float {
 		@if $negative-right-margin != 0 {
 			@if $fraction == 1/1 {
 				margin-right: 0;
@@ -44,10 +46,6 @@
 {
 	padding-left: 0;
 	padding-right: 0;
-	@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
-		padding-left: 0;
-		padding-right: 0;
-	}
 }
 
 @mixin move($fraction) {
@@ -64,10 +62,6 @@
 {
 	margin-left: $column-padding / -2;
 	margin-right: $column-padding / -2;
-	@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
-		margin-left: $column-padding / -4;
-		margin-right: $column-padding / -4;
-	}
 }
 
 @mixin column-padding($reset-box-model: $reset-box-model, $use-margin: false)
@@ -75,18 +69,10 @@
 	@if ($use-margin) {
 		margin-left: column-padding(1/2);
 		margin-right: column-padding(1/2);
-		@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
-			margin-left: column-padding(1/4);
-			margin-right: column-padding(1/4);
-		}
 	}
 	@else {
 		padding-left: column-padding(1/2);
 		padding-right: column-padding(1/2);
-		@media only screen and (max-width: #{nth($column-breakpoints,1)}) {
-			padding-left: column-padding(1/4);
-			padding-right: column-padding(1/4);
-		}
 	}
 }
 

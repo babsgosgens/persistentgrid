@@ -16,7 +16,7 @@
 	$base-column-width					: 1/1;
 	$negative-right-margin				: 0 !default; 				// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
 	$column-padding						: rhythm(2);
-	$column-style 						: inline !default;		// Values: inline | float
+	$column-float 						: false !default;		// If true, column will be floated. Else column will be inline-block.
 	$reset-box-model					: true !default;
 
 	$column-widths 						: 1/1, 1/2, 1/4, 1/3, 2/3;
