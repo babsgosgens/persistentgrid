@@ -16,37 +16,37 @@
 	@include column-spacing();
 }
 
-.parent {
+#{$column-selector}-parent {
 	@include parent-behavior(); 
 }
 
-.bleed {
+#{$column-selector}-bleed {
 	@include bleed(); 
 }
 
-// Roll out the required columns
-@each $fraction in $column-widths {
-	$name: fraction-to-text($fraction);
-	@if $name {
-		.#{$name}#{$column-base-class},
-		.collection-of-#{$name}s>* {
-			// @extend #{$column-selector};
-			@include column-width($fraction);
-		}
-		.#{$name}#{$column-base-class}.persistent,
-		.collection-of-#{$name}s.persistent>* {
-			@include column-width($fraction, true);
-		}
-		.collection-of-#{$name}s {
-			@extend .parent;
-		}
-		// Source Ordering
-		.push-#{$name} {
-			@include move($fraction);
-		}
-		// Source Ordering
-		.pull-#{$name} {
-			@include move(-1*$fraction);
-		}
-	}
-}
+// // Roll out the required columns
+// @each $fraction in $column-widths {
+// 	$name: fraction-to-text($fraction);
+// 	@if $name {
+// 		.#{$name}#{$column-base-class},
+// 		.collection-of-#{$name}s>* {
+// 			// @extend #{$column-selector};
+// 			@include column-width($fraction);
+// 		}
+// 		.#{$name}#{$column-base-class}.persistent,
+// 		.collection-of-#{$name}s.persistent>* {
+// 			@include column-width($fraction, true);
+// 		}
+// 		.collection-of-#{$name}s {
+// 			@extend .parent;
+// 		}
+// 		// Source Ordering
+// 		.push-#{$name} {
+// 			@include move($fraction);
+// 		}
+// 		// Source Ordering
+// 		.pull-#{$name} {
+// 			@include move(-1*$fraction);
+// 		}
+// 	}
+// }
