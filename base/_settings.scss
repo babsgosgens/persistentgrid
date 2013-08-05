@@ -7,24 +7,25 @@
 // 	Persistent Grid					  																								  //
 // 	################################################################################################################################  //
 
-	// In case Vertical Rhythm module is not used
-	$base-line-height					: 30px !default;
+	// Set in case this module is used outside PG Framework
+	$base-line-height: 30px !default;
 
-	// In case Reset module is not used
-	$reset-box-model					: true !default; 			// Set in case this module is used outside PG Framework
+	// Set in case this module is used outside PG Framework
+	$reset-box-model: true !default;
 
-	$column-base-class 					: "";
-	$column-selector 					: ".column";
-	$root-selector 						: ".root";
+	$root-selector: ".root";
+	$root-max-width: 980px; // Max width for the root element - the content will not stretch beyond this width
+	$root-position: center; // Values: center | left
 
-	$container-max-width				: 980px; 					// Max width for the root element - the content will not stretch beyond this width
-	$container-position					: center; 					// Values: center | left
-	$column-spacing						: 2*$base-line-height;
-	$column-spacing-unit 				: 1px;
+	$column-base-class: "";
+	$column-selector: ".column";
+	
+	$column-spacing: 2*$base-line-height;
+	$column-spacing-unit: 1px;
 
 	// Floated columns
-	$column-float 						: false;					// If true, column will be floated. Else column will be inline-block.
-	$negative-right-margin				: false; 					// This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
+	$column-float: false; // If true, column will be floated. Else column will be inline-block.
+	$negative-right-margin: false; // This is a hack to close gaps between columns in inline-style, not nescessary when html (or at least column markup) is minimized
 
-	$column-widths 						: 1/1, 1/2, 1/4, 1/3, 2/3, 3/4;
-	$column-breakpoints 				: 30em, 60em, 90em;
+	$column-widths: 1/1, 1/2, 1/4, 1/3, 2/3, 3/4;
+	$column-breakpoints: 30em, 60em, 90em;

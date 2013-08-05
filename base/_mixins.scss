@@ -57,10 +57,12 @@
 
 // Fixes content width and centers in viewport.
 // @todo: make configurable so content can be rendered flush left or right
-@mixin root($container-max-width: $container-max-width) {
+@mixin root($root-max-width: $root-max-width) {
 	display: block;
-	margin: 0 auto;
-	max-width: $container-max-width;
+	@if $root-position==center {
+		margin: 0 auto;
+	}
+	max-width: $root-max-width;
 }
 
 // Mixin to reverse padding on a container
