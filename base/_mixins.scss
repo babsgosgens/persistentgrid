@@ -16,9 +16,9 @@
 		display: inline-block;
 	}
 
-	@if $reset-box-model==true {
-		@include box-sizing('border-box');
-	}
+	// @if $reset-box-model {
+	// 	@include box-sizing('border-box');
+	// }
 
 	vertical-align: top;
 	height: auto;
@@ -91,7 +91,7 @@
 // Shorthand mixin for column
 // Combines above functions
 // Behavior can be overridden by (temporarily re-assigning values)
-@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: 0)
+@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: false)
 {
 	@include column-behavior();
 	@include column-width($fraction, $persistent);
@@ -100,7 +100,7 @@
 		@include column-spacing($column-padding);			
 	}
 
-	@if $column-padding {
-		@include column-spacing($column-margin);			
+	@if $column-margin {
+		@include column-spacing($column-margin, true);			
 	}
 }

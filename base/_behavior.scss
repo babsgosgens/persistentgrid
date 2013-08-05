@@ -8,8 +8,7 @@
 }
 
 #{$column-selector} {
-	@include column-behavior();
-	@include column-spacing();
+	@include column();
 }
 
 #{$column-selector}-container {
