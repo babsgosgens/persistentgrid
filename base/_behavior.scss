@@ -9,6 +9,11 @@
 
 #{$column-selector} {
 	@include column-behavior();
+	@include column-spacing();
+}
+
+#{$column-selector}-container {
+	@include column-behavior();
 }
 
 #{$column-selector}-padding {
@@ -16,7 +21,7 @@
 }
 
 .parent {
-	@include parent-behavior(); 
+	@include column-spacing(0); 
 }
 
 .bleed {
