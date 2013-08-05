@@ -8,12 +8,12 @@
 	@if $column-float {
 		display: block;
 		float: left;
-		@if $negative-right-margin != 0 {
-			margin-right: $negative-right-margin !important;
-		}
 	}
 	@else {
 		display: inline-block;
+		@if $negative-right-margin != 0 {
+			margin-right: $negative-right-margin !important;
+		}
 	}
 
 	// @if $reset-box-model {
