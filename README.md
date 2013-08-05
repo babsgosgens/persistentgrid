@@ -23,7 +23,7 @@ Or:
 	@extend .column-behavior();
 	// Will include the margins as per the settings
 	@extend .column-spacing();
-	// Will make the column half the size of its parent
+	// Will make the column half the size of its container
 	@include column-width(1/2);
 }
 ```
