@@ -11,7 +11,7 @@
 	}
 	@else {
 		display: inline-block;
-		@if $negative-right-margin != 0 {
+		@if $negative-right-margin {
 			margin-right: $negative-right-margin !important;
 		}
 	}
@@ -25,11 +25,12 @@
 }
 
 @mixin column-width($fraction: $base-column-width, $persistent: false) {
-	@if $persistent {
-		width: fraction-to-percentage($fraction) !important;
-	}
-	@else {
-		width: fraction-to-percentage($fraction);
+
+	width: fraction-to-percentage($fraction);
+	@if $persistent == false {
+		@media only screen and (max-width: nth($column-breakpoints,1)) {
+			width: 100%;
+		}
 	}
 
 	// Remove negative margin on elements that span full width of their container
@@ -48,11 +49,15 @@
 	padding-right: 0;
 }
 
-// Helper mixin for positioning
+// Helper mixin for soure ordering
 // Expects a fraction as unit
 @mixin move($fraction) {
 	position: relative;
 	left: fraction-to-percentage($fraction);
+	@media only screen and (max-width: nth($column-breakpoints,1)) {
+		position: static;
+		position: initial;
+	}
 }
 
 // Fixes content width and centers in viewport.
@@ -68,23 +73,33 @@
 // Mixin to reverse padding on a container
 // Is sometimes helpful for nested columns
 // Avoid using this if at all possible, can cause some erratic behavior
-@mixin bleed()
+@mixin bleed($fraction: -1/2)
 {
-	margin-left: $column-spacing / -2;
-	margin-right: $column-spacing / -2;
+	@include column-spacing($fraction, true);
+	@media only screen and ( max-width: nth($column-breakpoints,1) ) {
+		@include column-spacing($fraction/2, true);
+	}
 }
 
 // Mixin column margins
 // Uses padding by default, can be overridden to use margins instead - helpful when assigning backgrounds
-@mixin column-spacing($fraction: 1/2, $use-margin: false)
+@mixin column-spacing($fraction: 1/2, $use-margin: false, $persistent: false)
 {
 	@if ($use-margin) {
 		margin-left: horizontal-rhythm($fraction);
 		margin-right: horizontal-rhythm($fraction);
+		@media only screen and ( max-width: nth($column-breakpoints,1) ) {
+			margin-left: horizontal-rhythm($fraction/2);
+			margin-right: horizontal-rhythm($fraction/2);
+		}
 	}
 	@else {
 		padding-left: horizontal-rhythm($fraction);
 		padding-right: horizontal-rhythm($fraction);
+		@media only screen and ( max-width: nth($column-breakpoints,1) ) {
+			padding-left: horizontal-rhythm($fraction/2);
+			padding-right: horizontal-rhythm($fraction/2);
+		}
 	}
 }
 

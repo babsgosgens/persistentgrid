@@ -17,7 +17,7 @@ $reset-box-model: true !default;
 // The root container can be positioned left or center, for alternate position you can provide your own behavior.
 $root-selector: ".root";
 $root-max-width: 980px;
-$root-position: center;
+$root-position: left;
 
 $column-selector: ".column";
 $column-base-class: "";

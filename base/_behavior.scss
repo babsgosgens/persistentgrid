@@ -57,15 +57,4 @@
 
 // Behavior for first breakpoint
 @media only screen and (max-width: nth($column-breakpoints,1)) {
-	#{$column-selector},
-	#{$column-selector}-container {
-		@include column-width(1/1);
-	}
-	#{$column-selector},
-	#{$column-selector}-padding {
-		@include column-spacing(1/4);
-	}
-	.bleed {
-		@include column-spacing(-1/4, true); 
-	}
 }
