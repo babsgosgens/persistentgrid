@@ -3,7 +3,8 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 	
-	
+@if $debug { @debug 'Loading /Skin/base/settings'; }
+
 //	################################################################################################################################  //
 //	Shared Variables				  																								  //
 //	################################################################################################################################  //
@@ -66,8 +67,6 @@
 //	Import presets				  																								  //
 //	################################################################################################################################  //
 
-	// First, import all individual settings. The order in which they are imported matters, because there are dependencies.
-	// @import "PersistentGrid/base/functions";
-
+	// First, import all individual settings: first the base settings, then the module settings;
 	@import "Base/settings";
 	@import "Modules/settings";

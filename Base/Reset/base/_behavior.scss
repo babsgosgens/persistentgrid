@@ -2,8 +2,10 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
-@import "dependencies";
-@import "settings";
+@if $debug { @debug 'Loading /Base/Reset/base/behavior'; }
+
+// @import "dependencies";
+// @import "settings";
 
 @if $global-reset {
 	@include global-reset;
@@ -16,6 +18,8 @@
 	*/
 
 	@if $reset-box-model OR $reset-box-sizing OR $reset-font {
+
+
 		html, body, div, span, applet, object, iframe,
 		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 		a, abbr, acronym, address, big, cite, code,

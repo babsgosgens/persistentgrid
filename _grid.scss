@@ -4,9 +4,7 @@
    License: GNU General Public License version 2 or later; see LICENSE.txt
 */
 
-// We need the column-padding function from the Persistent Grid module
-// It"s not been loaded until later in the proces so we add it manually here
-// @import "PersistentGrid/base/functions";
+$debug: true;
 
 @import "Helpers/base"; // Import helpers.
 @import "Skin/base"; // Import Skin first, this is where any default settings can be changed before any style rules are rendered.
