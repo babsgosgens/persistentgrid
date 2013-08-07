@@ -20,7 +20,6 @@
 
 .tabs-horizontal {
 	@for $i from $min-tabs through $max-tabs {
-		@debug $i;
 		&.tabs-#{$i} {
 			.tab {
 				@include column-width(1/$i);

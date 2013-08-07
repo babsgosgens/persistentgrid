@@ -5,7 +5,7 @@
 
 @mixin tooltipTriangle($size: $base-font-size, $direction: down, $color: $color-theme)
 {
-	border: $size/2 solid transparent;
+	border: $size/2 solid transcontainer;
 	display: inline-block;
 	content: "";
 	width: 0;
@@ -42,7 +42,7 @@
 {
 	position: relative;
 	&:#{$where} {
-		border: $size/2 solid transparent;
+		border: $size/2 solid transcontainer;
 		// @include unit(border-width, $size/2);
 		display: inline-block;
 		content: "";

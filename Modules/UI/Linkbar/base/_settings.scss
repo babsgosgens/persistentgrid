@@ -3,9 +3,6 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-	@import "../../../PersistentGrid/base/functions";
-	@import "../../../PersistentGrid/base/mixins";
-
 	// Linkbar base class
 	$linkbar-base-class 						: "linkbar";
 	$linkbar-breakpoints 						: $column-breakpoints;

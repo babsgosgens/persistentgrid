@@ -7,11 +7,13 @@
 	@import "mixins";
 
 // 	################################################################################################################################  //
-// 	Base Typography							  																							  //
+// 	Base Type							  																							  //
 // 	################################################################################################################################  //
 
 	// These setings are picked up by the Vertical-Rhythm
-	// Consider merging VR int the typography module
+	$establish-baseline 				: false !default;
+
+	// Consider merging VR int the Type module
 	$font-size							: 15px;
 	$line-height 						: 24px;
 

@@ -3,10 +3,9 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-
-@import "content";
-@import "css-triangle";
-@import "media-queries";
-@import "module";
-@import "units";
-@import "vertical-rhythm";
+@import "Lists/Lists/base";
+@import "Tables/base";
+@import "Forms/base";
+@import "UI/Buttons/base";
+@import "UI/Linkbar/base";
+@import "UI/Tabs/base";

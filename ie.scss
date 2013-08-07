@@ -29,7 +29,7 @@
  *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
  */
  
-@import "Typography/fonts/fontawesome/variables";
+@import "Base/Type/icon-fonts/fontawesome/variables";
 
 .icon-large {
   font-size: (4em/3);
@@ -1958,7 +1958,7 @@ a [class*=" icon-"] {
 }
 
 
-@import "Typography/fonts/foundation-accessability/settings";
+@import "Base/Type/icon-fonts/foundation-accessability/settings";
 
 /* general icons for IE7 */
 [class*="#{$classPrefix}"] {

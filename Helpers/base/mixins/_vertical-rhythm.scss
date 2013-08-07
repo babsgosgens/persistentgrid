@@ -6,18 +6,18 @@
 
 // Use for top and bottom margins and paddings
 // Declare like: @include vertical-rhythm(1, padding-top);
-// Uses the project's $base-line-height variable as declared in the Vertical-Rhythm module settings
+// Uses the project's $base-line-height variable as declared in the Vertical Rhythm module settings
 @mixin vertical-rhythm($lines, $property) 
 {
 	#{$property}: rhythm($lines);
 }
 
 // Use for left and right margins and paddings
-// Declare like: @include horizontal-rhythm(1, padding-left);
-// Uses the project's $column-spacing variable as declared in the Persistent-Grid module settings
-@mixin horizontal-rhythm($fraction, $property) 
-{	
-	#{$property}: horizontal-rhythm($fraction);
+// Declare like: @include horizontal-rhythm(1, padding-top);
+// Uses the project's $column-spacing variable as declared in the Persistent Grid module settings
+@mixin horizontal-rhythm($factor, $property) 
+{
+	#{$property}: horizontal-rhythm($factor);
 }
 
 // Mixin all four values at once

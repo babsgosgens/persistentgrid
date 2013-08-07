@@ -48,7 +48,7 @@
 	@return px-to-relative-size($target-px, $context, $unit);
 }
 
-//* To Do: (everything below needs to be looked over as settings in the typography modules have changed)
+//* To Do: (everything below needs to be looked over as settings in the Type modules have changed)
 
 //* Calculate the optimal line-height */
 @function leading-in-px($font-size, $balance-over: false) {

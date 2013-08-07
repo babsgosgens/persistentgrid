@@ -15,7 +15,7 @@
 	}
 }
 @else {
-	// Set the project"s font size and line height and all other default font settings from within the (this) Typography module.
+	// Set the project"s font size and line height and all other default font settings from within the (this) Type module.
 	@include pg-establish-baseline;
 }
 

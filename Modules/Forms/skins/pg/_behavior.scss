@@ -152,7 +152,7 @@ $form-triangle-size: $base-font-size;
 			margin-bottom: 0; // Override trailer
 			position: relative;
 			label {
-				background-color: transparent;
+				background-color: transcontainer;
 			}
 			input {
 				position: absolute;
@@ -214,7 +214,7 @@ $form-triangle-size: $base-font-size;
 		border-right-width: 0;
 		+label {
 			@extend input;
-			background-color: transparent !important;
+			background-color: transcontainer !important;
 			@include column(1/2);
 			@include border-bottom-radius($corner-radius);
 			@include border-left-radius(0);
@@ -223,7 +223,7 @@ $form-triangle-size: $base-font-size;
 			border-left-width: 0;
 			white-space: nowrap;
 			&.invalid:hover {
-				background-color: transparent !important;
+				background-color: transcontainer !important;
 				color: $color-body !important;
 			}
 		}

@@ -3,9 +3,14 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
+// Placeholder function
+@function vertical-rhythm($lines) 
+{
+	@return rhythm($lines);
+}
 
 @function horizontal-rhythm($lines) {
-	@return rhythm($lines);
+	@return horizontal-rhythm($lines);
 }
 
 // Consider this:

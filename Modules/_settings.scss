@@ -3,10 +3,8 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-
-@import "content";
-@import "css-triangle";
-@import "media-queries";
-@import "module";
-@import "units";
-@import "vertical-rhythm";
+@import "Tables/base/settings";
+@import "Forms/base/settings";
+@import "UI/Buttons/base/settings";
+@import "UI/Linkbar/base/settings";
+@import "UI/Tabs/base/settings";
