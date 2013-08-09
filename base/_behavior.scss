@@ -36,24 +36,24 @@
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
-		.#{$name}#{$column-base-class},
-		.collection-of-#{$name}s>* {
+		%#{$name}#{$column-base-class},
+		%collection-of-#{$name}s>* {
 			// @extend #{$column-selector};
 			@include column-width($fraction);
 		}
-		.#{$name}#{$column-base-class}.persistent,
-		.collection-of-#{$name}s.persistent>* {
+		%#{$name}#{$column-base-class}.persistent,
+		%collection-of-#{$name}s.persistent>* {
 			@include column-width($fraction, true);
 		}
-		.collection-of-#{$name}s {
+		%collection-of-#{$name}s {
 			@extend .container;
 		}
 		// Source Ordering
-		.push-#{$name} {
+		%push-#{$name} {
 			@include move($fraction);
 		}
 		// Source Ordering
-		.pull-#{$name} {
+		%pull-#{$name} {
 			@include move(-1*$fraction);
 		}
 	}
