@@ -2,7 +2,7 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
-@if $debug { @debug 'Loading /Base/Grid/base/behavior'; }
+@if $debug { @debug '...Importing /Base/Grid/base/behavior'; }
 
 #{$root-selector} {
 	@include root();
@@ -36,30 +36,25 @@
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
-		%#{$name}#{$column-base-class},
-		%collection-of-#{$name}s>* {
+		.#{$name}#{$column-base-class},
+		.collection-of-#{$name}s>* {
 			// @extend #{$column-selector};
 			@include column-width($fraction);
 		}
-		%#{$name}#{$column-base-class}.persistent,
-		%collection-of-#{$name}s.persistent>* {
+		.#{$name}#{$column-base-class}.persistent,
+		.collection-of-#{$name}s.persistent>* {
 			@include column-width($fraction, true);
 		}
-		%collection-of-#{$name}s {
+		.collection-of-#{$name}s {
 			@extend .container;
 		}
 		// Source Ordering
-		%push-#{$name} {
+		.push-#{$name} {
 			@include move($fraction);
 		}
 		// Source Ordering
-		%pull-#{$name} {
+		.pull-#{$name} {
 			@include move(-1*$fraction);
 		}
 	}
-}
-
-
-// Behavior for first breakpoint
-@media only screen and (max-width: nth($column-breakpoints,1)) {
 }
