@@ -2,6 +2,7 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
+@if $debug { @debug 'Loading /Base/Grid/base/behavior'; }
 
 #{$root-selector} {
 	@include root();
@@ -25,6 +26,10 @@
 
 .bleed {
 	@include bleed(); 
+}
+
+.full#{$column-base-class} {
+	@include column-width(1/1);
 }
 
 // Roll out the required columns
