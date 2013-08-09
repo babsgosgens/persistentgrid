@@ -4,10 +4,10 @@
    License: GNU General Public License version 2 or later; see LICENSE.txt
 */
 
-$debug: true;
+$debug: false;
 
 @import "Helpers/base"; // Import helpers.
-@import "Skin/base"; // Import Skin first, this is where any default settings can be changed before any style rules are rendered.
+@import "Skin/base/settings"; // Import Skin first, this is where any default settings can be changed before any style rules are rendered.
 
 // Grid modules
 @import "Base/Grid/base";

@@ -2,7 +2,7 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
-@if $debug { @debug 'Loading /Base/Type/base/functions'; }
+@if $debug { @debug '...Importing /Base/Type/base/functions'; }
 
 // Use these methods to convert px based units to other units
 // There is also a px to px function in case you need to recalculate a px unit for a different context

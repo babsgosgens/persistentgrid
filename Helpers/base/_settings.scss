@@ -2,4 +2,6 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
-@if $debug { @debug '...Importing /Base/Reset/base/dependencies'; }
+@if $debug { @debug '...Importing /Helpers/base/settings'; }
+
+@import "settings/all";

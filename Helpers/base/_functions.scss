@@ -2,7 +2,7 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
-@if $debug { @debug 'Loading /Helpers/base/functions'; }
+@if $debug { @debug '...Importing /Helpers/base/functions'; }
 
 // Placeholder function
 @function vertical-rhythm($lines) 
@@ -77,11 +77,15 @@
 // 	@return ($base-lines * $base-line-height);
 // }
 
-// @function px-to-em($target,$context)
-// {
-// 	@return $target/$context*1em;
-// }
-// @function px-to-rem($pixels)
-// {
-// 	@return $pixels/1px*0.1rem;
-// }
+@function px-to-em($target,$context)
+{
+	@return $target/$context*1em;
+}
+@function px-to-percentage($target,$context)
+{
+	@return $target/$context*100%;
+}
+@function px-to-rem($pixels)
+{
+	@return $pixels/1px*0.1rem;
+}

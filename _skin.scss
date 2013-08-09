@@ -14,7 +14,7 @@ $debug: false;
 @import "Helpers/base"; 
 
 // // Import Skin settings
-@import "Skin/settings"; 
+@import "Skin/base/settings"; 
 
 $steunkleur: #9F81F7;
 
@@ -104,7 +104,7 @@ $steunkleur: #9F81F7;
 			margin-bottom: 0;
 		}
 	}
-	@media only screen and (min-width: nth($column-breakpoints,1)) {
+	@include respond-to( $column-breakpoint ) {
 		text-align: right;
 		&+*{
 		border-left: 1px solid darken($color-background, 20%);
@@ -136,7 +136,7 @@ $steunkleur: #9F81F7;
 	height: rhythm(4) !important;
 	max-height: rhythm(4) !important;
 	overflow: hidden;
-	@media only screen and (max-width: nth($column-breakpoints,1)) {
+	@include respond-to( $column-breakpoint ) {
 		border-left: horizontal-rhythm(1/4) solid lighten($color-primary, 20%);
 		border-right: horizontal-rhythm(1/4) solid lighten($color-primary, 20%);
 	}
@@ -214,7 +214,7 @@ code {
 		// @include rhythm-borders(1px, .25, 12px);
 		// @include border-radius($corner-radius);
 		@include adjust-font-size-to(12px);
-		@media only screen and (min-width: nth($column-breakpoints,1)) {
+		@include respond-to( $tablet-landscape ) {
 			display: default;
 			display: initial;
 		}

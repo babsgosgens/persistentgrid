@@ -1,0 +1,18 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $debug { @debug '...Importing /Helpers/base/settings/breakpoints'; }
+
+$small_handheld: (max-width, px-to-em(480px,$base-font-size)) !default;
+$small_handheld_tall: (max-width,px-to-em(480px,$base-font-size)),(orientation,portrait) !default;
+$small_handheld_wide: (max-width,px-to-em(480px,$base-font-size)),(orientation,landscape) !default;
+$medium_handheld: (min-width,px-to-em(481px,$base-font-size)),(max-width,px-to-em(768px,$base-font-size)) !default;
+$medium_handheld_tall: (min-width,px-to-em(481px,$base-font-size)),(max-width,px-to-em(768px,$base-font-size)),(orientation,portrait) !default;
+$medium_handheld_wide: (min-width,px-to-em(1024px,$base-font-size));
+
+$large_handheld: ();
+
+$small_desktop: $medium_handheld_wide !default;
+$medium_desktop: (min-width,px-to-em(1280px,$base-font-size)) !default;
+$large_desktop: (min-width,px-to-em(1680px,$base-font-size)) !default;
