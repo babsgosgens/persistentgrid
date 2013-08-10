@@ -45,7 +45,7 @@
 }
 
 .#{$linkbar-base-class}-trigger {
-	@extend .is-visible-#{nth($column-breakpoints,1)};
+	@extend .is-visible;
 	display: inline-block;
 	&+.#{$linkbar-base-class} {
 		@include is-hidden;
@@ -58,7 +58,7 @@
 	}
 }
 
-@media only screen and (min-width: #{nth($column-breakpoints,1)}) {
+@include breakpoint($medium_handheld) {
 	.#{$linkbar-base-class}-trigger {
 		&+.#{$linkbar-base-class} {
 			@include is-not-hidden;

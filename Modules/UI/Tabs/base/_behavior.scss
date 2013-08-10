@@ -27,7 +27,7 @@
 		}
 	}
 	// Reset tabs to full width on smaller screens
-	@media only screen and (max-width: #{nth($column-breakpoints, 1)}) {
+	@include breakpoint($small_handheld_wide) {
 		.tab {
 			width: 100% !important;
 		}

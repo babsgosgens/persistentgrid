@@ -173,15 +173,15 @@ code {
 // Mixins and functions list
 
 // Markup:
-// <dl class="list-methods">
-// 	<dt class="list-methods-name"></dt>
-// 	<dd class="list-methods-mixin"></dd>
-// 	<dd class="list-methods-description"></dd>
+// <dl class="list-api">
+// 	<dt class="list-api-name"></dt>
+// 	<dd class="list-api-code"></dd>
+// 	<dd class="list-api-description"></dd>
 // </dl>
-.list-methods {
+.list-api {
 
 }
-.list-methods-name {
+.list-api-name {
 	color: $steunkleur;
 	margin-top: vertical-rhythm(1);
 	&:first-child {
@@ -192,15 +192,15 @@ code {
 		color: inherit;
 	}
 }
-.list-methods-description {
+.list-api-description {
 	font-weight: 300;
 	font-style: italic;
 }
-.list-methods-mixin {
+.list-api-code {
 	@include is-hidden;
 }
-.list-methods-name:target {
-	+.list-methods-mixin {
+.list-api-name:target {
+	+.list-api-code {
 		@include is-not-hidden;
 	}
 }

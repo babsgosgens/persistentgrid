@@ -78,7 +78,6 @@
 	font-weight: 300;
 	@include adjust-font-size-to(18px, 1);
 	color: $color-theme;
-	border-right: 3px solid darken($color-background, 20%);
 
 	@include column(1/4);
 	&+*{
@@ -91,22 +90,24 @@
 			margin-bottom: 0;
 		}
 	}
-	@media only screen and (min-width: nth($column-breakpoints,1)) {
+	@include breakpoint($medium_screen) {
 		text-align: right;
+		border-right: 3px solid darken($color-background, 20%);
 		&+*{
-		border-left: 1px solid darken($color-background, 20%);
+			border-left: 1px solid darken($color-background, 20%);
 			// @include is-not-hidden;
 		}
 	}
 }
 .article-header-level3 {
-	@include leader;
-	font-weight: 600;
-	@include adjust-font-size-to(14px);
-	color: $color-primary;
-	&+:not(.column) {
-		margin-top: 0;
-	}
+	// @include leader;
+	// @include adjust-font-size-to(14px);
+	padding: vertical-rhythm(.25) horizontal-rhythm(1/4);
+	margin-top: vertical-rhythm(1);
+	margin-bottom: vertical-rhythm(.5);
+	@include border-radius($corner-radius);
+	border: 1px solid $color-theme;
+	color: $color-theme;	
 }
 // @todo: turn scetions into accordeon tabs;
 .js {
@@ -123,7 +124,7 @@
 	height: rhythm(4) !important;
 	max-height: rhythm(4) !important;
 	overflow: hidden;
-	@media only screen and (max-width: nth($column-breakpoints,1)) {
+	@include breakpoint($column-breakpoint) {
 		border-left: horizontal-rhythm(1/4) solid lighten($color-primary, 20%);
 		border-right: horizontal-rhythm(1/4) solid lighten($color-primary, 20%);
 	}
@@ -160,18 +161,21 @@ code {
 // Mixins and functions list
 
 // Markup:
-// <dl class="list-methods">
-// 	<dt class="list-methods-name"></dt>
-// 	<dd class="list-methods-mixin"></dd>
-// 	<dd class="list-methods-description"></dd>
+// <dl class="list-api">
+// 	<dt class="list-api-name"></dt>
+// 	<dd class="list-api-code"></dd>
+// 	<dd class="list-api-description"></dd>
 // </dl>
-.list-methods {
+.list-api {
 
 }
-.list-methods-name {
-	color: $color-primary;
+.list-api-name {
+	// color: $color-primary;
 	margin-top: vertical-rhythm(1);
-	&:first-child {
+
+	// @extend .page-header;
+	@extend code;
+		&:first-child {
 		margin-top: 0;
 	}
 	a,
@@ -179,15 +183,14 @@ code {
 		color: inherit;
 	}
 }
-.list-methods-description {
+.list-api-description {
 	font-weight: 300;
-	font-style: italic;
 }
-.list-methods-mixin {
+.list-api-code {
 	@include is-hidden;
 }
-.list-methods-name:target {
-	+.list-methods-mixin {
+.list-api-name:target {
+	+.list-api-code {
 		@include is-not-hidden;
 	}
 }
@@ -201,7 +204,7 @@ code {
 		// @include rhythm-borders(1px, .25, 12px);
 		// @include border-radius($corner-radius);
 		@include adjust-font-size-to(12px);
-		@media only screen and (min-width: nth($column-breakpoints,1)) {
+		@include breakpoint($medium_screen) {
 			display: default;
 			display: initial;
 		}

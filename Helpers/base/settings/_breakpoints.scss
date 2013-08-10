@@ -16,3 +16,5 @@ $large_handheld: ();
 $small_desktop: $medium_handheld_wide !default;
 $medium_desktop: (min-width,px-to-em(1280px,$base-font-size)) !default;
 $large_desktop: (min-width,px-to-em(1680px,$base-font-size)) !default;
+
+$medium_screen: (min-width,px-to-em(768px,$base-font-size));
