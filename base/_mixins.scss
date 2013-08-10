@@ -27,8 +27,14 @@
 
 @mixin column-width($fraction: $column-width-default, $persistent: false) {
 
-	width: fraction-to-percentage($fraction);
-	@if $persistent == false {
+	@if $persistent {
+		width: fraction-to-percentage($fraction) !important;
+	}
+	@else {
+		width: fraction-to-percentage($fraction);
+	}
+	
+	@if $column-breakpoint {
 		@include breakpoint( $column-breakpoint ) {
 			width: 100%;
 		}
