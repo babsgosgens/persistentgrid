@@ -28,7 +28,7 @@
 	@include bleed(); 
 }
 
-.full#{$column-base-class} {
+.full {
 	@include column-width(1/1);
 }
 
@@ -36,12 +36,12 @@
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
-		.#{$name}#{$column-base-class},
+		.#{$name},
 		.collection-of-#{$name}s>* {
 			// @extend #{$column-selector};
 			@include column-width($fraction);
 		}
-		.#{$name}#{$column-base-class}.persistent,
+		.#{$name}.persistent,
 		.collection-of-#{$name}s.persistent>* {
 			@include column-width($fraction, true);
 		}

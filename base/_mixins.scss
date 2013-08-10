@@ -25,7 +25,7 @@
 	height: auto;
 }
 
-@mixin column-width($fraction: $base-column-width, $persistent: false) {
+@mixin column-width($fraction: $column-width-default, $persistent: false) {
 
 	width: fraction-to-percentage($fraction);
 	@if $persistent == false {
@@ -35,11 +35,9 @@
 	}
 
 	// Remove negative margin on elements that span full width of their container
-	@if $column-float {
-		@if $negative-right-margin != 0 {
-			@if $fraction == 1/1 {
-				margin-right: 0;
-			}
+	@if $negative-right-margin {
+		@if $fraction == 1/1 {
+			margin-right: 0;
 		}
 	}
 }
@@ -91,6 +89,16 @@
 	}
 }
 
+// Fixes content width and centers in viewport.
+// @todo: make configurable so content can be rendered flush left or right
+@mixin root($root-max-width: $root-max-width) {
+	display: block;
+	@if $root-position==center {
+		margin: 0 auto;
+	}
+	max-width: $root-max-width;
+}
+
 @mixin container-behavior()
 {
 	padding-left: 0;
@@ -108,16 +116,6 @@
 			position: initial;
 		}
 	}
-}
-
-// Fixes content width and centers in viewport.
-// @todo: make configurable so content can be rendered flush left or right
-@mixin root($root-max-width: $root-max-width) {
-	display: block;
-	@if $root-position==center {
-		margin: 0 auto;
-	}
-	max-width: $root-max-width;
 }
 
 // Mixin to reverse padding on a container
