@@ -20,10 +20,6 @@
 	@include column-spacing();
 }
 
-.container {
-	@include column-spacing(0); 
-}
-
 .bleed {
 	@include bleed(); 
 }
@@ -36,17 +32,11 @@
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
-		.#{$name},
-		.collection-of-#{$name}s>* {
-			// @extend #{$column-selector};
+		.#{$name} {
 			@include column-width($fraction);
 		}
-		.#{$name}.persistent,
-		.collection-of-#{$name}s.persistent>* {
+		.#{$name}.persistent {
 			@include column-width($fraction, true);
-		}
-		.collection-of-#{$name}s {
-			@extend .container;
 		}
 		// Source Ordering
 		.push-#{$name} {
