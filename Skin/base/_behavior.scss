@@ -80,9 +80,11 @@
 	color: $color-theme;
 
 	@include column(1/4);
+	text-align: right;
+	border-right: 3px solid darken($color-background, 20%);
 	&+*{
-		border: 0;
 		// @include is-hidden;
+		border-left: 1px solid darken($color-background, 20%);
 		&>*:first-child {
 			margin-top: 0;
 		}
@@ -90,11 +92,11 @@
 			margin-bottom: 0;
 		}
 	}
-	@include breakpoint($medium_screen) {
-		text-align: right;
-		border-right: 3px solid darken($color-background, 20%);
+	@include breakpoint($column-breakpoint) {
+		text-align: inherit;
+		border: 0;
 		&+*{
-			border-left: 1px solid darken($color-background, 20%);
+			border: 0;
 			// @include is-not-hidden;
 		}
 	}
@@ -204,7 +206,7 @@ code {
 		// @include rhythm-borders(1px, .25, 12px);
 		// @include border-radius($corner-radius);
 		@include adjust-font-size-to(12px);
-		@include breakpoint($medium_screen) {
+		@include breakpoint($medium_desktop) {
 			display: default;
 			display: initial;
 		}
