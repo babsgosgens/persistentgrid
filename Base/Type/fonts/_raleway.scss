@@ -20,7 +20,7 @@
 	// Raleway
     // Available styles on Google Fonts: 100,200,300,400,500,600,700,800,900
 	$raleway-fontface 						: "Raleway";
-	$raleway-fallback						: "sans-serif";
+	$raleway-fallback						: sans-serif;
 	$raleway-family							: ($raleway-fontface, $raleway-fallback);
 
 	// style, variant, weight, family
