@@ -4,6 +4,6 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "settings";
 @import "functions";
+@import "settings";
 @import "mixins";
