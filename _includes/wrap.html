@@ -1,0 +1,81 @@
+<body class="root">
+
+  <a href="https://github.com/babsgosgens/pg-framework"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  <div class="four-fifth __push-fifth column-container">
+
+    <header class="page-header">
+      <h1 class="page-header-header">
+        Persistent Grid Framework
+        <span class="page-header-sub">Reference Manual</span>
+      </h1>
+    </header>
+
+    {{ content }}
+
+  </div
+  ><nav class="fifth column __pull-four-fifth">
+
+    <div class="toc">
+      <h2>Content</h2>
+      <ul>
+        <li>
+          <span>Helpers</span>
+        </li>
+        <li>
+          <span>Base</span>
+          <ul>
+            <li><a href="<?php echo $baseUrl; ?>?view=reset">Reset</a></li>
+            <li><a href="<?php echo $baseUrl; ?>?view=type">Type</a></li>
+            <li><a href="<?php echo $baseUrl; ?>?view=baseline">Baseline</a></li>
+            <li><a href="<?php echo $baseUrl; ?>?view=grid">Grid</a></li>
+            <li><a href="<?php echo $baseUrl; ?>?view=general">General</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>Skin</span>
+        </li>
+        <li>
+          <a href="<?php echo $baseUrl; ?>?view=modules">Modules</a>
+          <ul>
+            <li>Lists</li>
+            <li>Forms</li>
+            <li>Tables</li>
+            <li>Buttons</li>
+            <li>UI</li>
+          </ul>
+        </li>
+        <li><a href="<?php echo $baseUrl; ?>?view=anatomy-of-a-project">Anatomy of a Project</a></li>
+        <li>Extending PG Framework</li>
+        <li>Glossary</li>
+        <li>Acknowledgement</li>
+        <li>Contributions</li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <script type="text/javascript">
+  var i = 0;
+  WebFontConfig = {
+        //custom: { families: ['AccessibilityFoundicons'], urls: ['/PGFramework/Stylesheets/screen.css'] },
+    google: { 
+        families: [ 'Lato:100,300,400,700,900,300italic:latin' ]
+        }
+  };
+  (function() {
+    // // Load WebFont
+    // var wf   = document.createElement('script');
+    // wf.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/<?php echo $webfontVersion; ?>/webfont.js';
+    // wf.type  = 'text/javascript';
+    // wf.async = 'false';
+    // var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
+    
+    // Load jQuery
+    var jq   = document.createElement('script');
+    jq.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://code.jquery.com/jquery-<?php echo $jqueryVersion; ?>.min.js';
+    jq.type  = 'text/javascript';
+    jq.async = 'true';
+    var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
+  })();
+  </script>
+</body>
