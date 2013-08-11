@@ -269,8 +269,11 @@ code,
 }
 
 .hierarchy {
+	font-family: monospace;
 	.level0 {
-
+		&:before {
+			content: "|";
+		}
 	}
 	.level1 {
 		padding-left: horizontal-rhythm(.25);
@@ -280,5 +283,16 @@ code,
 	}
 	.level3 {
 		padding-left: horizontal-rhythm(.75);
+	}
+	.level4 {
+		padding-left: horizontal-rhythm(1);
+	}
+	.level1,
+	.level2,
+	.level3,
+	.level4 {
+		&:before {
+			content: "--|";
+		}
 	}
 }

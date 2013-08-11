@@ -24,45 +24,50 @@ title: Anatomy of a project
 
 <section class="chapter-section" id="introduction">
 
-	<h2 class="article-header-level2">Directory structure</h2
+	<h2 class="article-header-level2">Importing the grid</h2
 	><div class="three-fourth column">
+
+<pre class="terminal">
+// Import Compass, no-game without it
+@import "Compass";
+
+// Import the settings: first the defaults and then the skin settings;
+@import "persistentgrid";
+</pre>
+
+<pre class="terminal">
+// Import Compass, no-game without it
+@import "Compass";
+
+// Import the settings: first the defaults and then the skin settings;
+@import "framework/helpers";
+
+// Import the settings: first the defaults and then the skin settings;
+@import "framework/settings";
+@import "skin/settings";
+
+// Import the behavior, this is where the styles will be rendered
+@import "framework/behavior";
+@import "skin/behavior";
+</pre>
 
 		<p>The directory structure is designed such, that it will allow for easy implementation of new modules and styles. On a lower level, it is also possible to extend existing styles. This can come in handy if - for example - you want to use the existing buttons, but only add more rounded corners. An example setup of this can be found in the UI/Buttons module.</p>
 		<p>The basic structure for any module is:</p>
 
 		<ul class="hierarchy">
 			<li class="level0">
-				/Modulename
+				module
 				<ul>
+					<li class="level1">_all.scss</li>
+					<li class="level1">_behavior.scss</li>
+					<li class="level1">_settings.scss</li>
+					<li class="level1">_helpers.scss</li>
 					<li class="level1">
-						/base
+						helpers
 						<ul>
-							<li class="level2">/_behavior.scss</li>
-							<li class="level2">/_dependencies.scss</li>
-							<li class="level2">/_functions.scss</li>
-							<li class="level2">/_mixins.scss</li>
-							<li class="level2">/_settings.scss</li>
+							<li class="level2">_functions.scss</li>
+							<li class="level2">_mixins.scss</li>
 						</ul>
-					</li>
-					<li class="level1">
-						/skins
-						<ul>
-							<li class="level2">
-								/skinone
-								<ul>
-									<li class="level3">/_settings.scss</li>
-								</ul>
-							</li>
-							<li class="level2">
-								/skintwo
-								<ul>
-									<li class="level3">/_settings.scss</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="level1">
-						_base.scss
 					</li>
 				</ul>
 			</li>

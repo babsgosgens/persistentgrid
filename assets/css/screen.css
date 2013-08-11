@@ -1047,15 +1047,34 @@ code, .list-api-name,
   margin-right: 24px;
 }
 
-/* line 275, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 271, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy {
+  font-family: monospace;
+}
+/* line 274, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level0:before {
+  content: "|";
+}
+/* line 278, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level1 {
   padding-left: 12px;
 }
-/* line 278, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 281, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level2 {
   padding-left: 24px;
 }
-/* line 281, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 284, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level3 {
   padding-left: 36px;
+}
+/* line 287, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level4 {
+  padding-left: 48px;
+}
+/* line 294, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level1:before,
+.hierarchy .level2:before,
+.hierarchy .level3:before,
+.hierarchy .level4:before {
+  content: "--|";
 }
