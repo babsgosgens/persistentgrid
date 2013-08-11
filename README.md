@@ -48,5 +48,3 @@ I'm currently using these in one of my projects now, so there are changes to exp
 
 ## To do
 Add proper annotation
-
-Only render what you use!
