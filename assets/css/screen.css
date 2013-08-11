@@ -591,7 +591,7 @@ code, .list-api-name {
 
 /* line 8, ../../_persistentgrid/scss/skin/_behavior.scss */
 .toc {
-  margin-top: 1.6em;
+  margin: 2.4em 0 0.8em;
   background: #cfc0fb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

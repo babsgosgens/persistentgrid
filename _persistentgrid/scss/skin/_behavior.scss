@@ -6,7 +6,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 .toc {
-	@include leader;
+	margin: vertical-rhythm(1.5) 0 vertical-rhythm(.5);
 	background: mix($color-primary, $color-background);
 	@include border-radius($corner-radius);
 	h2 {
