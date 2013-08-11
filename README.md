@@ -1,4 +1,1 @@
-PersistentGrid.github.io
-========================
-
-Persistent Grid examples
+Persistent Grid is pre-alpha
