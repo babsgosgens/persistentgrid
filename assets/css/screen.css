@@ -591,35 +591,66 @@ code, .list-api-name {
 
 /* line 8, ../../_persistentgrid/scss/skin/_behavior.scss */
 .toc {
+  margin-top: 1.6em;
   background: #cfc0fb;
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius: 0 0 3px 3px;
-  -ms-border-radius: 0 0 3px 3px;
-  -o-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
-/* line 11, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 12, ../../_persistentgrid/scss/skin/_behavior.scss */
 .toc h2 {
-  font-size: 1.86667em;
-  line-height: 1.71429em;
-  padding: 0.8em 24px;
-  color: white;
+  line-height: 3.2em;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: #9f81f7;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  font-weight: 600;
 }
-/* line 18, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 21, ../../_persistentgrid/scss/skin/_behavior.scss */
 .toc span,
 .toc a,
 .toc a:visited {
   display: block;
   color: inherit;
-  padding: 0.4em 24px;
+  padding: 0.4em 12px;
+  text-decoration: none;
 }
-/* line 23, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 26, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc span:hover,
+.toc a:hover,
+.toc a:visited:hover {
+  font-weight: 600;
+}
+/* line 30, ../../_persistentgrid/scss/skin/_behavior.scss */
 .toc li {
   border: 1px solid #e9e2fd;
   border-width: 1px 0 0;
 }
+/* line 43, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent > ul {
+  position: absolute;
+  left: -9999em;
+}
+/* line 47, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent:hover > ul {
+  position: static;
+}
+/* line 49, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent:hover > ul a {
+  background: rgba(255, 255, 255, 0.4);
+}
+/* line 53, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent:hover > a {
+  background: #9f81f7;
+}
 
-/* line 29, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
 .page-header, .chapter-links {
   position: relative;
   left: 25%;
@@ -632,33 +663,33 @@ code, .list-api-name {
   margin: 3.2em 0 1.6em;
 }
 @media only screen and (max-width: 48em) {
-  /* line 29, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
   .page-header, .chapter-links {
     position: static;
     position: initial;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 29, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
   .page-header, .chapter-links {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 29, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
   .page-header, .chapter-links {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 34, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 67, ../../_persistentgrid/scss/skin/_behavior.scss */
 .page-header-header {
   font-size: 1.86667em;
   line-height: 1.71429em;
 }
 
-/* line 37, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 70, ../../_persistentgrid/scss/skin/_behavior.scss */
 .page-header-sub {
   display: block;
   font-family: normal, normal, 400, "Lato", sans-serif;
@@ -667,7 +698,7 @@ code, .list-api-name {
   color: #9f81f7;
 }
 
-/* line 54, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 87, ../../_persistentgrid/scss/skin/_behavior.scss */
 .breadcrumbs-root-item {
   display: inline-block;
   vertical-align: top;
@@ -678,20 +709,20 @@ code, .list-api-name {
   text-align: right;
 }
 @media only screen and (max-width: 48em) {
-  /* line 54, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 87, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-root-item {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 54, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 87, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-root-item {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 58, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
 .breadcrumbs-items {
   display: inline-block;
   vertical-align: top;
@@ -701,24 +732,24 @@ code, .list-api-name {
   padding-right: 24px;
 }
 @media only screen and (max-width: 48em) {
-  /* line 58, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-items {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 58, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-items {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 61, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 94, ../../_persistentgrid/scss/skin/_behavior.scss */
 .breadcrumbs-items > span:before {
   content: "/";
 }
 
-/* line 66, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-header {
   margin: 0.8em 0 0;
   font-weight: 400;
@@ -727,12 +758,12 @@ code, .list-api-name {
   color: #666666;
 }
 
-/* line 73, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 106, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-section {
   margin: 1.6em 0 3.2em;
 }
 
-/* line 76, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 {
   margin: 0 0 0.8em;
   font-weight: 300;
@@ -749,43 +780,43 @@ code, .list-api-name {
   border-right: 3px solid #cccccc;
 }
 @media only screen and (max-width: 48em) {
-  /* line 76, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 76, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 85, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 118, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 + * {
   border-left: 1px solid #cccccc;
 }
-/* line 88, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 + * > *:first-child {
   margin-top: 0;
 }
-/* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 124, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 + * > *:last-child {
   margin-bottom: 0;
 }
 @media only screen and (max-width: 48em) {
-  /* line 76, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 {
     text-align: inherit;
     border: 0;
   }
-  /* line 98, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 131, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 + * {
     border: 0;
   }
 }
 
-/* line 104, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 137, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level3 {
   padding: 0.4em 12px;
   margin-top: 1.6em;
@@ -799,7 +830,7 @@ code, .list-api-name {
   color: #666666;
 }
 
-/* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 154, ../../_persistentgrid/scss/skin/_behavior.scss */
 .demo {
   padding: 0;
   border-left: 24px solid #e8e1fd;
@@ -810,20 +841,20 @@ code, .list-api-name {
   overflow: hidden;
 }
 @media only screen and (max-width: 48em) {
-  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 154, ../../_persistentgrid/scss/skin/_behavior.scss */
   .demo {
     border-left: 12px solid #e8e1fd;
     border-right: 12px solid #e8e1fd;
   }
 }
 
-/* line 135, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 168, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags {
   border-top-style: solid;
   border-top-width: 0.06667em;
   padding-top: -0.06667em;
 }
-/* line 138, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 171, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags dt,
 .tags dd {
   display: inline-block;
@@ -838,42 +869,42 @@ code, .list-api-name {
   padding-bottom: 0.33333em;
 }
 @media only screen and (max-width: 48em) {
-  /* line 138, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 171, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dt,
   .tags dd {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 138, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 171, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dt,
   .tags dd {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 143, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 176, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags dt {
   width: 25%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 143, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 176, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dt {
     width: 100%;
   }
 }
-/* line 146, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 179, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags dd {
   width: 75%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 146, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 179, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dd {
     width: 100%;
   }
 }
 
-/* line 150, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags-tag {
   color: #666666;
   font-style: italic;
@@ -924,47 +955,47 @@ code, .list-api-name {
   border: none;
 }
 
-/* line 156, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 189, ../../_persistentgrid/scss/skin/_behavior.scss */
 code, .list-api-name {
   font-size: 1.25em;
   color: #8273ae;
 }
 
-/* line 174, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 207, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name {
   margin-top: 1.6em;
 }
-/* line 180, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 213, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name:first-child {
   margin-top: 0;
 }
-/* line 184, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 217, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name a,
 .list-api-name a:visited {
   color: inherit;
 }
 
-/* line 188, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 221, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-description {
   font-weight: 300;
 }
 
-/* line 191, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 224, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-code {
   position: absolute;
   left: -9999em;
 }
 
-/* line 195, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 228, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name:target + .list-api-code {
   position: static;
 }
 
-/* line 200, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 233, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-links {
   margin-top: 0.8em;
 }
-/* line 204, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 237, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-links a,
 .chapter-links a:visited {
   display: block;
@@ -972,7 +1003,7 @@ code, .list-api-name {
   line-height: 2em;
 }
 @media only screen and (min-width: 80em) {
-  /* line 204, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 237, ../../_persistentgrid/scss/skin/_behavior.scss */
   .chapter-links a,
   .chapter-links a:visited {
     display: default;
@@ -980,7 +1011,7 @@ code, .list-api-name {
   }
 }
 
-/* line 216, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 251, ../../_persistentgrid/scss/skin/_behavior.scss */
 .inline-list li {
   display: inline-block;
   margin-right: 24px;
