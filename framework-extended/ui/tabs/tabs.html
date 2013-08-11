@@ -1,0 +1,111 @@
+---
+layout: default
+title: Tabs
+---
+
+<h2>Horizontal Tabs</h2>
+
+<div class="tabs tabs-horizontal tabs-3">
+	<section class="tab" id="ht1">
+		<a href="#ht1" class="tab-tab">
+			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLioRhpPvOGZ6Vvdlx8JihmeH2G2n12pbvaPAiPTTlw270jCtF" alt="cupcake1">
+			<span style="display: block;">First Tab</span>
+		</a>
+		<div class="tab-content">
+			<p>Ice cream bear claw lemon drops macaroon cheesecake caramels powder sweet. Wafer croissant gummi bears tootsie roll gummi bears topping ice cream candy. Topping marzipan lollipop chocolate cake bonbon jelly-o tart candy canes.</p>
+		</div>
+	</section
+	><section class="tab" id="ht2">
+		<a href="#ht2" class="tab-tab">
+			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLioRhpPvOGZ6Vvdlx8JihmeH2G2n12pbvaPAiPTTlw270jCtF" alt="cupcake2">
+			<span style="display: block;">Second Tab</span>
+		</a>
+		<div class="tab-content">
+			<p>Ice cream croissant marzipan. Croissant cookie halvah croissant bear claw. Marzipan candy canes apple pie wafer. Marshmallow lollipop bear claw fruitcake tiramisu chocolate.</p>
+		</div>
+	</section
+	><section class="tab" id="ht3">
+		<a href="#ht3" class="tab-tab">
+			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLioRhpPvOGZ6Vvdlx8JihmeH2G2n12pbvaPAiPTTlw270jCtF" alt="cupcake3">
+			<span style="display: block;">Third Tab</span>
+		</a>
+		<div class="tab-content">
+			<p>Wafer sweet roll halvah cake sweet. Chupa chups chupa chups ice cream carrot cake sweet wafer unerdwear.com. Bonbon apple pie muffin carrot cake cake icing cupcake gummies dessert.</p>
+		</div>
+	</section>
+</div>
+
+<!-- <div class="tabs tabs-horizontal tabs-4">
+	<section class="tab" id="ht1">
+		<a href="#ht1" class="tab-tab">
+			<span>First Tab</span>
+		</a>
+		<div class="tab-content">
+			<p>Ice cream bear claw lemon drops macaroon cheesecake caramels powder sweet. Wafer croissant gummi bears tootsie roll gummi bears topping ice cream candy. Topping marzipan lollipop chocolate cake bonbon jelly-o tart candy canes.</p>
+		</div>
+	</section
+	><section class="tab" id="ht2">
+		<a href="#ht2" class="tab-tab">
+			<span>Second Tab</span>
+		</a>
+		<div class="tab-content">
+			<p>Ice cream croissant marzipan. Croissant cookie halvah croissant bear claw. Marzipan candy canes apple pie wafer. Marshmallow lollipop bear claw fruitcake tiramisu chocolate.</p>
+		</div>
+	</section
+	><section class="tab" id="ht3">
+		<a href="#ht3" class="tab-tab">
+			<span>Third Tab</span>
+		</a>
+		<div class="tab-content">
+			<p>Wafer sweet roll halvah cake sweet. Chupa chups chupa chups ice cream carrot cake sweet wafer unerdwear.com. Bonbon apple pie muffin carrot cake cake icing cupcake gummies dessert.</p>
+		</div>
+	</section>
+</div> -->
+
+<h2>Vertical Tabs</h2>
+
+<h2>Horizontal Tabs</h2>
+
+<script type="text/javascript">
+<!--
+$('.tab-tab').on('click', function(e){
+		// console.log('resizing');
+
+	// Prevent hashtag jump
+	e.preventDefault();
+
+	// Set required variables
+	var el = $(this),
+		 w = el.containers('.tabs').width(),
+		 l = el.containers('.tab').position().left,
+		 c = el.next('.tab-content'),
+		 t = el.containers('.tabs').find('.tab')
+	;
+
+	// Check if any tabs are opened, close if nescessary
+	t.each(function(){
+		var _t = $(this).find('.tab-content');
+		if( _t.is(':visible') ) {
+			_t.toggle();
+			$(this).removeClass('is-active');
+		}
+	})
+
+	// Open tab, give it it's container width and offset it to the left of its container
+	if(c.is(':hidden')) {
+		c
+		.width(w)
+		.css('left', -l)
+		.toggle();
+		el.containers('.tab').addClass('is-active');
+	}
+
+}).first().trigger('click');
+
+// Resize tabs when window is resized
+$(window).resize(function(){
+	// Find active tabs
+	$('.is-active').find('.tab-tab').trigger('click');
+});
+-->
+</script>
