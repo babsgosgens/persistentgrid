@@ -1,0 +1,26 @@
+/* http://persistent-grid.com
+   v1.0 | 20130701
+   Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+   License: GNU General Public License version 2 or later; see LICENSE.txt
+*/
+
+// We need the column-padding function from the Persistent Grid module
+// It"s not been loaded until later in the proces so we add it manually here
+// @import "PersistentGrid/base/functions"; note: this appears to have been resolved?;
+
+$debug: false;
+
+// Helpers
+@import "Helpers/base"; // Import helpers.
+
+// Settings (skin)
+@import "Skin/base/settings"; // Import Skin first, this is where any default settings can be changed before any style rules are rendered.
+
+// Base modules
+@import "Base/base";
+
+// Settings (skin)
+@import "Skin/base/behavior"; // Import Skin first, this is where any default settings can be changed before any style rules are rendered.
+
+// // Modules
+@import "Modules/base";

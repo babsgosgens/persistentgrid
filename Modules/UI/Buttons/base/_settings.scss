@@ -1,0 +1,214 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+	// Button base class
+	$button-base-class 						: "btn";
+	$button-cursor							: pointer;
+
+	// Default button style
+	$button-text-color 						: $white;
+	$button-text-shadow 					: -1px -1px 0 rgba(0,0,0,.5);
+	$button-text-align 						: center;
+	$button-text 							: $button-text-color, $button-text-shadow, $button-text-align;
+
+	$button-background-color 				: $color-theme;
+	$button-background-image				: linear-gradient(lighten($button-background-color,5), darken($button-background-color,5));
+	$button-background 						: $button-background-color, $button-background-image;
+
+	$button-border-width					: 1px;
+	$button-border-style					: outset;
+	$button-border-color					: $button-background-color;
+	$button-border-radius					: $corner-radius;
+	$button-border 							: ($button-border-width, $button-border-style, $button-border-color), $button-border-radius;
+
+	$button-shadow-box 						: 0 1px 2px rgba(0, 0, 0, 0.05);
+	$button-shadow-inner 					: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	$button-shadow 							: $button-shadow-box, $button-shadow-inner;
+
+	$button-padding-top 					: 0;
+	$button-padding-right 					: column-padding(1/2);
+	$button-padding-bottom 					: 0;
+	$button-padding-left 					: column-padding(1/2);
+	$button-padding							: $button-padding-top, $button-padding-right, $button-padding-bottom, $button-padding-left;
+
+	$button-type-style 						: extract-type-style($type-default);
+	$button-type-variant					: extract-variant-style($type-default);
+	$button-type-weight						: extract-weight-style($type-default);
+	$button-type-family 					: extract-family-style($type-default);
+	$button-type-size 						: $font-size;
+	$button-type-leading 					: if(boolean($button-border-width), ($line-height - multiply(2,$button-border-width)), $line-height);
+	$button-type 							: ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading;
+
+	// Hover state button style
+	$button-hover-text-color 				: $button-text-color; 				// inherit
+	$button-hover-text-shadow 				: $button-text-shadow; 				// inherit
+	$button-hover-text-align 				: $button-text-align; 				// inherit
+	$button-hover-text 						: $button-hover-text-color, $button-hover-text-shadow, $button-hover-text-align;
+
+	$button-hover-background-color 			: $purple;
+	$button-hover-background-image			: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5));
+	$button-hover-background 				: $button-hover-background-color, $button-hover-background-image;
+
+	$button-hover-border-width				: $button-border-width; 			// inherit
+	$button-hover-border-style				: $button-border-style; 			// inherit
+	$button-hover-border-color				: $button-hover-background-color;
+	$button-hover-border-radius				: $button-border-radius; 			// inherit
+	$button-hover-border 					: ($button-hover-border-width, $button-hover-border-style, $button-hover-border-color), $button-hover-border-radius;
+
+	$button-hover-shadow-box 				: $button-shadow-box;				// inherit
+	$button-hover-shadow-inner 				: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+	$button-hover-shadow 					: $button-hover-shadow-box, $button-hover-shadow-inner;
+
+	// Active state button style
+	$button-active-text-color 				: $button-text-color; 				// inherit
+	$button-active-text-shadow 				: $button-text-shadow; 				// inherit
+	$button-active-text-align 				: $button-text-align; 				// inherit
+	$button-active-text 					: $button-active-text-color, $button-active-text-shadow, $button-active-text-align;
+
+	$button-active-background-color 		: darken($button-background-color, 15);
+	$button-active-background-image			: linear-gradient(darken($button-active-background-color,5),lighten($button-active-background-color,5));
+	$button-active-background 				: $button-active-background-color, $button-active-background-image;
+
+	$button-active-border-width				: $button-border-width; 			// inherit
+	$button-active-border-style				: inset; 			// inherit
+	$button-active-border-color				: $button-active-background-color;
+	$button-active-border-radius			: $button-border-radius; 			// inherit
+	$button-active-border 					: ($button-active-border-width, $button-active-border-style, $button-active-border-color), $button-active-border-radius;
+
+	$button-active-shadow-box 				: $button-shadow-box;				// inherit
+	$button-active-shadow-inner 			: $button-shadow-inner;				// inherit
+	$button-active-shadow 					: $button-active-shadow-box, $button-active-shadow-inner;
+
+	// Primary button style
+	$button-primary 						: true;
+
+	$button-primary-text-color 				: $button-text-color; 				// inherit
+	$button-primary-text-shadow 			: $button-text-shadow; 				// inherit
+	$button-primary-text-align 				: $button-text-align; 				// inherit
+	$button-primary-text 					: $button-primary-text-color, $button-primary-text-shadow, $button-primary-text-align;
+
+	$button-primary-background-color 		: $color-primary;
+	$button-primary-background-image		: linear-gradient(lighten($button-primary-background-color,5),darken($button-primary-background-color,5));
+	$button-primary-background 				: $button-primary-background-color, $button-primary-background-image;
+
+	$button-primary-border-width			: $button-border-width; 			// inherit
+	$button-primary-border-style			: $button-border-style; 			// inherit
+	$button-primary-border-color			: $button-primary-background-color;
+	$button-primary-border-radius			: $button-border-radius; 			// inherit
+	$button-primary-border 					: ($button-primary-border-width, $button-primary-border-style, $button-primary-border-color), $button-primary-border-radius;
+
+	$button-primary-shadow-box 				: $button-shadow-box;				// inherit
+	$button-primary-shadow-inner 			: $button-shadow-inner;				// inherit
+	$button-primary-shadow 					: $button-primary-shadow-box, $button-primary-shadow-inner;
+
+	// Secondary button style
+	$button-secondary 						: true;
+
+	$button-secondary-text-color 			: $button-text-color; 				// inherit
+	$button-secondary-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
+	$button-secondary-text-align 			: $button-text-align; 				// inherit
+	$button-secondary-text 					: $button-secondary-text-color, $button-secondary-text-shadow, $button-secondary-text-align;
+
+	$button-secondary-background-color 		: $color-secondary;
+	$button-secondary-background-image		: linear-gradient(lighten($button-secondary-background-color,5),darken($button-secondary-background-color,5));
+	$button-secondary-background 			: $button-secondary-background-color, $button-secondary-background-image;
+
+	$button-secondary-border-width			: $button-border-width; 			// inherit
+	$button-secondary-border-style			: $button-border-style; 			// inherit
+	$button-secondary-border-color			: $button-secondary-background-color;
+	$button-secondary-border-radius			: $button-border-radius; 			// inherit
+	$button-secondary-border 				: ($button-secondary-border-width, $button-secondary-border-style, $button-secondary-border-color), $button-secondary-border-radius;
+
+	$button-secondary-shadow-box 			: $button-shadow-box;				// inherit
+	$button-secondary-shadow-inner 			: $button-shadow-inner;				// inherit
+	$button-secondary-shadow 				: $button-secondary-shadow-box, $button-secondary-shadow-inner;
+
+	// Info button style
+	$button-info 							: true;
+
+	$button-info-text-color 				: $button-text-color; 				// inherit
+	$button-info-text-shadow 				: -1px -1px 0 rgba(0,0,0,.3);
+	$button-info-text-align 				: $button-text-align; 				// inherit
+	$button-info-text 						: $button-info-text-color, $button-info-text-shadow, $button-info-text-align;
+
+	$button-info-background-color 			: $color-info;
+	$button-info-background-image			: linear-gradient(lighten($button-info-background-color,5),darken($button-info-background-color,5));
+	$button-info-background 				: $button-info-background-color, $button-info-background-image;
+
+	$button-info-border-width				: $button-border-width; 			// inherit
+	$button-info-border-style				: $button-border-style; 			// inherit
+	$button-info-border-color				: $button-info-background-color;
+	$button-info-border-radius				: $button-border-radius; 			// inherit
+	$button-info-border 					: ($button-info-border-width, $button-info-border-style, $button-info-border-color), $button-info-border-radius;
+
+	$button-info-shadow-box 				: $button-shadow-box;				// inherit
+	$button-info-shadow-inner 				: $button-shadow-inner;				// inherit
+	$button-info-shadow 					: $button-info-shadow-box, $button-info-shadow-inner;
+
+	// Warning button style
+	$button-warning 						: true;
+
+	$button-warning-text-color 				: $button-text-color; 				// inherit
+	$button-warning-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
+	$button-warning-text-align 				: $button-text-align; 				// inherit
+	$button-warning-text 					: $button-warning-text-color, $button-warning-text-shadow, $button-warning-text-align;
+
+	$button-warning-background-color 		: $color-warning;
+	$button-warning-background-image		: linear-gradient(lighten($button-warning-background-color,5),darken($button-warning-background-color,5));
+	$button-warning-background 				: $button-warning-background-color, $button-warning-background-image;
+
+	$button-warning-border-width			: $button-border-width; 			// inherit
+	$button-warning-border-style			: $button-border-style; 			// inherit
+	$button-warning-border-color			: $button-warning-background-color;
+	$button-warning-border-radius			: $button-border-radius; 			// inherit
+	$button-warning-border 					: ($button-warning-border-width, $button-warning-border-style, $button-warning-border-color), $button-warning-border-radius;
+
+	$button-warning-shadow-box 				: $button-shadow-box;				// inherit
+	$button-warning-shadow-inner 			: $button-shadow-inner;				// inherit
+	$button-warning-shadow 					: $button-warning-shadow-box, $button-warning-shadow-inner;
+
+	// Error button style
+	$button-error 							: true;
+
+	$button-error-text-color 				: $button-text-color; 				// inherit
+	$button-error-text-shadow 				: -1px -1px 0 rgba(0,0,0,.3);
+	$button-error-text-align 				: $button-text-align; 				// inherit
+	$button-error-text 						: $button-error-text-color, $button-error-text-shadow, $button-error-text-align;
+
+	$button-error-background-color 			: $color-error;
+	$button-error-background-image			: linear-gradient(lighten($button-error-background-color,5),darken($button-error-background-color,5));
+	$button-error-background 				: $button-error-background-color, $button-error-background-image;
+
+	$button-error-border-width				: $button-border-width; 			// inherit
+	$button-error-border-style				: $button-border-style; 			// inherit
+	$button-error-border-color				: $button-error-background-color;
+	$button-error-border-radius				: $button-border-radius; 			// inherit
+	$button-error-border 					: ($button-error-border-width, $button-error-border-style, $button-error-border-color), $button-error-border-radius;
+
+	$button-error-shadow-box 				: $button-shadow-box;				// inherit
+	$button-error-shadow-inner 				: $button-shadow-inner;				// inherit
+	$button-error-shadow 					: $button-error-shadow-box, $button-error-shadow-inner;
+
+	// Success button style
+	$button-success 						: true;
+
+	$button-success-text-color 				: $button-text-color; 				// inherit
+	$button-success-text-shadow 			: -1px -1px 0 rgba(0,0,0,.3);
+	$button-success-text-align 				: $button-text-align; 				// inherit
+	$button-success-text 					: $button-success-text-color, $button-success-text-shadow, $button-success-text-align;
+
+	$button-success-background-color 		: $color-success;
+	$button-success-background-image		: linear-gradient(lighten($button-success-background-color,5),darken($button-success-background-color,5));
+	$button-success-background 				: $button-success-background-color, $button-success-background-image;
+
+	$button-success-border-width			: $button-border-width; 			// inherit
+	$button-success-border-style			: $button-border-style; 			// inherit
+	$button-success-border-color			: $button-success-background-color;
+	$button-success-border-radius			: $button-border-radius; 			// inherit
+	$button-success-border 					:( $button-success-border-width, $button-success-border-style, $button-success-border-color), $button-success-border-radius;
+
+	$button-success-shadow-box 				: $button-shadow-box;				// inherit
+	$button-success-shadow-inner 			: $button-shadow-inner;				// inherit
+	$button-success-shadow 					: $button-success-shadow-box, $button-success-shadow-inner;

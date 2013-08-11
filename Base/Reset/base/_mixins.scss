@@ -1,0 +1,23 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $debug { @debug '...Importing /Base/Reset/base/mixins'; }
+
+@mixin reset-text-rendering
+{
+	font-synthesis: none;
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums diagonal-fractions;
+	text-rendering: optimizeLegibility;
+}
+@mixin reset-box-sizing {
+	@include box-sizing(border-box);
+}
+@mixin reset-input
+{
+	display: inline-block;
+	@include reset-box-model;
+	@include box-sizing(border-box);
+	font: inherit;
+}

@@ -1,0 +1,261 @@
+// /**
+//  * @copyright	Copyright (C) 2013 Online Kollektief - Babs Gösgens. All rights reserved.
+//  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+@import "settings";
+
+// $form-horizontal-padding: rhythm(.5);
+$form-vertical-padding: rhythm(.5);
+$form-height-textarea: rhythm(5);
+
+fieldset {
+	&>ul,
+	&>ol {
+		list-style-type: none;
+	}
+}
+
+fieldset {
+	fieldset {
+		legend {
+			@extend label;
+		}
+	}
+}
+label,
+input,
+select,
+textarea {
+	display: inline-block;
+	@include adjust-font-size-to($base-font-size);
+	@include box-sizing('border-box');
+	border: 0;
+	margin: 0;
+	width: 100%;
+}
+textarea {
+	height: $form-height-textarea;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	width: auto;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	vertical-align: baseline;
+	+ label {
+		width: auto;
+	}
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	@extend .button;
+	width: auto;
+}
+
+
+
+// .inline {
+// 	label {
+// 		width: $inlineLabelWidth;
+// 		margin-right: $negative-right-margin;
+// 	}
+// 	input,
+// 	select,
+// 	textarea {
+// 		width: 100% - $inlineLabelWidth;
+// 		margin-right: $negative-right-margin;
+// 	}
+// }
+
+$roundedCorners : true;
+$color-cta-secondary: $color-secondary;
+
+$form-reset-elements: true; // Implement behavior
+
+$form-color-default: darken($white,10);
+$form-color-hover: $color-cta-secondary;
+$form-color-focus: $form-color-hover;
+$form-color-invalid: $red;
+$form-color-inactive: lighten($red,60);
+
+$form-corner-radius: $corner-radius;
+
+$form-border-width: 1px;
+$form-border-color: $form-color-default;
+$form-border-style: solid;
+
+$form-text-color: $color-body;
+
+$form-triangle-size: $base-font-size;
+
+.form-default {
+	@include webkit-remove-shadow-on-input-elements();
+	.span {
+		width: 100%;
+	}
+	li {
+		@include trailer;
+	}
+	input,
+	select,
+	textarea {
+		@if $roundedCorners {
+			@include border-bottom-radius($form-corner-radius);
+		}
+		border: #{$form-border-width} #{$form-border-style} #{$form-border-color};
+		@include box-shadow(0);
+		&:hover,
+		&:focus {
+			outline: none;
+		}
+	}
+	label,
+	input,
+	select,
+	textarea {
+		@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
+		@include column-spacing();
+	}
+
+	li:hover {
+		.choices legend,
+		>label:first-child {
+			position: relative;
+			background-color: $color-cta-secondary;
+			color: $white;
+			@include triangle($form-triangle-size, down, $form-color-hover, after );
+			&:after {
+				left: (0.5*$column-spacing) - (0.25*$form-triangle-size);
+			}
+		}
+		input,
+		select,
+		textarea {
+			border-color: $form-color-focus;
+		}
+	}
+	
+	.choices {
+		>legend {
+			@extend label;
+			&+ul {
+				@extend input;
+				@include rhythm(0,$form-vertical-spacing,$form-vertical-spacing,0);
+				@include column-spacing();
+			}
+		}
+		li {
+			margin-bottom: 0; // Override trailer
+			position: relative;
+			label {
+				background-color: transcontainer;
+			}
+			input {
+				position: absolute;
+				&+label {
+					padding-left: 1.3em;
+					padding-right: 0;
+				}
+			}
+			label,
+			input {
+				@include vertical-rhythm(1,height);
+				padding: 0;
+				border: 0;
+			}
+		}
+		&.boolean {
+			legend+ul {
+				margin-top: 0;
+			}
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+	label {
+		@include border-top-radius($corner-radius);
+		background-color: $form-color-default;
+		&+textarea,
+		&+input,
+		&+select+input,
+		&+select+.select,
+		&+select+.input>.select {
+			@include border-top-radius(0);
+		}
+	}
+	
+	label+select {
+		@include vertical-rhythm(0.5, margin-top);
+	}	
+
+	label.invalid,
+	label.invalid:hover {
+		background-color: $form-color-invalid !important;
+		color: $white !important;
+	}
+	.invalid,
+	.invalid:hover {
+		border-color: $form-color-invalid !important;
+	}
+	.invalid:after {
+		border-top-color: $form-color-invalid !important;
+	}
+
+	// Items with a sublabel
+	input[type="number"] {
+		@include column(1/2);
+		@include border-right-radius(0);
+		border-right-width: 0;
+		+label {
+			@extend input;
+			background-color: transcontainer !important;
+			@include column(1/2);
+			@include border-bottom-radius($corner-radius);
+			@include border-left-radius(0);
+			@include border-top-radius(0);
+			color: $color-body !important;
+			border-left-width: 0;
+			white-space: nowrap;
+			&.invalid:hover {
+				background-color: transcontainer !important;
+				color: $color-body !important;
+			}
+		}
+	}
+	input[type="number"],
+	input[type="number"]+label {
+		height: rhythm(2) !important;
+	}
+}
+
+//*
+//* Searchbox styling
+//* http://css-tricks.com/webkit-html5-search-inputs/
+//*
+input[type="search"] {
+	@include font-size(16px);
+	::-webkit-input-placeholder,
+	:-moz-placeholder,
+	::-moz-placeholder,
+	:-ms-placeholder {
+	    color: $color-theme;
+		color: $color-body;  
+		text-align: left;
+		cursor: pointer;
+		// letter-spacing: 4px;        
+		text-shadow: 0 0 2px black;       
+		word-spacing: 20px;               
+	}
+}
+
+
+// noindex:-o-prefocus, input[type="number"] {
+//   padding-top: (14/16)*1em;
+//   padding-bottom: (14/16)*1em;
+// }

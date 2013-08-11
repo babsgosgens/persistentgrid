@@ -1,0 +1,24 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $debug { @debug '...Importing /Base/Type/base/settings'; }
+
+	// @import "functions";
+	// @import "mixins";
+
+// 	################################################################################################################################  //
+// 	Base Type							  																							  //
+// 	################################################################################################################################  //
+
+	// These setings are picked up by the Vertical-Rhythm
+	$establish-baseline 				: false !default;
+
+	// Consider merging VR int the Type module
+	$font-size							: 15px;
+	$line-height 						: 24px;
+
+	@import "../fonts/lato";
+
+	$type-default 						: $lato-regular;
+	$type-heading 						: $lato-book;

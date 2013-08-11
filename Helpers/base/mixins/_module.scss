@@ -1,0 +1,162 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $debug { @debug '...Importing /Helpers/base/mixins/module'; }
+
+
+	// Expects an array of four values
+	// Use false if a value should not be rendered (0 is a valid value)
+	@mixin module-padding($padding) {
+
+		// Extract the individual variables from the list
+		$top:    nth($padding, 1);
+		$right:  nth($padding, 2);
+		$bottom: nth($padding, 3);
+		$left:   nth($padding, 4);
+
+		// Determine if we have all the values for shorthand notation
+		$shorthand: true;
+		@if $top==false    { $shorthand: false; }
+		@if $right==false  { $shorthand: false; }
+		@if $bottom==false { $shorthand: false; }
+		@if $left==false   { $shorthand: false; }
+
+		@if $shorthand {
+			padding: $top $right $bottom $left;
+		}
+		@else {
+			@if $top    { padding-top: $top; }
+			@if $right  { padding-right: $right; }
+			@if $bottom { padding-bottom: $bottom; }
+			@if $left   { padding-left: $left; }
+		}
+	}
+
+	// Expects an array of four values
+	// Use false if a value should not be rendered (0 is a valid value)
+	@mixin module-margin($margin) {
+
+		// Extract the individual variables from the list
+		$top:    nth($margin, 1);
+		$right:  nth($margin, 2);
+		$bottom: nth($margin, 3);
+		$left:   nth($margin, 4);
+
+		// Determine if we have all the values for shorthand notation
+		$shorthand: true;
+		@if $top==false    { $shorthand: false; }
+		@if $right==false  { $shorthand: false; }
+		@if $bottom==false { $shorthand: false; }
+		@if $left==false   { $shorthand: false; }
+
+		@if $shorthand {
+			margin: $top $right $bottom $left;
+		}
+		@else {
+			@if $top    { margin-top: $top; }
+			@if $right  { margin-right: $right; }
+			@if $bottom { margin-bottom: $bottom; }
+			@if $left   { margin-left: $left; }
+		}
+	}
+
+	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
+	// Use false if a value should not be rendered (0 is a valid value)
+	@mixin module-border($border, $border-collapse: true) {
+
+		// Extract the individual variables from the list
+		$border-radius: nth($border,2);
+		$border: nth($border,1);
+
+		$border-width: nth($border,1);
+		$border-style: nth($border,2);
+		$border-color: nth($border,3);
+
+		// Determine if we have all the values for shorthand notation
+		$shorthand: true;
+		@if $border-width==false { $shorthand: false; }
+		@if $border-style==false { $shorthand: false; }
+		@if $border-color==false { $shorthand: false; }
+
+		@if $shorthand {
+			border: $border-width $border-style $border-color;
+		}
+		@else {
+			@if $border-width {
+				border-width: $border-width;
+			}
+			@if $border-style {
+				border-style: $border-style;
+			}
+			@if $border-color {
+				border-color: $border-color;
+			}
+		}
+		
+		// Render the rounded corners
+		@if $border-radius {
+			@include border-radius($border-radius);
+		}
+	}
+
+	// Expects a (list of) valid shadow notation(s) or false if no shadow should be rendered
+	@mixin module-shadow($shadow) {
+		@if $shadow {
+			@include box-shadow($shadow);
+		}
+	}
+
+	// Expects a list in the format of button-text-color, button-text-shadow, button-text-align;
+	@mixin module-text($text) {
+
+		$text-color: nth($text,1);
+		$text-shadow: nth($text,2);
+		$text-align: nth($text,3);
+
+		@if $text-color {
+			color: $text-color;
+		}
+		@if $text-shadow {
+			@include text-shadow($text-shadow);
+		}
+		@if $text-align {
+			text-align: $text-align;
+		}
+	}
+
+
+	// Expects a nested list in the format ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading
+	// The mixin will check if values are different from the base class and if so add them
+	// Equal values will be ignored to keep CSS as small as possible
+	@mixin module-type($type) {
+
+		$type-size: nth($type,2);
+		$type-leading: nth($type,3);
+
+		$type: nth($type,1);
+
+		$type-default-style:   nth($type,1);
+		$type-default-variant: nth($type,2);
+		$type-default-weight:  nth($type,3);
+		$type-default-family:  nth($type,4);
+
+		@if $type-default-style != $type-default-style {
+			@include font-style($type-default-style);
+		}
+		@if $type-default-variant != $type-default-variant {
+			@include font-variant($type-default-variant);
+		}
+		@if $type-default-weight != $type-default-weight {
+			@include font-weight($type-default-weight);
+		}
+		@if $type-default-family != $type-default-family {
+			@include font-family($type-default-family);
+		}
+		@if $type-size != $font-size {
+			@include adjust-font-size-to($type-size);
+		}
+		@if $type-leading != $line-height {
+			@include adjust-leading-to($type-leading/$base-line-height, $type-size);
+		}
+	}
