@@ -187,12 +187,22 @@
 }
 
 code {
-	font-size: 1.25em;
+	padding: vertical-rhythm(.25) .5em;
+}
+code,
+.terminal {
+	font-family: monospace;
+	background: darken($color-background, 5%);
+	font-size: 1.1em;
 	color: mix($color-body,$color-primary);
 	background: darken($color-background, 5%);
 	border: 1px solid darken($color-background, 10%);
 	@include border-radius($corner-radius);
-	padding: 0 .25em;
+}
+.terminal {
+	overflow-x: scroll;
+	padding: vertical-rhythm(.5) 0;
+	@include column-spacing();
 }
 .gist {
 }

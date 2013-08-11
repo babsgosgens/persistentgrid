@@ -3,4 +3,66 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-<h1 class="column">Welkom to Persistent Grid</h1>
+<nav class="chapter-links">
+	<ul class="inline-list">
+		<li>
+			<a href="#introduction">Introduction</a>
+		</li
+		><li>
+			<a href="#installation">Installing Persistent Grid</a>
+		</li
+		>
+	</ul>
+</nav>
+
+<section class="chapter-section" id="introduction">
+
+	<h2 class="article-header-level2">Introduction</h2
+	><div class="three-fourth column">
+	<p>@todo</p>
+	</div>
+
+</section>
+
+<section class="chapter-section" id="installation">
+
+	<h2 class="article-header-level2">Installing Persistent Grid (pre-alpha)</h2
+	><div class="three-fourth column">
+	<p>During the development of Persistent Grid (or at least until a first release candidate) you can install Persistent Grid as an Ad-Hoc Compass extension. Ad-Hoc extensions reside in a directory named <code>extensions</code> in the root of your Compass project.</p>
+
+	<h3 class="article-header-level3">Adding Persistent Grid to your project</h3>
+	<p>If it doesn't exist yet, create a directory named <code>extensions</code> in the root of your Compass project directory. This is where the Persistent Grid code will reside.</p>
+
+	<h4>Using git submodule</h4>
+	<p>There are two ways to add Persistent Grid to your extensions. If you are using git for version control, you may want to add Persistent Grid as a submodule to your project. From the root of your repository:<p/>
+	<pre class="terminal">git submodule add https://github.com/babsgosgens/persistentgrid.git path_to_your_compass_directory/extensions/persistentgrid/</pre>
+	<p><small>Make sure to replace "path_to_your_compass_directory" with the actual path to your Compass directory.</small></p>
+
+	<h4>Using an archive</h4>
+	<p>You can also add Persistent Grid by extracting an <a href="https://github.com/babsgosgens/persistentgrid/archive/master.zip">archived copy</a> of Persistent Grid into the extensions directory. Make sure to rename the extracted directory from "persistentgrid-master" to <code>persistentgrid</code>.</p>
+
+	<h3 class="article-header-level3">Checking that Persistent Grid is installed succesfully</h3>
+	<p>From the root of your compass project's directory, run:<code>compass frameworks</code></p>
+	<p>You should see a list similar to:</p>
+	<pre class="terminal">Available Frameworks & Patterns:
+  * blueprint
+    - blueprint/basic                   - A basic blueprint install that mimics the actual blueprint css.
+    - blueprint/buttons                 - Button Plugin
+    - blueprint/link_icons              - Icons for common types of links
+    - blueprint/project                 - The blueprint framework.
+    - blueprint/semantic                - The blueprint framework for use with semantic markup.
+  * compass
+    - compass/ellipsis                  - Plugin for cross-browser ellipsis truncated text.
+    - compass/extension                 - Generate a compass extension.
+    - compass/pie                       - Integration with http://css3pie.com/
+    - compass/project                   - The default project layout.
+  * persistentgrid
+    - persistentgrid/basic              - The basics: a simple but flexible grid system.
+    - persistentgrid/framework          - A solid base for your projects. Includes the grid and base styles.
+    - persistentgrid/framework-extended - Like framework, but includes styles for common UI patterns.</pre>
+
+	<p>For more information on Compass Ad-Hoc extensions, please visit <a href="http://compass-style.org/help/tutorials/extensions/">http://compass-style.org/help/tutorials/extensions/</a>.</p>
+
+	</div>
+
+</section>
