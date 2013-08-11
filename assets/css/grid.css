@@ -3,13 +3,13 @@
    Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
    License: GNU General Public License version 2 or later; see LICENSE.txt
 */
-/* line 7, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 7, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .root {
   display: block;
   max-width: 1152px;
 }
 
-/* line 11, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 11, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .column {
   display: inline-block;
   vertical-align: top;
@@ -18,410 +18,137 @@
   padding-left: 24px;
   padding-right: 24px;
 }
-@media only screen and (max-width: 48em) {
-  /* line 11, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .column {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 48em) {
-  /* line 11, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .column {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
 
-/* line 15, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 15, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .column-container {
   display: inline-block;
   vertical-align: top;
   height: auto;
 }
 
-/* line 19, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 19, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .column-padding {
   padding-left: 24px;
   padding-right: 24px;
 }
-@media only screen and (max-width: 48em) {
-  /* line 19, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .column-padding {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
 
-/* line 23, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 23, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .bleed {
   margin-left: -24px;
   margin-right: -24px;
 }
-@media only screen and (max-width: 48em) {
-  /* line 23, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .bleed {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-}
-@media only screen and (max-width: 48em) {
-  /* line 23, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .bleed {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-}
-@media only screen and (max-width: 48em) and (max-width: 48em) {
-  /* line 23, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .bleed {
-    margin-left: -6px;
-    margin-right: -6px;
-  }
-}
 
-/* line 27, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 27, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .full {
   width: 100%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 27, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .full {
-    width: 100%;
-  }
-}
 
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .half {
   width: 50%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .half {
-    width: 100%;
-  }
-}
 
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .half.persistent {
   width: 50% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .half.persistent {
-    width: 100%;
-  }
-}
 
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .push-half {
   position: relative;
   left: 50%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-half {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .pull-half {
   position: relative;
   left: -50%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-half {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .fourth {
   width: 25%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .fourth {
-    width: 100%;
-  }
-}
 
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .fourth.persistent {
   width: 25% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .fourth.persistent {
-    width: 100%;
-  }
-}
 
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .push-fourth {
   position: relative;
   left: 25%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .pull-fourth {
   position: relative;
   left: -25%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .third {
   width: 33.33333%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .third {
-    width: 100%;
-  }
-}
 
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .third.persistent {
   width: 33.33333% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .third.persistent {
-    width: 100%;
-  }
-}
 
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .push-third {
   position: relative;
   left: 33.33333%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .pull-third {
   position: relative;
   left: -33.33333%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .two-third {
   width: 66.66667%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .two-third {
-    width: 100%;
-  }
-}
 
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .two-third.persistent {
   width: 66.66667% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .two-third.persistent {
-    width: 100%;
-  }
-}
 
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .push-two-third {
   position: relative;
   left: 66.66667%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-two-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .pull-two-third {
   position: relative;
   left: -66.66667%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-two-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .three-fourth {
   width: 75%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .three-fourth {
-    width: 100%;
-  }
-}
 
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .three-fourth.persistent {
   width: 75% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .three-fourth.persistent {
-    width: 100%;
-  }
-}
 
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .push-three-fourth {
   position: relative;
   left: 75%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-three-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .pull-three-fourth {
   position: relative;
   left: -75%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-three-fourth {
-    position: static;
-    position: initial;
-  }
-}
-
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.fifth {
-  width: 20%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .fifth {
-    width: 100%;
-  }
-}
-
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.fifth.persistent {
-  width: 20% !important;
-}
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .fifth.persistent {
-    width: 100%;
-  }
-}
-
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.push-fifth {
-  position: relative;
-  left: 20%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-fifth {
-    position: static;
-    position: initial;
-  }
-}
-
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.pull-fifth {
-  position: relative;
-  left: -20%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-fifth {
-    position: static;
-    position: initial;
-  }
-}
-
-/* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.four-fifth {
-  width: 80%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 35, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .four-fifth {
-    width: 100%;
-  }
-}
-
-/* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.four-fifth.persistent {
-  width: 80% !important;
-}
-@media only screen and (max-width: 48em) {
-  /* line 38, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .four-fifth.persistent {
-    width: 100%;
-  }
-}
-
-/* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.push-four-fifth {
-  position: relative;
-  left: 80%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 42, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .push-four-fifth {
-    position: static;
-    position: initial;
-  }
-}
-
-/* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-.pull-four-fifth {
-  position: relative;
-  left: -80%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 46, ../../_framework/scss/Base/Grid/base/_behavior.scss */
-  .pull-four-fifth {
-    position: static;
-    position: initial;
-  }
 }

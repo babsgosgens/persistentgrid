@@ -1,0 +1,76 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+	
+@if $trace-imports { @debug 'imported'; }
+
+//	################################################################################################################################  //
+//	Shared Variables				  																								  //
+//	################################################################################################################################  //
+
+	// Corner radius is inherited by:
+	// * Buttons
+	// * Forms							  																							  	  //
+
+	$corner-radius						: 3px;
+
+
+	// Colors need to be specified before importing the module settings that are inheriting them.					  																							  	  //
+
+	$white								: #fff;
+	$black								: #000;
+	$grey 								: #666;
+	$red 								: Red;
+	$orange 							: Orange;
+	$yellow 							: Yellow;
+	$green 								: Green;
+	$blue 								: Blue;
+	$purple 							: Purple;
+	$violet 							: #9F81F7;
+
+	$color-background					: $white;
+	$color-body							: lighten($black,40);
+	$color-theme						: $grey;
+	$color-primary						: $violet;
+	$color-secondary					: $orange;
+	$color-success 						: $green;
+	$color-info 						: $yellow;
+	$color-warning						: $orange;
+	$color-error						: $red;
+
+	$link-color							: $color-primary;
+	$link-color-hover					: $purple;
+	$link-color-active					: darken($grey, 15);
+	$link-color-visited					: lighten($link-color, 15);
+
+
+//	################################################################################################################################  //
+//	Compass Modular Scale					  																						  //
+//	################################################################################################################################  //
+
+	$base-size 							: $base-font-size;
+
+	// Not using MS, set font-sizes by hand instead.
+	$px-normal							: $base-size;
+	$px-xxs								: 10px;
+	$px-xs								: 12px;
+	$px-s								: 14px;
+	$px-m								: $px-normal;
+	$px-l								: 20px;
+	$px-xl								: 24px;
+	$px-xxl								: 38px;
+	$px-xxxl							: 46px;
+
+//	################################################################################################################################  //
+//	Breakpoints					  																						  //
+//	################################################################################################################################  //
+
+
+//	################################################################################################################################  //
+//	Import presets				  																								  //
+//	################################################################################################################################  //
+
+	// First, import all individual settings: first the base settings, then the module settings;
+	$column-breakpoint: $medium_handheld;
+	$column-widths: 1/2, 1/4, 1/3, 2/3, 3/4, 1/5, 4/5; // Omit 1/1, it is rendered by default
