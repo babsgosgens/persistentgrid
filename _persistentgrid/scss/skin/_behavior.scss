@@ -189,6 +189,10 @@
 code {
 	font-size: 1.25em;
 	color: mix($color-body,$color-primary);
+	background: darken($color-background, 5%);
+	border: 1px solid darken($color-background, 10%);
+	@include border-radius($corner-radius);
+	padding: 0 .25em;
 }
 .gist {
 }
@@ -251,5 +255,20 @@ code {
 	li {
 		display: inline-block;
 		margin-right: horizontal-rhythm(1/2);
+	}
+}
+
+.hierarchy {
+	.level0 {
+
+	}
+	.level1 {
+		padding-left: horizontal-rhythm(.25);
+	}
+	.level2 {
+		padding-left: horizontal-rhythm(.5);
+	}
+	.level3 {
+		padding-left: horizontal-rhythm(.75);
 	}
 }

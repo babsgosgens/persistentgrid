@@ -959,43 +959,51 @@ code, .list-api-name {
 code, .list-api-name {
   font-size: 1.25em;
   color: #8273ae;
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0 .25em;
 }
 
-/* line 207, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 211, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name {
   margin-top: 1.6em;
 }
-/* line 213, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 217, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name:first-child {
   margin-top: 0;
 }
-/* line 217, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 221, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name a,
 .list-api-name a:visited {
   color: inherit;
 }
 
-/* line 221, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 225, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-description {
   font-weight: 300;
 }
 
-/* line 224, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 228, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-code {
   position: absolute;
   left: -9999em;
 }
 
-/* line 228, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 232, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name:target + .list-api-code {
   position: static;
 }
 
-/* line 233, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 237, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-links {
   margin-top: 0.8em;
 }
-/* line 237, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 241, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-links a,
 .chapter-links a:visited {
   display: block;
@@ -1003,7 +1011,7 @@ code, .list-api-name {
   line-height: 2em;
 }
 @media only screen and (min-width: 80em) {
-  /* line 237, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 241, ../../_persistentgrid/scss/skin/_behavior.scss */
   .chapter-links a,
   .chapter-links a:visited {
     display: default;
@@ -1011,8 +1019,21 @@ code, .list-api-name {
   }
 }
 
-/* line 251, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 255, ../../_persistentgrid/scss/skin/_behavior.scss */
 .inline-list li {
   display: inline-block;
   margin-right: 24px;
+}
+
+/* line 265, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level1 {
+  padding-left: 12px;
+}
+/* line 268, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level2 {
+  padding-left: 24px;
+}
+/* line 271, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level3 {
+  padding-left: 36px;
 }
