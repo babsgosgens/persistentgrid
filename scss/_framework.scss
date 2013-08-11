@@ -1,0 +1,19 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+$trace-imports: false;
+
+// Import Compass, no-game without it
+@import "Compass";
+
+// Import the settings: first the defaults and then the skin settings;
+@import "framework/helpers";
+
+// Import the settings: first the defaults and then the skin settings;
+@import "framework/settings";
+/*Add your settings here*/
+
+// Import the behavior, this is where the styles will be rendered
+@import "framework/behavior";
+/*Add your behavior here*/

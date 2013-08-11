@@ -1,3 +1,0 @@
-[submodule "PersistentGrid"]
-	path =Base/Grid
-	url = https://github.com/babsgosgens/persistent-grid.git

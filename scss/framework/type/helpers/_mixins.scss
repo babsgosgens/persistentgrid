@@ -1,0 +1,74 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+// $typeface must be an array consisting of: style, variant, weight, font-family; 
+@mixin pg-establish-baseline
+{
+	html {
+		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
+		$lh: px-to-relative-line-height($line-height, $font-size);
+
+		@include font($type-default, $fs, $lh);
+	}
+}
+
+// $typeface must be an array consisting of: style, variant, weight, font-family; 
+// $font-sizes must be in final unit
+@mixin font($type, $font-size:$base-font-size, $line-height:$base-line-height)
+{
+	@if $type {
+		$font-style 	:   nth($type,1);
+		$font-variant 	:	nth($type,2);
+		$font-weight 	:	nth($type,3);
+		$font-family 	:	nth($type,4);
+
+		font: #{$font-style} #{$font-variant} #{$font-weight} #{$font-size}/#{$line-height} #{$font-family};
+	}
+}
+
+// These mixins take a single value from the type array and invoke the appropriate font mixin
+@mixin type-style($type)
+{
+	@include font-style( nth($type,1) );
+}
+@mixin type-variant($type)
+{
+	@include font-variant( nth($type,2) );
+}
+@mixin type-weight($type)
+{
+	@include font-weight( nth($type,3) );
+}
+@mixin type-family($type)
+{
+	@include font-family( nth($type,4) );
+}
+
+@mixin font-style($font-style)
+{
+	font-style: $font-style;
+}
+@mixin font-variant($font-variant)
+{
+	font-variant: $font-variant;
+}
+@mixin font-weight($font-weight)
+{
+	font-weight: $font-weight;
+}
+@mixin font-family($font-family)
+{
+	font-family: $font-family;
+}
+@mixin font-size($target,$context:$base-font-size)
+{
+	font-size: px-to-relative-font-size($target, $context);
+}
+@mixin line-height($target,$context:$base-line-height)
+{
+	line-height: px-to-relative-line-height($target, $context);
+}
+

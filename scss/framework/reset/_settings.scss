@@ -1,0 +1,28 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+//	################################################################################################################################  //
+//	Compass Reset					  																								  //
+//	################################################################################################################################  //
+
+	$global-reset 						: false;
+
+	// or
+
+	$reset-box-model 					: true;
+	$reset-box-sizing 	 				: true; // Resets box sizing to border-box - for use with Persistent Grid
+	$reset-font  						: true;
+	$reset-focus  						: false;
+	$reset-body 						: false;
+	$reset-list-style 					: true;
+	$reset-table 						: true;
+	$reset-table-cell 					: true;
+	$reset-quotation 					: true;
+	$reset-image-anchor-border 			: true;
+	$reset-html5 						: true;
+
+	$reset-text-rendering 				: false;
+	$reset-input 						: true;
