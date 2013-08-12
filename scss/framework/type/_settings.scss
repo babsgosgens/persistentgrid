@@ -8,14 +8,15 @@
 // 	Base Type							  																							  //
 // 	################################################################################################################################  //
 
-	// These setings are picked up by the Vertical-Rhythm
+	// These setings are picked up by Baseline
 	$establish-baseline 				: false !default;
 
-	// Consider merging VR int the Type module
-	$font-size							: 15px;
-	$line-height 						: 24px;
+	// Consider merging Baseline int the Type module
+	$font-size							: 16px;
+	$line-height 						: 24px; // 1.5*16px
 
-	@import "fonts/lato";
+	@import "fonts/serif";
+	@import "fonts/sans-serif";
 
-	$type-default 						: $lato-regular;
-	$type-heading 						: $lato-book;
+	$type-default 						: $serif-regular;
+	$type-heading 						: $sans-serif-regular;
