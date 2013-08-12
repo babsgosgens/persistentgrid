@@ -25,8 +25,8 @@
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
 	$leading-unit 						: if($use-rem-for-sizing, 1rem, $leading-unit);
 
+	// If false, the baseline will be established from within the Type module.
+	$establish-baseline 				: false !default; 									 // Default is false
+
 	// Debugging
 	$debug-baseline						: false;
-
-	// If false, the baseline will be established from within the Type module.
-	$establish-baseline 				: false !default;
