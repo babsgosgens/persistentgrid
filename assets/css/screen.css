@@ -650,7 +650,25 @@ code, .list-api-name {
   background: #9f81f7;
 }
 
-/* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 61, ../../_persistentgrid/scss/skin/_behavior.scss */
+.page-header-logo {
+  margin: 0 -3em 0 0;
+  position: relative;
+  left: -4em;
+  vertical-align: bottom;
+  max-width: 3em;
+  text-align: center;
+}
+@media only screen and (max-width: 48em) {
+  /* line 61, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .page-header-logo {
+    position: static;
+    max-width: 2em;
+    margin: 0 .5em 0 0;
+  }
+}
+
+/* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
 .page-header, .chapter-links {
   position: relative;
   left: 25%;
@@ -663,33 +681,33 @@ code, .list-api-name {
   margin: 3.2em 0 1.6em;
 }
 @media only screen and (max-width: 48em) {
-  /* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
   .page-header, .chapter-links {
     position: static;
     position: initial;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
   .page-header, .chapter-links {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 62, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
   .page-header, .chapter-links {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 67, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 79, ../../_persistentgrid/scss/skin/_behavior.scss */
 .page-header-header {
   font-size: 1.86667em;
   line-height: 1.71429em;
 }
 
-/* line 70, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 82, ../../_persistentgrid/scss/skin/_behavior.scss */
 .page-header-sub {
   display: block;
   font-family: normal, normal, 400, "Lato", sans-serif;
@@ -698,7 +716,7 @@ code, .list-api-name {
   color: #9f81f7;
 }
 
-/* line 87, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
 .breadcrumbs-root-item {
   display: inline-block;
   vertical-align: top;
@@ -709,20 +727,20 @@ code, .list-api-name {
   text-align: right;
 }
 @media only screen and (max-width: 48em) {
-  /* line 87, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-root-item {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 87, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-root-item {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 103, ../../_persistentgrid/scss/skin/_behavior.scss */
 .breadcrumbs-items {
   display: inline-block;
   vertical-align: top;
@@ -732,24 +750,24 @@ code, .list-api-name {
   padding-right: 24px;
 }
 @media only screen and (max-width: 48em) {
-  /* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 103, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-items {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 91, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 103, ../../_persistentgrid/scss/skin/_behavior.scss */
   .breadcrumbs-items {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 94, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 106, ../../_persistentgrid/scss/skin/_behavior.scss */
 .breadcrumbs-items > span:before {
   content: "/";
 }
 
-/* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 111, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-header {
   margin: 0.8em 0 0;
   font-weight: 400;
@@ -758,12 +776,12 @@ code, .list-api-name {
   color: #666666;
 }
 
-/* line 106, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 118, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-section {
   margin: 1.6em 0 3.2em;
 }
 
-/* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 {
   margin: 0 0 0.8em;
   font-weight: 300;
@@ -780,43 +798,43 @@ code, .list-api-name {
   border-right: 3px solid #cccccc;
 }
 @media only screen and (max-width: 48em) {
-  /* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 118, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 130, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 + * {
   border-left: 1px solid #cccccc;
 }
-/* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 133, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 + * > *:first-child {
   margin-top: 0;
 }
-/* line 124, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 136, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level2 + * > *:last-child {
   margin-bottom: 0;
 }
 @media only screen and (max-width: 48em) {
-  /* line 109, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 {
     text-align: inherit;
     border: 0;
   }
-  /* line 131, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 143, ../../_persistentgrid/scss/skin/_behavior.scss */
   .article-header-level2 + * {
     border: 0;
   }
 }
 
-/* line 137, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 149, ../../_persistentgrid/scss/skin/_behavior.scss */
 .article-header-level3 {
   padding: 0.4em 12px;
   margin-top: 1.6em;
@@ -830,7 +848,7 @@ code, .list-api-name {
   color: #666666;
 }
 
-/* line 154, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 166, ../../_persistentgrid/scss/skin/_behavior.scss */
 .demo {
   padding: 0;
   border-left: 24px solid #e8e1fd;
@@ -841,20 +859,20 @@ code, .list-api-name {
   overflow: hidden;
 }
 @media only screen and (max-width: 48em) {
-  /* line 154, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 166, ../../_persistentgrid/scss/skin/_behavior.scss */
   .demo {
     border-left: 12px solid #e8e1fd;
     border-right: 12px solid #e8e1fd;
   }
 }
 
-/* line 168, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 180, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags {
   border-top-style: solid;
   border-top-width: 0.06667em;
   padding-top: -0.06667em;
 }
-/* line 171, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags dt,
 .tags dd {
   display: inline-block;
@@ -869,42 +887,42 @@ code, .list-api-name {
   padding-bottom: 0.33333em;
 }
 @media only screen and (max-width: 48em) {
-  /* line 171, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dt,
   .tags dd {
     width: 100%;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 171, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dt,
   .tags dd {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 176, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 188, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags dt {
   width: 25%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 176, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 188, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dt {
     width: 100%;
   }
 }
-/* line 179, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 191, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags dd {
   width: 75%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 179, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 191, ../../_persistentgrid/scss/skin/_behavior.scss */
   .tags dd {
     width: 100%;
   }
 }
 
-/* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 195, ../../_persistentgrid/scss/skin/_behavior.scss */
 .tags-tag {
   color: #666666;
   font-style: italic;
@@ -955,12 +973,12 @@ code, .list-api-name {
   border: none;
 }
 
-/* line 189, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 201, ../../_persistentgrid/scss/skin/_behavior.scss */
 code, .list-api-name {
   padding: 0.4em 0.5em;
 }
 
-/* line 193, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 205, ../../_persistentgrid/scss/skin/_behavior.scss */
 code, .list-api-name,
 .terminal {
   font-family: monospace;
@@ -976,7 +994,7 @@ code, .list-api-name,
   border-radius: 3px;
 }
 
-/* line 202, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 214, ../../_persistentgrid/scss/skin/_behavior.scss */
 .terminal {
   overflow-x: scroll;
   padding: 0.8em 0;
@@ -984,48 +1002,48 @@ code, .list-api-name,
   padding-right: 24px;
 }
 @media only screen and (max-width: 48em) {
-  /* line 202, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 214, ../../_persistentgrid/scss/skin/_behavior.scss */
   .terminal {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 221, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 233, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name {
   margin-top: 1.6em;
 }
-/* line 227, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 239, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name:first-child {
   margin-top: 0;
 }
-/* line 231, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 243, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name a,
 .list-api-name a:visited {
   color: inherit;
 }
 
-/* line 235, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 247, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-description {
   font-weight: 300;
 }
 
-/* line 238, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 250, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-code {
   position: absolute;
   left: -9999em;
 }
 
-/* line 242, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 254, ../../_persistentgrid/scss/skin/_behavior.scss */
 .list-api-name:target + .list-api-code {
   position: static;
 }
 
-/* line 247, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 259, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-links {
   margin-top: 0.8em;
 }
-/* line 251, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 263, ../../_persistentgrid/scss/skin/_behavior.scss */
 .chapter-links a,
 .chapter-links a:visited {
   display: block;
@@ -1033,7 +1051,7 @@ code, .list-api-name,
   line-height: 2em;
 }
 @media only screen and (min-width: 80em) {
-  /* line 251, ../../_persistentgrid/scss/skin/_behavior.scss */
+  /* line 263, ../../_persistentgrid/scss/skin/_behavior.scss */
   .chapter-links a,
   .chapter-links a:visited {
     display: default;
@@ -1041,37 +1059,37 @@ code, .list-api-name,
   }
 }
 
-/* line 265, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 277, ../../_persistentgrid/scss/skin/_behavior.scss */
 .inline-list li {
   display: inline-block;
   margin-right: 24px;
 }
 
-/* line 271, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 283, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy {
   font-family: monospace;
 }
-/* line 274, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 286, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level0:before {
   content: "|";
 }
-/* line 278, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 290, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level1 {
   padding-left: 12px;
 }
-/* line 281, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 293, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level2 {
   padding-left: 24px;
 }
-/* line 284, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 296, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level3 {
   padding-left: 36px;
 }
-/* line 287, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 299, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level4 {
   padding-left: 48px;
 }
-/* line 294, ../../_persistentgrid/scss/skin/_behavior.scss */
+/* line 306, ../../_persistentgrid/scss/skin/_behavior.scss */
 .hierarchy .level1:before,
 .hierarchy .level2:before,
 .hierarchy .level3:before,

@@ -58,7 +58,19 @@
 		}
 	}
 }
-
+.page-header-logo {
+	margin: 0 -3em 0 0;
+	position: relative;
+	left: -4em;
+	vertical-align: bottom;
+	max-width: 3em;
+	text-align:center;
+	@include breakpoint($column-breakpoint) {
+		position: static;
+		max-width: 2em;
+		margin: 0 .5em 0 0;
+	}
+}
 .page-header {
 	@include move(1/4);
 	@include column(3/4);
