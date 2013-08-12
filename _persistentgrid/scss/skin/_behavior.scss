@@ -5,6 +5,12 @@
 // */
 @if $trace-imports { @debug 'imported'; }
 
+p+p {
+	margin: vertical-rhythm(1) 0;
+}
+em {
+	@include type-weight($lato-regular);
+}
 .toc {
 	margin: vertical-rhythm(1.5) 0 vertical-rhythm(.5);
 	background: mix($color-primary, $color-background);
@@ -37,15 +43,17 @@
 
 		}
 		.level1 {
-
+			a {
+				padding-left: 2em;
+			}
 		}
 		.parent {
 			&>ul {
-				@include is-hidden();
+				// @include is-hidden();
 			}
 			&:hover {
 				&>ul {
-					@include is-not-hidden();
+					// @include is-not-hidden();
 					a {
 						background: rgba(255,255,255,.4);
 					}
@@ -263,9 +271,6 @@ code,
 	a,
 	a:visited {
 		display: block;
-		// @include rhythm-borders(1px, .25, 12px);
-		// @include border-radius($corner-radius);
-		@include adjust-font-size-to(12px);
 		@include breakpoint($medium_desktop) {
 			display: default;
 			display: initial;

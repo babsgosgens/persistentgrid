@@ -18,3 +18,7 @@ $trace-imports: false;
 // Import the behavior, this is where the styles will be rendered
 @import "framework/behavior";
 @import "skin/behavior";
+
+
+//* Include a symbol font (Fontawesome)*//
+@import "framework-extended/type/icon-fonts/fontawesome";

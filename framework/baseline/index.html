@@ -8,6 +8,15 @@ title: Baseline
 		<li>
 			<a href="#introduction">Introduction</a>
 		</li
+		><li>
+			<a href="#settings">Settings</a>
+		</li
+		><li>
+			<a href="#mixins">Mixins</a>
+		</li
+		><li>
+			<a href="#behavior">Behavior</a>
+		</li
 		>
 	</ul>
 </nav>
@@ -16,7 +25,51 @@ title: Baseline
 
 	<h2 class="article-header-level2">Introduction</h2
 	><div class="three-fourth column">
-		<p>todo</p>
+		<p>Baseline is an implementation of <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Compass's Vertical Rhythm</a>. In the context of Persistent Grid it is renamed to "Baseline" because the term is more compatible with traditional Graphic Design, where a baseline is the imaginary line that touches the bottom of the letter <em>'x'</em>.</p>
+		<p>There are some differences between the implementation of a baseline in print and in webdesign though. One such difference is that in webdesign, the text does not sit 'on' the baseline, but rather sits 'in-between' baselines. Another difference addresses images. In print, images would also be aligned with the baseline (with the bottom of the image sitting on the baseline and the top of the image aligned with the top of foresaid letter <em>'x'</em>).</p>
+		<p>Because of a website's flexible nature, aligning images in a similar way is impractical. Therefore the implementation of a baseline and derivative vertical measures like paddings, margins and borders are merely introduced to convey a sense of order to a webpage.</p>
 	</div>
 
+</section>
+
+<section class="chapter-section" id="settings">
+	<h2 class="article-header-level2">Settings</h2
+	><div class="three-fourth column">
+		<h3 class="article-header-level3">Vertical Rhythm settings</h3>
+		<p>More information on Vertical Rhythms setting scan be found here: <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">http://compass-style.org/reference/compass/typography/vertical_rhythm/</a></p>
+		<p>These settings are used to implement Vertical Rhythm:</p>
+		<dl class="list-api">
+			<dt class="list-api-name" id="setting-"><a href="#setting-">@todo</a></dt>
+			<dd class="list-api-code">{% gist  %}</dd>
+			<dd class="list-api-description">@todo</dd>
+		</dl>
+
+		<h3 class="article-header-level3">Additional Settings</h3>
+		<dl class="list-api">
+			<dt class="list-api-name" id="setting-debug-baseline"><a href="#setting-debug-baseline">$debug-baseline</a></dt>
+			<dd class="list-api-code"><pre>$debug-baseline: false;</pre></dd>
+			<dd class="list-api-description">This setting is useful when debugging the vertical rhythm. When set to <code>true</code> it will show the baseline. It is <code>false</code> by default. See also: <a href="#mixin-debug-rhythm">@mixin debug-rhythm</a></dd>
+		</dl>
+
+	</div>
+</section>
+
+<section class="chapter-section" id="mixins">
+	<h2 class="article-header-level2">Mixins</h2
+	><div class="three-fourth column">
+		<dl class="list-api">
+			<dt class="list-api-name" id="mixin-debug-rhythm"><a href="#mixin-debug-rhythm">@mixin debug-rhythm</a></dt>
+			<dd class="list-api-code">{% gist 6214270 %}</script></dd>
+			<dd class="list-api-description">This mixin is useful when debugging the vertical rhythm. See also: <a href="#setting-debug-baseline">$debug-baseline</a></dd>
+
+		</dl>
+	</div>
+</section>
+
+<section class="chapter-section" id="behavior">
+	<h2 class="article-header-level2">Behavior</h2
+	><div class="three-fourth column">
+		<h3 class="article-header-level3">Debug selector</h3>
+		{% gist 6214336 %}
+	</div>
 </section>
