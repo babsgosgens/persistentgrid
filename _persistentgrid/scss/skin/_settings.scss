@@ -41,8 +41,8 @@
 
 	$link-color							: $color-primary;
 	$link-color-hover					: $purple;
-	$link-color-active					: darken($grey, 15);
-	$link-color-visited					: lighten($link-color, 15);
+	$link-color-active					: lighten($link-color, 15);
+	$link-color-visited					: darken($link-color, 30);
 
 
 //	################################################################################################################################  //

@@ -538,12 +538,12 @@ a {
 
 /* line 26, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
 .is-a-active, a:active {
-  color: #404040;
+  color: #d6c9fc;
 }
 
 /* line 29, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
 .is-a-visited, a:visited {
-  color: #d6c9fc;
+  color: #3f0dd2;
 }
 
 /* line 33, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
