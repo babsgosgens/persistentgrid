@@ -1,4 +1,4 @@
 name: Persistent Grid Reference Manual
 markdown: redcarpet
 pygments: true
-baseurl: /persistentgrid
+baseurl: ''
