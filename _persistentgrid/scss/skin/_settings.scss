@@ -63,7 +63,8 @@
 	$type-default 						: $lato-book;
 	$type-heading 						: $lato-regular;
 
-
+	//* Include a symbol font (Fontawesome)*//
+	@import "framework-extended/type/icon-fonts/fontawesome";
 
 //	################################################################################################################################  //
 //	Grid Overrides					  																								  //
