@@ -14,7 +14,7 @@
 		@include column-spacing(1/4, false, true);
 		background: $color-primary;
 		@include border-radius($corner-radius $corner-radius 0 0);
-		font-weight: 600;
+		@include type-weight($lato-bold);
 	}
 	span,
 	a,
@@ -24,7 +24,7 @@
 		padding: vertical-rhythm(.25) horizontal-rhythm(1/4);
 		text-decoration: none;
 		&:hover {
-			font-weight: 600;
+			@include type-weight($lato-bold);
 		}
 	}
 	li {
@@ -110,7 +110,7 @@
 }
 .chapter-header {
 	margin: vertical-rhythm(.5)  0 0;
-	font-weight: 400;
+	@include type-weight($lato-regular);
 	@include adjust-font-size-to(36px, 1);
 	color: $color-theme;
 }
@@ -120,7 +120,7 @@
 }
 .article-header-level2 {
 	margin: 0 0 vertical-rhythm(.5);
-	font-weight: 300;
+	@include type-weight($lato-regular);
 	@include adjust-font-size-to(18px, 1);
 	color: $color-theme;
 
@@ -233,9 +233,10 @@ code,
 .list-api-name {
 	// color: $color-primary;
 	margin-top: vertical-rhythm(1);
+	@include type-weight($lato-bold);
 
 	// @extend .page-header;
-	@extend code;
+	// @extend code;
 		&:first-child {
 		margin-top: 0;
 	}
@@ -245,7 +246,7 @@ code,
 	}
 }
 .list-api-description {
-	font-weight: 300;
+
 }
 .list-api-code {
 	@include is-hidden;
@@ -283,9 +284,9 @@ code,
 .hierarchy {
 	font-family: monospace;
 	.level0 {
-		&:before {
-			content: "|";
-		}
+		// &:before {
+		// 	content: "|";
+		// }
 	}
 	.level1 {
 		padding-left: horizontal-rhythm(.25);
@@ -303,8 +304,8 @@ code,
 	.level2,
 	.level3,
 	.level4 {
-		&:before {
-			content: "--|";
-		}
+		// &:before {
+		// 	content: "--|";
+		// }
 	}
 }

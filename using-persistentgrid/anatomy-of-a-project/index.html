@@ -27,6 +27,19 @@ title: Anatomy of a project
 	<h2 class="article-header-level2">Importing the grid</h2
 	><div class="three-fourth column">
 
+		<p>There are three SCSS preset that can be used as a template for your projects:</p>
+		<ul class="list list-decimal">
+			<li>basix</li>
+			<li>framework</li>
+			<li>framework-extended</li>
+		</ul>
+
+		<p>The preset <code>framework-extension is still under constrution.</code></p>
+
+
+		<dl class="list-api">
+			<dt class="list-api-name" id="preset-basic"><a href="#preset-basic">Basic</a></dt>
+			<dd class="list-api-code">
 <pre class="terminal">
 // Import Compass, no-game without it
 @import "Compass";
@@ -34,7 +47,11 @@ title: Anatomy of a project
 // Import the settings: first the defaults and then the skin settings;
 @import "persistentgrid";
 </pre>
+			</dd>
+			<dd class="list-api-description">The basics: a simple but flexible grid system.</dd>
 
+			<dt class="list-api-name" id="preset-framework"><a href="#preset-framework">Framework</a></dt>
+			<dd class="list-api-code">
 <pre class="terminal">
 // Import Compass, no-game without it
 @import "Compass";
@@ -50,23 +67,29 @@ title: Anatomy of a project
 @import "framework/behavior";
 @import "skin/behavior";
 </pre>
+			</dd>
+			<dd class="list-api-description">The basics: a simple but flexible grid system.</dd>
+		</dl>
+
+
+
 
 		<p>The directory structure is designed such, that it will allow for easy implementation of new modules and styles. On a lower level, it is also possible to extend existing styles. This can come in handy if - for example - you want to use the existing buttons, but only add more rounded corners. An example setup of this can be found in the UI/Buttons module.</p>
 		<p>The basic structure for any module is:</p>
 
 		<ul class="hierarchy">
 			<li class="level0">
-				module
+				<i class="icon-folder-open"></i> module
 				<ul>
-					<li class="level1">_all.scss</li>
-					<li class="level1">_behavior.scss</li>
-					<li class="level1">_settings.scss</li>
-					<li class="level1">_helpers.scss</li>
+					<li class="level1"><i class="icon-file"></i> _all.scss</li>
+					<li class="level1"><i class="icon-file"></i> _behavior.scss</li>
+					<li class="level1"><i class="icon-file"></i> _settings.scss</li>
+					<li class="level1"><i class="icon-file"></i> _helpers.scss</li>
 					<li class="level1">
-						helpers
+						<i class="icon-folder-open"></i> helpers
 						<ul>
-							<li class="level2">_functions.scss</li>
-							<li class="level2">_mixins.scss</li>
+							<li class="level2"><i class="icon-file"></i> _functions.scss</li>
+							<li class="level2"><i class="icon-file"></i> _mixins.scss</li>
 						</ul>
 					</li>
 				</ul>
@@ -93,15 +116,15 @@ title: Anatomy of a project
 
 		<ul class="hierarchy">
 			<li class="level0">
-				/Groupname
+				<i class="icon-folder-open"></i> /Groupname
 				<ul>
 					<li class="level1">
-						/ModuleOne
+						<i class="icon-folder-open"></i> /ModuleOne
 						<ul>
-							<li class="level2">/base</li>
-							<li class="level2">/skins</li>
-							<li class="level2">_all.scss</li>
-							<li class="level2">_moduleone.scss</li>
+							<li class="level2"><i class="icon-folder-open"></i> /base</li>
+							<li class="level2"><i class="icon-folder-open"></i> /skins</li>
+							<li class="level2"><i class="icon-file"></i> _all.scss</li>
+							<li class="level2"><i class="icon-file"></i> _moduleone.scss</li>
 						</ul>
 					</li>
 					<li class="level1">
