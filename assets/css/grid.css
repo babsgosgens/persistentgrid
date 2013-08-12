@@ -3,6 +3,7 @@
    Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
    License: GNU General Public License version 2 or later; see LICENSE.txt
 */
+/*Add your settings here*/
 /* line 7, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
 .root {
   display: block;
@@ -152,3 +153,5 @@
   position: relative;
   left: -75%;
 }
+
+/*Add your behavior here*/

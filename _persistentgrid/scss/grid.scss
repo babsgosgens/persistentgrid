@@ -10,4 +10,12 @@ $trace-imports: false;
 @import "Compass";
 
 // Import the settings: first the defaults and then the skin settings;
-@import "persistentgrid";
+@import "framework/helpers";
+
+// Import the settings: first the defaults and then the skin settings;
+@import "framework/grid/settings";
+/*Add your settings here*/
+
+// Import the behavior, this is where the styles will be rendered
+@import "framework/grid/behavior";
+/*Add your behavior here*/

@@ -46,30 +46,30 @@
 
 
 //	################################################################################################################################  //
-//	Compass Modular Scale					  																						  //
+//	Type Overrides							  																						  //
 //	################################################################################################################################  //
+	// Weight reference:
+	// 100 ultra-light
+	// 200 light
+	// 300 book
+	// 400 regular, or normal
+	// 500 medium
+	// 600 semi-bold
+	// 700 bold
+	// 800 extra-bold
+	// 900 heavy, or ultra-bold
+	@import "framework-extended/type/fonts/lato";
 
-	$base-size 							: $base-font-size;
+	$type-default 						: $lato-book;
+	$type-heading 						: $lato-regular;
 
-	// Not using MS, set font-sizes by hand instead.
-	$px-normal							: $base-size;
-	$px-xxs								: 10px;
-	$px-xs								: 12px;
-	$px-s								: 14px;
-	$px-m								: $px-normal;
-	$px-l								: 20px;
-	$px-xl								: 24px;
-	$px-xxl								: 38px;
-	$px-xxxl							: 46px;
-
-//	################################################################################################################################  //
-//	Breakpoints					  																						  //
-//	################################################################################################################################  //
 
 
 //	################################################################################################################################  //
-//	Import presets				  																								  //
+//	Grid Overrides					  																								  //
 //	################################################################################################################################  //
+	$font-size							: 15px;
+	$line-height 						: 24px; // 1.5*16px
 
 	// First, import all individual settings: first the base settings, then the module settings;
 	$column-breakpoint: $medium_handheld;
