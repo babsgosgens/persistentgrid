@@ -8,6 +8,32 @@ title: Type
 		<li>
 			<a href="#introduction">Introduction</a>
 		</li
+		><li>
+			<a href="#grid-examples">Grid Examples</a>
+		</li
+		><li>
+			<a href="#settings">Settings</a>
+		</li
+		><li>
+			<a href="#mixins">Mixins</a>
+		</li
+		><li>
+			<a href="#functions">Functions</a>
+		</li
+		><li>
+			<a href="#behavior">Behavior</a>
+		</li
+		><li>
+			<a href="#usage">Usage</a>
+		</li>
+	</ul>
+</nav>
+
+<nav class="chapter-links">
+	<ul class="inline-list">
+		<li>
+			<a href="#introduction">Introduction</a>
+		</li
 		>
 	</ul>
 </nav>
@@ -22,4 +48,95 @@ title: Type
 		<script src="https://gist.github.com/babsgosgens/c2945f5e0193f3c02ba5.js"></script>
 	</div>
 
+</section>
+
+<section class="chapter-section" id="settings">
+	<h2 class="article-header-level2">Settings</h2
+	><div class="three-fourth column">
+		<h3 class="article-header-level3">Root</h3>
+		<p>You can embed your grid layout in a 'root' container. Your grid layout will not stretch beyond the maximum width of this container. The root container can be positioned left or center, for alternate positions you can provide your own behavior.</p>
+		<dl class="list-api">
+			<dt class="list-api-name" id="setting-root-selector"><a href="#setting-root-selector">$root-selector</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199574.js"></script></dd>
+			<dd class="list-api-description">The default selector for the root container is <code>.root</code>, but you can also use a base selector, for instance <code>body</code>.</dd>
+
+		</dl>
+
+		<h3 class="article-header-level3">Columns</h3>
+		<dl class="list-api">
+			<dt class="list-api-name" id="setting-column-selector"><a href="#setting-column-selector">$column-selector</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199725.js"></script></dd>
+			<dd class="list-api-description">The selector of your column rules. It is set to <code>.column</code> by default. Change it to any selector that has your fancy.</dd>
+
+		</dl>
+
+	</div>
+</section>
+
+<section class="chapter-section" id="mixins">
+	<h2 class="article-header-level2">Mixins</h2
+	><div class="three-fourth column">
+		<dl class="list-api">
+			<dt class="list-api-name" id="mixin-column-behavior"><a href="#mixin-column-behavior">@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172502.js"></script></dd>
+			<dd class="list-api-description">Mixin basic column properties.</dd>
+
+		</dl>
+	</div>
+</section>
+
+<section class="chapter-section" id="function">
+	<h2 class="article-header-level2">Functions</h2
+	><div class="three-fourth column">
+		<dl class="list-api">
+			<dt class="list-api-name" id="function-horizontal-rhythm"><a href="#function-horizontal-rhythm">@function horizontal-rhythm($fraction: 1/2)</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172639.js"></script></dd>
+			<dd class="list-api-description">Calculates a value based on the $column-spacing.</dd>
+
+		</dl>
+	</div>
+</section>
+
+<section class="chapter-section" id="behavior">
+	<h2 class="article-header-level2">Behavior</h2
+	><div class="three-fourth column">
+
+		<p>This is the default behavior rendering of the Grid Module:</p>
+
+		<h3 class="article-header-level3">Root selector</h3>
+		<script src="https://gist.github.com/babsgosgens/6200034.js"></script>
+
+		<p>At present, the total weight of the compiled (compressed) CSS is 4.1Kb</p>
+	</div>
+</section>
+
+<section class="chapter-section" id="usage">
+	<h2 class="article-header-level2">Usage</h2
+	><div class="three-fourth column">
+		<p>Columns can be rendered by:</p>
+		<ol class="list list-decimal" style="list-style-position: inside;">
+			<li>assigning classes at markup level,</li>
+			<li>extending the rendered behavior, or</li>
+			<li>using the provided mixins.</li>
+		</ol>
+		<p>In the real world, you will likely use a mixture of all three. Persistant Grid does not enforce any particular system - it is totally up to you.</p>
+		<p>Using classes is the simplest way of assigning columns to your markup, and - as you can see in the examples below - uses the least amount of code. Using mixins is a little more code intensive, but useful when defining behavior that is not rendered by default. Extending classes can be useful in situations where you cannot alter the markup, but beware - it can produce bloated stylesheets in a blink.</p>
+		<div>
+			<div class="half column-container">
+			    <div class="persistent demo third column">1</div><div class="persistent third demo column">2</div><div class="persistent third demo column">3</div>
+			</div><div class="half column-container">
+			    <div class="demo third column push-third">4</div><div class="demo third column pull-third">5</div><div class="demo third column">6</div>
+			</div>
+		</div>
+		<dl class="list-api">
+			<dt class="list-api-name" id="usage-example1"><a href="#usage-example1">Example 1: Assigning classes at markup level</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200190.js"></script></script></dd>
+
+			<dt class="list-api-name" id="usage-example2"><a href="#usage-example2">Example 2: Extending classes</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200198.js"></script></dd>
+
+			<dt class="list-api-name" id="usage-example3"><a href="#usage-example3">Example 3: Using the mixins</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200210.js"></script></dd>
+		</dl>
+	</div>
 </section>
