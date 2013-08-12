@@ -9,10 +9,10 @@
 }
 @else {
 
-	/* http://meyerweb.com/eric/tools/css/reset/ 
-	   v2.0 | 20110126
-	   License: none (public domain)
-	*/
+	///* http://meyerweb.com/eric/tools/css/reset/ 
+	//   v2.0 | 20110126
+	//   License: none (public domain)
+	//*/
 
 	@if $reset-box-model OR $reset-box-sizing OR $reset-font {
 
@@ -44,6 +44,30 @@
 			}
 
 		}		
+	}
+
+	@if $establish-baseline {
+
+		@include establish-baseline;
+
+		// The project"s font size and line will be set from within the Vertical-Rhythm module.
+		// Just set the remaining font values
+		html {
+			@include type-family($type-default);
+			@include type-style($type-default);
+			@include type-variant($type-default);
+			@include type-weight($type-default);
+		}
+	}
+	@else {
+
+		// Set the project's font size and line height and all other default font settings from within the (this) Type module.
+		html {
+			$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
+			$lh: px-to-relative-line-height($line-height, $font-size);
+
+			@include font($type-default, $fs, $lh);
+		}
 	}
 
 	@if $reset-html5 {
