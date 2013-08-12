@@ -48,35 +48,38 @@
 			@if $reset-text-rendering {
 				@include reset-text-rendering;
 			}
-
 		}		
 	}
 
-	html {
-		background-color: $color-background;
-		@if $establish-baseline {
+html {
+	background-color: $color-background;
+	@if $establish-baseline {
 
-			@include establish-baseline;
+		@debug $establish-baseline;
 
-			// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
-			@include type-family($type-default);
-			@include type-style($type-default);
-			@include type-variant($type-default);
-			@include type-weight($type-default);
-		}
-		@else {
+		@include establish-baseline;
 
-			// Set the project's font declarations:
-			$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
-			$lh: px-to-relative-line-height($line-height, $font-size);
-
-			@include font($type-default, $fs, $lh);
-		}
-		@if $reset-ios {
-			-ms-text-size-adjust: 100%;
-		    -webkit-text-size-adjust: 100%;
-		}
+		// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
+		@include type-family($type-default);
+		@include type-style($type-default);
+		@include type-variant($type-default);
+		@include type-weight($type-default);
 	}
+	@else {
+
+		@debug $establish-baseline;
+
+		// Set the project's font declarations:
+		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
+		$lh: px-to-relative-line-height($line-height, $font-size);
+
+		@include font($type-default, $fs, $lh);
+	}
+	@if $reset-ios {
+		-ms-text-size-adjust: 100%;
+	    -webkit-text-size-adjust: 100%;
+	}
+}
 
 
 	@if $reset-html5 {
@@ -84,12 +87,6 @@
 		[hidden],
 		template {
 		    display: none;
-		}
-	}
-
-	@if $reset-body {
-		body {
-			line-height: 1;
 		}
 	}
 
@@ -103,6 +100,9 @@
 	@if $reset-quotation {
 		blockquote, q {
 			@include reset-quotation;
+		}
+		q {
+		    quotes: "\201C" "\201D" "\2018" "\2019";
 		}
 	}
 
@@ -119,10 +119,6 @@
 	}
 
 	@if $reset-input {
-		input,
-		label {
-    		@include reset-input;
-		}
 	}
 
 
@@ -140,7 +136,7 @@
 		}
 	}
 
-	@if $reset-anchor {
+	@if $reset-focus {
 		a {
 		    background: transparent;
 		    &:focus {
@@ -148,7 +144,7 @@
 		    }
 		    &:active,
 		    &:hover {
-		    	outline: 0;
+		    	@include reset-focus
 		    }
 		}
 	}
@@ -162,14 +158,17 @@
 		}
 	}
 
-	@if $reset-form {
+	@if $reset-input {
 		button,
 		input,
 		select,
 		textarea {
+			display: inline-block;
+		    margin: 0;
+			@include reset-box-model;
+			@include box-sizing(border-box);
 		    font-family: inherit;
 		    font-size: 100%;
-		    margin: 0;
 		}
 		button,
 		input {
@@ -208,6 +207,12 @@
 		textarea {
 		    overflow: auto; /* 1 */
 		    vertical-align: top; /* 2 */
+		}
+		input,
+		textarea,
+		button,
+		label {
+    		@include reset-input;
 		}
 	}
 
