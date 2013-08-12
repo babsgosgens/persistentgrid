@@ -23,7 +23,7 @@
 //  *  Twitter: http://twitter.com/davegandy
 //  *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
 //  */
-@if $debug { @debug '...Importing /Base/Type/icon-fonts/fontawsome'; }
+@if $trace-imports { @debug 'imported'; }
 
 @import "fontawesome/variables";
 @import "fontawesome/mixins";
