@@ -4,41 +4,6 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// Use these methods to convert px based units to other units
-// There is also a px to px function in case you need to recalculate a px unit for a different context
-// Use these methods to convert px based units to other units
-// There is also a px to px function in case you need to recalculate a px unit for a different context
-@function px-to-percentage($target-px, $context: $base-font-size) {
-  @return percentage($target-px / $context);
-}
-@function px-to-em($target-px, $context: $base-font-size) {
-  @return ($target-px / $context) * 1em;
-}
-@function px-to-rem($target-px, $context: $base-font-size) {
-  @return ($target-px / $context) * .1rem;
-}
-@function px-to-px($target-px, $context: $base-font-size) {
-  @return ($target-px / $context) * .1px;
-}
-
-// Let this function figure out which conversion function to use.
-// Both $target and $context values *must* be in px
-@function px-to-relative-size($target-px, $context: $base-font-size, $unit: $font-unit) {
-
-	@if unit($unit)=="%" {
-		@return px-to-percentage($target-px, $context);
-	}
-	@if unit($unit)=="em" {
-		@return px-to-em($target-px, $context);
-	}
-	@if unit($unit)=="rem" {
-		@return px-to-rem($target-px, $context);
-	}
-	@if unit($unit)=="px" {
-		@return px-to-px($target-px, $context);
-	}
-}
-
 // Placeholder function for font-sizes - inserts correct font unit as set in the Vertical-Rhythm module settings
 @function px-to-relative-font-size($target-px, $context: $base-font-size, $unit: $font-unit) {
 	@return px-to-relative-size($target-px, $context, $unit);
@@ -47,35 +12,6 @@
 // Placeholder function for line-heights - inserts correct line-height unit as set in the Vertical-Rhythm module settings
 @function px-to-relative-line-height($target-px, $context: $base-font-size, $unit: $leading-unit) {
 	@return px-to-relative-size($target-px, $context, $unit);
-}
-
-//* To Do: (everything below needs to be looked over as settings in the Type modules have changed)
-
-//* Calculate the optimal line-height */
-@function leading-in-px($font-size, $balance-over: false) {
-
-	$dividend: $font-size / $base-line-height;
-	$leading: $base-line-height;
-
-	// For smaller font-sizes, for instance balance a font-size of 8px over two baselines of 24px in three (balance) lines resulting in 48/3=16px;
-	@if $balance-over {
-		$leading: 2 * $base-line-height / $balance-over;		
-		@return $leading;
-	}
-	@if $dividend<0.5 {
-		$leading: 0.5 * $base-line-height;
-		@return $leading;
-	}
-	@if $dividend>1 {
-		$leading: ceil($dividend) * $base-line-height;
-		@if ($leading - $font-size) < (2 * $min-line-padding) {
-			$leading: $leading + $base-line-height;
-		}
-		@return $leading;
-	}
-	@else {
-		@return $leading;		
-	}
 }
 
 // Extract the style variable from a type array
@@ -119,8 +55,36 @@
 		@warn "Not a valid weight";
 		@return false;
 	}
-
 }
+
+//* To Do: (everything below needs to be looked over as settings in the Type modules have changed)
+
+// //* Calculate the optimal line-height */
+// @function leading-in-px($font-size, $balance-over: false) {
+
+// 	$dividend: $font-size / $base-line-height;
+// 	$leading: $base-line-height;
+
+// 	// For smaller font-sizes, for instance balance a font-size of 8px over two baselines of 24px in three (balance) lines resulting in 48/3=16px;
+// 	@if $balance-over {
+// 		$leading: 2 * $base-line-height / $balance-over;		
+// 		@return $leading;
+// 	}
+// 	@if $dividend<0.5 {
+// 		$leading: 0.5 * $base-line-height;
+// 		@return $leading;
+// 	}
+// 	@if $dividend>1 {
+// 		$leading: ceil($dividend) * $base-line-height;
+// 		@if ($leading - $font-size) < (2 * $min-line-padding) {
+// 			$leading: $leading + $base-line-height;
+// 		}
+// 		@return $leading;
+// 	}
+// 	@else {
+// 		@return $leading;		
+// 	}
+// }
 
 // @function px-to-rhythm($value) {
 // 	@return $value/$base-line-height;

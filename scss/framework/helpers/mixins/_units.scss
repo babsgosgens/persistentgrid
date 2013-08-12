@@ -29,3 +29,39 @@
 		@return $value / 1pt;
 	}
 }
+
+
+// Use these methods to convert px based units to other units
+// There is also a px to px function in case you need to recalculate a px unit for a different context
+// Use these methods to convert px based units to other units
+// There is also a px to px function in case you need to recalculate a px unit for a different context
+@function px-to-percentage($target-px, $context: $base-font-size) {
+  @return percentage($target-px / $context);
+}
+@function px-to-em($target-px, $context: $base-font-size) {
+  @return ($target-px / $context) * 1em;
+}
+@function px-to-rem($target-px, $context: $base-font-size) {
+  @return ($target-px / $context) * .1rem;
+}
+@function px-to-px($target-px, $context: $base-font-size) {
+  @return ($target-px / $context) * .1px;
+}
+
+// Let this function figure out which conversion function to use.
+// Both $target and $context values *must* be in px
+@function px-to-relative-size($target-px, $context: $base-font-size, $unit: $font-unit) {
+
+	@if unit($unit)=="%" {
+		@return px-to-percentage($target-px, $context);
+	}
+	@if unit($unit)=="em" {
+		@return px-to-em($target-px, $context);
+	}
+	@if unit($unit)=="rem" {
+		@return px-to-rem($target-px, $context);
+	}
+	@if unit($unit)=="px" {
+		@return px-to-px($target-px, $context);
+	}
+}

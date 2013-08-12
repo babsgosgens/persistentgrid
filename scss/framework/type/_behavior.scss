@@ -4,22 +4,6 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@if $establish-baseline {
-	// The project"s font size and line will be set from within the Vertical-Rhythm module.
-	// Just set the remaining font values
-	html {
-		@include type-family($paragraph-default);
-		@include type-style($paragraph-default);
-		@include type-variant($paragraph-default);
-		@include type-weight($paragraph-default);
-	}
-}
-@else {
-	// Set the project"s font size and line height and all other default font settings from within the (this) Type module.
-	@include pg-establish-baseline;
-}
-
-
 // These rules are to be used in combination with WebFont
 // https://github.com/typekit/webfontloader
 .wf-loading {

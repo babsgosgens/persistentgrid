@@ -5,17 +5,6 @@
 @if $trace-imports { @debug 'imported'; }
 
 // $typeface must be an array consisting of: style, variant, weight, font-family; 
-@mixin pg-establish-baseline
-{
-	html {
-		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
-		$lh: px-to-relative-line-height($line-height, $font-size);
-
-		@include font($type-default, $fs, $lh);
-	}
-}
-
-// $typeface must be an array consisting of: style, variant, weight, font-family; 
 // $font-sizes must be in final unit
 @mixin font($type, $font-size:$base-font-size, $line-height:$base-line-height)
 {
@@ -63,12 +52,16 @@
 {
 	font-family: $font-family;
 }
+
+// Use placeholder mixins so they can be replaced with custom mixins that include rem as a unit
 @mixin font-size($target,$context:$base-font-size)
 {
-	font-size: px-to-relative-font-size($target, $context);
+	// font-size: px-to-relative-font-size($target, $context);
+	@include adjust-font-size-to($target, $context);
 }
 @mixin line-height($target,$context:$base-line-height)
 {
-	line-height: px-to-relative-line-height($target, $context);
+	// line-height: px-to-relative-line-height($target, $context);
+	@include adjust-leading-to($target, $context);
 }
 

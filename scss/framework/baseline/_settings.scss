@@ -26,7 +26,7 @@
 	$leading-unit 						: if($use-rem-for-sizing, 1rem, $leading-unit);
 
 	// Debugging
-	$debug-rhythm						: false;
+	$debug-baseline						: false;
 
 	// If false, the baseline will be established from within the Type module.
-	$establish-baseline 				: false !default;
+	$establish-baseline 				: true !default;

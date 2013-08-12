@@ -4,19 +4,19 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+
+	// Import some default type families
+	@import "fonts/serif";
+	@import "fonts/sans-serif";
+	@import "fonts/monospace";
+
+
 // 	################################################################################################################################  //
 // 	Base Type							  																							  //
 // 	################################################################################################################################  //
 
-	// These setings are picked up by Baseline
-	$establish-baseline 				: false !default;
+	$font-size: 16px;
+	$line-height: 24px; // 1.5*16px
 
-	// Consider merging Baseline int the Type module
-	$font-size							: 16px;
-	$line-height 						: 24px; // 1.5*16px
-
-	@import "fonts/serif";
-	@import "fonts/sans-serif";
-
-	$type-default 						: $serif-regular;
-	$type-heading 						: $sans-serif-regular;
+	$type-default: $serif-regular;
+	$type-heading: $sans-serif-regular;
