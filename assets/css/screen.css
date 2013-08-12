@@ -1,90 +1,1098 @@
-/*
-Syntax error: File to import not found or unreadable: framework-extended/type/fonts/lato.
-              Load paths:
-                /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss
-                /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets
-                /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets
-                /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/extensions/persistentgrid/scss
-                Compass::SpriteImporter
-        on line 61 of /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss/skin/_settings.scss
-        from line 16 of /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss/screen.scss
-
-Backtrace:
-/Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss/skin/_settings.scss:61
-/Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss/screen.scss:16
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/import_node.rb:67:in `import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/import_node.rb:28:in `imported_file'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/import_node.rb:37:in `css_import?'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:217:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:227:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/engine.rb:315:in `_render'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/engine.rb:262:in `render'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:55:in `to_proc'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `modified'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:30:in `temporary_multipath_handler'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:17:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `each'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/rb-fsevent-0.9.3/lib/rb-fsevent/fsevent.rb:43:in `call'
-/opt/local/lib/ruby/gems/1.8/gems/rb-fsevent-0.9.3/lib/rb-fsevent/fsevent.rb:43:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:20:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:30
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
-/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44
-/opt/local/bin/compass:19:in `load'
-/opt/local/bin/compass:19
+/* http://persistent-grid.com
+   v1.0 | 20130701
+   Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+   License: GNU General Public License version 2 or later; see LICENSE.txt
 */
-body:before {
-  white-space: pre;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 32, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, .list-api-name,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 116, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 61, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 67, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+blockquote, q {
+  quotes: none;
+}
+/* line 103, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 73, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 79, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 86, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+input,
+label {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/* line 10, ../../_persistentgrid/extensions/persistentgrid/scss/framework/type/helpers/_mixins.scss */
+html {
+  font: normal normal 300 0.9375em/1.6em "Lato", sans-serif;
+}
+
+/* line 17, ../../_persistentgrid/extensions/persistentgrid/scss/framework/baseline/_behavior.scss */
+.debug {
+  background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
+  background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
+  background-size: 3em 3em;
+}
+/* line 14, ../../_persistentgrid/extensions/persistentgrid/scss/framework/baseline/helpers/_mixins.scss */
+.debug * {
+  background-color: transcontainer !important;
+  background-image: none !important;
+  outline: rgba(255, 0, 255, 0.1) dotted 1px;
+  outline: #ff01ff dotted 1px \9;
+}
+
+/* line 7, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.root {
+  display: block;
+  max-width: 1152px;
+}
+
+/* line 11, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.column {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media only screen and (max-width: 48em) {
+  /* line 11, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .column {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 11, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .column {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* line 15, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.column-container {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+}
+
+/* line 19, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.column-padding {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media only screen and (max-width: 48em) {
+  /* line 19, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .column-padding {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* line 23, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.bleed {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+@media only screen and (max-width: 48em) {
+  /* line 23, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .bleed {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 23, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .bleed {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+@media only screen and (max-width: 48em) and (max-width: 48em) {
+  /* line 23, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .bleed {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+}
+
+/* line 27, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.full {
+  width: 100%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 27, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .full {
+    width: 100%;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.half {
+  width: 50%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .half {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.half.persistent {
+  width: 50% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .half.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-half {
+  position: relative;
+  left: 50%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-half {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-half {
+  position: relative;
+  left: -50%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-half {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.fourth {
+  width: 25%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .fourth {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.fourth.persistent {
+  width: 25% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .fourth.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-fourth {
+  position: relative;
+  left: 25%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-fourth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-fourth {
+  position: relative;
+  left: -25%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-fourth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.third {
+  width: 33.33333%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .third {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.third.persistent {
+  width: 33.33333% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .third.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-third {
+  position: relative;
+  left: 33.33333%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-third {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-third {
+  position: relative;
+  left: -33.33333%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-third {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.two-third {
+  width: 66.66667%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .two-third {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.two-third.persistent {
+  width: 66.66667% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .two-third.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-two-third {
+  position: relative;
+  left: 66.66667%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-two-third {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-two-third {
+  position: relative;
+  left: -66.66667%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-two-third {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.three-fourth {
+  width: 75%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .three-fourth {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.three-fourth.persistent {
+  width: 75% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .three-fourth.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-three-fourth {
+  position: relative;
+  left: 75%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-three-fourth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-three-fourth {
+  position: relative;
+  left: -75%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-three-fourth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.fifth {
+  width: 20%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .fifth {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.fifth.persistent {
+  width: 20% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .fifth.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-fifth {
+  position: relative;
+  left: 20%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-fifth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-fifth {
+  position: relative;
+  left: -20%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-fifth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.four-fifth {
+  width: 80%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 35, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .four-fifth {
+    width: 100%;
+  }
+}
+
+/* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.four-fifth.persistent {
+  width: 80% !important;
+}
+@media only screen and (max-width: 48em) {
+  /* line 38, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .four-fifth.persistent {
+    width: 100%;
+  }
+}
+
+/* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.push-four-fifth {
+  position: relative;
+  left: 80%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 42, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .push-four-fifth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+.pull-four-fifth {
+  position: relative;
+  left: -80%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 46, ../../_persistentgrid/extensions/persistentgrid/scss/framework/grid/_behavior.scss */
+  .pull-four-fifth {
+    position: static;
+    position: initial;
+  }
+}
+
+/* line 7, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+html {
+  background-color: white;
+}
+
+/* line 10, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+a {
+  color: #9f81f7;
+}
+
+/* line 23, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-a-hover, a:hover {
+  color: purple;
+}
+
+/* line 26, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-a-active, a:active {
+  color: #d6c9fc;
+}
+
+/* line 29, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-a-visited, a:visited {
+  color: #3f0dd2;
+}
+
+/* line 33, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.heading, h1, h2, h3, h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+/* line 43, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+h5 + p,
+h6 + p {
+  margin-top: 0;
+}
+
+/* line 48, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+p {
+  margin: 0.75em 0;
+}
+
+/* line 52, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+code, .list-api-name {
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: framework-extended/type/fonts/lato.\A               Load paths:\A                 /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss\A                 /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/extensions/persistentgrid/scss\A                 Compass::SpriteImporter\A         on line 61 of /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss/skin/_settings.scss\A         from line 16 of /Users/babsgosgens/Sites/persistentgrid/_persistentgrid/scss/screen.scss"; }
+}
+
+/* line 85, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-hidden {
+  position: absolute;
+  left: -9999em;
+}
+
+/* line 88, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-not-hidden {
+  position: static;
+}
+
+/* line 91, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-visible {
+  display: block;
+}
+
+/* line 94, ../../_persistentgrid/extensions/persistentgrid/scss/framework/general/base/_behavior.scss */
+.is-not-visible {
+  display: none;
+}
+
+/* line 8, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc {
+  margin: 2.25em 0 0.75em;
+  background: #cfc0fb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 12, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc h2 {
+  line-height: 3em;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: #9f81f7;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  font-weight: 600;
+}
+/* line 21, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc span,
+.toc a,
+.toc a:visited {
+  display: block;
+  color: inherit;
+  padding: 0.375em 12px;
+  text-decoration: none;
+}
+/* line 26, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc span:hover,
+.toc a:hover,
+.toc a:visited:hover {
+  font-weight: 600;
+}
+/* line 30, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc li {
+  border: 1px solid #e9e2fd;
+  border-width: 1px 0 0;
+}
+/* line 43, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent > ul {
+  position: absolute;
+  left: -9999em;
+}
+/* line 47, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent:hover > ul {
+  position: static;
+}
+/* line 49, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent:hover > ul a {
+  background: rgba(255, 255, 255, 0.4);
+}
+/* line 53, ../../_persistentgrid/scss/skin/_behavior.scss */
+.toc .list-stacked-navigation .parent:hover > a {
+  background: #9f81f7;
+}
+
+/* line 61, ../../_persistentgrid/scss/skin/_behavior.scss */
+.page-header-logo {
+  margin: 0 -3em 0 0;
+  position: relative;
+  left: -4em;
+  vertical-align: bottom;
+  max-width: 3em;
+  text-align: center;
+}
+@media only screen and (max-width: 48em) {
+  /* line 61, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .page-header-logo {
+    position: static;
+    max-width: 2em;
+    margin: 0 .5em 0 0;
+  }
+}
+
+/* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
+.page-header, .chapter-links {
+  position: relative;
+  left: 25%;
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 75%;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 3em 0 1.5em;
+}
+@media only screen and (max-width: 48em) {
+  /* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .page-header, .chapter-links {
+    position: static;
+    position: initial;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .page-header, .chapter-links {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 74, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .page-header, .chapter-links {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* line 79, ../../_persistentgrid/scss/skin/_behavior.scss */
+.page-header-header {
+  font-size: 1.75em;
+  line-height: 1.71429em;
+}
+
+/* line 82, ../../_persistentgrid/scss/skin/_behavior.scss */
+.page-header-sub {
+  display: block;
+  font-family: normal, normal, 300, "Lato", sans-serif;
+  font-size: 0.5em;
+  line-height: 1.71429em;
+  color: #9f81f7;
+}
+
+/* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
+.breadcrumbs-root-item {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 25%;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: right;
+}
+@media only screen and (max-width: 48em) {
+  /* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .breadcrumbs-root-item {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 99, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .breadcrumbs-root-item {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* line 103, ../../_persistentgrid/scss/skin/_behavior.scss */
+.breadcrumbs-items {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 75%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media only screen and (max-width: 48em) {
+  /* line 103, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .breadcrumbs-items {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 103, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .breadcrumbs-items {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 106, ../../_persistentgrid/scss/skin/_behavior.scss */
+.breadcrumbs-items > span:before {
+  content: "/";
+}
+
+/* line 111, ../../_persistentgrid/scss/skin/_behavior.scss */
+.chapter-header {
+  margin: 0.75em 0 0;
+  font-weight: 400;
+  font-size: 2.25em;
+  line-height: 0.66667em;
+  color: #666666;
+}
+
+/* line 118, ../../_persistentgrid/scss/skin/_behavior.scss */
+.chapter-section {
+  margin: 1.5em 0 3em;
+}
+
+/* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+.article-header-level2 {
+  margin: 0 0 0.75em;
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  color: #666666;
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 25%;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: right;
+  border-right: 3px solid #cccccc;
+}
+@media only screen and (max-width: 48em) {
+  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .article-header-level2 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .article-header-level2 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 130, ../../_persistentgrid/scss/skin/_behavior.scss */
+.article-header-level2 + * {
+  border-left: 1px solid #cccccc;
+}
+/* line 133, ../../_persistentgrid/scss/skin/_behavior.scss */
+.article-header-level2 + * > *:first-child {
+  margin-top: 0;
+}
+/* line 136, ../../_persistentgrid/scss/skin/_behavior.scss */
+.article-header-level2 + * > *:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 48em) {
+  /* line 121, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .article-header-level2 {
+    text-align: inherit;
+    border: 0;
+  }
+  /* line 143, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .article-header-level2 + * {
+    border: 0;
+  }
+}
+
+/* line 149, ../../_persistentgrid/scss/skin/_behavior.scss */
+.article-header-level3 {
+  padding: 0.375em 12px;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #666666;
+  color: #666666;
+}
+
+/* line 166, ../../_persistentgrid/scss/skin/_behavior.scss */
+.demo {
+  padding: 0;
+  border-left: 24px solid #e8e1fd;
+  border-right: 24px solid #e8e1fd;
+  background: #c4b1fa;
+  height: 6em !important;
+  max-height: 6em !important;
+  overflow: hidden;
+}
+@media only screen and (max-width: 48em) {
+  /* line 166, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .demo {
+    border-left: 12px solid #e8e1fd;
+    border-right: 12px solid #e8e1fd;
+  }
+}
+
+/* line 180, ../../_persistentgrid/scss/skin/_behavior.scss */
+.tags {
+  border-top-style: solid;
+  border-top-width: 0.0625em;
+  padding-top: -0.0625em;
+}
+/* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
+.tags dt,
+.tags dd {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 0.375em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
+  padding-bottom: 0.3125em;
+}
+@media only screen and (max-width: 48em) {
+  /* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .tags dt,
+  .tags dd {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 183, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .tags dt,
+  .tags dd {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* line 188, ../../_persistentgrid/scss/skin/_behavior.scss */
+.tags dt {
+  width: 25%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 188, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .tags dt {
+    width: 100%;
+  }
+}
+/* line 191, ../../_persistentgrid/scss/skin/_behavior.scss */
+.tags dd {
+  width: 75%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 191, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .tags dd {
+    width: 100%;
+  }
+}
+
+/* line 195, ../../_persistentgrid/scss/skin/_behavior.scss */
+.tags-tag {
+  color: #666666;
+  font-style: italic;
+}
+/* line 52, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.tags-tag div, .tags-tag span, .tags-tag applet, .tags-tag object, .tags-tag iframe,
+.tags-tag h1, .tags-tag h2, .tags-tag h3, .tags-tag h4, .tags-tag h5, .tags-tag h6, .tags-tag p, .tags-tag blockquote, .tags-tag pre,
+.tags-tag a, .tags-tag abbr, .tags-tag acronym, .tags-tag address, .tags-tag big, .tags-tag cite, .tags-tag code, .tags-tag .list-api-name,
+.tags-tag del, .tags-tag dfn, .tags-tag em, .tags-tag img, .tags-tag ins, .tags-tag kbd, .tags-tag q, .tags-tag s, .tags-tag samp,
+.tags-tag small, .tags-tag strike, .tags-tag strong, .tags-tag sub, .tags-tag sup, .tags-tag tt, .tags-tag var,
+.tags-tag b, .tags-tag u, .tags-tag i, .tags-tag center,
+.tags-tag dl, .tags-tag dt, .tags-tag dd, .tags-tag ol, .tags-tag ul, .tags-tag li,
+.tags-tag fieldset, .tags-tag form, .tags-tag label, .tags-tag legend,
+.tags-tag table, .tags-tag caption, .tags-tag tbody, .tags-tag tfoot, .tags-tag thead, .tags-tag tr, .tags-tag th, .tags-tag td,
+.tags-tag article, .tags-tag aside, .tags-tag canvas, .tags-tag details, .tags-tag embed,
+.tags-tag figure, .tags-tag figcaption, .tags-tag footer, .tags-tag header, .tags-tag hgroup,
+.tags-tag menu, .tags-tag nav, .tags-tag output, .tags-tag ruby, .tags-tag section, .tags-tag summary,
+.tags-tag time, .tags-tag mark, .tags-tag audio, .tags-tag video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* line 55, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.tags-tag table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 57, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.tags-tag caption, .tags-tag th, .tags-tag td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+/* line 59, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.tags-tag q, .tags-tag blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.tags-tag q:before, .tags-tag q:after, .tags-tag blockquote:before, .tags-tag blockquote:after {
+  content: "";
+  content: none;
+}
+/* line 61, ../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.tags-tag a img {
+  border: none;
+}
+
+/* line 201, ../../_persistentgrid/scss/skin/_behavior.scss */
+code, .list-api-name {
+  padding: 0.375em 0.5em;
+}
+
+/* line 205, ../../_persistentgrid/scss/skin/_behavior.scss */
+code, .list-api-name,
+.terminal {
+  font-family: monospace;
+  background: #f2f2f2;
+  font-size: 1.1em;
+  color: #8273ae;
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 214, ../../_persistentgrid/scss/skin/_behavior.scss */
+.terminal {
+  overflow-x: scroll;
+  padding: 0.75em 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media only screen and (max-width: 48em) {
+  /* line 214, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .terminal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* line 233, ../../_persistentgrid/scss/skin/_behavior.scss */
+.list-api-name {
+  margin-top: 1.5em;
+}
+/* line 239, ../../_persistentgrid/scss/skin/_behavior.scss */
+.list-api-name:first-child {
+  margin-top: 0;
+}
+/* line 243, ../../_persistentgrid/scss/skin/_behavior.scss */
+.list-api-name a,
+.list-api-name a:visited {
+  color: inherit;
+}
+
+/* line 247, ../../_persistentgrid/scss/skin/_behavior.scss */
+.list-api-description {
+  font-weight: 300;
+}
+
+/* line 250, ../../_persistentgrid/scss/skin/_behavior.scss */
+.list-api-code {
+  position: absolute;
+  left: -9999em;
+}
+
+/* line 254, ../../_persistentgrid/scss/skin/_behavior.scss */
+.list-api-name:target + .list-api-code {
+  position: static;
+}
+
+/* line 259, ../../_persistentgrid/scss/skin/_behavior.scss */
+.chapter-links {
+  margin-top: 0.75em;
+}
+/* line 263, ../../_persistentgrid/scss/skin/_behavior.scss */
+.chapter-links a,
+.chapter-links a:visited {
+  display: block;
+  font-size: 0.75em;
+  line-height: 2em;
+}
+@media only screen and (min-width: 80em) {
+  /* line 263, ../../_persistentgrid/scss/skin/_behavior.scss */
+  .chapter-links a,
+  .chapter-links a:visited {
+    display: default;
+    display: initial;
+  }
+}
+
+/* line 277, ../../_persistentgrid/scss/skin/_behavior.scss */
+.inline-list li {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+/* line 283, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy {
+  font-family: monospace;
+}
+/* line 286, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level0:before {
+  content: "|";
+}
+/* line 290, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level1 {
+  padding-left: 12px;
+}
+/* line 293, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level2 {
+  padding-left: 24px;
+}
+/* line 296, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level3 {
+  padding-left: 36px;
+}
+/* line 299, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level4 {
+  padding-left: 48px;
+}
+/* line 306, ../../_persistentgrid/scss/skin/_behavior.scss */
+.hierarchy .level1:before,
+.hierarchy .level2:before,
+.hierarchy .level3:before,
+.hierarchy .level4:before {
+  content: "--|";
+}
