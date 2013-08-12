@@ -4,4 +4,39 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "base/settings";
+
+//  ==========================================================================
+//  Colors
+//  ==========================================================================
+
+	$white								: White !default;
+	$black								: Black !default;
+	$grey 								: Grey !default;
+	$red 								: Red !default;
+	$orange 							: Orange !default;
+	$yellow 							: Yellow !default;
+	$green 								: Green !default;
+	$blue 								: Blue !default;
+	$purple 							: Purple !default;
+	$violet 							: Violet !default;
+
+	$color-background					: $white !default;
+	$color-body							: $black !default;
+	$color-theme						: $grey !default;
+	$color-primary						: $violet !default;
+	$color-secondary					: $orange !default;
+	$color-success 						: $green !default;
+	$color-info 						: $yellow !default;
+	$color-warning						: $orange !default;
+	$color-error						: $red !default;
+
+	$link-color							: $color-primary !default;
+	$link-color-hover					: $purple !default;
+	$link-color-active					: lighten($link-color, 15) !default;
+	$link-color-visited					: darken($link-color, 30) !default;
+
+//  ==========================================================================
+//  Border Radius
+//  ==========================================================================
+
+	$corner-radius						: 0 !default;

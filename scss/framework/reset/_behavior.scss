@@ -1,6 +1,12 @@
 // /**
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  *
+//  * Based on Eric Meyer's Reset and Nicolas Gallagher and Jonathan Neal's Normalize.css.
+//  * https://github.com/necolas/normalize.css/blob/master/LICENSE.md
+//  *
+//  * More info on Reset can be found here: http://meyerweb.com/eric/tools/css/reset/
+//  * More info on Normalize.css can be found here: http://necolas.github.io/normalize.css/
 //  */
 @if $trace-imports { @debug 'imported'; }
 
@@ -46,31 +52,39 @@
 		}		
 	}
 
-	@if $establish-baseline {
+	html {
+		background-color: $color-background;
+		@if $establish-baseline {
 
-		@include establish-baseline;
+			@include establish-baseline;
 
-		// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
-		html {
+			// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
 			@include type-family($type-default);
 			@include type-style($type-default);
 			@include type-variant($type-default);
 			@include type-weight($type-default);
 		}
-	}
-	@else {
+		@else {
 
-		// Set the project's font declarations:
-		html {
+			// Set the project's font declarations:
 			$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
 			$lh: px-to-relative-line-height($line-height, $font-size);
 
 			@include font($type-default, $fs, $lh);
 		}
+		@if $reset-ios {
+			-ms-text-size-adjust: 100%;
+		    -webkit-text-size-adjust: 100%;
+		}
 	}
+
 
 	@if $reset-html5 {
 		@include reset-html5;
+		[hidden],
+		template {
+		    display: none;
+		}
 	}
 
 	@if $reset-body {
@@ -110,4 +124,91 @@
     		@include reset-input;
 		}
 	}
+
+
+	//* Normalize.css *//
+
+	@if $reset-media {
+		audio,
+		canvas,
+		video {
+		    display: inline-block;
+		}
+		audio:not([controls]) {
+		    display: none;
+		    height: 0;
+		}
+	}
+
+	@if $reset-anchor {
+		a {
+		    background: transparent;
+		    &:focus {
+		    	outline: thin dotted;
+		    }
+		    &:active,
+		    &:hover {
+		    	outline: 0;
+		    }
+		}
+	}
+
+	@if $reset-embedded-content {
+		img {
+			border: 0;
+		}
+		svg:not(:root) {
+		    overflow: hidden;
+		}
+	}
+
+	@if $reset-form {
+		button,
+		input,
+		select,
+		textarea {
+		    font-family: inherit;
+		    font-size: 100%;
+		    margin: 0;
+		}
+		button,
+		input {
+		    line-height: normal;
+		    border: 0;
+		    padding: 0;
+		}
+		button,
+		select {
+		    text-transform: none;
+		}
+		button,
+		html input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
+		    -webkit-appearance: button;
+		    cursor: pointer;
+		}
+		button[disabled],
+		html input[disabled] {
+		    cursor: default;
+		}
+		input[type="checkbox"],
+		input[type="radio"] {
+		    @include box-sizing(border-box);
+		    padding: 0;
+		}
+		input[type="search"] {
+		    -webkit-appearance: textfield;
+		    @include box-sizing(content-box);
+		}
+		input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-decoration {
+		    -webkit-appearance: none;
+		}
+		textarea {
+		    overflow: auto; /* 1 */
+		    vertical-align: top; /* 2 */
+		}
+	}
+
 }
