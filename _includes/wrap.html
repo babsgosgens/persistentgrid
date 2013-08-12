@@ -24,31 +24,16 @@
   </nav>
 
 
-  <!--script type="text/javascript">
+  <script type="text/javascript">
   var i = 0;
-  WebFontConfig = {
-        //custom: { families: ['AccessibilityFoundicons'], urls: ['/PGFramework/Stylesheets/screen.css'] },
-    google: { 
-        families: [ 'Lato:100,300,400,700,900,300italic:latin' ]
-        }
-  };
+  WebFontConfig = { google: { families: [ 'Lato:100,300,400,700,900,300italic:latin' ] } };
   (function() {
-    // Load WebFont
     var wf   = document.createElement('script');
-    wf.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/<?php echo $webfontVersion; ?>/webfont.js';
+    wf.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/{{ site.webfontversion }}/webfont.js';
     wf.type  = 'text/javascript';
     wf.async = 'false';
-    var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
-    
-    // Load jQuery
-    var jq   = document.createElement('script');
-    jq.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://code.jquery.com/jquery-<?php echo $jqueryVersion; ?>.min.js';
-    jq.type  = 'text/javascript';
-    jq.async = 'true';
-    var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
+    var s    = document.getElementsByTagName('script')[0]; console.log(s); s.parentNode.insertBefore(wf, s);
   })();
-  </script-->
-  <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35733640-1']);

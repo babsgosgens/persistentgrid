@@ -2,3 +2,5 @@ name: Persistent Grid Reference Manual
 markdown: redcarpet
 pygments: true
 baseurl: ''
+webfontversion: 1.4.8
+jqueryversion: 1.10.2
