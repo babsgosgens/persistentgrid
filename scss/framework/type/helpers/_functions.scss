@@ -5,43 +5,48 @@
 @if $trace-imports { @debug 'imported'; }
 
 // Placeholder function for font-sizes - inserts correct font unit as set in the Vertical-Rhythm module settings
-@function px-to-relative-font-size($target-px, $context: $base-font-size, $unit: $font-unit) {
+@function px-to-relative-font-size($target-px, $context: $base-font-size, $unit: $font-unit)
+{
 	@return px-to-relative-size($target-px, $context, $unit);
 }
 
 // Placeholder function for line-heights - inserts correct line-height unit as set in the Vertical-Rhythm module settings
-@function px-to-relative-line-height($target-px, $context: $base-font-size, $unit: $leading-unit) {
+@function px-to-relative-line-height($target-px, $context: $base-font-size, $unit: $leading-unit)
+{
 	@return px-to-relative-size($target-px, $context, $unit);
 }
 
-// Extract the style variable from a type array
+// Extract the style property from a type array
 // Eexpects an array: $style, $variant, $weight, $family;
 @function extract-type-style($type) {
 	@return nth($type, 1);
 }
 
-// Extract the variant variable from a type array
+// Extract the variant property from a type array
 // Eexpects an array: $style, $variant, $weight, $family;
-@function extract-type-variant($type) {
+@function extract-type-variant($type)
+{
 	@return nth($type, 2);
 }
 
-// Extract the weight variable from a type array
+// Extract the weight property from a type array
 // Eexpects an array: $style, $variant, $weight, $family;
-@function extract-type-weight($type) {
+@function extract-type-weight($type)
+{
 	@return nth($type, 3);
 }
 
-// Extract the family variable from a type array
+// Extract the family property from a type array
 // Eexpects an array: $style, $variant, $weight, $family;
-@function extract-type-family($type) {
+@function extract-type-family($type)
+{
 	@return nth($type, 4);
 }
 
 // Converts a number to a string
 // Expects a single number: 100 through 900;
-@function weight-number-to-string($weight) {
-
+@function weight-number-to-string($weight)
+{
 	@if $weight == 100 { @return "ultra-light"; }
 	@if $weight == 200 { @return "light"; }
 	@if $weight == 300 { @return "book"; }
