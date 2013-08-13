@@ -188,7 +188,7 @@
 {
 	ol,
 	ul {
-	    @include reset-list-style;
+	    list-style: none;
 	}
 }
 
@@ -200,7 +200,8 @@
 		 * Remove most spacing between table cells.
 		 */
 
-		@include reset-table;
+		border-collapse: collapse;
+		border-spacing: 0;
 	}
 }
 

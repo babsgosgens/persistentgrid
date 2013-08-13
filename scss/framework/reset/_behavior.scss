@@ -71,7 +71,7 @@
 	@if $reset-html-background OR $reset-baseline OR $reset-ios {
 		html {
 			@if $reset-html-background {
-				@include reset-background;
+				@include reset-html-background;
 			}
 			@if $reset-baseline {
 				@include reset-baseline;
@@ -86,8 +86,8 @@
 		@include reset-html5;
 	}
 
-	@if $reset-focus {
-		@include $reset-focus;
+	@if $reset-anchor {
+		@include reset-anchor;
 	}
 
 	@if $reset-media {
