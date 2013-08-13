@@ -12,6 +12,33 @@
 
 @if $global-reset {
 	@include global-reset;
+	
+	html {
+		background-color: $color-background;
+		@if $establish-baseline {
+
+			@include establish-baseline;
+
+			// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
+			@include type-family($type-default);
+			@include type-style($type-default);
+			@include type-variant($type-default);
+			@include type-weight($type-default);
+		}
+		@else {
+
+			// Set the project's font declarations:
+			$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
+			$lh: px-to-relative-line-height($line-height, $font-size);
+
+			@include font($type-default, $fs, $lh);
+		}
+		@if $reset-ios {
+			-ms-text-size-adjust: 100%;
+		    -webkit-text-size-adjust: 100%;
+		}
+	}
+
 }
 @else {
 
@@ -51,31 +78,31 @@
 		}		
 	}
 
-html {
-	background-color: $color-background;
-	@if $establish-baseline {
+	html {
+		background-color: $color-background;
+		@if $establish-baseline {
 
-		@include establish-baseline;
+			@include establish-baseline;
 
-		// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
-		@include type-family($type-default);
-		@include type-style($type-default);
-		@include type-variant($type-default);
-		@include type-weight($type-default);
+			// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
+			@include type-family($type-default);
+			@include type-style($type-default);
+			@include type-variant($type-default);
+			@include type-weight($type-default);
+		}
+		@else {
+
+			// Set the project's font declarations:
+			$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
+			$lh: px-to-relative-line-height($line-height, $font-size);
+
+			@include font($type-default, $fs, $lh);
+		}
+		@if $reset-ios {
+			-ms-text-size-adjust: 100%;
+		    -webkit-text-size-adjust: 100%;
+		}
 	}
-	@else {
-
-		// Set the project's font declarations:
-		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
-		$lh: px-to-relative-line-height($line-height, $font-size);
-
-		@include font($type-default, $fs, $lh);
-	}
-	@if $reset-ios {
-		-ms-text-size-adjust: 100%;
-	    -webkit-text-size-adjust: 100%;
-	}
-}
 
 
 	@if $reset-html5 {
