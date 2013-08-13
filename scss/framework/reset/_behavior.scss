@@ -55,8 +55,6 @@ html {
 	background-color: $color-background;
 	@if $establish-baseline {
 
-		@debug $establish-baseline;
-
 		@include establish-baseline;
 
 		// The project"s font size and line will be set from within the Vertical-Rhythm module, just set the remaining dont declarations:
@@ -66,8 +64,6 @@ html {
 		@include type-weight($type-default);
 	}
 	@else {
-
-		@debug $establish-baseline;
 
 		// Set the project's font declarations:
 		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
@@ -106,7 +102,7 @@ html {
 		}
 	}
 
-    @if $reset-table {
+	@if $reset-table {
 		table {
 			@include reset-table;
 		}
@@ -114,11 +110,8 @@ html {
 
 	@if $reset-table-cell {
 		caption, th, td {
-    		@include reset-table-cell;
-    	}
-	}
-
-	@if $reset-input {
+			@include reset-table-cell;
+		}
 	}
 
 
@@ -205,15 +198,14 @@ html {
 		    -webkit-appearance: none;
 		}
 		textarea {
-		    overflow: auto; /* 1 */
-		    vertical-align: top; /* 2 */
+		    overflow: auto;
+		    vertical-align: top;
 		}
 		input,
 		textarea,
 		button,
 		label {
-    		@include reset-input;
+			@include reset-input;
 		}
 	}
-
 }
