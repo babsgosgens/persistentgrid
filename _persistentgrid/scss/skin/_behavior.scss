@@ -9,7 +9,7 @@ p+p {
 	margin: vertical-rhythm(1) 0;
 }
 em {
-	@include type-weight($lato-regular);
+	@include font-weight($lato-regular);
 }
 .toc {
 	margin: vertical-rhythm(1.5) 0 vertical-rhythm(.5);
@@ -20,7 +20,7 @@ em {
 		@include column-spacing(1/4, false, true);
 		background: $color-primary;
 		@include border-radius($corner-radius $corner-radius 0 0);
-		@include type-weight($lato-bold);
+		@include font-weight($lato-bold);
 	}
 	span,
 	a,
@@ -30,7 +30,7 @@ em {
 		padding: vertical-rhythm(.25) horizontal-rhythm(1/4);
 		text-decoration: none;
 		&:hover {
-			@include type-weight($lato-bold);
+			@include font-weight($lato-bold);
 		}
 	}
 	li {
@@ -118,7 +118,7 @@ em {
 }
 .chapter-header {
 	margin: vertical-rhythm(.5)  0 0;
-	@include type-weight($lato-regular);
+	@include font-weight($lato-regular);
 	@include adjust-font-size-to(36px, 1);
 	color: $color-theme;
 }
@@ -128,7 +128,7 @@ em {
 }
 .article-header-level2 {
 	margin: 0 0 vertical-rhythm(.5);
-	@include type-weight($lato-regular);
+	@include font-weight($lato-regular);
 	@include adjust-font-size-to(18px, 1);
 	color: $color-theme;
 
@@ -241,7 +241,7 @@ code,
 .list-api-name {
 	// color: $color-primary;
 	margin-top: vertical-rhythm(1);
-	@include type-weight($lato-bold);
+	@include font-weight($lato-bold);
 
 	// @extend .page-header;
 	// @extend code;

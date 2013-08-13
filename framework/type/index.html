@@ -42,10 +42,7 @@ title: Type
 
 	<h2 class="article-header-level2">Introduction</h2
 	><div class="three-fourth column">
-		<p>The Typgraphy module is not rendering much output. It's responsibility is to define the projects's typefaces default font-size and line-heigt.</p>
-		<p>Depending on your settings, this could be the output:</p>
-		<script src="https://gist.github.com/babsgosgens/5bdd7d53ed900883e65c.js"></script>
-		<script src="https://gist.github.com/babsgosgens/c2945f5e0193f3c02ba5.js"></script>
+		<p>Type is the only module that is not rendering any output. It's sole responsibility is to define the project's typefaces and the default font-size and line-heigt. It's settings are then used by Reset and Baseline to compile the project's baseline.</p>
 	</div>
 
 </section>
@@ -53,20 +50,51 @@ title: Type
 <section class="chapter-section" id="settings">
 	<h2 class="article-header-level2">Settings</h2
 	><div class="three-fourth column">
-		<h3 class="article-header-level3">Root</h3>
-		<p>You can embed your grid layout in a 'root' container. Your grid layout will not stretch beyond the maximum width of this container. The root container can be positioned left or center, for alternate positions you can provide your own behavior.</p>
+		<p>Although technically not a setting, the Type setting file imports three type presets:</p>
+		{% gist 6225036 %}
+		<p>If no other typeface is used as the default type, these will be used as the project's typefaces. See Base for more information</p>
+
 		<dl class="list-api">
-			<dt class="list-api-name" id="setting-root-selector"><a href="#setting-root-selector">$root-selector</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199574.js"></script></dd>
-			<dd class="list-api-description">The default selector for the root container is <code>.root</code>, but you can also use a base selector, for instance <code>body</code>.</dd>
+
+			<dt class="list-api-name" id="setting-font-size"><a href="#setting-font-size">$font-size</a></dt>
+			<dd class="list-api-code">{% gist 6225110 %}</dd>
+			<dd class="list-api-description">Font sizes are expressed in <code>px</code> but will be converted to the unit as specified in Baseline. Defaults to <code>16px</code>.</dd>
+			
+			<dt class="list-api-name" id="setting-line-height"><a href="#setting-line-height">$line-height</a></dt>
+			<dd class="list-api-code">{% gist 6225127 %}</dd>
+			<dd class="list-api-description">Like font sizes, line-heights are expressed in <code>px</code> and will be converted to the unit as specified in Baseline. Defaults to <code>24px</code>.</dd>
+			
+			<dt class="list-api-name" id="setting-type-default"><a href="#setting-type-default">$type-default</a></dt>
+			<dd class="list-api-code">{% gist 6225158 %}</dd>
+			<dd class="list-api-description">An array of type properties. Defaults to <code>$serif-regular</code>. See: ###</dd>
+			
+			<dt class="list-api-name" id="setting-type-heading"><a href="#setting-type-heading">$type-heading</a></dt>
+			<dd class="list-api-code">{% gist 6225167 %}</dd>
+			<dd class="list-api-description">An array of type properties. Defaults to <code>$serif-regular</code>. See: ###</dd>
 
 		</dl>
 
-		<h3 class="article-header-level3">Columns</h3>
+	</div>
+</section>
+
+
+<section class="chapter-section" id="settings">
+	<h2 class="article-header-level2">Fonts</h2
+	><div class="three-fourth column">
+		<p>Type defines three typeface presets. <a href="https://github.com/babsgosgens/persistentgrid/tree/master/scss/framework-extended/type/fonts">More typefaces</a> for your projects are available in the extended framework. It also holds an <a href="https://github.com/babsgosgens/persistentgrid/blob/master/scss/framework-extended/type/fonts/_example.scss">example template</a> for your own typeface presets.</p>
+
+		<p>@todo: more info on type presets</p>
+
 		<dl class="list-api">
-			<dt class="list-api-name" id="setting-column-selector"><a href="#setting-column-selector">$column-selector</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199725.js"></script></dd>
-			<dd class="list-api-description">The selector of your column rules. It is set to <code>.column</code> by default. Change it to any selector that has your fancy.</dd>
+
+			<dt class="list-api-name" id="font-serif"><a href="#font-serif">$serif</a></dt>
+			<dd class="list-api-code">{% gist 6225236 %}</dd>
+			
+			<dt class="list-api-name" id="font-sans-serif"><a href="#font-sans-serif">$sans-serif</a></dt>
+			<dd class="list-api-code">{% gist 6225247 %}</dd>
+
+			<dt class="list-api-name" id="font-monospace"><a href="#font-monospace">$monospace</a></dt>
+			<dd class="list-api-code">{% gist 6225250 %}</dd>
 
 		</dl>
 
@@ -77,9 +105,34 @@ title: Type
 	<h2 class="article-header-level2">Mixins</h2
 	><div class="three-fourth column">
 		<dl class="list-api">
-			<dt class="list-api-name" id="mixin-column-behavior"><a href="#mixin-column-behavior">@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172502.js"></script></dd>
-			<dd class="list-api-description">Mixin basic column properties.</dd>
+
+			<dt class="list-api-name" id="mixin-font"><a href="#mixin-font">@mixin font</a></dt>
+			<dd class="list-api-code">{% gist 6225309 %}</script></dd>
+			<dd class="list-api-description">Mixin for shorthand font properties. <code>$type</code> is an array of four type properties: <code>style</code>, <code>variant</code>, <code>weight</code>, <code>font-family</code>. Font-sizes must be pre-converted to final unit of output.</dd>
+
+			<dt class="list-api-name" id="mixin-font-style"><a href="#mixin-font-style">@mixin font-style</a></dt>
+			<dd class="list-api-code">{% gist 6225356 %}</script></dd>
+			<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+			<dt class="list-api-name" id="mixin-font-variant"><a href="#mixin-font-variant">@mixin font-variant</a></dt>
+			<dd class="list-api-code">{% gist 6225373 %}</script></dd>
+			<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+			<dt class="list-api-name" id="mixin-font-weight"><a href="#mixin-font-weight">@mixin font-weight</a></dt>
+			<dd class="list-api-code">{% gist 6225388 %}</script></dd>
+			<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+			<dt class="list-api-name" id="mixin-font-family"><a href="#mixin-font-family">@mixin font-family</a></dt>
+			<dd class="list-api-code">{% gist 6225392 %}</script></dd>
+			<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+			<dt class="list-api-name" id="mixin-font-size"><a href="#mixin-font-size">@mixin font-size</a></dt>
+			<dd class="list-api-code">{% gist 6225478 %}</script></dd>
+			<dd class="list-api-description">Placeholder mixin for <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-adjust-font-size-to">@mixin adjust-font-size-to()</a></dd>
+
+			<dt class="list-api-name" id="mixin-line-height"><a href="#mixin-line-height">@mixin line-height</a></dt>
+			<dd class="list-api-code">{% gist 6225494 %}</script></dd>
+			<dd class="list-api-description">Placeholder mixin for <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-adjust-leading-to">@mixin adjust-leading-to()</a></dd>
 
 		</dl>
 	</div>
@@ -89,9 +142,34 @@ title: Type
 	<h2 class="article-header-level2">Functions</h2
 	><div class="three-fourth column">
 		<dl class="list-api">
-			<dt class="list-api-name" id="function-horizontal-rhythm"><a href="#function-horizontal-rhythm">@function horizontal-rhythm($fraction: 1/2)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172639.js"></script></dd>
-			<dd class="list-api-description">Calculates a value based on the $column-spacing.</dd>
+
+			<dt class="list-api-name" id="function-px-to-relative-font-size"><a href="#function-px-to-relative-font-size">@function px-to-relative-font-size</a></dt>
+			<dd class="list-api-code">{% gist 6225523 %}</dd>
+			<dd class="list-api-description">Placeholder function for font-sizes - converts px to the unit as set in the Vertical-Rhythm module settings</dd>
+
+			<dt class="list-api-name" id="function-px-to-relative-line-height"><a href="#function-px-to-relative-line-height">@function px-to-relative-line-height</a></dt>
+			<dd class="list-api-code">{% gist 6225561 %}</dd>
+			<dd class="list-api-description">Placeholder function for line-heights - converts px to the unit as set in the Vertical-Rhythm module settings</dd>
+
+			<dt class="list-api-name" id="function-extract-type-style"><a href="#function-extract-type-style">@function extract-type-style</a></dt>
+			<dd class="list-api-code">{% gist 6225580 %}</dd>
+			<dd class="list-api-description">Extract the style property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+			<dt class="list-api-name" id="function-extract-type-variant"><a href="#function-extract-type-variant">@function extract-type-variant</a></dt>
+			<dd class="list-api-code">{% gist 6225594 %}</dd>
+			<dd class="list-api-description">Extract the variant property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+			<dt class="list-api-name" id="function-extract-type-weight"><a href="#function-extract-type-weight">@function extract-type-weight</a></dt>
+			<dd class="list-api-code">{% gist 6225604 %}</dd>
+			<dd class="list-api-description">Extract the weight property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+			<dt class="list-api-name" id="function-extract-type-family"><a href="#function-extract-type-family">@function extract-type-family</a></dt>
+			<dd class="list-api-code">{% gist 6225613 %}</dd>
+			<dd class="list-api-description">Extract the family property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+			<dt class="list-api-name" id="function-weight-number-to-string"><a href="#function-weight-number-to-string">@function weight-number-to-string</a></dt>
+			<dd class="list-api-code">{% gist 6225629 %}</dd>
+			<dd class="list-api-description">Converts a number to a string. Expects a single number: 100 through 900.</dd>
 
 		</dl>
 	</div>
@@ -101,42 +179,16 @@ title: Type
 	<h2 class="article-header-level2">Behavior</h2
 	><div class="three-fourth column">
 
-		<p>This is the default behavior rendering of the Grid Module:</p>
+		<p>Type renders no output and has no behavior.</p>
 
-		<h3 class="article-header-level3">Root selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200034.js"></script>
+		<p>@todo: implement behavior for webfont states.</p>
 
-		<p>At present, the total weight of the compiled (compressed) CSS is 4.1Kb</p>
 	</div>
 </section>
 
 <section class="chapter-section" id="usage">
 	<h2 class="article-header-level2">Usage</h2
 	><div class="three-fourth column">
-		<p>Columns can be rendered by:</p>
-		<ol class="list list-decimal" style="list-style-position: inside;">
-			<li>assigning classes at markup level,</li>
-			<li>extending the rendered behavior, or</li>
-			<li>using the provided mixins.</li>
-		</ol>
-		<p>In the real world, you will likely use a mixture of all three. Persistant Grid does not enforce any particular system - it is totally up to you.</p>
-		<p>Using classes is the simplest way of assigning columns to your markup, and - as you can see in the examples below - uses the least amount of code. Using mixins is a little more code intensive, but useful when defining behavior that is not rendered by default. Extending classes can be useful in situations where you cannot alter the markup, but beware - it can produce bloated stylesheets in a blink.</p>
-		<div>
-			<div class="half column-container">
-			    <div class="persistent demo third column">1</div><div class="persistent third demo column">2</div><div class="persistent third demo column">3</div>
-			</div><div class="half column-container">
-			    <div class="demo third column push-third">4</div><div class="demo third column pull-third">5</div><div class="demo third column">6</div>
-			</div>
-		</div>
-		<dl class="list-api">
-			<dt class="list-api-name" id="usage-example1"><a href="#usage-example1">Example 1: Assigning classes at markup level</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200190.js"></script></script></dd>
-
-			<dt class="list-api-name" id="usage-example2"><a href="#usage-example2">Example 2: Extending classes</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200198.js"></script></dd>
-
-			<dt class="list-api-name" id="usage-example3"><a href="#usage-example3">Example 3: Using the mixins</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200210.js"></script></dd>
-		</dl>
+		<p>@todo: examples</p>
 	</div>
 </section>
