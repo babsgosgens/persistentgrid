@@ -15,16 +15,16 @@
 	$reset-box-model 					: true;
 	$reset-box-sizing 	 				: true; // Resets box sizing to border-box - for use with Persistent Grid
 	$reset-font  						: true;
-	$reset-focus  						: true;
+	$reset-text-rendering 				: true;
+	$reset-html-background 				: true;
+	$reset-baseline 					: true;
+	$reset-ios 							: true;
+	$reset-html5 						: true;
+	$reset-anchor  						: true;
+	$reset-media 						: true;
 	$reset-list-style 					: true;
 	$reset-table 						: true;
 	$reset-table-cell 					: true;
-	$reset-quotation 					: true;
-	$reset-html5 						: true;
-
-	$reset-text-rendering 				: false;
 	$reset-input 						: true;
+	$reset-quotation 					: true;
 
-	$reset-media 						: true;
-	$reset-ios 							: true;
-	$reset-embedded-content 			: true;
