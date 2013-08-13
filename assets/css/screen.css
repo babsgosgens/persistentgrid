@@ -81,43 +81,43 @@ caption, th, td {
   vertical-align: middle;
 }
 
-/* line 130, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 127, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 audio,
 canvas,
 video {
   display: inline-block;
 }
 
-/* line 133, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 130, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 140, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 137, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 a {
   background: transparent;
 }
-/* line 142, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 139, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 a:focus {
   outline: thin dotted;
 }
-/* line 146, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 143, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 a:active, a:hover {
   outline: 0;
 }
 
-/* line 153, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 150, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 img {
   border: 0;
 }
 
-/* line 156, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 153, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 165, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 162, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 button,
 input,
 select,
@@ -134,7 +134,7 @@ textarea {
   font-size: 100%;
 }
 
-/* line 174, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 171, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 button,
 input {
   line-height: normal;
@@ -142,13 +142,13 @@ input {
   padding: 0;
 }
 
-/* line 180, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 177, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 186, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 183, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -157,13 +157,13 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 191, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 188, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 195, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 192, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -172,7 +172,7 @@ input[type="radio"] {
   padding: 0;
 }
 
-/* line 199, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 196, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
@@ -180,21 +180,19 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 204, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 201, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 207, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 204, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 textarea {
   overflow: auto;
-  /* 1 */
   vertical-align: top;
-  /* 2 */
 }
 
-/* line 214, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
+/* line 211, ../../_persistentgrid/extensions/persistentgrid/scss/framework/reset/_behavior.scss */
 input,
 textarea,
 button,
