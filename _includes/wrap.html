@@ -32,12 +32,12 @@
     wf.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/{{ site.webfontversion }}/webfont.js';
     wf.type  = 'text/javascript';
     wf.async = 'false';
-    var s    = document.getElementsByTagName('script')[0]; console.log(s); s.parentNode.insertBefore(wf, s);
+    var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
   })();
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35733640-1']);
-  _gaq.push(['_setDomainName', 'github.com']);
+  _gaq.push(['_setDomainName', 'persistentgrid.com']);
   _gaq.push(['_setAllowLinker', true]);
   _gaq.push(['_trackPageview']);
 
@@ -46,16 +46,4 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35733640-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
+</script></body>
