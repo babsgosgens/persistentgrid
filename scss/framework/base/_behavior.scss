@@ -47,8 +47,8 @@ h6 {
 }
 
 .heading {
-	@include type-family($type-heading);
-	@include type-weight($type-heading);	
+	@include font-family($type-heading);
+	@include font-weight($type-heading);	
 }
 
 
@@ -67,7 +67,7 @@ code,
 kbd,
 pre,
 samp {
-	@include type-family($monospace-regular);
+	@include font-family($monospace-regular);
     font-size: 1em;
 }
 pre {

@@ -4,7 +4,7 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// $typeface must be an array consisting of: style, variant, weight, font-family; 
+// $type is an array of four type properties: style, variant, weight, font-family; 
 // $font-sizes must be in final unit
 @mixin font($type, $font-size:$base-font-size, $line-height:$base-line-height)
 {
@@ -19,38 +19,21 @@
 }
 
 // These mixins take a single value from the type array and invoke the appropriate font mixin
-@mixin type-style($type)
+@mixin font-style($type)
 {
-	@include font-style( nth($type,1) );
+	font-style: nth($type,1);
 }
-@mixin type-variant($type)
+@mixin font-variant($type)
 {
-	@include font-variant( nth($type,2) );
+	font-variant: nth($type,2);
 }
-@mixin type-weight($type)
+@mixin font-weight($type)
 {
-	@include font-weight( nth($type,3) );
+	font-weight: nth($type,3);
 }
-@mixin type-family($type)
+@mixin font-family($type)
 {
-	@include font-family( nth($type,4) );
-}
-
-@mixin font-style($font-style)
-{
-	font-style: $font-style;
-}
-@mixin font-variant($font-variant)
-{
-	font-variant: $font-variant;
-}
-@mixin font-weight($font-weight)
-{
-	font-weight: $font-weight;
-}
-@mixin font-family($font-family)
-{
-	font-family: $font-family;
+	font-family: nth($type,4);
 }
 
 // Use placeholder mixins so they can be replaced with custom mixins that include rem as a unit
