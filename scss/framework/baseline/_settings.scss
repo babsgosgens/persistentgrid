@@ -25,8 +25,5 @@
 	$font-unit 							: if($use-rem-for-sizing, 1rem, $font-unit);
 	$leading-unit 						: if($use-rem-for-sizing, 1rem, $leading-unit);
 
-	// If true, the baseline will be established from within the Vertical Rhythm module.
-	$use-vr-to-establish-baseline 		: false !default; 									 // Default is false
-
 	// Debugging
 	$debug-baseline						: false;

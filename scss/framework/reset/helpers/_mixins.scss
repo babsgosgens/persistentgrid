@@ -4,33 +4,25 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@mixin reset-baseline {
-	@if $use-vr-to-establish-baseline {
+@mixin reset-baseline
+{
+	/*
+	 * IE 6 refuses to resize fonts set in pixels and it weirdly resizes fonts
+	 * whose root is set in ems. So we set the root font size in percentages of
+	 * the default font size.
+	 */
 
-		/*
-		 * See: http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-establish-baseline
-		 */
-
-		@include establish-baseline;
-
-		/*
-		 * Mixin the remaining font properties
-		 */
-
-		@include type-family($type-default);
-		@include type-style($type-default);
-		@include type-variant($type-default);
-		@include type-weight($type-default);
+	* html {
+		font-size: 100% * $font-size / $browser-default-font-size;
 	}
-	@else {
 
-		/*
-		 * Mixin the document's default font properties
-		 */
+	/*
+	 * Set the font properties on the html tag.
+	 */
 
+	html {
 		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
 		$lh: px-to-relative-line-height($line-height, $font-size);
-
 		@include font($type-default, $fs, $lh);
 	}
 }
@@ -186,23 +178,21 @@
 
 @mixin reset-list-style
 {
-	ol,
-	ul {
-	    list-style: none;
-	}
+	/*
+	 * Render lists without list style
+	 */
+
+    list-style: none;
 }
 
 @mixin reset-table
 {
-	table {
+	/**
+	 * Remove most spacing between table cells.
+	 */
 
-		/**
-		 * Remove most spacing between table cells.
-		 */
-
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 @mixin reset-table-cell
@@ -212,11 +202,10 @@
 	 * 2. Set font-weight to default font and weight
 	 * 3. Re-align vertically
 	 */
-	caption, th, td {
-		text-align: left; /* 1 */
-		@include type-weight($type-default); /* 2 */
-		vertical-align: middle; /* 3 */
-	}
+
+	text-align: left; /* 1 */
+	@include type-weight($type-default); /* 2 */
+	vertical-align: middle; /* 3 */
 }
 
 @mixin reset-input
@@ -345,11 +334,10 @@
 	 * 1. Strip quotes.
 	 * 2. Some browsers do not support the quote attribute.
 	 */
-	blockquote, q {
-		quotes: none;
-		&:before, &:after {
-			content: ""; /* 2 */
-			content: none; /* 2 */
-		}
+
+	quotes: none;
+	&:before, &:after {
+		content: ""; /* 2 */
+		content: none; /* 2 */
 	}
 }
