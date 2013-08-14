@@ -1,15 +1,14 @@
 ---
 layout: default
-title: Base
+title: Modules
 ---
 
 <nav class="chapter-links">
 	<ul class="inline-list">
-        <li><a href="{{ site.baseurl }}/framework/type">Type</a></li
-        ><li><a href="{{ site.baseurl }}/framework/baseline">Baseline</a></li
-        ><li><a href="{{ site.baseurl }}/framework/reset">Reset</a></li
-        ><li><a href="{{ site.baseurl }}/framework/grid">Grid</a></li
-        ><li><a href="{{ site.baseurl }}/framework/base">Base</a></li>
+		<li>
+			<a href="#introduction">Introduction</a>
+		</li
+		>
 	</ul>
 </nav>
 
@@ -17,12 +16,88 @@ title: Base
 
 	<h2 class="article-header-level2">Introduction</h2
 	><div class="three-fourth column">
-	<p>Persistent Grid Framework will provide a solid base stylesheet for all your projects. It is configurable to produce the exact output you need - no less and certainly no more. Framework consists of five modules: Type, Baseline, Reset, Grid and Base.</p>
-	<p><em>Type</em> produces no output but defines your project's typography settings.</p>
-	<p><em>Baseline</em> is an implementation of Compass's Vertical Rhythm plugin.</p>
-	<p><em>Reset</em> is a configurable reset so that your project can start of a clean, browser consistent slate.</p>
-	<p><em>Grid</em> is a configurable and highly flexible layout system.</p>
-	<p><em>Base</em> defines the base styles upon which you can extend.</p>
+
+		<p>PG Framework consists of a number of modules. Todo: explain more.</p>
+
+		<h3 class="article-header-level3">Skin module</h3>
+		<p>The skin module is where all your project's settings reside. Any module settings are imported through the Skin modules and project specific settings like colours are set here.</p>
+
+		<h3 class="article-header-level3">Helper module</h3>
+		<p>The Helper module is a collection of helper functions and mixins.</p>
+
+		<h3 class="article-header-level3">Base modules</h3>
+		<p>Base modules are the core of each project. Base modules are responsible for your site's soul. They define your Type and whitespace and set the base for all modules.</p>
+
+			<h4>Reset</h4>
+			<p>Based on Compass Reset - which is in turn based on Eric Meyer's reset - I have assembled a custom reset that is a little more configurable and specifically adapted for Persistent Grid.</p>
+
+			<h4>Type</h4>
+			<p>Type declares the project's default typeface and style, font size and leading.</p>
+
+			<h4>Vertical Grid</h4>
+			<p>Based on Compass Vertical Rhythm. The base-line-height and base-font-size are inherited from the Type-module. If the baseline was not yet set in the Type module, or the Type module is not included in your project, you can set the baseline here.</p>
+
+			<h4>Base Styles</h4>
+			<p>Next up are the base styles. Base styles are usually applied to element selectors and define the default behavior for any element throughout your project. Base styles can be overruled by modules and skins. See: http://smacss.com/book/type-base for more information.</p>
+
+			<h4>Persistent Grid</h4>
+			<p>Persistent Grid does not define base styles. However, since the grid is also defining column spacing - which is part of a site's whitespace - it is considered a base module. Persistent Grid defines the columnar structure of your site and the default behavior of columns in your project.</p>
 	</div>
 
+</section>
+
+<section class="chapter-section" id="introduction">
+
+	<h2 class="article-header-level2">Forms</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/Forms/default.php'); ?>
+	</div>
+
+</section>
+
+<section class="chapter-section" id="introduction">
+
+	<h2 class="article-header-level2">Tables</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/Tables/default.php'); ?>
+	</div>
+
+</section>
+
+<section class="chapter-section" id="introduction">
+
+	<h2 class="article-header-level2">Buttons</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/UI/Buttons/buttons.php'); ?>
+	</div>
+
+</section>
+
+<section class="chapter-section" id="introduction">
+
+	<h2 class="article-header-level2">Menus</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/UI/Menus/linkbar.php'); ?>
+	</div>
+
+</section>
+
+<section class="chapter-section" id="introduction">
+
+	<h2 class="article-header-level2">Tabs</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/UI/Tabs/tabs.php'); ?>
+	</div>
+
+</section>
+
+<section class="chapter-section" id="function">
+	<h2 class="article-header-level2">Functions</h2
+	><div class="three-fourth column">
+		<dl class="list-api">
+			<dt class="list-api-name" id="function-return-unitless"><a href="#function-return-unitless">@function return-unitless($value)</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172647.js"></script></dd>
+			<dd class="list-api-description"></dd>
+		</dl>
+	</div>
 </section>
