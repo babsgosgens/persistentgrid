@@ -313,3 +313,37 @@ code,
 		// }
 	}
 }
+
+.site-footer {
+	padding-top: vertical-rhythm(1);
+	background: $color-primary;
+	@include font-weight($lato-regular);
+	color: $white;
+	a, a:visited {
+		color: $white;
+		text-decoration: none;
+	}
+}
+.copyright {
+	@include column-spacing(1/2, true);
+	margin-top: vertical-rhythm(1);
+	padding: vertical-rhythm(.25) 0 vertical-rhythm(.75);
+	border-top: 1px solid rgba(255,255,255,.4);
+}
+
+.social-list>li {
+	display: inline;
+	.icon-twitter,
+	.icon-facebook,
+	.icon-google-plus {
+		display: inline-block;
+		margin-right: .5em;
+		width: vertical-rhythm(1);
+		line-height: vertical-rhythm(1);
+		@include border-radius($corner-radius);
+		background: $white;
+		text-align: center;
+		font-size: 3em;
+		color: $color-primary;
+	}
+}
