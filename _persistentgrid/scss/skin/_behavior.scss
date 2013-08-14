@@ -75,7 +75,6 @@ em {
 	text-align:center;
 	@include breakpoint($column-breakpoint) {
 		position: static;
-		max-width: 2em;
 		margin: 0 .5em 0 0;
 	}
 }
