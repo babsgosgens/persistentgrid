@@ -8,12 +8,12 @@
 @import "Compass";
 
 // Import the settings: first the defaults and then the skin settings;
-@import "framework/helpers";
+@import "base/helpers";
 
 // Import the settings: first the defaults and then the skin settings;
-@import "framework/grid/settings";
+@import "base/grid/settings";
 /*Add your settings here*/
 
 // Import the behavior, this is where the styles will be rendered
-@import "framework/grid/behavior";
+@import "base/grid/behavior";
 /*Add your behavior here*/
