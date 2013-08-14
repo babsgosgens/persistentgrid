@@ -1,6 +1,6 @@
 stylesheet 'persistentgrid.scss', :media => "screen, projection"
 
-description "A solid base for your projects. Includes the grid and base styles."
+description "Like framework, but includes styles for common UI patterns."
 
 help %Q{
 Please see the Persistent Grid website for all documentation and tutorials:
