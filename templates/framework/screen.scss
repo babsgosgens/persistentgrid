@@ -4,21 +4,18 @@
    License: GNU General Public License version 2 or later; see LICENSE.txt
 */
 
-// ---------------------------------------------------------------------------
-// Imports
-
 // Import Compass, no-game without it
 @import "Compass";
 
 // Import the settings: first the defaults and then the skin settings;
-@import "framework/helpers";
+@import "base/helpers";
 
 // Import the settings: first the defaults and then the skin settings;
+@import "base/settings";
 @import "framework/settings";
-@import "framework-extended/settings";
 /*Add your settings here*/
 
 // Import the behavior, this is where the styles will be rendered
+@import "base/behavior";
 @import "framework/behavior";
-@import "framework-extended/behavior";
 /*Add your behavior here*/
