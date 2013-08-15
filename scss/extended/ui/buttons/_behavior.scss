@@ -1,0 +1,69 @@
+// /**
+//  * @copyright  Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * @license    GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+@import "helpers"; // I don't understand why the helpers arent included!
+
+
+// **
+// Mixin button paddings
+// @param A selector or comma separated list of selectors
+@mixin button($selector)
+{
+  #{$selector} {
+    @content;
+  }
+}
+
+@include button(".#{$button-base-class}")
+{
+  @include button-padding($button-padding);
+  @include button-background($button-background);
+  @include button-border($button-border);
+  @include button-corner($button-corner);
+  @include button-shadow($button-shadow);
+  @include button-text($button-text);
+  @include button-type($button-type);
+  @include button('&:hover')
+  {
+    @extend .is-#{$button-base-class}-hover !optional;
+  }
+  @include button('&:active')
+  {
+    @extend .is-#{$button-base-class}-active !optional;
+  }
+}
+
+@include button(".is-#{$button-base-class}-hover")
+{
+  @include button-background($button-hover-background);
+  @include button-border($button-hover-border);
+  @include button-shadow($button-hover-shadow);
+}
+
+@include button(".is-#{$button-base-class}-active")
+{
+  @include button-background($button-active-background);
+  @include button-border($button-active-border);
+  @include button-shadow($button-active-shadow);
+}
+
+@include button(".#{$button-base-class}-primary")
+{
+  @include button-background($button-primary-background);
+  @include button-border($button-primary-border);
+  @include button-shadow($button-primary-shadow);
+}
+
+.#{$button-base-class}-small {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.#{$button-base-class}-big {
+  // @include adjust-font-size-to($px-l, 1.5);
+}
+.#{$button-base-class}-stretch {
+  width: 100%;
+}

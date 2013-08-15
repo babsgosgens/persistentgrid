@@ -4,6 +4,4 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// This order is important
-@import "base/behavior";
-@import "ui/buttons/behavior";
+@import "helpers/mixins";

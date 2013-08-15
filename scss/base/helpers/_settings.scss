@@ -5,3 +5,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 @import "settings/all";
+
+// Constants
+$sides: top right bottom left;
+$corners: top-left top-right bottom-right bottom-left;

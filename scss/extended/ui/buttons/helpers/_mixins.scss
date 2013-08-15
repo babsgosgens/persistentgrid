@@ -1,0 +1,93 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+
+// **
+// Mixin button paddings
+// @param An array of 1, 2 or 4 padding values
+@mixin button-padding($values: $button-padding) {
+	@if $values {		
+		@include module-padding($values);
+		// @include sides($values, padding);
+	}
+}
+
+// Placeholder mixin
+// See: Helpers/mixins/module.scss
+@mixin button-border($border: $button-border) {
+	@if $border {
+		@include module-border($border)
+	}
+}
+
+// Placeholder mixin
+// See: Helpers/mixins/module.scss
+@mixin button-corner($corner: $button-corner) {
+	@if $corner {
+		// @include module-corner($border)
+	}
+}
+
+// Expects a list in the format background-color, background-image
+// Use false if a value should not be rendered
+// To do: complete for other background properties;
+@mixin button-background($background: $button-background) {
+
+	@if $background {
+
+		$background-color: nth($background,1);
+		$background-image: nth($background,2);
+
+		@if $background-color {
+			background-color: $background-color;
+		}
+		@if $background-image {
+			@include background-image($background-image);
+		}
+	}
+}
+
+// Placeholder mixin
+// See: Helpers/mixins/module.scss
+@mixin button-text($text: $button-text) {
+
+	@if $button-text {
+
+		$text-color: nth($text,1);
+		$text-decoration: nth($text,4);
+
+		@include module-text($text);
+
+		// Buttons are often anchor links, visited links also need to be set;
+		@if $text-color {
+			&:hover,
+			&:active,
+			&:visited {
+				color: $text-color;
+			}
+		}
+
+		@if $text-decoration {
+			text-decoration: $text-decoration;
+		}
+	}
+}
+
+// Expects a (list of) valid shadow notation(s) or false if no shadow should be rendered
+@mixin button-shadow($shadow: $button-shadow) {
+	@if $shadow {
+		@include box-shadow($shadow);
+	}
+}
+
+// Expects a nested list in the format ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading
+// The mixin will check if values are different from the base class and if so add them
+// Equal values will be ignored to keep CSS as small as possible
+@mixin button-type($type: $button-type) {
+	@if $type {
+		@include module-type($type)
+	}
+}

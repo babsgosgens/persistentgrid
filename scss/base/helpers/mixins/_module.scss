@@ -5,32 +5,115 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-	// Expects an array of four values
+	// **
+	// Mixin button paddings
+	// @param An array of 1 or 4 padding values
+	// @param Optional: a side property (top-padding, right-padding, bottom-padding or left-padding)
+	// **
+	@mixin module-padding($padding, $property: padding)
+	{
+		$length: length($padding);
+
+		// **
+		// Only accepts a single value, or
+		// **
+		@if $length==3 {
+			@warn "Wrong value for first parameter: mixin accepts either a single value or an array of four values.";
+		}
+
+
+		@if $length==1 {
+			@include side($padding, $property);
+		}
+
+
+		@if $length==4  {
+
+			$compact: true;
+			@each $value in $padding {
+				@if $value==false {
+					$compact: false;
+				}
+			}
+
+			@if $compact {
+
+				@if nth($padding, index($sides, top))==nth($padding, index($sides, bottom)) and nth($padding, index($sides, right))==nth($padding, index($sides, left)) {
+					#{$property}: nth($padding,1) nth($padding,2);
+				}
+				@else {
+					@include side($padding, $property);
+				}
+			}
+			@else {
+				@each $value in $padding {
+
+					@if $value {
+
+						$i: index($padding, $value);
+						$side: padding-#{nth($sides,$i)};
+
+						@include side($value, $side);
+					}
+				}
+			}
+
+		}
+	}
+
+	@mixin side($padding, $property: padding)
+	{
+		#{$property}: $padding;
+	}
+
+	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
 	// Use false if a value should not be rendered (0 is a valid value)
-	@mixin module-padding($padding) {
+	@mixin module-border($border: 0, $border-collapse: true) {
 
-		// Extract the individual variables from the list
-		$top:    nth($padding, 1);
-		$right:  nth($padding, 2);
-		$bottom: nth($padding, 3);
-		$left:   nth($padding, 4);
+		$border-width: nth($border,1);
+		$border-style: nth($border,2);
+		$border-color: nth($border,3);
+		// $border-radius: nth($border,4);
 
-		// Determine if we have all the values for shorthand notation
-		$shorthand: true;
-		@if $top==false    { $shorthand: false; }
-		@if $right==false  { $shorthand: false; }
-		@if $bottom==false { $shorthand: false; }
-		@if $left==false   { $shorthand: false; }
+		@if length($border-width)>1 or length($border-style)>1 or length($border-color)>1 {
+			
+			// Render individual border properties
+			@if $border-width!=false {
+				border-width: $border-width;
+			}
+			@if $border-style!=false {
+				border-width: $border-style;
+			}
+			@if $border-color!=false {
+				border-color: $border-color;
+			}
 
-		@if $shorthand {
-			padding: $top $right $bottom $left;
 		}
 		@else {
-			@if $top    { padding-top: $top; }
-			@if $right  { padding-right: $right; }
-			@if $bottom { padding-bottom: $bottom; }
-			@if $left   { padding-left: $left; }
+
+			@if $border-width==false or $border-style==false or $border-color==false {
+
+				// Render individual border properties
+				@if $border-width!=false {
+					border-width: $border-width;
+				}
+				@if $border-style!=false {
+					border-style: $border-style;
+				}
+				@if $border-color!=false {
+					border-color: $border-color;
+				}
+			}
+			@else {
+				border: $border-width $border-style $border-color;
+			}
+
 		}
+		
+		// // Render the rounded corners
+		// @if $border-radius {
+		// 	@include border-radius($border-radius);
+		// }
 	}
 
 	// Expects an array of four values
@@ -58,45 +141,6 @@
 			@if $right  { margin-right: $right; }
 			@if $bottom { margin-bottom: $bottom; }
 			@if $left   { margin-left: $left; }
-		}
-	}
-
-	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
-	// Use false if a value should not be rendered (0 is a valid value)
-	@mixin module-border($border, $border-collapse: true) {
-
-		// Extract the individual variables from the list
-		$border-radius: nth($border,2);
-		$border: nth($border,1);
-
-		$border-width: nth($border,1);
-		$border-style: nth($border,2);
-		$border-color: nth($border,3);
-
-		// Determine if we have all the values for shorthand notation
-		$shorthand: true;
-		@if $border-width==false { $shorthand: false; }
-		@if $border-style==false { $shorthand: false; }
-		@if $border-color==false { $shorthand: false; }
-
-		@if $shorthand {
-			border: $border-width $border-style $border-color;
-		}
-		@else {
-			@if $border-width {
-				border-width: $border-width;
-			}
-			@if $border-style {
-				border-style: $border-style;
-			}
-			@if $border-color {
-				border-color: $border-color;
-			}
-		}
-		
-		// Render the rounded corners
-		@if $border-radius {
-			@include border-radius($border-radius);
 		}
 	}
 
@@ -136,11 +180,6 @@
 
 		$type: nth($type,1);
 
-		$type-default-style:   extract-type-style($type);
-		$type-default-variant: extract-type-variant($type);
-		$type-default-weight:  extract-type-weight($type);
-		$type-default-family:  extract-type-family($type);
-
 		@if extract-type-style($type) != extract-type-style($type-default) {
 			@include font-style($type);
 		}
@@ -153,10 +192,11 @@
 		@if extract-type-family($type) != extract-type-family($type-default) {
 			@include font-family($type);
 		}
-		@if $type-size != $font-size {
-			@include adjust-font-size-to($type-size);
-		}
-		@if $type-leading != $line-height {
-			@include adjust-leading-to($type-leading/$base-line-height, $type-size);
-		}
+
+		// @if $type-size != $font-size {
+		// 	@include adjust-font-size-to($type-size);
+		// }
+		// @if $type-leading != $line-height {
+		// 	@include adjust-leading-to($type-leading/$base-line-height, $type-size);
+		// }
 	}

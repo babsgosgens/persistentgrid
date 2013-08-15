@@ -14,7 +14,7 @@ $trace-imports: false;
 // 2: then the framework helpers.
 
 @import "base/helpers";
-@import "framework/helpers";
+@import "extended/helpers";
 
 
 // Import the settings: 
@@ -24,7 +24,7 @@ $trace-imports: false;
 
 /* Add your skin settings here */
 @import "base/settings";
-@import "framework/settings";
+@import "extended/settings";
 
 
 // Import the behavior: 
@@ -33,5 +33,5 @@ $trace-imports: false;
 // 3: then the skin behavior.
 
 @import "base/behavior";
-@import "framework/behavior";
+@import "extended/behavior";
 /* Add your skin behavior here */

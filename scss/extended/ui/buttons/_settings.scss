@@ -1,0 +1,247 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later !default; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+//  ==========================================================================
+//  Button base class
+//  ==========================================================================
+
+	$button-base-class: "btn" !default;
+
+
+//  ==========================================================================
+//  Button default properties
+//  ==========================================================================
+
+	$button-cursor: pointer !default;
+	$button-display: inline-block;
+
+
+	// -----------------------------------------------------------------------
+	// Button padding (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$button-padding-top: vertical-rhythm(.25) !default;
+	$button-padding-right: horizontal-rhythm(1/2) !default;
+	$button-padding-bottom: vertical-rhythm(.25) !default;
+	$button-padding-left: horizontal-rhythm(1/2) !default;
+	$button-padding: 
+		$button-padding-top 
+		$button-padding-right 
+		$button-padding-bottom 
+		$button-padding-left 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button background (background-color, background-image)
+	// -----------------------------------------------------------------------
+
+	$button-background-color: $grey !default;
+	$button-background-image: linear-gradient(lighten($button-background-color,5), darken($button-background-color,5)) !default;
+	$button-background:
+		$button-background-color
+		$button-background-image 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button border (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$button-border-width: 1px !default;
+	$button-border-style: outset !default;
+	$button-border-color: $button-background-color !default;
+	$button-border: 
+		$button-border-width 
+		$button-border-style 
+		$button-border-color 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button corner (top-left, top-right, bottom-left, bottom-right, corner-radius)
+	// -----------------------------------------------------------------------
+	
+	$button-corner-top-left: $corner-radius !default;
+	$button-corner-top-right: $corner-radius !default;
+	$button-corner-bottom-left: $corner-radius !default;
+	$button-corner-bottom-right: $corner-radius !default;
+	$button-corner-radius: $corner-radius !default;
+	$button-corner:
+		$button-corner-top-left
+		$button-corner-top-right
+		$button-corner-bottom-left
+		$button-corner-bottom-right
+		$corner-radius 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button shadow (box-shadow, inner-shadow)
+	// -----------------------------------------------------------------------
+
+	$button-shadow-box: 0 1px 2px rgba(0, 0, 0, 0.05) !default;
+	$button-shadow-inner: inset 0 1px 0 rgba(255, 255, 255, 0.2) !default;
+	$button-shadow: 
+		$button-shadow-box
+		$button-shadow-inner
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button text (color, shadow, align, decoration)
+	// -----------------------------------------------------------------------
+
+	$button-text-color: $white !default;
+	$button-text-shadow: -1px -1px 0 rgba(0,0,0,.5) !default;
+	$button-text-align: center !default;
+	$button-text-decoration: none !default;
+	$button-text: 
+		$button-text-color
+		$button-text-shadow
+		$button-text-align
+		$button-text-decoration
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button type (type, size, leading)
+	// -----------------------------------------------------------------------
+
+	$button-type-type: $type-default !default;
+	$button-type-size: $font-size !default;
+	$button-type-leading: if(boolean($button-border-width), ($line-height - multiply(2,$button-border-width)), $line-height) !default;
+	$button-type:
+		$button-type-type
+		$button-type-size
+		$button-type-leading
+		!default;
+
+
+//  ==========================================================================
+//  Button hover state properties
+//  ==========================================================================
+
+	// **
+	// Inherited styles:
+	// These styles are the same to the default styles
+	// By setting these as false, they are omitted from compilation
+	// **
+	$button-hover-padding: false !default;
+	$button-hover-corner: false !default;
+	$button-hover-text: false !default;
+	$button-hover-type: false !default;
+	$button-hover-shadow: false !default;
+
+
+	// -----------------------------------------------------------------------
+	// Button background (background-color, background-image)
+	// -----------------------------------------------------------------------
+
+	$button-hover-background-color: lighten($button-background-color, 20%) !default;
+	$button-hover-background-image: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5)) !default;
+	$button-hover-background:
+		$button-hover-background-color
+		$button-hover-background-image
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button border (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$button-hover-border-width: false !default;
+	$button-hover-border-style: false !default;
+	$button-hover-border-color: $button-hover-background-color !default;
+	$button-hover-border:
+		$button-hover-border-width
+		$button-hover-border-style
+		$button-hover-border-color
+		!default;
+
+
+//  ==========================================================================
+//  Button active state properties
+//  ==========================================================================
+
+	// **
+	// Inherited styles:
+	// These styles are the same to the default styles
+	// By setting these as false, they are omitted from compilation
+	// **
+	$button-active-padding: false !default;
+	$button-active-corner: false !default;
+	$button-active-text: false !default;
+	$button-active-type: false !default;
+	$button-active-shadow: false !default;
+
+
+	// -----------------------------------------------------------------------
+	// Button background (background-color, background-image)
+	// -----------------------------------------------------------------------
+
+	$button-active-background-color: darken($button-background-color, 20%) !default;
+	$button-active-background-image: linear-gradient(darken($button-active-background-color,5),lighten($button-active-background-color,5)) !default;
+	$button-active-background:
+		$button-active-background-color
+		$button-active-background-image
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button border (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$button-active-border-width: false !default;
+	$button-active-border-style: inset !default;
+	$button-active-border-color: $button-active-background-color !default;
+	$button-active-border:
+		$button-active-border-width
+		$button-active-border-style
+		$button-active-border-color
+		!default;
+
+
+//  ==========================================================================
+//  Primary button state properties
+//  ==========================================================================
+
+	// **
+	// Inherited styles:
+	// These styles are the same to the default styles
+	// By setting these as false, they are omitted from compilation
+	// **
+	$button-primary-padding: false !default;
+	$button-primary-corner: false !default;
+	$button-primary-text: false !default;
+	$button-primary-type: false !default;
+	$button-primary-shadow: false !default;
+
+
+	// -----------------------------------------------------------------------
+	// Button background (background-color, background-image)
+	// -----------------------------------------------------------------------
+
+	$button-primary-background-color: $color-primary !default;
+	$button-primary-background-image: linear-gradient(lighten($button-primary-background-color,5),darken($button-primary-background-color,5)) !default;
+	$button-primary-background:
+		$button-primary-background-color
+		$button-primary-background-image 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Button border (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$button-primary-border-width: false !default;
+	$button-primary-border-style: false !default;
+	$button-primary-border-color: $button-primary-background-color !default;
+	$button-primary-border: 
+		$button-primary-border-width 
+		$button-primary-border-style 
+		$button-primary-border-color 
+		!default;
