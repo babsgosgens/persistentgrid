@@ -58,7 +58,7 @@
 	// 700 bold
 	// 800 extra-bold
 	// 900 heavy, or ultra-bold
-	@import "framework/type/fonts/lato";
+	@import "extended/type/fonts/lato";
 
 	$type-default 						: $lato-book;
 	$type-heading 						: $lato-regular;
@@ -75,3 +75,8 @@
 	// First, import all individual settings: first the base settings, then the module settings;
 	$column-breakpoint: $medium_handheld;
 	$column-widths: 1/2, 1/4, 1/3, 2/3, 3/4, 1/5, 4/5; // Omit 1/1, it is rendered by default
+
+
+
+
+	$button-type-type 						: $lato-regular;

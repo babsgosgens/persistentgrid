@@ -8,17 +8,29 @@ $trace-imports: false;
 // Import Compass, no-game without it
 @import "Compass";
 
-// Import the settings: first the defaults and then the skin settings;
+// Import the helpers: 
+// 1: first the base helpers,
+// 2: then the framework helpers,
+// @todo these two should probably merge
 @import "base/helpers";
+// @import "extended/helpers";
 
-// Import the settings: first the defaults and then the skin settings;
-@import "base/settings";
+// Import the settings: 
+// 1: first the skin settings,
+// 2: then the base settings,
+// 3: then the framework settings;
 @import "skin/settings";
+@import "base/settings";
+// @import "extended/settings";
 
-// Import the behavior, this is where the styles will be rendered
+// Import the behavior: 
+// 1: first the base behavior,
+// 2: then the framework behavior,
+// 3: then the skin behavior;
 @import "base/behavior";
+// @import "extended/behavior";
 @import "skin/behavior";
 
 
 //* Include a symbol font (Fontawesome)*//
-@import "framework/type/icon-fonts/fontawesome";
+@import "extended/type/icon-fonts/fontawesome";
