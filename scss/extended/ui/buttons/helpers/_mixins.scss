@@ -5,35 +5,73 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-// **
-// Mixin button paddings
-// @param An array of 1, 2 or 4 padding values
+//  ==========================================================================
+//  Mixin button
+//  ==========================================================================
+//  Accepts a string which will be used as a selector
+//  Will yield content as its output
+//  
+//  @param $selector: a string
+//  ==========================================================================
+@mixin button($selector)
+{
+  #{$selector} {
+    @content;
+  }
+}
+
+
+//  ==========================================================================
+//  Mixin button padding (placeholder for ...)
+//  ==========================================================================
+//  Accepts either a single value represetning all four sides, 
+//  or a list of four values representing each individual side
+//  
+//  @param $values: a list of 1 or 4 width values or false if nothing should be compiled
+//  ==========================================================================
 @mixin button-padding($values: $button-padding) {
 	@if $values {		
-		@include module-padding($values);
-		// @include sides($values, padding);
+		@include sides($values, padding);
 	}
 }
 
-// Placeholder mixin
-// See: Helpers/mixins/module.scss
-@mixin button-border($border: $button-border) {
-	@if $border {
-		@include module-border($border)
+
+//  ==========================================================================
+//  Mixin button border (placeholder for ...)
+//  ==========================================================================
+//  Accepts a list of three values representing width, style and color
+//  
+//  @param $values: a list of properties (width, style, color) or false if nothing should be compiled
+//  ==========================================================================
+@mixin button-border($values: $button-border) {
+
+	@if $values {
+		@include sides(#{$values}, border);
 	}
 }
 
-// Placeholder mixin
-// See: Helpers/mixins/module.scss
-@mixin button-corner($corner: $button-corner) {
-	@if $corner {
-		// @include module-corner($border)
+
+//  ==========================================================================
+//  Mixin button border radius (placeholder for ...)
+//  ==========================================================================
+//  Accepts a list of up to four values representing all four corners
+//  
+//  @param $values: a list of width values or false if nothing should be compiled
+//  ==========================================================================
+@mixin button-border-radius($values: $button-corner) {
+
+	@if $values {
+		@include border-radius($values);
 	}
 }
 
-// Expects a list in the format background-color, background-image
-// Use false if a value should not be rendered
-// To do: complete for other background properties;
+
+//  ==========================================================================
+//  Mixin button border radius (placeholder for ...)
+//  ==========================================================================
+//  
+//  @param $background: a list of properties (background-color, background-image) or false if nothing should be compiled
+//  ==========================================================================
 @mixin button-background($background: $button-background) {
 
 	@if $background {
@@ -50,8 +88,13 @@
 	}
 }
 
-// Placeholder mixin
-// See: Helpers/mixins/module.scss
+
+//  ==========================================================================
+//  Mixin button text (placeholder for ...)
+//  ==========================================================================
+//  
+//  @param $text: a list of properties (color, text-shadow, text-align, text-decoration) or false if nothing should be compiled
+//  ==========================================================================
 @mixin button-text($text: $button-text) {
 
 	@if $button-text {
@@ -76,18 +119,53 @@
 	}
 }
 
-// Expects a (list of) valid shadow notation(s) or false if no shadow should be rendered
+
+//  ==========================================================================
+//  Mixin button text (placeholder for box-shadow)
+//  ==========================================================================
+//  
+//  @param $shadow: a (list of) valid shadow notation(s) or false if nothing should be compiled
+//  ==========================================================================
 @mixin button-shadow($shadow: $button-shadow) {
 	@if $shadow {
 		@include box-shadow($shadow);
 	}
 }
 
-// Expects a nested list in the format ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading
-// The mixin will check if values are different from the base class and if so add them
-// Equal values will be ignored to keep CSS as small as possible
+
+//  ==========================================================================
+//  Mixin button text (placeholder for font)
+//  ==========================================================================
+//  
+//  @param $shadow: a list of properties (type, font-size, leading) or false if nothing should be compiled
+//  ==========================================================================
 @mixin button-type($type: $button-type) {
 	@if $type {
-		@include module-type($type)
+
+		$type-size: nth($type,2);
+		$type-rhythm: if(nth($type,3), nth($type,3), 1);
+
+		$type: nth($type,1);
+
+		@if $type-size and $type-size!=$font-size {
+			@include adjust-font-size-to($type-size, $type-rhythm);
+		}
+
+		@if extract-type-style($type) != extract-type-style($type-default) {
+			@include font-style($type);
+		}
+
+		@if extract-type-variant($type) != extract-type-variant($type-default) {
+			@include font-variant($type);
+		}
+
+		@if extract-type-weight($type) != extract-type-weight($type-default) {
+			@include font-weight($type);
+		}
+
+		@if extract-type-family($type) != extract-type-family($type-default) {
+			@include font-family($type);
+		}
+
 	}
 }

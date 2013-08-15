@@ -7,22 +7,13 @@
 @import "helpers"; // I don't understand why the helpers arent included!
 
 
-// **
-// Mixin button paddings
-// @param A selector or comma separated list of selectors
-@mixin button($selector)
-{
-  #{$selector} {
-    @content;
-  }
-}
-
 @include button(".#{$button-base-class}")
 {
+  @include inline-block($button-vertical-align);
   @include button-padding($button-padding);
   @include button-background($button-background);
   @include button-border($button-border);
-  @include button-corner($button-corner);
+  @include button-border-radius($button-border-radius);
   @include button-shadow($button-shadow);
   @include button-text($button-text);
   @include button-type($button-type);
@@ -34,6 +25,10 @@
   {
     @extend .is-#{$button-base-class}-active !optional;
   }
+}
+
+.#{$button-base-class}-align-top {
+  @include inline-block(top);
 }
 
 @include button(".is-#{$button-base-class}-hover")

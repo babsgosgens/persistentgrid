@@ -6,31 +6,31 @@
 
 
 	// **
-	// Mixin button paddings
-	// @param An array of 1 or 4 padding values
-	// @param Optional: a side property (top-padding, right-padding, bottom-padding or left-padding)
+	// Mixin sides
+	// @param $values: an array of 1 or 4 values
+	// @param $property: a string (e.g. padding, margin, or border)
 	// **
-	@mixin module-padding($padding, $property: padding)
+	@mixin sides($values, $property)
 	{
-		$length: length($padding);
+		$length: length($values);
 
 		// **
-		// Only accepts a single value, or
+		// Do not accept arrays of 2 and 3 
 		// **
-		@if $length==3 {
+		@if $length==2 or  $length==3 {
 			@warn "Wrong value for first parameter: mixin accepts either a single value or an array of four values.";
 		}
 
 
 		@if $length==1 {
-			@include side($padding, $property);
+			@include side($values, $property);
 		}
 
 
 		@if $length==4  {
 
 			$compact: true;
-			@each $value in $padding {
+			@each $value in $values {
 				@if $value==false {
 					$compact: false;
 				}
@@ -38,19 +38,19 @@
 
 			@if $compact {
 
-				@if nth($padding, index($sides, top))==nth($padding, index($sides, bottom)) and nth($padding, index($sides, right))==nth($padding, index($sides, left)) {
-					#{$property}: nth($padding,1) nth($padding,2);
+				@if nth($values, index($sides, top))==nth($values, index($sides, bottom)) and nth($values, index($sides, right))==nth($values, index($sides, left)) {
+					#{$property}: nth($values,1) nth($values,2);
 				}
 				@else {
-					@include side($padding, $property);
+					@include side($values, $property);
 				}
 			}
 			@else {
-				@each $value in $padding {
+				@each $value in $values {
 
 					@if $value {
 
-						$i: index($padding, $value);
+						$i: index($values, $value);
 						$side: padding-#{nth($sides,$i)};
 
 						@include side($value, $side);
@@ -61,9 +61,9 @@
 		}
 	}
 
-	@mixin side($padding, $property: padding)
+	@mixin side($values, $property)
 	{
-		#{$property}: $padding;
+		#{$property}: $values;
 	}
 
 	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
@@ -167,36 +167,4 @@
 		@if $text-align {
 			text-align: $text-align;
 		}
-	}
-
-
-	// Expects a nested list in the format ($button-type-style, $button-type-variant, $button-type-weight, $button-type-family), $button-type-size, $button-type-leading
-	// The mixin will check if values are different from the base class and if so add them
-	// Equal values will be ignored to keep CSS as small as possible
-	@mixin module-type($type) {
-
-		$type-size: nth($type,2);
-		$type-leading: nth($type,3);
-
-		$type: nth($type,1);
-
-		@if extract-type-style($type) != extract-type-style($type-default) {
-			@include font-style($type);
-		}
-		@if extract-type-variant($type) != extract-type-variant($type-default) {
-			@include font-variant($type);
-		}
-		@if extract-type-weight($type) != extract-type-weight($type-default) {
-			@include font-weight($type);
-		}
-		@if extract-type-family($type) != extract-type-family($type-default) {
-			@include font-family($type);
-		}
-
-		// @if $type-size != $font-size {
-		// 	@include adjust-font-size-to($type-size);
-		// }
-		// @if $type-leading != $line-height {
-		// 	@include adjust-leading-to($type-leading/$base-line-height, $type-size);
-		// }
 	}

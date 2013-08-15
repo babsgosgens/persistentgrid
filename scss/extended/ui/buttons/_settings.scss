@@ -4,6 +4,7 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+
 //  ==========================================================================
 //  Button base class
 //  ==========================================================================
@@ -16,7 +17,7 @@
 //  ==========================================================================
 
 	$button-cursor: pointer !default;
-	$button-display: inline-block;
+	$button-vertical-align: baseline;
 
 
 	// -----------------------------------------------------------------------
@@ -62,20 +63,15 @@
 
 
 	// -----------------------------------------------------------------------
-	// Button corner (top-left, top-right, bottom-left, bottom-right, corner-radius)
+	// Button corner (top-left, top-right, bottom-left, bottom-right, border-radius)
 	// -----------------------------------------------------------------------
 	
-	$button-corner-top-left: $corner-radius !default;
-	$button-corner-top-right: $corner-radius !default;
-	$button-corner-bottom-left: $corner-radius !default;
-	$button-corner-bottom-right: $corner-radius !default;
-	$button-corner-radius: $corner-radius !default;
-	$button-corner:
-		$button-corner-top-left
-		$button-corner-top-right
-		$button-corner-bottom-left
-		$button-corner-bottom-right
-		$corner-radius 
+	$button-border-radius-top-left: $corner-radius !default;
+	$button-border-radius-top-right: $corner-radius !default;
+	$button-border-radius-bottom-right: $corner-radius !default;
+	$button-border-radius-bottom-left: $corner-radius !default;
+	$button-border-radius:
+		$corner-radius
 		!default;
 
 
@@ -112,12 +108,12 @@
 	// -----------------------------------------------------------------------
 
 	$button-type-type: $type-default !default;
-	$button-type-size: $font-size !default;
-	$button-type-leading: if(boolean($button-border-width), ($line-height - multiply(2,$button-border-width)), $line-height) !default;
+	$button-type-size: $base-font-size !default;
+	$button-type-rhythm: 1 !default;
 	$button-type:
 		$button-type-type
 		$button-type-size
-		$button-type-leading
+		$button-type-rhythm
 		!default;
 
 

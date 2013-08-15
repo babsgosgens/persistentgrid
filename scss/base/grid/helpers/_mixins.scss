@@ -11,7 +11,7 @@
 		float: left;
 	}
 	@else {
-		display: inline-block;
+		@include inline-block(top);
 		@if $negative-right-margin {
 			margin-right: $negative-right-margin !important;
 		}
@@ -21,7 +21,6 @@
 	// 	@include box-sizing('border-box');
 	// }
 
-	vertical-align: top;
 	height: auto;
 }
 
