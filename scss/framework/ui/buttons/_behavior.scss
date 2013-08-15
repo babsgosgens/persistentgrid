@@ -2,6 +2,7 @@
 //  * @copyright  Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * @license    GNU General Public License version 2 or later; see LICENSE.txt
 //  */
+@if $trace-imports { @debug 'imported'; }
 
 .#{$button-base-class} {
   display: inline-block;
@@ -66,7 +67,7 @@
   padding-bottom: 0;
 }
 .#{$button-base-class}-big {
-  @include adjust-font-size-to($px-l, 1.5);
+  // @include adjust-font-size-to($px-l, 1.5);
 }
 .#{$button-base-class}-stretch {
   width: 100%;

@@ -15,8 +15,8 @@
 // 	Base Type							  																							  //
 // 	################################################################################################################################  //
 
-	$font-size: 16px;
-	$line-height: 24px; // 1.5*16px
+	$font-size: 16px !default;
+	$line-height: 24px !default; // 1.5*16px
 
-	$type-default: $serif-regular;
-	$type-heading: $sans-serif-regular;
+	$type-default: $serif-regular !default;
+	$type-heading: $sans-serif-regular !default;
