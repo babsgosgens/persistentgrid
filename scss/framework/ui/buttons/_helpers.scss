@@ -2,6 +2,6 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
+@if $trace-imports { @debug 'imported'; }
 
-@import "base/mixins";
-@import "base/behavior";
+@import "helpers/mixins";

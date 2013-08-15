@@ -9,16 +9,16 @@
 //  Colors
 //  ==========================================================================
 
-	$white								: White !default;
-	$black								: Black !default;
-	$grey 								: Grey !default;
-	$red 								: Red !default;
-	$orange 							: Orange !default;
-	$yellow 							: Yellow !default;
-	$green 								: Green !default;
-	$blue 								: Blue !default;
-	$purple 							: Purple !default;
-	$violet 							: Violet !default;
+	$white								: #fff !default;
+	$black								: #000 !default;
+	$grey 								: #999 !default;
+	$red 								: #f00 !default;
+	$orange 							: #fa0 !default;
+	$yellow 							: #ff0 !default;
+	$green 								: #090 !default;
+	$blue 								: #009 !default;
+	$purple 							: #709 !default;
+	$violet 							: #90f !default;
 
 	$color-background					: $white !default;
 	$color-body							: $black !default;
