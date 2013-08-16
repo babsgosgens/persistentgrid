@@ -10,13 +10,15 @@ $trace-imports: false;
 @import "Compass";
 
 // Import the helpers: 
-@import "helpers";
-@import "base/helpers";
+@import "pg/helpers";
+@import "pg/base/helpers";
 
-// Import the settings: 
-@import "base/settings";
-/* Add your skin settings here */
+// Import the settings, in this order: 
+// 1) project settings
+// 2) pg settings
+/* Add your project settings here */
+@import "pg/base/settings";
 
-// Import the behavior: 
-@import "base/behavior";
-/* Add your skin settings here */
+// Import the behavior (in the order you want rules to render): 
+@import "pg/base/behavior";
+/* Add your project behavior here */

@@ -11,12 +11,12 @@ $trace-imports: false;
 
 // Import the helpers: 
 @import "helpers";
-@import "base/grid/helpers";
+@import "pg/base/grid/helpers";
 
 // Import the settings: 
-@import "base/grid/settings";
+@import "pg/base/grid/settings";
 /* Add your skin settings here */
 
 // Import the behavior: 
-@import "base/grid/behavior";
+@import "pg/base/grid/behavior";
 /* Add your skin settings here */
