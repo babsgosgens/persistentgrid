@@ -1,0 +1,77 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+
+
+	@mixin form-margin($margin: $input-margin) {
+		@include module-margin($margin);
+	}
+
+	@mixin form-padding($padding: $input-padding) {
+		@include module-padding($padding);
+	}
+
+	@mixin form-border($border: $input-border) {
+		@include module-border($border);
+	}
+
+	@mixin form-shadow($shadow: $input-shadow){
+		@include module-shadow($shadow);
+	}
+
+	@mixin form-text($text: $input-text){
+		@include module-text($text);
+	}
+
+	@mixin input-shadow($shadow: $input-shadow){
+
+		@include form-shadow($shadow);
+
+		@if $shadow==false {
+		  -webkit-appearance: none;
+		  -moz-appearance: none; /* mobile firefox too! */
+		  -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
+	}
+
+
+	// Expects a list in the format background-color, background-image
+	// Use false if a value should not be rendered
+	// To do: complete for other background properties;
+	@mixin form-background($background: $input-background) {
+
+		$background-color: nth($background,1);
+		$background-image: nth($background,2);
+
+		@if $background-color {
+			background-color: $background-color;
+		}
+		@if $background-image {
+			@include background-image($background-image);
+		}
+	}
+
+	// Expects a nested list in the format ($input-type-style, $input-type-variant, $input-type-weight, $input-type-family), $input-type-size, $input-type-leading
+	// The mixin will check if values are different from the base class and if so add them
+	// Equal values will be ignored to keep CSS as small as possible
+	@mixin form-type($type: $input-type) {
+		@include module-type($type);
+	}
+
+	@mixin webkit-remove-shadow-on-input-elements() {
+	}
+
+	@mixin webkit-remove-padding-spin-button {
+
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		}
+		input::-webkit-outer-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+		
+	}

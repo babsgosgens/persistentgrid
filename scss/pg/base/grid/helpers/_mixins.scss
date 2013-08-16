@@ -1,0 +1,139 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)
+{
+	@if $column-float {
+		display: block;
+		float: left;
+	}
+	@else {
+		@include inline-block(top);
+		@if $negative-right-margin {
+			margin-right: $negative-right-margin !important;
+		}
+	}
+
+	// @if $reset-box-model {
+	// 	@include box-sizing('border-box');
+	// }
+
+	height: auto;
+}
+
+@mixin column-width($fraction: $column-width-default, $persistent: false) {
+
+	@if $persistent {
+		width: fraction-to-percentage($fraction) !important;
+	}
+	@else {
+		width: fraction-to-percentage($fraction);
+	}
+	
+	@if $column-breakpoint {
+		@include breakpoint( $column-breakpoint ) {
+			width: 100%;
+		}
+	}
+
+	// Remove negative margin on elements that span full width of their container
+	@if $negative-right-margin {
+		@if $fraction == 1/1 {
+			margin-right: 0;
+		}
+	}
+}
+
+// Mixin column margins
+// Uses padding by default, can be overridden to use margins instead - helpful when assigning backgrounds
+@mixin column-spacing($fraction: 1/2, $use-margin: false, $persistent: false)
+{
+	@if ($use-margin) {
+		margin-left: horizontal-rhythm($fraction);
+		margin-right: horizontal-rhythm($fraction);
+		@if $persistent == false {
+			@if $column-breakpoint {
+				@include breakpoint( $column-breakpoint ) {
+					margin-left: horizontal-rhythm($fraction/2);
+					margin-right: horizontal-rhythm($fraction/2);
+				}
+			}
+		}
+	}
+	@else {
+		padding-left: horizontal-rhythm($fraction);
+		padding-right: horizontal-rhythm($fraction);
+		@if $persistent == false {
+			@if $column-breakpoint {
+				@include breakpoint( $column-breakpoint ) {
+					padding-left: horizontal-rhythm($fraction/2);
+					padding-right: horizontal-rhythm($fraction/2);
+				}
+			}
+		}
+	}
+}
+
+// Shorthand mixin for column
+// Combines above functions
+// Behavior can be overridden by (temporarily re-assigning values)
+@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: false)
+{
+	@include column-behavior();
+	@include column-width($fraction, $persistent);
+
+	@if $column-padding {
+		@include column-spacing($column-padding);			
+	}
+
+	@if $column-margin {
+		@include column-spacing($column-margin, true);			
+	}
+}
+
+// Fixes content width and centers in viewport.
+// @todo: make configurable so content can be rendered flush left or right
+@mixin root($root-max-width: $root-max-width) {
+	display: block;
+	@if $root-position==center {
+		margin: 0 auto;
+	}
+	max-width: $root-max-width;
+}
+
+@mixin container-behavior()
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// Helper mixin for soure ordering
+// Expects a fraction as unit
+@mixin move($fraction) {
+	position: relative;
+	left: fraction-to-percentage($fraction);
+	@if $column-breakpoint {
+		@include breakpoint( $column-breakpoint ) {
+			position: static;
+			position: initial;
+		}
+	}
+}
+
+// Mixin to reverse padding on a container
+// Is sometimes helpful for nested columns
+// Avoid using this if at all possible, can cause some erratic behavior
+@mixin bleed($fraction: -1/2, $persistent: false)
+{
+	@include column-spacing($fraction, true);
+	@if $persistent == false {
+		@if $column-breakpoint {
+			@include breakpoint( $column-breakpoint ) {
+				@include column-spacing($fraction/2, true);
+			}
+		}
+	}
+}

@@ -5,23 +5,18 @@
 */
 $trace-imports: false;
 
+
 // Import Compass, no-game without it
 @import "Compass";
 
-
-// Import the helpers:
-@import "base/helpers";
-
+// Import the helpers: 
+@import "helpers";
+@import "base/grid/helpers";
 
 // Import the settings: 
-// 1: first the skin settings,
-// 2: then the base settings.
 @import "base/grid/settings";
-/*Add your settings here*/
-
+/* Add your skin settings here */
 
 // Import the behavior: 
-// 1: first the base behavior,
-// 2: then the skin behavior.
 @import "base/grid/behavior";
-/*Add your behavior here*/
+/* Add your skin settings here */

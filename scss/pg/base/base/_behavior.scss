@@ -1,0 +1,122 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+
+//  ==========================================================================
+//  Anchors
+//  ==========================================================================
+
+a {
+	color: $link-color;
+	&:hover {
+		@extend .is-a-hover;
+	}
+	&:active {
+		@extend .is-a-active;
+	}
+	&:visited {
+		@extend .is-a-visited;
+	}
+}
+
+.is-a-hover {
+	color: $link-color-hover;
+}
+.is-a-active {
+	color: $link-color-active;
+}
+.is-a-visited {
+	color: $link-color-visited;
+}
+
+
+//  ==========================================================================
+//  Headings
+//  ==========================================================================
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	@extend .heading;
+}
+
+.heading {
+	@include font-family($type-heading);
+	@include font-weight($type-heading);	
+}
+
+
+//  ==========================================================================
+//  Miscellaneous
+//  ==========================================================================
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+hr {
+    @include box-sizing(content-box);
+    height: 0;
+}
+code,
+kbd,
+pre,
+samp {
+	@include font-family($monospace-regular);
+    font-size: 1em;
+}
+pre {
+    white-space: pre-wrap;
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+
+//  ==========================================================================
+//  States
+//  ==========================================================================
+
+.is-hidden {
+	@include is-hidden;
+}
+.is-not-hidden {
+	@include is-not-hidden;
+}
+.is-visible {
+	@include is-visible;
+}
+.is-not-visible {
+	@include is-not-visible;
+}
+
+
+
+
+
+
+	/**
+	 * Set consistent quote types.
+	 */
+
+	q {
+	    quotes: "\201C" "\201D" "\2018" "\2019";
+	}
