@@ -63,16 +63,14 @@
 
 
 	// -----------------------------------------------------------------------
-	// Button corner (top-left, top-right, bottom-left, bottom-right, border-radius)
+	// Button corner (top-left, top-right, bottom-left, bottom-right)
 	// -----------------------------------------------------------------------
 	
 	$button-border-radius-top-left: $corner-radius !default;
 	$button-border-radius-top-right: $corner-radius !default;
 	$button-border-radius-bottom-right: $corner-radius !default;
 	$button-border-radius-bottom-left: $corner-radius !default;
-	$button-border-radius:
-		$corner-radius
-		!default;
+	$button-border-radius: $corner-radius !default;
 
 
 	// -----------------------------------------------------------------------
@@ -198,46 +196,4 @@
 		$button-active-border-width
 		$button-active-border-style
 		$button-active-border-color
-		!default;
-
-
-//  ==========================================================================
-//  Primary button state properties
-//  ==========================================================================
-
-	// **
-	// Inherited styles:
-	// These styles are the same to the default styles
-	// By setting these as false, they are omitted from compilation
-	// **
-	$button-primary-padding: false !default;
-	$button-primary-corner: false !default;
-	$button-primary-text: false !default;
-	$button-primary-type: false !default;
-	$button-primary-shadow: false !default;
-
-
-	// -----------------------------------------------------------------------
-	// Button background (background-color, background-image)
-	// -----------------------------------------------------------------------
-
-	$button-primary-background-color: $color-primary !default;
-	$button-primary-background-image: linear-gradient(lighten($button-primary-background-color,5),darken($button-primary-background-color,5)) !default;
-	$button-primary-background:
-		$button-primary-background-color
-		$button-primary-background-image 
-		!default;
-
-
-	// -----------------------------------------------------------------------
-	// Button border (top, right, left, bottom)
-	// -----------------------------------------------------------------------
-
-	$button-primary-border-width: false !default;
-	$button-primary-border-style: false !default;
-	$button-primary-border-color: $button-primary-background-color !default;
-	$button-primary-border: 
-		$button-primary-border-width 
-		$button-primary-border-style 
-		$button-primary-border-color 
 		!default;

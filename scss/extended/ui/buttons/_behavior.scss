@@ -45,13 +45,6 @@
   @include button-shadow($button-active-shadow);
 }
 
-@include button(".#{$button-base-class}-primary")
-{
-  @include button-background($button-primary-background);
-  @include button-border($button-primary-border);
-  @include button-shadow($button-primary-shadow);
-}
-
 .#{$button-base-class}-small {
   padding-top: 0;
   padding-bottom: 0;
