@@ -9,28 +9,22 @@ $trace-imports: false;
 @import "Compass";
 
 // Import the helpers: 
-// 1: first the base helpers,
-// 2: then the framework helpers,
-// @todo these two should probably merge
-@import "base/helpers";
-// @import "extended/helpers";
+@import "pg/helpers";
+@import "pg/base/helpers";
+@import "pg/extended/helpers";
 
-// Import the settings: 
-// 1: first the skin settings,
-// 2: then the base settings,
-// 3: then the framework settings;
-@import "skin/settings";
-@import "base/settings";
-// @import "extended/settings";
+// Import the settings, in this order: 
+// 1) project settings
+// 2) pg settings
+@import "project/settings";
+@import "pg/base/settings";
+@import "pg/extended/settings";
 
-// Import the behavior: 
-// 1: first the base behavior,
-// 2: then the framework behavior,
-// 3: then the skin behavior;
-@import "base/behavior";
-// @import "extended/behavior";
-@import "skin/behavior";
+// Import the behavior (in the order you want rules to render): 
+@import "pg/base/behavior";
+@import "pg/extended/behavior";
+@import "project/behavior";
 
 
 //* Include a symbol font (Fontawesome)*//
-@import "extended/type/icon-fonts/fontawesome";
+@import "pg/helpers/fonts/icon-fonts/fontawesome";

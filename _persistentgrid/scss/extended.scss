@@ -1,0 +1,24 @@
+/* http://persistent-grid.com
+   v1.0 | 20130701
+   Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+   License: GNU General Public License version 2 or later; see LICENSE.txt
+*/
+$trace-imports: false;
+
+// Import Compass, no-game without it
+@import "Compass";
+
+// Import the helpers: 
+@import "helpers";
+@import "base/helpers";
+@import "extended/helpers";
+
+// Import the settings:
+// 1. First the skin settings
+// 2. Then all other settings
+@import "project/settings";
+@import "base/settings";
+@import "extended/settings";
+
+// Import the behavior: 
+@import "extended/behavior";

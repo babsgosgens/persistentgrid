@@ -17,32 +17,7 @@
 
 
 	// Colors need to be specified before importing the module settings that are inheriting them.					  																							  	  //
-
-	$white								: #fff;
-	$black								: #000;
-	$grey 								: #666;
-	$red 								: Red;
-	$orange 							: Orange;
-	$yellow 							: Yellow;
-	$green 								: Green;
-	$blue 								: Blue;
-	$purple 							: Purple;
 	$violet 							: #9F81F7;
-
-	$color-background					: $white;
-	$color-body							: lighten($black,40);
-	$color-theme						: $grey;
-	$color-primary						: $violet;
-	$color-secondary					: $orange;
-	$color-success 						: $green;
-	$color-info 						: $yellow;
-	$color-warning						: $orange;
-	$color-error						: $red;
-
-	$link-color							: $color-primary;
-	$link-color-hover					: $purple;
-	$link-color-active					: lighten($link-color, 15);
-	$link-color-visited					: darken($link-color, 30);
 
 
 //	################################################################################################################################  //
@@ -58,7 +33,6 @@
 	// 700 bold
 	// 800 extra-bold
 	// 900 heavy, or ultra-bold
-	@import "extended/type/fonts/lato";
 
 	$type-default 						: $lato-book;
 	$type-heading 						: $lato-regular;
