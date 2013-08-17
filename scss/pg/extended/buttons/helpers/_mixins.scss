@@ -93,8 +93,6 @@
 
 	@if $background {
 
-		@debug $background;
-
 		$background-color: nth($background,1);
 		$background-image: nth($background,2);
 

@@ -5,6 +5,6 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-@import "pg/extended/buttons/behavior";
+@import "pg/extended/behavior";
 
 @import "buttons/behavior";
