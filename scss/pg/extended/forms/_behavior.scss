@@ -2,11 +2,11 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
+@if $trace-imports { @debug 'imported'; }
 
-@import "settings";
 
 select,
-textarea,
+// textarea,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -22,13 +22,18 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
 	@extend %#{input-base-class};
+	height: px-to-em($input-height + $base-line-height/2 );
 }
 select {
-	background-image: url('/assets/images/icons/icon-sort.svg');
-	background-size: 10px auto;
-	background-repeat: no-repeat;
-	background-position: .5em center;
-
+	-webkit-appearance: menulist-button;
+}
+.no-webkit {
+	select {
+		background-image: url('/assets/images/icons/icon-sort.svg');
+		background-size: 10px auto;
+		background-repeat: no-repeat;
+		background-position: right center;
+	}
 }
 select,
 optgroup,
@@ -43,22 +48,36 @@ option {
 
 %#{input-base-class} {
 	@include inline-block(baseline);
-
-	min-height: px-to-em($input-height);
 	width: $input-width;
-
+	min-height: px-to-em($input-height);
 	@include button-margin($input-margin);
 	@include button-padding($input-padding);
+	@include column-spacing;
 	@include button-border($input-border);
 	@include button-border-radius($input-border-radius);
 	@include button-background($input-background);
 	@include button-type($input-type);
 	@include button-text($input-text);
-	@include input-shadow;
+	@include input-shadow($input-shadow);
 	&:focus {
 		@extend %is-#{$input-base-class}-focus;
 	}
 }
+
+.#{$label-base-class} {
+	@include inline-block(baseline);
+	width: $input-width;
+	@include inline-block(baseline);
+	@include button-margin($label-margin);
+	@include button-padding($label-padding);
+	// @include button-border($label-border);
+	@include button-border-radius($label-border-radius);
+	@include button-background($label-background);
+	@include button-type($label-type);
+	@include button-text($label-text);
+	@include button-shadow($label-shadow);
+}
+
 // .label {
 // 	display: $label-display;
 // 	min-height: px-to-em($input-height);
