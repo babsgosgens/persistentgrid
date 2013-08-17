@@ -5,29 +5,16 @@
 
 
 
-	@mixin form-margin($margin: $input-margin) {
-		@include module-margin($margin);
-	}
 
-	@mixin form-padding($padding: $input-padding) {
-		@include module-padding($padding);
-	}
 
-	@mixin form-border($border: $input-border) {
-		@include module-border($border);
-	}
 
-	@mixin form-shadow($shadow: $input-shadow){
-		@include module-shadow($shadow);
-	}
-
-	@mixin form-text($text: $input-text){
-		@include module-text($text);
-	}
 
 	@mixin input-shadow($shadow: $input-shadow){
 
-		@include form-shadow($shadow);
+		@include button-shadow($shadow);
+		  -webkit-appearance: none;
+		  -moz-appearance: none; /* mobile firefox too! */
+		  // -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 		@if $shadow==false {
 		  -webkit-appearance: none;
@@ -58,7 +45,34 @@
 	// The mixin will check if values are different from the base class and if so add them
 	// Equal values will be ignored to keep CSS as small as possible
 	@mixin form-type($type: $input-type) {
-		@include module-type($type);
+		@if $type {
+
+			$type-size: nth($type,2);
+			$type-rhythm: if(nth($type,3), nth($type,3), 1);
+
+			$type: nth($type,1);
+
+			@if $type-size and $type-size!=$font-size {
+				@include adjust-font-size-to($type-size, $type-rhythm);
+			}
+
+			@if extract-type-style($type) != extract-type-style($type-default) {
+				@include font-style($type);
+			}
+
+			@if extract-type-variant($type) != extract-type-variant($type-default) {
+				@include font-variant($type);
+			}
+
+			@if extract-type-weight($type) != extract-type-weight($type-default) {
+				@include font-weight($type);
+			}
+
+			@if extract-type-family($type) != extract-type-family($type-default) {
+				@include font-family($type);
+			}
+
+		}
 	}
 
 	@mixin webkit-remove-shadow-on-input-elements() {

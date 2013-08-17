@@ -5,7 +5,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-// @import "forms/behavior";
+@import "forms/behavior";
 @import "buttons/behavior";
 // @import "tables/behavior";
 @import "lists/behavior";

@@ -5,7 +5,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-// @import "forms/settings";
+@import "forms/settings";
 @import "buttons/settings";
 // @import "tables/settings";
 @import "lists/settings";

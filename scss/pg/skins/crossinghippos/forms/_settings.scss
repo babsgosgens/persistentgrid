@@ -4,26 +4,26 @@
 //  */
 	@import "pg/extended/forms/settings";
 
-	$input-border-width 						: 1px;
-	$input-border-style 						: solid;
-	$input-border-color 						: #cec;
-	$input-border-radius						: $corner-radius; 					// Defaults to 3px
-	$input-border 								: $input-border-width $input-border-style $input-border-color;
+// 	$input-border-width 						: 1px;
+// 	$input-border-style 						: solid;
+// 	$input-border-color 						: #cec;
+// 	$input-border-radius						: $corner-radius; 					// Defaults to 3px
+// 	$input-border 								: $input-border-width $input-border-style $input-border-color;
 
-	$input-background-image 					: false;
+// 	$input-background-image 					: false;
 
-	$input-shadow-box 							: #efefef 1px 1px 2px 0;
-	$input-shadow-inner 						: #efefef 1px 1px 0 0 inset;
-	$input-shadow 								: $input-shadow-box, $input-shadow-inner;
+// 	$input-shadow-box 							: #efefef 1px 1px 2px 0;
+// 	$input-shadow-inner 						: #efefef 1px 1px 0 0 inset;
+// 	$input-shadow 								: $input-shadow-box, $input-shadow-inner;
 
-	// 	################################################################################################################################  //
-// 	Forms							  																								  //
-// 	################################################################################################################################  //
+// 	// 	################################################################################################################################  //
+// // 	Forms							  																								  //
+// // 	################################################################################################################################  //
 
-	$inlineLabelWidth						: 35% !default;
-	$roundedCorners							: true;
-	$inputShadowInset						: 0 0 0 1px rgba(0,0,0,.2) inset; //h-shadow v-shadow blur spread color inset;
-	$inputShadowOutset						: 0 0 10px 0 rgba(255,255,255,1);
-	$heightTextarea							: 4*$base-line-height !default;
-	$form-vertical-spacing					: 0.5;
-	$form-color-invalid						: #d03;
+// 	$inlineLabelWidth						: 35% !default;
+// 	$roundedCorners							: true;
+// 	$inputShadowInset						: 0 0 0 1px rgba(0,0,0,.2) inset; //h-shadow v-shadow blur spread color inset;
+// 	$inputShadowOutset						: 0 0 10px 0 rgba(255,255,255,1);
+// 	$heightTextarea							: 4*$base-line-height !default;
+// 	$form-vertical-spacing					: 0.5;
+// 	$form-color-invalid						: #d03;

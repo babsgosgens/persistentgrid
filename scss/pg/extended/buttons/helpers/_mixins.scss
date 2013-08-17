@@ -22,7 +22,22 @@
 
 
 //  ==========================================================================
-//  Mixin button padding (placeholder for ...)
+//  Mixin button margin (placeholder for sides())
+//  ==========================================================================
+//  Accepts either a single value represetning all four sides, 
+//  or a list of four values representing each individual side
+//  
+//  @param $values: a list of 1 or 4 width values or false if nothing should be compiled
+//  ==========================================================================
+@mixin button-margin($values: $button-padding) {
+	@if $values {		
+		@include sides($values, padding);
+	}
+}
+
+
+//  ==========================================================================
+//  Mixin button sides (placeholder for sides())
 //  ==========================================================================
 //  Accepts either a single value represetning all four sides, 
 //  or a list of four values representing each individual side
@@ -84,7 +99,7 @@
 
 
 //  ==========================================================================
-//  Mixin button border radius (placeholder for ...)
+//  Mixin button background
 //  ==========================================================================
 //  
 //  @param $background: a list of properties (background-color, background-image) or false if nothing should be compiled

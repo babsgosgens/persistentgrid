@@ -21,68 +21,67 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-	@extend .input;
-	@include input-shadow;
+	@extend %#{input-base-class};
 }
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-}
+select {
+	background-image: url('/assets/images/icons/icon-sort.svg');
+	background-size: 10px auto;
+	background-repeat: no-repeat;
+	background-position: .5em center;
 
-.input {
-	display: $input-display;
-	min-height: px-to-em($input-height);
-	width: $input-width;
-	vertical-align: $input-vertical-align;
-	@include form-margin;
-	@include form-padding;
-	@include form-border;
-	@include form-background;
-	@include form-type;
-	@include form-text;
-	&:focus {
-		@extend .is-focussed;
-	}
 }
-.label {
-	display: $label-display;
-	min-height: px-to-em($input-height);
-	width: $label-width;
-	vertical-align: $label-vertical-align;
-	@include form-margin($label-margin);
-	@include form-padding($label-padding);
-	@include form-border($label-border);
-	// @include form-background($label-background);
-	@include form-shadow($label-shadow);
-	@include form-type($label-type);
-	@include form-text($label-text);
-}
-
-// Experimental
 select,
 optgroup,
 option {
-	font: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-variant: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
+%#{input-base-class} {
+	@include inline-block(baseline);
 
-.is-focussed {
-	outline-color: lighten($color-body, 40);
+	min-height: px-to-em($input-height);
+	width: $input-width;
+
+	@include button-margin($input-margin);
+	@include button-padding($input-padding);
+	@include button-border($input-border);
+	@include button-border-radius($input-border-radius);
+	@include button-background($input-background);
+	@include button-type($input-type);
+	@include button-text($input-text);
+	@include input-shadow;
+	&:focus {
+		@extend %is-#{$input-base-class}-focus;
+	}
+}
+// .label {
+// 	display: $label-display;
+// 	min-height: px-to-em($input-height);
+// 	width: $label-width;
+// 	vertical-align: $label-vertical-align;
+// 	@include form-margin($label-margin);
+// 	@include form-padding($label-padding);
+// 	@include form-border($label-border);
+// 	// @include form-background($label-background);
+// 	@include form-shadow($label-shadow);
+// 	@include form-type($label-type);
+// 	@include form-text($label-text);
+// }
+
+// Experimental
+
+
+%is-#{$input-base-class}-focus {
+	outline-color: lighten($color-primary, 40);
 	outline-offset: -2px;
 	outline-style: solid;
 	outline-width: 1px;
+	border-color: $color-primary;
 }
 // Stacked is default behavior
 // .label,
@@ -91,7 +90,7 @@ option {
 // 	vertical-align: bottom;
 // }
 
-.inline {
+%inline {
 	.label {
 		@include column-width(1/4);
 	}
