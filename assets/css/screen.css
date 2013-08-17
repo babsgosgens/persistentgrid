@@ -917,15 +917,39 @@ q {
   display: none;
 }
 
-/* line 26, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 23, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+select,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  height: 2.25em;
+}
+
+/* line 27, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 select {
+  -webkit-appearance: menulist-button;
+}
+
+/* line 31, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+.no-webkit select {
   background-image: url("/assets/images/icons/icon-sort.svg");
   background-size: 10px auto;
   background-repeat: no-repeat;
-  background-position: .5em center;
+  background-position: right center;
 }
 
-/* line 35, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 40, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 select,
 optgroup,
 option {
@@ -937,9 +961,8 @@ option {
   line-height: inherit;
 }
 
-/* line 44, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 49, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 select,
-textarea,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -960,32 +983,51 @@ input[type="color"] {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  min-height: 1.5em;
   width: 100%;
+  min-height: 1.5em;
   padding: 0 0;
   padding: 0.375em 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   border: 1px solid #b3b3b3;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  background-color: white;
+  background-color: whitesmoke;
   font-size: 1em;
   line-height: 1.5em;
   color: black;
   text-align: left;
   text-decoration: none;
-  -webkit-box-shadow: #e6e6e6 1px 1px 1px 0 inset;
-  -moz-box-shadow: #e6e6e6 1px 1px 1px 0 inset;
-  box-shadow: #e6e6e6 1px 1px 1px 0 inset;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  /* mobile firefox too! */
+  -webkit-box-shadow: gainsboro 1px 1px 1px 0 inset;
+  -moz-box-shadow: gainsboro 1px 1px 1px 0 inset;
+  box-shadow: gainsboro 1px 1px 1px 0 inset;
+}
+@media only screen and (max-width: 48em) {
+  /* line 49, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+  select,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 /* line 143, ../../_scss/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
 select:hover,
-textarea:hover,
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="datetime"]:hover,
@@ -1000,7 +1042,6 @@ input[type="url"]:hover,
 input[type="search"]:hover,
 input[type="tel"]:hover,
 input[type="color"]:hover, select:active,
-textarea:active,
 input[type="text"]:active,
 input[type="password"]:active,
 input[type="datetime"]:active,
@@ -1015,7 +1056,6 @@ input[type="url"]:active,
 input[type="search"]:active,
 input[type="tel"]:active,
 input[type="color"]:active, select:visited,
-textarea:visited,
 input[type="text"]:visited,
 input[type="password"]:visited,
 input[type="datetime"]:visited,
@@ -1033,9 +1073,36 @@ input[type="color"]:visited {
   color: black;
 }
 
-/* line 79, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 67, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+.label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: baseline;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 100%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: baseline;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0 0;
+  padding: 0.375em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+}
+/* line 143, ../../_scss/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
+.label:hover, .label:active, .label:visited {
+  color: black;
+}
+
+/* line 98, ../../_scss/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 select:focus,
-textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="datetime"]:focus,

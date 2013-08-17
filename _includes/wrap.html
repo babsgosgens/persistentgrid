@@ -44,6 +44,11 @@
   </footer>
 
   <script type="text/javascript">
+  var webkit = "WebkitAppearance" in document.body.style;
+  if(webkit) {
+    document.getElementsByTagName('html')[0].className+=' webkit';
+  }
+
   var i = 0;
   WebFontConfig = { google: { families: [ 'Lato:100,300,400,700,900,300italic:latin' ] } };
   (function() {
