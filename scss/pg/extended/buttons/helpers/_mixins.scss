@@ -45,8 +45,25 @@
 //  ==========================================================================
 @mixin button-border($values: $button-border) {
 
-	@if $values {
-		@include sides(#{$values}, border);
+	$width: nth($values,1);
+	$style: nth($values,2);
+	$color: nth($values,3);
+
+	@if length($width)==1 and length($style)==1 and length($color)==1 {
+		@if $values {
+			@include sides(#{$values}, border);
+		}
+	}
+	@else {
+		@if $width {
+			border-width: $width;
+		}
+		@if $style {
+			border-style: $style;
+		}
+		@if $color {
+			border-color: $color;
+		}
 	}
 }
 
@@ -75,6 +92,8 @@
 @mixin button-background($background: $button-background) {
 
 	@if $background {
+
+		@debug $background;
 
 		$background-color: nth($background,1);
 		$background-image: nth($background,2);

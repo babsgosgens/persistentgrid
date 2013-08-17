@@ -4,4 +4,47 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "pg/extended/buttons/settings";
+// @import "pg/extended/buttons/settings";
+
+
+	// -----------------------------------------------------------------------
+	// Default button overrides - default state
+	// -----------------------------------------------------------------------
+
+	$button-padding: false;
+
+
+	// -----------------------------------------------------------------------
+	// Primary button - default state
+	// -----------------------------------------------------------------------
+
+	$button-primary-background-color: $color-primary;
+	$button-primary-background-image: none;
+	$button-primary-background:
+		$button-primary-background-color
+		$button-primary-background-image
+		;
+
+
+	// -----------------------------------------------------------------------
+	// Primary button - hover state
+	// -----------------------------------------------------------------------
+
+	$button-primary-hover-background-color: darken($button-primary-background-color, 5%);
+	$button-primary-hover-background-image: none;
+	$button-primary-hover-background:
+		$button-primary-hover-background-color
+		$button-primary-hover-background-image
+		;
+
+
+	// -----------------------------------------------------------------------
+	// Primary button - active state
+	// -----------------------------------------------------------------------
+
+	$button-primary-active-background-color: darken($button-primary-background-color, 15%);
+	$button-primary-active-background-image: none;
+	$button-primary-active-background:
+		$button-primary-active-background-color
+		$button-primary-active-background-image
+		;

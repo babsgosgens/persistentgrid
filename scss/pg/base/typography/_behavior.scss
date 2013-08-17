@@ -13,3 +13,16 @@
 .debug {
 	@include debug-rhythm;
 }
+
+
+// These rules are to be used in combination with WebFont
+// https://github.com/typekit/webfontloader
+.wf-loading {
+
+}
+.wf-active {
+
+}
+.wf-inactive {
+	
+}

@@ -48,3 +48,12 @@
 	@include adjust-leading-to($target, $context);
 }
 
+@mixin debug-rhythm
+{
+	$to: transparent;
+	$from: rgba(226, 255, 255, .5);
+	background-image: -webkit-linear-gradient($from 50%, $to 50%);
+	background-image: linear-gradient($from 50%, $to 50%);
+	background-size: rhythm(2) rhythm(2);
+	* { background-color: transcontainer !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
+}

@@ -4,6 +4,5 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "settings";
-@import "helpers";
-@import "behavior";
+
+@import "crossinghippos/all";

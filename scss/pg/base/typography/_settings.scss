@@ -4,10 +4,28 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// 	################################################################################################################################  //
+
+	// Import some default type families
+	@import "pg/helpers/fonts/serif";
+	@import "pg/helpers/fonts/sans-serif";
+	@import "pg/helpers/fonts/monospace";
+
+
+// 	================================================================================================================================
+// 	Base Type
+// 	================================================================================================================================
+
+	$font-size: 16px !default;
+	$line-height: 24px !default; // 1.5*16px
+
+	$type-default: $serif-regular !default;
+	$type-heading: $sans-serif-regular !default;
+
+
+// 	================================================================================================================================
 // 	Compass Vertical Rhythm	
-//  For more information, see: http://compass-style.org/reference/compass/Type/vertical_rhythm/								  //
-// 	################################################################################################################################  //
+//  For more information, see: http://compass-style.org/reference/compass/Type/vertical_rhythm/
+// 	================================================================================================================================
 
 	$browser-default-font-size 			: $browser-default-font-size !default; 						// Default = 16px
 

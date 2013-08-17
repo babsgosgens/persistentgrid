@@ -5,9 +5,4 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-@import "forms/helpers";
-@import "buttons/helpers";
-@import "tables/helpers";
-@import "lists/helpers";
-@import "tabs/helpers";
-@import "accordions/helpers";
+@import "pg/extended/helpers";
