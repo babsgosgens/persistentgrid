@@ -4,6 +4,12 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+// System fonts
+@import "fonts/serif";
+@import "fonts/sans-serif";
+@import "fonts/monospace";
+
+// Google fonts
 @import "fonts/bree-serif";
 @import "fonts/lato";
 @import "fonts/raleway";

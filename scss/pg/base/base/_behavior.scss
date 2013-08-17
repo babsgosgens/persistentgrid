@@ -90,6 +90,14 @@ sub {
     bottom: -0.25em;
 }
 
+/**
+ * Set consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
 
 //  ==========================================================================
 //  States
@@ -107,16 +115,3 @@ sub {
 .is-not-visible {
 	@include is-not-visible;
 }
-
-
-
-
-
-
-	/**
-	 * Set consistent quote types.
-	 */
-
-	q {
-	    quotes: "\201C" "\201D" "\2018" "\2019";
-	}

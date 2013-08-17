@@ -5,12 +5,6 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-	// Import some default type families
-	@import "pg/helpers/fonts/serif";
-	@import "pg/helpers/fonts/sans-serif";
-	@import "pg/helpers/fonts/monospace";
-
-
 // 	================================================================================================================================
 // 	Base Type
 // 	================================================================================================================================
