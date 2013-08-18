@@ -354,20 +354,6 @@ blockquote:before, blockquote:after, q:before, q:after {
   /* 2 */
 }
 
-/* line 13, ../../_compass/extensions/persistentgrid/scss/pg/base/typography/_behavior.scss */
-.debug {
-  background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
-  background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
-  background-size: 3.2em 3.2em;
-}
-/* line 58, ../../_compass/extensions/persistentgrid/scss/pg/base/typography/helpers/_mixins.scss */
-.debug * {
-  background-color: transcontainer !important;
-  background-image: none !important;
-  outline: rgba(255, 0, 255, 0.1) dotted 1px;
-  outline: #ff01ff dotted 1px \9;
-}
-
 /* line 7, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .root {
   overflow: hidden;
@@ -1113,6 +1099,11 @@ input[type="color"]:focus {
   list-style-type: upper-roman;
 }
 
+/* line 96, ../../_compass/extensions/persistentgrid/scss/pg/extended/lists/_behavior.scss */
+.list-inline > li {
+  display: inline-block;
+}
+
 /* line 8, ../../_compass/scss/project/_behavior.scss */
 p + p {
   margin: 1.6em 0;
@@ -1564,8 +1555,8 @@ code,
 
 /* line 241, ../../_compass/scss/project/_behavior.scss */
 .list-api-name {
-  margin-top: 1.6em;
-  font-weight: 700;
+  margin-top: 0.4em;
+  font-weight: 400;
 }
 /* line 248, ../../_compass/scss/project/_behavior.scss */
 .list-api-name:first-child {
@@ -1575,30 +1566,55 @@ code,
 .list-api-name a,
 .list-api-name a:visited {
   color: inherit;
+  text-decoration: none;
+}
+/* line 256, ../../_compass/scss/project/_behavior.scss */
+.list-api-name a {
+  display: block;
+  position: relative;
+}
+/* line 260, ../../_compass/scss/project/_behavior.scss */
+.list-api-name a:after {
+  content: "View source";
+  display: inline;
+  position: absolute;
+  right: 0;
+  padding: 0 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #c4b1fa;
+  background: #e8e1fd;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
 }
 
-/* line 259, ../../_compass/scss/project/_behavior.scss */
+/* line 277, ../../_compass/scss/project/_behavior.scss */
 .list-api-code {
   position: absolute;
   left: -9999em;
 }
 
-/* line 263, ../../_compass/scss/project/_behavior.scss */
+/* line 281, ../../_compass/scss/project/_behavior.scss */
 .list-api-name:target + .list-api-code {
   position: static;
 }
 
-/* line 268, ../../_compass/scss/project/_behavior.scss */
+/* line 286, ../../_compass/scss/project/_behavior.scss */
 .chapter-links {
   margin-top: 0.8em;
 }
-/* line 272, ../../_compass/scss/project/_behavior.scss */
+/* line 290, ../../_compass/scss/project/_behavior.scss */
 .chapter-links a,
 .chapter-links a:visited {
   display: block;
 }
 @media only screen and (min-width: 80em) {
-  /* line 272, ../../_compass/scss/project/_behavior.scss */
+  /* line 290, ../../_compass/scss/project/_behavior.scss */
   .chapter-links a,
   .chapter-links a:visited {
     display: default;
@@ -1606,47 +1622,47 @@ code,
   }
 }
 
-/* line 283, ../../_compass/scss/project/_behavior.scss */
+/* line 301, ../../_compass/scss/project/_behavior.scss */
 .inline-list li {
   display: inline-block;
   margin-right: 24px;
 }
 
-/* line 289, ../../_compass/scss/project/_behavior.scss */
+/* line 307, ../../_compass/scss/project/_behavior.scss */
 .hierarchy {
   font-family: monospace;
 }
-/* line 296, ../../_compass/scss/project/_behavior.scss */
+/* line 314, ../../_compass/scss/project/_behavior.scss */
 .hierarchy .level1 {
   padding-left: 12px;
 }
-/* line 299, ../../_compass/scss/project/_behavior.scss */
+/* line 317, ../../_compass/scss/project/_behavior.scss */
 .hierarchy .level2 {
   padding-left: 24px;
 }
-/* line 302, ../../_compass/scss/project/_behavior.scss */
+/* line 320, ../../_compass/scss/project/_behavior.scss */
 .hierarchy .level3 {
   padding-left: 36px;
 }
-/* line 305, ../../_compass/scss/project/_behavior.scss */
+/* line 323, ../../_compass/scss/project/_behavior.scss */
 .hierarchy .level4 {
   padding-left: 48px;
 }
 
-/* line 318, ../../_compass/scss/project/_behavior.scss */
+/* line 336, ../../_compass/scss/project/_behavior.scss */
 .site-footer {
   padding-top: 1.6em;
   background: #9f81f7;
   font-weight: 400;
   color: white;
 }
-/* line 323, ../../_compass/scss/project/_behavior.scss */
+/* line 341, ../../_compass/scss/project/_behavior.scss */
 .site-footer a, .site-footer a:visited {
   color: white;
   text-decoration: none;
 }
 
-/* line 328, ../../_compass/scss/project/_behavior.scss */
+/* line 346, ../../_compass/scss/project/_behavior.scss */
 .copyright {
   margin-left: 24px;
   margin-right: 24px;
@@ -1655,18 +1671,18 @@ code,
   border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 @media only screen and (max-width: 48em) {
-  /* line 328, ../../_compass/scss/project/_behavior.scss */
+  /* line 346, ../../_compass/scss/project/_behavior.scss */
   .copyright {
     margin-left: 12px;
     margin-right: 12px;
   }
 }
 
-/* line 335, ../../_compass/scss/project/_behavior.scss */
+/* line 353, ../../_compass/scss/project/_behavior.scss */
 .social-list > li {
   display: inline;
 }
-/* line 340, ../../_compass/scss/project/_behavior.scss */
+/* line 358, ../../_compass/scss/project/_behavior.scss */
 .social-list > li .icon-twitter,
 .social-list > li .icon-facebook,
 .social-list > li .icon-google-plus,
