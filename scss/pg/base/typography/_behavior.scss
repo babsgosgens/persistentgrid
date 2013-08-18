@@ -4,25 +4,28 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+
 @if $debug-baseline {
 	html {
-		@extend .debug;			
+		@extend %debug;			
 	}
 }
 
-.debug {
+%debug {
+	/*
+	 * Mixin debug-rhythm to display the vertical rhythm units
+	 */
 	@include debug-rhythm;
 }
 
 
-// These rules are to be used in combination with WebFont
-// https://github.com/typekit/webfontloader
-.wf-loading {
+// @todo: styles for webfont loader states
+%is-wf-loading {
 
 }
-.wf-active {
+%is-wf-active {
 
 }
-.wf-inactive {
+%is-wf-inactive {
 	
 }

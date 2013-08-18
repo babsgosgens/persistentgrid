@@ -4,8 +4,14 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// $type is an array of four type properties: style, variant, weight, font-family; 
-// $base-font-sizes must be in final unit
+
+//  ==========================================================================
+//  Mixin font
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  @param (string) $base-font-size (a valid value in your unit of output)
+//  @param (string) $base-line-height (a valid value in your unit of output)
+//  ==========================================================================
 @mixin font($type, $base-font-size:$base-font-size, $base-line-height:$base-line-height)
 {
 	@if $type {
@@ -18,36 +24,64 @@
 	}
 }
 
-// These mixins take a single value from the type array and invoke the appropriate font mixin
+
+//  ==========================================================================
+//  Mixin font-style
+//  --------------------------------------------------------------------------
+//  Extracts the style from a type array and mixes in font-style
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  ==========================================================================
 @mixin font-style($type)
 {
 	font-style: nth($type,1);
 }
+
+
+//  ==========================================================================
+//  Mixin font-variant
+//  --------------------------------------------------------------------------
+//  Extracts the variant from a type array and mixes in font-variant
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  ==========================================================================
 @mixin font-variant($type)
 {
 	font-variant: nth($type,2);
 }
+
+
+//  ==========================================================================
+//  Mixin font-weight
+//  --------------------------------------------------------------------------
+//  Extracts the weight from a type array and mixes in font-weight
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  ==========================================================================
 @mixin font-weight($type)
 {
 	font-weight: nth($type,3);
 }
+
+
+//  ==========================================================================
+//  Mixin font-family
+//  --------------------------------------------------------------------------
+//  Extracts the family from a type array and mixes in font-family
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  ==========================================================================
 @mixin font-family($type)
 {
 	font-family: nth($type,4);
 }
 
-// Use placeholder mixins so they can be replaced with custom mixins that include rem as a unit
-@mixin font-size($target,$context:$base-font-size)
-{
-	// font-size: px-to-relative-font-size($target, $context);
-	@include adjust-font-size-to($target, $context);
-}
-@mixin line-height($target,$context:$base-line-height)
-{
-	// line-height: px-to-relative-line-height($target, $context);
-	@include adjust-leading-to($target, $context);
-}
 
+//  ==========================================================================
+//  Mixin debug-rhythm
+//  --------------------------------------------------------------------------
+//  Renders the baseline rhythm
+//  ==========================================================================
 @mixin debug-rhythm
 {
 	$to: transparent;

@@ -4,47 +4,105 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// Placeholder function for font-sizes - inserts correct font unit as set in the Vertical-Rhythm module settings
+
+//  ==========================================================================
+//  Function px-to-relative-font-size
+//  --------------------------------------------------------------------------
+//  Placeholder function for font-sizes.
+//	Inserts correct font unit as set in the Vertical-Rhythm module settings.
+//  --------------------------------------------------------------------------
+//  @param (string) $target-px (value in px)
+//  @param (string) $context (value in px)
+//  @param (string) $unit (unit of output)
+//  @return (string) value in alternate unit
+//  ==========================================================================
 @function px-to-relative-font-size($target-px, $context: $base-font-size, $unit: $font-unit)
 {
 	@return px-to-relative-size($target-px, $context, $unit);
 }
 
-// Placeholder function for line-heights - inserts correct line-height unit as set in the Vertical-Rhythm module settings
+
+//  ==========================================================================
+//  Function px-to-relative-line-height
+//  --------------------------------------------------------------------------
+//  Placeholder function for line-heights.
+//	inserts correct line-height unit as set in the Vertical-Rhythm module settings.
+//  --------------------------------------------------------------------------
+//  @param (string) $target-px (value in px)
+//  @param (string) $context (value in px)
+//  @param (string) $unit (unit of output)
+//  @return (string) value in alternate unit
+//  ==========================================================================
 @function px-to-relative-line-height($target-px, $context: $base-font-size, $unit: $leading-unit)
 {
 	@return px-to-relative-size($target-px, $context, $unit);
 }
 
-// Extract the style property from a type array
-// Eexpects an array: $style, $variant, $weight, $family;
+
+//  ==========================================================================
+//  Function extract-type-style
+//  --------------------------------------------------------------------------
+//  Extract the style property from a type array
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  @return (string) font-style
+//  ==========================================================================
 @function extract-type-style($type) {
 	@return nth($type, 1);
 }
 
-// Extract the variant property from a type array
-// Eexpects an array: $style, $variant, $weight, $family;
+
+//  ==========================================================================
+//  Function extract-type-variant
+//  --------------------------------------------------------------------------
+//  Extract the variant property from a type array
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  @return (string) font-variant
+//  ==========================================================================
 @function extract-type-variant($type)
 {
 	@return nth($type, 2);
 }
 
-// Extract the weight property from a type array
-// Eexpects an array: $style, $variant, $weight, $family;
+
+//  ==========================================================================
+//  Function extract-type-weight
+//  --------------------------------------------------------------------------
+//  Extract the weight property from a type array
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  @return (string) font-weight
+//  ==========================================================================
 @function extract-type-weight($type)
+//  ==========================================================================
 {
 	@return nth($type, 3);
 }
 
-// Extract the family property from a type array
-// Eexpects an array: $style, $variant, $weight, $family;
+
+//  ==========================================================================
+//  Function extract-type-family
+//  --------------------------------------------------------------------------
+//  Extract the family property from a type array
+//  --------------------------------------------------------------------------
+//  @param (array) $type (a valid type array: $style, $variant, $weight, $family)
+//  @return (string) font-family
+//  ==========================================================================
 @function extract-type-family($type)
 {
 	@return nth($type, 4);
 }
 
-// Converts a number to a string
-// Expects a single number: 100 through 900;
+
+//  ==========================================================================
+//  Function weight-number-to-string
+//  --------------------------------------------------------------------------
+//  Converts a weight number to a string and returns it
+//  --------------------------------------------------------------------------
+//  @param (integer) $weight a valid weight number: 100 through 900)
+//  @return (string) weight
+//  ==========================================================================
 @function weight-number-to-string($weight)
 {
 	@if $weight == 100 { @return "ultra-light"; }
