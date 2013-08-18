@@ -2,25 +2,64 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
+@if $trace-imports { @debug 'imported'; }
 
 
+//  ==========================================================================
+//  Mixin appearance
+//  ==========================================================================
+//  Accepts a string which a valid appearance
+//  
+//  @param $appearance: a string
+//  ==========================================================================
+@mixin reset-appearance($appearance)
+{
+	@include reset-webkit-appearance($appearance);
+	@include reset-mozilla-appearance($appearance);
+}
 
 
+//  ==========================================================================
+//  Mixin Webkit appearance
+//  ==========================================================================
+//  Accepts a string which a valid appearance
+//  
+//  @param $appearance: a string
+//  ==========================================================================
+@mixin reset-webkit-appearance($appearance)
+{
+	-webkit-appearance: $appearance; /* mobile firefox too! */
+}
 
+
+//  ==========================================================================
+//  Mixin Mozilla appearance
+//  ==========================================================================
+//  Accepts a string which a valid appearance
+//  
+//  @param $appearance: a string
+//  ==========================================================================
+@mixin reset-mozilla-appearance($appearance)
+{
+	-moz-appearance: $appearance; /* mobile firefox too! */
+}
 
 
 	@mixin input-shadow($shadow: $input-shadow){
+		  -webkit-appearance: none;
+		  -moz-appearance: none; /* mobile firefox too! */
+		  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 		@include button-shadow($shadow);
 		//   -webkit-appearance: none;
 		//   -moz-appearance: none; /* mobile firefox too! */
 		//   // -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-		// @if $shadow==false {
-		//   -webkit-appearance: none;
-		//   -moz-appearance: none; /* mobile firefox too! */
-		//   -webkit-tap-highlight-color: rgba(0,0,0,0);
-		// }
+		@if $shadow==false {
+		  -webkit-appearance: none;
+		  -moz-appearance: none; /* mobile firefox too! */
+		  -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
 
 	}
 
