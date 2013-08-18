@@ -3,7 +3,7 @@
    Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
    License: GNU General Public License version 2 or later; see LICENSE.txt
 */
-/* line 27, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 28, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,7 +58,7 @@ time, mark, audio, video {
  * whose root is set in ems. So we set the root font size in percentages of
  * the default font size.
  */
-/* line 15, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 19, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 * html {
   font-size: 93.75%;
 }
@@ -66,12 +66,12 @@ time, mark, audio, video {
 /*
  * Set the font properties on the html tag.
  */
-/* line 23, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 27, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 html {
   font: normal normal 300 0.9375em/1.6em "Lato", sans-serif;
 }
 
-/* line 58, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 59, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 html {
   /*
    * It's good practice to set the background color of the html tag
@@ -88,7 +88,7 @@ html {
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 94, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 114, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 article,
 aside,
 details,
@@ -107,7 +107,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 104, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 124, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 audio,
 canvas,
 video {
@@ -118,7 +118,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 113, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 133, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -128,7 +128,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 124, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 144, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 [hidden],
 template {
   display: none;
@@ -139,17 +139,17 @@ template {
  	 * 2. Address `outline` inconsistency between Chrome and other browsers.
  	 * 3. Improve readability when focused and also mouse hovered in all browsers.
 	 */
-/* line 148, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 176, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 a {
   background: transparent;
   /* 1 */
 }
-/* line 150, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 178, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 a:focus {
   outline: thin dotted;
   /* 2 */
 }
-/* line 154, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 182, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 a:active, a:hover {
   outline: 0;
   /* 3 */
@@ -158,7 +158,7 @@ a:active, a:hover {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 166, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 198, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 img {
   border: 0;
 }
@@ -166,12 +166,12 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 174, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 206, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 82, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 83, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 ol,
 ul {
   /*
@@ -180,7 +180,7 @@ ul {
   list-style: none;
 }
 
-/* line 88, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 89, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 table {
   /**
    * Remove most spacing between table cells.
@@ -189,7 +189,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 94, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 95, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 caption, th, td {
   /**
    * 1. Align all content to the left.
@@ -210,7 +210,7 @@ caption, th, td {
  * 3. Correct font family not being inherited in all browsers.
  * 4. Correct font size not being inherited in all browsers.
  */
-/* line 223, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 271, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 button,
 input,
 select,
@@ -233,7 +233,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 237, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 285, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 button,
 input {
   line-height: inherit;
@@ -245,7 +245,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 249, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 297, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 button,
 select {
   text-transform: none;
@@ -258,7 +258,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 264, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 312, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -272,7 +272,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 274, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 322, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -282,7 +282,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-/* line 284, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 332, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -296,7 +296,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 295, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 343, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -310,7 +310,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 306, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 354, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -319,7 +319,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 315, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 363, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -330,7 +330,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 325, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 373, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -338,7 +338,7 @@ textarea {
   /* 2 */
 }
 
-/* line 104, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 105, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 blockquote, q {
   /**
    * 1. Strip quotes.
@@ -346,7 +346,7 @@ blockquote, q {
    */
   quotes: none;
 }
-/* line 339, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 391, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   /* 2 */
@@ -358,7 +358,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 .debug {
   background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
   background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%);
-  background-size: 3em 3em;
+  background-size: 3.2em 3.2em;
 }
 /* line 58, ../../_compass/extensions/persistentgrid/scss/pg/base/typography/helpers/_mixins.scss */
 .debug * {
@@ -370,12 +370,11 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* line 7, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .root {
-  display: block;
-  max-width: 1152px;
   overflow: hidden;
+  max-width: 1152px;
 }
 
-/* line 12, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 11, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .column {
   display: -moz-inline-stack;
   display: inline-block;
@@ -383,19 +382,18 @@ blockquote:before, blockquote:after, q:before, q:after {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
   padding-left: 24px;
   padding-right: 24px;
 }
 @media only screen and (max-width: 48em) {
-  /* line 12, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 11, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .column {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 17, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 16, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .column-container {
   display: -moz-inline-stack;
   display: inline-block;
@@ -403,394 +401,295 @@ blockquote:before, blockquote:after, q:before, q:after {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
 }
 
-/* line 21, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 20, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .column-padding {
   padding-left: 24px;
   padding-right: 24px;
 }
 @media only screen and (max-width: 48em) {
-  /* line 21, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 20, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .column-padding {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* line 25, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 24, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .bleed {
   margin-left: -24px;
   margin-right: -24px;
 }
 @media only screen and (max-width: 48em) {
-  /* line 25, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 24, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .bleed {
     margin-left: -12px;
     margin-right: -12px;
   }
 }
 @media only screen and (max-width: 48em) {
-  /* line 25, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 24, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .bleed {
     margin-left: -12px;
     margin-right: -12px;
   }
 }
 @media only screen and (max-width: 48em) and (max-width: 48em) {
-  /* line 25, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 24, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .bleed {
     margin-left: -6px;
     margin-right: -6px;
   }
 }
 
-/* line 29, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 28, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .full {
   width: 100%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 29, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 28, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .full {
     width: 100%;
   }
 }
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .half {
   width: 50%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .half {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .half.persistent {
   width: 50% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .half.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-half {
   position: relative;
   left: 50%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-half {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-half {
   position: relative;
   left: -50%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-half {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .fourth {
   width: 25%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .fourth {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .fourth.persistent {
   width: 25% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .fourth.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-fourth {
   position: relative;
   left: 25%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-fourth {
   position: relative;
   left: -25%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .third {
   width: 33.33333%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .third {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .third.persistent {
   width: 33.33333% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .third.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-third {
   position: relative;
   left: 33.33333%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-third {
   position: relative;
   left: -33.33333%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .two-third {
   width: 66.66667%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .two-third {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .two-third.persistent {
   width: 66.66667% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .two-third.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-two-third {
   position: relative;
   left: 66.66667%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-two-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-two-third {
   position: relative;
   left: -66.66667%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-two-third {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .three-fourth {
   width: 75%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .three-fourth {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .three-fourth.persistent {
   width: 75% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .three-fourth.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-three-fourth {
   position: relative;
   left: 75%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-three-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-three-fourth {
   position: relative;
   left: -75%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-three-fourth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .fifth {
   width: 20%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .fifth {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .fifth.persistent {
   width: 20% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .fifth.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-fifth {
   position: relative;
   left: 20%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-fifth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-fifth {
   position: relative;
   left: -20%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-fifth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .four-fifth {
   width: 80%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 37, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .four-fifth {
     width: 100%;
   }
 }
 
-/* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .four-fifth.persistent {
   width: 80% !important;
 }
 @media only screen and (max-width: 48em) {
-  /* line 40, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
   .four-fifth.persistent {
     width: 100%;
   }
 }
 
-/* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 43, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .push-four-fifth {
   position: relative;
   left: 80%;
 }
-@media only screen and (max-width: 48em) {
-  /* line 44, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .push-four-fifth {
-    position: static;
-    position: initial;
-  }
-}
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
+/* line 47, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
 .pull-four-fifth {
   position: relative;
   left: -80%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 48, ../../_compass/extensions/persistentgrid/scss/pg/base/grid/_behavior.scss */
-  .pull-four-fifth {
-    position: static;
-    position: initial;
-  }
 }
 
 /* line 12, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
@@ -814,7 +713,7 @@ a {
 }
 
 /* line 49, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
-.heading, h1,
+h1,
 h2,
 h3,
 h4,
@@ -878,28 +777,28 @@ sub {
 /**
  * Set consistent quote types.
  */
-/* line 97, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
+/* line 99, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/* line 106, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
+/* line 109, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
 .is-hidden {
   position: absolute;
   left: -9999em;
 }
 
-/* line 109, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
+/* line 112, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
 .is-not-hidden {
   position: static;
 }
 
-/* line 112, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
+/* line 115, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
 .is-visible {
   display: block;
 }
 
-/* line 115, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
+/* line 118, ../../_compass/extensions/persistentgrid/scss/pg/base/baserules/_behavior.scss */
 .is-not-visible {
   display: none;
 }
@@ -977,7 +876,7 @@ input[type="color"] {
   *display: inline;
   width: 100%;
   padding: 0 0;
-  padding: 0.375em 24px;
+  padding: 0.4em 24px;
   border: 1px solid #b3b3b3;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -985,8 +884,6 @@ input[type="color"] {
   -o-border-radius: 3px;
   border-radius: 3px;
   background-color: whitesmoke;
-  font-size: 1em;
-  line-height: 1.5em;
   color: black;
   text-align: left;
   text-decoration: none;
@@ -1064,9 +961,7 @@ input[type="color"]:visited {
   zoom: 1;
   *display: inline;
   padding: 0 0;
-  padding: 0.375em 0;
-  font-size: 1em;
-  line-height: 1.5em;
+  padding: 0.4em 0;
   color: black;
   text-align: left;
   text-decoration: none;
@@ -1108,7 +1003,7 @@ input[type="color"]:focus {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 0.375em 24px;
+  padding: 0.4em 24px;
   background-color: #666666;
   border: 1px solid #666666;
   -webkit-border-radius: 3px;
@@ -1123,8 +1018,6 @@ input[type="color"]:focus {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   text-align: center;
   text-decoration: none;
-  font-size: 1em;
-  line-height: 1.5em;
   font-weight: 400;
 }
 /* line 143, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
@@ -1222,7 +1115,7 @@ input[type="color"]:focus {
 
 /* line 8, ../../_compass/scss/project/_behavior.scss */
 p + p {
-  margin: 1.5em 0;
+  margin: 1.6em 0;
 }
 
 /* line 11, ../../_compass/scss/project/_behavior.scss */
@@ -1232,7 +1125,7 @@ em {
 
 /* line 14, ../../_compass/scss/project/_behavior.scss */
 .toc {
-  margin: 2.25em 0 0.75em;
+  margin: 2.4em 0 0.8em;
   background: #cfc0fb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1242,7 +1135,7 @@ em {
 }
 /* line 18, ../../_compass/scss/project/_behavior.scss */
 .toc h2 {
-  line-height: 3em;
+  line-height: 3.2em;
   padding-left: 12px;
   padding-right: 12px;
   background: #9f81f7;
@@ -1259,7 +1152,7 @@ em {
 .toc a:visited {
   display: block;
   color: inherit;
-  padding: 0.375em 12px;
+  padding: 0.4em 12px;
   text-decoration: none;
 }
 /* line 32, ../../_compass/scss/project/_behavior.scss */
@@ -1313,18 +1206,10 @@ em {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
   width: 75%;
   padding-left: 24px;
   padding-right: 24px;
-  margin: 3em 0 1.5em;
-}
-@media only screen and (max-width: 48em) {
-  /* line 81, ../../_compass/scss/project/_behavior.scss */
-  .page-header, .chapter-links {
-    position: static;
-    position: initial;
-  }
+  margin: 3.2em 0 1.6em;
 }
 @media only screen and (max-width: 48em) {
   /* line 81, ../../_compass/scss/project/_behavior.scss */
@@ -1342,7 +1227,7 @@ em {
 
 /* line 86, ../../_compass/scss/project/_behavior.scss */
 .page-header-header {
-  font-size: 1.75em;
+  font-size: 1.86667em;
   line-height: 1.71429em;
 }
 
@@ -1363,7 +1248,6 @@ em {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
   width: 25%;
   padding-left: 24px;
   padding-right: 24px;
@@ -1391,7 +1275,6 @@ em {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
   width: 75%;
   padding-left: 24px;
   padding-right: 24px;
@@ -1416,23 +1299,23 @@ em {
 
 /* line 118, ../../_compass/scss/project/_behavior.scss */
 .chapter-header {
-  margin: 0.75em 0 0;
+  margin: 0.8em 0 0;
   font-weight: 400;
-  font-size: 2.25em;
+  font-size: 2.4em;
   line-height: 0.66667em;
   color: #666666;
 }
 
 /* line 125, ../../_compass/scss/project/_behavior.scss */
 .chapter-section {
-  margin: 1.5em 0 3em;
+  margin: 1.6em 0 3.2em;
 }
 
 /* line 128, ../../_compass/scss/project/_behavior.scss */
 .article-header-level2 {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.8em;
   font-weight: 400;
-  font-size: 1.125em;
+  font-size: 1.2em;
   line-height: 1.33333em;
   color: #666666;
   display: -moz-inline-stack;
@@ -1441,7 +1324,6 @@ em {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
   width: 25%;
   padding-left: 24px;
   padding-right: 24px;
@@ -1487,9 +1369,9 @@ em {
 
 /* line 156, ../../_compass/scss/project/_behavior.scss */
 .article-header-level3 {
-  padding: 0.375em 12px;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
+  padding: 0.4em 12px;
+  margin-top: 1.6em;
+  margin-bottom: 0.8em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -1505,8 +1387,8 @@ em {
   border-left: 24px solid #e8e1fd;
   border-right: 24px solid #e8e1fd;
   background: #c4b1fa;
-  height: 6em !important;
-  max-height: 6em !important;
+  height: 6.4em !important;
+  max-height: 6.4em !important;
   overflow: hidden;
 }
 @media only screen and (max-width: 48em) {
@@ -1520,8 +1402,8 @@ em {
 /* line 187, ../../_compass/scss/project/_behavior.scss */
 .tags {
   border-top-style: solid;
-  border-top-width: 0.0625em;
-  padding-top: -0.0625em;
+  border-top-width: 0.06667em;
+  padding-top: -0.06667em;
 }
 /* line 190, ../../_compass/scss/project/_behavior.scss */
 .tags dt,
@@ -1532,14 +1414,13 @@ em {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: auto;
   width: 100%;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 0.375em;
+  padding-top: 0.4em;
   border-bottom-style: solid;
-  border-bottom-width: 0.0625em;
-  padding-bottom: 0.3125em;
+  border-bottom-width: 0.06667em;
+  padding-bottom: 0.33333em;
 }
 @media only screen and (max-width: 48em) {
   /* line 190, ../../_compass/scss/project/_behavior.scss */
@@ -1633,7 +1514,7 @@ em {
    */
   quotes: none;
 }
-/* line 339, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
+/* line 391, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/helpers/_mixins.scss */
 .tags-tag q:before, .tags-tag q:after, .tags-tag blockquote:before, .tags-tag blockquote:after {
   content: "";
   /* 2 */
@@ -1647,7 +1528,7 @@ em {
 
 /* line 208, ../../_compass/scss/project/_behavior.scss */
 code {
-  padding: 0.375em 0.5em;
+  padding: 0.4em 0.5em;
 }
 
 /* line 212, ../../_compass/scss/project/_behavior.scss */
@@ -1669,7 +1550,7 @@ code,
 /* line 221, ../../_compass/scss/project/_behavior.scss */
 .terminal {
   overflow-x: auto;
-  padding: 0.75em 0;
+  padding: 0.8em 0;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -1683,7 +1564,7 @@ code,
 
 /* line 241, ../../_compass/scss/project/_behavior.scss */
 .list-api-name {
-  margin-top: 1.5em;
+  margin-top: 1.6em;
   font-weight: 700;
 }
 /* line 248, ../../_compass/scss/project/_behavior.scss */
@@ -1709,7 +1590,7 @@ code,
 
 /* line 268, ../../_compass/scss/project/_behavior.scss */
 .chapter-links {
-  margin-top: 0.75em;
+  margin-top: 0.8em;
 }
 /* line 272, ../../_compass/scss/project/_behavior.scss */
 .chapter-links a,
@@ -1754,7 +1635,7 @@ code,
 
 /* line 318, ../../_compass/scss/project/_behavior.scss */
 .site-footer {
-  padding-top: 1.5em;
+  padding-top: 1.6em;
   background: #9f81f7;
   font-weight: 400;
   color: white;
@@ -1769,8 +1650,8 @@ code,
 .copyright {
   margin-left: 24px;
   margin-right: 24px;
-  margin-top: 1.5em;
-  padding: 0.375em 0 1.125em;
+  margin-top: 1.6em;
+  padding: 0.4em 0 1.2em;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 @media only screen and (max-width: 48em) {
@@ -1792,8 +1673,8 @@ code,
 .social-list > li .icon-github {
   display: inline-block;
   margin-right: .5em;
-  width: 1.5em;
-  line-height: 1.5em;
+  width: 1.6em;
+  line-height: 1.6em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
