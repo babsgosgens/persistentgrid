@@ -39,6 +39,7 @@ title: Grid
 	</div>
 
 </section>
+
 <section class="chapter-section" id="grid-examples">
 
 	<h2 class="article-header-level2">Grid examples</h2
@@ -170,6 +171,7 @@ title: Grid
 <section class="chapter-section" id="settings">
 	<h2 class="article-header-level2">Settings</h2
 	><div class="three-fourth column">
+
 		<h3 class="article-header-level3">Root</h3>
 		<p>You can embed your grid layout in a 'root' container. Your grid layout will not stretch beyond the maximum width of this container. The root container can be positioned left or center, for alternate positions you can provide your own behavior.</p>
 		<dl class="list-api">
@@ -231,6 +233,19 @@ title: Grid
 			<dt class="list-api-name" id="setting-negative-right-margin"><a href="#setting-negative-right-margin">$negative-right-margin</a></dt>
 			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199744.js"></script></dd>
 			<dd class="list-api-description">Adjust the value to your typography, as it will depend on your type's em-width. Usually a value of <code>0.175</code> seems to produce accurate results. By default, this setting is set to <code>false</code>.</dd>
+		</dl>
+
+
+		<h3 class="article-header-level3">Other Settings</h3>
+		<p>Required settings for a stand-alone implementation of the grid:</p>
+		<dl class="list-api">
+			<dt class="list-api-name" id="setting-base-line-height"><a href="#setting-base-line-height">$base-line-height</a></dt>
+			<dd class="list-api-code"><pre class="terminal">$base-line-height: 24px !default;</pre></dd>
+			<dd class="list-api-description"><code>$base-line-height</code> is used to calculate the column spacing.</dd>
+
+			<dt class="list-api-name" id="setting-apply-border-box"><a href="#setting-apply-border-box">$apply-border-box</a></dt>
+			<dd class="list-api-code"><pre class="terminal">$apply-border-box: false !default;</pre></dd>
+			<dd class="list-api-description">When using the grid stand-alone, <code>$reset-box-model</code> should be set to true, unless you plan to wrap your columns in a padded container for compatibility with Microsoft Explorer &lt;8 and Opera &lt;10.</dd>
 		</dl>
 
 	</div>
