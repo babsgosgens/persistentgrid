@@ -65,9 +65,9 @@
 //* To Do: (everything below needs to be looked over as settings in the Type modules have changed)
 
 // //* Calculate the optimal line-height */
-// @function leading-in-px($font-size, $balance-over: false) {
+// @function leading-in-px($base-font-size, $balance-over: false) {
 
-// 	$dividend: $font-size / $base-line-height;
+// 	$dividend: $base-font-size / $base-line-height;
 // 	$leading: $base-line-height;
 
 // 	// For smaller font-sizes, for instance balance a font-size of 8px over two baselines of 24px in three (balance) lines resulting in 48/3=16px;
@@ -81,7 +81,7 @@
 // 	}
 // 	@if $dividend>1 {
 // 		$leading: ceil($dividend) * $base-line-height;
-// 		@if ($leading - $font-size) < (2 * $min-line-padding) {
+// 		@if ($leading - $base-font-size) < (2 * $min-line-padding) {
 // 			$leading: $leading + $base-line-height;
 // 		}
 // 		@return $leading;

@@ -91,7 +91,7 @@
 
 			$type: nth($type,1);
 
-			@if $type-size and $type-size!=$font-size {
+			@if $type-size and $type-size!=$base-font-size {
 				@include adjust-font-size-to($type-size, $type-rhythm);
 			}
 

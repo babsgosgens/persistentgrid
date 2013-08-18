@@ -21,13 +21,13 @@
 	$table-border-radius 					: $corner-radius;
 	$table-border 							: false; //$table-border-width $table-border-style $table-border-color; // Set to false if you don"t want any border to render
 
-	$table-type-size 						: $font-size;
-	$table-type-leading 					: $line-height;
+	$table-type-size 						: $base-font-size;
+	$table-type-leading 					: $base-line-height;
 	$table-type 							: $lato-book, $table-type-size, $table-type-leading;
 
 	//table-caption
-	$table-caption-type-size 				: $font-size;
-	$table-caption-type-leading 			: $line-height;
+	$table-caption-type-size 				: $base-font-size;
+	$table-caption-type-leading 			: $base-line-height;
 	$table-caption-type 					: $lato-ultra-light, $table-caption-type-size, $table-caption-type-leading;
 
 	$table-caption-alignment 				: left;

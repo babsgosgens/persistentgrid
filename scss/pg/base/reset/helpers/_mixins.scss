@@ -17,7 +17,7 @@
 	 */
 
 	* html {
-		font-size: 100% * $font-size / $browser-default-font-size;
+		font-size: 100% * $base-font-size / $browser-default-font-size;
 	}
 
 	/*
@@ -25,8 +25,8 @@
 	 */
 
 	html {
-		$fs: px-to-relative-font-size($font-size, $browser-default-font-size);
-		$lh: px-to-relative-line-height($line-height, $font-size);
+		$fs: px-to-relative-font-size($base-font-size, $browser-default-font-size);
+		$lh: px-to-relative-line-height($base-line-height, $base-font-size);
 		@include font($type-default, $fs, $lh);
 	}
 }

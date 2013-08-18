@@ -5,8 +5,8 @@
 @if $trace-imports { @debug 'imported'; }
 
 // $type is an array of four type properties: style, variant, weight, font-family; 
-// $font-sizes must be in final unit
-@mixin font($type, $font-size:$base-font-size, $line-height:$base-line-height)
+// $base-font-sizes must be in final unit
+@mixin font($type, $base-font-size:$base-font-size, $base-line-height:$base-line-height)
 {
 	@if $type {
 		$font-style 	:   nth($type,1);
@@ -14,7 +14,7 @@
 		$font-weight 	:	nth($type,3);
 		$font-family 	:	nth($type,4);
 
-		font: #{$font-style} #{$font-variant} #{$font-weight} #{$font-size}/#{$line-height} #{$font-family};
+		font: #{$font-style} #{$font-variant} #{$font-weight} #{$base-font-size}/#{$base-line-height} #{$font-family};
 	}
 }
 
