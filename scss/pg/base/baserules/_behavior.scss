@@ -43,10 +43,10 @@ h3,
 h4, 
 h5, 
 h6 {
-	@extend .heading;
+	@extend %heading;
 }
 
-.heading {
+%heading {
 	@include font-family($type-heading);
 	@include font-weight($type-heading);	
 }
@@ -90,12 +90,15 @@ sub {
     bottom: -0.25em;
 }
 
-/**
- * Set consistent quote types.
- */
+@if $base-quote-quotes
+{
+	/**
+	 * Set consistent quote types.
+	 */
 
-q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+	q {
+	    quotes: "\201C" "\201D" "\2018" "\2019";
+	}
 }
 
 

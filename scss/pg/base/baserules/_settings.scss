@@ -9,24 +9,31 @@
 //  Colors
 //  ==========================================================================
 
-	$color-background					: $white !default;
-	$color-body							: $black !default;
-	$color-theme						: $grey !default;
-	$color-primary						: $violet !default;
-	$color-secondary					: $orange !default;
-	$color-success 						: $green !default;
-	$color-info 						: $yellow !default;
-	$color-warning						: $orange !default;
-	$color-error						: $red !default;
+	$color-background: $white !default;
+	$color-body: $black !default;
+	$color-theme: $grey !default;
+	$color-primary: $violet !default;
+	$color-secondary: $orange !default;
+	$color-success: $green !default;
+	$color-info: $yellow !default;
+	$color-warning: $orange !default;
+	$color-error: $red !default;
 
-	$link-color							: $color-primary !default;
-	$link-color-hover					: darken($link-color, 20%) !default;
-	$link-color-active					: lighten($link-color, 15%) !default;
-	$link-color-visited					: darken($link-color, 30%) !default;
+	$link-color: $color-primary !default;
+	$link-color-hover: darken($link-color, 20%) !default;
+	$link-color-active: lighten($link-color, 15%) !default;
+	$link-color-visited: darken($link-color, 30%) !default;
 
 
 //  ==========================================================================
 //  Border Radius
 //  ==========================================================================
 
-	$corner-radius						: 0 !default;
+	$corner-radius: 0 !default;
+
+
+//  ==========================================================================
+//  Quotes
+//  ==========================================================================
+
+	$base-quote-quotes: true !default;

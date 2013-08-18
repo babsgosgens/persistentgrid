@@ -4,7 +4,14 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)
+
+//  ==========================================================================
+//  Mixin column behavior
+//  --------------------------------------------------------------------------
+//  @param (boolean) $apply-border-box
+//  @param (boolean) $column-float
+//  ==========================================================================
+@mixin column-behavior($apply-border-box: $apply-border-box, $column-float: $column-float)
 {
 	@if $column-float {
 		display: block;
@@ -17,15 +24,20 @@
 		}
 	}
 
-	// @if $reset-box-model {
-	// 	@include box-sizing('border-box');
-	// }
-
-	height: auto;
+	@if $apply-border-box {
+		@include box-sizing('border-box');
+	}
 }
 
-@mixin column-width($fraction: $column-width-default, $persistent: false) {
 
+//  ==========================================================================
+//  Mixin column width
+//  --------------------------------------------------------------------------
+//  @param (string) $fraction
+//  @param (boolean) $persistent
+//  ==========================================================================
+@mixin column-width($fraction: $column-width-default, $persistent: false)
+{
 	@if $persistent {
 		width: fraction-to-percentage($fraction) !important;
 	}
@@ -39,16 +51,25 @@
 		}
 	}
 
-	// Remove negative margin on elements that span full width of their container
-	@if $negative-right-margin {
-		@if $fraction == 1/1 {
-			margin-right: 0;
-		}
+	// /*
+	//  *Remove negative margin on elements that span full width of their container
+	//  */
+	@if $fraction == 1/1 and $negative-right-margin {
+		margin-right: 0;
 	}
 }
 
-// Mixin column margins
-// Uses padding by default, can be overridden to use margins instead - helpful when assigning backgrounds
+
+//  ==========================================================================
+//  Mixin column spacing
+//  --------------------------------------------------------------------------
+//	Uses padding by default, can be overridden to use margins instead,
+//  this is especially helpful when assigning backgrounds or borders
+//  --------------------------------------------------------------------------
+//  @param (string) $fraction
+//  @param (boolean) $use-margin
+//  @param (boolean) $persistent
+//  ==========================================================================
 @mixin column-spacing($fraction: 1/2, $use-margin: false, $persistent: false)
 {
 	@if ($use-margin) {
@@ -77,45 +98,88 @@
 	}
 }
 
-// Shorthand mixin for column
-// Combines above functions
-// Behavior can be overridden by (temporarily re-assigning values)
-@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: false)
+
+//  ==========================================================================
+//  Shorthand mixin for column
+//  --------------------------------------------------------------------------
+//	Uses padding by default, can be overridden to use margins instead,
+//  this is especially helpful when assigning backgrounds or borders
+//  --------------------------------------------------------------------------
+//  @param (string) $fraction
+//  @param (boolean) $persistent
+//  @param (boolean) $apply-padding
+//  @param (boolean) $apply-margin
+//  ==========================================================================
+@mixin column($fraction: 1/1, $persistent: false, $apply-padding: 1/2, $apply-margin: false)
 {
 	@include column-behavior();
+
 	@include column-width($fraction, $persistent);
 
-	@if $column-padding {
-		@include column-spacing($column-padding);			
+	@if $apply-padding {
+		@include column-spacing($apply-padding);			
 	}
 
-	@if $column-margin {
-		@include column-spacing($column-margin, true);			
+	@if $apply-margin {
+		@include column-spacing($apply-margin, true);			
 	}
 }
 
-// Fixes content width and centers in viewport.
-// @todo: make configurable so content can be rendered flush left or right
-@mixin root($root-max-width: $root-max-width) {
-	display: block;
+
+//  ==========================================================================
+//  Shorthand mixin for column
+//  --------------------------------------------------------------------------
+//	Fixes content width and centers in viewport.
+//  --------------------------------------------------------------------------
+//  @param (string) $root-max-width
+//  @param (boolean) $set-display
+//  ==========================================================================
+@mixin root($root-max-width: $root-max-width, $set-display: false)
+{
+	@if $set-display {
+		display: block;
+	}
 	@if $root-position==center {
 		margin: 0 auto;
 	}
 	max-width: $root-max-width;
 }
 
-@mixin container-behavior()
+
+//  ==========================================================================
+//  Mixin for column container
+//  --------------------------------------------------------------------------
+//	Use it to remove column spacing on columns
+//  --------------------------------------------------------------------------
+//  @param (boolean) $use-margin
+//  ==========================================================================
+@mixin container-behavior($use-margin: false)
 {
-	padding-left: 0;
-	padding-right: 0;
+	@if $use-margin {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@else {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
-// Helper mixin for soure ordering
-// Expects a fraction as unit
-@mixin move($fraction) {
+
+//  ==========================================================================
+//  Mixin for soure ordering
+//  --------------------------------------------------------------------------
+//	Use it to remove column spacing on columns
+//  --------------------------------------------------------------------------
+//  @param (string) $fraction
+//  @param (boolean) $persistent
+//  ==========================================================================
+@mixin move($fraction, $persistent: false)
+{
 	position: relative;
 	left: fraction-to-percentage($fraction);
-	@if $column-breakpoint {
+
+	@if $persistent and $column-breakpoint {
 		@include breakpoint( $column-breakpoint ) {
 			position: static;
 			position: initial;
@@ -123,9 +187,15 @@
 	}
 }
 
-// Mixin to reverse padding on a container
-// Is sometimes helpful for nested columns
-// Avoid using this if at all possible, can cause some erratic behavior
+//  ==========================================================================
+//  Mixin to reverse padding on a container
+//  --------------------------------------------------------------------------
+//	Use it to remove padded column spacing on columns
+//  , helpful when nesting columns
+//  --------------------------------------------------------------------------
+//  @param (string) $fraction
+//  @param (boolean) $persistent
+//  ==========================================================================
 @mixin bleed($fraction: -1/2, $persistent: false)
 {
 	@include column-spacing($fraction, true);
