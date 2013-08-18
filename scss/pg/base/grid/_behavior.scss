@@ -6,7 +6,6 @@
 
 #{$root-selector} {
 	@include root();
-	overflow: hidden;
 }
 
 #{$column-selector} {
