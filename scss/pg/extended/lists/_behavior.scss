@@ -91,3 +91,9 @@ ul {
 @if $list-style-type-upper-roman {
 	@include list-style-type(upper-roman);
 }
+
+.list-inline {
+	&>li {
+		display: inline-block;
+	}
+}
