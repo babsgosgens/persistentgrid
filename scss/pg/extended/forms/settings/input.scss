@@ -15,6 +15,7 @@
 //  Input default properties
 //  ==========================================================================
 
+	$input-field-class: $input-base-class + '-field' !default;
 	$input-width: 100%;
 	$input-height: $base-line-height;
 
@@ -127,3 +128,52 @@
 		$input-type-size
 		$input-type-rhythm
 		!default;
+
+
+//  ==========================================================================
+//  Input Color properties
+//  ==========================================================================
+
+	$input-color-class: $input-base-class + '-color' !default;
+	$input-color-width: false;
+
+
+//  ==========================================================================
+//  Input Range properties
+//  ==========================================================================
+
+	$input-range-class: $input-base-class + '-range' !default;
+	$input-range-width: 100%;
+
+	
+//  ==========================================================================
+//  Input Search properties
+//  ==========================================================================
+
+	$input-search-class: $input-base-class + '-search' !default;
+	$input-search-border-radius: $input-border-radius;
+
+	
+//  ==========================================================================
+//  Input Checkbox/Radio properties
+//  ==========================================================================
+
+	$input-check-class: $input-base-class + '-check' !default;
+
+	
+//  ==========================================================================
+//  Textarea properties
+//  ==========================================================================
+
+	$textarea-class: $input-base-class + '-textarea' !default;
+
+
+//  ==========================================================================
+//  Select properties
+//  ==========================================================================
+
+	$select-dropdown-class: $input-base-class + '-dropdown' !default;
+	$select-multiple-class: $input-base-class + '-selectbox' !default;
+
+	$select-appearance-default: true;
+	$select-webkit: if($select-appearance-default, true, false);

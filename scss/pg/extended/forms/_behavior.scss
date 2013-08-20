@@ -5,130 +5,199 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-	@extend %#{input-base-class};
-}
-select {
-	@include reset-appearance(menulist);
-}
+//  ==========================================================================
+//  Placeholders
+//  ==========================================================================
 
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"] {
-	background: $input-background-color url('/assets/images/icons/icon-calendar.svg') no-repeat 1% center;
-	background-size: 10px auto;
-}
-input[type="time"] {
-	background-image: url('/assets/images/icons/icon-clock.svg');
-}
 
-/*
- * Only show arrow on non-webkit browsers as they render it themselves
- */
-.webkit {
-	select {
-		background: $input-background-color url('/assets/images/icons/icon-sort.svg') no-repeat 1% center;
-		background-size: 10px auto;
+	/*
+	 * Field styles
+	 */
+	%#{$input-field-class} {
+		width: $input-width;
+		@include box-sizing(border-box);
+		@include inline-block(baseline);
+		@include button-margin($input-margin);
+		@include button-padding($input-padding);
+		@include column-spacing;
+		@include button-border($input-border);
+		@include button-border-radius($input-border-radius);
+		@include button-background($input-background);
+		@include button-type($input-type);
+		@include button-text($input-text);
+		@include input-shadow($input-shadow);
+		&:focus {
+			@extend %is-#{$input-field-class}-focus;
+		}
 	}
-}
 
-select,
-optgroup,
-option {
-	font-weight: inherit;
-	font-style: inherit;
-	font-variant: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
-}
-
-%#{input-base-class} {
-	@include reset-appearance(textfield);
-
-	@include inline-block(baseline);
-	width: $input-width;
-	@include button-margin($input-margin);
-	@include button-padding($input-padding);
-	// @include column-spacing;
-	@include button-border($input-border);
-	@include button-border-radius($input-border-radius);
-	@include button-background($input-background);
-	@include button-type($input-type);
-	@include button-text($input-text);
-	@include input-shadow($input-shadow);
-	&:focus {
-		@extend %is-#{$input-base-class}-focus;
+	/*
+	 * Field focus styles
+	 */
+	%is-#{$input-field-class}-focus {
+		outline-color: lighten($color-primary, 40);
+		outline-offset: -2px;
+		outline-style: solid;
+		outline-width: 1px;
+		border-color: $color-primary;
 	}
-}
-
-.#{$label-base-class} {
-	@include inline-block(baseline);
-	width: $input-width;
-	@include inline-block(baseline);
-	@include button-margin($label-margin);
-	@include button-padding($label-padding);
-	// @include button-border($label-border);
-	@include button-border-radius($label-border-radius);
-	@include button-background($label-background);
-	@include button-type($label-type);
-	@include button-text($label-text);
-	@include button-shadow($label-shadow);
-}
-
-// .label {
-// 	display: $label-display;
-// 	min-height: px-to-em($input-height);
-// 	width: $label-width;
-// 	vertical-align: $label-vertical-align;
-// 	@include form-margin($label-margin);
-// 	@include form-padding($label-padding);
-// 	@include form-border($label-border);
-// 	// @include form-background($label-background);
-// 	@include form-shadow($label-shadow);
-// 	@include form-type($label-type);
-// 	@include form-text($label-text);
-// }
-
-// Experimental
 
 
-%is-#{$input-base-class}-focus {
-	outline-color: lighten($color-primary, 40);
-	outline-offset: -2px;
-	outline-style: solid;
-	outline-width: 1px;
-	border-color: $color-primary;
-}
-// Stacked is default behavior
-// .label,
-// .input {
-// 	@include column-width(1/1);
-// 	vertical-align: bottom;
-// }
+//  ==========================================================================
+//  Fields
+//  ==========================================================================
 
-%inline {
-	.label {
-		@include column-width(1/4);
+	.#{$input-field-class}
+	{
+		@extend %#{$input-field-class};
 	}
-	.input {
-		@include column-width(3/4);
+	select,
+	textarea,
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"]
+	{
 	}
-}
+
+	/*
+	 * Override some properties for the search field
+	 */
+	.#{$input-search-class} {
+		// Not sure why this needs to be repeated
+		@include box-sizing(border-box);
+		@if $input-search-border-radius != $input-border-radius {
+			@include border-radius($input-search-border-radius);
+		}
+	}
+
+	/*
+	 * Override some properties for the color field
+	 */
+	.#{$input-color-class} {
+		@if $input-color-width {
+			width: $input-color-width;
+		}
+	}
+
+	/*
+	 * Override some properties for the range field
+	 */
+	.#{$input-range-class} {
+		@if $input-range-width {
+			width: $input-range-width;
+		}
+	}
+
+	/*
+	 * Override some properties for the range and color field
+	 */
+	.#{$input-color-class},
+	.#{$input-range-class} {
+		padding: 0;
+		height: vertical-rhythm($input-type-rhythm) + $input-padding-top + $input-padding-bottom;
+	}
+
+	.#{$input-check-class} {
+	}
+
+
+//  ==========================================================================
+//  Select and Datalists
+//  ==========================================================================
+
+	.#{$input-field-class} {
+		optgroup,
+		option {
+			font-weight: inherit;
+			font-style: inherit;
+			font-variant: inherit;
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+
+	@if $select-appearance-default {
+		select #{$input-base-class}{
+			@include reset-appearance(menulist);
+			height: vertical-rhythm($input-type-rhythm) + $input-padding-top + $input-padding-bottom;
+		}
+	}
+	@if $select-webkit {
+		.webkit {
+			select {
+				background: $input-background-color url('/assets/images/icons/icon-sort.svg') no-repeat 1% center;
+				background-size: 10px auto;
+			}
+		}
+	}
+
+//  ==========================================================================
+//  Textarea
+//  ==========================================================================
+
+	.#{$textarea-class} {
+		@extend %#{$input-field-class};
+		&.large {
+			height: vertical-rhythm(10);
+		}
+		&.medium {
+			height: vertical-rhythm(6);
+		}
+		&.small {
+			height: vertical-rhythm(2);
+		}
+	}
+
+
+//  ==========================================================================
+//  Labels
+//  ==========================================================================
+
+
+	.#{$label-base-class} {
+		@include inline-block(baseline);
+		width: $input-width;
+		@include inline-block(baseline);
+		@include button-margin($label-margin);
+		@include button-padding($label-padding);
+		// @include button-border($label-border);
+		@include button-border-radius($label-border-radius);
+		@include button-background($label-background);
+		@include button-type($label-type);
+		@include button-text($label-text);
+		@include button-shadow($label-shadow);
+	}
+
+
+//  ==========================================================================
+//  Legends
+//  ==========================================================================
+
+	.#{$legend-class} {
+		@extend .#{$label-base-class};
+	}
+
+//  ==========================================================================
+//  Layout styles
+//  ==========================================================================
+
+	.inline {
+		.label {
+			@include column-width(1/4);
+		}
+		.input {
+			@include column-width(3/4);
+		}
+	}
