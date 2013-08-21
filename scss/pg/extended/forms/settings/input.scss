@@ -2,6 +2,7 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
+@if $trace-imports { @debug 'imported'; }
 
 
 //  ==========================================================================
@@ -56,7 +57,7 @@
 	// Input background (background-color, background-image)
 	// -----------------------------------------------------------------------
 
-	$input-background-color: $whitesmoke !default;
+	$input-background-color: $white !default;
 	$input-background-image: linear-gradient(lighten($input-background-color,5), darken($input-background-color,5)) !default;
 	$input-background:
 		$input-background-color
@@ -200,8 +201,8 @@
 	// Input border (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$input-focussed-border-width: 1px !default;
-	$input-focussed-border-style: solid !default;
+	$input-focussed-border-width: false !default; // Inherit
+	$input-focussed-border-style: false !default; // Inherit
 	$input-focussed-border-color: $color-primary !default;
 	$input-focussed-border: 
 		$input-focussed-border-width 
@@ -214,10 +215,12 @@
 	// Input outline (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$input-focussed-outline: none !default;
-
-	$input-focussed-outline-offset: 0 !default; // disable Safari's default - we're using box-shadows cross-browser
-
+	$input-focussed-outline-border: none !default;
+	$input-focussed-outline-offset: if($input-focussed-outline-border==none, false, 0) !default; // disable Safari's default - we're using box-shadows cross-browser
+	$input-focussed-outline:
+		$input-focussed-outline-border
+		$input-focussed-outline-offset
+		!default;
 
 	// -----------------------------------------------------------------------
 	// Input corner (top-left, top-right, bottom-left, bottom-right)

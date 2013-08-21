@@ -14,18 +14,29 @@
 	 * Field styles
 	 */
 	%#{$input-field-class} {
+		/*
+		 * Box-model treatments
+		 */
 		width: $input-width;
 		@include box-sizing(border-box);
 		@include inline-block(baseline);
-		@include button-margin($input-margin);
-		@include button-padding($input-padding);
+		@include module-margin($input-margin);
+		@include module-padding($input-padding);
 		@include column-spacing;
-		@include button-border($input-border);
-		@include button-border-radius($input-border-radius);
-		@include button-background($input-background);
-		@include button-type($input-type);
-		@include button-text($input-text);
+		@include module-border($input-border);
+		@include module-border-radius($input-border-radius);
+		@include module-background($input-background);
+
 		@include input-shadow($input-shadow);
+
+		/*
+		 * Font and text treatments
+		 */
+		@include module-type($input-type);
+		@include property($label-text-color, 'color');
+		@include property($label-text-align, 'text-align');
+		@include property($label-text-decoration, 'text-decoration');
+		@include module-text-shadow($label-text-shadow);
 
 		&:focus {
 			@extend %is-#{$input-field-class}-focus;
@@ -41,12 +52,11 @@
 	 */
 	%is-#{$input-field-class}-focus {
 
-		@include button-border($input-focussed-border);
-		@include button-border-radius($input-focussed-border-radius);
-		@include button-background($input-focussed-background);
+		@include module-border($input-focussed-border);
+		@include module-border-radius($input-focussed-border-radius);
+		@include module-background($input-focussed-background);
 		@include input-shadow($input-focussed-shadow);
-		outline: $input-focussed-outline;
-		outline-offset: $input-focussed-outline-offset;
+		@include module-outline($input-focussed-outline-border, $input-focussed-outline-offset);
 				  // -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 	}
@@ -128,7 +138,7 @@
 	.#{$select-dropdown-class} {
 		optgroup,
 		option {
-			@include button-padding($input-padding);
+			@include module-padding($input-padding);
 			@include column-spacing;
 			font-weight: inherit;
 			font-style: inherit;
@@ -182,14 +192,18 @@
 		@include inline-block(baseline);
 		width: $input-width;
 		@include inline-block(baseline);
-		@include button-margin($label-margin);
-		@include button-padding($label-padding);
-		// @include button-border($label-border);
-		@include button-border-radius($label-border-radius);
-		@include button-background($label-background);
-		@include button-type($label-type);
-		@include button-text($label-text);
-		@include button-shadow($label-shadow);
+		@include module-margin($label-margin);
+		@include module-padding($label-padding);
+		@include module-border($label-border);
+		@include module-border-radius($label-border-radius);
+		@include module-background($label-background);
+		@include module-shadow($label-shadow);
+
+		@include module-type($label-type);
+		@include property($label-text-color, 'color');
+		@include property($label-text-align, 'text-align');
+		@include property($label-text-decoration, 'text-decoration');
+		@include module-text-shadow($label-text-shadow);
 	}
 
 
@@ -199,17 +213,4 @@
 
 	.#{$legend-class} {
 		@extend .#{$label-base-class};
-	}
-
-//  ==========================================================================
-//  Layout styles
-//  ==========================================================================
-
-	.inline {
-		.label {
-			@include column-width(1/4);
-		}
-		.input {
-			@include column-width(3/4);
-		}
 	}

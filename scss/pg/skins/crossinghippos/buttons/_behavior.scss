@@ -7,7 +7,7 @@
 
 @include button(".#{$button-base-class}-primary") {
   @include column-spacing;
-  @include button-background($button-primary-background);
+  @include module-background($button-primary-background);
   @include button('&:hover') {
     @extend .is-#{$button-base-class}-primary-hover !optional;
   }
@@ -17,9 +17,9 @@
 }
 
 @include button(".is-#{$button-base-class}-primary-hover") {
-  @include button-background($button-primary-hover-background);
+  @include module-background($button-primary-hover-background);
 }
 
 @include button(".is-#{$button-base-class}-primary-active") {
-  @include button-background($button-primary-active-background);
+  @include module-background($button-primary-active-background);
 }

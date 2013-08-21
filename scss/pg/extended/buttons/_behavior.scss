@@ -10,13 +10,16 @@
 @include button(".#{$button-base-class}")
 {
   @include inline-block($button-vertical-align);
-  @include button-padding($button-padding);
-  @include button-background($button-background);
-  @include button-border($button-border);
-  @include button-border-radius($button-border-radius);
-  @include button-shadow($button-shadow);
-  @include button-text($button-text);
-  @include button-type($button-type);
+  @include module-padding($button-padding);
+  @include module-background($button-background);
+  @include module-border($button-border);
+  @include module-border-radius($button-border-radius);
+  @include module-shadow($button-shadow);
+  @include property($label-text-color, 'color');
+  @include property($label-text-align, 'text-align');
+  @include property($label-text-decoration, 'text-decoration');
+  @include module-text-shadow($label-text-shadow);
+  @include module-type($button-type);
   @include button('&:hover')
   {
     @extend .is-#{$button-base-class}-hover !optional;
@@ -33,16 +36,16 @@
 
 @include button(".is-#{$button-base-class}-hover")
 {
-  @include button-background($button-hover-background);
-  @include button-border($button-hover-border);
-  @include button-shadow($button-hover-shadow);
+  @include module-background($button-hover-background);
+  @include module-border($button-hover-border);
+  @include module-shadow($button-hover-shadow);
 }
 
 @include button(".is-#{$button-base-class}-active")
 {
-  @include button-background($button-active-background);
-  @include button-border($button-active-border);
-  @include button-shadow($button-active-shadow);
+  @include module-background($button-active-background);
+  @include module-border($button-active-border);
+  @include module-shadow($button-active-shadow);
 }
 
 .#{$button-base-class}-small {

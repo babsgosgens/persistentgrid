@@ -5,11 +5,14 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-	// **
-	// Mixin sides
-	// @param $values: an array of 1 or 4 values
-	// @param $property: a string (e.g. padding, margin, or border)
-	// **
+//  ==========================================================================
+//  Mixin for modules: sides
+//  ==========================================================================
+//  Applies margin, padding, border, outline
+//  
+//  @param $values: an array of 1 or 4 values
+//  @param $property: a string (e.g. padding, margin, or border)
+//  ==========================================================================
 	@mixin sides($values, $property)
 	{
 		$length: length($values);
@@ -23,7 +26,7 @@
 
 
 		@if $length==1 {
-			@include side($values, $property);
+			@include property($values, $property);
 		}
 
 
@@ -42,7 +45,7 @@
 					#{$property}: nth($values,1) nth($values,2);
 				}
 				@else {
-					@include side($values, $property);
+					@include property($values, $property);
 				}
 			}
 			@else {
@@ -53,7 +56,7 @@
 						$i: index($values, $value);
 						$side: padding-#{nth($sides,$i)};
 
-						@include side($value, $side);
+						@include property($value, $side);
 					}
 				}
 			}
@@ -61,110 +64,209 @@
 		}
 	}
 
-	@mixin side($values, $property)
+
+//  ==========================================================================
+//  Mixin for modules: properties
+//  ==========================================================================
+//  Applies margin, padding, border, outline
+//  
+//  @param $values: a single value
+//  @param $property: a string (e.g. padding, margin-left, border-color) or false if nothing should be compiled
+//  ==========================================================================
+	@mixin property($values, $property)
 	{
-		#{$property}: $values;
+		@if $values {
+			#{$property}: $values;
+		}
 	}
 
-	// Expects a nested list in the format (border-width, border-style, border-color), border-radius
-	// Use false if a value should not be rendered (0 is a valid value)
-	@mixin module-border($border: 0, $border-collapse: true) {
 
-		$border-width: nth($border,1);
-		$border-style: nth($border,2);
-		$border-color: nth($border,3);
-		// $border-radius: nth($border,4);
+//  ==========================================================================
+//  Mixin for modules: margin (placeholder for sides())
+//  ==========================================================================
+//  Accepts either a single value represetning all four sides, 
+//  or a list of four values representing each individual side
+//  
+//  @param $values: a list of 1 or 4 width values or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-margin($margin)
+	{
+		@if $margin {		
+			@include sides($margin, margin);
+		}
+	}
 
-		@if length($border-width)>1 or length($border-style)>1 or length($border-color)>1 {
-			
-			// Render individual border properties
-			@if $border-width!=false {
-				border-width: $border-width;
-			}
-			@if $border-style!=false {
-				border-width: $border-style;
-			}
-			@if $border-color!=false {
-				border-color: $border-color;
-			}
 
+//  ==========================================================================
+//  Mixin for modules: padding (placeholder for sides())
+//  ==========================================================================
+//  Accepts either a single value represetning all four sides, 
+//  or a list of four values representing each individual side
+//  
+//  @param $values: a list of 1 or 4 width values or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-padding($padding)
+	{
+		@if $padding {		
+			@include sides($padding, padding);
+		}
+	}
+
+
+//  ==========================================================================
+//  Mixin button border (placeholder for sides)
+//  ==========================================================================
+//  Accepts a list of three values representing width, style and color
+//  
+//  @param $values: a list of properties (width, style, color) or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-border($border)
+	{
+		$length: length($border);
+
+		@if $length>1 {
+			$width: nth($border,1);
+			$style: nth($border,2);
+			$color: nth($border,3);
+			@if $width {
+				border-width: $width;
+			}
+			@if $style {
+				border-style: $style;
+			}
+			@if $color {
+				border-color: $color;
+			}
 		}
 		@else {
-
-			@if $border-width==false or $border-style==false or $border-color==false {
-
-				// Render individual border properties
-				@if $border-width!=false {
-					border-width: $border-width;
-				}
-				@if $border-style!=false {
-					border-style: $border-style;
-				}
-				@if $border-color!=false {
-					border-color: $border-color;
-				}
+			@if $border {
+				@include property(#{$border}, border);
 			}
-			@else {
-				border: $border-width $border-style $border-color;
-			}
-
-		}
-		
-		// // Render the rounded corners
-		// @if $border-radius {
-		// 	@include border-radius($border-radius);
-		// }
-	}
-
-	// Expects an array of four values
-	// Use false if a value should not be rendered (0 is a valid value)
-	@mixin module-margin($margin) {
-
-		// Extract the individual variables from the list
-		$top:    nth($margin, 1);
-		$right:  nth($margin, 2);
-		$bottom: nth($margin, 3);
-		$left:   nth($margin, 4);
-
-		// Determine if we have all the values for shorthand notation
-		$shorthand: true;
-		@if $top==false    { $shorthand: false; }
-		@if $right==false  { $shorthand: false; }
-		@if $bottom==false { $shorthand: false; }
-		@if $left==false   { $shorthand: false; }
-
-		@if $shorthand {
-			margin: $top $right $bottom $left;
-		}
-		@else {
-			@if $top    { margin-top: $top; }
-			@if $right  { margin-right: $right; }
-			@if $bottom { margin-bottom: $bottom; }
-			@if $left   { margin-left: $left; }
 		}
 	}
 
-	// Expects a (list of) valid shadow notation(s) or false if no shadow should be rendered
-	@mixin module-shadow($shadow) {
+
+//  ==========================================================================
+//  Mixin for modules: border radius
+//  ==========================================================================
+//  Accepts a list of up to four values representing all four corners
+//  
+//  @param $corner-radius: a list of width values or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-border-radius($corner-radius)
+	{
+
+		@if $corner-radius {
+			@include border-radius($corner-radius);
+		}
+	}
+
+
+//  ==========================================================================
+//  Mixin for modules: outline (placeholder for sides())
+//  ==========================================================================
+//  Accepts either a single value represetning all four sides, 
+//  or a list of four values representing each individual side
+//  
+//  @param $values: a list of 1 or 4 width values or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-outline($outline, $outline-offset: false)
+	{
+		@if $outline {		
+			@include sides($outline, outline);
+		}
+		@if $outline-offset {
+			outline-offset: $outline-offset;
+		}
+	}
+
+
+//  ==========================================================================
+//  Mixin for modules: box-shadow (placeholder for box-shadow)
+//  ==========================================================================
+//  a valid box-shadow notation is: inset|outset offset-x offset-y blur color
+//
+//  @param $shadow: a (list of) valid shadow notation(s) or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-shadow($shadow)
+	{
 		@if $shadow {
 			@include box-shadow($shadow);
 		}
 	}
 
-	// Expects a list in the format of button-text-color, button-text-shadow, button-text-align;
-	@mixin module-text($text) {
 
-		$text-color: nth($text,1);
-		$text-shadow: nth($text,2);
-		$text-align: nth($text,3);
+//  ==========================================================================
+//  Mixin for modules: background
+//  ==========================================================================
+//  
+//  @param $background: a list of properties (background-color, background-image) or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-background($background)
+	{
+		@if $background {
 
-		@if $text-color {
-			color: $text-color;
+			$background-color: nth($background,1);
+			$background-image: nth($background,2);
+
+			@if $background-color {
+				background-color: $background-color;
+			}
+			@if $background-image {
+				@include background-image($background-image);
+			}
 		}
-		@if $text-shadow {
-			@include text-shadow($text-shadow);
+	}
+
+
+//  ==========================================================================
+//  Mixin for modules: text-shadow
+//  ==========================================================================
+//  
+//  @param $shadow: a list of properties (color, text-shadow, text-align, text-decoration) or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-text-shadow($shadow)
+	{
+		@if $shadow {
+			@include text-shadow($shadow);
 		}
-		@if $text-align {
-			text-align: $text-align;
+	}
+
+
+//  ==========================================================================
+//  Mixin for modules: type
+//  ==========================================================================
+//  
+//  @param $type: a list of properties (type, font-size, leading) or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-type($type)
+	{
+		@if $type {
+
+			$type-size: nth($type,2);
+			$type-rhythm: if(nth($type,3), nth($type,3), 1);
+
+			$type: nth($type,1);
+
+			@if $type-size and $type-size!=$base-font-size {
+				@include adjust-font-size-to($type-size, $type-rhythm);
+			}
+
+			@if extract-type-style($type) != extract-type-style($type-default) {
+				@include font-style($type);
+			}
+
+			@if extract-type-variant($type) != extract-type-variant($type-default) {
+				@include font-variant($type);
+			}
+
+			@if extract-type-weight($type) != extract-type-weight($type-default) {
+				@include font-weight($type);
+			}
+
+			@if extract-type-family($type) != extract-type-family($type-default) {
+				@include font-family($type);
+			}
+
 		}
 	}
