@@ -774,7 +774,10 @@ q {
  * Field styles
  */
 /* line 16, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-.input-field, .input-textarea {
+.input-field, .input-dropdown, .input-textarea {
+  /*
+   * Box-model treatments
+   */
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -785,56 +788,68 @@ q {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 0 0;
+  margin: 0 0;
   padding: 0.4em 24px;
   padding-left: 24px;
   padding-right: 24px;
-  border: 1px solid #b3b3b3;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b3b3b3;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  background-color: whitesmoke;
-  color: black;
-  text-align: left;
-  text-decoration: none;
+  background-color: white;
+  -webkit-box-shadow: #e6e6e6 1px 1px 1px 0 inset;
+  -moz-box-shadow: #e6e6e6 1px 1px 1px 0 inset;
+  box-shadow: #e6e6e6 1px 1px 1px 0 inset;
   -webkit-appearance: none;
+  /* mobile firefox too! */
   -moz-appearance: none;
   /* mobile firefox too! */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-box-shadow: gainsboro 1px 1px 1px 0 inset;
-  -moz-box-shadow: gainsboro 1px 1px 1px 0 inset;
-  box-shadow: gainsboro 1px 1px 1px 0 inset;
+  /*
+   * Font and text treatments
+   */
+  color: black;
+  text-align: left;
+  text-decoration: none;
 }
 @media only screen and (max-width: 48em) {
   /* line 16, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-  .input-field, .input-textarea {
+  .input-field, .input-dropdown, .input-textarea {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 143, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
-.input-field:hover, .input-textarea:hover, .input-field:active, .input-textarea:active, .input-field:visited, .input-textarea:visited {
-  color: black;
+/* line 76, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/helpers/_mixins.scss */
+.input-field::-webkit-input-placeholder, .input-dropdown::-webkit-input-placeholder, .input-textarea::-webkit-input-placeholder, .input-field:-moz-placeholder, .input-dropdown:-moz-placeholder, .input-textarea:-moz-placeholder, .input-field::-moz-placeholder, .input-dropdown::-moz-placeholder, .input-textarea::-moz-placeholder, .input-field:-ms-placeholder, .input-dropdown:-ms-placeholder, .input-textarea:-ms-placeholder {
+  color: #9f81f7;
 }
 
 /*
  * Field focus styles
  */
-/* line 37, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-.input-field:focus, .input-textarea:focus {
-  outline-color: white;
-  outline-offset: -2px;
-  outline-style: solid;
-  outline-width: 1px;
+/* line 53, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+.input-field:focus, .input-dropdown:focus, .input-textarea:focus {
   border-color: #9f81f7;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0 0 4px #9f81f7;
+  -moz-box-shadow: 0 0 4px #9f81f7;
+  box-shadow: 0 0 4px #9f81f7;
+  -webkit-appearance: none;
+  /* mobile firefox too! */
+  -moz-appearance: none;
+  /* mobile firefox too! */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
 }
 
 /*
  * Override some properties for the search field
  */
-/* line 75, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 95, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .input-search {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -847,7 +862,7 @@ q {
 /*
  * Override some properties for the range field
  */
-/* line 95, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 115, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .input-range {
   width: 100%;
 }
@@ -855,16 +870,19 @@ q {
 /*
  * Override some properties for the range and color field
  */
-/* line 105, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 125, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .input-color,
 .input-range {
   padding: 0;
   height: 2.4em;
 }
 
-/* line 120, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-.input-field optgroup,
-.input-field option {
+/* line 140, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+.input-dropdown optgroup,
+.input-dropdown option {
+  padding: 0.4em 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   font-weight: inherit;
   font-style: inherit;
   font-variant: inherit;
@@ -872,9 +890,17 @@ q {
   font-size: inherit;
   line-height: inherit;
 }
+@media only screen and (max-width: 48em) {
+  /* line 140, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+  .input-dropdown optgroup,
+  .input-dropdown option {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 
-/* line 132, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-select input {
+/* line 152, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+.input-dropdown {
   -webkit-appearance: menulist;
   /* mobile firefox too! */
   -moz-appearance: menulist;
@@ -882,26 +908,20 @@ select input {
   height: 2.4em;
 }
 
-/* line 139, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-.webkit select {
-  background: whitesmoke url("/assets/images/icons/icon-sort.svg") no-repeat 1% center;
-  background-size: 10px auto;
-}
-
-/* line 152, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 174, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .input-textarea.large {
   height: 16em;
 }
-/* line 155, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 177, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .input-textarea.medium {
   height: 9.6em;
 }
-/* line 158, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 180, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .input-textarea.small {
   height: 3.2em;
 }
 
-/* line 169, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
+/* line 191, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
 .label, .legend {
   display: -moz-inline-stack;
   display: inline-block;
@@ -916,36 +936,11 @@ select input {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 0 0;
+  margin: 0 0;
   padding: 0.4em 0;
   color: black;
   text-align: left;
   text-decoration: none;
-}
-/* line 143, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
-.label:hover, .legend:hover, .label:active, .legend:active, .label:visited, .legend:visited {
-  color: black;
-}
-
-/* line 197, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-.inline .label, .inline .legend {
-  width: 25%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 197, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-  .inline .label, .inline .legend {
-    width: 100%;
-  }
-}
-/* line 200, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-.inline .input {
-  width: 75%;
-}
-@media only screen and (max-width: 48em) {
-  /* line 200, ../../_compass/extensions/persistentgrid/scss/pg/extended/forms/_behavior.scss */
-  .inline .input {
-    width: 100%;
-  }
 }
 
 /* line 18, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
@@ -958,7 +953,9 @@ select input {
   *display: inline;
   padding: 0.4em 24px;
   background-color: #666666;
-  border: 1px solid #666666;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #666666;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -967,18 +964,13 @@ select input {
   -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.15);
   -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.15);
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.15);
-  color: white;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  text-align: center;
+  color: black;
+  text-align: left;
   text-decoration: none;
   font-weight: 400;
 }
-/* line 143, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
-.btn:hover, .btn:active, .btn:visited {
-  color: white;
-}
 
-/* line 30, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/_behavior.scss */
+/* line 33, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/_behavior.scss */
 .btn-align-top {
   display: -moz-inline-stack;
   display: inline-block;
@@ -991,22 +983,23 @@ select input {
 /* line 18, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
 .is-btn-hover, .btn:hover {
   background-color: #999999;
-  border: false false #999999;
+  border-color: #999999;
 }
 
 /* line 18, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/helpers/_mixins.scss */
 .is-btn-active, .btn:active {
   background-color: #333333;
-  border: false inset #333333;
+  border-style: inset;
+  border-color: #333333;
 }
 
-/* line 48, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/_behavior.scss */
+/* line 51, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/_behavior.scss */
 .btn-small {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 55, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/_behavior.scss */
+/* line 58, ../../_compass/extensions/persistentgrid/scss/pg/extended/buttons/_behavior.scss */
 .btn-stretch {
   width: 100%;
 }
