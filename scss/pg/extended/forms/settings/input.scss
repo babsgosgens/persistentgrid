@@ -57,11 +57,11 @@
 	// Input background (background-color, background-image)
 	// -----------------------------------------------------------------------
 
-	$input-background-color: $white !default;
-	$input-background-image: linear-gradient(lighten($input-background-color,5), darken($input-background-color,5)) !default;
+	$input-background-color: $color-background !default;
+	$input-background-image: false !default;
 	$input-background:
 		$input-background-color
-		false 
+		$input-background-image 
 		!default;
 
 

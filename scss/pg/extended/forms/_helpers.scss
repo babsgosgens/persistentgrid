@@ -5,5 +5,4 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-// @import "base/functions";
 @import "helpers/mixins";

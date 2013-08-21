@@ -223,7 +223,7 @@
 //  Mixin for modules: text-shadow
 //  ==========================================================================
 //  
-//  @param $shadow: a list of properties (color, text-shadow, text-align, text-decoration) or false if nothing should be compiled
+//  @param $shadow
 //  ==========================================================================
 	@mixin module-text-shadow($shadow)
 	{

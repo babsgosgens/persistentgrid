@@ -6,6 +6,22 @@
 
 
 //  ==========================================================================
+//  Mixin input-shadow
+//  ==========================================================================
+//  a valid text-shadow notation is: inset|outset offset-x offset-y blur color
+//  
+//  @param $appearance: a string
+//  ==========================================================================
+	@mixin input-shadow($shadow: $input-shadow){
+		@if $shadow {
+			@include module-shadow($shadow);
+			@include reset-appearance(none);
+			  -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+	}
+
+
+//  ==========================================================================
 //  Mixin appearance
 //  ==========================================================================
 //  Accepts a string which a valid appearance
