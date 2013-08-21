@@ -45,79 +45,13 @@
 }
 
 
-	@mixin input-shadow($shadow: $input-shadow){
-		  -webkit-appearance: none;
-		  -moz-appearance: none; /* mobile firefox too! */
-		  -webkit-tap-highlight-color: rgba(0,0,0,0);
-
-		@include module-shadow($shadow);
-		//   -webkit-appearance: none;
-		//   -moz-appearance: none; /* mobile firefox too! */
-		//   // -webkit-tap-highlight-color: rgba(0,0,0,0);
-
-		@if $shadow==false {
-		  -webkit-appearance: none;
-		  -moz-appearance: none; /* mobile firefox too! */
-		  -webkit-tap-highlight-color: rgba(0,0,0,0);
-		}
-
-	}
-
-
-	// Expects a list in the format background-color, background-image
-	// Use false if a value should not be rendered
-	// To do: complete for other background properties;
-	@mixin form-background($background: $input-background) {
-
-		$background-color: nth($background,1);
-		$background-image: nth($background,2);
-
-		@if $background-color {
-			background-color: $background-color;
-		}
-		@if $background-image {
-			@include background-image($background-image);
-		}
-	}
-
-	// Expects a nested list in the format ($input-type-style, $input-type-variant, $input-type-weight, $input-type-family), $input-type-size, $input-type-leading
-	// The mixin will check if values are different from the base class and if so add them
-	// Equal values will be ignored to keep CSS as small as possible
-	@mixin form-type($type: $input-type) {
-		@if $type {
-
-			$type-size: nth($type,2);
-			$type-rhythm: if(nth($type,3), nth($type,3), 1);
-
-			$type: nth($type,1);
-
-			@if $type-size and $type-size!=$base-font-size {
-				@include adjust-font-size-to($type-size, $type-rhythm);
-			}
-
-			@if extract-type-style($type) != extract-type-style($type-default) {
-				@include font-style($type);
-			}
-
-			@if extract-type-variant($type) != extract-type-variant($type-default) {
-				@include font-variant($type);
-			}
-
-			@if extract-type-weight($type) != extract-type-weight($type-default) {
-				@include font-weight($type);
-			}
-
-			@if extract-type-family($type) != extract-type-family($type-default) {
-				@include font-family($type);
-			}
-
-		}
-	}
-
-	@mixin webkit-remove-shadow-on-input-elements() {
-	}
-
-
+//  ==========================================================================
+//  Mixin placeholder
+//  ==========================================================================
+//  Yields @content
+//  
+//  @param $appearance: a set of CSS property declarations
+//  ==========================================================================
 	@mixin placeholder()
 	{
 		&::-webkit-input-placeholder,
@@ -128,14 +62,17 @@
 		}
 	}
 
+
+//  ==========================================================================
+//  Mixin webkit-remove-padding-spin-button
+//  ==========================================================================
+//  Yields @content
+//  
+//  ==========================================================================
 	@mixin webkit-remove-padding-spin-button {
 
-		input::-webkit-inner-spin-button {
-		  -webkit-appearance: none;
-		}
-		input::-webkit-outer-spin-button {
-		  -webkit-appearance: none;
-		  margin: 0;
-		}
-		
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			@include reset-webkit-appearance(none);
+		}	
 	}
