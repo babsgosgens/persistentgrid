@@ -176,4 +176,78 @@
 	$select-multiple-class: $input-base-class + '-selectbox' !default;
 
 	$select-appearance-default: true;
-	$select-webkit: if($select-appearance-default, true, false);
+	$select-webkit: false;
+
+
+//  ==========================================================================
+//  Input focus properties
+//  ==========================================================================
+
+
+	// -----------------------------------------------------------------------
+	// Input background (background-color, background-image)
+	// -----------------------------------------------------------------------
+
+	$input-focussed-background-color: $whitesmoke !default;
+	$input-focussed-background-image: linear-gradient(lighten($input-focussed-background-color,5), darken($input-focussed-background-color,5)) !default;
+	$input-focussed-background:
+		$input-focussed-background-color
+		false 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Input border (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$input-focussed-border-width: 1px !default;
+	$input-focussed-border-style: solid !default;
+	$input-focussed-border-color: $color-primary !default;
+	$input-focussed-border: 
+		$input-focussed-border-width 
+		$input-focussed-border-style 
+		$input-focussed-border-color 
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Input outline (top, right, left, bottom)
+	// -----------------------------------------------------------------------
+
+	$input-focussed-outline: none !default;
+
+	$input-focussed-outline-offset: 0 !default; // disable Safari's default - we're using box-shadows cross-browser
+
+
+	// -----------------------------------------------------------------------
+	// Input corner (top-left, top-right, bottom-left, bottom-right)
+	// -----------------------------------------------------------------------
+	
+	$input-focussed-border-radius: false !default;
+
+
+	// -----------------------------------------------------------------------
+	// Input shadow (box-shadow, inner-shadow)
+	// -----------------------------------------------------------------------
+
+	$input-focussed-shadow-box: 0 0 4px $input-focussed-border-color !default;
+	$input-focussed-shadow-inner: false !default;
+	$input-focussed-shadow:
+		$input-focussed-shadow-box
+		!default;
+
+
+	// -----------------------------------------------------------------------
+	// Input text (color, shadow, align, decoration)
+	// -----------------------------------------------------------------------
+
+	$input-focussed-text-color: $color-body !default;
+	$input-focussed-text-shadow: false !default;
+	$input-focussed-text-align: left !default;
+	$input-focussed-text-decoration: none !default;
+	$input-focussed-text: 
+		$input-focussed-text-color
+		$input-focussed-text-shadow
+		$input-focussed-text-align
+		$input-focussed-text-decoration
+		!default;

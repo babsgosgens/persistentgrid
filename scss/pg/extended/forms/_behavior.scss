@@ -26,8 +26,13 @@
 		@include button-type($input-type);
 		@include button-text($input-text);
 		@include input-shadow($input-shadow);
+
 		&:focus {
 			@extend %is-#{$input-field-class}-focus;
+		}
+		@include placeholder()
+		{
+			color: $color-primary;
 		}
 	}
 
@@ -35,11 +40,15 @@
 	 * Field focus styles
 	 */
 	%is-#{$input-field-class}-focus {
-		outline-color: lighten($color-primary, 40);
-		outline-offset: -2px;
-		outline-style: solid;
-		outline-width: 1px;
-		border-color: $color-primary;
+
+		@include button-border($input-focussed-border);
+		@include button-border-radius($input-focussed-border-radius);
+		@include button-background($input-focussed-background);
+		@include input-shadow($input-focussed-shadow);
+		outline: $input-focussed-outline;
+		outline-offset: $input-focussed-outline-offset;
+				  // -webkit-tap-highlight-color: rgba(0,0,0,0);
+
 	}
 
 
@@ -51,6 +60,7 @@
 	{
 		@extend %#{$input-field-class};
 	}
+
 	select,
 	textarea,
 	input[type="date"],
@@ -115,9 +125,11 @@
 //  Select and Datalists
 //  ==========================================================================
 
-	.#{$input-field-class} {
+	.#{$select-dropdown-class} {
 		optgroup,
 		option {
+			@include button-padding($input-padding);
+			@include column-spacing;
 			font-weight: inherit;
 			font-style: inherit;
 			font-variant: inherit;
@@ -127,16 +139,16 @@
 		}
 	}
 
-
-	@if $select-appearance-default {
-		select #{$input-base-class}{
+	.#{$select-dropdown-class} {
+		@extend %#{$input-field-class};
+		@if $select-appearance-default {
 			@include reset-appearance(menulist);
 			height: vertical-rhythm($input-type-rhythm) + $input-padding-top + $input-padding-bottom;
 		}
 	}
 	@if $select-webkit {
 		.webkit {
-			select {
+			.#{$select-dropdown-class} {
 				background: $input-background-color url('/assets/images/icons/icon-sort.svg') no-repeat 1% center;
 				background-size: 10px auto;
 			}

@@ -117,6 +117,17 @@
 	@mixin webkit-remove-shadow-on-input-elements() {
 	}
 
+
+	@mixin placeholder()
+	{
+		&::-webkit-input-placeholder,
+		&:-moz-placeholder,
+		&::-moz-placeholder,
+		&:-ms-placeholder {
+		    @content;
+		}
+	}
+
 	@mixin webkit-remove-padding-spin-button {
 
 		input::-webkit-inner-spin-button {
