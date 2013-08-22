@@ -98,7 +98,7 @@
 //  --------------------------------------------------------------------------
 //  Takes a size in any value and tries to calculate it back to the desired font-unit
 //  ==========================================================================
-@mixin font-size($value)
+@mixin font-size($value, $context: $base-font-size)
 {
 	$unit: unit($value);
 

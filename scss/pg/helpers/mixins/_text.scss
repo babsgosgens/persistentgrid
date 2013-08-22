@@ -42,7 +42,7 @@
 //  @param $text-color
 //  @param $background-color
 //  ==========================================================================
-@mixin emboss-text-up($text-color, $background-color)
+@mixin emboss-text-up($text-color, $background-color, $transparency: .5)
 {
 
 	$lt: lightness($text-color);
@@ -54,14 +54,14 @@
 		/*
 		 * Dark text on light background
 		 */
-		$shadow: darken($background-color,20%);
-		@include text-shadow(1px 1px 0 $shadow);
+		$shadow: rgba(0,0,0,$transparency);
+		@include text-shadow(-1px -1px 0 $shadow);
 	}
 	@if($lt<$lb) {
 		/*
 		 * Light text on dark background
 		 */
-		$shadow: lighten($background-color,20%);
-		@include text-shadow(-1px -1px 0 $shadow);
+		$shadow: rgba(255,255,255,$transparency);
+		@include text-shadow(1px 1px 0 $shadow);
 	}
 }
