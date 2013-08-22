@@ -91,3 +91,31 @@
 	background-size: rhythm(2) rhythm(2);
 	* { background-color: transcontainer !important; background-image: none !important; outline: rgba(255,0,255,.1) dotted 1px; outline: lighten( rgb(255,0,255), .1 ) dotted 1px \9; }
 }
+
+
+//  ==========================================================================
+//  Mixin font-size-rhythm
+//  --------------------------------------------------------------------------
+//  Takes a size in any value and tries to calculate it back to the desired font-unit
+//  ==========================================================================
+@mixin font-size($value)
+{
+	$unit: unit($value);
+
+	@if $unit=="px" {
+	}
+	@if $unit=="rem" {
+		// Convert to pixels
+	}
+	@if $unit=="em" {
+		// Convert to pixels
+	}
+	@if $unit=="%" {
+		// Convert to pixels
+	}
+	@if $unit=="pt" {
+		// Convert to pixels
+	}
+
+	font-size: px-to-relative-size($value);
+}

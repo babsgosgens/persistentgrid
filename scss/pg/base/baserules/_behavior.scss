@@ -47,8 +47,12 @@ h6 {
 }
 
 %heading {
-	@include font-family($type-heading);
-	@include font-weight($type-heading);	
+	@if extract-type-family($type-heading) != extract-type-family($type-default){
+		@include font-family($type-heading);
+	}
+	@if extract-type-weight($type-heading) != extract-type-weight($type-default){
+		@include font-weight($type-heading);	
+	}
 }
 
 
