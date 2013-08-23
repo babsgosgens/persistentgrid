@@ -53,6 +53,9 @@
         @else if $property=="type" {
           @include module-type($value);
         }
+        @else {
+          @include module-property($value, $property);
+        }
       }
       @if $is-state == false {
         &:hover {
