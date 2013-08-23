@@ -5,6 +5,10 @@
 @if $trace-imports { @debug 'imported'; }
 
 
+//  ==========================================================================
+//  Render button styles
+//  ==========================================================================
+
 @each $button in $buttons {
 
   $selector: nth($button,1);
@@ -63,14 +67,9 @@
 }
 
 
-// @mixin button-variation($background, $border, $color)
-// {
-//   background: $background;
-//   border: $border;
-//   $color: $color;
-// }
-
-
+//  ==========================================================================
+//  Render layout styles
+//  ==========================================================================
 
 .#{$button-base-class}-align-top {
   @include inline-block(top);
