@@ -43,7 +43,7 @@
 	// -----------------------------------------------------------------------
 
 	$button-background-color: $color-theme !default; // not base
-	$button-background-image: linear-gradient(lighten($button-background-color,5), darken($button-background-color,5)) !default; // not base
+	$button-background-image: false !default; // not base
 
 
 	// -----------------------------------------------------------------------
@@ -61,7 +61,7 @@
 	// -----------------------------------------------------------------------
 
 	$button-shadow-box-outer: false !default;
-	$button-shadow-box-inner: inset 1px 1px 0 rgba(255, 255, 255, 0.15) !default;
+	$button-shadow-box-inner: false !default;
 
 
 	// -----------------------------------------------------------------------
@@ -88,16 +88,17 @@
 //  ==========================================================================
 
 	$button-hover-background-color: lighten($button-background-color, 20%) !default;
-	$button-hover-background-image: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5)) !default;
+	$button-hover-background-image: false !default;
 	$button-hover-border-color: $button-hover-background-color !default;
 
 
 //  ==========================================================================
 //  Button active state properties
+//  $button-active-background-image: linear-gradient(lighten($button-active-background-color,5),darken($button-active-background-color,5))
 //  ==========================================================================
 
 	$button-active-background-color: lighten($button-background-color, 20%) !default;
-	$button-active-background-image: linear-gradient(lighten($button-active-background-color,5),darken($button-active-background-color,5)) !default;
+	$button-active-background-image: false !default;
 	$button-active-border-color: $button-active-background-color !default;
 
 

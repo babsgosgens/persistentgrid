@@ -4,8 +4,6 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-// @import "helpers"; // I don't understand why the helpers arent included!
-
 
 @each $button in $buttons {
 

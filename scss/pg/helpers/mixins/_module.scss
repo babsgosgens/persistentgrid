@@ -254,17 +254,18 @@
 //  @param $text
 //  ==========================================================================
 	@mixin module-text($text)
-	{
+	{		
 		@if $text {
+
 			$align: nth($text,1);
 			$decoration: nth($text,2);
 			$shadow: nth($text,3);
 
 			@if $align {
-				@include module-property($shadow, text-align);
+				@include module-property($align, text-align);
 			}
 			@if $decoration {
-				@include module-property($shadow, text-decoration);
+				@include module-property($decoration, text-decoration);
 			}
 			@if $shadow {
 				@include text-shadow($shadow);
