@@ -13,9 +13,21 @@
 //  
 //  @param $selector: a string
 //  ==========================================================================
-@mixin button($selector)
+@mixin button-base($selector)
 {
   #{$selector} {
     @content;
   }
+}
+
+@mixin button($button-base-class, $button-class)
+{
+	$selector: '.' + $button-base-class;
+	@if $button-class != '' {
+		$selector: $selector + '-' + $button-class;
+	}
+	
+	#{$selector} {
+	    @content;
+	}
 }

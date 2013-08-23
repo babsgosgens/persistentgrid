@@ -10,7 +10,7 @@
 //  ==========================================================================
 
 a {
-	color: $link-color;
+	color: $anchor-color;
 	&:hover {
 		@extend .is-a-hover;
 	}
@@ -23,13 +23,13 @@ a {
 }
 
 .is-a-hover {
-	color: $link-color-hover;
+	color: $anchor-color-hover;
 }
 .is-a-active {
-	color: $link-color-active;
+	color: $anchor-color-active;
 }
 .is-a-visited {
-	color: $link-color-visited;
+	color: $anchor-color-visited;
 }
 
 

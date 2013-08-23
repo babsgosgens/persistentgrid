@@ -7,53 +7,65 @@
 @import "helpers"; // I don't understand why the helpers arent included!
 
 
-@include button(".#{$button-base-class}")
+@mixin button-variation($background, $border, $color)
+{
+  background: $background;
+  border: $border;
+  $color: $color;
+}
+
+
+
+@include button-base(".#{$button-base-class}")
 {
   @include inline-block($button-vertical-align);
-  @include module-padding($button-padding);
-  @include module-background($button-background);
-  @include module-border($button-border);
+  @include module-padding($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left);
+  @include module-background($button-background-color $button-background-image);
+  @include module-border($button-border-width $button-border-style $button-border-color);
   @include module-border-radius($button-border-radius);
-  @include module-shadow($button-shadow);
-  @include property($label-text-color, 'color');
-  @include property($label-text-align, 'text-align');
-  @include property($label-text-decoration, 'text-decoration');
-  @include module-text-shadow($label-text-shadow);
-  @include module-type($button-type);
-  @include button('&:hover')
+  @include module-shadow($button-shadow-box-outer $button-shadow-box-inner);
+  @include module-property( $button-text-color, 'color');
+  @include module-property( $button-text-align, 'text-align');
+  @include module-property( $button-text-decoration, 'text-decoration');
+  @include emboss-text-up($button-text-color, $button-background-color);
+  @include module-type($button-type-type $button-type-size $button-type-rhythm);
+
+  @include button-base('&:hover')
   {
     @extend .is-#{$button-base-class}-hover !optional;
   }
-  @include button('&:active')
+  @include button-base('&:active')
   {
     @extend .is-#{$button-base-class}-active !optional;
+  }
+}
+
+@each $button-style in $buttons {
+  @include button($button-base-class, $button-style)
+  {
+    @include module-padding('$button-#{$button-style}-padding-top' $button-padding-right $button-padding-bottom $button-padding-left);
+    @include module-background($button-background-color $button-background-image);
+    @include module-border($button-border-width $button-border-style $button-border-color);
+    @include module-border-radius($button-border-radius);
+    @include module-shadow($button-shadow-box-outer $button-shadow-box-inner);
+
+    @include module-property( $button-text-color, 'color');
+    @include module-property( $button-text-align, 'text-align');
+    @include module-property( $button-text-decoration, 'text-decoration');
+    @include emboss-text-up($button-text-color, $button-background-color);
+    @include module-type($button-type-type $button-type-size $button-type-rhythm);
   }
 }
 
 .#{$button-base-class}-align-top {
   @include inline-block(top);
 }
-
-@include button(".is-#{$button-base-class}-hover")
-{
-  @include module-background($button-hover-background);
-  @include module-border($button-hover-border);
-  @include module-shadow($button-hover-shadow);
-}
-
-@include button(".is-#{$button-base-class}-active")
-{
-  @include module-background($button-active-background);
-  @include module-border($button-active-border);
-  @include module-shadow($button-active-shadow);
-}
-
 .#{$button-base-class}-small {
   padding-top: 0;
   padding-bottom: 0;
 }
 .#{$button-base-class}-big {
-  // @include adjust-font-size-to($px-l, 1.5);
+  @include adjust-font-size-to($font-size-l, 1.5);
 }
 .#{$button-base-class}-stretch {
   width: 100%;

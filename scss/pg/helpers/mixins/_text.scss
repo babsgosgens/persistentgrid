@@ -5,39 +5,30 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-//  ==========================================================================
-//  Mixin emboss-text-down
-//  --------------------------------------------------------------------------
-//  @param $text-color
-//  @param $background-color
-//  ==========================================================================
-@mixin emboss-text-down($text-color, $background-color)
+@function calculate-text-shadow($text-color, $bg-color, $down: true)
 {
+	$lightness-text: lightness($text-color);
+	$lightness-background: lightness($background-color);
 
-	$lt: lightness($text-color);
-	$lb: lightness($background-color);
+	$text-is-darker: $lightness-text > $lightness-background;
 
-	$shadow: mix($text-color,$background-color);
+	@return false;
 
-	$distance: .025em;
-
-	@if($lt>$lb) {
-		/*
-		 * Dark text on light background
-		 */
-		@include text-shadow(-1*$distance -1*$distance 0 $shadow);
+	@if $down {
+		@if $text-is-darker {
+		}
+		@else {
+		}
 	}
-	@if($lt<$lb) {
-		/*
-		 * Light text on dark background
-		 */
-		@include text-shadow($distance $distance 0 $shadow);
+	@else {
+		@if $text-is-darker {
+		}
+		@else {
+		}
 	}
 }
-
-
 //  ==========================================================================
-//  Mixin emboss-text-down
+//  Mixin emboss-text-up
 //  --------------------------------------------------------------------------
 //  @param $text-color
 //  @param $background-color
@@ -48,7 +39,36 @@
 	$lt: lightness($text-color);
 	$lb: lightness($background-color);
 
-	$distance: .025em;
+	$shadow: mix($text-color,$background-color);
+
+	@if($lt>$lb) {
+		/*
+		 * Dark text on light background
+		 */
+		$shadow: rgba(255,255,255,$transparency);
+		@include text-shadow(-1px -1px 0 $shadow);
+	}
+	@if($lt<$lb) {
+		/*
+		 * Light text on dark background
+		 */
+		$shadow: rgba(0,0,0,$transparency);
+		@include text-shadow(1px 1px 0 $shadow);
+	}
+}
+
+
+//  ==========================================================================
+//  Mixin emboss-text-down
+//  --------------------------------------------------------------------------
+//  @param $text-color
+//  @param $background-color
+//  ==========================================================================
+@mixin emboss-text-down($text-color, $background-color, $transparency: .5)
+{
+
+	$lt: lightness($text-color);
+	$lb: lightness($background-color);
 
 	@if($lt>$lb) {
 		/*

@@ -33,9 +33,9 @@
 		 * Font and text treatments
 		 */
 		@include module-type($input-type);
-		@include property($label-text-color, 'color');
-		@include property($label-text-align, 'text-align');
-		@include property($label-text-decoration, 'text-decoration');
+		@include module-property($label-text-color, 'color');
+		@include module-property($label-text-align, 'text-align');
+		@include module-property($label-text-decoration, 'text-decoration');
 		@include module-text-shadow($label-text-shadow);
 
 		&:focus {
@@ -200,9 +200,9 @@
 		@include module-shadow($label-shadow);
 
 		@include module-type($label-type);
-		@include property($label-text-color, 'color');
-		@include property($label-text-align, 'text-align');
-		@include property($label-text-decoration, 'text-decoration');
+		@include module-property($label-text-color, 'color');
+		@include module-property($label-text-align, 'text-align');
+		@include module-property($label-text-decoration, 'text-decoration');
 		@include module-text-shadow($label-text-shadow);
 	}
 

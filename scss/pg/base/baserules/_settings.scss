@@ -19,10 +19,10 @@
 	$color-warning: $orange !default;
 	$color-error: $red !default;
 
-	$link-color: $color-primary !default;
-	$link-color-hover: darken($link-color, 20%) !default;
-	$link-color-active: lighten($link-color, 15%) !default;
-	$link-color-visited: darken($link-color, 30%) !default;
+	$anchor-color: $color-primary !default;
+	$anchor-color-hover: darken($anchor-color, 20%) !default;
+	$anchor-color-active: lighten($anchor-color, 15%) !default;
+	$anchor-color-visited: darken($anchor-color, 30%) !default;
 
 
 //  ==========================================================================

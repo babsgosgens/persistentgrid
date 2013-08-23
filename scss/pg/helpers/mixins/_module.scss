@@ -26,7 +26,7 @@
 
 
 		@if $length==1 {
-			@include property($values, $property);
+			@include module-property($values, $property);
 		}
 
 
@@ -45,7 +45,7 @@
 					#{$property}: nth($values,1) nth($values,2);
 				}
 				@else {
-					@include property($values, $property);
+					@include module-property($values, $property);
 				}
 			}
 			@else {
@@ -56,7 +56,7 @@
 						$i: index($values, $value);
 						$side: padding-#{nth($sides,$i)};
 
-						@include property($value, $side);
+						@include module-property($value, $side);
 					}
 				}
 			}
@@ -73,7 +73,7 @@
 //  @param $values: a single value
 //  @param $property: a string (e.g. padding, margin-left, border-color) or false if nothing should be compiled
 //  ==========================================================================
-	@mixin property($values, $property)
+	@mixin module-property($values, $property)
 	{
 		@if $values {
 			#{$property}: $values;
@@ -140,7 +140,7 @@
 		}
 		@else {
 			@if $border {
-				@include property(#{$border}, border);
+				@include module-property(#{$border}, border);
 			}
 		}
 	}
