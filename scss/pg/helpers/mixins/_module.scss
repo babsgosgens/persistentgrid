@@ -82,6 +82,34 @@
 
 
 //  ==========================================================================
+//  Mixin for modules: display
+//  ==========================================================================
+//  
+//  @param $values: a list of display and vertical-align or false if nothing should be compiled
+//  ==========================================================================
+	@mixin module-display($values)
+	{
+		@if $values {
+
+			$display: nth($values,1);
+			$vertical-align: nth($values,1);
+
+			@if $display==inline-block {
+				@include inline-block($vertical-align);
+			}
+			@else {
+				@if $display {
+					@include module-property($display, display);
+				}
+				@if $vertical-align {
+					@include module-property($vertical-align, vertical-align);
+				}
+			}
+		}
+	}
+
+
+//  ==========================================================================
 //  Mixin for modules: margin (placeholder for sides())
 //  ==========================================================================
 //  Accepts either a single value represetning all four sides, 
@@ -214,6 +242,32 @@
 			}
 			@if $background-image {
 				@include background-image($background-image);
+			}
+		}
+	}
+
+
+//  ==========================================================================
+//  Mixin for modules: text
+//  ==========================================================================
+//  
+//  @param $text
+//  ==========================================================================
+	@mixin module-text($text)
+	{
+		@if $text {
+			$align: nth($text,1);
+			$decoration: nth($text,2);
+			$shadow: nth($text,3);
+
+			@if $align {
+				@include module-property($shadow, text-align);
+			}
+			@if $decoration {
+				@include module-property($shadow, text-decoration);
+			}
+			@if $shadow {
+				@include text-shadow($shadow);
 			}
 		}
 	}

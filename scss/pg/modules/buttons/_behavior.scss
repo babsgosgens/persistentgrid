@@ -4,58 +4,75 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "helpers"; // I don't understand why the helpers arent included!
+// @import "helpers"; // I don't understand why the helpers arent included!
 
 
-@mixin button-variation($background, $border, $color)
-{
-  background: $background;
-  border: $border;
-  $color: $color;
+@each $button in $buttons {
+
+  $selector: nth($button,1);
+  $properties: nth($button,2);
+  $is-state: nth($button,3);
+
+  @if length($properties) != 0 {
+
+    .#{$selector} {
+      @each $property in $properties {
+
+        $value: nth($property,2);
+        $property: nth($property,1);
+
+        @if $property=="cursor" {
+          @include module-property($value, $property);
+        }
+        @else if $property=="display" {
+          @include module-display($value);
+        }
+        @else if $property=="padding" {
+          @include module-padding($value);
+        }
+        @else if $property=="background" {
+          @include module-background($value);
+        }
+        @else if $property=="border" {
+          @include module-border($value);
+        }
+        @else if $property=="border-radius" {
+          @include module-border-radius($value);
+        }
+        @else if $property=="box-shadow" {
+          @include module-shadow($value);
+        }
+        @else if $property=="color" {
+          @include module-property($value, "color");
+        }
+        @else if $property=="text" {
+          @include module-text($value);
+        }
+        @else if $property=="type" {
+          @include module-type($value);
+        }
+      }
+      @if $is-state == false {
+        &:hover {
+          @extend .is-#{$selector}-hover !optional;
+        }
+        &:active {
+          @extend .is-#{$selector}-active !optional;
+        }
+      }
+    }
+  }
 }
 
 
+// @mixin button-variation($background, $border, $color)
+// {
+//   background: $background;
+//   border: $border;
+//   $color: $color;
+// }
 
-@include button-base(".#{$button-base-class}")
-{
-  @include inline-block($button-vertical-align);
-  @include module-padding($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left);
-  @include module-background($button-background-color $button-background-image);
-  @include module-border($button-border-width $button-border-style $button-border-color);
-  @include module-border-radius($button-border-radius);
-  @include module-shadow($button-shadow-box-outer $button-shadow-box-inner);
-  @include module-property( $button-text-color, 'color');
-  @include module-property( $button-text-align, 'text-align');
-  @include module-property( $button-text-decoration, 'text-decoration');
-  @include emboss-text-up($button-text-color, $button-background-color);
-  @include module-type($button-type-type $button-type-size $button-type-rhythm);
 
-  @include button-base('&:hover')
-  {
-    @extend .is-#{$button-base-class}-hover !optional;
-  }
-  @include button-base('&:active')
-  {
-    @extend .is-#{$button-base-class}-active !optional;
-  }
-}
-
-@each $button-style in $buttons {
-  @include button($button-base-class, $button-style)
-  {
-    @include module-padding('$button-#{$button-style}-padding-top' $button-padding-right $button-padding-bottom $button-padding-left);
-    @include module-background($button-background-color $button-background-image);
-    @include module-border($button-border-width $button-border-style $button-border-color);
-    @include module-border-radius($button-border-radius);
-    @include module-shadow($button-shadow-box-outer $button-shadow-box-inner);
-
-    @include module-property( $button-text-color, 'color');
-    @include module-property( $button-text-align, 'text-align');
-    @include module-property( $button-text-decoration, 'text-decoration');
-    @include emboss-text-up($button-text-color, $button-background-color);
-    @include module-type($button-type-type $button-type-size $button-type-rhythm);
-  }
-}
 
 .#{$button-base-class}-align-top {
   @include inline-block(top);

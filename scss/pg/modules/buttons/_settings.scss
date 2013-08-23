@@ -96,47 +96,57 @@
 //  Button active state properties
 //  ==========================================================================
 
-	$button-hover-background-color: lighten($button-background-color, 20%) !default;
-	$button-hover-background-image: linear-gradient(lighten($button-hover-background-color,5),darken($button-hover-background-color,5)) !default;
-	$button-hover-border-color: $button-hover-background-color !default;
+	$button-active-background-color: lighten($button-background-color, 20%) !default;
+	$button-active-background-image: linear-gradient(lighten($button-active-background-color,5),darken($button-active-background-color,5)) !default;
+	$button-active-border-color: $button-active-background-color !default;
 
 
 //  ==========================================================================
 //  Buttons
 //  ==========================================================================
 
-	$button-base: (
-		(cursor, $button-cursor),
-		(display, ($button-display, $button-vertical-align)),
-		(padding, ($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left)),
-		(background, ($button-background-color $button-background-image)),
-		(border, ($button-border-width $button-border-style $button-border-color)),
-		(border-radius, ($button-border-radius)),
-		(box-shadow, ($button-shadow-box-outer $button-shadow-box-inner)),
-		(text, ($button-text-color $button-text-align $button-text-decoration $button-text-shadow)),
-		(type, ($button-type-type $button-type-size $button-type-rhythm))
-	) !default;
+	$button-base: 
+		$button-base-class,
+		(
+			(cursor, ($button-cursor))
+			(display, ($button-display $button-vertical-align))
+			(padding, ($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left))
+			(background, ($button-background-color $button-background-image))
+			(border, ($button-border-width $button-border-style $button-border-color))
+			(border-radius, ($button-border-radius))
+			(box-shadow, ($button-shadow-box-outer $button-shadow-box-inner))
+			(color, ($button-text-color))
+			(text, ($button-text-align $button-text-decoration $button-text-shadow))
+			(type, ($button-type-type $button-type-size $button-type-rhythm))
+		),
+		false
+		!default;
 
-	$button-hover: (
-		(cursor, false),
-		(display, false),
-		(padding, false),
-		(background, ($button-hover-background-color $button-hover-background-image)),
-		(border, (false false $button-hover-border-color)),
-		(border-radius, false),
-		(box-shadow, false),
-		(text, false),
-		(type, false)
-	) !default;
+	$button-state: 
+		'state',
+		(
+			(cursor, false)
+			(display, false)
+			(padding, false)
+			(background, false)
+			(border, false)
+			(border-radius, false)
+			(box-shadow, false)
+			(color, false)
+			(text, false)
+			(type, false)
+		),
+		true
+		!default;
 
-	$button: new($button-base, '') !default;
+	$button: clone($button-base, "#{$button-base-class}", false) !default;
+	$button-hover: new($button-state, "is-#{$button-base-class}-hover", true) !default;
+	$button-active: new($button-state, "is-#{$button-base-class}-active", true) !default;
 
-	$button-hover: new($button-hover, 'hover') !default;
+	$button-hover: change($button-hover, (background, ($button-hover-background-color $button-hover-background-image)));
+	$button-hover: change($button-hover, (border, (false false $button-hover-border-color)));
 
-	$button-active: clone($button-hover, 'active') !default;
-	$button-active: change($button-hover, (background, ($button-active-background-color $button-active-background-image))) !default;
-	$button-active: change($button-hover, (border, (false false $button-active-border-color))) !default;
+	$button-active: change($button-active, (background, ($button-active-background-color $button-active-background-image)));
+	$button-active: change($button-active, (border, (false false $button-active-border-color)));
 
 	$buttons: $button, $button-hover, $button-active !default;
-
-
