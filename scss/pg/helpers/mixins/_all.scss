@@ -4,10 +4,11 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+@import "anchors";
+@import "baseline";
+@import "breakpoints";
 @import "content";
 @import "css-triangle";
-@import "breakpoints";
 @import "module";
-@import "units";
-@import "baseline";
 @import "text";
+@import "units";

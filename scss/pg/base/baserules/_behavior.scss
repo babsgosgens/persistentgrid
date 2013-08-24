@@ -9,29 +9,30 @@
 //  Anchors
 //  ==========================================================================
 
-a {
-	color: $anchor-color;
-	&:hover {
-		@extend .is-a-hover;
-	}
-	&:active {
-		@extend .is-a-active;
-	}
-	&:visited {
-		@extend .is-a-visited;
-	}
-}
+// a {
+// 	color: $anchor-color;
+// 	&:hover {
+// 		@extend .is-a-hover;
+// 	}
+// 	&:active {
+// 		@extend .is-a-active;
+// 	}
+// 	&:visited {
+// 		// @extend .is-a-visited;
+// 	}
+// }
 
-.is-a-hover {
-	color: $anchor-color-hover;
-}
-.is-a-active {
-	color: $anchor-color-active;
-}
-.is-a-visited {
-	color: $anchor-color-visited;
-}
+// .is-a-hover {
+// 	color: $anchor-color-hover;
+// }
+// .is-a-active {
+// 	color: $anchor-color-active;
+// }
+// .is-a-visited {
+// 	color: $anchor-color-visited;
+// }
 
+@include anchor-color(a, $anchor-color, $anchor-color-hover, $anchor-color-active, $anchor-color-visited);
 
 //  ==========================================================================
 //  Headings
