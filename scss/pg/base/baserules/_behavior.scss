@@ -32,7 +32,7 @@
 // 	color: $anchor-color-visited;
 // }
 
-@include anchor-color(a, $anchor-color, $anchor-color-hover, $anchor-color-active, $anchor-color-visited);
+@include anchor-color(a, $anchor-color, $anchor-color-hover, $anchor-color-active, $anchor-color-visited, true);
 
 //  ==========================================================================
 //  Headings
