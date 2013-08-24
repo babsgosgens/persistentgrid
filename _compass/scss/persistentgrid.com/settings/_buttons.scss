@@ -1,0 +1,68 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later !default; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+@import "pg/modules/buttons/helpers/elements";
+
+
+//  ==========================================================================
+//  Button overrides
+//  ==========================================================================
+
+	$button-type-type: $type-default;
+	$button-type-size: $base-font-size;
+	$button-type-rhythm: 1;
+
+	$new_button: change($button, (type, ($button-type-type $button-type-size $button-type-rhythm)));
+	$new_button: change($new_button, (background, ($color-attn-one false)));
+	$new_button: change($new_button, (border, (1px solid $color-attn-one)));
+	$new_button: change($new_button, (border-radius, $corner-radius));
+	$new_button: change($new_button, (color, ($white)));
+
+	$new_button-hover: change($button-hover, (color, ($white)));
+
+	//* Replace default button with this one */
+	$buttons: replace($buttons, $button, $new_button);
+	$buttons: replace($buttons, $button-hover, $new_button-hover);
+
+//  ==========================================================================
+//  Button transparent
+//  ==========================================================================
+
+	$button-transparent-background-color: transparent;
+	$button-transparent-background-image: none;
+	$button-transparent-border-color: transparent;
+	$button-transparent-text-color: $anchor-color;
+
+	$button-transparent: new($button-state, #{$button-base-class}-transparent, false) !default;
+
+	$button-transparent: change($button-transparent, (background, ($button-transparent-background-color $button-transparent-background-image)));
+	$button-transparent: change($button-transparent, (border, (false false $button-transparent-border-color false)));
+	$button-transparent: change($button-transparent, (box-shadow, (false false)));
+	$button-transparent: change($button-transparent, (color, ($color-body)));
+	$button-transparent: change($button-transparent, (text, (left false none)));
+
+	//* Add the transparent button to the button list for rendering */
+	$buttons: append($buttons, $button-transparent);
+
+
+//  ==========================================================================
+//  Button transparent hover
+//  ==========================================================================
+
+	$button-transparent-hover: clone($button-transparent, is-#{$button-base-class}-transparent-hover, true);
+
+	//* Add the button state to the button list for rendering */
+	$buttons: append($buttons, $button-transparent-hover);
+
+
+//  ==========================================================================
+//  Button transparent hover
+//  ==========================================================================
+
+	$button-transparent-active: clone($button-transparent, is-#{$button-base-class}-transparent-active, true);
+
+	//* Add the button state to the button list for rendering */
+	$buttons: append($buttons, $button-transparent-active);

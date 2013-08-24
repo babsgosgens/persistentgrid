@@ -1,0 +1,19 @@
+.site-header {
+	@include column-width(1/2);
+	@include pull(1/2);
+	vertical-align: bottom;
+}
+.nav-main {
+	@include column-width(1/2);
+	@include push(1/2);
+	@include leader(4);
+	vertical-align: bottom;
+}
+
+.usp-text {
+	@include column-width(1/2);
+	vertical-align: bottom;
+}
+.usp-image {
+	@include column-width(1/2);
+}

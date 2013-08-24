@@ -1,0 +1,52 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+
+// 	================================================================================================================================
+// 	Colors
+// 	================================================================================================================================
+
+	// http://www.colourlovers.com/palette/693035/kawaii_candy
+	$kawaii-grey: #e6e6e6;
+	$social-butterfly: #ffb3b3;
+	$singalongs: #ff7888;
+	$algae: #21a68d;
+	$kawaii-teal: #169185;
+	$purple: #662483;
+
+	$kawaii-grey-rgb: 230,230,230;
+	$social-butterfly-rgb: 255,179,179;
+	$singalongs-rgb: 255,120,136;
+	$algae-rgb: 33,166,141;
+	$kawaii-teal-rgb: 22,145,133;
+	$purple-rgb: 102,36,131;
+
+	$pg-grey: #f6f7ef;
+	$pg-dark-grey: #555;
+	$pg-yellow: #fffba3;
+	$pg-cyan: #75ffff;
+	$pg-dark-cyan: #00cbcb;
+	$pg-red: #f77;
+
+	$pg-grey-rgb: 246,247,239;
+	$pg-yellow-rgb: 255,251,163;
+	$pg-cyan-rgb: 117,255,255;
+	$pg-dark-cyan-rgb: 0,203,203;
+	$pg-red-rgb: 255,119,119;
+
+	$color-theme: $pg-dark-grey;
+	$color-primary: $algae;
+	$color-attn-one: $singalongs;
+	$color-attn-two: $social-butterfly;
+	$color-attn-three: $algae;
+	$color-attn-four: $kawaii-teal;
+
+	$color-background: $pg-yellow;
+	$color-body: $color-theme;
+
+	$anchor-color: $algae;
+	$anchor-color-hover: $singalongs;
+	$anchor-color-active: $social-butterfly;
+	$anchor-color-visited: $anchor-color;

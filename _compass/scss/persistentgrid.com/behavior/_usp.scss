@@ -1,0 +1,51 @@
+
+
+.usp {
+	&.one {
+
+	}
+	&.two {
+		@include trailer(2);
+		.usp-title {
+			color: $color-attn-one;
+		}
+	}
+	&.three {
+		.usp-title {
+			color: $color-primary;
+		}
+		@include trailer(2);
+	}
+	&.actions {
+		@include leader(1);
+		@include trailer(1);
+	}
+}
+.usp-text {
+	@include leader(3.5);
+	@include trailer(1.5);
+	vertical-align: bottom;
+}
+.usp-title {
+	@include adjust-font-size-to($font-size-xl,1.5);
+	@include trailer(.5);
+}
+.usp-image {
+	text-align: center;
+	&.icecream-01 {
+		img {
+			position: relative;
+			bottom: vertical-rhythm(-5.5);
+			margin-top: vertical-rhythm(-4);
+		}
+	}
+	&.icecream-02 {
+		img {
+		// max-width: 120px;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}

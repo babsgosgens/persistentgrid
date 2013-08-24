@@ -1,0 +1,75 @@
+// <nav class="mainnav" role="navigation">
+// 	<ul>
+// 		<li><a href="">Home</a></li>
+// 		<li><a href="">Getting Started</a></li>
+// 		<li><a href="">Documentation</a></li>
+// 		<li><a href="">Examples &amp; Tutorials</a></li>
+// 		<li><a href="">Blog</a></li>
+// 	</ul>
+// </nav>
+
+.nav-main {
+	text-align: center;
+	@include font-size($font-size-s);
+	&>ul {
+
+	}
+	a {
+		&:hover {
+			@extend .is-nav-active;
+		}
+		&:active {
+		}
+	}
+}
+
+.is-nav-active {
+	background: rgba(0,0,0,.2);
+	@include border-radius($corner-radius);
+}
+.nav {
+	li {
+		display: inline;
+	}
+	a {
+		display: inline-block;
+		padding: vertical-rhythm(.25) horizontal-rhythm(.25);
+		text-decoration: none;
+	}
+}
+
+.nav-sub {
+	a {
+		padding: vertical-rhythm(.25) horizontal-rhythm(.5);
+		color: $white;
+		&:hover {
+			@extend .is-subnav-hover;
+		}
+		&:active {
+			@extend .is-subnav-active;
+		}
+	}
+}
+.nav-sub-bg {
+	@include leader(1.5);
+	background-color: darken($color-theme, 20%);
+	background-color: rgba(0,0,0,.2);
+}
+
+// Hover states
+nav {
+	.is-subnav-hover {
+		background-color: darken($color-theme, 10%);
+		background-color: rgba(0,0,0,.1);
+		color: $white;
+	}
+	.is-subnav-active {
+		background: $pg-grey url(../images/backgrounds/noise.png);
+		color: $color-attn-one !important;
+		@include emboss-text-down($color-body, $color-background, 1);
+		&:hover {
+			background: $pg-grey url(../images/backgrounds/noise.png) !important;
+			color: $color-primary !important;
+		}
+	}
+}

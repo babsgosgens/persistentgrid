@@ -1,0 +1,16 @@
+.site-header-title {
+	@include adjust-font-size-to($site-header-title-font-size, 1);
+	// position: relative;
+	// left: -14/30*1.2em;
+	img {
+		margin-right: .175em;
+	}
+}
+.site-header-subtitle {
+	display: block;
+	@include adjust-font-size-to($font-size-s,1,$site-header-title-font-size);
+	color: darken($white,15%);
+	@include emboss-text-down(darken($white,15%), $color-theme, .4);
+	// @include text-shadow(none);
+	// text-indent: 1.2em;
+}

@@ -1,0 +1,24 @@
+html {
+	background: $color-background url(../images/backgrounds/noise.png);
+}
+body {
+	@include emboss-text-down($color-body, $color-background, 1);
+}
+.backdrop {
+	background: $pg-grey url(../images/backgrounds/noise.png);
+	&.top {
+		background-color: $color-theme;
+		color: $white;
+		@include emboss-text-down($white, $color-theme, 1);
+	}
+
+	a {
+		$color: #2DB1AC;
+		@include text-shadow(inherit);
+		@include emboss-text-down($color, $color-theme, .4);
+		@include anchor-color(false, $color, $anchor-color-hover, $anchor-color-active, false, false);
+	}
+	&.main {
+
+	}
+}

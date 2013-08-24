@@ -1,0 +1,45 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
+//  */
+
+
+@import "settings/colors";
+
+
+// 	================================================================================================================================
+// 	Typography
+// 	================================================================================================================================
+	
+	$type_default: $sofia-pro-light;
+	$type_heading: $sofia-pro-light;
+
+	$site-header-title-font-size: 30px;
+	$font-size-xl: 36px;
+	$font-size-l: 16px;
+	$font-size-m: 16px;
+	$font-size-s: 14px;
+	$font-size-xs: 12px;
+	$font-size-xxs: 10px;
+
+	// Icons
+	$FontAwesomePath: "/assets/fonts" !default;
+
+// 	================================================================================================================================
+// 	Radius
+// 	================================================================================================================================
+
+	$corner-radius: 3px;
+
+
+// 	================================================================================================================================
+// 	Layout
+// 	================================================================================================================================
+	
+	// $column-spacing-perstistent: true;
+	$column-breakpoint: $medium-handheld;
+
+
+	
+@import "settings/buttons";
+
