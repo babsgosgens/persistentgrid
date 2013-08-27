@@ -3,14 +3,14 @@
 //  * Licensed under GNU General Public License version 2 or later; see LICENSE.txt
 //  */
 
-@import "behavior/recent-posts";
 @import "behavior/site-footer";
-@import "behavior/site-headings";
 @import "behavior/site-header";
 @import "behavior/site-theme";
 @import "behavior/site-layout";
 @import "behavior/site-navigation";
 
+@import "behavior/headings";
+@import "behavior/posts";
 @import "behavior/usp";
 @import "behavior/list-api";
 

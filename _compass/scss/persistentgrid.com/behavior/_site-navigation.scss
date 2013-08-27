@@ -129,6 +129,7 @@
 
 .chapter-nav {
 	@extend %nav;
+	margin-top: vertical-rhythm(1);
 	a {
 		@include border-radius($corner-radius);
 		&:active,
