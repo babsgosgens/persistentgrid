@@ -64,7 +64,7 @@
 
             panes.each(function() {
 
-                var trigger = $(this).find(config.classTrigger).clone(),
+                var trigger = $(this).find(config.classTrigger),
                     li = $('<li />').append( trigger )
                     ;
 
@@ -91,7 +91,9 @@
           var panes    = $(config.classPane);
 
           panes
-              .hide()
+              .hide();
+
+          panes
               .find(config.classTrigger).replaceWith(function(e, el){
 
               var obj = $(this),
