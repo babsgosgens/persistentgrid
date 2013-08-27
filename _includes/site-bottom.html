@@ -50,26 +50,28 @@
         {
             var defaults = {
                     classTabs: "tabs",
+                    classPane: ".tabs-pane",
                     classTrigger: ".tabs-trigger",
-                    listWrap: '<nav />'
+                    wrap: ''
                 },
                 config = $.extend({}, defaults, config),
                 el = $(el),
-                list = $('<ul />')
-                ;
+                list = $('<ul />');
 
-            $(el).prepend(list);
+            var panes = $(config.classPane);
 
-            $(config.classPane).each(function() {
+            panes.first().before(list);
 
-                var trigger = $(this).find(config.classTrigger),
+            panes.each(function() {
+
+                var trigger = $(this).find(config.classTrigger).clone(),
                     li = $('<li />').append( trigger )
                     ;
 
                 list.append(li)
             });
 
-            list.wrap( config.listWrap );
+            list.wrap( config.wrap );
         }
 
         $.tabs = function(el, config)
@@ -77,9 +79,11 @@
           // Configuration
           var defaults = {
               classTabs: "tabs",
-              classPane   : ".tabs-pane",
+              classPane: ".tabs-pane",
               classTrigger: ".tabs-trigger",
-              classContent: ".tabs-content"
+              classContent: ".tabs-content",
+              classActiveTrigger:  "is-tab-active",
+              classActivePane: "is-pane-open"
             },
             config = $.extend({}, defaults, config),
             el = $(el);
@@ -87,12 +91,7 @@
           var panes    = $(config.classPane);
 
           panes
-
-              // hide all panes on load
               .hide()
-              .addClass('is-pane-closed')
-
-              // replace with anchor tag
               .find(config.classTrigger).replaceWith(function(e, el){
 
               var obj = $(this),
@@ -100,9 +99,7 @@
                   objRel = obj.data("rel"),
                   objHtml = obj.html()
                   objClss = obj.attr("class"),
-                  a = null;
-
-                  console.log(objTag);
+                  a = '';
 
               if(objTag=="A") {
                 a = obj;
@@ -137,29 +134,21 @@
                     pane = $( target )
                     ;
 
-                pane
-                    .removeClass('is-pane-closed').addClass('is-pane-open')
-                    .siblings('.tabs-pane').removeClass('is-pane-open').addClass('is-pane-closed')
-                    .slideUp(0)
-                    ;
+                triggers.removeClass( config.classActiveTrigger );
+                panes.removeClass( config.classActivePane ).slideUp(100);
 
-                $('.chapter-nav').children('a').removeClass('is-nav-active');
-
-                trigger.toggleClass('is-nav-active');
-
-                pane.slideDown();
+                trigger.addClass( config.classActiveTrigger );
+                pane.addClass( config.classActivePane ).slideDown();
 
             }).first().trigger('click');
 
             $(el).tabAnchors(config);
-
         }
-  
 
-
-          // hide all sections on load
-          // @todo must be part of plugin
-          $(".tabs").tabs({targetAttribute: 'data-rel'});
+        $(".section-content").tabs({
+          wrap: '<nav class="chapter-nav" />', 
+          classActiveTrigger:  "is-nav-active"
+        });
    
     })(jQuery);
     </script>
