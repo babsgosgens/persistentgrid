@@ -1,0 +1,108 @@
+---
+layout: default
+section: documentation
+sub-section: reference-manual
+chapter: modules
+title: "Reference Manual: Modules"
+---
+
+<h1 class="chapter-heading">Modules</h1>
+
+<nav class="chapter-links">
+	<ul class="inline-list">
+		<li>
+			<a href="#introduction">Introduction</a>
+		</li
+		>
+	</ul>
+</nav>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Introduction</h2
+	><div class="three-fourth column">
+
+		<p>PG Framework consists of a number of modules. Todo: explain more.</p>
+
+		<h3 class="article-header-level3">Skin module</h3>
+		<p>The skin module is where all your project's settings reside. Any module settings are imported through the Skin modules and project specific settings like colours are set here.</p>
+
+		<h3 class="article-header-level3">Helper module</h3>
+		<p>The Helper module is a collection of helper functions and mixins.</p>
+
+		<h3 class="article-header-level3">Base modules</h3>
+		<p>Base modules are the core of each project. Base modules are responsible for your site's soul. They define your Type and whitespace and set the base for all modules.</p>
+
+			<h4>Reset</h4>
+			<p>Based on Compass Reset - which is in turn based on Eric Meyer's reset - I have assembled a custom reset that is a little more configurable and specifically adapted for Persistent Grid.</p>
+
+			<h4>Type</h4>
+			<p>Type declares the project's default typeface and style, font size and leading.</p>
+
+			<h4>Vertical Grid</h4>
+			<p>Based on Compass Vertical Rhythm. The base-line-height and base-font-size are inherited from the Type-module. If the baseline was not yet set in the Type module, or the Type module is not included in your project, you can set the baseline here.</p>
+
+			<h4>Base Styles</h4>
+			<p>Next up are the base styles. Base styles are usually applied to element selectors and define the default behavior for any element throughout your project. Base styles can be overruled by modules and skins. See: http://smacss.com/book/type-base for more information.</p>
+
+			<h4>Persistent Grid</h4>
+			<p>Persistent Grid does not define base styles. However, since the grid is also defining column spacing - which is part of a site's whitespace - it is considered a base module. Persistent Grid defines the columnar structure of your site and the default behavior of columns in your project.</p>
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Forms</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/Forms/default.php'); ?>
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Tables</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/Tables/default.php'); ?>
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Buttons</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/UI/Buttons/buttons.php'); ?>
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Menus</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/UI/Menus/linkbar.php'); ?>
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Tabs</h2
+	><div class="three-fourth column">
+	<?php include('./Templates/UI/Tabs/tabs.php'); ?>
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="function">
+	<h2 class="article-header-level2">Functions</h2
+	><div class="three-fourth column">
+		<dl class="list-api">
+			<dt class="list-api-name" id="function-return-unitless"><a href="#function-return-unitless">@function return-unitless($value)</a></dt>
+			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172647.js"></script></dd>
+			<dd class="list-api-description"></dd>
+		</dl>
+	</div>
+</section>

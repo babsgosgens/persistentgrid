@@ -1,24 +1,31 @@
 html {
 	background: $color-background url(../images/backgrounds/noise.png);
-}
-body {
 	@include emboss-text-down($color-body, $color-background, 1);
 }
-.backdrop {
-	background: $pg-grey url(../images/backgrounds/noise.png);
-	&.top {
-		background-color: $color-theme;
-		color: $white;
-		@include emboss-text-down($white, $color-theme, 1);
-	}
 
+.bg-theme {
+	$txt: $white;
+	$bg: $color-theme;
+	background: $bg url(../images/backgrounds/noise.png);
+	color: $txt;
+	@include emboss-text-down($txt, $bg, 1);
+}
+.bg-main {
+	$txt: $color-body;
+	$bg: $pg-grey;
+	background: $bg url(../images/backgrounds/noise.png);
+	a:not(.btn) {
+		@include emboss-text-down($txt, $bg, 1);
+	}
+}
+.bg-footer {
+	$txt: $color-body;
+	$bg: $color-background;
+	background: $bg url(../images/backgrounds/noise.png);
+	color: $txt;
+	@include emboss-text-down($txt, $bg, .2);
 	a {
-		$color: #2DB1AC;
-		@include text-shadow(inherit);
-		@include emboss-text-down($color, $color-theme, .4);
-		@include anchor-color(false, $color, $anchor-color-hover, $anchor-color-active, false, false);
-	}
-	&.main {
-
+		color: $txt;
+		@include emboss-text-down($txt, $bg, .2);
 	}
 }

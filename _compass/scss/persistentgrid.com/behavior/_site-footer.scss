@@ -1,12 +1,13 @@
 .site-footer {
-	color: $color-body;
-	@include padding-leader(1);
-	@include padding-trailer(4);
-	@include emboss-text-down($color-body, $pg-yellow, .6);
-	a {
-		@include anchor-color(false, $color-attn-one, $color-attn-three, $color-attn-one, false, false);
-		@include emboss-text-down($color-attn-one, $pg-yellow, .8);
-	}
+	@extend .bg-footer;
+	// color: $color-body;
+	// @include padding-leader(1);
+	// @include padding-trailer(4);
+	// @include emboss-text-down($color-body, $pg-yellow, .6);
+	// a {
+	// 	@include anchor-color(false, $color-attn-one, $color-attn-three, $color-attn-one, false, false);
+	// 	@include emboss-text-down($color-attn-one, $pg-yellow, .8);
+	// }
 }
 .social-button {
 	text-decoration: none;

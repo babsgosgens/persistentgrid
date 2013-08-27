@@ -1,0 +1,165 @@
+      <script type="text/javascript">
+      var webkit = "WebkitAppearance" in document.body.style;
+      if(webkit) {
+        document.getElementsByTagName('html')[0].className+=' webkit';
+      }
+
+      var i = 0;
+      WebFontConfig = {
+        custom: { families: ['sofia_pro_lightregular'], urls: ['{{ site.baseurl }}/assets/fonts/SofiaProLight.css'] }
+      };
+      (function() {
+        var wf   = document.createElement('script');
+        wf.src   = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/{{ site.webfontversion }}/webfont.js';
+        wf.type  = 'text/javascript';
+        wf.async = 'false';
+        var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
+      })();
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35733640-1']);
+      _gaq.push(['_setDomainName', 'persistentgrid.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+    (function($) {
+      
+        $.fn.extend({
+            tabAnchors: function(config) {
+                return this.each(function() {
+                    new $.tabAnchors(this, config );
+                });
+            },
+            tabs: function(config) {
+                return this.each(function() {
+                    new $.tabs(this, config);
+                });
+            }
+        });
+
+        $.tabAnchors = function(el, config)
+        {
+            var defaults = {
+                    classTabs: "tabs",
+                    classTrigger: ".tabs-trigger",
+                    listWrap: '<nav />'
+                },
+                config = $.extend({}, defaults, config),
+                el = $(el),
+                list = $('<ul />')
+                ;
+
+            $(el).prepend(list);
+
+            $(config.classPane).each(function() {
+
+                var trigger = $(this).find(config.classTrigger),
+                    li = $('<li />').append( trigger )
+                    ;
+
+                list.append(li)
+            });
+
+            list.wrap( config.listWrap );
+        }
+
+        $.tabs = function(el, config)
+        {
+          // Configuration
+          var defaults = {
+              classTabs: "tabs",
+              classPane   : ".tabs-pane",
+              classTrigger: ".tabs-trigger",
+              classContent: ".tabs-content"
+            },
+            config = $.extend({}, defaults, config),
+            el = $(el);
+
+          var panes    = $(config.classPane);
+
+          panes
+
+              // hide all panes on load
+              .hide()
+              .addClass('is-pane-closed')
+
+              // replace with anchor tag
+              .find(config.classTrigger).replaceWith(function(e, el){
+
+              var obj = $(this),
+                  objTag = obj.prop("tagName"),
+                  objRel = obj.data("rel"),
+                  objHtml = obj.html()
+                  objClss = obj.attr("class"),
+                  a = null;
+
+                  console.log(objTag);
+
+              if(objTag=="A") {
+                a = obj;
+              }
+              else if(obj.find("a").length > 0) {
+                a = obj.find("a");
+              }
+              else {
+                a = $("<a />");
+              }
+
+              a.attr("href", objRel).attr("data-rel", objRel).attr("class", objClss).html(objHtml);
+
+              $(this).replaceWith(a);
+          });
+
+          var triggers = $(config.classTrigger);
+
+          // find all triggers
+          triggers
+              .on('click', function(e){
+
+                e.preventDefault();
+
+                // The pane is open, abort
+                if( $(this).hasClass('is-nav-active') ) {
+                  return false;
+                }
+
+                var trigger = $(this),
+                    target = trigger.data('rel'),
+                    pane = $( target )
+                    ;
+
+                pane
+                    .removeClass('is-pane-closed').addClass('is-pane-open')
+                    .siblings('.tabs-pane').removeClass('is-pane-open').addClass('is-pane-closed')
+                    .slideUp(0)
+                    ;
+
+                $('.chapter-nav').children('a').removeClass('is-nav-active');
+
+                trigger.toggleClass('is-nav-active');
+
+                pane.slideDown();
+
+            }).first().trigger('click');
+
+            $(el).tabAnchors(config);
+
+        }
+  
+
+
+          // hide all sections on load
+          // @todo must be part of plugin
+          $(".tabs").tabs({targetAttribute: 'data-rel'});
+   
+    })(jQuery);
+    </script>

@@ -1,0 +1,188 @@
+---
+layout: default
+section: documentation
+sub-section: reference-manual
+chapter: typography
+title: "Typography Module"
+---
+
+<h1 class="chapter-heading">Typography</h1>
+
+<nav class="chapter-nav">
+	<ul class="inline-list">
+		<li>
+			<a href="#introduction" class="is-nav-active">Introduction</a>
+		</li
+		><li>
+			<a href="#settings">Settings</a>
+		</li
+		><li>
+			<a href="#mixins">Mixins</a>
+		</li
+		><li>
+			<a href="#functions">Functions</a>
+		</li
+		><li>
+			<a href="#behavior">Behavior</a>
+		</li
+		><li>
+			<a href="#usage">Usage</a>
+		</li>
+	</ul>
+</nav>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Introduction</h2
+	><div class="three-fourth column">
+		<p>Typography at its heart is an implementation of <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Compass's Vertical Rhythm</a>.
+		<p>By itself, it doesn't render much output. It's main responsibility is to define default font-size and line-heigt. It's settings are used by Reset to compile the project's baseline.</p>
+	</div>
+</section>
+
+<section class="tabs-pane" id="settings">
+	<h2 class="tabs-tab">Settings</h2>
+
+	<dl class="list-api">
+
+		<dt class="list-api-name" id="setting-font-size"><a href="#setting-font-size">$base-font-size</a></dt>
+		<dd class="list-api-description">Font sizes are expressed in <code>px</code> but will be converted to the unit as set in <code>$font-unit</code>. Defaults to <code>16px</code>.</dd>
+		<dd class="list-api-code">{% gist 6225110 %}</dd>
+		
+		<dt class="list-api-name" id="setting-line-height"><a href="#setting-line-height">$base-line-height</a></dt>
+		<dd class="list-api-code">{% gist 6225127 %}</dd>
+		<dd class="list-api-description">Line heights are expressed in <code>px</code> but will be converted to the unit as set in <code>$font-unit</code>. Defaults to <code>24px</code>.</dd>
+		
+		<dt class="list-api-name" id="setting-type-default"><a href="#setting-type-default">$type-default</a></dt>
+		<dd class="list-api-code">{% gist 6225158 %}</dd>
+		<dd class="list-api-description">An array of type properties. Defaults to <code>$serif-regular</code>. See: <a href="{{ site.baseurl }}/helpers/fonts">Fonts</a></dd>
+		
+		<dt class="list-api-name" id="setting-type-heading"><a href="#setting-type-heading">$type-heading</a></dt>
+		<dd class="list-api-code">{% gist 6225167 %}</dd>
+		<dd class="list-api-description">An array of type properties. Defaults to <code>$serif-regular</code>. See: <a href="{{ site.baseurl }}/helpers/fonts">Fonts</a></dd>
+
+	</dl>
+
+	<h3 class="paragraph-heading">Baseline (Vertical Rhythm) Settings</h3>
+	<p>More information on Vertical Rhythms setting scan be found here: <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">http://compass-style.org/reference/compass/typography/vertical_rhythm/</a></p>
+	<dl class="list-api">
+		<dt class="list-api-name" id="setting-browser-default-font-size"><a href="#setting-browser-default-font-size">$browser-default-font-size</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$browser-default-font-size: $browser-default-font-size !default;</pre></dd>
+		<dt class="list-api-name" id="setting-default-rhythm-border-style"><a href="#setting-default-rhythm-border-style">$default-rhythm-border-style</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$default-rhythm-border-style: solid !default;</pre></dd>
+		<dt class="list-api-name" id="setting-relative-font-sizing"><a href="#setting-relative-font-sizing">$relative-font-sizing</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$relative-font-sizing: true !default;</pre></dd>
+		<dt class="list-api-name" id="setting-round-to-nearest-half-line"><a href="#setting-round-to-nearest-half-line">$round-to-nearest-half-line</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$round-to-nearest-half-line: false !default;</pre></dd>
+		<dt class="list-api-name" id="setting-min-line-padding"><a href="#setting-min-line-padding">$min-line-padding</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$min-line-padding: 2px !default;</pre></dd>
+		<dt class="list-api-name" id="setting-font-unit"><a href="#setting-font-unit">$font-unit</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$font-unit: 1em !default;</pre></dd>
+		<dt class="list-api-name" id="setting-leading-unit"><a href="#setting-leading-unit">$leading-unit</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$leading-unit: 1em !default;</pre></dd>
+		<dt class="list-api-name" id="setting-use-rem-for-sizing"><a href="#setting-use-rem-for-sizing">$use-rem-for-sizing</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$use-rem-for-sizing: false !default;</pre></dd>
+		<dd>Rem is experimental and not yet implemented</dd>
+		<dt class="list-api-name" id="setting-font-unit"><a href="#setting-font-unit">$font-unit</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$font-unit: if($use-rem-for-sizing, 1rem, $font-unit) !default;</pre></dd>
+		<dt class="list-api-name" id="setting-leading-unit"><a href="#setting-leading-unit">$leading-unit</a></dt>
+		<dd class="list-api-code"><pre class="terminal">$leading-unit: if($use-rem-for-sizing, 1rem, $leading-unit) !default;</pre></dd>
+	</dl>
+
+	<h3 class="article-header-level3">Additional Settings</h3>
+	<dl class="list-api">
+		<dt class="list-api-name" id="setting-debug-baseline"><a href="#setting-debug-baseline">$debug-baseline</a></dt>
+		<dd class="list-api-code"><pre>$debug-baseline: false;</pre></dd>
+		<dd class="list-api-description">This setting is useful when debugging the vertical rhythm. When set to <code>true</code> it will show the baseline. It is <code>false</code> by default. See also: <a href="#mixin-debug-rhythm">@mixin debug-rhythm</a></dd>
+	</dl>
+
+</section>
+
+<section class="tabs-pane" id="mixins">
+	<h2 class="tabs-tab">Mixins</h2>
+	<dl class="list-api">
+
+		<dt class="list-api-name" id="mixin-font"><a href="#mixin-font">@mixin font</a></dt>
+		<dd class="list-api-code">{% gist 6225309 %}</script></dd>
+		<dd class="list-api-description">Mixin for shorthand font properties. <code>$type</code> is an array of four type properties: <code>style</code>, <code>variant</code>, <code>weight</code>, <code>font-family</code>. Font-sizes must be pre-converted to final unit of output.</dd>
+
+		<dt class="list-api-name" id="mixin-font-style"><a href="#mixin-font-style">@mixin font-style</a></dt>
+		<dd class="list-api-code">{% gist 6225356 %}</script></dd>
+		<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+		<dt class="list-api-name" id="mixin-font-variant"><a href="#mixin-font-variant">@mixin font-variant</a></dt>
+		<dd class="list-api-code">{% gist 6225373 %}</script></dd>
+		<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+		<dt class="list-api-name" id="mixin-font-weight"><a href="#mixin-font-weight">@mixin font-weight</a></dt>
+		<dd class="list-api-code">{% gist 6225388 %}</script></dd>
+		<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+		<dt class="list-api-name" id="mixin-font-family"><a href="#mixin-font-family">@mixin font-family</a></dt>
+		<dd class="list-api-code">{% gist 6225392 %}</script></dd>
+		<dd class="list-api-description">Takes a single value from the type array and invokes the appropriate font mixin.</dd>
+
+		<dt class="list-api-name" id="mixin-font-size"><a href="#mixin-font-size">@mixin font-size</a></dt>
+		<dd class="list-api-code">{% gist 6225478 %}</script></dd>
+		<dd class="list-api-description">Placeholder mixin for <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-adjust-font-size-to">@mixin adjust-font-size-to()</a></dd>
+
+		<dt class="list-api-name" id="mixin-line-height"><a href="#mixin-line-height">@mixin line-height</a></dt>
+		<dd class="list-api-code">{% gist 6225494 %}</script></dd>
+		<dd class="list-api-description">Placeholder mixin for <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-adjust-leading-to">@mixin adjust-leading-to()</a></dd>
+
+		<dt class="list-api-name" id="mixin-debug-rhythm"><a href="#mixin-debug-rhythm">@mixin debug-rhythm</a></dt>
+		<dd class="list-api-code">{% gist 6214270 %}</script></dd>
+		<dd class="list-api-description">This mixin is useful when debugging the vertical rhythm. See also: <a href="#setting-debug-baseline">$debug-baseline</a></dd>
+
+	</dl>
+
+</section>
+
+<section class="tabs-pane" id="function">
+	<h2 class="tabs-tab">Functions</h2>
+	<dl class="list-api">
+
+		<dt class="list-api-name" id="function-px-to-relative-font-size"><a href="#function-px-to-relative-font-size">@function px-to-relative-font-size</a></dt>
+		<dd class="list-api-code">{% gist 6225523 %}</dd>
+		<dd class="list-api-description">Placeholder function for font-sizes - converts px to the unit as set in the Vertical-Rhythm module settings</dd>
+
+		<dt class="list-api-name" id="function-px-to-relative-line-height"><a href="#function-px-to-relative-line-height">@function px-to-relative-line-height</a></dt>
+		<dd class="list-api-code">{% gist 6225561 %}</dd>
+		<dd class="list-api-description">Placeholder function for line-heights - converts px to the unit as set in the Vertical-Rhythm module settings</dd>
+
+		<dt class="list-api-name" id="function-extract-type-style"><a href="#function-extract-type-style">@function extract-type-style</a></dt>
+		<dd class="list-api-code">{% gist 6225580 %}</dd>
+		<dd class="list-api-description">Extract the style property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+		<dt class="list-api-name" id="function-extract-type-variant"><a href="#function-extract-type-variant">@function extract-type-variant</a></dt>
+		<dd class="list-api-code">{% gist 6225594 %}</dd>
+		<dd class="list-api-description">Extract the variant property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+		<dt class="list-api-name" id="function-extract-type-weight"><a href="#function-extract-type-weight">@function extract-type-weight</a></dt>
+		<dd class="list-api-code">{% gist 6225604 %}</dd>
+		<dd class="list-api-description">Extract the weight property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+		<dt class="list-api-name" id="function-extract-type-family"><a href="#function-extract-type-family">@function extract-type-family</a></dt>
+		<dd class="list-api-code">{% gist 6225613 %}</dd>
+		<dd class="list-api-description">Extract the family property from a type array. Eexpects an array: $style, $variant, $weight, $family;</dd>
+
+		<dt class="list-api-name" id="function-weight-number-to-string"><a href="#function-weight-number-to-string">@function weight-number-to-string</a></dt>
+		<dd class="list-api-code">{% gist 6225629 %}</dd>
+		<dd class="list-api-description">Converts a number to a string. Expects a single number: 100 through 900.</dd>
+
+	</dl>
+</section>
+
+<section class="tabs-pane" id="behavior">
+	<h2 class="tabs-tab">Behavior</h2>
+	<h3 class="paragraph-heading">Html selector</h3>
+	<p>The <code>$base-font-size</code>, <code>$base-line-height</code> and <code>$type-default</code> settings are used the render to the html tag from within <a href="http://localhost:4000/base/reset/#behavior-reset-baseline">Reset</a>:{% gist 6224603 %}</p>
+	<h3 class="article-header-level3">Debug selector</h3>
+	{% gist 6214336 %}
+</section>
+
+<section class="tabs-pane" id="usage">
+	<h2 class="tabs-tab">Usage</h2>
+	<h3 class="paragraph-heading">Real font weights</h3>
+	{% gist 6263567 %}
+</section>

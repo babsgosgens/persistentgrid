@@ -1,0 +1,81 @@
+
+
+		// .tabs {
+		// 	@include bleed;
+		// 	position: relative;
+		// 	display: table;
+		// 	width: 100%;
+		// 	overflow: auto;
+		// }
+
+		// a.tabs-tab,
+		// .tabs-tab a {
+		// 	@include column-spacing;
+		// }
+
+		// .tabs-pane {
+		// 	display: table-cell;
+		// 	&:target {
+		// 		&>.tabs-content {
+		// 			@extend .is-not-hidden;
+		// 			position: absolute;
+		// 			left: 0;
+		// 			$e: 10;
+		// 			$t: 10;
+		// 			@for $i from 1 through $e {
+		// 				$c: (($t/$e) * $i) - 1;
+		// 				&:nth-of-type(#{$i}) {
+		// 					@if $c > 0 {
+		// 						@include pull($c/$e);
+		// 					}
+		// 				}
+		// 			}
+		// 		}		
+		// 	}
+		// }
+		// .tabs-content {
+		// 	@extend .is-hidden;
+		// 	@include column-spacing;
+		// }
+
+		// .tabs-pane {
+		// }
+
+// .tabs {
+// 	position: relative;
+// 	top: rhythm(2);
+// }
+// .tabs-pane {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	&:target {
+// 		.tabs-content {
+// 			@extend .is-not-hidden;
+// 		}
+// 	}
+// }
+// .tabs-tab {
+// 	position: absolute;
+// 	top: rhythm(-1);
+// 	display: inline;
+// }
+// .tabs-content {
+// 	@extend .is-hidden;
+// 	position: absolute;
+// }
+
+// .tabs-pane {
+// 	$e: 10;
+// 	$t: 10;
+// 	@for $i from 1 through $e {
+// 		$c: (($t/$e) * $i) - 1;
+// 		@debug $c;
+// 		&:nth-of-type(#{$i}) {
+// 			.tabs-tab {
+// 				@include push($c/$e);
+// 			}
+// 		}
+// 	}
+// }

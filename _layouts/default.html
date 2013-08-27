@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-{% include wrap.html %}
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+
+		<div class="bg-theme">
+
+			  {% include site-header.html %}
+
+		</div>
+
+    	<main class="bg-main" role="main">
+
+        {% if page.sub-section == "reference-manual" %}
+            {% include layouts/reference-manual.html %}
+        {% else %}
+    		{{ content }}
+        {% endif %}
+
+    	</main>
+
+		{% include site-footer.html %}
+		{% include site-bottom.html %}
+
+    </body>
 </html>

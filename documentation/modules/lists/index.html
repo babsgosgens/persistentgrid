@@ -1,0 +1,212 @@
+---
+layout: default
+section: documentation
+sub-section: reference-manual
+chapter: lists
+title: "Lists module"
+---
+
+<h1 class="chapter-heading">Lists</h1>
+
+<nav class="chapter-links">
+	<ul class="inline-list">
+		<li>
+			<a href="#introduction">Introduction</a>
+		</li
+		><li>
+			<a href="#introduction">Examples</a>
+		</li
+		><li>
+			<a href="#introduction">Available styles</a>
+		</li
+		><li>
+			<a href="#introduction">Settings</a>
+		</li
+		>
+	</ul>
+</nav>
+
+<section class="tabs-pane" id="introduction">
+
+	<h2 class="article-header-level2">Introduction</h2
+	><div class="three-fourth column">
+	@todo
+	</div>
+
+</section>
+
+
+<section class="tabs-pane" id="examples">
+
+	<h2 class="article-header-level2">Examples</h2
+	><div class="three-fourth column">
+
+		<h3 class="article-header-level3">Default (without a class)</h3>
+		<ul>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ul>
+
+		<h3 class="article-header-level3">ol.list</h3>
+		<ol class="list">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ol>
+
+		<h3 class="article-header-level3">ul.list</h3>
+		<ul class="list">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ul>
+
+		<h3 class="article-header-level3">ol.list-lower-alpha</h3>
+		<ol class="list-lower-alpha">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ol>
+
+		<h3 class="article-header-level3">ul.list-square</h3>
+		<ul class="list-square">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="tabs-pane" id="Settings">
+
+	<h2 class="article-header-level2">Settings</h2
+	><div class="three-fourth column">
+		<pre class="terminal">
+$list-style-type-armenian: false !default;
+$list-style-type-circle: true !default;
+$list-style-type-cjk-ideographic: false !default;
+$list-style-type-decimal: true !default;
+$list-style-type-decimal-leading-zero: false !default;
+$list-style-type-disc: true !default;
+$list-style-type-georgian: false !default;
+$list-style-type-hebrew: false !default;
+$list-style-type-hiragana: false;
+$list-style-type-hiragana-iroha: false !default;
+$list-style-type-inherit: true !default;	
+$list-style-type-katakana: false !default;
+$list-style-type-katakana-iroha: false !default;
+$list-style-type-lower-alpha: true !default;
+$list-style-type-lower-greek: false !default;
+$list-style-type-lower-latin: true !default;
+$list-style-type-lower-roman: true !default;
+$list-style-type-none: false !default;
+$list-style-type-square: true !default;
+$list-style-type-upper-alpha: true !default;
+$list-style-type-upper-latin: true !default;
+$list-style-type-upper-roman: true !default;
+		</pre>
+
+	</div>
+
+</section>
+
+<section class="tabs-pane" id="Behavior">
+
+	<h2 class="article-header-level2">Behavior</h2
+	><div class="three-fourth column">
+	<pre class="terminal">
+//  ====================================================
+//  List defaults
+//  ====================================================
+
+ol {
+	&.#{$list-base-class} {
+		@extend .#{$list-base-class}-#{$list-ol-default};
+	}
+}
+ul {
+	&.#{$list-base-class} {
+		@extend .#{$list-base-class}-#{$list-ul-default};
+	}
+}
+
+
+//  ====================================================
+//  List style types
+//  ====================================================
+
+@if $list-style-type-armenian {
+	@include list-style-type(armenian);
+}
+@if $list-style-type-circle {
+	@include list-style-type(circle);
+}
+@if $list-style-type-cjk-ideographic {
+	@include list-style-type(armenian);
+}
+@if $list-style-type-decimal {
+	@include list-style-type(decimal);
+}
+@if $list-style-type-decimal-leading-zero {
+	@include list-style-type(decimal-leading-zero);
+}
+@if $list-style-type-disc {
+	@include list-style-type(disc);
+}
+@if $list-style-type-georgian {
+	@include list-style-type(georgian);
+}
+@if $list-style-type-hebrew {
+	@include list-style-type(hebrew);
+}
+@if $list-style-type-hiragana {
+	@include list-style-type(hiragana);
+}
+@if $list-style-type-hiragana-iroha {
+	@include list-style-type(hiragana-iroha);
+}
+@if $list-style-type-inherit {
+	@include list-style-type(inherit);
+}
+@if $list-style-type-katakana {
+	@include list-style-type(katakana);
+}
+@if $list-style-type-katakana-iroha {
+	@include list-style-type(katakana-iroha);
+}
+@if $list-style-type-lower-alpha {
+	@include list-style-type(lower-alpha);
+}
+@if $list-style-type-lower-greek {
+	@include list-style-type(lower-greek);
+}
+@if $list-style-type-lower-latin {
+	@include list-style-type(lower-latin);
+}
+@if $list-style-type-lower-roman {
+	@include list-style-type(lower-roman);
+}
+@if $list-style-type-none {
+	@include list-style-type(none);
+}
+@if $list-style-type-square {
+	@include list-style-type(square);
+}
+@if $list-style-type-upper-alpha {
+	@include list-style-type(upper-alpha);
+}
+@if $list-style-type-upper-latin {
+	@include list-style-type(upper-latin);
+}
+@if $list-style-type-upper-roman {
+	@include list-style-type(upper-roman);
+}
+	</pre>
+	</div>
+
+</section>
+
+
+

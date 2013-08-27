@@ -8,28 +8,10 @@
 // 	</ul>
 // </nav>
 
-.nav-main {
-	text-align: center;
-	@include font-size($font-size-s);
-	&>ul {
-
-	}
-	a {
-		&:hover {
-			@extend .is-nav-active;
-		}
-		&:active {
-		}
-	}
-}
-
-.is-nav-active {
-	background: rgba(0,0,0,.2);
-	@include border-radius($corner-radius);
-}
-.nav {
+%nav {
+	// font-size: 14px;
 	li {
-		display: inline;
+		display: inline-block;
 	}
 	a {
 		display: inline-block;
@@ -38,38 +20,122 @@
 	}
 }
 
+//  ==========================================================================
+//  Main navigation
+//  ==========================================================================
+
+.nav-main {
+	@extend %nav;
+	text-align: center;
+	@include font-size($font-size-s);
+	&>ul {
+
+	}
+	a {
+		color: lighten($color-attn-three, 5%);
+		&:hover {
+			color: $color-attn-two;
+			@extend .is-nav-active;
+		}
+		&:active {
+		}
+	}
+
+	.is-nav-active {
+		background: rgba(0,0,0,.2);
+		@include border-radius($corner-radius);
+	}
+}
+
+
+//  ==========================================================================
+//  Sub navigation
+//  ==========================================================================
+
 .nav-sub {
+	@extend %nav;
 	a {
 		padding: vertical-rhythm(.25) horizontal-rhythm(.5);
 		color: $white;
 		&:hover {
-			@extend .is-subnav-hover;
+			@extend .is-nav-hover;
 		}
 		&:active {
-			@extend .is-subnav-active;
+			@extend .is-nav-active;
 		}
 	}
 }
-.nav-sub-bg {
-	@include leader(1.5);
+.bg-nav-sub {
 	background-color: darken($color-theme, 20%);
 	background-color: rgba(0,0,0,.2);
 }
 
 // Hover states
-nav {
-	.is-subnav-hover {
+.nav-sub {
+	.is-nav-hover {
 		background-color: darken($color-theme, 10%);
 		background-color: rgba(0,0,0,.1);
-		color: $white;
+		color: $color-attn-one !important;
 	}
-	.is-subnav-active {
+	.is-nav-active {
 		background: $pg-grey url(../images/backgrounds/noise.png);
 		color: $color-attn-one !important;
 		@include emboss-text-down($color-body, $color-background, 1);
 		&:hover {
 			background: $pg-grey url(../images/backgrounds/noise.png) !important;
 			color: $color-primary !important;
+		}
+	}
+}
+
+//  ==========================================================================
+//  Section navigation
+//  ==========================================================================
+
+.section-nav {
+	li {
+		padding: vertical-rhythm(.25) 0;
+	}
+	a {
+		padding: vertical-rhythm(.25);
+		@include column-spacing;
+		@include border-radius($corner-radius);
+		text-decoration: none;
+		color: $color-body;
+		&:hover,
+		&:active,
+		&.is-nav-hover,
+		&.is-nav-active,
+		 {
+			background: darken($pg-grey, 10%);
+			background: rgba(0,0,0,.1);
+			@include emboss-text-down($color-attn-one, $pg-grey, .5);
+		}
+	}
+	.level0 {
+		&>a {
+			color: $color-attn-one;
+		}
+		li {
+			@include column-spacing(1/4);
+			padding-right: 0;
+		}
+	}
+}
+
+//  ==========================================================================
+//  Chapter navigation
+//  ==========================================================================
+
+.chapter-nav {
+	@extend %nav;
+	a {
+		@include border-radius($corner-radius);
+		&:active,
+		&.is-nav-active,
+		{
+			background: lighten($algae, 50%);
+			background: rgba( nth($algae-rgb,1), nth($algae-rgb,2), nth($algae-rgb,3), .2);
 		}
 	}
 }

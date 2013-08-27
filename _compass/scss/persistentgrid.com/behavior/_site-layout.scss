@@ -1,14 +1,24 @@
+[role="main"] {
+	@include padding-trailer(2);
+}
+
 .site-header {
 	@include column-width(1/2);
-	@include pull(1/2);
+	// @include pull(1/2);
 	vertical-align: bottom;
 }
 .nav-main {
 	@include column-width(1/2);
-	@include push(1/2);
+	// @include push(1/2);
 	@include leader(4);
 	vertical-align: bottom;
 }
+
+.site-header,
+.nav-main {
+	@include trailer(1.5);
+}
+
 
 .usp-text {
 	@include column-width(1/2);
@@ -16,4 +26,12 @@
 }
 .usp-image {
 	@include column-width(1/2);
+}
+
+.section-nav {
+	@include column-width(2/12);
+	@include leader(2);
+}
+.section-content {
+	@include column-width(10/12);
 }

@@ -1,0 +1,30 @@
+  <ul class="list-stacked-navigation">
+
+    <li class="level0">
+      <a href="{{ site.baseurl }}/documentation/"{% if page.chapter == "introduction" %} class="is-nav-active"{% endif %}>Introduction</a>
+    </li>
+
+    <li class="level0 parent">
+      <a href="{{ site.baseurl }}/documentation/base/typography"{% if page.chapter == "base" %} class="is-nav-active"{% endif %}>Base</a>
+      <ol>
+        <li class="level1"><a href="{{ site.baseurl }}/documentation/base/typography"{% if page.chapter == "typography" %} class="is-nav-active"{% endif %}>Typography</a></li>
+        <li class="level1"><a href="{{ site.baseurl }}/documentation/base/reset"{% if page.chapter == "reset" %} class="is-nav-active"{% endif %}>Reset</a></li>
+        <li class="level1"><a href="{{ site.baseurl }}/documentation/base/base-styles"{% if page.chapter == "base-styles" %} class="is-nav-active"{% endif %}>Base Styles</a></li>
+      </ol>
+    </li>
+
+    <li class="level0">
+      <a href="{{ site.baseurl }}/documentation/layout/"{% if page.chapter == "layout" %} class="is-nav-active"{% endif %}>Layout</a>
+    </li>
+
+    <li class="level0 parent">
+      <a href="{{ site.baseurl }}/documentation/modules"{% if page.chapter == "modules" %} class="is-nav-active"{% endif %}>Modules</a>
+      <ul>
+      <li class="level1"><a href="{{ site.baseurl }}/documentation/modules/forms"{% if page.chapter == "forms" %} class="is-nav-active"{% endif %}>Forms</a></li>
+      <li class="level1"><a href="{{ site.baseurl }}/documentation/modules/tables"{% if page.chapter == "tables" %} class="is-nav-active"{% endif %}>Tables</a></li>
+      <li class="level1"><a href="{{ site.baseurl }}/documentation/modules/lists"{% if page.chapter == "lists" %} class="is-nav-active"{% endif %}>Lists</a></li>
+      <li class="level1"><a href="{{ site.baseurl }}/documentation/modules/buttons"{% if page.chapter == "buttons" %} class="is-nav-active"{% endif %}>Buttons</a></li>
+      </ul>
+    </li>
+
+  </ul>
