@@ -1,47 +1,24 @@
 ---
+title: "Typography Module"
 layout: default
 section: documentation
 sub-section: reference-manual
 chapter: typography
-title: "Typography Module"
+tabs: section-content
 ---
 
 <h1 class="chapter-heading">Typography</h1>
 
-<nav class="chapter-nav">
-	<ul class="inline-list">
-		<li>
-			<a href="#introduction" class="is-nav-active">Introduction</a>
-		</li
-		><li>
-			<a href="#settings">Settings</a>
-		</li
-		><li>
-			<a href="#mixins">Mixins</a>
-		</li
-		><li>
-			<a href="#functions">Functions</a>
-		</li
-		><li>
-			<a href="#behavior">Behavior</a>
-		</li
-		><li>
-			<a href="#usage">Usage</a>
-		</li>
-	</ul>
-</nav>
-
 <section class="tabs-pane" id="introduction">
 
-	<h2 class="article-header-level2">Introduction</h2
-	><div class="three-fourth column">
+	<h2 class="tabs-trigger" data-rel="#introduction">Introduction</h2>
 		<p>Typography at its heart is an implementation of <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Compass's Vertical Rhythm</a>.
 		<p>By itself, it doesn't render much output. It's main responsibility is to define default font-size and line-heigt. It's settings are used by Reset to compile the project's baseline.</p>
-	</div>
+
 </section>
 
 <section class="tabs-pane" id="settings">
-	<h2 class="tabs-tab">Settings</h2>
+	<h2 class="tabs-trigger" data-rel="#settings">Settings</h2>
 
 	<dl class="list-api">
 
@@ -99,7 +76,7 @@ title: "Typography Module"
 </section>
 
 <section class="tabs-pane" id="mixins">
-	<h2 class="tabs-tab">Mixins</h2>
+	<h2 class="tabs-trigger" data-rel="#mixins">Mixins</h2>
 	<dl class="list-api">
 
 		<dt class="list-api-name" id="mixin-font"><a href="#mixin-font">@mixin font</a></dt>
@@ -138,8 +115,8 @@ title: "Typography Module"
 
 </section>
 
-<section class="tabs-pane" id="function">
-	<h2 class="tabs-tab">Functions</h2>
+<section class="tabs-pane" id="functions">
+	<h2 class="tabs-trigger" data-rel="#functions">Functions</h2>
 	<dl class="list-api">
 
 		<dt class="list-api-name" id="function-px-to-relative-font-size"><a href="#function-px-to-relative-font-size">@function px-to-relative-font-size</a></dt>
@@ -174,7 +151,7 @@ title: "Typography Module"
 </section>
 
 <section class="tabs-pane" id="behavior">
-	<h2 class="tabs-tab">Behavior</h2>
+	<h2 class="tabs-trigger" data-rel="#behavior">Behavior</h2>
 	<h3 class="paragraph-heading">Html selector</h3>
 	<p>The <code>$base-font-size</code>, <code>$base-line-height</code> and <code>$type-default</code> settings are used the render to the html tag from within <a href="http://localhost:4000/base/reset/#behavior-reset-baseline">Reset</a>:{% gist 6224603 %}</p>
 	<h3 class="article-header-level3">Debug selector</h3>
@@ -182,7 +159,7 @@ title: "Typography Module"
 </section>
 
 <section class="tabs-pane" id="usage">
-	<h2 class="tabs-tab">Usage</h2>
+	<h2 class="tabs-trigger" data-rel="#usage">Usage</h2>
 	<h3 class="paragraph-heading">Real font weights</h3>
 	{% gist 6263567 %}
 </section>
