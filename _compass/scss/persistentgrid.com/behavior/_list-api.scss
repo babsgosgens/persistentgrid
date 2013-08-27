@@ -6,12 +6,14 @@
 // </dl>
 
 .list-api-name {
-	// @include bleed;
+	padding: vertical-rhythm(.5) 0;
 	a {
 		display: block;
 		padding: vertical-rhythm(.25) horizontal-rhythm(.25);
-		background: $color-attn-two;
+		background: mix($pg-grey, $color-attn-two);
+		background: rgba( $color-attn-two, .3);
 		@include border-radius($corner-radius);
+		font-family: Consolas, "Liberation Mono", Courier, monospace;
 		text-decoration: none;
 		color: inherit;
 	}
@@ -20,4 +22,15 @@
 	a {
 		@include emboss-text-down($color-body, $color-attn-two, .6);
 	}
+}
+.list-api-description,
+.list-api-code {
+	padding: vertical-rhythm(.25) horizontal-rhythm(.25);
+}
+
+code {
+		font-family: Consolas, "Liberation Mono", Courier, monospace;
+	padding: vertical-rhythm(.25) horizontal-rhythm(.25);
+	background: rgba(0,0,0,.05);
+	@include border-radius($corner-radius);
 }

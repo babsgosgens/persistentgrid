@@ -1313,7 +1313,7 @@ html {
 
 /* line 130, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .chapter-nav {
-  margin-top: 1.5em;
+  margin-top: 3em;
 }
 /* line 133, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .chapter-nav a {
@@ -1327,6 +1327,92 @@ html {
 .chapter-nav a:active, .chapter-nav a.is-nav-active, .chapter-nav .nav-main a:hover, .nav-main .chapter-nav a:hover, .chapter-nav .nav-sub a:active, .nav-sub .chapter-nav a:active {
   background: #d0f6ef;
   background: rgba(33, 166, 141, 0.2);
+  color: #555555;
+}
+
+/* line 2, ../../_compass/scss/persistentgrid.com/behavior/_columns-demo.scss */
+.demo {
+  padding: 0;
+  border-left: 24px solid #eeeeee;
+  border-right: 24px solid #eeeeee;
+  background: white;
+  border-color: rgba(85, 85, 85, 0.1);
+  background: rgba(85, 85, 85, 0.1);
+  height: 6em !important;
+  max-height: 6em !important;
+  overflow: hidden;
+}
+@media only screen and (max-width: 48em) {
+  /* line 2, ../../_compass/scss/persistentgrid.com/behavior/_columns-demo.scss */
+  .demo {
+    border-left-width: 12px;
+    border-right-width: 12px;
+  }
+}
+
+/* line 18, ../../_compass/scss/persistentgrid.com/behavior/_columns-demo.scss */
+hr {
+  margin: 1.5em 0;
+  border: none;
+  border-top: 1px solid #ffb3b3;
+  border-bottom: 1px solid white;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  -moz-box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+}
+
+/* line 5, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist {
+  color: #555555 !important;
+}
+
+/* line 9, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+pre {
+  font: inherit;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 15, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file {
+  border-color: rgba(255, 179, 179, 0.3) !important;
+  margin-bottom: 1.5em !important;
+}
+
+/* line 20, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file .gist-meta {
+  display: none;
+}
+
+/* line 24, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file .gist-meta a {
+  color: #888888 !important;
+}
+
+/* line 28, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file .gist-data {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 179, 179, 0.3) !important;
+}
+
+/* line 33, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file .gist-data .line-pre {
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 40, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file .gist-data .gist-highlight {
+  background: transparent !important;
+}
+
+/* line 44, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+.gist .gist-file .gist-data .line-numbers {
+  background-color: transparent !important;
+  border: 0 !important;
 }
 
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
@@ -1339,7 +1425,7 @@ html {
 
 /* line 6, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
 .chapter-subheading {
-  margin: 1.5em 0 0.75em 0;
+  margin: 0.75em 0;
   font-size: 1.5em;
   line-height: 1.5em;
   color: #ff7888;
@@ -1347,6 +1433,18 @@ html {
 /* line 10, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
 .chapter-subheading::before {
   content: attr(data-before);
+}
+
+/* line 14, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+.paragraph-heading {
+  margin: 2.25em 0 0.75em;
+  color: #21a68d;
+  display: list-item;
+  list-style-type: decimal;
+}
+/* line 19, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+.paragraph-heading:first-child {
+  margin-top: 0;
 }
 
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
@@ -1406,26 +1504,63 @@ img {
   max-width: 100%;
 }
 
+/* line 8, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
+.list-api-name {
+  padding: 0.75em 0;
+}
 /* line 10, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
 .list-api-name a {
   display: block;
   padding: 0.375em 12px;
-  background: #ffb3b3;
+  background: #fad5d1;
+  background: rgba(255, 179, 179, 0.3);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   text-decoration: none;
   color: inherit;
 }
 
-/* line 20, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
+/* line 22, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
 .list-api .list-api-name a {
   /*
    * Light text on dark background
    */
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
+.list-api-description,
+.list-api-code {
+  padding: 0.375em 12px;
+}
+
+/* line 31, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  padding: 0.375em 12px;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 2, ../../_compass/scss/persistentgrid.com/behavior/_tabs.scss */
+.js .tabs-pane {
+  position: relative;
+  left: -9999em;
+  height: 0;
+  overflow: hidden;
+}
+/* line 7, ../../_compass/scss/persistentgrid.com/behavior/_tabs.scss */
+.js .tabs-pane.is-pane-open {
+  position: static;
+  height: auto;
 }
 
 /* FONT PATH

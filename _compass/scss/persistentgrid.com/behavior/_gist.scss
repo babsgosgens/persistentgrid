@@ -1,0 +1,47 @@
+$txt: lighten($color-body,20%);
+$bg: rgba($color-attn-two,.2);
+$brdr: rgba($color-attn-two,.3);
+
+.gist {
+	color: $color-body !important;
+}
+
+pre {
+	font: inherit;
+	line-height: inherit;
+	white-space: pre
+}
+
+.gist .gist-file {
+	border-color: $brdr !important;
+	margin-bottom: vertical-rhythm(1) !important;
+}
+
+.gist .gist-file .gist-meta {
+	display: none;
+}
+
+.gist .gist-file .gist-meta a {
+	color: $txt !important;
+}
+
+.gist .gist-file .gist-data {
+	background-color: rgba(255,255,255,.2) !important;
+	border-color: $brdr !important;
+}
+
+.gist .gist-file .gist-data .line-pre {
+	background: transparent !important;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important
+}
+
+.gist .gist-file .gist-data .gist-highlight {
+	background: transparent !important
+}
+
+.gist .gist-file .gist-data .line-numbers {
+	background-color: transparent !important;
+	border: 0 !important;
+}

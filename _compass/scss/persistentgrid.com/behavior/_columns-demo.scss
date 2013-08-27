@@ -1,0 +1,25 @@
+// For demo grid
+.demo {
+	$column-color: $color-theme;
+	padding: 0;
+	border-left: horizontal-rhythm() solid lighten( $column-color, 60%);
+	border-right: horizontal-rhythm() solid lighten( $column-color, 60%);
+	background: lighten( $column-color, 80%);
+	border-color: rgba( $column-color, .1);
+	background: rgba( $column-color, .1);
+	height: rhythm(4) !important;
+	max-height: rhythm(4) !important;
+	overflow: hidden;
+	@include breakpoint($column-breakpoint) {
+		border-left-width: horizontal-rhythm(1/4);
+		border-right-width: horizontal-rhythm(1/4);
+	}
+}
+hr {
+	margin: vertical-rhythm(1) 0;
+	border: none;
+	border-top: 1px solid $color-attn-two;
+	border-bottom: 1px solid $white;
+	border-bottom-color: rgba(255,255,255,.5);
+	@include box-shadow(rgba(255,255,255,.4) 1px 1px 0 );
+}

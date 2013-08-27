@@ -1,0 +1,22 @@
+.chapter-heading {
+	margin: rhythm(1) 0  rhythm(.5) 0;
+	@include adjust-font-size-to($font-size-xl, 1.5);
+	color: $color-attn-one;
+}
+.chapter-subheading {
+	margin: rhythm(.5) 0 ;
+	@include adjust-font-size-to($font-size-l, 1.5);
+	color: $color-attn-one;
+	&::before {
+		content: attr(data-before);
+	}
+}
+.paragraph-heading {
+	margin: rhythm(1.5) 0 rhythm(.5);
+	color: $color-primary;
+	display: list-item;
+	list-style-type: decimal;
+	&:first-child {
+		margin-top: 0;
+	}
+}
