@@ -7,7 +7,8 @@
               <span class="site-header-subtitle">Anything you need. Nothing you don&rsquo;t.</span>
             </h1>
           </header
-          ><nav class="nav-main column" role="navigation">
+          ><nav class="nav-main column" role="navigation" id="menu">
+            <a href="#menu" title="Menu" class="menu-trigger"><icon class="icon-reorder"></a></a>
             <ul>
               <li><a href="{{ site.baseurl }}/"{% if page.layout == "homepage" %} class="is-nav-active"{% endif %}>Home</a></li>
               <li><a href="{{ site.baseurl }}/getting-started/"{% if page.section == "getting-started" %} class="is-nav-active"{% endif %}>Get Started</a></li>
@@ -21,7 +22,7 @@
         {% if page.section == "documentation" %}
           <div class="bg-nav-sub">
             <div class="root">
-              <nav class="nav-sub">
+              <nav class="nav-sub" id="sections">
                 <ul>
                 <li><a href="{{ site.baseurl }}/documentation/"{% if page.sub-section == "reference-manual" %} class="is-nav-active"{% endif %}>Reference Manual</a></li>
                 <li><a href="{{ site.baseurl }}/documentation/installing-persistent-grid/"{% if page.sub-section == "installing-persistent-grid" %} class="is-nav-active"{% endif %}>Installing Persistent Grid</a></li>

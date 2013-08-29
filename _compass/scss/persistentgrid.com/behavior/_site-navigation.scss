@@ -18,7 +18,15 @@
 		padding: vertical-rhythm(.25) horizontal-rhythm(.25);
 		text-decoration: none;
 	}
+	.menu-trigger {
+		display: none;
+		background: rgba(0,0,0,.1);
+		@include border-radius($corner-radius);
+		@include box-shadow(rgba(0,0,0,.1) 1px 1px 1px 0 inset);
+	}
 }
+
+
 
 //  ==========================================================================
 //  Main navigation
@@ -75,15 +83,15 @@
 	.is-nav-hover {
 		background-color: darken($color-theme, 10%);
 		background-color: rgba(0,0,0,.1);
-		color: $color-attn-one !important;
+		color: $color-attn-one;
 	}
 	.is-nav-active {
 		background: $pg-grey url(../images/backgrounds/noise.png);
-		color: $color-attn-one !important;
+		color: $color-attn-one;
 		@include emboss-text-down($color-body, $color-background, 1);
 		&:hover {
-			background: $pg-grey url(../images/backgrounds/noise.png) !important;
-			color: $color-primary !important;
+			background: $pg-grey url(../images/backgrounds/noise.png);
+			color: $color-primary;
 		}
 	}
 }
@@ -141,3 +149,204 @@
 		}
 	}
 }
+
+
+//  ==========================================================================
+//  Breakpoints
+//  ==========================================================================
+
+// Tablet and below
+@include breakpoint( $column-breakpoint ) {
+	.js {
+		.nav-main {
+			padding-right: horizontal-rhythm(1/4);
+			ul {
+				position: absolute;
+				top: 0;
+				left: -9999em;
+				z-index: 10;
+			}
+			.menu-trigger {
+				display: inline;
+				float: right;
+			}
+		}
+	}
+	.chapter-nav {
+		margin-top: vertical-rhythm(1);
+	}
+}
+
+.js :target,
+.js .is-menu-open {
+	@include breakpoint( $column-breakpoint ) {
+		ul {
+			display: block;
+			left: auto;
+			right: 0;
+			margin: vertical-rhythm(2.5) horizontal-rhythm(1/4) vertical-rhythm(.5);
+			background: $color-primary;
+			@include box-shadow(rgba(0,0,0,.2) 2px 2px 4px 0);
+			@include border-radius($corner-radius);
+			li, a {
+				display: block;
+				color: $white;
+				@include border-radius(0);
+				@include emboss-text-down($white, $pg-grey, .5);
+			}
+		}
+	}
+}
+
+
+//  ##########################################################################
+//
+//  Behavior
+//
+//  ##########################################################################
+
+	#sections,
+	#chapters {
+		@extend %is-pull-menu;
+	}
+	#sections {
+		@extend %is-pull-menu-sections;
+	}
+	#chapters {
+		@extend %is-pull-menu-chapters;
+	}
+
+
+	@import "pg/helpers/fonts/icon-fonts/fontawesome/mixins";
+	@import "pg/helpers/fonts/icon-fonts/fontawesome/variables";
+
+//  ==========================================================================
+//  Behavior
+//  ==========================================================================
+
+	%is-pull-menu {
+		@include breakpoint( $column-breakpoint ) {
+			height: vertical-rhythm(1.5);
+			overflow: hidden;
+			ul {
+				position: relative;
+			}
+			a {
+				position: absolute;
+				left: -9999em;
+				&.is-nav-active {
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+	%is-pull-menu:hover,
+	%is-pull-menu-open {
+		@include breakpoint( $column-breakpoint ) {
+			height: auto;
+			overflow: auto;
+			a {
+				position: static !important;
+			}
+		}
+	}
+
+
+//  ==========================================================================
+//  Skin
+//  ==========================================================================
+
+	%is-pull-menu-sections {
+		@include breakpoint( $column-breakpoint ) {
+			li {
+				width: 100%;
+			}
+			a,
+			a.is-nav-active {
+				background: $color-primary url(../images/backgrounds/noise.png);
+				color: $white;
+				@include emboss-text-down($white, $pg-grey, .5);
+				padding-left: horizontal-rhythm(1/4);
+				&:hover {
+					background-color: $color-primary;
+					color: $color-body;
+					@include emboss-text-down($color-body, $pg-grey, .3);
+				}
+			}
+			a {
+				display: block;
+				width: 100%;
+				&.is-nav-active {
+					&:before {
+						@include icon($sort);
+						float: right;
+					}
+				}
+			}
+		}
+	}
+
+
+	%is-pull-menu-sections:hover,
+	%is-pull-menu-sections-open {
+		@include breakpoint( $column-breakpoint ) {
+			a {
+				&.is-nav-active {
+				padding-left: horizontal-rhythm(1/2);
+					&:before {
+						@include icon($ok);
+						position: absolute;
+						left: .35em;
+					}
+				}
+			}
+		}
+	}
+
+
+	%is-pull-menu-chapters {
+		@include breakpoint( $column-breakpoint ) {
+			margin-top: vertical-rhythm(.5);
+			@include column-spacing;
+			height: vertical-rhythm(2);
+			a {
+				&.is-nav-active {
+					padding-top: 0;
+					padding-left: 0;
+					@include adjust-font-size-to($font-size-xl);
+					background: none;
+					color: $color-attn-one;
+					@include emboss-text-down($color-body, $pg-grey, 1);
+					&:after {
+						padding-left: .5em;
+						@include icon($sort);
+						@include adjust-font-size-to($font-size-l, 1, $font-size-xl);
+					}
+				}
+			}
+		}
+	}
+
+	%is-pull-menu-chapters:hover,
+	%is-pull-menu-chapters-open {
+		@include breakpoint( $column-breakpoint ) {
+			a {
+				&.is-nav-active {
+					@include adjust-font-size-to($base-font-size);
+					color: $color-primary;
+					position: relative;
+					padding-left: horizontal-rhythm(1/4);
+					&:after {
+						display: none;
+					}
+					&:before {
+						position: absolute;
+						left: 0%;
+						@include icon($ok);
+						font-size: 100%;
+					}
+				}
+			}
+		}
+	}

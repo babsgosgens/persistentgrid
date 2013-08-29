@@ -17,10 +17,3 @@
 @import "behavior/list-api";
 
 @import "behavior/tabs";
-
-
-.chapter-info {
-	@include padding-leader;
-	@include padding-trailer;
-	@include border-radius($corner-radius);
-}

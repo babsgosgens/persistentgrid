@@ -4,28 +4,27 @@
 
 .site-header {
 	@include column-width(1/2);
-	// @include pull(1/2);
-	vertical-align: bottom;
 }
 .nav-main {
 	@include column-width(1/2);
-	// @include push(1/2);
 	@include leader(4);
-	vertical-align: bottom;
 }
 
 .site-header,
 .nav-main {
 	@include trailer(1.5);
+	vertical-align: bottom;
 }
 
 
 .usp-text {
 	@include column-width(1/2);
+	@include pull(1/2);
 	vertical-align: bottom;
 }
 .usp-image {
 	@include column-width(1/2);
+	@include push(1/2);
 }
 
 .section-nav {
@@ -34,4 +33,32 @@
 }
 .section-content {
 	@include column-width(10/12);
+}
+
+
+//  ==========================================================================
+//  Breakpoints
+//  ==========================================================================
+
+// Tablet and below
+@include breakpoint( $column-breakpoint ) {
+	.site-header {
+		font-size: 90%;
+		@include column-width(9/11, true);
+	}
+	.nav-main {
+		@include leader(.75);
+		@include column-width(2/11, true);
+		padding: 0;
+	}
+	.site-header,
+	.nav-main {
+		vertical-align: top;
+	}	
+}
+// Phone
+@include breakpoint( $small_handheld ) {
+	.site-header {
+		font-size: 90%;
+	}
 }

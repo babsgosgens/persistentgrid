@@ -43,10 +43,17 @@
     })(jQuery);
     </script>
     {% endif %}
-    
+
     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/gistex.js"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
+    (function($) {
+      // Main navigation
+      $('.menu-trigger').on('click', function(e){
+        e.preventDefault();
+        var hash = $(this).attr('href');
+       $(hash).toggleClass('is-menu-open');
+      });
+      // Gist lazy load
       $(".gist").each(function() {
             // add id
           $(this).attr("id", "gist" + $(this).data("id"));
@@ -57,5 +64,5 @@
           // load
           gist.load();
       });
-    });
+    })(jQuery);
     </script>

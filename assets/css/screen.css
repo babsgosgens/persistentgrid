@@ -531,23 +531,31 @@ q {
 .half.persistent {
   width: 50% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
-  .half.persistent {
-    width: 100%;
-  }
-}
 
 /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .push-half {
   position: relative;
   left: 50%;
 }
+@media only screen and (max-width: 48em) {
+  /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .push-half {
+    position: static;
+    position: initial;
+  }
+}
 
 /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .pull-half {
   position: relative;
   left: -50%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .pull-half {
+    position: static;
+    position: initial;
+  }
 }
 
 /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
@@ -565,23 +573,31 @@ q {
 .fourth.persistent {
   width: 25% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
-  .fourth.persistent {
-    width: 100%;
-  }
-}
 
 /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .push-fourth {
   position: relative;
   left: 25%;
 }
+@media only screen and (max-width: 48em) {
+  /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .push-fourth {
+    position: static;
+    position: initial;
+  }
+}
 
 /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .pull-fourth {
   position: relative;
   left: -25%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .pull-fourth {
+    position: static;
+    position: initial;
+  }
 }
 
 /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
@@ -599,23 +615,31 @@ q {
 .third.persistent {
   width: 33.33333% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
-  .third.persistent {
-    width: 100%;
-  }
-}
 
 /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .push-third {
   position: relative;
   left: 33.33333%;
 }
+@media only screen and (max-width: 48em) {
+  /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .push-third {
+    position: static;
+    position: initial;
+  }
+}
 
 /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .pull-third {
   position: relative;
   left: -33.33333%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .pull-third {
+    position: static;
+    position: initial;
+  }
 }
 
 /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
@@ -633,23 +657,31 @@ q {
 .two-third.persistent {
   width: 66.66667% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
-  .two-third.persistent {
-    width: 100%;
-  }
-}
 
 /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .push-two-third {
   position: relative;
   left: 66.66667%;
 }
+@media only screen and (max-width: 48em) {
+  /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .push-two-third {
+    position: static;
+    position: initial;
+  }
+}
 
 /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .pull-two-third {
   position: relative;
   left: -66.66667%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .pull-two-third {
+    position: static;
+    position: initial;
+  }
 }
 
 /* line 36, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
@@ -667,23 +699,31 @@ q {
 .three-fourth.persistent {
   width: 75% !important;
 }
-@media only screen and (max-width: 48em) {
-  /* line 39, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
-  .three-fourth.persistent {
-    width: 100%;
-  }
-}
 
 /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .push-three-fourth {
   position: relative;
   left: 75%;
 }
+@media only screen and (max-width: 48em) {
+  /* line 43, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .push-three-fourth {
+    position: static;
+    position: initial;
+  }
+}
 
 /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
 .pull-three-fourth {
   position: relative;
   left: -75%;
+}
+@media only screen and (max-width: 48em) {
+  /* line 47, ../../_compass/extensions/persistentgrid/scss/pg/layout/_behavior.scss */
+  .pull-three-fourth {
+    position: static;
+    position: initial;
+  }
 }
 
 /*
@@ -1059,7 +1099,7 @@ q {
   /*
    * Dark text on light background
    */
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
@@ -1068,7 +1108,7 @@ html {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 white;
+  text-shadow: 1px 1px 1px white;
 }
 
 /* line 6, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
@@ -1078,7 +1118,7 @@ html {
   /*
    * Dark text on light background
    */
-  text-shadow: -1px -1px 0 black;
+  text-shadow: -1px -1px 1px black;
 }
 
 /* line 13, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
@@ -1090,7 +1130,7 @@ html {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 white;
+  text-shadow: 1px 1px 1px white;
 }
 
 /* line 21, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
@@ -1100,7 +1140,7 @@ html {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
 /* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-info a:not(.btn) {
@@ -1108,7 +1148,7 @@ html {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
 }
 /* line 31, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-info h3 {
@@ -1122,7 +1162,7 @@ html {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
 /* line 41, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-footer a, .site-footer a {
@@ -1130,7 +1170,18 @@ html {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* line 49, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+.chapter-info {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
@@ -1141,7 +1192,6 @@ html {
 /* line 5, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .site-header {
   width: 50%;
-  vertical-align: bottom;
 }
 @media only screen and (max-width: 48em) {
   /* line 5, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
@@ -1150,71 +1200,115 @@ html {
   }
 }
 
-/* line 10, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+/* line 8, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .nav-main {
   width: 50%;
   margin-top: 6em;
-  vertical-align: bottom;
 }
 @media only screen and (max-width: 48em) {
-  /* line 10, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  /* line 8, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .nav-main {
     width: 100%;
   }
 }
 
-/* line 18, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+/* line 14, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .site-header,
 .nav-main {
   margin-bottom: 2.25em;
+  vertical-align: bottom;
 }
 
-/* line 23, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+/* line 20, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .usp-text {
   width: 50%;
+  position: relative;
+  left: -50%;
   vertical-align: bottom;
 }
 @media only screen and (max-width: 48em) {
-  /* line 23, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  /* line 20, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .usp-text {
     width: 100%;
   }
 }
+@media only screen and (max-width: 48em) {
+  /* line 20, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  .usp-text {
+    position: static;
+    position: initial;
+  }
+}
 
-/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+/* line 25, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .usp-image {
   width: 50%;
+  position: relative;
+  left: 50%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  /* line 25, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .usp-image {
     width: 100%;
   }
 }
+@media only screen and (max-width: 48em) {
+  /* line 25, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  .usp-image {
+    position: static;
+    position: initial;
+  }
+}
 
-/* line 31, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+/* line 30, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .section-nav {
   width: 16.66667%;
   margin-top: 3em;
 }
 @media only screen and (max-width: 48em) {
-  /* line 31, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  /* line 30, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .section-nav {
     width: 100%;
   }
 }
 
-/* line 35, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+/* line 34, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 .section-content {
   width: 83.33333%;
 }
 @media only screen and (max-width: 48em) {
-  /* line 35, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  /* line 34, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .section-content {
     width: 100%;
   }
 }
 
+@media only screen and (max-width: 48em) {
+  /* line 45, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  .site-header {
+    font-size: 90%;
+    width: 81.81818% !important;
+  }
+
+  /* line 49, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  .nav-main {
+    margin-top: 1.125em;
+    width: 18.18182% !important;
+    padding: 0;
+  }
+
+  /* line 55, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  .site-header,
+  .nav-main {
+    vertical-align: top;
+  }
+}
+@media only screen and (max-width: 30em) {
+  /* line 61, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
+  .site-header {
+    font-size: 90%;
+  }
+}
 /* line 13, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-main li, .nav-sub li, .chapter-nav li {
   display: inline-block;
@@ -1225,21 +1319,34 @@ html {
   padding: 0.375em 12px;
   text-decoration: none;
 }
+/* line 21, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+.nav-main .menu-trigger, .nav-sub .menu-trigger, .chapter-nav .menu-trigger {
+  display: none;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px 0 inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px 0 inset;
+}
 
-/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 35, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-main {
   text-align: center;
   font-size: 0.875em;
 }
-/* line 34, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 42, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-main a {
   color: #25bb9f;
 }
-/* line 36, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 44, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-main a:hover {
   color: #ffb3b3;
 }
-/* line 44, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 52, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-main .is-nav-active, .nav-main a:hover, .nav-main .nav-sub a:active, .nav-sub .nav-main a:active {
   background: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 3px;
@@ -1249,44 +1356,44 @@ html {
   border-radius: 3px;
 }
 
-/* line 57, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 65, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-sub a {
   padding: 0.375em 24px;
   color: white;
 }
 
-/* line 68, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 76, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .bg-nav-sub {
   background-color: #222222;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 75, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 83, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-sub .is-nav-hover, .nav-sub a:hover {
   background-color: #3b3b3b;
   background-color: rgba(0, 0, 0, 0.1);
-  color: #ff7888 !important;
+  color: #ff7888;
 }
-/* line 80, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 88, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-sub .is-nav-active, .nav-sub .nav-main a:hover, .nav-main .nav-sub a:hover, .nav-sub a:active {
   background: #f6f7ef url(../images/backgrounds/noise.png);
-  color: #ff7888 !important;
+  color: #ff7888;
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 white;
+  text-shadow: 1px 1px 1px white;
 }
-/* line 84, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 92, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .nav-sub .is-nav-active:hover, .nav-sub .nav-main a:hover, .nav-main .nav-sub a:hover, .nav-sub a:hover:active {
-  background: #f6f7ef url(../images/backgrounds/noise.png) !important;
-  color: #21a68d !important;
+  background: #f6f7ef url(../images/backgrounds/noise.png);
+  color: #21a68d;
 }
 
-/* line 96, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 104, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .section-nav li {
   padding: 0.375em 0;
 }
-/* line 99, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 107, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .section-nav a {
   padding: 0.375em;
   padding-left: 24px;
@@ -1300,44 +1407,44 @@ html {
   color: #555555;
 }
 @media only screen and (max-width: 48em) {
-  /* line 99, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 107, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   .section-nav a {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
-/* line 109, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 117, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .section-nav a:hover, .section-nav a:active, .section-nav a.is-nav-hover, .section-nav .nav-sub a:hover, .nav-sub .section-nav a:hover, .section-nav a.is-nav-active, .section-nav .nav-main a:hover, .nav-main .section-nav a:hover, .section-nav .nav-sub a:active, .nav-sub .section-nav a:active {
   background: #e3e6cd;
   background: rgba(0, 0, 0, 0.1);
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
-/* line 116, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 124, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .section-nav .level0 > a {
   color: #ff7888;
 }
-/* line 119, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 127, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .section-nav .level0 li {
   padding-left: 12px;
   padding-right: 12px;
   padding-right: 0;
 }
 @media only screen and (max-width: 48em) {
-  /* line 119, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 127, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   .section-nav .level0 li {
     padding-left: 6px;
     padding-right: 6px;
   }
 }
 
-/* line 130, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 138, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .chapter-nav {
   margin-top: 3em;
 }
-/* line 133, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 141, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .chapter-nav a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1345,11 +1452,256 @@ html {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 137, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+/* line 145, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
 .chapter-nav a:active, .chapter-nav a.is-nav-active, .chapter-nav .nav-main a:hover, .nav-main .chapter-nav a:hover, .chapter-nav .nav-sub a:active, .nav-sub .chapter-nav a:active {
   background: #d0f6ef;
   background: rgba(33, 166, 141, 0.2);
   color: #555555;
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 161, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  .js .nav-main {
+    padding-right: 12px;
+  }
+  /* line 163, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  .js .nav-main ul {
+    position: absolute;
+    top: 0;
+    left: -9999em;
+    z-index: 10;
+  }
+  /* line 169, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  .js .nav-main .menu-trigger {
+    display: inline;
+    float: right;
+  }
+
+  /* line 175, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  .chapter-nav {
+    margin-top: 1.5em;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 183, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  .js :target ul,
+  .js .is-menu-open ul {
+    display: block;
+    left: auto;
+    right: 0;
+    margin: 3.75em 12px 0.75em;
+    background: #21a68d;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+  /* line 191, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  .js :target ul li, .js :target ul a,
+  .js .is-menu-open ul li,
+  .js .is-menu-open ul a {
+    display: block;
+    color: white;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    /*
+     * Dark text on light background
+     */
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 227, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections,
+  #chapters {
+    height: 2.25em;
+    overflow: hidden;
+  }
+  /* line 231, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections ul,
+  #chapters ul {
+    position: relative;
+  }
+  /* line 234, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections a,
+  #chapters a {
+    position: absolute;
+    left: -9999em;
+  }
+  /* line 237, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections a.is-nav-active,
+  #chapters a.is-nav-active, #sections .nav-main a:hover, .nav-main #sections a:hover,
+  #chapters .nav-main a:hover,
+  .nav-main #chapters a:hover, #sections .nav-sub a:active, .nav-sub #sections a:active,
+  #chapters .nav-sub a:active,
+  .nav-sub #chapters a:active {
+    top: 0;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 245, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections:hover,
+  #chapters:hover {
+    height: auto;
+    overflow: auto;
+  }
+  /* line 249, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections:hover a,
+  #chapters:hover a {
+    position: static !important;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 262, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections li {
+    width: 100%;
+  }
+  /* line 266, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections a,
+  #sections a.is-nav-active,
+  #sections .nav-main a:hover,
+  .nav-main #sections a:hover,
+  #sections .nav-sub a:active,
+  .nav-sub #sections a:active {
+    background: #21a68d url(../images/backgrounds/noise.png);
+    color: white;
+    /*
+     * Dark text on light background
+     */
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
+    padding-left: 12px;
+  }
+  /* line 271, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections a:hover,
+  #sections a.is-nav-active:hover,
+  #sections .nav-main a:hover,
+  .nav-main #sections a:hover,
+  #sections .nav-sub a:hover:active,
+  .nav-sub #sections a:hover:active {
+    background-color: #21a68d;
+    color: #555555;
+    /*
+     * Light text on dark background
+     */
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+  }
+  /* line 277, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections a {
+    display: block;
+    width: 100%;
+  }
+  /* line 281, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections a.is-nav-active:before, #sections .nav-main a:hover:before, .nav-main #sections a:hover:before, #sections .nav-sub a:active:before, .nav-sub #sections a:active:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "\f0dc";
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 295, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections:hover a.is-nav-active, #sections:hover .nav-main a:hover, .nav-main #sections:hover a:hover, #sections:hover .nav-sub a:active, .nav-sub #sections:hover a:active {
+    padding-left: 24px;
+  }
+  /* line 297, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #sections:hover a.is-nav-active:before, #sections:hover .nav-main a:hover:before, .nav-main #sections:hover a:hover:before, #sections:hover .nav-sub a:active:before, .nav-sub #sections:hover a:active:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "\f00c";
+    position: absolute;
+    left: .35em;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 308, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters {
+    margin-top: 0.75em;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 3em;
+  }
+  /* line 314, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters a.is-nav-active, #chapters .nav-main a:hover, .nav-main #chapters a:hover, #chapters .nav-sub a:active, .nav-sub #chapters a:active {
+    padding-top: 0;
+    padding-left: 0;
+    font-size: 2.25em;
+    line-height: 1.33333em;
+    background: none;
+    color: #ff7888;
+    /*
+     * Light text on dark background
+     */
+    text-shadow: 1px 1px 1px white;
+  }
+  /* line 321, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters a.is-nav-active:after, #chapters .nav-main a:hover:after, .nav-main #chapters a:hover:after, #chapters .nav-sub a:active:after, .nav-sub #chapters a:active:after {
+    padding-left: .5em;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "\f0dc";
+    font-size: 0.66667em;
+    line-height: 1em;
+  }
+}
+@media only screen and (max-width: 48em) and (max-width: 48em) {
+  /* line 308, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 335, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters:hover a.is-nav-active, #chapters:hover .nav-main a:hover, .nav-main #chapters:hover a:hover, #chapters:hover .nav-sub a:active, .nav-sub #chapters:hover a:active {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #21a68d;
+    position: relative;
+    padding-left: 12px;
+  }
+  /* line 340, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters:hover a.is-nav-active:after, #chapters:hover .nav-main a:hover:after, .nav-main #chapters:hover a:hover:after, #chapters:hover .nav-sub a:active:after, .nav-sub #chapters:hover a:active:after {
+    display: none;
+  }
+  /* line 343, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters:hover a.is-nav-active:before, #chapters:hover .nav-main a:hover:before, .nav-main #chapters:hover a:hover:before, #chapters:hover .nav-sub a:active:before, .nav-sub #chapters:hover a:active:before {
+    position: absolute;
+    left: 0%;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "\f00c";
+    font-size: 100%;
+  }
 }
 
 /* line 2, ../../_compass/scss/persistentgrid.com/behavior/_columns-demo.scss */
@@ -1474,6 +1826,18 @@ pre {
   list-style-type: lower-alpha;
 }
 
+@media only screen and (max-width: 48em) {
+  /* line 34, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+  .chapter-heading {
+    margin: 0.75em 0;
+  }
+
+  /* line 37, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+  .section-nav + .section-content .chapter-heading {
+    position: absolute;
+    left: -9999em;
+  }
+}
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
 .recent-posts {
   margin-top: 3em;
@@ -1531,6 +1895,18 @@ img {
   max-width: 100%;
 }
 
+@media only screen and (max-width: 48em) {
+  /* line 60, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+  .usp-text {
+    margin-top: 0;
+  }
+
+  /* line 66, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+  .usp-image.icecream-01 img {
+    position: static;
+    margin: 0;
+  }
+}
 /* line 8, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
 .list-api-name {
   padding: 0.75em 0;
@@ -1543,8 +1919,6 @@ img {
   background: rgba(255, 179, 179, 0.3);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   text-decoration: none;
@@ -1556,7 +1930,7 @@ img {
   /*
    * Light text on dark background
    */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 /* line 27, ../../_compass/scss/persistentgrid.com/behavior/_list-api.scss */
@@ -1572,8 +1946,6 @@ code {
   background: rgba(0, 0, 0, 0.05);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -1587,17 +1959,6 @@ code {
 .js .tabs-pane.is-pane-open {
   position: static;
   height: auto;
-}
-
-/* line 22, ../../_compass/scss/persistentgrid.com/_behavior.scss */
-.chapter-info {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
 }
 
 /* FONT PATH

@@ -24,3 +24,19 @@
 		list-style-type: lower-alpha;
 	}
 }
+
+//  ==========================================================================
+//  Breakpoints
+//  ==========================================================================
+
+// Tablet and below
+@include breakpoint( $column-breakpoint ) {
+	.chapter-heading {
+		margin: rhythm(.5) 0;
+	}
+	.section-nav+.section-content .chapter-heading {
+		position: absolute;
+		left: -9999em;
+	}
+}
+

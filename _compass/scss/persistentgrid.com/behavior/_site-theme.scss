@@ -43,3 +43,11 @@ html {
 		@include emboss-text-down($txt, $bg, .2);
 	}
 }
+
+
+
+.chapter-info {
+	@include padding-leader;
+	@include padding-trailer;
+	@include border-radius($corner-radius);
+}
