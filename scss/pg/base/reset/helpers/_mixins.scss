@@ -388,7 +388,7 @@
 	 */
 
 	quotes: none;
-	&:before, &:after {
+	&:before, &::after {
 		content: ""; /* 2 */
 		content: none; /* 2 */
 	}

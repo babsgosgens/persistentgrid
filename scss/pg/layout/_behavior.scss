@@ -41,11 +41,11 @@
 		}
 		// Source Ordering
 		.push-#{$name} {
-			@include move($fraction);
+			@include push($fraction);
 		}
 		// Source Ordering
 		.pull-#{$name} {
-			@include move(-1*$fraction);
+			@include pull($fraction);
 		}
 	}
 }

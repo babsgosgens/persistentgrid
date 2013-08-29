@@ -126,7 +126,7 @@ $form-triangle-size: $base-font-size;
 			background-color: $color-cta-secondary;
 			color: $white;
 			@include triangle($form-triangle-size, down, $form-color-hover, after );
-			&:after {
+			&::after {
 				left: (0.5*$column-spacing) - (0.25*$form-triangle-size);
 			}
 		}
@@ -201,7 +201,7 @@ $form-triangle-size: $base-font-size;
 	.invalid:hover {
 		border-color: $form-color-invalid !important;
 	}
-	.invalid:after {
+	.invalid::after {
 		border-top-color: $form-color-invalid !important;
 	}
 

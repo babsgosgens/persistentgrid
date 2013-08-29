@@ -33,7 +33,7 @@
 //  @param $text-color
 //  @param $background-color
 //  ==========================================================================
-@mixin emboss-text-up($text-color, $background-color, $transparency: .5)
+@mixin emboss-text-up($text-color, $background-color, $transparency: .5, $blur: 1px)
 {
 
 	$lt: lightness($text-color);
@@ -46,14 +46,14 @@
 		 * Dark text on light background
 		 */
 		$shadow: rgba(255,255,255,$transparency);
-		@include text-shadow(-1px -1px 0 $shadow);
+		@include text-shadow(-1px -1px $blur $shadow);
 	}
 	@if($lt<$lb) {
 		/*
 		 * Light text on dark background
 		 */
 		$shadow: rgba(0,0,0,$transparency);
-		@include text-shadow(1px 1px 0 $shadow);
+		@include text-shadow(1px 1px $blur $shadow);
 	}
 }
 
@@ -64,7 +64,7 @@
 //  @param $text-color
 //  @param $background-color
 //  ==========================================================================
-@mixin emboss-text-down($text-color, $background-color, $transparency: .5)
+@mixin emboss-text-down($text-color, $background-color, $transparency: .5, $blur: 1px)
 {
 
 	$lt: lightness($text-color);
@@ -75,13 +75,13 @@
 		 * Dark text on light background
 		 */
 		$shadow: rgba(0,0,0,$transparency);
-		@include text-shadow(-1px -1px 0 $shadow);
+		@include text-shadow(-1px -1px $blur $shadow);
 	}
 	@if($lt<$lb) {
 		/*
 		 * Light text on dark background
 		 */
 		$shadow: rgba(255,255,255,$transparency);
-		@include text-shadow(1px 1px 0 $shadow);
+		@include text-shadow(1px 1px $blur $shadow);
 	}
 }

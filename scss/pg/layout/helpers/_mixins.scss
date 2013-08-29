@@ -45,7 +45,7 @@
 		width: fraction-to-percentage($fraction);
 	}
 	
-	@if $column-breakpoint {
+	@if $persistent==false and $column-breakpoint {
 		@include breakpoint( $column-breakpoint ) {
 			width: 100%;
 		}
