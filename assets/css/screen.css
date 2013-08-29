@@ -1832,10 +1832,15 @@ pre {
     margin: 0.75em 0;
   }
 
-  /* line 37, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
-  .section-nav + .section-content .chapter-heading {
+  /* line 39, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+  .section-nav + .section-content .chapter-heading,
+  .section-nav + .section-content .chapter-subheading {
     position: absolute;
     left: -9999em;
+  }
+  /* line 43, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+  .section-nav + .section-content > .is-pane-open {
+    margin-top: 1.5em;
   }
 }
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
