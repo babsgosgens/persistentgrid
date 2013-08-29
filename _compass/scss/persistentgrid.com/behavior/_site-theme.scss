@@ -18,6 +18,20 @@ html {
 		@include emboss-text-down($txt, $bg, 1);
 	}
 }
+.bg-info {
+	$txt: $color-body;
+	$bg: $color-attn-two;
+	color: $txt;
+	background: $bg url(../images/backgrounds/noise.png);
+	@include emboss-text-down($txt, $bg, .6);
+	a:not(.btn) {
+		color: $color-attn-three;
+		@include emboss-text-down($txt, $bg, .4);
+	}
+	h3 {
+		color: $color-attn-three;
+	}
+}
 .bg-footer {
 	$txt: $color-body;
 	$bg: $color-background;

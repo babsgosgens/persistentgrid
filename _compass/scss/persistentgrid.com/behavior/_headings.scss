@@ -16,7 +16,11 @@
 	color: $color-primary;
 	display: list-item;
 	list-style-type: decimal;
+	list-style-position: outside;
 	&:first-child {
 		margin-top: 0;
+	}
+	&.lower-alpha {
+		list-style-type: lower-alpha;
 	}
 }

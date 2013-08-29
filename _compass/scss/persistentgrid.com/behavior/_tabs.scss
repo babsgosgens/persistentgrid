@@ -3,7 +3,7 @@
 		position: relative;
 		left: -9999em;
 		height: 0;
-		overflow: hidden;
+		// overflow-y: hidden;
 		&.is-pane-open {
 			position: static;
 			height: auto;

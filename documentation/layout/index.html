@@ -20,9 +20,9 @@ tabs: section-content
 
 </section>
 
-<section class="tabs-pane" id="grid-examples">
+<section class="tabs-pane" id="examples">
 
-	<h2 class="tabs-trigger chapter-subheading" data-before="Layout " data-rel="#grid-examples">Grid examples</h2>
+	<h2 class="tabs-trigger chapter-subheading" data-before="Layout " data-rel="#examples">Examples</h2>
 
 	
 		
@@ -156,38 +156,38 @@ tabs: section-content
 	<dl class="list-api">
 		<dt class="list-api-name" id="setting-root-selector"><a href="#setting-root-selector">$root-selector</a></dt>
 		<dd class="list-api-description">You can embed your grid layout in a 'root' container. Your grid layout will not stretch beyond the maximum width of this container. The root container can be positioned left or center, for alternate positions you can provide your own behavior. The default selector for the root container is <code>.root</code>, but you can also use a base selector, for instance <code>body</code>.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199574.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199574"></div></dd>
 
 		<dt class="list-api-name" id="setting-root-max-width"><a href="#setting-root-max-width">$root-max-width</a></dt>
 		<dd class="list-api-description">Sets the maximum width on your container. Your grid layout will not stretch beyond this width. Default setting is <code>1152px</code>. Just because.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199579.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199579"></div></dd>
 
 		<dt class="list-api-name" id="setting-root-position"><a href="#setting-root-position">$root-position</a></dt>
 		<dd class="list-api-description">Position your root container left or center of the viewport. Default setting is <code>center</code>.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199582.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199582"></div></dd>
 	</dl>
 
 	<h3 class="paragraph-heading">Columns</h3>
 	<dl class="list-api">
 		<dt class="list-api-name" id="setting-column-selector"><a href="#setting-column-selector">$column-selector</a></dt>
 		<dd class="list-api-description">The selector of your column rules. It is set to <code>.column</code> by default. Change it to any selector that has your fancy.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199725.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199725"></div></dd>
 
 		<dt class="list-api-name" id="setting-column-spacing"><a href="#setting-column-spacing">$column-spacing</a></dt>
 		<dd class="list-api-description">The column-spacing sets the distance between adjacent column's content. By default, column spacing is set by applying padding, but can be overridden with margins. See: <a href="#mixin-column-spacing">@mixin column-spacing</a>. The default setting for <code>$column-spacing</code> is twice the project's preset line-height, but can be changed to any measure - but only in pixels.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199727.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199727"></div></dd>
 
 		<dt class="list-api-name" id="setting-column-spacing-unit"><a href="#setting-column-spacing-unit">$column-spacing-unit</a></dt>
 		<dd class="list-api-description">This setting will likely be removed in the final version.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199730.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199730"></div></dd>
 
 		<dt class="list-api-name" id="setting-column-widths"><a href="#setting-column-widths">$column-widths</a></dt>
 		<dd class="list-api-description">Expects an array of fractions. The grid's default behavior will render rules based on these values. The default column-widths are 1/1, 1/2, 1/3, 2/3 and 3/4 as these values are all that are necessary to create more complex 3, 8, 9, 12 and/or 16 column layouts. Omit and add column-widths at will.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199732.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199732"></div></dd>
 
 		<dt class="list-api-name" id="setting-column-width-default"><a href="#setting-column-width-default">$column-width-default</a></dt>
 		<dd class="list-api-description">This sets the default width of a column. If no width-selector is applied, the column will be of this width. It set to <code>1/1</code> (full width) by default.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199733.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199733"></div></dd>
 
 		<dt class="list-api-name" id="setting-column-breakpoint"><a href="#setting-column-breakpoint">$column-breakpoint</a></dt>
 		<dd class="list-api-description">
@@ -198,11 +198,11 @@ tabs: section-content
 				<li>halving bleed-margins.</li>
 			</ol>
 		</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199734.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199734"></div></dd>
 
 		<dt class="list-api-name" id="setting-column-float"><a href="#setting-column-float">$column-float</a></dt>
 		<dd class="list-api-description">If you prefer floated columns over of inline-blocks, set to <code>true</code>.</dd>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199735.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6199735"></div></dd>
 	</dl>
 
 		<h3 class="paragraph-heading">Fall back for inline-block style columns</h3>
@@ -210,7 +210,7 @@ tabs: section-content
 		<dl class="list-api">
 
 			<dt class="list-api-name" id="setting-negative-right-margin"><a href="#setting-negative-right-margin">$negative-right-margin</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6199744.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6199744"></div></dd>
 			<dd class="list-api-description">Adjust the value to your typography, as it will depend on your type's em-width. Usually a value of <code>0.175</code> seems to produce accurate results. By default, this setting is set to <code>false</code>.</dd>
 		</dl>
 
@@ -235,41 +235,41 @@ tabs: section-content
 		<dl class="list-api">
 			<dt class="list-api-name" id="mixin-column-behavior"><a href="#mixin-column-behavior">@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)</a></dt>
 			<dd class="list-api-description">Mixin basic column properties.</dd>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172502.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172502"></div></dd>
 
 
 			<dt class="list-api-name" id="mixin-column-width"><a href="#mixin-column-width">@mixin column-width($fraction: $base-column-width, $persistent: false)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172510.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172510"></div></dd>
 			<dd class="list-api-description">Mixin a width. Widths are expressed as fractions and are converted to percentages by the mixin. If a <code>$column-breakpoint</code> is set, the columns will be stacked - unless it was defined as persistent.</dd>
 
 
 			<dt class="list-api-name" id="mixin-column-spacing"><a href="#mixin-column-spacing">@mixin column-spacing($fraction: 1/2, $use-margin: false)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172522.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172522"></div></dd>
 			<dd class="list-api-description">Mixin column spacing. Uses padding by default, but can be overridden to use margins instead - helpful when assigning backgrounds or borders. If a <code>$column-breakpoint</code> is set, the value will be halved below the breakpoint.</dd>
 
 
 			<dt class="list-api-name" id="mixin-column"><a href="#mixin-column">@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: false)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172533.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172533"></div></dd>
 			<dd class="list-api-description">Shorthand mixin for column, combines above mixins. Behavior can be overridden with the parameters.</dd>
 
 
 			<dt class="list-api-name" id="mixin-root"><a href="#mixin-root">@mixin root($root-max-width: $root-max-width)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172513.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172513"></div></dd>
 			<dd class="list-api-description">Fixes content width and centers in viewport.</dd>
 
 
 			<dt class="list-api-name" id="mixin-container-behavior"><a href="#mixin-container-behavior">@mixin container-behavior()</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172512.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172512"></div></dd>
 			<dd class="list-api-description">Deprecated?</dd>
 
 
 			<dt class="list-api-name" id="mixin-move"><a href="#mixin-move">@mixin move($fraction)</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172567.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172567"></div></dd>
 			<dd class="list-api-description">Helper mixin for soure ordering.</dd>
 
 
 			<dt class="list-api-name" id="mixin-bleed"><a href="#mixin-bleed">@mixin bleed()</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172518.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6172518"></div></dd>
 			<dd class="list-api-description">Mixin to reverse padding on a container. Is helpful with nested columns. If a <code>$column-breakpoint</code> is set, the margins will be halved below the breakpoint.</dd>
 		</dl>
 
@@ -281,15 +281,15 @@ tabs: section-content
 
 	<dl class="list-api">
 		<dt class="list-api-name" id="function-horizontal-rhythm"><a href="#function-horizontal-rhythm">@function horizontal-rhythm($fraction: 1/2)</a></dt>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172639.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6172639"></div></dd>
 		<dd class="list-api-description">Calculates a value based on the $column-spacing.</dd>
 
 		<dt class="list-api-name" id="function-fraction-to-percentage"><a href="#function-fraction-to-percentage">@function fraction-to-percentage($fraction: 1/3)</a></dt>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172651.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6172651"></div></dd>
 		<dd class="list-api-description">Convert a fraction to a percentage.</dd>
 
 		<dt class="list-api-name" id="function-fraction-to-text"><a href="#function-fraction-to-text">@function fraction-to-text($fraction)</a></dt>
-		<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6172660.js"></script></dd>
+		<dd class="list-api-code"><div class="gist" data-id="6172660"></div></dd>
 		<dd class="list-api-description">Convert a fraction to a word. Use to build style rules based on column widths.</dd>
 	</dl>
 
@@ -301,25 +301,25 @@ tabs: section-content
 		<p>This is the default behavior rendering of the Grid Module:</p>
 
 		<h3 class="paragraph-heading">Root selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200034.js"></script>
+		<div class="gist" data-id="6200034"></div>
 
 		<h3 class="paragraph-heading">Column selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200045.js"></script>
+		<div class="gist" data-id="6200045"></div>
 
 		<h3 class="paragraph-heading">Container selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200063.js"></script>
+		<div class="gist" data-id="6200063"></div>
 
 		<h3 class="paragraph-heading">Padding selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200069.js"></script>
+		<div class="gist" data-id="6200069"></div>
 
 		<h3 class="paragraph-heading">Bleed selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200088.js"></script>
+		<div class="gist" data-id="6200088"></div>
 
 		<h3 class="paragraph-heading">Column selector</h3>
-		<script src="https://gist.github.com/babsgosgens/6200091.js"></script>
+		<div class="gist" data-id="6200091"></div>
 
 		<h3 class="paragraph-heading">Column selectors and source ordering selectors</h3>
-		<script src="https://gist.github.com/babsgosgens/6200104.js"></script>
+		<div class="gist" data-id="6200104"></div>
 
 		<p>At present, the total weight of the compiled (compressed) CSS is 4.1Kb</p>
 
@@ -344,13 +344,13 @@ tabs: section-content
 		</div>
 		<dl class="list-api">
 			<dt class="list-api-name" id="usage-example1"><a href="#usage-example1">Example 1: Assigning classes at markup level</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200190.js"></script></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6200190"></div></dd>
 
 			<dt class="list-api-name" id="usage-example2"><a href="#usage-example2">Example 2: Extending classes</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200198.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6200198"></div></dd>
 
 			<dt class="list-api-name" id="usage-example3"><a href="#usage-example3">Example 3: Using the mixins</a></dt>
-			<dd class="list-api-code"><script src="https://gist.github.com/babsgosgens/6200210.js"></script></dd>
+			<dd class="list-api-code"><div class="gist" data-id="6200210"></div></dd>
 		</dl>
 
 </section>

@@ -43,3 +43,19 @@
     })(jQuery);
     </script>
     {% endif %}
+    
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/gistex.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $(".gist").each(function() {
+            // add id
+          $(this).attr("id", "gist" + $(this).data("id"));
+          // set id
+          var container = $(this).attr("id");
+          // create object (replace this with your username)
+          var gist = new Gistex(container, 'https://gist.github.com/babsgosgens/' + $(this).data("id") + '.js');
+          // load
+          gist.load();
+      });
+    });
+    </script>

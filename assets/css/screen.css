@@ -1094,6 +1094,28 @@ html {
 }
 
 /* line 21, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+.bg-info {
+  color: #555555;
+  background: #ffb3b3 url(../images/backgrounds/noise.png);
+  /*
+   * Light text on dark background
+   */
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+}
+/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+.bg-info a:not(.btn) {
+  color: #21a68d;
+  /*
+   * Light text on dark background
+   */
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+/* line 31, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+.bg-info h3 {
+  color: #21a68d;
+}
+
+/* line 35, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-footer, .site-footer {
   background: #ffb3b3 url(../images/backgrounds/noise.png);
   color: #555555;
@@ -1102,7 +1124,7 @@ html {
    */
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
 }
-/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 41, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-footer a, .site-footer a {
   color: #555555;
   /*
@@ -1441,10 +1463,15 @@ pre {
   color: #21a68d;
   display: list-item;
   list-style-type: decimal;
+  list-style-position: outside;
 }
-/* line 19, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+/* line 20, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
 .paragraph-heading:first-child {
   margin-top: 0;
+}
+/* line 23, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+.paragraph-heading.lower-alpha {
+  list-style-type: lower-alpha;
 }
 
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
@@ -1555,12 +1582,22 @@ code {
   position: relative;
   left: -9999em;
   height: 0;
-  overflow: hidden;
 }
 /* line 7, ../../_compass/scss/persistentgrid.com/behavior/_tabs.scss */
 .js .tabs-pane.is-pane-open {
   position: static;
   height: auto;
+}
+
+/* line 22, ../../_compass/scss/persistentgrid.com/_behavior.scss */
+.chapter-info {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* FONT PATH
