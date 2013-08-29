@@ -16,6 +16,8 @@ $trace-imports: false;
 //  ==========================================================================
 	@import "pg/helpers";
 	@import "pg/base/helpers";
+	@import "pg/layout/helpers";
+	@import "pg/modules/helpers";
 
 //  ==========================================================================
 //  Settings
@@ -25,6 +27,8 @@ $trace-imports: false;
 //  2) project settings
 //  ==========================================================================
 	@import "pg/base/settings";
+	@import "pg/layout/settings";
+	@import "pg/modules/settings";
 	// Your project settings and overrides //
 
 //  ==========================================================================
@@ -33,4 +37,6 @@ $trace-imports: false;
 //  Import the behavior (in the order you want rules to render): 
 //  ==========================================================================
 	@import "pg/base/behavior";
+	@import "pg/layout/behavior";
+	@import "pg/modules/behavior";
 	// Your project behavior, e.g. your (S)CSS //
