@@ -32,10 +32,10 @@
 		 * Font and text treatments
 		 */
 		@include module-type($input-type);
-		@include module-property($label-text-color, 'color');
-		@include module-property($label-text-align, 'text-align');
-		@include module-property($label-text-decoration, 'text-decoration');
-		@include module-text-shadow($label-text-shadow);
+		@include module-property($input-text-color, 'color');
+		@include module-property($input-text-align, 'text-align');
+		@include module-property($input-text-decoration, 'text-decoration');
+		@include module-text-shadow($input-text-shadow);
 
 		&:focus {
 			@extend %is-#{$input-field-class}-focus;
