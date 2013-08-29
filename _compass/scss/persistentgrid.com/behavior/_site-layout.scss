@@ -43,11 +43,11 @@
 // Tablet and below
 @include breakpoint( $column-breakpoint ) {
 	.site-header {
-		font-size: 90%;
+		@include leader(.25);
 		@include column-width(9/11, true);
 	}
 	.nav-main {
-		@include leader(.75);
+		@include leader(1);
 		@include column-width(2/11, true);
 		padding: 0;
 	}

@@ -310,6 +310,10 @@
 			margin-top: vertical-rhythm(.5);
 			@include column-spacing;
 			height: vertical-rhythm(2);
+			li {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
 			a {
 				&.is-nav-active {
 					padding-top: 0;
@@ -331,6 +335,10 @@
 	%is-pull-menu-chapters:hover,
 	%is-pull-menu-chapters-open {
 		@include breakpoint( $column-breakpoint ) {
+			li {
+				padding-top: vertical-rhythm(.25);
+				padding-bottom: vertical-rhythm(.25);
+			}
 			a {
 				&.is-nav-active {
 					@include adjust-font-size-to($base-font-size);

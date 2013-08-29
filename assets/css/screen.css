@@ -1286,13 +1286,13 @@ html {
 @media only screen and (max-width: 48em) {
   /* line 45, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .site-header {
-    font-size: 90%;
+    margin-top: 0.375em;
     width: 81.81818% !important;
   }
 
   /* line 49, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
   .nav-main {
-    margin-top: 1.125em;
+    margin-top: 1.5em;
     width: 18.18182% !important;
     padding: 0;
   }
@@ -1641,7 +1641,12 @@ html {
     padding-right: 24px;
     height: 3em;
   }
-  /* line 314, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 313, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters li {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  /* line 318, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   #chapters a.is-nav-active, #chapters .nav-main a:hover, .nav-main #chapters a:hover, #chapters .nav-sub a:active, .nav-sub #chapters a:active {
     padding-top: 0;
     padding-left: 0;
@@ -1654,7 +1659,7 @@ html {
      */
     text-shadow: 1px 1px 1px white;
   }
-  /* line 321, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 325, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   #chapters a.is-nav-active:after, #chapters .nav-main a:hover:after, .nav-main #chapters a:hover:after, #chapters .nav-sub a:active:after, .nav-sub #chapters a:active:after {
     padding-left: .5em;
     font-family: FontAwesome;
@@ -1677,7 +1682,12 @@ html {
 }
 
 @media only screen and (max-width: 48em) {
-  /* line 335, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 338, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  #chapters:hover li {
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+  }
+  /* line 343, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   #chapters:hover a.is-nav-active, #chapters:hover .nav-main a:hover, .nav-main #chapters:hover a:hover, #chapters:hover .nav-sub a:active, .nav-sub #chapters:hover a:active {
     font-size: 1em;
     line-height: 1.5em;
@@ -1685,11 +1695,11 @@ html {
     position: relative;
     padding-left: 12px;
   }
-  /* line 340, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 348, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   #chapters:hover a.is-nav-active:after, #chapters:hover .nav-main a:hover:after, .nav-main #chapters:hover a:hover:after, #chapters:hover .nav-sub a:active:after, .nav-sub #chapters:hover a:active:after {
     display: none;
   }
-  /* line 343, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
+  /* line 351, ../../_compass/scss/persistentgrid.com/behavior/_site-navigation.scss */
   #chapters:hover a.is-nav-active:before, #chapters:hover .nav-main a:hover:before, .nav-main #chapters:hover a:hover:before, #chapters:hover .nav-sub a:active:before, .nav-sub #chapters:hover a:active:before {
     position: absolute;
     left: 0%;
@@ -1838,8 +1848,8 @@ pre {
     position: absolute;
     left: -9999em;
   }
-  /* line 43, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
-  .section-nav + .section-content > .is-pane-open {
+  /* line 44, ../../_compass/scss/persistentgrid.com/behavior/_headings.scss */
+  .section-nav + .section-content > .chapter-heading + .chapter-section, .section-nav + .section-content > .is-pane-open {
     margin-top: 1.5em;
   }
 }
