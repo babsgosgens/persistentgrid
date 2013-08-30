@@ -1,0 +1,37 @@
+/* http://persistent-grid.com
+   v1.0 | 20130701
+   Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+   License: GNU General Public License version 2 or later; see LICENSE.txt
+*/
+$trace-imports: false;
+
+
+//  ==========================================================================
+//  Dependencies
+//  ==========================================================================
+	@import "Compass";
+
+//  ==========================================================================
+//  Helpers
+//  ==========================================================================
+	@import "pg/helpers";
+	@import "pg/grid/helpers";
+
+//  ==========================================================================
+//  Settings
+//  --------------------------------------------------------------------------
+//  Import the settings, in this order: 
+//  1) pg settings
+//  2) project settings
+//  ==========================================================================
+	@import "pg/base/settings";
+	@import "pg/grid/settings";
+	// Your project settings and overrides //
+
+//  ==========================================================================
+//  Settings
+//  --------------------------------------------------------------------------
+//  Import the behavior (in the order you want rules to render): 
+//  ==========================================================================
+	@import "pg/grid/behavior";
+	// Your project behavior, e.g. your (S)CSS //

@@ -1,4 +1,4 @@
-stylesheet 'persistentgrid.scss', :media => "screen, projection"
+stylesheet 'base.scss', :media => "screen, projection"
 
 description "A solid base for your projects. Includes the reset and base styles."
 
