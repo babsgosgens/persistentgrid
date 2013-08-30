@@ -4,4 +4,21 @@ section: tutorials
 title: Start
 ---
 
-@todo
+<div class="root">
+	<div class="half column">
+<h1 class="chapter-heading">Tutorials</h1>
+
+{% for post in site.posts %}
+	<div class="post">
+		<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+		<p class="meta">Date: {{ post.date }}</p>
+		<div class="entry">
+			{{ post.content | strip_html | truncatewords: 100 }}
+		</div>
+	</div>
+  {% if post.categories contains 'blog1' %}
+  {% endif %}
+{% endfor %}
+
+	</div>
+</div>

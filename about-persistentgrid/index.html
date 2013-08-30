@@ -1,0 +1,49 @@
+---
+layout: default
+title: About Persistent Grid
+---
+<div class="root">
+
+	<h1 class="chapter-heading full column">About Persistent Grid</h1>
+
+	<section class="chapter-section two-third column">
+
+		<p class="intro">
+			Persistent Grid is a configurable grid system that is incredibly flexible yet super simple to use. Compose any layout as Persistent Grid is not fixed to any number of columns. Responsive webdesign has never been this easy.
+		</p>
+
+
+<pre>
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+</pre>
+		<h2 class="chapter-subheading">CSS to taste</h2>
+
+		<div class="gist" data-gist=""></div>
+
+		<p>By default, Persistent grid is configured to render style rules for whole, half, third and fourth columns. With this simple preset, you can already compose tens of different column layouts. If set (and it is by default), columns-widths are negated on a certain breakpoint (which of course is configurable) <em>unless</em> a column-width is persistent.</p>
+
+		<p>See: <a href="#">lll</a> for some example configurations.</p>
+
+		<h2 class="chapter-subheading">Mix flavours, in any combination.</h2>
+
+		<div class="gist" data-gist=""></div>
+
+		<p>Persistent Grid is more than just the sweetest grid on the block. It is also a reset, a set of base styles and a collection of commonly used UI elements: buttons, lists, forms an much more. </p>
+
+		<h2 class="chapter-subheading">Create new modules, it&rsquo;s super easy.</h2>
+
+		<div class="gist" data-gist=""></div>
+		
+		<p>With extensibility in mind, a great amount of thought has been put into the organization of directory structure.</p>
+
+	</section>
+
+</div>

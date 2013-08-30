@@ -51,3 +51,11 @@ html {
 	@include padding-trailer;
 	@include border-radius($corner-radius);
 }
+
+.intro {
+	@include adjust-font-size-to($font-size-l);
+	color: $color-primary;
+}
+p+p {
+	margin-top: vertical-rhythm(1);
+}

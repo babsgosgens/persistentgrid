@@ -117,6 +117,18 @@ html {
   border-radius: 3px;
 }
 
+/* line 55, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+.intro {
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #21a68d;
+}
+
+/* line 59, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+p + p {
+  margin-top: 1.5em;
+}
+
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_site-layout.scss */
 [role="main"] {
   padding-bottom: 3em;
