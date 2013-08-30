@@ -25,10 +25,10 @@
 	// Input margin (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$input-margin-top: 0;
-	$input-margin-right: 0;
-	$input-margin-bottom: 0;
-	$input-margin-left: 0;
+	$input-margin-top: 0 !default;
+	$input-margin-right: 0 !default;
+	$input-margin-bottom: 0 !default;
+	$input-margin-left: 0 !default;
 	$input-margin: 
 		$input-margin-top 
 		$input-margin-right 
