@@ -12,44 +12,58 @@ title: Start
 
 			<div class="chapter-info bg-info column">
 
-				<p><img alt="" src="{{ site.baseurl }}/assets/images/icecream/stacked_red-yellow-green.png" height="116" style="float: left; margin-right: 1em;">Persistent Grid is a modular CSS framework built with <a href="http://sass-lang.com/">SASS</a> and <a href="http://compass-style.org/">Compass</a>. It comes in three flavours: <a href="{{ site.baseurl }}/base/grid"><em>Grid</em></a>, <a href="{{ site.baseurl }}/base"><em>Base</em></a> and <a href="{{ site.baseurl }}/extended"><em>Extended</em></a>.</p>
+				<p><img alt="" src="{{ site.baseurl }}/assets/images/icecream/stacked_red-yellow-green.png" height="116" style="float: left; margin-right: 1em;">Persistent Grid is a modular CSS framework built with <a href="http://sass-lang.com/">SASS</a> and <a href="http://compass-style.org/">Compass</a>. It comes in three flavours: <a href="{{ site.baseurl }}/base/grid"><em>Grid</em></a>, <a href="{{ site.baseurl }}/base"><em>Base</em></a> and <a href="{{ site.baseurl }}/extended"><em>Extended</em></a>.
+				</p>
 				<h3 class="chapter-subheading">Grid</h3>
-				<p>Grid is the most basic execution of Persistant Grid. If you are only interested in the layout system then this is your cup of tea.</p>
+				<p>Grid is the most basic execution of Persistant Grid. If all you need is a good layout system to complete your project then this is your flavor of choice.
+				</p>
+				<p><code>compass install persistentgrid/grid</code></p>
 				<h3 class="chapter-subheading">Base</h3>
-				<p>Basic provides the grid and a set of base styles to build your project on. It includes a Reset module, a Type module and a bunch of (very useful) base styles. If you're looking for a solid base to start from, then this is probably your flavour of choice.</p>
+				<p>Basic provides a little extra to the grid: a set of base styles to build your project on. It includes the Grid, Reset, Type module and Base Styles modules. It provides a solid base to build your stylesheet on.</p>
+				<p><code>compass install persistentgrid/base</code></p>
 				<h3 class="chapter-subheading">Modules</h3>
-				<p>Modules<sup>1)</sup> is an extension to Base. It provides a collection of commonly used UI elements like buttons, forms, tabs and a whole lot more. And you don't have to stick with what's there either. You can add as well as override any of the framework modules. More information is to come&hellip;</p>
-				<p><sup>1)</sup> <small>Framework is still under heavy construction.</small></p>
+				<p>Modules<sup>1)</sup> adds some of commonly used UI elements to the mix. It's an ever growing colelction of buttons, forms, tabs and a whole lot more. And you don't have to stick with the core modules. In fact you can add or override any of the provided modules. More information is to come&hellip;
+				</p>
+				<p><code>compass install persistentgrid/modules</code></p>
+				<p><sup>1)</sup> <small>Modules is still under heavy construction.</small></p>
 			</div>
 
 		</aside
 		><section class="chapter-section two-third column pull-third">
 
+
+			<pre class="gem-install">gem install persistentgrid --pre</pre>
+			<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid</pre>
+			<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/grid</pre>
+			<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/base</pre>
+			<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/modules</pre>
+
 			<section>
 				<aside>
-					<h2 class="chapter-subheading">Installing Persistent Grid (pre-alpha)</h2>
-					<p>During the development of Persistent Grid (or at least until a first release candidate) you can install Persistent Grid as an Ad-Hoc Compass extension. Ad-Hoc extensions reside in a directory named <code>extensions</code> in the root of your Compass project.</p>
-					<p><small>Persistent Grid will be available as a gem as soon as it's ready to ship.</small></p>
+					<h2 class="chapter-subheading">Installing Persistent Grid (pre-release)</h2>
+					<pre class="gem-install">gem install persistentgrid --pre</pre>
 				</aside>
 
-				<h3 class="chapter-subheading">Adding Persistent Grid to your Compass project</h3>
-				<p>Create a directory named <code>extensions</code> in the root of your Compass project directory.</p>
-				<p><small>Unless of course directory does already exist.</small></p>
+				<h2 class="chapter-subheading">Creating a new Compass project:</h2>
 
-				<h4 class="paragraph-heading lower-alpha">Install using git submodule</h4>
-				<p>If you are using git for version control, you may want to add Persistent Grid as a submodule to your project. Using the command line, from the root of your repository, type: <div class="gist" data-id="6230518"></div><p/>
-				
-				<p><small>Make sure to replace "path_to_your_compass_directory" with the actual path to your Compass directory.</small></p>
+				<h3 class="paragraph-heading lower-alpha">Using all flavors:</h3>
+				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid</pre>
+				<h3 class="paragraph-heading lower-alpha">Using only the grid template:</h3>
+				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/grid</pre>
+				<h3 class="paragraph-heading lower-alpha">Using only the base template:</h3>
+				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/base</pre>
+				<h3 class="paragraph-heading lower-alpha">Using only the modules template:</h3>
+				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/modules</pre>
 
-				<h4 class="paragraph-heading lower-alpha">Install using an archive</h4>
-				<p>You can also add Persistent Grid by extracting an <a href="https://github.com/babsgosgens/persistentgrid/archive/master.zip">archived copy</a> of Persistent Grid into the extensions directory. Rename the extracted directory from <code>persistentgrid-master</code> to <code>persistentgrid</code>.</p>
+				<h2 class="chapter-subheading">Adding Persistent Grid to an existing Compass project</h2>
 
-				<br>
-				<h3 class="chapter-subheading">Checking that Persistent Grid is installed succesfully</h3>
-				<p>Using the command line, from the root directory of your Compass project, type: <div class="gist" data-id="6230560"></div></p>
-				<p>You should now see Persistent Grid listed among your other available extensions: <div class="gist" data-id="6230579"></div></p>
+				<p>Edit the project configuration file and add:</p>
+				<pre class="gem-install">require 'persistentgrid'</pre>
+				<p>Then, from the command line, run:</p>
+				<pre class="gem-install">compass install persistentgrid</pre>
 
-				<p>For more information on Compass Ad-Hoc extensions, please visit <a href="http://compass-style.org/help/tutorials/extensions/">http://compass-style.org/help/tutorials/extensions/</a>. Instructions on starting a bare Compass project is also listed there.</p>
+				<p>Or, if you want to install one of the other template besides the project template:</p>
+				<pre class="gem-install">compass install persistentgrid/grid</pre>
 
 			</section>
 

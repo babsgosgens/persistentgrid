@@ -34,3 +34,14 @@ code {
 	background: rgba(0,0,0,.05);
 	@include border-radius($corner-radius);
 }
+
+.gem-install {
+	color: $color-attn-three;
+	@include adjust-font-size-to($font-size-l, 1);
+	@include column-spacing;
+	@include padding-trailer(.25);
+	@include padding-leader(.25);
+	background: lighten($pg-grey, 4%) url(../images/backgrounds/noise.png);
+	border: 1px solid darken($pg-grey, 4%);
+	@include border-radius($corner-radius);
+}
