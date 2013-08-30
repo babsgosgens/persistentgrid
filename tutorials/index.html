@@ -9,6 +9,7 @@ title: Start
 <h1 class="chapter-heading">Tutorials</h1>
 
 {% for post in site.posts %}
+  {% if post.section == 'ttutorials' %}
 	<div class="post">
 		<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 		<p class="meta">Date: {{ post.date }}</p>
@@ -16,9 +17,23 @@ title: Start
 			{{ post.content | strip_html | truncatewords: 100 }}
 		</div>
 	</div>
-  {% if post.categories contains 'blog1' %}
   {% endif %}
 {% endfor %}
 
 	</div>
 </div>
+
+<!-- Pagination links -->
+<!-- <div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div> -->

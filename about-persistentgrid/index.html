@@ -13,24 +13,12 @@ title: About Persistent Grid
 		</p>
 
 
-<pre>
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
-</pre>
 		<h2 class="chapter-subheading">CSS to taste</h2>
 
 		<div class="gist" data-gist=""></div>
 
 		<p>By default, Persistent grid is configured to render style rules for whole, half, third and fourth columns. With this simple preset, you can already compose tens of different column layouts. If set (and it is by default), columns-widths are negated on a certain breakpoint (which of course is configurable) <em>unless</em> a column-width is persistent.</p>
 
-		<p>See: <a href="#">lll</a> for some example configurations.</p>
 
 		<h2 class="chapter-subheading">Mix flavours, in any combination.</h2>
 
