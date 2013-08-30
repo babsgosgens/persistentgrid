@@ -11,22 +11,22 @@ $trace-imports: false;
 // Import the helpers: 
 @import "pg/helpers";
 @import "pg/base/helpers";
-@import "pg/layout/helpers";
+@import "pg/grid/helpers";
 @import "pg/modules/helpers";
 
 // Import the settings, in this order: 
 // 1) project settings
 // 2) pg settings
 @import "pg/base/settings";
-@import "pg/layout/settings";
-@import "pg/modules/settings";
+@import "pg/grid/settings";
 @import "persistentgrid.com/settings";
+@import "pg/modules/settings";
 
 // Import the behavior (in the order you want rules to render): 
-@import "pg/base/behavior";
-@import "pg/layout/behavior";
-@import "pg/modules/behavior";
 @import "persistentgrid.com/behavior";
+@import "pg/base/behavior";
+@import "pg/grid/behavior";
+@import "pg/modules/behavior";
 
 
 //* Include a symbol font (Fontawesome)*//
