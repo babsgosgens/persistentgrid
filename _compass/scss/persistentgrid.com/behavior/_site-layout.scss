@@ -10,7 +10,7 @@
 	@include leader(4);
 }
 
-.site-header,
+html .site-header,
 .nav-main {
 	@include trailer(1.5);
 	vertical-align: bottom;
