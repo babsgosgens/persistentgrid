@@ -1,32 +1,36 @@
 ---
 layout: default
-section: blogs
-title: Start
+section: blog
+title: Blog
 ---
 
 <div class="root">
-	<div class="half column">
-<h1 class="chapter-heading">Tutorials</h1>
+  <section class="half column">
 
-{% for post in site.posts %}
-  {% if post.section == 'bblog' %}
-	<div class="post">
-		<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-		<p class="meta">Date: {{ post.date }}</p>
-		<div class="entry">
-			{{ post.content | strip_html | truncatewords: 100 }}
-		</div>
-	</div>
-  {% endif %}
-{% endfor %}
+    <h1 class="chapter-heading">{{ page.title }}</h1>
 
-	</div>
+    {% for post in site.categories.tutorials %}
+      <article class="post">
+        <h1 class="chapter-subheading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+         <p class="entry">
+          {{ post.excerpt | strip_html }} <a href="{{ post.url }}" class="read-more">Read on&nbsp;</a>
+        </p>
+      </article>
+    {% endfor %}
+
+    <!-- Pagination links -->
+    <!-- <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+      {% else %}
+        <span class="previous">Previous</span>
+      {% endif %}
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+      {% else %}
+        <span class="next ">Next</span>
+      {% endif %}
+    </div> -->
+  </section>
 </div>
-
-
-<h4>Related Posts</h4>
-<ul>
-  {% for post in site.related_posts limit:5 %}
-  <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>

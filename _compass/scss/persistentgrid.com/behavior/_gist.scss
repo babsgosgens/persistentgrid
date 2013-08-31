@@ -2,6 +2,9 @@ $txt: lighten($color-body,20%);
 $bg: rgba($color-attn-two,.2);
 $brdr: rgba($color-attn-two,.3);
 
+p+.gist {
+	margin-top: vertical-rhythm(1);
+}
 .gist {
 	color: $color-body !important;
 }
@@ -18,7 +21,7 @@ pre {
 }
 
 .gist .gist-file .gist-meta {
-	display: none;
+	// display: none;
 }
 
 .gist .gist-file .gist-meta a {

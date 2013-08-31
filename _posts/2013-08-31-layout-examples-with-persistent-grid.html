@@ -1,0 +1,136 @@
+---
+layout: post
+title:  "Layout examples with Persistent Grid"
+author: "Babs G&ouml;sgens"
+date:   2013-08-31 18:01:00
+categories: blog grid
+tags: grid
+section: blog
+---
+
+<p class="intro">Persistent Grid does not restrict you to any fixed number of columns, nor does it enforce any column width. With Persistent Grid, you can create any layout you want.</p>
+
+<section>
+	<h2 class="paragraph-heading">Combined column widths</h2>
+
+	<div class="half column-container">
+		<div class="half demo column">
+		1/2 column in 1/2 column
+		</div
+		><div class="fourth demo column">
+		1/4 column in 1/2 column
+		</div
+		><div class="fourth demo column">
+		1/4 column in 1/2 column
+		</div>
+	</div
+	><div class="half demo column">
+		1/2 column
+	</div>
+
+	<hr>
+
+	<div class="half demo column">
+		1/2 column
+	</div
+	><div class="half demo column">
+		1/2 column
+	</div>
+
+	<hr>
+
+	<div class="half demo column">
+		1/2 column
+	</div
+	><div class="half column-container">
+
+		<div class="third demo column">
+			1/3 column in 1/2 column-container
+		</div
+		><div class="third demo column">
+			1/3 column in 1/2 column-container
+		</div
+		><div class="third demo column">
+			1/3 column in 1/2 column-container
+		</div>
+
+	</div>
+
+	<hr>
+
+	<div class="third demo column">
+		1/3 column
+	</div
+	><div class="two-third demo column">
+		2/3 column
+	</div>
+
+	<hr>
+
+	<div class="fourth demo column">
+	1/4 column
+	</div
+	><div class="three-fourth column-container">
+
+		<div class="third demo column">
+			1/3 column in 3/4 column-container
+		</div
+		><div class="third demo column">
+			1/3 column in 3/4 column-container
+		</div
+		><div class="third demo column">
+			1/3 column in 3/4 column-container
+		</div>
+
+	</div>
+
+	<hr>
+
+	<div class="fourth demo column">
+		1/4 column
+	</div
+	><div class="three-fourth demo column">
+		3/4 column
+	</div>	
+</section>
+
+<section>
+	<h2 class="paragraph-heading">Double padded columns (and how to fix them)</h2>
+	<p>Example of nested columns with double padding - which may or may not be what you want.</p>
+
+	<div class="full demo column">
+
+		<div class="half demo column">
+			1/2 column in 1/1 column
+		</div
+		><div class="half demo column">
+			1/2 column in 1/1 column
+		</div>
+
+	</div>
+
+	<p>Fixed: wrap the nested set inside a container with class <code>bleed</code> to fix the double padding.</p>
+	<div class="demo column">
+
+		<div class="bleed">
+		<div class="half demo column">
+			1/2 column in 1/1 column, but wrapped in an element with class 'bleed'
+		</div
+		><div class="half demo column">
+			1/2 column in 1/1 column, but wrapped in an element with class 'bleed'
+		</div>
+		</div>
+
+	</div>
+</section>
+
+<section>
+	<h2 class="paragraph-heading">Example of persistent columns (resize browser to see effect)</h2>
+
+	<div class="half persistent demo column">
+		1/2 column in 1/1 column
+	</div
+	><div class="half persistent demo column">
+		1/2 column in 1/1 column
+	</div>
+</section>

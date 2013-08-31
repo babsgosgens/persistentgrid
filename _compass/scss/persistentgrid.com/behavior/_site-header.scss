@@ -1,5 +1,9 @@
+.site-header {
+	color: $white;
+}
 .site-header-title {
 	@include adjust-font-size-to($site-header-title-font-size, 1);
+	color: inherit;
 	img {
 		margin-right: .175em;
 	}

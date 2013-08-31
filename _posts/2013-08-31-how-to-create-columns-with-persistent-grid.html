@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "How to create columns with Persistent Grid"
+author: "Babs G&ouml;sgens"
+date:   2013-08-31 18:01:00
+categories: tutorials grid
+tags: grid
+section: tutorials
+---
+
+<p class="intro">Are you a developer that likes to keep his markup free from presentational classes? Persistent Grid provides you with different ways to create columns.</p>
+
+<h2 class="chapter-subheading">Classes or style rules</h2>
+
+<p>Columns can be rendered by:</p>
+<ol class="list list-decimal">
+	<li>assigning classes (at markup level),</li>
+	<li>extending the rendered behavior,</li>
+	<li>using mixins.</li>
+</ol>
+<br>
+
+<h3 class="paragraph-heading">Example: columns by assigning classes</h3>
+<p>Using classes<sup>1)</sup> is the simplest way of assigning columns to your markup, and - as you can see in the examples below - uses the least amount of code:</p>
+<div class="gist" data-id="6200190"></div>
+<p><small><sup>1)</sup> Persistent Grid will produce column styles<sup>1)</sup> for widths as specified in the settings for the <a href="{{ site.baseurl }}/documentation/grid/">Grid module</a>. The default settings include half, third and fourth column-widths (and their respective counter parts). With these three simple column widths alone, a myriad of layouts is possible (see: <a href="{{ site.baseurl }}/blog/grid/2013/08/31/layout-examples-with-persistent-grid.html">Layout examples with Persistent Grid</a>).</small></p>
+
+<h3 class="paragraph-heading">Example: columns by extending classes</h3>
+<p>Extending classes can be useful but beware - it can produce bloated stylesheets in the blink of an eye. The first pane shows the markup, the second the SCSS and the third pane shows the compiled CSS:</p>
+<div class="gist" data-id="6200198"></div>
+
+<h3 class="paragraph-heading">Example: columns by using mixins</h3>
+<p>Both extending and using mixins will keep your markup clean, but mixins provide a way to produce alternate columns on the fly:</p>
+<div class="gist" data-id="6200210"></div>
+
+<p>In any given project, you will likely use a mixture of these three methods. The bottom line is this: Persistant Grid does not enforce any particular method - it is totally up to you.</p>

@@ -1,9 +1,33 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+
+<div class="root">
+	<article role="main" class="full column">
+		<header>
+			<h1 class="chapter-heading">{{ page.title }}</h1>
+		</header>
+		<div class="post two-third column-container">
+		{{ content }}
+		</div
+		><footer class="third column post-info">
+			<p><time class="post-date" datetime="{{ page.date }}">{{ page.date | date: "%d %B %Y" }}</time> by {{ page.author }}</p>			
+			<ul class="tags-list">
+			{% for category in page.categories %}
+				{% if category != page.section %}
+				<li><a href="{{ site.baseurl }}/{{ page.section }}/{{ category|first }}/" class="tag">{{ category|first }}</a></li>
+				{% endif %}
+			{% endfor %}
+			</ul>
+
+			<em class="chapter-subheading">Related Posts</em>
+			<ul>
+			  {% for post in site.related_posts limit:5 %}
+			  <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+			  {% endfor %}
+			</ul>
+
+		</footer>
+	</article>
+	<aside>

@@ -17,6 +17,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  color: #555555;
   /*
    * Reset margin, padding and border
    */
@@ -71,7 +72,7 @@ html {
   font: normal normal 200 1em/1.5em "sofia_pro_lightregular", sans-serif;
 }
 
-/* line 59, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 60, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 html {
   /*
    * It's good practice to set the background color of the html tag
@@ -171,7 +172,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 83, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 84, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 ol,
 ul {
   /*
@@ -180,7 +181,7 @@ ul {
   list-style: none;
 }
 
-/* line 89, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 90, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 table {
   /**
    * Remove most spacing between table cells.
@@ -189,7 +190,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 95, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
+/* line 96, ../../_compass/extensions/persistentgrid/scss/pg/base/reset/_behavior.scss */
 caption, th, td {
   /**
    * 1. Align all content to the left.
@@ -1063,7 +1064,7 @@ q {
 }
 
 /* line 96, ../../_compass/extensions/persistentgrid/scss/pg/modules/lists/_behavior.scss */
-.list-inline > li {
+.list-inline > li, .tags-list > li {
   display: inline-block;
 }
 
@@ -1073,21 +1074,27 @@ q {
 }
 
 /* line 1, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
+.site-header {
+  color: white;
+}
+
+/* line 4, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
 .site-header-title {
   font-size: 1.875em;
   line-height: 0.8em;
+  color: inherit;
 }
-/* line 3, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
+/* line 7, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
 .site-header-title img {
   margin-right: .175em;
 }
-/* line 6, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
+/* line 10, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
 .site-header-title a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 11, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
+/* line 15, ../../_compass/scss/persistentgrid.com/behavior/_site-header.scss */
 .site-header-subtitle {
   display: block;
   font-size: 0.46667em;
@@ -1756,40 +1763,40 @@ hr {
 }
 
 /* line 5, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+p + .gist {
+  margin-top: 1.5em;
+}
+
+/* line 8, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist {
   color: #555555 !important;
 }
 
-/* line 9, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 12, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 pre {
   font: inherit;
   line-height: inherit;
   white-space: pre;
 }
 
-/* line 15, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 18, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist .gist-file {
   border-color: rgba(255, 179, 179, 0.3) !important;
   margin-bottom: 1.5em !important;
 }
 
-/* line 20, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
-.gist .gist-file .gist-meta {
-  display: none;
-}
-
-/* line 24, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist .gist-file .gist-meta a {
   color: #888888 !important;
 }
 
-/* line 28, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 31, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist .gist-file .gist-data {
   background-color: rgba(255, 255, 255, 0.2) !important;
   border-color: rgba(255, 179, 179, 0.3) !important;
 }
 
-/* line 33, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 36, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist .gist-file .gist-data .line-pre {
   background: transparent !important;
   border: none !important;
@@ -1797,12 +1804,12 @@ pre {
   padding: 0 !important;
 }
 
-/* line 40, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 43, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist .gist-file .gist-data .gist-highlight {
   background: transparent !important;
 }
 
-/* line 44, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
+/* line 47, ../../_compass/scss/persistentgrid.com/behavior/_gist.scss */
 .gist .gist-file .gist-data .line-numbers {
   background-color: transparent !important;
   border: 0 !important;
@@ -1862,70 +1869,119 @@ pre {
     margin-top: 1.5em;
   }
 }
-/* line 1, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
-.recent-posts {
-  margin-top: 3em;
+/* line 3, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
+.read-more::after {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f101";
 }
 
-/* line 7, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 8, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
+.post-info {
+  font-size: 0.875em;
+  line-height: 2.57143em;
+}
+
+/* line 11, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
+.tags-list {
+  color: #ffb3b3;
+}
+/* line 14, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
+.tags-list a {
+  color: #ffb3b3;
+  text-decoration: none;
+}
+/* line 18, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
+.tags-list::before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f02b";
+}
+
+/* line 24, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */
+.post-date::before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f133";
+  padding-right: .25em;
+}
+
+/* line 6, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+.usp.one p,
+.usp.one .usp-title {
+  color: white;
+}
+/* line 10, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp.two {
   margin-bottom: 3em;
 }
-/* line 9, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 12, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp.two .usp-title {
   color: #ff7888;
 }
-/* line 13, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 16, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp.three {
   margin-bottom: 3em;
 }
-/* line 14, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 17, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp.three .usp-title {
   color: #21a68d;
 }
-/* line 19, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 22, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp.actions {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 24, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp-text {
   margin-top: 5.25em;
   margin-bottom: 2.25em;
   vertical-align: bottom;
 }
 
-/* line 29, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 32, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp-title {
   font-size: 2.25em;
   line-height: 1em;
   margin-bottom: 0.75em;
 }
 
-/* line 33, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 36, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp-image {
   text-align: center;
 }
-/* line 36, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 39, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 .usp-image.icecream-01 img {
   position: relative;
   bottom: -8.25em;
   margin-top: -6em;
 }
 
-/* line 49, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+/* line 52, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
 img {
   max-width: 100%;
 }
 
 @media only screen and (max-width: 48em) {
-  /* line 60, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+  /* line 63, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
   .usp-text {
     margin-top: 0;
   }
 
-  /* line 66, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
+  /* line 69, ../../_compass/scss/persistentgrid.com/behavior/_usp.scss */
   .usp-image.icecream-01 img {
     position: static;
     margin: 0;

@@ -2,7 +2,10 @@
 
 .usp {
 	&.one {
-
+		p,
+		.usp-title {
+			color: $white;
+		}
 	}
 	&.two {
 		@include trailer(2);

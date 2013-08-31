@@ -1,3 +1,28 @@
-.recent-posts {
-	@include leader(2);
+
+.read-more {
+	&::after {
+		@include icon($double-angle-right);
+	}
+}
+
+.post-info {
+	@include adjust-font-size-to($font-size-s, 1.5);
+}
+.tags-list {
+	@extend .list-inline;
+	color: $color-attn-two;
+	a {
+		color: $color-attn-two;
+		text-decoration: none;
+	}
+	&::before {
+		@include icon($tag);
+
+	}
+}
+.post-date {
+	&::before {
+		@include icon($calendar-empty);
+		padding-right: .25em;
+	}
 }
