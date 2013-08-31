@@ -23,10 +23,10 @@ $trace-imports: false;
 @import "pg/modules/settings";
 
 // Import the behavior (in the order you want rules to render): 
-@import "persistentgrid.com/behavior";
 @import "pg/base/behavior";
 @import "pg/grid/behavior";
 @import "pg/modules/behavior";
+@import "persistentgrid.com/behavior";
 
 
 //* Include a symbol font (Fontawesome)*//

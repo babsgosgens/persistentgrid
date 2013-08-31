@@ -2,20 +2,13 @@
 title: "Typography Module"
 layout: default
 section: documentation
-sub-section: reference-manual
+sub-section: base
 chapter: typography
+chapter-nav: true
 tabs: section-content
 ---
 
 <h1 class="chapter-heading">Typography</h1>
-
-<section class="tabs-pane" id="introduction">
-
-	<h2 class="tabs-trigger chapter-subheading" data-rel="#introduction" data-before="Typography ">Introduction</h2>
-		<p>Typography at its heart is an implementation of <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Compass's Vertical Rhythm</a>.
-		<p>By itself, it doesn't render much output. It's main responsibility is to define default font-size and line-heigt. It's settings are used by Reset to compile the project's baseline.</p>
-
-</section>
 
 <section class="tabs-pane" id="settings">
 	<h2 class="tabs-trigger chapter-subheading" data-rel="#settings" data-before="Typography ">Settings</h2>
@@ -73,6 +66,14 @@ tabs: section-content
 		<dd class="list-api-description">This setting is useful when debugging the vertical rhythm. When set to <code>true</code> it will show the baseline. It is <code>false</code> by default. See also: <a href="#mixin-debug-rhythm">@mixin debug-rhythm</a></dd>
 	</dl>
 
+</section>
+
+<section class="tabs-pane" id="behavior">
+	<h2 class="tabs-trigger chapter-subheading" data-rel="#behavior" data-before="Typography ">Behavior</h2>
+	<h3 class="paragraph-heading">Html selector</h3>
+	<p>The <code>$base-font-size</code>, <code>$base-line-height</code> and <code>$type-default</code> settings are used the render to the html tag from within <a href="http://localhost:4000/base/reset/#behavior-reset-baseline">Reset</a>:<div class="gist" data-id="6224603"></div></p>
+	<h3 class="paragraph-heading">Debug selector</h3>
+	<div class="gist" data-id="6214336"></div>
 </section>
 
 <section class="tabs-pane" id="mixins">
@@ -148,18 +149,4 @@ tabs: section-content
 		<dd class="list-api-description">Converts a number to a string. Expects a single number: 100 through 900.</dd>
 
 	</dl>
-</section>
-
-<section class="tabs-pane" id="behavior">
-	<h2 class="tabs-trigger chapter-subheading" data-rel="#behavior" data-before="Typography ">Behavior</h2>
-	<h3 class="paragraph-heading">Html selector</h3>
-	<p>The <code>$base-font-size</code>, <code>$base-line-height</code> and <code>$type-default</code> settings are used the render to the html tag from within <a href="http://localhost:4000/base/reset/#behavior-reset-baseline">Reset</a>:<div class="gist" data-id="6224603"></div></p>
-	<h3 class="paragraph-heading">Debug selector</h3>
-	<div class="gist" data-id="6214336"></div>
-</section>
-
-<section class="tabs-pane" id="usage">
-	<h2 class="tabs-trigger chapter-subheading" data-rel="#usage" data-before="Typography ">Usage</h2>
-	<h3 class="paragraph-heading">Real font weights</h3>
-	<div class="gist" data-id="6263567"></div>
 </section>

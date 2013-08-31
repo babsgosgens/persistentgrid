@@ -2,19 +2,13 @@
 title: "Reset Module"
 layout: default
 section: documentation
-sub-section: reference-manual
+sub-section: base
 chapter: reset
+chapter-nav: true
 tabs: section-content
 ---
 
 <h1 class="chapter-heading">Reset</h1>
-
-<section class="tabs-pane" id="introduction">
-
-	<h2 class="tabs-trigger chapter-subheading" data-before="Reset " data-rel="#introduction">Introduction</h2>
-	<p>Reset is a customized implementation of a combination of different resets, most notably <a href="http://compass-style.org/reference/compass/reset/utilities/#mixin-global-reset">Compass's implementation</a> of <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer's reset</a> and <a href="http://necolas.github.io/normalize.css/">normalize.css</a> by Nicolas Gallagher, co-created with Jonathan Neal.</p>
-
-</section>
 
 <section class="tabs-pane" id="settings">
 
@@ -65,6 +59,50 @@ tabs: section-content
 
 		<dt class="list-api-name" id="setting-reset-quotation"><a href="#setting-reset-quotation">$reset-quotation</a></dt>
 		<dd class="list-api-description">Defaults to <code>true</code>.</dd>
+	</dl>
+
+</section>
+
+<section class="tabs-pane" id="behavior">
+	<h2 class="tabs-trigger chapter-subheading" data-before="Reset " data-rel="#behavior">Behavior</h2>
+
+	<dl class="list-api">
+
+		<dt class="list-api-name" id="behavior-reset-box-model"><a href="#behavior-reset-box-model">$reset-box-model, $reset-box-sizing, $reset-font, $reset-text-rendering</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6214718"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-baseline"><a href="#behavior-reset-baseline">$reset-baseline</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6224603"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-html-background"><a href="#behavior-reset-html-background">$reset-html-background, $reset-ios</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6224628"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-html5"><a href="#behavior-reset-html5">$reset-html5</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218362"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-anchor"><a href="#behavior-reset-anchor">$reset-anchor</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218333"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-media"><a href="#behavior-reset-media">$reset-media</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218402"></div></dd>
+		<dd class="list-api-description"></dd>
+
+		<dt class="list-api-name" id="behavior-reset-list-style"><a href="#behavior-reset-list-style">$reset-list-style</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218341"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-table"><a href="#behavior-reset-table">$reset-table</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218348"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-table-cell"><a href="#behavior-reset-table-cell">$reset-table-cell</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218351"></div></dd>
+
+		<dt class="list-api-name" id="behavior-reset-input"><a href="#behavior-reset-input">$reset-input</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218377"></div></dd>
+		<dd class="list-api-description"></dd>
+
+		<dt class="list-api-name" id="behavior-reset-quotation"><a href="#behavior-reset-quotation">$reset-quotation</a></dt>
+		<dd class="list-api-code"><div class="gist" data-id="6218359"></div></dd>
+		<dd class="list-api-description"></dd>
 	</dl>
 
 </section>
@@ -126,50 +164,6 @@ tabs: section-content
 		<dd class="list-api-code"><div class="gist" data-id="6224346"></div></dd>
 		<dd class="list-api-description"></dd>
 
-	</dl>
-
-</section>
-
-<section class="tabs-pane" id="behavior">
-	<h2 class="tabs-trigger chapter-subheading" data-before="Reset " data-rel="#behavior">Behavior</h2>
-
-	<dl class="list-api">
-
-		<dt class="list-api-name" id="behavior-reset-box-model"><a href="#behavior-reset-box-model">$reset-box-model, $reset-box-sizing, $reset-font, $reset-text-rendering</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6214718"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-baseline"><a href="#behavior-reset-baseline">$reset-baseline</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6224603"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-html-background"><a href="#behavior-reset-html-background">$reset-html-background, $reset-ios</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6224628"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-html5"><a href="#behavior-reset-html5">$reset-html5</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218362"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-anchor"><a href="#behavior-reset-anchor">$reset-anchor</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218333"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-media"><a href="#behavior-reset-media">$reset-media</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218402"></div></dd>
-		<dd class="list-api-description"></dd>
-
-		<dt class="list-api-name" id="behavior-reset-list-style"><a href="#behavior-reset-list-style">$reset-list-style</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218341"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-table"><a href="#behavior-reset-table">$reset-table</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218348"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-table-cell"><a href="#behavior-reset-table-cell">$reset-table-cell</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218351"></div></dd>
-
-		<dt class="list-api-name" id="behavior-reset-input"><a href="#behavior-reset-input">$reset-input</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218377"></div></dd>
-		<dd class="list-api-description"></dd>
-
-		<dt class="list-api-name" id="behavior-reset-quotation"><a href="#behavior-reset-quotation">$reset-quotation</a></dt>
-		<dd class="list-api-code"><div class="gist" data-id="6218359"></div></dd>
-		<dd class="list-api-description"></dd>
 	</dl>
 
 </section>

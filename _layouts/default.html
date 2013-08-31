@@ -13,8 +13,8 @@
 
     	<main class="bg-main" role="main">
 
-        {% if page.sub-section == "reference-manual" %}
-            {% include layouts/reference-manual.html %}
+        {% if page.section == "documentation" %}
+            {% include layouts/documentation.html %}
         {% else %}
     		{{ content }}
         {% endif %}

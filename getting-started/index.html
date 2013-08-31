@@ -8,28 +8,7 @@ title: Start
 
 		<h1 class="chapter-heading full column">Getting started</h1>
 
-		<aside class="third column push-two-third">
-
-			<div class="chapter-info bg-info column">
-
-				<p><img alt="" src="{{ site.baseurl }}/assets/images/icecream/stacked_red-yellow-green.png" height="116" style="float: left; margin-right: 1em;">Persistent Grid is a modular CSS framework built with <a href="http://sass-lang.com/">SASS</a> and <a href="http://compass-style.org/">Compass</a>. It comes in three flavours: <a href="{{ site.baseurl }}/base/grid"><em>Grid</em></a>, <a href="{{ site.baseurl }}/base"><em>Base</em></a> and <a href="{{ site.baseurl }}/extended"><em>Extended</em></a>.
-				</p>
-				<h3 class="chapter-subheading">Grid</h3>
-				<p>Grid is the most basic execution of Persistant Grid. If all you need is a good layout system to complete your project then this is your flavour of choice.
-				</p>
-				<p><code>compass install persistentgrid/grid</code></p>
-				<h3 class="chapter-subheading">Base</h3>
-				<p>Basic provides a little extra to the grid: a set of base styles to build your project on. It includes the Grid, Reset, Type module and Base Styles modules. It provides a solid base to build your stylesheet on.</p>
-				<p><code>compass install persistentgrid/base</code></p>
-				<h3 class="chapter-subheading">Modules</h3>
-				<p>Modules<sup>1)</sup> adds some of commonly used UI elements to the mix. It's an ever growing colelction of buttons, forms, tabs and a whole lot more. And you don't have to stick with the core modules. In fact you can add or override any of the provided modules. More information is to come&hellip;
-				</p>
-				<p><code>compass install persistentgrid/modules</code></p>
-				<p><sup>1)</sup> <small>Modules is still under heavy construction.</small></p>
-			</div>
-
-		</aside
-		><section class="chapter-section two-third column pull-third">
+		<section class="chapter-section two-third column">
 
 			<section>
 				<aside>
@@ -39,14 +18,14 @@ title: Start
 
 				<h2 class="chapter-subheading">Creating a new Compass project:</h2>
 
-				<h3 class="paragraph-heading lower-alpha">Using all flavours:</h3>
-				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid</pre>
-				<h3 class="paragraph-heading lower-alpha">Using only the grid template:</h3>
+				<h3 class="paragraph-heading lower-alpha">Single scoup - the grid template:</h3>
 				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/grid</pre>
-				<h3 class="paragraph-heading lower-alpha">Using only the base template:</h3>
+				<h3 class="paragraph-heading lower-alpha">Single scoup - the base template:</h3>
 				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/base</pre>
-				<h3 class="paragraph-heading lower-alpha">Using only the modules template:</h3>
+				<h3 class="paragraph-heading lower-alpha">Single scoup - the modules template:</h3>
 				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid/modules</pre>
+				<h3 class="paragraph-heading lower-alpha">Three scoups - grid, base and modules:</h3>
+				<pre class="gem-install">compass create my_project -r persistentgrid --using persistentgrid</pre>
 
 				<h2 class="chapter-subheading">Adding Persistent Grid to an existing Compass project</h2>
 

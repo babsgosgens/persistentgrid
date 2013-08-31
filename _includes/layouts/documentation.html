@@ -1,12 +1,17 @@
 <div class="root">
 
+{% if page.chapter-nav == true %}
+
 	<nav class="section-nav column-container" id="chapters">
-	{% include section-nav/reference-manual.html %}
+	{% include chapter-nav/documentation.html %}
 	</nav
 	><div class="section-content column">
 
 	{{ content }}
 
 	</div>
+{% else %}
+{{ content }}
+{% endif %}
 
 </div>

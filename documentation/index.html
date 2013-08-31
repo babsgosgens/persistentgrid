@@ -1,20 +1,28 @@
 ---
+title: "Reference Manual: Introduction"
 layout: default
 section: documentation
-sub-section: reference-manual
-chapter: introduction
-title: "Reference Manual: Introduction"
 ---
 
-<h1 class="chapter-heading">Introduction</h1>
+<div class="root">
+	<section class="chapter-section three-fourth column">
 
-<section class="chapter-section">
+		<h1 class="chapter-heading">Reference Manual</h1>
+		<p class="intro">The Reference Manual is split up into sections corresponding to the parts that make up Persistent Grid. These parts are: <a href="{{ site.baseurl }}/documentation/grid/">Grid</a>, <a href="{{ site.baseurl }}/documentation/base/typography/">Base</a>, <a href="{{ site.baseurl }}/documentation/modules/">Modules</a> and <a href="{{ site.baseurl }}/documentation/helpers/">Helpers</a>.</p>
+		<p>Each section has a full reference on each of its modules. Each module is organized in the same way, consisting of <code>helpers</code>, <code>settings</code> and <code>behavior</code>:</p>
 
-	<p>Persistent Grid Framework will provide a solid base stylesheet for all your projects. It is configurable to produce the exact output you need - no less and certainly no more. Framework consists of five modules: Type, Baseline, Reset, Grid and Base.</p>
-	<p><em>Type</em> produces no output but defines your project's typography settings.</p>
-	<p><em>Baseline</em> is an implementation of Compass's Vertical Rhythm plugin.</p>
-	<p><em>Reset</em> is a configurable reset so that your project can start of a clean, browser consistent slate.</p>
-	<p><em>Grid</em> is a configurable and highly flexible layout system.</p>
-	<p><em>Base</em> defines the base styles upon which you can extend.</p>
+		<br>
+		<aside>
 
-</section>
+		<h2 class="paragraph-heading">Helpers</h3>
+		<p>Helpers is the general terminology for module mixins and module functions. They are assigned with module specific tasks. Helpers are always loaded first.</p>
+
+		<h2 class="paragraph-heading">Settings</h3>
+		<p>Each module contains it&rsquo;s own module specific settings. Settings are loaded before behavior and can be overridden by your project settings.</p>
+
+		<h2 class="paragraph-heading">Behavior</h3>
+		<p>Behavior is what&rsquo;s actually outputting style rules - if any. Behavior is controlled by the settings, and only behavior that will be used is compiled. Behavior is loaded last so that any changes to the settings can be applied before the styles are compiled.</p>
+
+		</aside>
+	</section>
+</div>
