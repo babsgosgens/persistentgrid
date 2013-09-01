@@ -7,8 +7,6 @@ $scoup-width: image-width('scoups/blue.png');
 $cone-height: image-height('icecream/cone-white-scoup.png');
 $cone-width: image-width('icecream/cone-white-scoup.png');
 
-$scoup-offset: 50%;
-
 .scoups-sprite {
 
 	$first-scoup-offset: $cone-height - $scoup-height;
