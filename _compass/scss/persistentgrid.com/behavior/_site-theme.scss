@@ -19,6 +19,8 @@ html {
 	}
 }
 .bg-info {
+	position: relative;
+	z-index: 2;
 	$txt: $color-body;
 	$bg: $color-attn-two;
 	color: $txt;

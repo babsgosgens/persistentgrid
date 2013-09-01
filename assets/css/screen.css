@@ -1139,6 +1139,8 @@ html {
 
 /* line 21, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-info {
+  position: relative;
+  z-index: 2;
   color: #555555;
   background: #ffb3b3 url(../images/backgrounds/noise.png);
   /*
@@ -1146,7 +1148,7 @@ html {
    */
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
-/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 29, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-info a:not(.btn) {
   color: #21a68d;
   /*
@@ -1154,12 +1156,12 @@ html {
    */
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
 }
-/* line 31, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 33, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-info h3 {
   color: #21a68d;
 }
 
-/* line 35, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 37, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-footer, .site-footer {
   background: #ffb3b3 url(../images/backgrounds/noise.png);
   color: #555555;
@@ -1168,7 +1170,7 @@ html {
    */
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
-/* line 41, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 43, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .bg-footer a, .site-footer a {
   color: #555555;
   /*
@@ -1177,7 +1179,7 @@ html {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
-/* line 49, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 51, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .chapter-info {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
@@ -1188,14 +1190,14 @@ html {
   border-radius: 3px;
 }
 
-/* line 55, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 57, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 .intro {
   font-size: 1.25em;
   line-height: 1.8em;
   color: #21a68d;
 }
 
-/* line 59, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
+/* line 61, ../../_compass/scss/persistentgrid.com/behavior/_site-theme.scss */
 p + p {
   margin-top: 1.5em;
 }
@@ -1905,44 +1907,53 @@ pre {
 }
 
 /* line 10, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.icecream {
+  text-align: center;
+}
+/* line 12, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.icecream.conceiled {
+  max-height: 16em;
+}
+
+/* line 16, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite, .scoups-blue, .scoups-green, .scoups-orange, .scoups-red, .scoups-white, .scoups-yellow {
   position: absolute;
   bottom: 210px;
   height: 105px;
   width: 152px;
 }
-/* line 19, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 25, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite.scoup-two, .scoup-two.scoups-blue, .scoup-two.scoups-green, .scoup-two.scoups-orange, .scoup-two.scoups-red, .scoup-two.scoups-white, .scoup-two.scoups-yellow {
   bottom: 262.5px;
   z-index: 2;
 }
-/* line 23, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 29, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite.scoup-three, .scoup-three.scoups-blue, .scoup-three.scoups-green, .scoup-three.scoups-orange, .scoup-three.scoups-red, .scoup-three.scoups-white, .scoup-three.scoups-yellow {
   bottom: 315px;
   z-index: 3;
 }
-/* line 27, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 33, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite.scoup-four, .scoup-four.scoups-blue, .scoup-four.scoups-green, .scoup-four.scoups-orange, .scoup-four.scoups-red, .scoup-four.scoups-white, .scoup-four.scoups-yellow {
   bottom: 367.5px;
   z-index: 4;
 }
-/* line 31, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 37, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite.scoup-five, .scoup-five.scoups-blue, .scoup-five.scoups-green, .scoup-five.scoups-orange, .scoup-five.scoups-red, .scoup-five.scoups-white, .scoup-five.scoups-yellow {
   bottom: 420px;
   z-index: 5;
 }
-/* line 35, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 41, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite.scoup-six, .scoup-six.scoups-blue, .scoup-six.scoups-green, .scoup-six.scoups-orange, .scoup-six.scoups-red, .scoup-six.scoups-white, .scoup-six.scoups-yellow {
   bottom: 472.5px;
   z-index: 6;
 }
-/* line 39, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 45, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .scoups-sprite.scoup-seven, .scoup-seven.scoups-blue, .scoup-seven.scoups-green, .scoup-seven.scoups-orange, .scoup-seven.scoups-red, .scoup-seven.scoups-white, .scoup-seven.scoups-yellow {
   bottom: 840px;
   z-index: 7;
 }
 
-/* line 44, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 50, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .cone {
   display: inline-block;
   position: relative;
@@ -1950,9 +1961,29 @@ pre {
   height: 315px;
   width: 152px;
 }
-/* line 52, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+/* line 58, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.cone.two-scoups {
+  height: 367.5px;
+}
+/* line 62, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.cone.three-scoups {
+  height: 420px;
+}
+/* line 66, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
 .cone.four-scoups {
+  height: 472.5px;
+}
+/* line 70, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.cone.five-scoups {
   height: 525px;
+}
+/* line 74, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.cone.six-scoups {
+  height: 577.5px;
+}
+/* line 78, ../../_compass/scss/persistentgrid.com/behavior/_icecream.scss */
+.cone.seven-scoups {
+  height: 630px;
 }
 
 /* line 3, ../../_compass/scss/persistentgrid.com/behavior/_posts.scss */

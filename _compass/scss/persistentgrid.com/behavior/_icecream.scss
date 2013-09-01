@@ -7,6 +7,12 @@ $scoup-width: image-width('scoups/blue.png');
 $cone-height: image-height('icecream/cone-white-scoup.png');
 $cone-width: image-width('icecream/cone-white-scoup.png');
 
+.icecream {
+	text-align: center;
+	&.conceiled {
+		max-height: 16em;
+	}
+}
 .scoups-sprite {
 
 	$first-scoup-offset: $cone-height - $scoup-height;
@@ -49,8 +55,28 @@ $cone-width: image-width('icecream/cone-white-scoup.png');
 	height: $cone-height;
 	width: $cone-width;
 
+	&.two-scoups {
+		$height: $cone-height + 1/2*$scoup-height;
+		height: $height;
+	}
+	&.three-scoups {
+		$height: $cone-height + 2/2*$scoup-height;
+		height: $height;
+	}
 	&.four-scoups {
+		$height: $cone-height + 3/2*$scoup-height;
+		height: $height;
+	}
+	&.five-scoups {
 		$height: $cone-height + 4/2*$scoup-height;
+		height: $height;
+	}
+	&.six-scoups {
+		$height: $cone-height + 5/2*$scoup-height;
+		height: $height;
+	}
+	&.seven-scoups {
+		$height: $cone-height + 6/2*$scoup-height;
 		height: $height;
 	}
 }
