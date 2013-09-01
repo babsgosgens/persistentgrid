@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://www.persistentgrid.com/</loc>
+		<lastmod>2013-09-01</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.persistentgrid.com/http://www.persistentgrid.com/documentation/</loc>
+		<lastmod>2013-09-01</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.persistentgrid.com/getting-started/</loc>
+		<lastmod>2013-09-01</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.persistentgrid.com/about-persistentgrid/</loc>
+		<lastmod>2013-09-01</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://www.persistentgrid.com/tutorials/</loc>
+		<lastmod>2008-11-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://www.persistentgrid.com/blog/</loc>
+		<lastmod>2008-11-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+</urlset>
