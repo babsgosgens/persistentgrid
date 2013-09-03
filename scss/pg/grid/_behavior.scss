@@ -29,7 +29,7 @@
 	@include column-width(1/1);
 }
 
-// Roll out the required columns
+// Render columns
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
@@ -43,7 +43,6 @@
 		.push-#{$name} {
 			@include push($fraction);
 		}
-		// Source Ordering
 		.pull-#{$name} {
 			@include pull($fraction);
 		}
