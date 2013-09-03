@@ -434,7 +434,7 @@ q {
 .root {
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1152px;
+  max-width: 72em;
 }
 
 /* line 11, ../../_compass/extensions/persistentgrid/scss/pg/grid/_behavior.scss */

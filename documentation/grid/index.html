@@ -16,76 +16,58 @@ tabs: section-content
 		<section class="tabs-pane" id="settings">
 			<h2 class="tabs-trigger chapter-subheading" data-before="Grid " data-rel="#settings">Settings</h2>
 
-			<h3 class="paragraph-heading">Root</h3>
-			<dl class="list-api">
-				<dt class="list-api-name" id="setting-root-selector"><a href="#setting-root-selector">$root-selector</a></dt>
-				<dd class="list-api-description">You can embed your grid layout in a 'root' container. Your grid layout will not stretch beyond the maximum width of this container. The root container can be positioned left or center, for alternate positions you can provide your own behavior. The default selector for the root container is <code>.root</code>, but you can also use a base selector, for instance <code>body</code>.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199574"></div></dd>
-
-				<dt class="list-api-name" id="setting-root-max-width"><a href="#setting-root-max-width">$root-max-width</a></dt>
-				<dd class="list-api-description">Sets the maximum width on your container. Your grid layout will not stretch beyond this width. Default setting is <code>1152px</code>. Just because.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199579"></div></dd>
-
-				<dt class="list-api-name" id="setting-root-position"><a href="#setting-root-position">$root-position</a></dt>
-				<dd class="list-api-description">Position your root container left or center of the viewport. Default setting is <code>center</code>.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199582"></div></dd>
-			</dl>
-
 			<h3 class="paragraph-heading">Columns</h3>
 			<dl class="list-api">
-				<dt class="list-api-name" id="setting-column-selector"><a href="#setting-column-selector">$column-selector</a></dt>
-				<dd class="list-api-description">The selector of your column rules. It is set to <code>.column</code> by default. Change it to any selector that has your fancy.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199725"></div></dd>
+				<dt class="list-api-name" id="setting-column-selector"><a href="#setting-column-selector">$column-selector: ".default"</a></dt>
+				<dd class="list-api-description">The selector of your column rules. Is set to <code>.column</code> by default.</dd>
 
-				<dt class="list-api-name" id="setting-column-spacing"><a href="#setting-column-spacing">$column-spacing</a></dt>
+				<dt class="list-api-name" id="setting-column-spacing"><a href="#setting-column-spacing">$column-spacing: 2*$base-line-height</a></dt>
 				<dd class="list-api-description">The column-spacing sets the distance between adjacent column's content. By default, column spacing is set by applying padding, but can be overridden with margins. See: <a href="#mixin-column-spacing">@mixin column-spacing</a>. The default setting for <code>$column-spacing</code> is twice the project's preset line-height, but can be changed to any measure - but only in pixels.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199727"></div></dd>
 
-				<dt class="list-api-name" id="setting-column-spacing-unit"><a href="#setting-column-spacing-unit">$column-spacing-unit</a></dt>
-				<dd class="list-api-description">This setting will likely be removed in the final version.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199730"></div></dd>
+				<dt class="list-api-name" id="setting-column-widths"><a href="#setting-column-widths">$column-widths: 1/2, 1/4, 1/3, 2/3, 3/4</a></dt>
+				<dd class="list-api-description">A list of fractions. The grid's default behavior will render rules based on these values. The default column-widths are 1/1, 1/2, 1/3, 2/3 and 3/4 as these values are all that are necessary to create more complex 3, 8, 9, 12 and/or 16 column layouts.</dd>
 
-				<dt class="list-api-name" id="setting-column-widths"><a href="#setting-column-widths">$column-widths</a></dt>
-				<dd class="list-api-description">Expects an array of fractions. The grid's default behavior will render rules based on these values. The default column-widths are 1/1, 1/2, 1/3, 2/3 and 3/4 as these values are all that are necessary to create more complex 3, 8, 9, 12 and/or 16 column layouts. Omit and add column-widths at will.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199732"></div></dd>
-
-				<dt class="list-api-name" id="setting-column-width-default"><a href="#setting-column-width-default">$column-width-default</a></dt>
+				<dt class="list-api-name" id="setting-column-width-default"><a href="#setting-column-width-default">$column-width-default: 1/1</a></dt>
 				<dd class="list-api-description">This sets the default width of a column. If no width-selector is applied, the column will be of this width. It set to <code>1/1</code> (full width) by default.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199733"></div></dd>
 
-				<dt class="list-api-name" id="setting-column-breakpoint"><a href="#setting-column-breakpoint">$column-breakpoint</a></dt>
+				<dt class="list-api-name" id="setting-column-breakpoint"><a href="#setting-column-breakpoint">$column-breakpoint: false</a></dt>
 				<dd class="list-api-description">
-					This setting expects an array of breakpoints. Breakpoints are key/value pair(s) of valid media expressions. Set to <code>false</code> by default. When set, it will provide basic responsive behavior by
+					This setting expects an array of breakpoints. Breakpoints are key/value pair(s) of valid media expressions. Set to <code>false</code> by default. When set, it will provide basic responsive behavior by:<br><br>
 					<ol class="list list-alpha" style="list-style-position: inside;">
 						<li>stacking columns (width: 100%) - unless of course the column is persistent,</li>
 						<li>halving column-spacing,</li>
 						<li>halving bleed-margins.</li>
 					</ol>
 				</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199734"></div></dd>
 
-				<dt class="list-api-name" id="setting-column-float"><a href="#setting-column-float">$column-float</a></dt>
+				<dt class="list-api-name" id="setting-column-float"><a href="#setting-column-float">$column-float:</a></dt>
 				<dd class="list-api-description">If you prefer floated columns over of inline-blocks, set to <code>true</code>.</dd>
-				<dd class="list-api-code"><div class="gist" data-id="6199735"></div></dd>
+			</dl>
+
+			<h3 class="paragraph-heading">Root</h3>
+			<dl class="list-api">
+				<dt class="list-api-name" id="setting-root-selector"><a href="#setting-root-selector">$root-selector: ".root"</a></dt>
+				<dd class="list-api-description">You can embed your grid layout in a &lsquo;root&rsquo; container. Your grid layout will not stretch beyond the maximum width of this container. The root container can be positioned left or center, for alternate positions you can provide your own behavior. The default selector for the root container is <code>.root</code>, but you can also apply a base selector like <code>body</code>.</dd>
+
+				<dt class="list-api-name" id="setting-root-max-width"><a href="#setting-root-max-width">$root-max-width: 72em</a></dt>
+				<dd class="list-api-description">Sets the maximum width on your container. Your grid layout will not stretch beyond this width. Default setting is <code>72em</code> which translates to 1152px at a font-size of 16px. Change it to anything in a unit of choice.</dd>
+
+				<dt class="list-api-name" id="setting-root-position"><a href="#setting-root-position">$root-position: center</a></dt>
+				<dd class="list-api-description">Position your root container left or center of the viewport. Default setting is <code>center</code>.</dd>
 			</dl>
 
 			<h3 class="paragraph-heading">Fall back for inline-block style columns</h3>
-			<p>If you cannot control your markup, you can assign a negative right margin to close gaps between columns to make tem fit. This is a hack and only nescessary when html (or column markup) is minimized.</p>
 			<dl class="list-api">
-				<dt class="list-api-name" id="setting-negative-right-margin"><a href="#setting-negative-right-margin">$negative-right-margin</a></dt>
-				<dd class="list-api-code"><div class="gist" data-id="6199744"></div></dd>
-				<dd class="list-api-description">Adjust the value to your typography, as it will depend on your type's em-width. Usually a value of <code>0.175</code> seems to produce accurate results. By default, this setting is set to <code>false</code>.</dd>
+				<dt class="list-api-name" id="setting-negative-right-margin"><a href="#setting-negative-right-margin">$negative-right-margin: false</a></dt>
+				<dd class="list-api-description">By default, this setting is set to <code>false</code>. If you cannot control your markup, you can assign a negative right margin to close gaps between columns that will otherwise break your layout. This is a hack and only nescessary when your html (or at the very least your column markup) is not minimized. When set, a value of <code>0.175</code> seems to produce accurate results. Adjust the value to your typography, as it will depend on your type's em-width.</dd>
 			</dl>
 
 			<h3 class="paragraph-heading">Other Settings</h3>
 			<p>Required settings for a stand-alone implementation of the grid:</p>
 			<dl class="list-api">
-				<dt class="list-api-name" id="setting-base-line-height"><a href="#setting-base-line-height">$base-line-height</a></dt>
-				<dd class="list-api-code"><pre class="terminal">$base-line-height: 24px !default;</pre></dd>
-				<dd class="list-api-description"><code>$base-line-height</code> is used to calculate the column spacing.</dd>
+				<dt class="list-api-name" id="setting-base-line-height"><a href="#setting-base-line-height">$base-line-height: 24px</a></dt>
+				<dd class="list-api-description"><code>$base-line-height</code> should be set in px and is used to calculate the column spacing.</dd>
 
-				<dt class="list-api-name" id="setting-apply-border-box"><a href="#setting-apply-border-box">$apply-border-box</a></dt>
-				<dd class="list-api-code"><pre class="terminal">$apply-border-box: false !default;</pre></dd>
 				<dd class="list-api-description">When using the grid stand-alone, <code>$reset-box-model</code> should be set to true, unless you plan to wrap your columns in a padded container for compatibility with Microsoft Explorer &lt;8 and Opera &lt;10.</dd>
 			</dl>
 
