@@ -12,8 +12,7 @@ layout: default
 		{{ content }}
 		</div
 		><footer class="third column post-info">
-			<p><time class="post-date" datetime="{{ page.date }}">{{ page.date | date: "%d %B %Y" }}</time> by {{ page.author }}</p>			
-			<ul class="tags-list">
+			<p><time class="post-date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %B %Y" }}</time> by {{ page.author }}</p><ul class="tags-list">
 			{% for category in page.categories %}
 				{% if category != page.section %}
 				<li><a href="{{ site.baseurl }}/{{ page.section }}/{{ category|first }}/" class="tag">{{ category|first }}</a></li>
@@ -30,4 +29,4 @@ layout: default
 
 		</footer>
 	</article>
-	<aside>
+</div>
