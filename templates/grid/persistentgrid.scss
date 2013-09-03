@@ -26,6 +26,12 @@ $trace-imports: false;
 //  ==========================================================================
 	@import "pg/base/settings";
 	@import "pg/grid/settings";
+
+	// See: pg/grid/settings
+	// These settings are nescessary in a stand-alone implementation of Grid
+	$base-line-height: 24px;
+	$apply-border-box: true;
+
 	// Your project settings and overrides //
 
 //  ==========================================================================
