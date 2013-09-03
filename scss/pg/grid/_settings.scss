@@ -5,30 +5,6 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-//	BASE SETTINGS
-// 	================================================================================================================================
-// 	Required settings for a stand-alone implementation of the grid
-// 	================================================================================================================================
-
-	$base-line-height: 24px !default;
-	// $base-line-height is used to calculate the column spacing
-
-	$apply-border-box: false !default;
-	// When using the grid stand-alon, $reset-box-model should be set to true,
-	// unless you plan to wrap your columns in a padded container for compatibility 
-	// with Microsoft Explorer <8 and Opera <10.
-
-
-//	ROOT SETTINGS
-// 	================================================================================================================================
-// 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
-//	The root container can be positioned left or center, for alternate position you can provide your own behavior.
-// 	================================================================================================================================
-	$root-selector: ".root" !default;
-	$root-max-width: 1152px !default;
-	$root-position: center !default;
-
-
 //	COLUMN SETTINGS
 // 	================================================================================================================================
 // 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
@@ -46,3 +22,27 @@
 	$negative-right-margin: false !default;
 	// If you cannot control your markup, you can assign a negative right margin to close gaps between columns to make tem fit
 	// This is a hack and not nescessary when your html (or column markup) is minimized.
+
+
+//	ROOT SETTINGS
+// 	================================================================================================================================
+// 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
+//	The root container can be positioned left or center, for alternate position you can provide your own behavior.
+// 	================================================================================================================================
+	$root-selector: ".root" !default;
+	$root-max-width: 72em !default;
+	$root-position: center !default;
+
+
+//	BASE SETTINGS
+// 	================================================================================================================================
+// 	Required settings for a stand-alone implementation of the grid
+// 	================================================================================================================================
+
+	$base-line-height: 24px !default;
+	// $base-line-height is used to calculate the column spacing
+
+	$apply-border-box: false !default;
+	// When using the grid stand-alon, $reset-box-model should be set to true,
+	// unless you plan to wrap your columns in a padded container for compatibility 
+	// with Microsoft Explorer <8 and Opera <10.
