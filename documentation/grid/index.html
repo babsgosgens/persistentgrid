@@ -76,30 +76,8 @@ tabs: section-content
 		<section class="tabs-pane" id="behavior">
 			<h2 class="tabs-trigger chapter-subheading" data-before="Grid " data-rel="#behavior">Behavior</h2>
 
-				<p>This is the default behavior rendering of the Grid Module:</p>
-
-				<h3 class="paragraph-heading">Root selector</h3>
-				<div class="gist" data-id="6200034"></div>
-
-				<h3 class="paragraph-heading">Column selector</h3>
-				<div class="gist" data-id="6200045"></div>
-
-				<h3 class="paragraph-heading">Container selector</h3>
-				<div class="gist" data-id="6200063"></div>
-
-				<h3 class="paragraph-heading">Padding selector</h3>
-				<div class="gist" data-id="6200069"></div>
-
-				<h3 class="paragraph-heading">Bleed selector</h3>
-				<div class="gist" data-id="6200088"></div>
-
-				<h3 class="paragraph-heading">Column selector</h3>
-				<div class="gist" data-id="6200091"></div>
-
-				<h3 class="paragraph-heading">Column selectors and source ordering selectors</h3>
-				<div class="gist" data-id="6200104"></div>
-
-				<p>At present, the total weight of the compiled (compressed) CSS is 4.1Kb</p>
+			<p>This is the behavior and its default output. The output size is <code>1.78Kb</code> as shown.</p>
+			<div class="gist" data-id="6428705"></div>
 
 		</section>
 
@@ -107,64 +85,74 @@ tabs: section-content
 			<h2 class="tabs-trigger chapter-subheading" data-before="Grid " data-rel="#mixins">Mixins</h2>
 
 			<dl class="list-api">
-				<dt class="list-api-name" id="mixin-column-behavior"><a href="#mixin-column-behavior">@mixin column-behavior($reset-box-model: $reset-box-model, $column-float: $column-float)</a></dt>
-				<dd class="list-api-description">Mixin basic column properties.</dd>
+				<dt class="list-api-name" id="mixin-column-behavior"><a href="#mixin-column-behavior">@mixin column-behavior</a></dt>
+				<dd class="list-api-description">Mixin basic column properties. Takes two optional parameters: <code>$apply-border-box</code> (boolean) and <code>$column-float</code> (boolean).</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172502"></div></dd>
 
 
-				<dt class="list-api-name" id="mixin-column-width"><a href="#mixin-column-width">@mixin column-width($fraction: $base-column-width, $persistent: false)</a></dt>
+				<dt class="list-api-name" id="mixin-column-width"><a href="#mixin-column-width">@mixin column-width</a></dt>
+				<dd class="list-api-description">Mixin a width. Widths are expressed as fractions (e.g. 1/2) and are converted to percentages by the mixin. If a <code>$column-breakpoint</code> is set, the columns will be stacked - unless it was defined as persistent. Takes two optional parameters: <code>$fraction</code> and <code>$persistent</code> (boolean).</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172510"></div></dd>
-				<dd class="list-api-description">Mixin a width. Widths are expressed as fractions and are converted to percentages by the mixin. If a <code>$column-breakpoint</code> is set, the columns will be stacked - unless it was defined as persistent.</dd>
 
 
-				<dt class="list-api-name" id="mixin-column-spacing"><a href="#mixin-column-spacing">@mixin column-spacing($fraction: 1/2, $use-margin: false)</a></dt>
+				<dt class="list-api-name" id="mixin-column-spacing"><a href="#mixin-column-spacing">@mixin column-spacing</a></dt>
+				<dd class="list-api-description">Mixin column spacing. Uses padding by default, but can be overridden to use margins instead - helpful when assigning backgrounds or borders. If a <code>$column-breakpoint</code> is set, the value will be halved below the breakpoint. Takes two optional parameters: <code>$fraction</code> and <code>$use-margin</code> (boolean).</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172522"></div></dd>
-				<dd class="list-api-description">Mixin column spacing. Uses padding by default, but can be overridden to use margins instead - helpful when assigning backgrounds or borders. If a <code>$column-breakpoint</code> is set, the value will be halved below the breakpoint.</dd>
 
 
-				<dt class="list-api-name" id="mixin-column"><a href="#mixin-column">@mixin column($fraction: 1/1, $persistent: false, $column-padding: 1/2, $column-margin: false)</a></dt>
+				<dt class="list-api-name" id="mixin-column"><a href="#mixin-column">@mixin column</a></dt>
+				<dd class="list-api-description">Shorthand mixin for column, combines above mixins. Takes four optional parameters: <code>$fraction</code>, <code>$persistent</code> (boolean), <code>$column-padding</code> (fraction), <code>$column-margin</code> (boolean).</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172533"></div></dd>
-				<dd class="list-api-description">Shorthand mixin for column, combines above mixins. Behavior can be overridden with the parameters.</dd>
 
 
-				<dt class="list-api-name" id="mixin-root"><a href="#mixin-root">@mixin root($root-max-width: $root-max-width)</a></dt>
+				<dt class="list-api-name" id="mixin-root"><a href="#mixin-root">@mixin root</a></dt>
+				<dd class="list-api-description">Fixes content width and centers in viewport. Takes one, optional parameter: <code>$root-max-width</code> in a valid unit.</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172513"></div></dd>
-				<dd class="list-api-description">Fixes content width and centers in viewport.</dd>
 
 
-				<dt class="list-api-name" id="mixin-container-behavior"><a href="#mixin-container-behavior">@mixin container-behavior()</a></dt>
+				<dt class="list-api-name" id="mixin-container-behavior"><a href="#mixin-container-behavior">@mixin container-behavior</a></dt>
+				<dd class="list-api-description">Use it to remove column spacing on column parents. Takes no parameters.</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172512"></div></dd>
-				<dd class="list-api-description">Deprecated?</dd>
 
 
-				<dt class="list-api-name" id="mixin-move"><a href="#mixin-move">@mixin move($fraction)</a></dt>
+				<dt class="list-api-name" id="mixin-move"><a href="#mixin-move">@mixin move</a></dt>
+				<dd class="list-api-description">Helper mixin for soure ordering. Takes one parameter: <code>$fraction</code>.</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172567"></div></dd>
-				<dd class="list-api-description">Helper mixin for soure ordering.</dd>
 
 
-				<dt class="list-api-name" id="mixin-bleed"><a href="#mixin-bleed">@mixin bleed()</a></dt>
+				<dt class="list-api-name" id="mixin-move"><a href="#mixin-move">@mixin push</a></dt>
+				<dd class="list-api-description">Helper mixin for soure ordering, move elements to the right by the set fraction. Positioning will be reset below the breakpoint (if set) and if $persistent is false. Takes two parameters: <code>$fraction</code> and <code>$persistent</code> (boolean, optional).</dd>
+				<dd class="list-api-code"><div class="gist" data-id="6429091"></div></dd>
+
+
+				<dt class="list-api-name" id="mixin-move"><a href="#mixin-move">@mixin pull</a></dt>
+				<dd class="list-api-description">Helper mixin for soure ordering, move elements to the left by the set fraction. Positioning will be reset below the breakpoint (if set) and if $persistent is false. Takes two parameters: <code>$fraction</code> and <code>$persistent</code> (boolean, optional).</dd>
+				<dd class="list-api-code"><div class="gist" data-id="6429098"></div></dd>
+
+
+				<dt class="list-api-name" id="mixin-bleed"><a href="#mixin-bleed">@mixin bleed</a></dt>
+				<dd class="list-api-description">Mixin to reverse padding on a container. Is helpful with nested columns. If a <code>$column-breakpoint</code> is set, the margins will be halved below the breakpoint. Takes two optional parameters: <code>$fraction</code> and <code>$persistent</code> (boolean).</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172518"></div></dd>
-				<dd class="list-api-description">Mixin to reverse padding on a container. Is helpful with nested columns. If a <code>$column-breakpoint</code> is set, the margins will be halved below the breakpoint.</dd>
 			</dl>
 
 		</section>
 
 		<section class="tabs-pane" id="functions">
 
-			<h2 class="tabs-trigger" data-rel="#functions">Functions</h2>
+			<h2 class="tabs-trigger chapter-subheading" data-rel="#functions">Functions</h2>
 
 			<dl class="list-api">
 				<dt class="list-api-name" id="function-horizontal-rhythm"><a href="#function-horizontal-rhythm">@function horizontal-rhythm($fraction: 1/2)</a></dt>
+				<dd class="list-api-description">Calculates a value<sup>1)</sup> based on the $column-spacing. Takes one parameter: <code>$fraction</code>.<br><br><small><sup>1)</sup>Rem is experimental.</small></dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172639"></div></dd>
-				<dd class="list-api-description">Calculates a value based on the $column-spacing.</dd>
 
 				<dt class="list-api-name" id="function-fraction-to-percentage"><a href="#function-fraction-to-percentage">@function fraction-to-percentage($fraction: 1/3)</a></dt>
+				<dd class="list-api-description">Convert a fraction to a percentage. Takes one parameter: <code>$fraction</code>.</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172651"></div></dd>
-				<dd class="list-api-description">Convert a fraction to a percentage.</dd>
 
 				<dt class="list-api-name" id="function-fraction-to-text"><a href="#function-fraction-to-text">@function fraction-to-text($fraction)</a></dt>
+				<dd class="list-api-description">Convert a fraction to a word. Use to build style rules based on column widths. Takes one parameter: <code>$fraction</code>.</dd>
 				<dd class="list-api-code"><div class="gist" data-id="6172660"></div></dd>
-				<dd class="list-api-description">Convert a fraction to a word. Use to build style rules based on column widths.</dd>
 			</dl>
 
 		</section>
