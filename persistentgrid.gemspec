@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.1.beta.8"
-  s.date = "2013-08-30"
+  s.version = "0.0.1.beta.9"
+  s.date = "2013-09-07"
 
   # Gem Details
   s.name = "persistentgrid"
