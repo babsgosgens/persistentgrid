@@ -34,7 +34,7 @@
 //  ==========================================================================
 @mixin font-style($type)
 {
-	font-style: nth($type,1);
+	font-style: extract-type-style($type);
 }
 
 
@@ -47,7 +47,7 @@
 //  ==========================================================================
 @mixin font-variant($type)
 {
-	font-variant: nth($type,2);
+	font-variant: extract-type-variant($type);
 }
 
 
@@ -60,7 +60,7 @@
 //  ==========================================================================
 @mixin font-weight($type)
 {
-	font-weight: nth($type,3);
+	font-weight: extract-type-weight($type);
 }
 
 
@@ -73,7 +73,7 @@
 //  ==========================================================================
 @mixin font-family($type)
 {
-	font-family: nth($type,4);
+	font-family: extract-type-family($type);
 }
 
 
