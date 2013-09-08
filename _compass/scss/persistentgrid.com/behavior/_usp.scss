@@ -2,6 +2,7 @@
 
 .usp {
 	&.one {
+		overflow-y: hidden;
 		p,
 		.usp-title {
 			color: $white;

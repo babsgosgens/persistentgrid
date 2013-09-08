@@ -456,6 +456,7 @@ pre { font: inherit; line-height: inherit; white-space: pre; }
 
 .post-date::before { font-family: FontAwesome; font-weight: normal; font-style: normal; text-decoration: inherit; -webkit-font-smoothing: antialiased; *margin-right: .3em; content: "\f133"; padding-right: .25em; }
 
+.usp.one { overflow-y: hidden; }
 .usp.one p, .usp.one .usp-title { color: white; }
 .usp.two { margin-bottom: 3em; }
 .usp.two .usp-title { color: #ff7888; }
