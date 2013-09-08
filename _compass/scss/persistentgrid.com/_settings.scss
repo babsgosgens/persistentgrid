@@ -43,7 +43,6 @@
 	// $column-spacing-perstistent: true;
 	$column-breakpoint: $medium-handheld;
 
-
 	
 // 	================================================================================================================================
 // 	Forms
@@ -53,6 +52,11 @@
 	$input-focussed-border-color: $color-attn-two;
 	$input-background-color: lighten($pg-grey, 2%);
 	$input-background-image:  url(../images/backgrounds/noise.png);
+
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
 
 // 	================================================================================================================================
 // 	Buttons

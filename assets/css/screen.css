@@ -1,5 +1,7 @@
 /* http://persistent-grid.com v1.0 | 20130701 Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved. License: GNU General Public License version 2 or later; see LICENSE.txt
 */
+body { max-width: 100%; overflow-x: hidden; }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { color: #555555; /* Reset margin, padding and border */ margin: 0; padding: 0; border: 0; /* Reset to box-sizing to border-box */ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* Make sure these elements inherit any font settings from their parent */ font: inherit; font-size: 100%; vertical-align: baseline; /* See: http://www.usabilitypost.com/2012/11/06/optimize-legibility/ */ text-rendering: optimizeLegibility; /* Prevents the browser from using synthesized font-weights. */ font-synthesis: none; /* See: http://meyerweb.com/eric/css/tests/css3/font-variant-ligatures.html */ font-variant-ligatures: common-ligatures; /* See: http://meyerweb.com/eric/css/tests/css3/font-variant-numeric.html */ font-variant-numeric: oldstyle-nums diagonal-fractions; }
 
 /* IE 6 refuses to resize fonts set in pixels and it weirdly resizes fonts whose root is set in ems. So we set the root font size in percentages of the default font size. */
@@ -104,7 +106,7 @@ q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 .is-not-visible { display: none; }
 
-.root { overflow: hidden; margin: 0 auto; max-width: 72em; }
+.root { margin: 0 auto; max-width: 72em; }
 
 .column { display: -moz-inline-stack; display: inline-block; vertical-align: top; *vertical-align: auto; zoom: 1; *display: inline; padding-left: 24px; padding-right: 24px; }
 @media only screen and (max-width: 48em) { .column { padding-left: 12px; padding-right: 12px; } }
