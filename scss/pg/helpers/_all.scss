@@ -4,8 +4,15 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "functions";
 @import "settings";
-@import "mixins";
-@import "colors";
-@import "fonts";
+
+@import "anchors";
+@import "baseline";
+@import "breakpoints";
+@import "content";
+@import "css-triangle";
+@import "elements";
+@import "module";
+@import "text";
+@import "typography";
+@import "units";

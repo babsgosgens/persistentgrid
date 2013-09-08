@@ -1,0 +1,14 @@
+// /**
+//  * copyright (c) 2013 crossing hippos - babs gösgens. all rights reserved.
+//  * licensed under gnu general public license version 2 or later; see license.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+//  ==========================================================================
+//  constants
+//  ==========================================================================
+
+	
+// Constants
+$sides: top right bottom left;
+$corners: top-left top-right bottom-left bottom-right;

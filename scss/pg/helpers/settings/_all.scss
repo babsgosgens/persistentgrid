@@ -5,4 +5,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 @import "breakpoints";
+@import "colors";
+@import "constants";
 @import "font-sizes";
+@import "fonts";
