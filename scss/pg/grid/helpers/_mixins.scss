@@ -131,18 +131,13 @@
 //  --------------------------------------------------------------------------
 //	Fixes content width and centers in viewport.
 //  --------------------------------------------------------------------------
-//  @param (boolean) $hide-overflow
 //  @param (string) $root-max-width
 //  @param (boolean) $set-display
 //  ==========================================================================
-@mixin root($hide-overflow: true, $root-max-width: $root-max-width, $set-display: false)
+@mixin root($root-max-width: $root-max-width, $set-display: false)
 {
 	@if $set-display {
 		display: block;
-	}
-
-	@if $hide-overflow {
-		overflow: hidden;
 	}
 
 	@if $root-position==center {
