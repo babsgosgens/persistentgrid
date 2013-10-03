@@ -11,6 +11,7 @@
 #{$column-selector} {
 	@include column-behavior();
 	@include column-spacing();
+	@include column-width(1/1);
 }
 
 #{$column-selector}-container {
