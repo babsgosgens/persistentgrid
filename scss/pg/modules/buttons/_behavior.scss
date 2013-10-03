@@ -46,6 +46,9 @@
         }
         @else if $property=="color" {
           @include module-property($value, "color");
+          a,span,em,i,b {
+            color: inherit;
+          }
         }
         @else if $property=="text" {
           @include module-text($value);
