@@ -87,9 +87,10 @@
 //  Button hover state properties
 //  ==========================================================================
 
-	$button-hover-background-color: lighten($button-background-color, 20%) !default;
+	$button-hover-background-color: darken($button-background-color, 10%) !default;
 	$button-hover-background-image: false !default;
 	$button-hover-border-color: $button-hover-background-color !default;
+	$button-hover-text-color: $button-text-color !default;
 
 
 //  ==========================================================================
@@ -97,9 +98,10 @@
 //  $button-active-background-image: linear-gradient(lighten($button-active-background-color,5),darken($button-active-background-color,5))
 //  ==========================================================================
 
-	$button-active-background-color: lighten($button-background-color, 20%) !default;
+	$button-active-background-color: lighten($button-background-color, 10%) !default;
 	$button-active-background-image: false !default;
 	$button-active-border-color: $button-active-background-color !default;
+	$button-active-text-color: $button-text-color !default;
 
 
 //  ==========================================================================
@@ -133,7 +135,7 @@
 			(border, false)
 			(border-radius, false)
 			(box-shadow, false)
-			(color, false)
+			(color, ($button-text-color))
 			(text, false)
 			(type, false)
 		),
