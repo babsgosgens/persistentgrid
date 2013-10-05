@@ -12,8 +12,8 @@
 // 	================================================================================================================================
 	$column-selector: ".column" !default;
 	$column-spacing: 2*$base-line-height !default;
-	$column-spacing-unit: 1px; // Revisit this, looks redundant
-	$column-spacing-perstistent: false !default;
+	$column-spacing-unit: 1px;
+	$column-spacing-persistent: false !default;
 	$column-widths: 1/2, 1/4, 1/3, 2/3, 3/4 !default; // Omit 1/1, it is rendered by default
 	$column-width-default: 1/1 !default;
 	$column-breakpoint: $small_handheld !default;

@@ -42,7 +42,7 @@
 	// Button background (background-color, background-image)
 	// -----------------------------------------------------------------------
 
-	$button-background-color: $color-theme !default; // not base
+	$button-background-color: darken($color-background,10%) !default; // not base
 	$button-background-image: false !default; // not base
 
 
@@ -68,8 +68,8 @@
 	// Button text (color, shadow, align, decoration)
 	// -----------------------------------------------------------------------
 
-	$button-text-color: $white !default;
-	$button-text-shadow: -1px -1px 0 rgba(0,0,0,.3) !default;
+	$button-text-color: $color-body !default;
+	$button-text-shadow: 1px 1px 0 rgba(255,255,255,.5) !default;
 	$button-text-align: center !default;
 	$button-text-decoration: none !default;
 
