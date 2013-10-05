@@ -70,7 +70,7 @@
 //  @param (boolean) $use-margin
 //  @param (boolean) $persistent
 //  ==========================================================================
-@mixin column-spacing($fraction: 1/2, $use-margin: false, $persistent: $column-spacing-perstistent)
+@mixin column-spacing($fraction: 1/2, $use-margin: false, $persistent: $column-spacing-persistent)
 {
 	@if ($use-margin) {
 		margin-left: horizontal-rhythm($fraction);
