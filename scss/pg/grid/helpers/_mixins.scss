@@ -28,11 +28,11 @@
 		@include box-sizing('border-box');
 	}
 	
-		@if $column-breakpoint {
-			@include breakpoint( $column-breakpoint ) {
-				width: 100%;
-			}
+	@if $column-breakpoint {
+		@include breakpoint( $column-breakpoint ) {
+			width: 100%;
 		}
+	}
 }
 
 
@@ -78,7 +78,6 @@
 		@if $persistent == false {
 			@if $column-breakpoint {
 				@include breakpoint( $column-breakpoint ) {
-					color: red !important;
 					margin-left: horizontal-rhythm($fraction/2);
 					margin-right: horizontal-rhythm($fraction/2);
 				}
@@ -91,7 +90,6 @@
 		@if $persistent == false {
 			@if $column-breakpoint {
 				@include breakpoint( $column-breakpoint ) {
-					color: red !important;
 					padding-left: horizontal-rhythm($fraction/2);
 					padding-right: horizontal-rhythm($fraction/2);
 				}
@@ -215,9 +213,10 @@
 	}
 }
 
+
 //  ==========================================================================
 //  Mixin for soure ordering
-//	Will reset positioning if $persistent is false
+//	Will reset positioning for smallest breakpoint.
 //
 //  @param (string) $fraction
 //  @param (boolean) $persistent
