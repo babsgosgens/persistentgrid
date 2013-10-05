@@ -11,6 +11,10 @@
 	@include column-width(1/1);
 }
 
+%reset-source-order {
+	@include reset-source-order;
+}
+
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
@@ -30,10 +34,6 @@
 			// @extend %reset-source-order;
 		}
 	}
-}
-
-%reset-source-order {
-	@include reset-source-order;
 }
 
 #{$root-selector} {
