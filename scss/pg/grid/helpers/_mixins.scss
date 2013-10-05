@@ -244,11 +244,4 @@
 @mixin bleed($fraction: -1/2, $persistent: false)
 {
 	@include column-spacing($fraction, true);
-	@if $persistent == false {
-		@if $column-breakpoint {
-			@include breakpoint( $column-breakpoint ) {
-				@include column-spacing($fraction/2, true);
-			}
-		}
-	}
 }

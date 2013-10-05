@@ -7,6 +7,10 @@
 
 
 // Render columns first so we can cascade column default behavior
+%full {
+	@include column-width(1/1);
+}
+
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
@@ -39,21 +43,19 @@
 #{$column-selector} {
 	@include column-behavior();
 	@include column-spacing();
-	@include column-width($column-width-default);
+	@extend %full;
+	// @include column-width($column-width-default);
 }
 
 #{$column-selector}-container {
 	@include column-behavior();
+	@extend %full;
 }
 
-#{$column-selector}-padding {
+#{$column-selector}-spacing {
 	@include column-spacing();
 }
 
 .bleed {
 	@include bleed(); 
-}
-
-.full {
-	@include column-width(1/1);
 }
