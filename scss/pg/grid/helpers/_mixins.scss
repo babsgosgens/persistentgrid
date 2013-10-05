@@ -27,6 +27,12 @@
 	@if $apply-border-box {
 		@include box-sizing('border-box');
 	}
+	
+		@if $column-breakpoint {
+			@include breakpoint( $column-breakpoint ) {
+				width: 100%;
+			}
+		}
 }
 
 
@@ -43,12 +49,6 @@
 	}
 	@else {
 		width: fraction-to-percentage($fraction);
-	}
-	
-	@if $persistent==false and $column-breakpoint {
-		@include breakpoint( $column-breakpoint ) {
-			width: 100%;
-		}
 	}
 
 	// /*
@@ -78,6 +78,7 @@
 		@if $persistent == false {
 			@if $column-breakpoint {
 				@include breakpoint( $column-breakpoint ) {
+					color: red !important;
 					margin-left: horizontal-rhythm($fraction/2);
 					margin-right: horizontal-rhythm($fraction/2);
 				}
@@ -90,6 +91,7 @@
 		@if $persistent == false {
 			@if $column-breakpoint {
 				@include breakpoint( $column-breakpoint ) {
+					color: red !important;
 					padding-left: horizontal-rhythm($fraction/2);
 					padding-right: horizontal-rhythm($fraction/2);
 				}
@@ -191,11 +193,8 @@
 {
 	@include move($fraction);
 
-	@if $persistent!=true and $column-breakpoint {
-		@include breakpoint( $column-breakpoint ) {
-			position: static;
-			position: initial;
-		}
+	@if $persistent == false {
+		@extend %reset-source-order;
 	}
 }
 
@@ -211,7 +210,21 @@
 {
 	@include move(-1*$fraction);
 
-	@if $persistent!=true and $column-breakpoint {
+	@if $persistent == false {
+		@extend %reset-source-order;
+	}
+}
+
+//  ==========================================================================
+//  Mixin for soure ordering
+//	Will reset positioning if $persistent is false
+//
+//  @param (string) $fraction
+//  @param (boolean) $persistent
+//  ==========================================================================
+@mixin reset-source-order
+{
+	@if $column-breakpoint {
 		@include breakpoint( $column-breakpoint ) {
 			position: static;
 			position: initial;

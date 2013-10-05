@@ -5,7 +5,8 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-// Render columns first
+
+// Render columns first so we can cascade column default behavior
 @each $fraction in $column-widths {
 	$name: fraction-to-text($fraction);
 	@if $name {
@@ -18,11 +19,17 @@
 		// Source Ordering
 		.push-#{$name} {
 			@include push($fraction);
+			// @extend %reset-source-order;
 		}
 		.pull-#{$name} {
 			@include pull($fraction);
+			// @extend %reset-source-order;
 		}
 	}
+}
+
+%reset-source-order {
+	@include reset-source-order;
 }
 
 #{$root-selector} {

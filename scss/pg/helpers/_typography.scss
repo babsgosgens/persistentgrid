@@ -78,16 +78,3 @@
 // 	// @debug $base-line-height;
 // 	@return ($base-lines * $base-line-height);
 // }
-
-@function px-to-em($target,$context)
-{
-	@return $target/$context*1em;
-}
-@function px-to-percentage($target,$context)
-{
-	@return $target/$context*100%;
-}
-@function px-to-rem($pixels)
-{
-	@return $pixels/1px*0.1rem;
-}
