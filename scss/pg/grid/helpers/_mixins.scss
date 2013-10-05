@@ -27,12 +27,6 @@
 	@if $apply-border-box {
 		@include box-sizing('border-box');
 	}
-	
-	@if $column-breakpoint {
-		@include breakpoint( $column-breakpoint ) {
-			width: 100%;
-		}
-	}
 }
 
 
@@ -49,6 +43,11 @@
 	}
 	@else {
 		width: fraction-to-percentage($fraction);
+		@if $column-breakpoint {
+			@include breakpoint( $column-breakpoint ) {
+				width: 100%;
+			}
+		}
 	}
 
 	// /*
