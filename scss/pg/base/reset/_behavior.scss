@@ -26,7 +26,7 @@
 	figure, figcaption, footer, header, hgroup, 
 	menu, nav, output, ruby, section, summary,
 	time, mark, audio, video {
-		color: $color-body;
+
 		@if $reset-box-model {
 
 			/*
@@ -56,10 +56,13 @@
 	@include reset-baseline;
 }
 
-@if $reset-html-background OR $reset-ios {
+@if $reset-html-background OR $reset-html-color OR $reset-ios {
 	html {
 		@if $reset-html-background {
 			@include reset-html-background;
+		}
+		@if $reset-html-color {
+			@include reset-html-color;
 		}
 		@if $reset-ios {
 			@include reset-ios;

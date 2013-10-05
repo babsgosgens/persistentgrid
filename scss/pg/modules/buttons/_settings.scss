@@ -42,7 +42,7 @@
 	// Button background (background-color, background-image)
 	// -----------------------------------------------------------------------
 
-	$button-background-color: darken($color-background,10%) !default; // not base
+	$button-background-color: $whitesmoke !default; // not base
 	$button-background-image: false !default; // not base
 
 

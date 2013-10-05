@@ -4,6 +4,27 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+
+// Render columns first
+@each $fraction in $column-widths {
+	$name: fraction-to-text($fraction);
+	@if $name {
+		.#{$name} {
+			@include column-width($fraction);
+		}
+		.#{$name}.persistent {
+			@include column-width($fraction, true);
+		}
+		// Source Ordering
+		.push-#{$name} {
+			@include push($fraction);
+		}
+		.pull-#{$name} {
+			@include pull($fraction);
+		}
+	}
+}
+
 #{$root-selector} {
 	@include root();
 }
@@ -28,24 +49,4 @@
 
 .full {
 	@include column-width(1/1);
-}
-
-// Render columns
-@each $fraction in $column-widths {
-	$name: fraction-to-text($fraction);
-	@if $name {
-		.#{$name} {
-			@include column-width($fraction);
-		}
-		.#{$name}.persistent {
-			@include column-width($fraction, true);
-		}
-		// Source Ordering
-		.push-#{$name} {
-			@include push($fraction);
-		}
-		.pull-#{$name} {
-			@include pull($fraction);
-		}
-	}
 }
