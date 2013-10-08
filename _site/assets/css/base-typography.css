@@ -1,4 +1,0 @@
-/* http://persistent-grid.com v1.0 | 20130701 Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved. License: GNU General Public License version 2 or later; see LICENSE.txt
-*/
-html { /* Mixin debug-rhythm to display the vertical rhythm units */ background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%); background-image: linear-gradient(rgba(226, 255, 255, 0.5) 50%, transparent 50%); background-size: 3em 3em; }
-html * { background-color: transcontainer !important; background-image: none !important; outline: rgba(255, 0, 255, 0.1) dotted 1px; outline: #ff01ff dotted 1px \9; }
