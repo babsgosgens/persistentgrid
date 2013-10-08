@@ -1,7 +1,6 @@
 
 safe: true
 lsi: false
-source: ''
 name: Persistent Grid Reference Manual
 markdown: redcarpet
 pygments: true
