@@ -205,156 +205,157 @@
 //
 //  ##########################################################################
 
-	#sections,
-	#chapters {
-		@extend %is-pull-menu;
-	}
-	#sections {
-		@extend %is-pull-menu-sections;
-	}
-	#chapters {
-		@extend %is-pull-menu-chapters;
-	}
+#sections,
+#chapters {
+	@extend %is-pull-menu;
+}
+#sections {
+	@extend %is-pull-menu-sections;
+}
+#chapters {
+	@extend %is-pull-menu-chapters;
+}
 
 
-	@import "pg/helpers/settings/icon-fonts/fontawesome/mixins";
-	@import "pg/helpers/settings/icon-fonts/fontawesome/variables";
+@import "pg/helpers/settings/icon-fonts/fontawesome/mixins";
+@import "pg/helpers/settings/icon-fonts/fontawesome/variables";
+
 
 //  ==========================================================================
 //  Behavior
 //  ==========================================================================
 
-	%is-pull-menu {
-		@include breakpoint( $column-breakpoint ) {
-			height: vertical-rhythm(1.5);
-			overflow: hidden;
-			ul {
-				position: relative;
-			}
-			a {
-				position: absolute;
-				left: -9999em;
-				&.is-nav-active {
-					top: 0;
-					left: 0;
-				}
+%is-pull-menu {
+	@include breakpoint( $column-breakpoint ) {
+		height: vertical-rhythm(1.5);
+		overflow: hidden;
+		ul {
+			position: relative;
+		}
+		a {
+			position: absolute;
+			left: -9999em;
+			&.is-nav-active {
+				top: 0;
+				left: 0;
 			}
 		}
 	}
-	%is-pull-menu:hover,
-	%is-pull-menu-open {
-		@include breakpoint( $column-breakpoint ) {
-			height: auto;
-			overflow: auto;
-			a {
-				position: static !important;
-			}
+}
+%is-pull-menu:hover,
+%is-pull-menu-open {
+	@include breakpoint( $column-breakpoint ) {
+		height: auto;
+		overflow: auto;
+		a {
+			position: static !important;
 		}
 	}
+}
 
 
 //  ==========================================================================
 //  Skin
 //  ==========================================================================
 
-	%is-pull-menu-sections {
-		@include breakpoint( $column-breakpoint ) {
-			li {
-				width: 100%;
+%is-pull-menu-sections {
+	@include breakpoint( $column-breakpoint ) {
+		li {
+			width: 100%;
+		}
+		a,
+		a.is-nav-active {
+			background: $color-primary url(../images/backgrounds/noise.png);
+			color: $white;
+			@include emboss-text-down($white, $pg-grey, .5);
+			padding-left: horizontal-rhythm(1/4);
+			&:hover {
+				background-color: $color-primary;
+				color: $color-body;
+				@include emboss-text-down($color-body, $pg-grey, .3);
 			}
-			a,
-			a.is-nav-active {
-				background: $color-primary url(../images/backgrounds/noise.png);
-				color: $white;
-				@include emboss-text-down($white, $pg-grey, .5);
-				padding-left: horizontal-rhythm(1/4);
-				&:hover {
-					background-color: $color-primary;
-					color: $color-body;
-					@include emboss-text-down($color-body, $pg-grey, .3);
-				}
-			}
-			a {
-				display: block;
-				width: 100%;
-				&.is-nav-active {
-					&:before {
-						@include icon($sort);
-						float: right;
-					}
+		}
+		a {
+			display: block;
+			width: 100%;
+			&.is-nav-active {
+				&:before {
+					@include icon($sort);
+					float: right;
 				}
 			}
 		}
 	}
+}
 
 
-	%is-pull-menu-sections:hover,
-	%is-pull-menu-sections-open {
-		@include breakpoint( $column-breakpoint ) {
-			a {
-				&.is-nav-active {
-				padding-left: horizontal-rhythm(1/2);
-					&:before {
-						@include icon($ok);
-						position: absolute;
-						left: .35em;
-					}
+%is-pull-menu-sections:hover,
+%is-pull-menu-sections-open {
+	@include breakpoint( $column-breakpoint ) {
+		a {
+			&.is-nav-active {
+			padding-left: horizontal-rhythm(1/2);
+				&:before {
+					@include icon($ok);
+					position: absolute;
+					left: .35em;
 				}
 			}
 		}
 	}
+}
 
 
-	%is-pull-menu-chapters {
-		@include breakpoint( $column-breakpoint ) {
-			margin-top: vertical-rhythm(.5);
-			@include column-spacing;
-			height: vertical-rhythm(2);
-			li {
+%is-pull-menu-chapters {
+	@include breakpoint( $column-breakpoint ) {
+		margin-top: vertical-rhythm(.5);
+		@include column-spacing;
+		height: vertical-rhythm(2);
+		li {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		a {
+			&.is-nav-active {
 				padding-top: 0;
-				padding-bottom: 0;
-			}
-			a {
-				&.is-nav-active {
-					padding-top: 0;
-					padding-left: 0;
-					@include adjust-font-size-to($font-size-xl);
-					background: none;
-					color: $color-attn-one;
-					@include emboss-text-down($color-body, $pg-grey, 1);
-					&:after {
-						padding-left: .5em;
-						@include icon($sort);
-						@include adjust-font-size-to($font-size-l, 1, $font-size-xl);
-					}
+				padding-left: 0;
+				@include adjust-font-size-to($font-size-xl);
+				background: none;
+				color: $color-attn-one;
+				@include emboss-text-down($color-body, $pg-grey, 1);
+				&:after {
+					padding-left: .5em;
+					@include icon($sort);
+					@include adjust-font-size-to($font-size-l, 1, $font-size-xl);
 				}
 			}
 		}
 	}
+}
 
-	%is-pull-menu-chapters:hover,
-	%is-pull-menu-chapters-open {
-		@include breakpoint( $column-breakpoint ) {
-			li {
-				padding-top: vertical-rhythm(.25);
-				padding-bottom: vertical-rhythm(.25);
-			}
-			a {
-				&.is-nav-active {
-					@include adjust-font-size-to($base-font-size);
-					color: $color-primary;
-					position: relative;
-					padding-left: horizontal-rhythm(1/4);
-					&:after {
-						display: none;
-					}
-					&:before {
-						position: absolute;
-						left: 0%;
-						@include icon($ok);
-						font-size: 100%;
-					}
+%is-pull-menu-chapters:hover,
+%is-pull-menu-chapters-open {
+	@include breakpoint( $column-breakpoint ) {
+		li {
+			padding-top: vertical-rhythm(.25);
+			padding-bottom: vertical-rhythm(.25);
+		}
+		a {
+			&.is-nav-active {
+				@include adjust-font-size-to($base-font-size);
+				color: $color-primary;
+				position: relative;
+				padding-left: horizontal-rhythm(1/4);
+				&:after {
+					display: none;
+				}
+				&:before {
+					position: absolute;
+					left: 0%;
+					@include icon($ok);
+					font-size: 100%;
 				}
 			}
 		}
 	}
+}
