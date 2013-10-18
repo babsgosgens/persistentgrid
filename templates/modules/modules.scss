@@ -1,7 +1,7 @@
 /* http://persistent-grid.com
    v1.0 | 20130701
    Copyright: Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
-   License: GNU General Public License version 2 or later; see LICENSE.txt
+   License: MIT; see LICENSE
 */
 $trace-imports: false;
 
@@ -12,12 +12,16 @@ $trace-imports: false;
 	@import "Compass";
 
 //  ==========================================================================
+//  Shared utilities
+//  ==========================================================================
+	@import "persistentgrid/utilities";
+
+//  ==========================================================================
 //  Helpers
 //  ==========================================================================
-	@import "pg/helpers";
-	@import "pg/base/helpers";
-	@import "pg/grid/helpers";
-	@import "pg/modules/helpers";
+	@import "persistentgrid/base/helpers";
+	@import "persistentgrid/layout/helpers";
+	@import "persistentgrid/modules/helpers";
 
 //  ==========================================================================
 //  Settings
@@ -28,15 +32,15 @@ $trace-imports: false;
 //  3) grid settings
 //  4) module settings
 //  ==========================================================================
-	@import "pg/base/settings";
-	@import "pg/grid/settings";
+	@import "persistentgrid/base/settings";
+	@import "persistentgrid/layout/settings";
 	// Your project settings and overrides //
-	@import "pg/modules/settings";
+	@import "persistentgrid/modules/settings";
 
 //  ==========================================================================
 //  Settings
 //  --------------------------------------------------------------------------
 //  Import the behavior (in the order you want rules to render): 
 //  ==========================================================================
-	@import "pg/modules/behavior";
+	@import "persistentgrid/modules/behavior";
 	// Your project behavior, e.g. your (S)CSS //

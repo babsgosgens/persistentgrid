@@ -1,0 +1,71 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under MIT; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+//  ==========================================================================
+//  Root element
+//  ==========================================================================
+	#{$root-selector} {
+		@include root();
+	}
+
+//  ==========================================================================
+//  Layout "column"
+//  ==========================================================================
+	#{$column-selector} {
+		@include column-behavior();
+		@include column-width(1/1, false, true);
+	}
+
+//  ==========================================================================
+//  Adds padding
+//  ==========================================================================
+	#{$column-selector}--padded {
+		@include column-spacing();
+	}
+
+//  ==========================================================================
+//  Bleed padding
+//  ==========================================================================
+	#{$column-selector}--bleed {
+		@include bleed(); 
+	}
+
+//  ==========================================================================
+//  Column widths
+//  ==========================================================================
+	@each $fraction in $column-widths {
+		$name: fraction-to-text($fraction);
+		@if $name {
+			#{$column-selector}--#{$name} {
+				@include column-width($fraction);
+			}
+			#{$column-selector}--#{$name}-persistent {
+				@include column-width($fraction, true);
+			}
+		}
+	}
+
+//  ==========================================================================
+//  Source ordering
+//  ==========================================================================
+	#{$column-selector}--push,
+	#{$column-selector}--pull {
+		position: relative;
+		@include reset-source-order;
+	}
+
+	@each $fraction in $column-widths {
+		$name: fraction-to-text($fraction);
+		@if $name {
+			// Source Ordering
+			#{$column-selector}--push-#{$name} {
+				@include push($fraction);
+			}
+			#{$column-selector}--pull-#{$name} {
+				@include pull($fraction);
+			}
+		}
+	}

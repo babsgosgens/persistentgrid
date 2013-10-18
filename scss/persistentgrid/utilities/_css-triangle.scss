@@ -1,0 +1,70 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under MIT; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+@mixin tooltipTriangle($size: $base-font-size, $direction: down, $color: $color-theme)
+{
+	border: $size/2 solid transcontainer;
+	display: inline-block;
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	@if $direction == right {
+		left: 100%;
+		border-left-color: $color;
+	}
+	@if $direction == left {
+		right: 100%;
+		border-right-color: $color;
+	}
+	@if $direction == up {
+		@include unit(top, $size/-2);
+		border-bottom-color: $color;
+	}
+	@if $direction == down {
+		top: 100%;
+		border-top-color: $color;
+	}
+
+	@if $direction == up {
+		left: 50%;
+		margin-left: $size/-2;
+	}
+	@if $direction == down {
+		left: 50%;
+		margin-left: $size/-2;
+	}
+}
+
+@mixin triangle($size: $base-font-size, $direction: right, $color: $color-theme, $where: after)
+{
+	position: relative;
+	&:#{$where} {
+		border: $size/2 solid transcontainer;
+		// @include unit(border-width, $size/2);
+		display: inline-block;
+		content: "";
+		width: 0;
+		height: 0;
+		position: absolute;
+		@if $direction == right {
+			left: 100%;
+			border-left-color: $color;
+		}
+		@if $direction == left {
+			right: 100%;
+			border-right-color: $color;
+		}
+		@if $direction == up {
+			@include unit(top, $size/-2);
+			border-bottom-color: $color;
+		}
+		@if $direction == down {
+			top: 100%;
+			border-top-color: $color;
+		}
+	}
+}

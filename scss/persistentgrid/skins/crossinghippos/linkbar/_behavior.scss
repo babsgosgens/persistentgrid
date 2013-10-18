@@ -1,0 +1,73 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under MIT; see LICENSE.txt
+//  */
+
+##{$linkbar-base-class} {
+	@include column-spacing;
+}
+
+.#{$linkbar-base-class}-item,
+.#{$linkbar-base-class}-item-link {
+	display: block;
+}
+
+.#{$linkbar-base-class}-item {
+	@if($linkbar-item-background) {
+		background: $linkbar-item-background;
+	}
+}
+
+.#{$linkbar-base-class}-item-link {
+	text-decoration: none;
+	@if($linkbar-item-link-padding) {
+		padding: $linkbar-item-link-padding;
+	}
+	@include column-spacing; // Override default padding because smalles views have built-in smaller column spadding
+	@if($linkbar-item-link-background) {
+		background: $linkbar-item-link-background;
+	}
+	@if($linkbar-item-link-color) {
+		color: $linkbar-item-link-color;
+	}
+	&:hover {
+		@extend .is-#{$linkbar-base-class}-item-link-hover;
+	}
+}
+
+.is-#{$linkbar-base-class}-item-link-hover {
+	@if($linkbar-item-link-hover-background) {
+		background: $linkbar-item-link-hover-background;
+	}
+	@if($linkbar-item-link-hover-color) {
+		color: $linkbar-item-link-hover-color;
+	}
+}
+
+.#{$linkbar-base-class}-trigger {
+	@extend .is-visible;
+	display: inline-block;
+	&+.#{$linkbar-base-class} {
+		@include is-hidden;
+	}
+}
+
+##{$linkbar-base-class}:target {
+	.#{$linkbar-base-class} {
+		@include is-not-hidden();
+	}
+}
+
+@include breakpoint($medium_handheld) {
+	.#{$linkbar-base-class}-trigger {
+		&+.#{$linkbar-base-class} {
+			@include is-not-hidden;
+		}
+	}
+	.#{$linkbar-base-class}-item,
+	.#{$linkbar-base-class}-item-link {
+		display: inline-block;
+	}
+}
+
+

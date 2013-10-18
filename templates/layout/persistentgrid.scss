@@ -17,24 +17,37 @@ $trace-imports: false;
 	@import "persistentgrid/utilities";
 
 //  ==========================================================================
-//  Helpers
+//  Layout helpers
 //  ==========================================================================
-	@import "persistentgrid/base/helpers";
+	@import "persistentgrid/layout/helpers";
 
 //  ==========================================================================
-//  Settings
-//  --------------------------------------------------------------------------
-//  Import the settings, in this order: 
-//  1) pg settings
-//  2) project settings
+//  Settings:
+//  1. Base settings
+//  2. Layout settings
 //  ==========================================================================
-	@import "persistentgrid/base/settings";
-	// Your project settings and overrides //
+	@import "persistentgrid/base/settings",
+			"persistentgrid/layout/settings"
+			;
+
+	// These settings are necessary in a stand-alone implementation of Grid
+	// See: persistentgrid/layout/settings
+	// $base-line-height: 24px !default;
+	// $apply-border-box: true !default;
+
 
 //  ==========================================================================
-//  Settings
-//  --------------------------------------------------------------------------
-//  Import the behavior (in the order you want rules to render): 
+//  Project settings
 //  ==========================================================================
-	@import "persistentgrid/base/behavior";
-	// Your project behavior, e.g. your (S)CSS //
+
+//	/* Your project settings and overrides */
+
+//  ==========================================================================
+//  Behavior
+// 
+//  (Import the behavior in the order you want rules to render)
+//  ==========================================================================
+
+	@import "persistentgrid/layout/behavior";
+
+//	/* Import additional behavior here, e.g. your SCSS */

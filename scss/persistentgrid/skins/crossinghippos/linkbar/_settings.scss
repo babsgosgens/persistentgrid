@@ -1,0 +1,27 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under MIT; see LICENSE.txt
+//  */
+
+	// Linkbar base class
+	$linkbar-base-class 						: "linkbar";
+	$linkbar-breakpoint 						: $column-breakpoint;
+
+	// Background
+	$linkbar-background 						: false;
+
+	$linkbar-item-background 					: false;
+
+	$linkbar-item-link-background 				: $color-theme;
+
+	$linkbar-item-link-color 					: $white !important;
+
+	$linkbar-item-link-padding-top				: rhythm(.25);
+	$linkbar-item-link-padding-right			: column-padding(1/2);
+	$linkbar-item-link-padding-bottom			: rhythm(.25);
+	$linkbar-item-link-padding-left				: column-padding(1/2);
+	$linkbar-item-link-padding 					: $linkbar-item-link-padding-top $linkbar-item-link-padding-right $linkbar-item-link-padding-bottom $linkbar-item-link-padding-left;
+
+	$linkbar-item-link-hover-background 		: $color-primary;
+
+	$linkbar-item-link-hover-color 				: false;
