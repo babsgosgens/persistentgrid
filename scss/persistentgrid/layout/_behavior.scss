@@ -12,16 +12,24 @@
 	}
 
 //  ==========================================================================
-//  Adds padding
+//  Layout "column"
 //  ==========================================================================
-	#{$column-selector}--padded {
+	#{$column-selector} {
+		@include column-behavior();
+		@include column-width(1/1, false, true);
+	}
+
+//  ==========================================================================
+//  Adds responsive padding
+//  ==========================================================================
+	#{$column-selector}-gutters {
 		@include column-spacing();
 	}
 
 //  ==========================================================================
-//  Bleed padding
+//  Responsive bleed padding
 //  ==========================================================================
-	#{$column-selector}--bleed {
+	#{$column-selector}-bleed {
 		@include bleed(); 
 	}
 
@@ -43,8 +51,8 @@
 //  ==========================================================================
 //  Source ordering
 //  ==========================================================================
-	#{$column-selector}--push,
-	#{$column-selector}--pull {
+	#{$column-selector}-push,
+	#{$column-selector}-pull {
 		position: relative;
 		@include reset-source-order;
 	}
@@ -53,19 +61,22 @@
 		$name: fraction-to-text($fraction);
 		@if $name {
 			// Source Ordering
-			#{$column-selector}--push-#{$name} {
+			#{$column-selector}-push--#{$name} {
 				@include push($fraction);
 			}
-			#{$column-selector}--pull-#{$name} {
+			#{$column-selector}-pull--#{$name} {
 				@include pull($fraction);
 			}
 		}
 	}
 
 //  ==========================================================================
-//  Layout "column"
+//  Reset column widths for smallest breakpoint
 //  ==========================================================================
-	#{$column-selector} {
-		@include column-behavior();
-		@include column-width(1/1, false, true);
+	@if $column-breakpoint {
+		@include breakpoint( $column-breakpoint ) {
+			#{$column-selector} {
+				width: 100%;
+			}
+		}
 	}
