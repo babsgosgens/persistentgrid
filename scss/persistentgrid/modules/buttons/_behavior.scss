@@ -6,87 +6,33 @@
 
 
 //  ==========================================================================
+//  Button base
+//  ==========================================================================
+
+    %#{$button-base-class}-base {
+
+      @include module-property($button-cursor, cursor);
+      @include module-display($button-display, $button-vertical-align);
+      @include module-margin($button-margin-top $button-margin-right $button-margin-bottom $button-margin-left);
+      @include module-padding($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left);
+      @include module-background($button-background-color $button-background-image);
+      @include module-border($button-border-width $button-border-style $button-border-color);
+      @include module-text($button-text-align $button-text-decoration $button-text-shadow);
+      @include module-type($button-type-type, $button-type-size, $button-type-rhythm);
+      @include module-property($button-text-color, "color");
+      a,span,em,i,b,&:visited,&:active {
+        color: inherit;
+      }
+      &:focus {
+        // @extend %is-#{$input-field-class}-focus;
+      }
+    }
+ @debug $input-background-color;
+
+//  ==========================================================================
 //  Render button styles
 //  ==========================================================================
 
-@each $button in $buttons {
-
-  $selector: nth($button,1);
-  $properties: nth($button,2);
-  $is-state: nth($button,3);
-
-  @if length($properties) != 0 {
-
-    .#{$selector} {
-      @each $property in $properties {
-
-        $value: nth($property,2);
-        $property: nth($property,1);
-
-        @if $property=="cursor" {
-          @include module-property($value, $property);
-        }
-        @else if $property=="display" {
-          @include module-display($value);
-        }
-        @else if $property=="padding" {
-          @include module-padding($value);
-        }
-        @else if $property=="background" {
-          @include module-background($value);
-        }
-        @else if $property=="border" {
-          @include module-border($value);
-        }
-        @else if $property=="border-radius" {
-          @include module-border-radius($value);
-        }
-        @else if $property=="box-shadow" {
-          @include module-shadow($value);
-        }
-        @else if $property=="color" {
-          @include module-property($value, "color");
-          a,span,em,i,b {
-            color: inherit;
-          }
-        }
-        @else if $property=="text" {
-          @include module-text($value);
-        }
-        @else if $property=="type" {
-          @include module-type($value);
-        }
-        @else {
-          @include module-property($value, $property);
-        }
-      }
-      @if $is-state == false {
-        &:hover {
-          @extend .is-#{$selector}-hover !optional;
-        }
-        &:active {
-          @extend .is-#{$selector}-active !optional;
-        }
-      }
+    .#{$button-base-class}-base {
+      @extend %#{$button-base-class}-base;
     }
-  }
-}
-
-
-//  ==========================================================================
-//  Render layout styles
-//  ==========================================================================
-
-.#{$button-base-class}-align-top {
-  @include inline-block(top);
-}
-.#{$button-base-class}-small {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.#{$button-base-class}-big {
-  @include adjust-font-size-to($font-size-l, 1.5);
-}
-.#{$button-base-class}-stretch {
-  width: 100%;
-}

@@ -13,6 +13,7 @@
 	 * Field styles
 	 */
 	%#{$input-field-class} {
+
 		/*
 		 * Box-model treatments
 		 */
@@ -28,10 +29,12 @@
 
 		@include input-shadow($input-shadow);
 
+		@include vertical-rhythm(1.5,max-height);
+
 		/*
 		 * Font and text treatments
 		 */
-		@include module-type($input-type);
+		@include module-type($input-type-type, $input-type-size, $input-type-rhythm);
 		@include module-property($input-text-color, 'color');
 		@include module-property($input-text-align, 'text-align');
 		@include module-property($input-text-decoration, 'text-decoration');
@@ -197,7 +200,7 @@
 		@include module-background($label-background);
 		@include module-shadow($label-shadow);
 
-		@include module-type($label-type);
+		@include module-type($label-type-type, $label-type-size, $label-type-rhythm);
 		@include module-property($label-text-color, 'color');
 		@include module-property($label-text-align, 'text-align');
 		@include module-property($label-text-decoration, 'text-decoration');

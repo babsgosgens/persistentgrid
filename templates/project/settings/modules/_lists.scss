@@ -1,0 +1,49 @@
+// /**
+//  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
+//  * Licensed under MIT; see LICENSE.txt
+//  */
+@if $trace-imports { @debug 'imported'; }
+
+
+//  ==========================================================================
+//  List base class
+//  ==========================================================================
+
+	$list-base-class: "list";
+
+
+//  ==========================================================================
+//  List base style types
+//  ==========================================================================
+
+	$list-ul-default: disc;
+	$list-ol-default: decimal;
+
+
+//  ==========================================================================
+//  List Style Types
+//  See: http://www.w3schools.com/cssref/pr_list-style-type.asp
+//  ==========================================================================
+
+	$list-style-type-armenian: false;
+	$list-style-type-circle: true;
+	$list-style-type-cjk-ideographic: false;
+	$list-style-type-decimal: true;
+	$list-style-type-decimal-leading-zero: false;
+	$list-style-type-disc: true;
+	$list-style-type-georgian: false;
+	$list-style-type-hebrew: false;
+	$list-style-type-hiragana: false;
+	$list-style-type-hiragana-iroha: false;
+	$list-style-type-inherit: true;	
+	$list-style-type-katakana: false;
+	$list-style-type-katakana-iroha: false;
+	$list-style-type-lower-alpha: true;
+	$list-style-type-lower-greek: false;
+	$list-style-type-lower-latin: true;
+	$list-style-type-lower-roman: true;
+	$list-style-type-none: false;
+	$list-style-type-square: true;
+	$list-style-type-upper-alpha: true;
+	$list-style-type-upper-latin: true;
+	$list-style-type-upper-roman: true;

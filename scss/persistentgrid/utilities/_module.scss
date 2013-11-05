@@ -87,23 +87,17 @@
 //  
 //  @param $values: a list of display and vertical-align or false if nothing should be compiled
 //  ==========================================================================
-	@mixin module-display($values)
+	@mixin module-display($display, $vertical-align)
 	{
-		@if $values {
-
-			$display: nth($values,1);
-			$vertical-align: nth($values,1);
-
-			@if $display==inline-block {
-				@include inline-block($vertical-align);
+		@if $display==inline-block {
+			@include inline-block($vertical-align);
+		}
+		@else {
+			@if $display {
+				@include module-property($display, display);
 			}
-			@else {
-				@if $display {
-					@include module-property($display, display);
-				}
-				@if $vertical-align {
-					@include module-property($vertical-align, vertical-align);
-				}
+			@if $vertical-align {
+				@include module-property($vertical-align, vertical-align);
 			}
 		}
 	}
@@ -156,14 +150,20 @@
 			$width: nth($border,1);
 			$style: nth($border,2);
 			$color: nth($border,3);
-			@if $width {
-				border-width: $width;
+
+			@if $width and $style and $color {
+				border: $width $style $color;
 			}
-			@if $style {
-				border-style: $style;
-			}
-			@if $color {
-				border-color: $color;
+			@else {
+				@if $width {
+					border-width: $width;
+				}
+				@if $style {
+					border-style: $style;
+				}
+				@if $color {
+					border-color: $color;
+				}
 			}
 		}
 		@else {
@@ -294,14 +294,9 @@
 //  
 //  @param $type: a list of properties (type, font-size, leading) or false if nothing should be compiled
 //  ==========================================================================
-	@mixin module-type($type)
+	@mixin module-type($type, $type-size: $base-font-size, $type-rhythm: 1)
 	{
 		@if $type {
-
-			$type-size: nth($type,2);
-			$type-rhythm: if(nth($type,3), nth($type,3), 1);
-
-			$type: nth($type,1);
 
 			@if $type-size and $type-size!=$base-font-size {
 				@include adjust-font-size-to($type-size, $type-rhythm);

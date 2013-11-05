@@ -9,7 +9,7 @@
 //  Label base selector
 //  ==========================================================================
 
-	$label-base-class: "label" !default;
+	$label-base-class: "label";
 
 
 
@@ -24,78 +24,78 @@
 	// Label margin (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$label-margin: $input-margin !default;
+	$label-margin: $input-margin;
 
 
 	// -----------------------------------------------------------------------
 	// Label padding (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$label-padding-top: 0 !default;
-	$label-padding-right: 0 !default;
-	$label-padding-bottom: 0 !default;
-	$label-padding-left: 0 !default;
+	$label-padding-top: 0;
+	$label-padding-right: 0;
+	$label-padding-bottom: 0;
+	$label-padding-left: 0;
 	$label-padding: 
 		$label-padding-top 
 		$label-padding-right 
 		$label-padding-bottom 
 		$label-padding-left 
-		!default;
+		;
 
 
 	// -----------------------------------------------------------------------
 	// Label background (background-color, background-image)
 	// -----------------------------------------------------------------------
 
-	$label-background: false !default;
+	$label-background: false;
 
 
 	// -----------------------------------------------------------------------
 	// Label border (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$label-border: false !default;
+	$label-border: false;
 
 
 	// -----------------------------------------------------------------------
 	// Label corner (top-left, top-right, bottom-left, bottom-right)
 	// -----------------------------------------------------------------------
 	
-	$label-border-radius: false !default;
+	$label-border-radius: false;
 
 
 	// -----------------------------------------------------------------------
 	// Label shadow (box-shadow, inner-shadow)
 	// -----------------------------------------------------------------------
 
-	$label-shadow: false !default;
+	$label-shadow: false;
 
 
 	// -----------------------------------------------------------------------
 	// Label text (color, shadow, align, decoration)
 	// -----------------------------------------------------------------------
 
-	$label-text-color: $color-body !default;
-	$label-text-shadow: false !default;
-	$label-text-align: left !default;
-	$label-text-decoration: none !default;
+	$label-text-color: $color-body;
+	$label-text-shadow: false;
+	$label-text-align: left;
+	$label-text-decoration: none;
 	$label-text: 
 		$label-text-color
 		$label-text-shadow
 		$label-text-align
 		$label-text-decoration
-		!default;
+		;
 
 
 	// -----------------------------------------------------------------------
 	// Label type (type, size, leading)
 	// -----------------------------------------------------------------------
 
-	$label-type-type: $type-default !default;
-	$label-type-size: $base-font-size !default;
-	$label-type-rhythm: 1 !default;
+	$label-type-type: $type-default;
+	$label-type-size: $base-font-size;
+	$label-type-rhythm: 1;
 	$label-type:
 		$label-type-type
 		$label-type-size
 		$label-type-rhythm
-		!default;
+		;
