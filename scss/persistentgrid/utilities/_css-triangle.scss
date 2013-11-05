@@ -4,67 +4,30 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@mixin tooltipTriangle($size: $base-font-size, $direction: down, $color: $color-theme)
-{
-	border: $size/2 solid transcontainer;
-	display: inline-block;
-	content: "";
-	width: 0;
-	height: 0;
-	position: absolute;
-	@if $direction == right {
-		left: 100%;
-		border-left-color: $color;
-	}
-	@if $direction == left {
-		right: 100%;
-		border-right-color: $color;
-	}
-	@if $direction == up {
-		@include unit(top, $size/-2);
-		border-bottom-color: $color;
-	}
-	@if $direction == down {
-		top: 100%;
-		border-top-color: $color;
-	}
 
-	@if $direction == up {
-		left: 50%;
-		margin-left: $size/-2;
-	}
-	@if $direction == down {
-		left: 50%;
-		margin-left: $size/-2;
-	}
+
+@mixin arrow-up($size) {
+	@include arrow-base($size);
+	border-bottom-color: inherit; /* bottom, add background color here */
 }
-
-@mixin triangle($size: $base-font-size, $direction: right, $color: $color-theme, $where: after)
-{
-	position: relative;
-	&:#{$where} {
-		border: $size/2 solid transcontainer;
-		// @include unit(border-width, $size/2);
-		display: inline-block;
-		content: "";
-		width: 0;
-		height: 0;
-		position: absolute;
-		@if $direction == right {
-			left: 100%;
-			border-left-color: $color;
-		}
-		@if $direction == left {
-			right: 100%;
-			border-right-color: $color;
-		}
-		@if $direction == up {
-			@include unit(top, $size/-2);
-			border-bottom-color: $color;
-		}
-		@if $direction == down {
-			top: 100%;
-			border-top-color: $color;
-		}
-	}
+@mixin arrow-down($size) {
+	@include arrow-base($size);
+	border-top-color: inherit; /* bottom, add background color here */
+}
+@mixin arrow-left($size) {
+	@include arrow-base($size);
+	border-right-color: inherit; /* bottom, add background color here */
+}
+@mixin arrow-right($size) {
+	@include arrow-base($size);
+	border-left-color: inherit; /* bottom, add background color here */
+}
+@mixin arrow-base($size) {
+	display: block;
+	content: "";
+	width: 0; 
+	height: 0; 
+	font-size: 0;
+	line-height: 0;
+	border: $size solid transparent;
 }
