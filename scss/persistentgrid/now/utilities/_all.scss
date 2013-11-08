@@ -4,6 +4,8 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+@import "settings";
+
 @import "anchors";
 @import "baseline";
 @import "content";

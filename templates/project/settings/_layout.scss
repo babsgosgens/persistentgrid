@@ -10,16 +10,17 @@
 // 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
 //	The root container can be positioned left or center, for alternate position you can provide your own behavior.
 // 	================================================================================================================================
-	$column-selector: ".layout";
-	$column-spacing: 2*$base-line-height;
+	$column-base-selector: "lt" !default;
+	$column-selector: "column" !default;
+	$column-spacing: 2*$base-line-height !default;
 	$column-spacing-unit: 1px;
-	$column-spacing-persistent: false;
-	$column-widths: 1/2, 1/4, 1/3, 2/3, 3/4; // Omit 1/1, it is rendered by default
-	$column-width-default: 1/1;
-	$column-breakpoint: $small_handheld;
-	$column-float: false; // If you prefer floated columns instead of inline-blocks, set to true.
+	$column-spacing-persistent: false !default;
+	$column-widths: 1/2, 1/4, 1/3, 2/3, 3/4 !default; // Omit 1/1, it is rendered by default
+	$column-width-default: 1/1 !default;
+	$column-breakpoint: $small_handheld !default;
+	$column-float: false !default; // If you prefer floated columns instead of inline-blocks, set to true.
 
-	$negative-right-margin: false;
+	$negative-right-margin: false !default;
 	// If you cannot control your markup, you can assign a negative right margin to close gaps between columns to make tem fit
 	// This is a hack and not nescessary when your html (or column markup) is minimized.
 
@@ -29,9 +30,9 @@
 // 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
 //	The root container can be positioned left or center, for alternate position you can provide your own behavior.
 // 	================================================================================================================================
-	$root-selector: ".root";
-	$root-max-width: 72em;
-	$root-position: center;
+	$root-selector: "root" !default;
+	$root-max-width: 72em !default;
+	$root-position: center !default;
 
 
 //	BASE SETTINGS

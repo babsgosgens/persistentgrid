@@ -4,14 +4,8 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "anchors";
-@import "baseline";
-@import "content";
-@import "css-triangle";
-@import "elements";
-@import "module";
-@import "text";
-@import "typography";
-@import "units";
-
 @import "breakpoints";
+@import "colors";
+@import "constants";
+@import "font-sizes";
+@import "fonts";
