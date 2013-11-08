@@ -5,6 +5,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 
+@import "typography/all";
 
 // Placeholder function
 @function vertical-rhythm($lines) 

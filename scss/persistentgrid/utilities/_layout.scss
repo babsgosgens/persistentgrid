@@ -4,5 +4,5 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-
-@import "helpers/mixins";
+@import "layout/functions";
+@import "layout/mixins";
