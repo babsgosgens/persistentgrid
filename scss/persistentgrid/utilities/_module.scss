@@ -48,12 +48,15 @@
 					@include module-property($values, $property);
 				}
 			}
+
 			@else {
+				$i:0;
 				@each $value in $values {
+					
+					$i: $i+1;
 
 					@if $value {
 
-						$i: index($values, $value);
 						$side: padding-#{nth($sides,$i)};
 
 						@include module-property($value, $side);

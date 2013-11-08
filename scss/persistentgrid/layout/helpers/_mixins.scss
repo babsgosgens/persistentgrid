@@ -71,26 +71,52 @@
 //  ==========================================================================
 @mixin column-spacing($fraction: 1/2, $use-margin: false, $persistent: $column-spacing-persistent)
 {
+	$both: length($fraction);
+
+	$left: $fraction;
+	$right: $fraction;
+
+	@if $both > 1 {
+		$left: nth($fraction,1);
+		$right: nth($fraction,2);
+	}
+
 	@if ($use-margin) {
-		margin-left: horizontal-rhythm($fraction);
-		margin-right: horizontal-rhythm($fraction);
+		@if $left != false {
+			margin-left: horizontal-rhythm($left);
+		}
+		@if $right != false {
+			margin-right: horizontal-rhythm($right);
+		}
 		@if $persistent == false {
 			@if $column-breakpoint {
 				@include breakpoint( $column-breakpoint ) {
-					margin-left: horizontal-rhythm($fraction/2);
-					margin-right: horizontal-rhythm($fraction/2);
+					@if $left != false {
+						margin-left: horizontal-rhythm($left/2);
+					}
+					@if $right != false {
+						margin-right: horizontal-rhythm($right/2);
+					}
 				}
 			}
 		}
 	}
 	@else {
-		padding-left: horizontal-rhythm($fraction);
-		padding-right: horizontal-rhythm($fraction);
+		@if $left != false {
+			padding-left: horizontal-rhythm($left);
+		}
+		@if $right != false {
+			padding-right: horizontal-rhythm($right);
+		}
 		@if $persistent == false {
 			@if $column-breakpoint {
 				@include breakpoint( $column-breakpoint ) {
-					padding-left: horizontal-rhythm($fraction/2);
-					padding-right: horizontal-rhythm($fraction/2);
+					@if $left != false {
+						padding-left: horizontal-rhythm($left/2);
+					}
+					@if $right != false {
+						padding-right: horizontal-rhythm($right/2);
+					}
 				}
 			}
 		}

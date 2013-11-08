@@ -36,9 +36,9 @@
 	// -----------------------------------------------------------------------
 
 	$input-padding-top: vertical-rhythm(.25) !default;
-	$input-padding-right: 0 !default;
+	$input-padding-right: false !default;
 	$input-padding-bottom: vertical-rhythm(.25) !default;
-	$input-padding-left: 0
+	$input-padding-left: false !default;
 
 	// -----------------------------------------------------------------------
 	// Input background (background-color, background-image)
@@ -77,13 +77,14 @@
 
 
 	// -----------------------------------------------------------------------
-	// Input text (color, shadow, align, decoration)
+	// Input text (color, shadow, align, decoration, indent)
 	// -----------------------------------------------------------------------
 
 	$input-text-color: $color-body !default;
 	$input-text-shadow: false !default;
 	$input-text-align: left !default;
 	$input-text-decoration: none !default;
+	$input-text-indent: $column-spacing !default;
 
 
 	// -----------------------------------------------------------------------

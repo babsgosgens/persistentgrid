@@ -2,7 +2,7 @@
 //  * Copyright (C) 2013 Crossing Hippos - Babs Gösgens. All rights reserved.
 //  * Licensed under MIT; see LICENSE.txt
 //  */
-@if $trace-imports { @debug 'imported'; }
+@if $trace-imports { @debug "imported"; }
 
 
 //  ==========================================================================
@@ -10,9 +10,13 @@
 //  ==========================================================================
 
 	/*
-	 * Field styles
+	 * Input base - applies to all form elements except:
+	 	- buttons
+	 	- [type="submit"]
+	 	- fieldsets
+	 	- radio and check but
 	 */
-	%#{$input-field-class} {
+	%#{$input-base-class} {
 
 		/*
 		 * Box-model treatments
@@ -22,22 +26,15 @@
 		@include inline-block(baseline);
 		@include module-margin($input-margin);
 		@include module-padding($input-padding);
-		@include column-spacing;
 		@include module-border($input-border);
-		@include module-border-radius($input-border-radius);
-		@include module-background($input-background);
-
-		@include input-shadow($input-shadow);
-
-		@include vertical-rhythm(1.5,max-height);
 
 		/*
 		 * Font and text treatments
 		 */
 		@include module-type($input-type-type, $input-type-size, $input-type-rhythm);
-		@include module-property($input-text-color, 'color');
-		@include module-property($input-text-align, 'text-align');
-		@include module-property($input-text-decoration, 'text-decoration');
+		@include module-property($input-text-color, "color");
+		@include module-property($input-text-align, "text-align");
+		@include module-property($input-text-decoration, "text-decoration");
 		@include module-text-shadow($input-text-shadow);
 
 		&:focus {
@@ -68,9 +65,17 @@
 //  Fields
 //  ==========================================================================
 
-	.#{$input-field-class}
+	.#{$input-base-class}
 	{
-		@extend %#{$input-field-class};
+		@extend %#{$input-base-class};
+	}
+
+	.#{$input-field-class} {
+		@include module-property($input-width, "width");
+		@include module-background($input-background);
+		@include module-border-radius($input-border-radius);
+		@include input-shadow($input-shadow);
+      	@include module-property($input-text-indent, text-indent);
 	}
 
 	select,
@@ -161,7 +166,7 @@
 	@if $select-webkit {
 		.webkit {
 			.#{$select-dropdown-class} {
-				background: $input-background-color url('/assets/images/icons/icon-sort.svg') no-repeat 1% center;
+				background: $input-background-color url("/assets/images/icons/icon-sort.svg") no-repeat 1% center;
 				background-size: 10px auto;
 			}
 		}
@@ -189,9 +194,9 @@
 //  Labels
 //  ==========================================================================
 
-	#{$label-base-class} {
+	.#{$label-base-class} {
 		@include inline-block(baseline);
-		width: $input-width;
+		@include module-property($label-width, "width");
 		@include inline-block(baseline);
 		@include module-margin($label-margin);
 		@include module-padding($label-padding);
@@ -201,10 +206,11 @@
 		@include module-shadow($label-shadow);
 
 		@include module-type($label-type-type, $label-type-size, $label-type-rhythm);
-		@include module-property($label-text-color, 'color');
-		@include module-property($label-text-align, 'text-align');
-		@include module-property($label-text-decoration, 'text-decoration');
+		@include module-property($label-text-color, "color");
+		@include module-property($label-text-align, "text-align");
+		@include module-property($label-text-decoration, "text-decoration");
 		@include module-text-shadow($label-text-shadow);
+
 	}
 
 
@@ -212,6 +218,3 @@
 //  Legends
 //  ==========================================================================
 
-	.#{$legend-class} {
-		@extend #{$label-base-class};
-	}

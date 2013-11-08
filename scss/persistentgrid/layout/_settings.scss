@@ -10,7 +10,8 @@
 // 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
 //	The root container can be positioned left or center, for alternate position you can provide your own behavior.
 // 	================================================================================================================================
-	$column-selector: ".layout" !default;
+	$column-base-selector: "lt" !default;
+	$column-selector: "column" !default;
 	$column-spacing: 2*$base-line-height !default;
 	$column-spacing-unit: 1px;
 	$column-spacing-persistent: false !default;
@@ -29,7 +30,7 @@
 // 	Set a max width on a root container of your choice, the content will not stretch beyond this width.
 //	The root container can be positioned left or center, for alternate position you can provide your own behavior.
 // 	================================================================================================================================
-	$root-selector: ".root" !default;
+	$root-selector: "root" !default;
 	$root-max-width: 72em !default;
 	$root-position: center !default;
 

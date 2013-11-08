@@ -9,15 +9,24 @@
 //  List defaults
 //  ==========================================================================
 
+ol,ul {
+	list-style-type: none;
+}
+
 ol {
 	&.#{$list-base-class} {
-		@extend .#{$list-base-class}-#{$list-ol-default};
+		@extend .#{$list-base-class}-#{$list-ol-default} !optional;
 	}
 }
 ul {
 	&.#{$list-base-class} {
-		@extend .#{$list-base-class}-#{$list-ul-default};
+		@extend .#{$list-base-class}-#{$list-ul-default} !optional;
 	}
+}
+li {
+	list-style-type: inherit;
+	list-style-position: inherit;
+	list-style-image: inherit;
 }
 
 
@@ -92,16 +101,16 @@ ul {
 	@include list-style-type(upper-roman);
 }
 
-.list-inline {
+.#{$list-base-class}-inline {
 	&>li {
 		display: inline-block;
 	}
 }
 
-.outside {
+.#{$list-base-class}--outside {
 	list-style-position: outside;
 }
 
-.inside {
+.#{$list-base-class}--inside {
 	list-style-position: inside;
 }

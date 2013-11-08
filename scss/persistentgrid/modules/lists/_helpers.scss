@@ -5,7 +5,7 @@
 @if $trace-imports { @debug 'imported'; }
 
 @mixin list-style-type($type) {
-	.#{$list-base-class}-#{$type} {
+	.#{$list-base-class}--#{$type} {
 		list-style-type: $type;
 	}
 }
