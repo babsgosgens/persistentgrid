@@ -24,7 +24,7 @@
 	// Label margin (top, right, left, bottom)
 	// -----------------------------------------------------------------------
 
-	$label-margin: $input-margin !default;
+	$label-margin: $input-margin-top $input-margin-right $input-margin-bottom $input-margin-left;
 
 
 	// -----------------------------------------------------------------------

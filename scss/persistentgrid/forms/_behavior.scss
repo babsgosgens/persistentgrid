@@ -5,101 +5,101 @@
 @if $trace-imports { @debug "imported"; }
 
 
-//  ==========================================================================
-//  Placeholders
-//  ==========================================================================
+// select,
+// textarea,
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="email"],
+// input[type="month"],
+// input[type="number"],
+// input[type="password"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="text"],
+// input[type="time"],
+// input[type="url"],
+// input[type="week"]
+
+/*
+-----------------------------------------------------------------------------
+Field base
+-----------------------------------------------------------------------------
+*/
+
+/*
+ * Input base - applies to all form elements except:
+ 	- buttons
+ 	- [type="submit"]
+ 	- fieldsets
+ 	- radio and check buttons
+ */
+.#{$input-base-class} {
 
 	/*
-	 * Input base - applies to all form elements except:
-	 	- buttons
-	 	- [type="submit"]
-	 	- fieldsets
-	 	- radio and check but
+	 * Box-model treatments
 	 */
-	%#{$input-base-class} {
-
-		/*
-		 * Box-model treatments
-		 */
-		width: $input-width;
-		@include box-sizing(border-box);
-		@include inline-block(baseline);
-		@include module-margin($input-margin);
-		@include module-padding($input-padding);
-		@include module-border($input-border);
-
-		/*
-		 * Font and text treatments
-		 */
-		@include module-type($input-type-type, $input-type-size, $input-type-rhythm);
-		@include module-property($input-text-color, "color");
-		@include module-property($input-text-align, "text-align");
-		@include module-property($input-text-decoration, "text-decoration");
-		@include module-text-shadow($input-text-shadow);
-
-		&:focus {
-			@extend %is-#{$input-field-class}-focus;
-		}
-		@include placeholder()
-		{
-			color: $color-primary;
-		}
-	}
+	@include module-property($input-width, "width");
+	@include box-sizing("border-box");
+	@include inline-block("baseline");
+	@include module-margin($input-margin-top $input-margin-right $input-margin-bottom $input-margin-left);
+	@include module-padding($input-padding-top $input-padding-right $input-padding-bottom $input-padding-left);
+	@include module-border($input-border-width $input-border-style $input-border-color);
 
 	/*
-	 * Field focus styles
+	 * Font and text treatments
 	 */
-	%is-#{$input-field-class}-focus {
+	@include module-type($input-type-type, $input-type-size, $input-type-rhythm);
+	@include module-property($input-text-color, "color");
+	@include module-property($input-text-align, "text-align");
+	@include module-property($input-text-decoration, "text-decoration");
+	@include module-text-shadow($input-text-shadow);
 
-		@include module-border($input-focussed-border);
-		@include module-border-radius($input-focussed-border-radius);
-		@include module-background($input-focussed-background);
-		@include input-shadow($input-focussed-shadow);
-		@include module-outline($input-focussed-outline-border, $input-focussed-outline-offset);
-				  // -webkit-tap-highlight-color: rgba(0,0,0,0);
-
+	&:focus {
+		@extend .#{$input-base-class}--state-focus;
 	}
 
-
-//  ==========================================================================
-//  Fields
-//  ==========================================================================
-
-	.#{$input-base-class}
-	{
-		@extend %#{$input-base-class};
+	@include placeholder() {
+		@include module-property($color-primary, "color");
 	}
+}
 
-	.#{$input-field-class} {
-		@include module-property($input-width, "width");
-		@include module-background($input-background);
+/*
+ * Field focus styles
+ */
+.#{$input-base-class}--state-focus {
+
+	@include module-border($input-focussed-border-width $input-focussed-border-style $input-focussed-border-color);
+	@include module-border-radius($input-focussed-border-radius);
+	@include module-background($input-focussed-background-color $button-background-image);
+	@include input-shadow($input-focussed-shadow-box $input-focussed-shadow-inner);
+	@include module-outline($input-focussed-outline-border, $input-focussed-outline-offset);
+	// -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+	/*
+	-----------------------------------------------------------------------------
+	Field
+	-----------------------------------------------------------------------------
+	*/
+
+	.#{$input-base-class}-#{$input-field-class} {
+		@extend .#{$input-base-class};
+		@include module-background($input-background-color $input-background-image);
 		@include module-border-radius($input-border-radius);
-		@include input-shadow($input-shadow);
+		@include input-shadow($input-shadow-box $input-shadow-inner);
       	@include module-property($input-text-indent, text-indent);
 	}
 
-	select,
-	textarea,
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="email"],
-	input[type="month"],
-	input[type="number"],
-	input[type="password"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="text"],
-	input[type="time"],
-	input[type="url"],
-	input[type="week"]
-	{
-	}
 
 	/*
-	 * Override some properties for the search field
-	 */
-	.#{$input-search-class} {
+	-----------------------------------------------------------------------------
+	Search Field
+	-----------------------------------------------------------------------------
+	*/
+
+	.#{$input-base-class}-#{$input-field-class}--search {
 		// Not sure why this needs to be repeated
 		@include box-sizing(border-box);
 		@if $input-search-border-radius != $input-border-radius {
@@ -107,114 +107,133 @@
 		}
 	}
 
+
 	/*
-	 * Override some properties for the color field
-	 */
-	.#{$input-color-class} {
+	-----------------------------------------------------------------------------
+	Color Field
+	-----------------------------------------------------------------------------
+	*/
+
+	.#{$input-base-class}-#{$input-field-class}--color {
 		@if $input-color-width {
 			width: $input-color-width;
 		}
 	}
 
+	
 	/*
-	 * Override some properties for the range field
-	 */
-	#{$input-range-class} {
+	-----------------------------------------------------------------------------
+	Range Field
+	-----------------------------------------------------------------------------
+	*/
+	
+	.#{$input-base-class}-#{$input-field-class}--range {
 		@if $input-range-width {
 			width: $input-range-width;
 		}
 	}
 
+	
 	/*
-	 * Override some properties for the range and color field
-	 */
-	#{$input-color-class},
-	#{$input-range-class} {
+	-----------------------------------------------------------------------------
+	Color Field & Range Field
+	-----------------------------------------------------------------------------
+	*/
+	
+	.#{$input-base-class}-#{$input-field-class}--color,
+	.#{$input-base-class}-#{$input-field-class}--range {
 		padding: 0;
 		height: vertical-rhythm($input-type-rhythm) + $input-padding-top + $input-padding-bottom;
 	}
 
-	.#{$input-check-class} {
+
+/*
+-----------------------------------------------------------------------------
+Select and Datalists
+-----------------------------------------------------------------------------
+*/
+
+.#{$input-base-class}-select {
+	optgroup,
+	option {
+		@include module-padding($input-padding-top $input-padding-right $input-padding-bottom $input-padding-left);
+		@include column-spacing;
+		font-weight: inherit;
+		font-style: inherit;
+		font-variant: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
 	}
+}
 
+.#{$input-base-class}-select {
+	@extend .#{$input-base-class};
+	@if $select-appearance-default {
+		@include reset-appearance(menulist);
+		height: vertical-rhythm($input-type-rhythm) + $input-padding-top + $input-padding-bottom;
+	}
+}
 
-//  ==========================================================================
-//  Select and Datalists
-//  ==========================================================================
-
-	.#{$select-dropdown-class} {
-		optgroup,
-		option {
-			@include module-padding($input-padding);
-			@include column-spacing;
-			font-weight: inherit;
-			font-style: inherit;
-			font-variant: inherit;
-			font-family: inherit;
-			font-size: inherit;
-			line-height: inherit;
+@if $select-webkit {
+	.webkit {
+		.#{$input-base-class}-select {
+			background: $input-background-color url("/assets/images/icons/icon-sort.svg") no-repeat 1% center;
+			background-size: 10px auto;
 		}
 	}
+}
 
-	.#{$select-dropdown-class} {
-		@extend %#{$input-field-class};
-		@if $select-appearance-default {
-			@include reset-appearance(menulist);
-			height: vertical-rhythm($input-type-rhythm) + $input-padding-top + $input-padding-bottom;
-		}
+
+/*
+-----------------------------------------------------------------------------
+Textarea
+-----------------------------------------------------------------------------
+*/
+
+.#{$input-base-class}-textarea {
+	@extend .#{$input-base-class};
+	&.large {
+		height: vertical-rhythm(10);
 	}
-	@if $select-webkit {
-		.webkit {
-			.#{$select-dropdown-class} {
-				background: $input-background-color url("/assets/images/icons/icon-sort.svg") no-repeat 1% center;
-				background-size: 10px auto;
-			}
-		}
+	&.medium {
+		height: vertical-rhythm(6);
 	}
-
-//  ==========================================================================
-//  Textarea
-//  ==========================================================================
-
-	.#{$textarea-class} {
-		@extend %#{$input-field-class};
-		&.large {
-			height: vertical-rhythm(10);
-		}
-		&.medium {
-			height: vertical-rhythm(6);
-		}
-		&.small {
-			height: vertical-rhythm(2);
-		}
+	&.small {
+		height: vertical-rhythm(2);
 	}
+}
 
 
-//  ==========================================================================
-//  Labels
-//  ==========================================================================
+/*
+-----------------------------------------------------------------------------
+Field Label
+-----------------------------------------------------------------------------
+*/
 
-	.#{$label-base-class} {
-		@include inline-block(baseline);
-		@include module-property($label-width, "width");
-		@include inline-block(baseline);
-		@include module-margin($label-margin);
-		@include module-padding($label-padding);
-		@include module-border($label-border);
-		@include module-border-radius($label-border-radius);
-		@include module-background($label-background);
-		@include module-shadow($label-shadow);
+.#{$input-base-class}-#{$label-base-class} {
+	@include inline-block(baseline);
+	@include module-property($label-width, "width");
+	@include inline-block(baseline);
+	@include module-margin($label-margin);
+	@include module-padding($label-padding);
+	@include module-border($label-border);
+	@include module-border-radius($label-border-radius);
+	@include module-background($label-background);
+	@include module-shadow($label-shadow);
 
-		@include module-type($label-type-type, $label-type-size, $label-type-rhythm);
-		@include module-property($label-text-color, "color");
-		@include module-property($label-text-align, "text-align");
-		@include module-property($label-text-decoration, "text-decoration");
-		@include module-text-shadow($label-text-shadow);
+	@include module-type($label-type-type, $label-type-size, $label-type-rhythm);
+	@include module-property($label-text-color, "color");
+	@include module-property($label-text-align, "text-align");
+	@include module-property($label-text-decoration, "text-decoration");
+	@include module-text-shadow($label-text-shadow);
 
-	}
+}
 
 
-//  ==========================================================================
-//  Legends
-//  ==========================================================================
+/*
+-----------------------------------------------------------------------------
+Fieldset Legend
+-----------------------------------------------------------------------------
+*/
 

@@ -4,8 +4,6 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "../units";
-
 $small_handheld: (max-width px-to-em(480px,$base-font-size)) !default;
 $small_handheld_tall: (max-width px-to-em(480px,$base-font-size)),(orientation portrait) !default;
 $small_handheld_wide: (max-width px-to-em(480px,$base-font-size)),(orientation landscape) !default;

@@ -5,33 +5,27 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-//  ==========================================================================
-//  Button base
-//  ==========================================================================
+/*
+-----------------------------------------------------------------------------
+Button base
+-----------------------------------------------------------------------------
+*/
 
-    %#{$button-base-class}-base {
+.#{$button-base-class}-base {
 
-      @include module-property($button-cursor, cursor);
-      @include module-display($button-display, $button-vertical-align);
-      @include module-margin($button-margin-top $button-margin-right $button-margin-bottom $button-margin-left);
-      @include module-padding($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left);
-      @include module-background($button-background-color $button-background-image);
-      @include module-border($button-border-width $button-border-style $button-border-color);
-      @include module-text($button-text-align $button-text-decoration $button-text-shadow);
-      @include module-type($button-type-type, $button-type-size, $button-type-rhythm);
-      @include module-property($button-text-color, "color");
-      a,span,em,i,b,&:visited,&:active {
-        color: inherit;
-      }
-      &:focus {
-        // @extend %is-#{$input-field-class}-focus;
-      }
-    }
-
-//  ==========================================================================
-//  Render button styles
-//  ==========================================================================
-
-    .#{$button-base-class}-base {
-      @extend %#{$button-base-class}-base;
-    }
+  @include module-property($button-cursor, cursor);
+  @include module-display($button-display, $button-vertical-align);
+  @include module-margin($button-margin-top $button-margin-right $button-margin-bottom $button-margin-left);
+  @include module-padding($button-padding-top $button-padding-right $button-padding-bottom $button-padding-left);
+  @include module-background($button-background-color $button-background-image);
+  @include module-border($button-border-width $button-border-style $button-border-color);
+  @include module-text($button-text-align $button-text-decoration $button-text-shadow);
+  @include module-type($button-type-type, $button-type-size, $button-type-rhythm);
+  @include module-property($button-text-color, "color");
+  a,span,em,i,b,&:visited,&:active {
+    color: inherit;
+  }
+  &:focus {
+    // @extend %is-#{$input-field-class}-focus;
+  }
+}

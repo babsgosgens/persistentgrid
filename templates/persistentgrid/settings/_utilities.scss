@@ -4,4 +4,4 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
-@import "settings/all";
+@import "utilities/all";

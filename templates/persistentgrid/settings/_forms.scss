@@ -4,7 +4,17 @@
 //  */
 @if $trace-imports { @debug 'imported'; }
 
+//  ==========================================================================
+//  Input base class
+//  ==========================================================================
 
-@import "settings/input";
-@import "settings/labels";
-@import "settings/forms";
+	$input-base-class: "fld" !default;
+
+
+//  ==========================================================================
+//  Load individual settings file
+//  ==========================================================================
+
+	@import "forms/input";
+	@import "forms/labels";
+	@import "forms/forms";

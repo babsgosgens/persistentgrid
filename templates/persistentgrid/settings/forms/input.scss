@@ -5,18 +5,31 @@
 @if $trace-imports { @debug 'imported'; }
 
 
-//  ==========================================================================
-//  Input base class
-//  ==========================================================================
+// Form Fields
+// =======================================
+// .fld
+// .fld-input
+// 	.fld-input--{type}
+// .fld-select
+// .fld-textarea
 
-	$input-base-class: "input" !default;
+
+// Field Labels
+// =======================================
+// .fld-label
+
+
+// Field/Label Groups
+// =======================================
+// .fld-group
+
 
 
 //  ==========================================================================
 //  Input default properties
 //  ==========================================================================
 
-	$input-field-class: $input-base-class + '--field' !default;
+	$input-field-class: "input" !default;
 	$input-width: 100%;
 	$input-height: $base-line-height;
 
@@ -29,7 +42,6 @@
 	$input-margin-right: 0 !default;
 	$input-margin-bottom: 0 !default;
 	$input-margin-left: 0 !default;
-
 
 	// -----------------------------------------------------------------------
 	// Input padding (top, right, left, bottom)
