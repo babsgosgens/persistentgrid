@@ -1,6 +1,6 @@
 stylesheet 'screen.scss', :media => "screen, projection"
 
-description "Grid, Base and Modules"
+description "All Persistent Grid modules and settings."
 
 help %Q{
 Please see the Persistent Grid website for all documentation and tutorials:
